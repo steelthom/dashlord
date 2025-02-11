@@ -158,26 +158,6 @@ jobs:
           id: "${{ matrix.sites.betaId }}"
           output: "scans/betagouv.json"
 
-      - name: Stats page
-        timeout-minutes: 10
-        uses: "betagouv/check-url-action@main"
-        if: ${{ matrix.sites.tools.stats }}
-        with:
-          url: ${{ steps.betagouv.outputs.stats_url || format('{0}/stats', matrix.sites.url) }}
-          output: scans/stats.json
-          minExpectedRegex: ^stat
-          exactExpectedRegex: ^stats$
-      
-      - name: Budget page
-        continue-on-error: true
-        timeout-minutes: 10
-        uses: "betagouv/check-url-action@main"
-        if: ${{ matrix.sites.tools.budget_page }}
-        with:
-          url: ${{ steps.betagouv.outputs.budget_url }}
-          output: scans/budget_page.json
-          exactExpectedRegex: ^budget$
-
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
         if: ${{ matrix.sites.tools.screenshot }}
@@ -267,6 +247,26 @@ jobs:
           outputFile: "nmapvuln.json"
           withVulnerabilities: true
           raw: false
+
+      - name: Stats page
+        timeout-minutes: 10
+        uses: "betagouv/check-url-action@main"
+        if: ${{ matrix.sites.tools.stats }}
+        with:
+          url: ${{ steps.betagouv.outputs.stats_url || format('{0}/stats', matrix.sites.url) }}
+          output: scans/stats.json
+          minExpectedRegex: ^stat
+          exactExpectedRegex: ^stats$
+      
+      - name: Budget page
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: "betagouv/check-url-action@main"
+        if: ${{ matrix.sites.tools.budget_page }}
+        with:
+          url: ${{ steps.betagouv.outputs.budget_url }}
+          output: scans/budget_page.json
+          exactExpectedRegex: ^budget$
 
       - name: Nuclei scan
         if: ${{ matrix.sites.tools.nuclei }}
