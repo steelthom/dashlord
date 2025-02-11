@@ -31,7 +31,7 @@ on:
       - "dashlord.yml"
       - "urls.txt"
   schedule:
-    - cron: "0 0 * * 0" # see https://crontab.guru
+    - cron: "00 12 14 * *" # see https://crontab.guru
 
 # allow only one concurrent scan action
 concurrency:
@@ -167,6 +167,16 @@ jobs:
           output: scans/stats.json
           minExpectedRegex: ^stat
           exactExpectedRegex: ^stats$
+      
+      - name: Budget page
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: "betagouv/check-url-action@main"
+        if: ${{ matrix.sites.tools.budget_page }}
+        with:
+          url: ${{ steps.betagouv.outputs.budget_url }}
+          output: scans/budget_page.json
+          exactExpectedRegex: ^budget$
 
       - name: Screenshot Website
         uses: swinton/screenshot-website@v1.x
@@ -245,6 +255,18 @@ jobs:
           output: scans
           grade: "F"
           options: "--fast"
+      
+      - name: nmap vulnerabilities scan
+        if: ${{ matrix.sites.tools.nmap }}
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: "MTES-MCT/nmap-action@main"
+        with:
+          host: ${{ steps.hostname.outputs.value }}
+          outputDir: "scans"
+          outputFile: "nmapvuln.json"
+          withVulnerabilities: true
+          raw: false
 
       - name: Nuclei scan
         if: ${{ matrix.sites.tools.nuclei }}
