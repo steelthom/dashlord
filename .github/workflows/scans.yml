@@ -191,14 +191,6 @@ jobs:
           cmd_options: "-a"
           allow_issue_writing: false
 
-        # https://github.com/treosh/lighthouse-ci-action#inputs
-      - name: Lighthouse scan
-        if: ${{ matrix.sites.tools.lighthouse }}
-        timeout-minutes: 10
-        uses: socialgouv/dashlord-actions/lhci@v1
-        with:
-          url: "${{ join(matrix.sites.subpages, ',') }}"
-
       - name: Mozilla HTTP Observatory
         if: ${{ matrix.sites.tools.http }}
         timeout-minutes: 10
@@ -267,6 +259,14 @@ jobs:
           url: ${{ steps.betagouv.outputs.budget_url }}
           output: scans/budget_page.json
           exactExpectedRegex: ^budget$
+      
+      # https://github.com/treosh/lighthouse-ci-action#inputs
+      - name: Lighthouse scan
+        if: ${{ matrix.sites.tools.lighthouse }}
+        timeout-minutes: 10
+        uses: socialgouv/dashlord-actions/lhci@v1
+        with:
+          url: "${{ join(matrix.sites.subpages, ',') }}"
 
       - name: Nuclei scan
         if: ${{ matrix.sites.tools.nuclei }}
