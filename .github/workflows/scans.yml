@@ -252,6 +252,7 @@ jobs:
 
       - name: Stats page
         timeout-minutes: 10
+        continue-on-error: true
         uses: "betagouv/check-url-action@main"
         if: ${{ matrix.sites.tools.stats }}
         with:
@@ -264,6 +265,7 @@ jobs:
       - name: Lighthouse scan
         if: ${{ matrix.sites.tools.lighthouse }}
         timeout-minutes: 10
+        continue-on-error: true
         uses: socialgouv/dashlord-actions/lhci@v1
         with:
           url: "${{ join(matrix.sites.subpages, ',') }}"
