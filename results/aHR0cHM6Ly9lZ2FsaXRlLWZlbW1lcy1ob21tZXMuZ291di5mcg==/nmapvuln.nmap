@@ -1,16 +1,38 @@
-# Nmap 7.92 scan initiated Tue Feb 11 19:45:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln egalite-femmes-hommes.gouv.fr
+# Nmap 7.92 scan initiated Thu Feb 13 18:11:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln egalite-femmes-hommes.gouv.fr
 Nmap scan report for egalite-femmes-hommes.gouv.fr (185.194.82.206)
-Host is up (0.096s latency).
+Host is up (0.097s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Tue, 11 Feb 2025 19:45:50 GMT
+|     Date: Thu, 13 Feb 2025 18:12:01 GMT
+|     Access-Control-Allow-Methods: GET, POST, OPTIONS
+|     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+|     Access-Control-Allow-Credentials: true
+|     Content-Length: 226
+|     Content-Type: text/html; charset=iso-8859-1
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-handicap-v2.cegedim.cloud-HTTP=3468974346.20480.0000; path=/; Httponly; Secure
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 13 Feb 2025 18:12:02 GMT
 |     Access-Control-Allow-Methods: GET, POST, OPTIONS
 |     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
 |     Access-Control-Allow-Credentials: true
@@ -29,11 +51,10 @@ PORT    STATE  SERVICE    VERSION
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
 |_    </body></html>
-|_http-trane-info: Problem with XML parsing of /evox/about
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=2/11%Time=67ABA8EE%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=2/13%Time=67AE35F1%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,31E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Tue,\x2011\x20Feb\x202025\x2019:45:50\x20GMT\r\nAccess-Control-Allow-Me
+SF:Thu,\x2013\x20Feb\x202025\x2018:12:01\x20GMT\r\nAccess-Control-Allow-Me
 SF:thods:\x20GET,\x20POST,\x20OPTIONS\r\nAccess-Control-Allow-Headers:\x20
 SF:Access-Control-Allow-Headers,\x20Authorization\x20Origin,Accept,\x20X-R
 SF:equested-With,\x20Content-Type,\x20Access-Control-Request-Method,\x20Ac
@@ -47,7 +68,7 @@ SF://EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><bo
 SF:dy>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20reques
 SF:t\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n<
 SF:/p>\n</body></html>\n")%r(HTTPOptions,31E,"HTTP/1\.1\x20400\x20Bad\x20R
-SF:equest\r\nDate:\x20Tue,\x2011\x20Feb\x202025\x2019:45:50\x20GMT\r\nAcce
+SF:equest\r\nDate:\x20Thu,\x2013\x20Feb\x202025\x2018:12:02\x20GMT\r\nAcce
 SF:ss-Control-Allow-Methods:\x20GET,\x20POST,\x20OPTIONS\r\nAccess-Control
 SF:-Allow-Headers:\x20Access-Control-Allow-Headers,\x20Authorization\x20Or
 SF:igin,Accept,\x20X-Requested-With,\x20Content-Type,\x20Access-Control-Re
@@ -64,4 +85,4 @@ SF:stand\.<br\x20/>\n</p>\n</body></html>\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Feb 11 19:48:06 2025 -- 1 IP address (1 host up) scanned in 156.22 seconds
+# Nmap done at Thu Feb 13 18:14:17 2025 -- 1 IP address (1 host up) scanned in 156.36 seconds
