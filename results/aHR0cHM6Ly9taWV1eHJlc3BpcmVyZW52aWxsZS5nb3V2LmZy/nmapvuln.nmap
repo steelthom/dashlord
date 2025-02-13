@@ -1,14 +1,98 @@
-# Nmap 7.92 scan initiated Wed Feb 12 00:40:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mieuxrespirerenville.gouv.fr
+# Nmap 7.92 scan initiated Thu Feb 13 23:48:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mieuxrespirerenville.gouv.fr
 Nmap scan report for mieuxrespirerenville.gouv.fr (37.235.92.28)
-Host is up (0.13s latency).
+Host is up (0.11s latency).
 rDNS record for 37.235.92.28: norsys-zfe-infra.dedie.ate.info
 Not shown: 996 filtered tcp ports (no-response)
-PORT     STATE  SERVICE        VERSION
-80/tcp   open   http-proxy     HAProxy http proxy 1.3.1 or later
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http-proxy HAProxy http proxy 1.3.1 or later
 113/tcp  closed ident
-443/tcp  open   ssl/http-proxy HAProxy http proxy 1.3.1 or later
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 13 Feb 2025 23:48:27 GMT
+|     Content-Type: text/html
+|     Content-Length: 146
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 13 Feb 2025 23:48:26 GMT
+|     Content-Type: text/html
+|     Content-Length: 146
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   RPCCheck, tor-versions: 
+|     HTTP/1.0 400 Bad request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 13 Feb 2025 23:48:33 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
 5060/tcp open   sip?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=2/13%Time=67AE84CA%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,152,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Th
+SF:u,\x2013\x20Feb\x202025\x2023:48:26\x20GMT\r\nContent-Type:\x20text/htm
+SF:l\r\nContent-Length:\x20146\r\nConnection:\x20close\r\nStrict-Transport
+SF:-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<
+SF:head><title>404\x20Not\x20Found</title></head>\r\n<body>\r\n<center><h1
+SF:>404\x20Not\x20Found</h1></center>\r\n<hr><center>nginx</center>\r\n</b
+SF:ody>\r\n</html>\r\n")%r(HTTPOptions,152,"HTTP/1\.1\x20404\x20Not\x20Fou
+SF:nd\r\nDate:\x20Thu,\x2013\x20Feb\x202025\x2023:48:27\x20GMT\r\nContent-
+SF:Type:\x20text/html\r\nContent-Length:\x20146\r\nConnection:\x20close\r\
+SF:nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r
+SF:\n\r\n<html>\r\n<head><title>404\x20Not\x20Found</title></head>\r\n<bod
+SF:y>\r\n<center><h1>404\x20Not\x20Found</h1></center>\r\n<hr><center>ngin
+SF:x</center>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,152,"HTTP/1\
+SF:.1\x20404\x20Not\x20Found\r\nDate:\x20Thu,\x2013\x20Feb\x202025\x2023:4
+SF:8:27\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20146\r\n
+SF:Connection:\x20close\r\nStrict-Transport-Security:\x20max-age=31536000;
+SF:\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>404\x20Not\x20Found
+SF:</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20Found</h1></cent
+SF:er>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r(tor-ver
+SF:sions,BB,"HTTP/1\.0\x20400\x20Bad\x20request\r\nCache-Control:\x20no-ca
+SF:che\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html>
+SF:<body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20
+SF:invalid\x20request\.\n</body></html>\n")%r(RTSPRequest,118,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nDate:\x20Thu,\x2013\x20Feb\x202025\x2023:48:
+SF:33\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20150\r\nCo
+SF:nnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request<
+SF:/title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cen
+SF:ter>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r(RPCChe
+SF:ck,BB,"HTTP/1\.0\x20400\x20Bad\x20request\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
+SF:alid\x20request\.\n</body></html>\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Feb 12 00:43:20 2025 -- 1 IP address (1 host up) scanned in 172.69 seconds
+# Nmap done at Thu Feb 13 23:50:56 2025 -- 1 IP address (1 host up) scanned in 171.97 seconds
