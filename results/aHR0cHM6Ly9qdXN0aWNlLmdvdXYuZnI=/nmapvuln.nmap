@@ -1,1 +1,96 @@
-# Nmap 7.92 scan initiated Tue Feb 11 23:14:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln justice.gouv.fr
+# Nmap 7.92 scan initiated Thu Feb 13 22:09:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln justice.gouv.fr
+Nmap scan report for justice.gouv.fr (185.24.184.182)
+Host is up (0.092s latency).
+Not shown: 954 filtered tcp ports (no-response), 44 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 13 Feb 2025 13:33:40 GMT
+|     Cache-Control: max-age=86400, public
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Content-Security-Policy: frame-ancestors 'self'; report-uri https://www.justice.gouv.fr/report-uri/enforce
+|     Last-Modified: Thu, 13 Feb 2025 13:33:40 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     X-Url: /
+|     X-Host: www.justice.gouv.fr
+|     X-Cacheable: YES
+|     X-Cache-TTL: 86400.000
+|     ETag: W/"1739453620"
+|     Vary: Cookie,Accept-Encoding
+|     X-Cache: HIT
+|     X-Cache-TTL-Remaining: 55775.388
+|     X-Cache-Age: 30624
+|     X-Cache-Hits: 3105
+|     Accept-Ranges: bytes
+|     Content-Length: 77915
+|     Set-Cookie: ROUTEID=.route1; path=/; Domain=.jug.intranet.justice.gouv.fr; max-age=3600
+|     Connection: close
+|     Set-Cookie: BIGipServerE9qpQewFM5y8ZfZBvsQP+A=!TvVPaJvD3MAZ0ch/EDrr+HFIz+54elfLeIAOQBTIxsqYGJTtHxUmST60VOXljYf0X1aRb
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 13 Feb 2025 22:12:45 GMT
+|     Allow: GET, POST
+|     Cache-Control: must-revalidate, no-cache, private
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Content-Security-Policy: frame-ancestors 'self'; report-uri https://www.justice.gouv.fr/report-uri/enforce
+|     Content-Length: 0
+|     Content-Type: text/html; charset=UTF-8
+|     X-Url: /
+|     X-Host: www.justice.gouv.fr
+|     X-Cacheable: NO:Not Cacheable
+|     X-Cache-TTL: 0.000
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Accept-Ranges: bytes
+|     Set-Cookie: ROUTEID=.route1; path=/; Domain=.jug.intranet.justice.gouv.fr; max-age=3600
+|     Connection: close
+|     Set-Cookie: BIGipServerE9qpQewFM5y8ZfZBvsQP+A=!sy3zqhnF9cAO5eN/EDrr+HFIz+54enr4s1VHJnNR/Umi790kKJdMxO28pa73cBqLWkrLZLDZVHQcxw==; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=16070400; includeSubDomains
+|_    Set-Cookie: TS0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=2/13%Time=67AE6E5D%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,383C,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2013\
+SF:x20Feb\x202025\x2013:33:40\x20GMT\r\nCache-Control:\x20max-age=86400,\x
+SF:20public\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov\x
+SF:201978\x2005:00:00\x20GMT\r\nContent-Security-Policy:\x20frame-ancestor
+SF:s\x20'self';\x20report-uri\x20https://www\.justice\.gouv\.fr/report-uri
+SF:/enforce\r\nLast-Modified:\x20Thu,\x2013\x20Feb\x202025\x2013:33:40\x20
+SF:GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nX-Url:\x20/\r\nX
+SF:-Host:\x20www\.justice\.gouv\.fr\r\nX-Cacheable:\x20YES\r\nX-Cache-TTL:
+SF:\x2086400\.000\r\nETag:\x20W/\"1739453620\"\r\nVary:\x20Cookie,Accept-E
+SF:ncoding\r\nX-Cache:\x20HIT\r\nX-Cache-TTL-Remaining:\x2055775\.388\r\nX
+SF:-Cache-Age:\x2030624\r\nX-Cache-Hits:\x203105\r\nAccept-Ranges:\x20byte
+SF:s\r\nContent-Length:\x2077915\r\nSet-Cookie:\x20ROUTEID=\.route1;\x20pa
+SF:th=/;\x20Domain=\.jug\.intranet\.justice\.gouv\.fr;\x20max-age=3600\r\n
+SF:Connection:\x20close\r\nSet-Cookie:\x20BIGipServerE9qpQewFM5y8ZfZBvsQP\
+SF:+A=!TvVPaJvD3MAZ0ch/EDrr\+HFIz\+54elfLeIAOQBTIxsqYGJTtHxUmST60VOXljYf0X
+SF:1aRb")%r(HTTPOptions,4F5,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2013
+SF:\x20Feb\x202025\x2022:12:45\x20GMT\r\nAllow:\x20GET,\x20POST\r\nCache-C
+SF:ontrol:\x20must-revalidate,\x20no-cache,\x20private\r\nContent-language
+SF::\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\
+SF:nContent-Security-Policy:\x20frame-ancestors\x20'self';\x20report-uri\x
+SF:20https://www\.justice\.gouv\.fr/report-uri/enforce\r\nContent-Length:\
+SF:x200\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nX-Url:\x20/\r\n
+SF:X-Host:\x20www\.justice\.gouv\.fr\r\nX-Cacheable:\x20NO:Not\x20Cacheabl
+SF:e\r\nX-Cache-TTL:\x200\.000\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r
+SF:\nAccept-Ranges:\x20bytes\r\nSet-Cookie:\x20ROUTEID=\.route1;\x20path=/
+SF:;\x20Domain=\.jug\.intranet\.justice\.gouv\.fr;\x20max-age=3600\r\nConn
+SF:ection:\x20close\r\nSet-Cookie:\x20BIGipServerE9qpQewFM5y8ZfZBvsQP\+A=!
+SF:sy3zqhnF9cAO5eN/EDrr\+HFIz\+54enr4s1VHJnNR/Umi790kKJdMxO28pa73cBqLWkrLZ
+SF:LDZVHQcxw==;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Secu
+SF:rity:\x20max-age=16070400;\x20includeSubDomains\r\nSet-Cookie:\x20TS0");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Feb 13 22:15:04 2025 -- 1 IP address (1 host up) scanned in 355.77 seconds
