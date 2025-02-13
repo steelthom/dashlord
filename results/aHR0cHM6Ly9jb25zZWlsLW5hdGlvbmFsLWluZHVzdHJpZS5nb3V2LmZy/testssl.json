@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -339,7 +339,7 @@
               "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
               "port"         : "443",
               "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (19)"
+              "finding"      : "expires < 30 days (17)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -482,6 +482,91 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1739464501"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "nginx"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "security_headers",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
               "port"         : "443",
@@ -503,10 +588,10 @@
               "id"           : "ticketbleed",
               "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "ROBOT",
@@ -541,7 +626,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -969,6 +1063,6 @@
               "ip"           : "conseil-national-industrie.gouv.fr/80.87.236.17",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "131"
+              "finding"      : "97"
           }
 ]
