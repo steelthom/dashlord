@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immobilier-etat.gouv.fr</pre>
-<p class="lead">Tue Feb 11 22:28:02 2025 – Tue Feb 11 22:30:56 2025<br>1 hosts scanned.
+<p class="lead">Thu Feb 13 21:20:19 2025 – Thu Feb 13 21:23:14 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,7 +119,7 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq: 
     HTTP/1.1 400 Bad request
     content-length: 90
     cache-control: no-cache
@@ -137,6 +137,12 @@
     HTTP/1.1 301 Moved Permanently
     content-length: 0
     location: https:///
+    connection: close
+  X11Probe: 
+    HTTP/1.1 400 Bad request
+    content-length: 90
+    cache-control: no-cache
+    content-type: text/html
     connection: close</pre>
 </td></tr>
 <tr class="active">
@@ -158,14 +164,14 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx:1.26.1">cpe:/a:igor_sysoev:nginx:1.26.1</a><h5>vulners</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx:1.26.1">cpe:/a:igor_sysoev:nginx:1.26.1</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nginx/1.26.1</pre>
+<h5>vulners</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   nginx 1.26.1: 
     	320A19F7-1DDD-11EF-A2AE-8C164567CA3C	6.5	https://vulners.com/freebsd/320A19F7-1DDD-11EF-A2AE-8C164567CA3C
     	ADDC71B8-6024-11EF-86A1-8C164567CA3C	5.7	https://vulners.com/freebsd/ADDC71B8-6024-11EF-86A1-8C164567CA3C
     	9761AF78-E3E4-11EF-9F4A-589CFC10A551	5.3	https://vulners.com/freebsd/9761AF78-E3E4-11EF-9F4A-589CFC10A551</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nginx/1.26.1</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">2000</td>
