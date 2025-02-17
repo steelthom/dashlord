@@ -39,6 +39,12 @@ concurrency:
   group: scans
 
 jobs:
+  loadConfig:
+    runs-on: ubuntu-latest
+    name: urls
+    steps: 
+      - run: cp dashlord_part1.yml dashlord.yml
+  
   init:
     runs-on: ubuntu-latest
     name: Prepare
