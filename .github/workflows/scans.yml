@@ -43,7 +43,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Load urls
     steps: 
-      - run: cp ../dashlord_part1.yml ../dashlord.yml
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+      - run: cp dashlord_part1.yml dashlord.yml
   
   init:
     runs-on: ubuntu-latest
