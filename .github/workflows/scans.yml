@@ -41,13 +41,14 @@ concurrency:
 jobs:
   loadConfig:
     runs-on: ubuntu-latest
-    name: urls
+    name: Load urls
     steps: 
-      - run: cp dashlord_part1.yml dashlord.yml
+      - run: cp ../dashlord_part1.yml ../dashlord.yml
   
   init:
     runs-on: ubuntu-latest
     name: Prepare
+    needs: loadConfig
     outputs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
