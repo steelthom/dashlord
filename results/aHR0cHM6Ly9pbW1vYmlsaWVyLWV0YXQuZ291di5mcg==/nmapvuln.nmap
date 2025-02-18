@@ -1,11 +1,11 @@
-# Nmap 7.92 scan initiated Thu Feb 13 21:20:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immobilier-etat.gouv.fr
+# Nmap 7.92 scan initiated Tue Feb 18 16:49:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immobilier-etat.gouv.fr
 Nmap scan report for immobilier-etat.gouv.fr (5.144.143.172)
-Host is up (0.11s latency).
+Host is up (0.089s latency).
 Not shown: 995 filtered tcp ports (no-response)
 PORT     STATE  SERVICE     VERSION
 80/tcp   open   http
 | fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
 |     HTTP/1.1 400 Bad request
 |     content-length: 90
 |     cache-control: no-cache
@@ -23,57 +23,64 @@ PORT     STATE  SERVICE     VERSION
 |     HTTP/1.1 301 Moved Permanently
 |     content-length: 0
 |     location: https:///
-|     connection: close
-|   X11Probe: 
-|     HTTP/1.1 400 Bad request
-|     content-length: 90
-|     cache-control: no-cache
-|     content-type: text/html
 |_    connection: close
 113/tcp  closed ident
 443/tcp  open   ssl/http    nginx 1.26.1
-|_http-server-header: nginx/1.26.1
 | vulners: 
 |   nginx 1.26.1: 
+|     	F5:K000138651	8.6	https://vulners.com/f5/F5:K000138651
+|     	F5:K83120834	7.5	https://vulners.com/f5/F5:K83120834
+|     	F5:K000137521	7.5	https://vulners.com/f5/F5:K000137521
+|     	F5:K32544615	7.2	https://vulners.com/f5/F5:K32544615
+|     	F5:K000136907	7.1	https://vulners.com/f5/F5:K000136907
+|     	F5:K000133432	6.8	https://vulners.com/f5/F5:K000133432
+|     	F5:K000138650	6.5	https://vulners.com/f5/F5:K000138650
+|     	F5:K000138460	6.5	https://vulners.com/f5/F5:K000138460
 |     	320A19F7-1DDD-11EF-A2AE-8C164567CA3C	6.5	https://vulners.com/freebsd/320A19F7-1DDD-11EF-A2AE-8C164567CA3C
+|     	F5:K000138264	5.9	https://vulners.com/f5/F5:K000138264
+|     	F5:K000132943	5.9	https://vulners.com/f5/F5:K000132943
+|     	54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	5.9	https://vulners.com/githubexploit/54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	*EXPLOIT*
+|     	055968B0-A035-57F9-B592-A0EF80F931E8	5.9	https://vulners.com/githubexploit/055968B0-A035-57F9-B592-A0EF80F931E8	*EXPLOIT*
+|     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	ADDC71B8-6024-11EF-86A1-8C164567CA3C	5.7	https://vulners.com/freebsd/ADDC71B8-6024-11EF-86A1-8C164567CA3C
+|     	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|     	F5:K10438187	5.3	https://vulners.com/f5/F5:K10438187
+|     	F5:K000138242	5.3	https://vulners.com/f5/F5:K000138242
 |_    	9761AF78-E3E4-11EF-9F4A-589CFC10A551	5.3	https://vulners.com/freebsd/9761AF78-E3E4-11EF-9F4A-589CFC10A551
+|_http-server-header: nginx/1.26.1
 2000/tcp open   cisco-sccp?
 5060/tcp open   sip?
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=2/13%Time=67AE6221%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=2/18%Time=67B4BA2B%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
 SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
 SF:r(RTSPRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-l
 SF:ength:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")
-SF:%r(X11Probe,75,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x
+SF:%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x
 SF:2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\ncon
-SF:nection:\x20close\r\n\r\n")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x2
-SF:0Moved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///
-SF:nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%
-SF:r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2
-SF:090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconn
-SF:ection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYou
-SF:r\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%
-SF:r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nconten
-SF:t-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/
-SF:html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20reque
-SF:st</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body>
-SF:</html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20reques
-SF:t\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-typ
-SF:e:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20B
-SF:ad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request
-SF:\.\n</body></html>\n")%r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\
-SF:ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x
-SF:20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x
-SF:20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n
-SF:</body></html>\n")%r(SSLSessionReq,CF,"HTTP/1\.1\x20400\x20Bad\x20reque
-SF:st\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-ty
-SF:pe:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20
-SF:Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20reques
-SF:t\.\n</body></html>\n");
+SF:nection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYo
+SF:ur\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nco
+SF:ntent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity\.
+SF:txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no
+SF:-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<ht
+SF:ml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\
+SF:x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"
+SF:HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-co
+SF:ntrol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20clos
+SF:e\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x2
+SF:0sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRequ
+SF:estTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\
+SF:r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnecti
+SF:on:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x2
+SF:0browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(He
+SF:lp,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\nc
+SF:ache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\
+SF:x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20bro
+SF:wser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Feb 13 21:23:14 2025 -- 1 IP address (1 host up) scanned in 175.34 seconds
+# Nmap done at Tue Feb 18 16:52:27 2025 -- 1 IP address (1 host up) scanned in 174.06 seconds
