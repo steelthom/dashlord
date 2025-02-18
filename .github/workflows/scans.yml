@@ -38,29 +38,19 @@ concurrency:
   cancel-in-progress: true
   group: scans
 
-jobs:
-  loadConfig:
-    runs-on: ubuntu-latest
-    name: Load urls
-    steps: 
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref }}
-      - run: cp dashlord_part1.yml dashlord.yml
-      - run: cat dashlord.yml
-  
+jobs:  
   init:
     runs-on: ubuntu-latest
     name: Prepare
-    needs: loadConfig
     outputs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
     steps:
+      # copy the part1 of urls
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
-      - run: cat dashlord.yml
+      - run: cp dashlord_part1.yml dashlord.yml
       - uses: actions/checkout@v3
       - id: init
         uses: "SocialGouv/dashlord-actions/init@v1"
