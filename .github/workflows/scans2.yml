@@ -1,37 +1,12 @@
-name: DashLord scans
+name: DashLord scans 2
 
 on:
   workflow_dispatch:
-    inputs:
-      url:
-        description: "Single url to scan or scan all urls"
-        required: false
-        default: ""
-      tool:
-        description: "Single tool to run or use all tools"
-        type: choice
-        default: all
-        options:
-          - all
-          - codescan
-          - dependabot
-          - ecoindex
-          - lighthouse
-          - sonarcloud
-          - trivy
-          - zap
-          - ecoindex
-          - dsfr
-  push:
-    branches:
-      - master
-      - main
-    paths:
-      - "dashlord.yaml"
-      - "dashlord.yml"
-      - "urls.txt"
-  schedule:
-    - cron: "0 12 13 * *" # see https://crontab.guru
+  workflow_run:
+    workflows: ["DashLord scans"]
+    branches: [main]
+    types:
+      - completed
 
 # allow only one concurrent scan action
 concurrency:
@@ -50,7 +25,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
-      - run: cp dashlord_part1.yml dashlord.yml
+      - run: cp dashlord_part2.yml dashlord.yml
       - id: init
         uses: "SocialGouv/dashlord-actions/init@v1"
         with:
