@@ -1,0 +1,117 @@
+# Nmap 7.92 scan initiated Tue Feb 18 17:55:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln travail-emploi.gouv.fr
+Nmap scan report for travail-emploi.gouv.fr (185.194.83.138)
+Host is up (0.082s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 18 Feb 2025 17:55:56 GMT
+|     Access-Control-Allow-Methods: GET, POST, OPTIONS
+|     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+|     Access-Control-Allow-Credentials: true
+|     Content-Length: 226
+|     Content-Type: text/html; charset=iso-8859-1
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!LuubcNWzo+fuwVnoOuybAIBz7F+XCrJM7uSYo/OMNquKlrt9Vlq/VWKxBwEVfwidiIz/6LlUpVtS6RqDy7424Cm1JTvw; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 18 Feb 2025 17:55:56 GMT
+|     Access-Control-Allow-Methods: GET, POST, OPTIONS
+|     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+|     Access-Control-Allow-Credentials: true
+|     Content-Length: 226
+|     Content-Type: text/html; charset=iso-8859-1
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!CFiESvLe5GrIQALoOuybAIBz7F+XCpI6qfYYphe5n5fQjG403nOA3U0aecmRIB2ZkACs6WvRhSB1Q1qxL/8U55qrGfRA; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|_    <p>Your browser sent a request that this server could
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=2/18%Time=67B4C9A5%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,62,"HTTP/1\.0\
+SF:x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://sip:nm\r\nConnec
+SF:tion:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=2/18%Time=67B4C9AC%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,3AE,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Tue,\x2018\x20Feb\x202025\x2017:55:56\x20GMT\r\nAccess-Control-Allow-Me
+SF:thods:\x20GET,\x20POST,\x20OPTIONS\r\nAccess-Control-Allow-Headers:\x20
+SF:Access-Control-Allow-Headers,\x20Authorization\x20Origin,Accept,\x20X-R
+SF:equested-With,\x20Content-Type,\x20Access-Control-Request-Method,\x20Ac
+SF:cess-Control-Request-Headers\r\nAccess-Control-Allow-Credentials:\x20tr
+SF:ue\r\nContent-Length:\x20226\r\nContent-Type:\x20text/html;\x20charset=
+SF:iso-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nCo
+SF:nnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-travail-production
+SF:\.cegedim\.cloud-TCP80=!LuubcNWzo\+fuwVnoOuybAIBz7F\+XCrJM7uSYo/OMNquKl
+SF:rt9Vlq/VWKxBwEVfwidiIz/6LlUpVtS6RqDy7424Cm1JTvw;\x20path=/;\x20Httponly
+SF:;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20inclu
+SF:deSubDomains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HT
+SF:ML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n
+SF:</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a
+SF:\x20request\x20that\x20this\x20server\x20could\x20")%r(HTTPOptions,3AE,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2018\x20Feb\x2020
+SF:25\x2017:55:56\x20GMT\r\nAccess-Control-Allow-Methods:\x20GET,\x20POST,
+SF:\x20OPTIONS\r\nAccess-Control-Allow-Headers:\x20Access-Control-Allow-He
+SF:aders,\x20Authorization\x20Origin,Accept,\x20X-Requested-With,\x20Conte
+SF:nt-Type,\x20Access-Control-Request-Method,\x20Access-Control-Request-He
+SF:aders\r\nAccess-Control-Allow-Credentials:\x20true\r\nContent-Length:\x
+SF:20226\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nAge:\x200
+SF:\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nConnection:\x20close\r\nS
+SF:et-Cookie:\x20BIGipServerpool-travail-production\.cegedim\.cloud-TCP80=
+SF:!CFiESvLe5GrIQALoOuybAIBz7F\+XCpI6qfYYphe5n5fQjG403nOA3U0aecmRIB2ZkACs6
+SF:WvRhSB1Q1qxL/8U55qrGfRA;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DO
+SF:CTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html
+SF:><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x
+SF:20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20t
+SF:his\x20server\x20could\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 18 17:58:20 2025 -- 1 IP address (1 host up) scanned in 163.44 seconds
