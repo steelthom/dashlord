@@ -57,6 +57,9 @@ jobs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
     steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
       - run: cat dashlord.yml
       - uses: actions/checkout@v3
       - id: init
