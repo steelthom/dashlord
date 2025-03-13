@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -171,7 +171,7 @@
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'extended master secret/#23'"
+              "finding"      : "'server name/#0' 'max fragment length/#1' 'supported_groups/#10' 'EC point formats/#11' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -339,7 +339,7 @@
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "267 >= 60 days"
+              "finding"      : "244 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -482,84 +482,6 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "301 Moved Permanently ('/')"
-          }
-,         {
-              "id"           : "HTTP_clock_skew",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1739899830"
-          }
-,         {
-              "id"           : "HTTP_headerAge",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds"
-          }
-,         {
-              "id"           : "HSTS",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No Server banner line in header, interesting!"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "max-age=1"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "x-cache: Miss"
-          }
-,         {
               "id"           : "heartbleed",
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
@@ -581,10 +503,10 @@
               "id"           : "ticketbleed",
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "INFO",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "no session ticket extension"
+              "finding"      : "not applicable, not HTTP"
           }
 ,         {
               "id"           : "ROBOT",
@@ -619,16 +541,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "BREACH",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2013-3587",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "not vulnerable (not using HTTP anyway)"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1049,20 +962,13 @@
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A"
-          }
-,         {
-              "id"           : "grade_cap_reason_1",
-              "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to A. HSTS is not offered"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "56"
+              "finding"      : "53"
           }
 ]
