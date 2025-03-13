@@ -1,8 +1,61 @@
-# Nmap 7.92 scan initiated Tue Feb 18 16:59:00 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln maprimerenov.gouv.fr
+# Nmap 7.92 scan initiated Thu Mar 13 14:14:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln maprimerenov.gouv.fr
 Nmap scan report for maprimerenov.gouv.fr (31.193.53.253)
 Host is up (0.11s latency).
-All 1000 scanned ports on maprimerenov.gouv.fr (31.193.53.253) are in ignored states.
-Not shown: 1000 filtered tcp ports (no-response)
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     cache-control: no-cache
+|     connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///
+|     cache-control: no-cache
+|_    connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=3/13%Time=67D2E862%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlo
+SF:cation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20cl
+SF:ose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-le
+SF:ngth:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\nc
+SF:onnection:\x20close\r\n\r\n")%r(RTSPRequest,6A,"HTTP/1\.1\x20302\x20Fou
+SF:nd\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\ncache-control:\
+SF:x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(X11Probe,A9,"HTTP/1\.0\
+SF:x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\ncontent-type:
+SF:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n\n")%r
+SF:(FourOhFourRequest,8D,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x20
+SF:0\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\ncach
+SF:e-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,A9,
+SF:"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\nco
+SF:ntent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</
+SF:h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></ht
+SF:ml>\n\n")%r(DNSVersionBindReqTCP,A9,"HTTP/1\.0\x20400\x20Bad\x20request
+SF:\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<ht
+SF:ml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\
+SF:x20invalid\x20request\.\n</body></html>\n\n")%r(DNSStatusRequestTCP,A9,
+SF:"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\nco
+SF:ntent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</
+SF:h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></ht
+SF:ml>\n\n")%r(Help,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-contro
+SF:l:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400
+SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
+SF:quest\.\n</body></html>\n\n")%r(SSLSessionReq,A9,"HTTP/1\.0\x20400\x20B
+SF:ad\x20request\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/ht
+SF:ml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x
+SF:20sent\x20an\x20invalid\x20request\.\n</body></html>\n\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Feb 18 16:59:14 2025 -- 1 IP address (1 host up) scanned in 13.82 seconds
+# Nmap done at Thu Mar 13 14:15:10 2025 -- 1 IP address (1 host up) scanned in 37.54 seconds
