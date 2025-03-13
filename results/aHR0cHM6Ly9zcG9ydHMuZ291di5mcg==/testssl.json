@@ -28,6 +28,13 @@
               "finding"      : "not offered"
           }
 ,         {
+              "id"           : "TLS1",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
               "id"           : "TLS1_1",
               "ip"           : "sports.gouv.fr/185.75.143.93",
               "port"         : "443",
@@ -54,13 +61,6 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "h2"
-          }
-,         {
-              "id"           : "ALPN",
-              "ip"           : "sports.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "http/1.1"
           }
 ,         {
               "id"           : "cipherlist_NULL",
@@ -125,17 +125,58 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "cipher_order",
               "ip"           : "sports.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "FATAL",
-              "finding"      : "repeated TCP connect problems, giving up"
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
           }
 ,         {
-              "id"           : "scanTime",
+              "id"           : "FS",
               "ip"           : "sports.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "Scan interrupted"
+              "severity"     : "OK",
+              "finding"      : "offered"
           }
-]
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'server name/#0' 'supported_groups/#10' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no -- no lifetime advertised"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "sports.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
