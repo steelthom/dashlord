@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Feb 18 16:49:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immobilier-etat.gouv.fr
+# Nmap 7.92 scan initiated Thu Mar 13 14:33:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immobilier-etat.gouv.fr
 Nmap scan report for immobilier-etat.gouv.fr (5.144.143.172)
-Host is up (0.089s latency).
+Host is up (0.16s latency).
 Not shown: 995 filtered tcp ports (no-response)
 PORT     STATE  SERVICE     VERSION
 80/tcp   open   http
@@ -26,6 +26,7 @@ PORT     STATE  SERVICE     VERSION
 |_    connection: close
 113/tcp  closed ident
 443/tcp  open   ssl/http    nginx 1.26.1
+|_http-server-header: nginx/1.26.1
 | vulners: 
 |   nginx 1.26.1: 
 |     	F5:K000138651	8.6	https://vulners.com/f5/F5:K000138651
@@ -47,11 +48,10 @@ PORT     STATE  SERVICE     VERSION
 |     	F5:K10438187	5.3	https://vulners.com/f5/F5:K10438187
 |     	F5:K000138242	5.3	https://vulners.com/f5/F5:K000138242
 |_    	9761AF78-E3E4-11EF-9F4A-589CFC10A551	5.3	https://vulners.com/freebsd/9761AF78-E3E4-11EF-9F4A-589CFC10A551
-|_http-server-header: nginx/1.26.1
 2000/tcp open   cisco-sccp?
 5060/tcp open   sip?
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=2/18%Time=67B4BA2B%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=3/13%Time=67D2ECDD%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
@@ -83,4 +83,4 @@ SF:x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20bro
 SF:wser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Feb 18 16:52:27 2025 -- 1 IP address (1 host up) scanned in 174.06 seconds
+# Nmap done at Thu Mar 13 14:36:48 2025 -- 1 IP address (1 host up) scanned in 179.64 seconds
