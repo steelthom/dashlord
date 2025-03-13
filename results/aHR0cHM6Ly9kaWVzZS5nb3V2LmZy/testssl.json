@@ -199,14 +199,14 @@
               "ip"           : "diese.gouv.fr/217.70.184.55",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'status request/#5' 'key share/#51' 'supported versions/#43' 'extended master secret/#23'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
               "ip"           : "diese.gouv.fr/217.70.184.55",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "valid for 300 seconds only (<daily)"
+              "finding"      : "valid for 299 seconds only (<daily)"
           }
 ,         {
               "id"           : "SSL_sessionID_support",
@@ -227,7 +227,7 @@
               "ip"           : "diese.gouv.fr/217.70.184.55",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -366,8 +366,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "diese.gouv.fr/217.70.184.55",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "66 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (43)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -380,7 +380,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "diese.gouv.fr/217.70.184.55",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-04-25 23:59"
           }
 ,         {
@@ -1084,6 +1084,6 @@
               "ip"           : "diese.gouv.fr/217.70.184.55",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "57"
+              "finding"      : "101"
           }
 ]
