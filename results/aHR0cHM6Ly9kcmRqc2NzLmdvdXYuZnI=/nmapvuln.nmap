@@ -1,16 +1,17 @@
-# Nmap 7.92 scan initiated Tue Feb 18 16:07:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln drdjscs.gouv.fr
+# Nmap 7.92 scan initiated Thu Mar 13 13:42:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln drdjscs.gouv.fr
 Nmap scan report for drdjscs.gouv.fr (185.75.143.22)
-Host is up (0.092s latency).
+Host is up (0.14s latency).
 rDNS record for 185.75.143.22: MEN-MUTU-PROXY01.dedie.ate.info
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http      nginx
 443/tcp open  ssl/https
+|_http-server-header: nginx
 | fingerprint-strings: 
 |   OpenVPN: 
 |     HTTP/1.1 400 Bad Request
 |     Server: nginx
-|     Date: Tue, 18 Feb 2025 16:07:29 GMT
+|     Date: Thu, 13 Mar 2025 13:43:11 GMT
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
@@ -21,15 +22,14 @@ PORT    STATE SERVICE   VERSION
 |     <hr><center>nginx</center>
 |     </body>
 |_    </html>
-|_http-server-header: nginx
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%I=7%D=2/18%Time=67B4B041%P=x86_64-alpine-linux-musl%
+SF-Port443-TCP:V=7.92%I=7%D=3/13%Time=67D2E0EF%P=x86_64-alpine-linux-musl%
 SF:r(OpenVPN,127,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx\r
-SF:\nDate:\x20Tue,\x2018\x20Feb\x202025\x2016:07:29\x20GMT\r\nContent-Type
+SF:\nDate:\x20Thu,\x2013\x20Mar\x202025\x2013:43:11\x20GMT\r\nContent-Type
 SF::\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n\r\
 SF:n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\
 SF:r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>nginx
 SF:</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Feb 18 16:07:36 2025 -- 1 IP address (1 host up) scanned in 21.72 seconds
+# Nmap done at Thu Mar 13 13:43:21 2025 -- 1 IP address (1 host up) scanned in 27.97 seconds
