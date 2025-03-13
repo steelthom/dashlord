@@ -1,0 +1,167 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 75,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Wed, 12 Mar 2025 07:02:48 GMT",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "content-security-policy": "frame-ancestors 'self'; report-uri https://www.justice.gouv.fr/report-uri/enforce",
+      "last-modified": "Wed, 12 Mar 2025 07:02:47 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "x-url": "/",
+      "x-host": "www.justice.gouv.fr",
+      "x-cacheable": "YES",
+      "x-cache-ttl": "86400.000",
+      "etag": "W/\"1741762967\"",
+      "vary": "Cookie,Accept-Encoding",
+      "x-cache": "HIT",
+      "x-cache-ttl-remaining": "2057.575",
+      "x-cache-age": "84342",
+      "x-cache-hits": "7274",
+      "cache-control": "max-age=120, public",
+      "accept-ranges": "bytes",
+      "content-length": "11068",
+      "set-cookie": [
+        "ROUTEID=.route1; path=/; Domain=.jug.intranet.justice.gouv.fr; max-age=3600",
+        "BIGipServerE9qpQewFM5y8ZfZBvsQP+A=!Av8V7JE3By7c7nRVKzUhnSD7hGyZI0a8YUZk4pmUPiSs2aqzvHkFadyQ951BjsEYUkb06mR6cB3qDA==; path=/; Httponly; Secure",
+        "TS01509fcf=01a6efdeadee73c5db68915d8376b816f3677f9172e483a66f56408eb563bd0b29993375a054d61ed5130f61901663e03fffe9490eb35aa334271a7b72958d83c3c8115002; Path=/;",
+        "TS01c6e65a=01a6efdead8a83e8e9413fd947048badcbb17244f5e483a66f56408eb563bd0b29993375a0477ccd72cd9f24c5065fdc6ce4b01b457600c74a10a8e6da74b56147a4e70068; path=/; domain=.jug.intranet.justice.gouv.fr"
+      ],
+      "connection": "close",
+      "strict-transport-security": "max-age=16070400; includeSubDomains"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "'self'"
+        ],
+        "report-uri": [
+          "https://www.justice.gouv.fr/report-uri/enforce"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "BIGipServerE9qpQewFM5y8ZfZBvsQP+A": {
+          "domain": "www.justice.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS01509fcf": {
+          "domain": "www.justice.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.justice.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://justice.gouv.fr/",
+        "https://justice.gouv.fr/",
+        "https://www.justice.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=16070400; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 16070400,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
