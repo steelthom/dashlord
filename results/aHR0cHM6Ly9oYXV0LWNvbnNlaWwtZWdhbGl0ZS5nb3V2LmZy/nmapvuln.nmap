@@ -1,13 +1,12 @@
-# Nmap 7.92 scan initiated Tue Feb 18 16:39:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln haut-conseil-egalite.gouv.fr
+# Nmap 7.92 scan initiated Thu Mar 13 13:43:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln haut-conseil-egalite.gouv.fr
 Nmap scan report for haut-conseil-egalite.gouv.fr (185.194.83.18)
-Host is up (0.098s latency).
+Host is up (0.099s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/https
-|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.0 404 Not Found
@@ -16,15 +15,15 @@ PORT    STATE  SERVICE    VERSION
 |     ERROR
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 18 Feb 2025 16:39:55 GMT
+|     Date: Thu, 13 Mar 2025 13:43:26 GMT
 |     X-Outils-CS: 
 |     Vary: Cookie,Accept-Encoding
 |     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
 |     X-Spip-Cache: 86400
-|     Last-Modified: Tue, 18 Feb 2025 16:39:55 GMT
+|     Last-Modified: Thu, 13 Mar 2025 13:43:26 GMT
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!MQuxeQpSW7P4u4zoOuybAIBz7F+XCgyPhDfag0POwi1CWaEO2rhE5TGkcH/hxKhLT/rbad72k4Jdk7wuYcMI6zvkYlc=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!7/o20qE0qnkq175P5lCVyMDCoPSDl5PCMC54D/KjPdawkt5IflIKwuxgVFE8+SHO6lH/1RByySG8/S9gqKtkGUt7E2I=; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 |     <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
@@ -43,17 +42,18 @@ PORT    STATE  SERVICE    VERSION
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |_    ERROR
+|_http-trane-info: Problem with XML parsing of /evox/about
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=2/18%Time=67B4B7DB%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2018\
-SF:x20Feb\x202025\x2016:39:55\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cooki
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=3/13%Time=67D2E0FE%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2013\
+SF:x20Mar\x202025\x2013:43:26\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cooki
 SF:e,Accept-Encoding\r\nComposed-By:\x20SPIP\x204\.3\.6\x20@\x20www\.spip\
 SF:.net\x20\+\x20https://https:/local/config\.txt\r\nX-Spip-Cache:\x208640
-SF:0\r\nLast-Modified:\x20Tue,\x2018\x20Feb\x202025\x2016:39:55\x20GMT\r\n
+SF:0\r\nLast-Modified:\x20Thu,\x2013\x20Mar\x202025\x2013:43:26\x20GMT\r\n
 SF:Connection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\
 SF:nSet-Cookie:\x20BIGipServerpool-dgcs-hautconseilegalite2\.cegedim\.clou
-SF:d-HTTP=!MQuxeQpSW7P4u4zoOuybAIBz7F\+XCgyPhDfag0POwi1CWaEO2rhE5TGkcH/hxK
-SF:hLT/rbad72k4Jdk7wuYcMI6zvkYlc=;\x20path=/;\x20Httponly;\x20Secure\r\nSt
+SF:d-HTTP=!7/o20qE0qnkq175P5lCVyMDCoPSDl5PCMC54D/KjPdawkt5IflIKwuxgVFE8\+S
+SF:HO6lH/1RByySG8/S9gqKtkGUt7E2I=;\x20path=/;\x20Httponly;\x20Secure\r\nSt
 SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\
 SF:r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tra
 SF:nsitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitio
@@ -72,4 +72,4 @@ SF:Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Feb 18 16:42:07 2025 -- 1 IP address (1 host up) scanned in 152.33 seconds
+# Nmap done at Thu Mar 13 13:45:38 2025 -- 1 IP address (1 host up) scanned in 152.28 seconds
