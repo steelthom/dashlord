@@ -16,13 +16,12 @@
   GPLv2 permitted. USAGE w/o ANY WARRANTY. USE IT AT YOUR OWN RISK!</span>
 
   Please file bugs @ <a href="https://testssl.sh/bugs/" style="font-weight:bold;color:black;text-decoration:none;">https://testssl.sh/bugs/</a>
-<span style="font-weight:bold;">
-#####################################################################</span>
+<span style="font-weight:bold;">#####################################################################</span>
 
-  Using <i>OpenSSL 1.0.2-bad </i>  [~183 ciphers]
-  on fv-az1046-619:/home/testssl/bin/openssl.Linux.x86_64
+  Using <i>OpenSSL 1.0.2-bad (Sep 1 2022)</i>  [~183 ciphers]
+  on fv-az1296-128:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-02-18 15:32:47                --&gt;&gt; 66.22.33.160:443 (ants.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-03-13 13:18:55        --&gt;&gt; 66.22.33.160:443 (ants.gouv.fr) &lt;&lt;--</span>
 
  rDNS (66.22.33.160):    --
  Service detected:       HTTP
@@ -88,13 +87,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
-<span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;renegotiation info/#65281&quot; &quot;server name/#0&quot;
-                              &quot;EC point formats/#11&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;supported_groups/#10&quot; &quot;max fragment length/#1&quot;
+<span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;max fragment length/#1&quot;
+                              &quot;supported_groups/#10&quot; &quot;EC point formats/#11&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;encrypt-then-mac/#22&quot;
-                              &quot;extended master secret/#23&quot;
+                              &quot;extended master secret/#23&quot; &quot;session ticket/#35&quot;
+                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
+                              &quot;renegotiation info/#65281&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>600 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
 <span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
@@ -124,7 +123,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">73 &gt;= 60 days</span> (2024-05-02 22:00 --&gt; 2025-05-02 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (50)</span> (2024-05-02 22:00 --&gt; 2025-05-02 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -142,7 +141,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span>  302 Moved Temporarily, redirecting to &quot;<a href="https://validate.perfdrive.com/d9591a763813cfa3c46a5696d6f2a2aa/?ssa=84adb88c-4313-49f9-b5d5-7c048c2a1227&ssb=26235247286&ssc=https%3A%2F%2Fants.gouv.fr%2F&ssi=656a44c3-cslv-4204-9ef3-63ce260e9530&ssk=botmanager_support@radware.com&ssm=77400494482811465109854426639529&ssn=d9cbafff17b9f88632486f00dd9a105fcd51d62b8369-4062-4709-98a41f&sso=0bdea78e-f5d3afc8f412416005fa045e343598c1f2630facb61fbea6&ssp=38322311371739849308173981628814515&ssq=35900779283978535577592839800210242634443&ssr=NTIuMTYwLjE2NS41OA==&sst=TLS tester from https://testssl.sh/dev/&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwYTdhZTA4MTYtZTIzNC00NWY1LWJiYTEtNDllMjI2N2YwYWE5MS0xNzM5ODkyODM5MDQwMC0zNmI5ODk3MzgwOGY1ZTNhMTAiLCJfX3V6bWYiOiI3ZjYwMDA5ZjhhZWFmYy05OGQ0LTQ3NjktYjQxOC1mZWQ5Y2NlZjcwNmUxNzM5ODkyODM5MDQwMC00MTZjYTUxNmFkN2FmZWMwMTAiLCJyZCI6ImFudHMtMi5nb3V2LmZyIn0=" style="color:black;text-decoration:none;">https://validate.perfdrive.com/d9591a763813cfa3c46a5696d6f2a2aa/?ssa=84adb88c-4313-49f9-b5d5-7c048c2a1227&ssb=26235247286&ssc=https%3A%2F%2Fants.gouv.fr%2F&ssi=656a44c3-cslv-4204-9ef3-63ce260e9530&ssk=botmanager_support@radware.com&ssm=77400494482811465109854426639529&ssn=d9cbafff17b9f88632486f00dd9a105fcd51d62b8369-4062-4709-98a41f&sso=0bdea78e-f5d3afc8f412416005fa045e343598c1f2630facb61fbea6&ssp=38322311371739849308173981628814515&ssq=35900779283978535577592839800210242634443&ssr=NTIuMTYwLjE2NS41OA==&sst=TLS tester from https://testssl.sh/dev/&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwYTdhZTA4MTYtZTIzNC00NWY1LWJiYTEtNDllMjI2N2YwYWE5MS0xNzM5ODkyODM5MDQwMC0zNmI5ODk3MzgwOGY1ZTNhMTAiLCJfX3V6bWYiOiI3ZjYwMDA5ZjhhZWFmYy05OGQ0LTQ3NjktYjQxOC1mZWQ5Y2NlZjcwNmUxNzM5ODkyODM5MDQwMC00MTZjYTUxNmFkN2FmZWMwMTAiLCJyZCI6ImFudHMtMi5nb3V2LmZyIn0=</a>&quot;
+<span style="font-weight:bold;"> HTTP Status Code           </span>  302 Moved Temporarily, redirecting to &quot;<a href="https://validate.perfdrive.com/d9591a763813cfa3c46a5696d6f2a2aa/?ssa=41e564d9-63c5-43a8-9dbe-d5cbd95e0a0b&ssb=78001230028&ssc=https%3A%2F%2Fants.gouv.fr%2F&ssi=7c142043-cslv-4215-895a-44257ce68553&ssk=botmanager_support@radware.com&ssm=20206574336822189100628205071313&ssn=a7b39a6f0d77386644827d5a089ba24f5ae5e0989b09-cc3d-455e-983fae&sso=94ededfb-20de15aa4850f2f33335b04bc89d3336c0ef17bc6df11c4a&ssp=92008534551741847633174185237763215&ssq=32680447196338788242471963608234813086735&ssr=MjAuNDIuNTEuNzY=&sst=TLS tester from https://testssl.sh/dev/&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwNjBmYTBiMmUtYjZjOC00ZTBhLTlhNDAtMDdhNWQyZmVjZmI4MS0xNzQxODcxOTYzMjM2MC1jNjkxZjE1YjYzOTNlZmY1MTAiLCJyZCI6ImFudHMtMi5nb3V2LmZyIiwiX191em1mIjoiN2Y2MDAwZDdkMWE3ZDMtOTI2Yi00ZjM0LWJmNjQtY2FhYTM2MjdmMzA4MTc0MTg3MTk2MzIzNjAtMDRkNjFkYjcxN2QxNmMwNjEwIn0=" style="color:black;text-decoration:none;">https://validate.perfdrive.com/d9591a763813cfa3c46a5696d6f2a2aa/?ssa=41e564d9-63c5-43a8-9dbe-d5cbd95e0a0b&ssb=78001230028&ssc=https%3A%2F%2Fants.gouv.fr%2F&ssi=7c142043-cslv-4215-895a-44257ce68553&ssk=botmanager_support@radware.com&ssm=20206574336822189100628205071313&ssn=a7b39a6f0d77386644827d5a089ba24f5ae5e0989b09-cc3d-455e-983fae&sso=94ededfb-20de15aa4850f2f33335b04bc89d3336c0ef17bc6df11c4a&ssp=92008534551741847633174185237763215&ssq=32680447196338788242471963608234813086735&ssr=MjAuNDIuNTEuNzY=&sst=TLS tester from https://testssl.sh/dev/&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwNjBmYTBiMmUtYjZjOC00ZTBhLTlhNDAtMDdhNWQyZmVjZmI4MS0xNzQxODcxOTYzMjM2MC1jNjkxZjE1YjYzOTNlZmY1MTAiLCJyZCI6ImFudHMtMi5nb3V2LmZyIiwiX191em1mIjoiN2Y2MDAwZDdkMWE3ZDMtOTI2Yi00ZjM0LWJmNjQtY2FhYTM2MjdmMzA4MTc0MTg3MTk2MzIzNjAtMDRkNjFkYjcxN2QxNmMwNjEwIn0=</a>&quot;
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -232,7 +231,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2025-02-18 15:34:39 [ 115s] --&gt;&gt; 66.22.33.160:443 (ants.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-03-13 13:19:50 [  60s] --&gt;&gt; 66.22.33.160:443 (ants.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
