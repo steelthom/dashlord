@@ -213,14 +213,14 @@
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "prime256v1"
+              "finding"      : "prime256v1 secp384r1 secp521r1"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'server name/#0' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'supported_groups/#10' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+              "finding"      : "'server name/#0' 'max fragment length/#1' 'supported_groups/#10' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -388,7 +388,7 @@
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "256 >= 60 days"
+              "finding"      : "233 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -640,7 +640,7 @@
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "282 >= 60 days"
+              "finding"      : "259 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -843,7 +843,15 @@
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1739896312"
+              "finding"      : "1741876003"
+          }
+,         {
+              "id"           : "ipv4_in_header",
+              "ip"           : "france-renov.gouv.fr/31.193.53.253",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cwe"          : "CWE-212",
+              "finding"      : "remoteip: 172.183.175.196 (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -878,7 +886,7 @@
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "nginxserver-timing: dtSInfo;desc='0', dtRpid;desc='-1179748650'"
+              "finding"      : "nginxserver-timing: dtSInfo;desc='0', dtRpid;desc='2001309498'"
           }
 ,         {
               "id"           : "banner_application",
@@ -1462,6 +1470,6 @@
               "ip"           : "france-renov.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "153"
+              "finding"      : "141"
           }
 ]
