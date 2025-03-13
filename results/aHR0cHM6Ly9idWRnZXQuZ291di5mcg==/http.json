@@ -1,0 +1,193 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B+",
+    "error": null,
+    "score": 80,
+    "statusCode": 200,
+    "testsFailed": 1,
+    "testsPassed": 9,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "server": "nginx",
+      "date": "Thu, 13 Mar 2025 14:54:57 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "cache-control": "max-age=600",
+      "x-drupal-dynamic-cache": "MISS",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Thu, 13 Mar 2025 15:04:57 GMT",
+      "last-modified": "Thu, 13 Mar 2025 14:51:57 GMT",
+      "etag": "\"1741877517-gzip\"",
+      "vary": "Cookie,Accept-Encoding",
+      "x-drupal-cache": "MISS",
+      "x-proxy-cache": "HIT",
+      "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:;",
+      "referrer-policy": "same-origin",
+      "allow": "GET, POST, HEAD",
+      "access-control-allow-methods": "GET, POST, OPTIONS",
+      "access-control-allow-origin": "*",
+      "access-control-allow-headers": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
+      "access-control-expose-headers": "Content-Length,Content-Range",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-xss-protection": "1;mode=block",
+      "upgrade-insecure-requests": "1",
+      "set-cookie": [
+        "visid_incap_3058694=Bny7a1ZkQbautErECE8by8Dx0mcAAAAAQUIPAAAAAABif2UCqjkY1B5E6JaU0XMw; expires=Fri, 13 Mar 2026 07:25:11 GMT; HttpOnly; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None",
+        "nlbi_3058694=xWFmERwHnVV80kMMwQW67wAAAAA/Ro7VTp2wTubeKtLRJjO0; HttpOnly; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None",
+        "incap_ses_1547_3058694=JLi2CWmsxA6l+m1EmAx4FcHx0mcAAAAADDNtRFT7/TExbLE+97au2g==; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None"
+      ],
+      "x-cdn": "Imperva",
+      "x-iinfo": "8-17561470-17561471 NNNN CT(136 281 0) RT(1741877696603 7) q(0 0 4 0) r(5 6) U12"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https:"
+        ],
+        "object-src": [
+          "https:"
+        ],
+        "child-src": [
+          "https:",
+          "platform.twitter.com"
+        ],
+        "img-src": [
+          "data:",
+          "https:"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
+      "data": {
+        "visid_incap_3058694": {
+          "domain": "budget.gouv.fr",
+          "expires": "2026-03-13T07:25:11.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "nlbi_3058694": {
+          "domain": "budget.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "incap_ses_1547_3058694": {
+          "domain": "budget.gouv.fr",
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        }
+      },
+      "sameSite": true
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-all-redirects-preloaded",
+      "scoreModifier": 0,
+      "destination": "https://www.budget.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://budget.gouv.fr/",
+        "https://budget.gouv.fr/",
+        "https://www.budget.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-preloaded",
+      "scoreModifier": 5,
+      "data": "max-age=31536000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
+      "preloaded": true
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
