@@ -46,12 +46,13 @@ jobs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
     steps:
-      # copy the part1 of urls
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
       - id: init
         uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
         with:
-          count: 10
+          count: 651
   scans:
     runs-on: ubuntu-latest
     name: Scan
@@ -62,7 +63,7 @@ jobs:
       matrix:
         sites: ${{ fromJson(needs.init.outputs.sites) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
 
