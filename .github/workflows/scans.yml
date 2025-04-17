@@ -72,11 +72,6 @@ jobs:
       - run: |
           mkdir scans
 
-      - uses: actions/cache@v4
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
       - name: dsfr
         continue-on-error: true
         timeout-minutes: 10
