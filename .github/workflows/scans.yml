@@ -21,7 +21,7 @@ jobs:
       - id: init
         uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
         with:
-          count: 10
+          count: 257
   scans:
     runs-on: ubuntu-latest
     name: Scan
@@ -29,7 +29,6 @@ jobs:
     continue-on-error: true
     strategy:
       fail-fast: false
-      max-parallel: 3
       matrix:
         sites: ${{ fromJson(needs.init.outputs.sites) }}
     steps:
