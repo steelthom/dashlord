@@ -3,10 +3,6 @@ name: DashLord scans
 on:
   workflow_dispatch:
     inputs:
-      url:
-        description: "Single url to scan or scan all urls"
-        required: false
-        default: ""
       tool:
         description: "Single tool to run or use all tools"
         type: choice
@@ -51,12 +47,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-      - id: init
+      - id: init-from-txt
         uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
         with:
-          url: ${{ github.event.inputs.url }}
-          tool: ${{ github.event.inputs.tool }}
           count: 100
+      - id: init
+        uses: "SocialGouv/dashlord-actions/init@v1"
+        with:
+          url: ${{ steps.init-from-txt.outputs.sites }}
+          tool: ${{ github.event.inputs.tool }}
   scans:
     runs-on: ubuntu-latest
     name: Scan
