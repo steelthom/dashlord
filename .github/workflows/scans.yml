@@ -62,7 +62,7 @@ jobs:
       - id: init
         uses: "SocialGouv/dashlord-actions/init@v1"
         with:
-          url: ${{ fromJson(needs.init-txt.outputs.sites) }}
+          url: ${{ needs.init-txt.outputs.sites }}
           tool: ${{ github.event.inputs.tool }}
   scans:
     runs-on: ubuntu-latest
