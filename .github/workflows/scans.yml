@@ -51,6 +51,7 @@ jobs:
   init:
     runs-on: ubuntu-latest
     name: Prepare matrix
+    needs: init-txt
     outputs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
