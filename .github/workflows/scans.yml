@@ -61,8 +61,8 @@ jobs:
           ref: ${{ github.ref }}
       - id: parse
         run: |
-          urls=$(echo '${{ needs.init-txt.outputs.sites }}' | jq -r '.[].url' | jq -Rs .)
-          echo "urls=$urls" >> "$GITHUB_OUTPUT"
+          csv=$(echo '${{ needs.init-txt.outputs.sites }}' | jq -r 'map(.url) | join(",")')
+          echo "urls=$csv" >> "$GITHUB_OUTPUT"
       - id: init
         uses: "SocialGouv/dashlord-actions/init@v1"
         with:
