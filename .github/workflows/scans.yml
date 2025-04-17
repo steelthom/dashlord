@@ -36,10 +36,21 @@ concurrency:
   cancel-in-progress: true
   group: scans
 
-jobs:  
+jobs:
+  init-txt:
+    runs-on: ubuntu-latest
+    name: Prepare sites
+    outputs:
+      sites: ${{ steps.init.outputs.sites }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: init
+        uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
+        with:
+          count: 100
   init:
     runs-on: ubuntu-latest
-    name: Prepare
+    name: Prepare matrix
     outputs:
       sites: ${{ steps.init.outputs.sites }}
       config: ${{ steps.init.outputs.config }}
@@ -47,14 +58,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-      - id: init-from-txt
-        uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
-        with:
-          count: 100
       - id: init
         uses: "SocialGouv/dashlord-actions/init@v1"
         with:
-          url: ${{ fromJson(steps.init-from-txt.outputs.sites) }}
+          url: ${{ fromJson(needs.init-txt.outputs.sites) }}
           tool: ${{ github.event.inputs.tool }}
   scans:
     runs-on: ubuntu-latest
