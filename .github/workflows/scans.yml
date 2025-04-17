@@ -54,6 +54,8 @@ jobs:
       - id: init
         uses: "SocialGouv/dashlord-actions/init-from-txt@v1"
         with:
+          url: ${{ github.event.inputs.url }}
+          tool: ${{ github.event.inputs.tool }}
           count: 100
   scans:
     runs-on: ubuntu-latest
@@ -71,6 +73,11 @@ jobs:
 
       - run: |
           mkdir scans
+
+      - uses: actions/cache@v4
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: dsfr
         continue-on-error: true
