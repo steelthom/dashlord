@@ -1,0 +1,104 @@
+# Nmap 7.92 scan initiated Fri Apr 18 03:41:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dares.travail-emploi.gouv.fr
+Nmap scan report for www.dares.travail-emploi.gouv.fr (185.194.82.70)
+Host is up (0.098s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Cache-Control: no-store, must-revalidate, no-cache
+|     Pragma: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 245
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <14185738776357496504><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Fri, 18 Apr 2025 03:42:15 GMT
+|     Cache-Control: max-age=3600, public
+|     X-Drupal-Dynamic-Cache: MISS
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Last-Modified: Thu, 17 Apr 2025 16:37:06 GMT
+|     Vary: Cookie,Accept-Encoding
+|     Content-Length: 94041
+|     X-Drupal-Cache: HIT
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!UO+yVCwbeYcPQT6QEus9KsUIQe0YeZT83pnu0D40ovvyY4qNKRmNhlj7x0y0xdp6m1jN3to30sPXPHs+2tzAWog/WOE7; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Set-Cookie: TS0101001a=01352d381162eeaab175d5e1d728cafb7c3ae447f54237a2db53b71ef8044fba5ec959d1f1dab770dac4dc9874d07e585ccb4e3aef; Path=/
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
+|     <head>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Fri, 18 Apr 2025 03:42:16 GMT
+|     Allow: GET, POST
+|     Cache-Control: must-revalidate, no-cache, private
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     expires: -1
+|     Content-Length: 0
+|     pragma: no-cache
+|     Vary: Accept-Encoding
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!q79qJmtvmj8SRj6QEus9KsUIQe0YeYkjIZQPKnsEDuwg7tiOkFM5dtDxYF5poPG5keTs8EBE41vhHBBcSH7+JJEhD9Ja; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|_    Set-Cookie: TS0101001a=01352d3811799eaa9ec11217390c89fe6d513f0a9e0d11a9bf81e3d019a028a0f5585dd39787f7f458023919c3381ecfa4866b59a6; Path=/
+|_http-trane-info: Problem with XML parsing of /evox/about
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/18%Time=6801CA17%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,39BC,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Fri,\x2018\
+SF:x20Apr\x202025\x2003:42:15\x20GMT\r\nCache-Control:\x20max-age=3600,\x2
+SF:0public\r\nX-Drupal-Dynamic-Cache:\x20MISS\r\nContent-language:\x20fr\r
+SF:\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nLast-Mod
+SF:ified:\x20Thu,\x2017\x20Apr\x202025\x2016:37:06\x20GMT\r\nVary:\x20Cook
+SF:ie,Accept-Encoding\r\nContent-Length:\x2094041\r\nX-Drupal-Cache:\x20HI
+SF:T\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UTF
+SF:-8\r\nSet-Cookie:\x20BIGipServerpool-dares-site-v2\.cegedim\.cloud-HTTP
+SF:=!UO\+yVCwbeYcPQT6QEus9KsUIQe0YeZT83pnu0D40ovvyY4qNKRmNhlj7x0y0xdp6m1jN
+SF:3to30sPXPHs\+2tzAWog/WOE7;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-
+SF:Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nSet-Co
+SF:okie:\x20TS0101001a=01352d381162eeaab175d5e1d728cafb7c3ae447f54237a2db5
+SF:3b71ef8044fba5ec959d1f1dab770dac4dc9874d07e585ccb4e3aef;\x20Path=/\r\n\
+SF:r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=\"
+SF:og:\x20https://ogp\.me/ns#\">\n\x20\x20<head>\n\x20\x20\x20\x20<")%r(HT
+SF:TPOptions,2D6,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Fri,\x2018\x20Apr\x20
+SF:2025\x2003:42:16\x20GMT\r\nAllow:\x20GET,\x20POST\r\nCache-Control:\x20
+SF:must-revalidate,\x20no-cache,\x20private\r\nContent-language:\x20fr\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nexpires:\x20-1\r\nContent-Length:\x200\r\npragma:\x20no-cache\r\nVary:
+SF:\x20Accept-Encoding\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=UTF-8\r\nSet-Cookie:\x20BIGipServerpool-dares-site-v2\.c
+SF:egedim\.cloud-HTTP=!q79qJmtvmj8SRj6QEus9KsUIQe0YeYkjIZQPKnsEDuwg7tiOkFM
+SF:5dtDxYF5poPG5keTs8EBE41vhHBBcSH7\+JJEhD9Ja;\x20path=/;\x20Httponly;\x20
+SF:Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSub
+SF:Domains\r\nSet-Cookie:\x20TS0101001a=01352d3811799eaa9ec11217390c89fe6d
+SF:513f0a9e0d11a9bf81e3d019a028a0f5585dd39787f7f458023919c3381ecfa4866b59a
+SF:6;\x20Path=/\r\n\r\n")%r(FourOhFourRequest,1EE,"HTTP/1\.1\x20200\x20OK\
+SF:r\nCache-Control:\x20no-store,\x20must-revalidate,\x20no-cache\r\nPragm
+SF:a:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20245\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Prot
+SF:ection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\n\r
+SF:\n<html><head><title>Request\x20Rejected</title></head><body>The\x20req
+SF:uested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20your
+SF:\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20<14185738776
+SF:357496504><br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20Ba
+SF:ck\]</body></html>");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 18 03:44:27 2025 -- 1 IP address (1 host up) scanned in 151.72 seconds
