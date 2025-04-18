@@ -1,0 +1,270 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "C",
+    "error": null,
+    "score": 55,
+    "statusCode": 200,
+    "testsFailed": 5,
+    "testsPassed": 5,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Fri, 18 Apr 2025 03:43:25 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "vary": "Accept-Encoding",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block",
+      "content-security-policy": "frame-ancestors 'self'; form-action 'self'; font-src 'self' fonts.gstatic.com; script-src 'self' ${URL_STAT} https://www.google.com https://www.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' ${URL_IMG} ${URL_STAT} data: https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://piwik.alkante.com",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "set-cookie": [
+        "PHPSESSID=rh4923e32pok00ppt2n1gbmqc0; path=/; HttpOnly",
+        "PHPSESSID=rh4923e32pok00ppt2n1gbmqc0; path=/; HttpOnly"
+      ],
+      "p3p": "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\"",
+      "strict-transport-security": "max-age=15768000"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "font-src": [
+          "'self'",
+          "fonts.gstatic.com"
+        ],
+        "script-src": [
+          "${url_stat}",
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https://www.google.com",
+          "https://www.gstatic.com"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com"
+        ],
+        "img-src": [
+          "${url_img}",
+          "${url_stat}",
+          "'self'",
+          "data:",
+          "https://a.tile.openstreetmap.org",
+          "https://b.tile.openstreetmap.org",
+          "https://c.tile.openstreetmap.org"
+        ],
+        "script-src-elem": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https://piwik.alkante.com"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": false,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -10,
+      "data": {
+        "PHPSESSID": {
+          "domain": "www.open-datara.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
+      "destination": "https://www.open-datara.fr/accueil",
+      "redirects": true,
+      "route": [
+        "http://www.datara.gouv.fr/",
+        "https://www.open-datara.fr/",
+        "https://www.open-datara.fr/accueil"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=15768000",
+      "includeSubDomains": false,
+      "maxAge": 15768000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://www.open-datara.fr/lib/lib_js.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_js.php?c=1": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_jsaddon.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_ajax.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/locales/locales_js.json": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_formcheck.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_formdate.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_formnumber.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_formselect.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_form.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_formtxt.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/classes/form/renderer/bs_alkanet/alkhtmlform.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/assets/plugins/jquery/jquery.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/classes/form/renderer/bs_alkanet/alkhtmlupload.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/assets/js/jquery-ui-1-12-1.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/lib_js_jquery.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/lib/jquerybs.alkModal.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/templates/blocs/alkhtmlbloc_datahub_search.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/assets/plugins/bootstrap-dist/js/bootstrap.bundle.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/assets/js/jquerybs.alkModal.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/assets/js/isotope/isotope.pkgd.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.open-datara.fr/Templates/tpl_datara/assets/js/menuMobile.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
