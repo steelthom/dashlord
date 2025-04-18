@@ -1,0 +1,172 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "D-",
+    "error": null,
+    "score": 25,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Fri, 18 Apr 2025 03:03:54 GMT",
+      "server": "Apache",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "set-cookie": [
+        "PHPSESSID=hi6edveag7g5nn1s828g0btkja; path=/",
+        "PrestaShop-a25f72c6453cd0b11671573a647231d2=def5020061b35043a0a59c212dfa4ace2b1a15420f542ee26a74c6440223c98b1bf9a60efb18a412ff0c9108b9112d5931397d5bca9b6b9bcb592e561a3138d160d3385984fb73f378477250e5464d6495750210a23af182fe7a7c4709628c320c8ec7d846f98df663afe3135393575672719d3b98511904e4ac6fcce0c849f98f1e9a022e9f82f7e308edd63507dfe974c479988e07648ff2653b4c4425bfe2e920b0d8ae612a70735862c44a7bb56673c511559dcf948f705a4f58358bac3124a663232add8ff63fda36941f697e615391d2d9d3; expires=Fri, 18-Apr-2025 04:03:54 GMT; Max-Age=3599; path=/; domain=boutiquedelapatrouilledefrance.fr; secure; HttpOnly"
+      ],
+      "x-frame-options": "SAMEORIGIN",
+      "upgrade": "h2",
+      "connection": "Upgrade, close",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "content-security-policy": "script-src script-src-elem 'unsafe-inline' 'unsafe-eval' 'self' cdnjs.cloudflare.com cdn.datatables.net maxcdn.bootstrapcdn.com embed.typeform.com *.googleapis.com cmp.inmobi.com *.gstatic.com *.googletagmanager.com;",
+      "strict-transport-security": "max-age=10886400;",
+      "content-length": "32540",
+      "content-type": "text/html; charset=utf-8"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "script-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "*.googleapis.com",
+          "*.googletagmanager.com",
+          "*.gstatic.com",
+          "cdn.datatables.net",
+          "cdnjs.cloudflare.com",
+          "cmp.inmobi.com",
+          "embed.typeform.com",
+          "maxcdn.bootstrapcdn.com",
+          "script-src-elem"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag",
+      "scoreModifier": -40,
+      "data": {
+        "PHPSESSID": {
+          "domain": "boutiquedelapatrouilledefrance.fr",
+          "path": "/",
+          "port": null
+        },
+        "PrestaShop-a25f72c6453cd0b11671573a647231d2": {
+          "domain": "boutiquedelapatrouilledefrance.fr",
+          "expires": "2025-04-18T04:03:54.000Z",
+          "httponly": true,
+          "max-age": 3599,
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://boutiquedelapatrouilledefrance.fr/",
+      "redirects": true,
+      "route": [
+        "http://www.boutiquedelapatrouilledefrance.fr/fr/",
+        "https://www.boutiquedelapatrouilledefrance.fr/fr/",
+        "https://boutiquedelapatrouilledefrance.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-implemented-max-age-less-than-six-months",
+      "scoreModifier": -10,
+      "data": "max-age=10886400;",
+      "includeSubDomains": false,
+      "maxAge": 10886400,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://www.googletagmanager.com/gtag/js?id=G-S0YK5X21XP": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
