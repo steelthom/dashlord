@@ -1,0 +1,95 @@
+# Nmap 7.92 scan initiated Sat Apr 19 03:34:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.geoportail-urbanisme.gouv.fr
+Nmap scan report for www.geoportail-urbanisme.gouv.fr (145.239.193.231)
+Host is up (0.11s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 403 Forbidden
+|     date: Sat, 19 Apr 2025 03:34:53 GMT
+|     content-length: 199
+|     content-type: text/html; charset=iso-8859-1
+|     x-iplb-request-id: 1419C082:9C37_91EFC1E7:01BB_680319DD_2376B093:72FB
+|     x-iplb-instance: 61217
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.0 403 Forbidden
+|     date: Sat, 19 Apr 2025 03:34:52 GMT
+|     content-length: 199
+|     content-type: text/html; charset=iso-8859-1
+|     x-iplb-request-id: 1419C082:9C33_91EFC1E7:01BB_680319D6_2376ACDB:72FB
+|     x-iplb-instance: 61217
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     date: Sat, 19 Apr 2025 03:34:53 GMT
+|     content-length: 199
+|     content-type: text/html; charset=iso-8859-1
+|     x-iplb-request-id: 1419C082:9C34_91EFC1E7:01BB_680319DD_2376B04D:72FB
+|     x-iplb-instance: 61217
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   RTSPRequest, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/19%Time=680319DC%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1A7,"HTTP/1\.0\x20403\x20Forbidden\r\ndate:\x20Sat,\
+SF:x2019\x20Apr\x202025\x2003:34:52\x20GMT\r\ncontent-length:\x20199\r\nco
+SF:ntent-type:\x20text/html;\x20charset=iso-8859-1\r\nx-iplb-request-id:\x
+SF:201419C082:9C33_91EFC1E7:01BB_680319D6_2376ACDB:72FB\r\nx-iplb-instance
+SF::\x2061217\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
+SF:\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head>
+SF:<body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to
+SF:\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,
+SF:1A7,"HTTP/1\.0\x20403\x20Forbidden\r\ndate:\x20Sat,\x2019\x20Apr\x20202
+SF:5\x2003:34:53\x20GMT\r\ncontent-length:\x20199\r\ncontent-type:\x20text
+SF:/html;\x20charset=iso-8859-1\r\nx-iplb-request-id:\x201419C082:9C34_91E
+SF:FC1E7:01BB_680319DD_2376B04D:72FB\r\nx-iplb-instance:\x2061217\r\n\r\n<
+SF:!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<h
+SF:tml><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidd
+SF:en</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\
+SF:x20resource\.</p>\n</body></html>\n")%r(FourOhFourRequest,1A7,"HTTP/1\.
+SF:0\x20403\x20Forbidden\r\ndate:\x20Sat,\x2019\x20Apr\x202025\x2003:34:53
+SF:\x20GMT\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20cha
+SF:rset=iso-8859-1\r\nx-iplb-request-id:\x201419C082:9C37_91EFC1E7:01BB_68
+SF:0319DD_2376B093:72FB\r\nx-iplb-instance:\x2061217\r\n\r\n<!DOCTYPE\x20H
+SF:TML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<
+SF:title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>Y
+SF:ou\x20don't\x20have\x20permission\x20to\x20access\x20this\x20resource\.
+SF:</p>\n</body></html>\n")%r(tor-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20
+SF:request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nconte
+SF:nt-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>40
+SF:0\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20r
+SF:equest\.\n</body></html>\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\
+SF:x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nco
+SF:ntent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1
+SF:>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x
+SF:20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 19 03:35:12 2025 -- 1 IP address (1 host up) scanned in 42.29 seconds
