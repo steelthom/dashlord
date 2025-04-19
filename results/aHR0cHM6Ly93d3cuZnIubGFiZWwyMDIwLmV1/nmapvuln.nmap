@@ -1,0 +1,98 @@
+# Nmap 7.92 scan initiated Sat Apr 19 03:45:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.fr.label2020.eu
+Nmap scan report for www.fr.label2020.eu (89.31.143.90)
+Host is up (0.14s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      UD Webspace 3.2
+|_http-server-header: UD Webspace 3.2
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 19 Apr 2025 03:45:43 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Server: UD Webspace 3.2
+|     <!DOCTYPE html><html lang="de"><head><meta name="description"content="Domain registriert bei united-domains.de"><meta http-equiv="Content-Type"content="text/html; charset=UTF-8"><title>Domain im Kundenauftrag registriert</title><style>body,html{height:100%;margin:0;padding:0;background-color:#fff;font-family:Arial,Verdana,sans-serif}body{text-align:center;background-color:#f0f2f3}.spacerTop{margin-top:40px}a:focus,a:hover,a:link,a:visited{margin:0;padding:0;border:none}.dvLink:focus,.dvLink:hover,.dvLink:link,.dvLink:visited{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAYAAAARml2dAAAAHklEQVQImWNgqDzxn6HyxH8GDACToIckhYLIEmgAAAHCOEFxKWXwAAAAAElFTkSuQmCC') right center no-repeat;padding-right:12px;border:0 none;text-decoration:none;font-weigh
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Date: Sat, 19 Apr 2025 03:45:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     Server: UD Webspace 3.2
+|     Allow: GET, POST, HEAD
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body>
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 19 Apr 2025 03:45:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     Server: UD Webspace 3.2
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 19 Apr 2025 03:45:44 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     Server: UD Webspace 3.2
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https UD Webspace 3.1
+|_http-server-header: UD Webspace 3.1
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=4/19%Time=68031C67%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1A5D,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2019\x20Apr\
+SF:x202025\x2003:45:43\x20GMT\r\nContent-Type:\x20text/html\r\nConnection:
+SF:\x20close\r\nServer:\x20UD\x20Webspace\x203\.2\r\n\r\n<!DOCTYPE\x20html
+SF:><html\x20lang=\"de\"><head><meta\x20name=\"description\"content=\"Doma
+SF:in\x20registriert\x20bei\x20united-domains\.de\"><meta\x20http-equiv=\"
+SF:Content-Type\"content=\"text/html;\x20charset=UTF-8\"><title>Domain\x20
+SF:im\x20Kundenauftrag\x20registriert</title><style>body,html{height:100%;
+SF:margin:0;padding:0;background-color:#fff;font-family:Arial,Verdana,sans
+SF:-serif}body{text-align:center;background-color:#f0f2f3}\.spacerTop{marg
+SF:in-top:40px}a:focus,a:hover,a:link,a:visited{margin:0;padding:0;border:
+SF:none}\.dvLink:focus,\.dvLink:hover,\.dvLink:link,\.dvLink:visited{backg
+SF:round:url\('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAYAA
+SF:AARml2dAAAAHklEQVQImWNgqDzxn6HyxH8GDACToIckhYLIEmgAAAHCOEFxKWXwAAAAAElF
+SF:TkSuQmCC'\)\x20right\x20center\x20no-repeat;padding-right:12px;border:0
+SF:\x20none;text-decoration:none;font-weigh")%r(HTTPOptions,14D,"HTTP/1\.1
+SF:\x20405\x20Not\x20Allowed\r\nDate:\x20Sat,\x2019\x20Apr\x202025\x2003:4
+SF:5:43\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154\r\n
+SF:Connection:\x20close\r\nServer:\x20UD\x20Webspace\x203\.2\r\nAllow:\x20
+SF:GET,\x20POST,\x20HEAD\r\n\r\n<html>\r\n<head><title>405\x20Not\x20Allow
+SF:ed</title></head>\r\n<body>\r\n<center><h1>405\x20Not\x20Allowed</h1></
+SF:center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r
+SF:(RTSPRequest,135,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x
+SF:2019\x20Apr\x202025\x2003:45:43\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20154\r\nConnection:\x20close\r\nServer:\x20UD\x20Web
+SF:space\x203\.2\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</titl
+SF:e></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\
+SF:r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Prob
+SF:e,135,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2019\x20Apr
+SF:\x202025\x2003:45:44\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Le
+SF:ngth:\x20154\r\nConnection:\x20close\r\nServer:\x20UD\x20Webspace\x203\
+SF:.2\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r
+SF:\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cen
+SF:ter>openresty</center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 19 03:45:58 2025 -- 1 IP address (1 host up) scanned in 32.07 seconds
