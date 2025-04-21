@@ -1,0 +1,358 @@
+# Nmap 7.92 scan initiated Mon Apr 21 03:17:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.maprimerenov.gouv.fr
+Nmap scan report for www.maprimerenov.gouv.fr (52.47.192.148)
+Host is up (0.083s latency).
+Other addresses for www.maprimerenov.gouv.fr (not scanned): 15.236.67.39 35.181.114.54
+rDNS record for 52.47.192.148: ec2-52-47-192-148.eu-west-3.compute.amazonaws.com
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE             VERSION
+80/tcp   open  http                awselb/2.0
+|_http-server-header: awselb/2.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:00 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://pe-pr-pegaa-tw36w82vy6bj-1778757778.eu-west-3.elb.amazonaws.com:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:17:59 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://pe-pr-pegaa-tw36w82vy6bj-1778757778.eu-west-3.elb.amazonaws.com:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:00 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+443/tcp  open  ssl/https           awselb/2.0
+|_http-server-header: awselb/2.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 
+|     Date: Mon, 21 Apr 2025 03:18:06 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Length: 520
+|     Connection: close
+|     Set-Cookie: AWSALB=A2co5A1RCQ0JEqVPJRrSe3r/AxtGF/EF+wg0ctjRvhlZOUf5xHik7n8L/yIuxVspmCvYkiUelnxxe40anm+xM8L2eFSdWYhmGjjz3pqderMFc6cSTfayKVJ4xUVp; Expires=Mon, 28 Apr 2025 03:18:06 GMT; Path=/
+|     Set-Cookie: AWSALBCORS=A2co5A1RCQ0JEqVPJRrSe3r/AxtGF/EF+wg0ctjRvhlZOUf5xHik7n8L/yIuxVspmCvYkiUelnxxe40anm+xM8L2eFSdWYhmGjjz3pqderMFc6cSTfayKVJ4xUVp; Expires=Mon, 28 Apr 2025 03:18:06 GMT; Path=/; SameSite=None; Secure
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <title>404</title>
+|     <style type="text/css">
+|     div#wrapper {
+|     position: absolute;
+|     top: 50%;
+|     left: 50%;
+|     transform: translate(-50%,-50%);
+|     font-family:Arial;
+|     text-align: center;
+|     </style>
+|     </head>
+|     <div>
+|     <div id="wrapper">
+|     <h4>Error 40
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://pe-pr-pegaa-tw36w82vy6bj-1778757778.eu-west-3.elb.amazonaws.com:443/prweb/PRAuth/Anonymous
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:06 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://pe-pr-pegaa-tw36w82vy6bj-1778757778.eu-west-3.elb.amazonaws.com:443/prweb/PRAuth/Anonymous
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|_    </html>
+7443/tcp open  ssl/oracleas-https?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:12 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 503 Service Temporarily Unavailable
+|     Server: awselb/2.0
+|     Date: Mon, 21 Apr 2025 03:18:11 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     <html>
+|     <head><title>503 Service Temporarily Unavailable</title></head>
+|     <body>
+|     <center><h1>503 Service Temporarily Unavailable</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+8443/tcp open  ssl/https-alt
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 404 
+|     Date: Mon, 21 Apr 2025 03:18:05 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Length: 520
+|     Connection: close
+|     Set-Cookie: AWSALB=8NWHejTisRajGJGQ5m17ZAzx/VfJRswI2r/v5PYqRGuzQcVP2Su4MxpV4xf9sI3EXN8rhhTrnQJeB/SavMGTJJqK9ecQj+EJ+/+iG2ZMogoiAbS5gKtZCJ4IEDUv; Expires=Mon, 28 Apr 2025 03:18:05 GMT; Path=/
+|     Set-Cookie: AWSALBCORS=8NWHejTisRajGJGQ5m17ZAzx/VfJRswI2r/v5PYqRGuzQcVP2Su4MxpV4xf9sI3EXN8rhhTrnQJeB/SavMGTJJqK9ecQj+EJ+/+iG2ZMogoiAbS5gKtZCJ4IEDUv; Expires=Mon, 28 Apr 2025 03:18:05 GMT; Path=/; SameSite=None; Secure
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <title>404</title>
+|     <style type="text/css">
+|     div#wrapper {
+|     position: absolute;
+|     top: 50%;
+|     left: 50%;
+|     transform: translate(-50%,-50%);
+|     font-family:Arial;
+|     text-align: center;
+|     </style>
+|     </head>
+|     <div>
+|     <div id="wrapper">
+|     <h4>Error 40
+|   HTTPOptions: 
+|     HTTP/1.1 404 
+|     Date: Mon, 21 Apr 2025 03:18:06 GMT
+|     Content-Type: text/html;charset=UTF-8
+|     Content-Length: 520
+|     Connection: close
+|     Set-Cookie: AWSALB=DmtAXiqePgCIIO+StIG7W7SFNe2ExAE8TvJ8qkjehuyQqFv8gioyxr8vIY1Fvzt59qY924Miw59bBOL2pLKo9FjCKRlRii2c4pGOg6bvz4j7ADSQkHcYIQLw8bgn; Expires=Mon, 28 Apr 2025 03:18:06 GMT; Path=/
+|     Set-Cookie: AWSALBCORS=DmtAXiqePgCIIO+StIG7W7SFNe2ExAE8TvJ8qkjehuyQqFv8gioyxr8vIY1Fvzt59qY924Miw59bBOL2pLKo9FjCKRlRii2c4pGOg6bvz4j7ADSQkHcYIQLw8bgn; Expires=Mon, 28 Apr 2025 03:18:06 GMT; Path=/; SameSite=None; Secure
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <title>404</title>
+|     <style type="text/css">
+|     div#wrapper {
+|     position: absolute;
+|     top: 50%;
+|     left: 50%;
+|     transform: translate(-50%,-50%);
+|     font-family:Arial;
+|     text-align: center;
+|     </style>
+|     </head>
+|     <div>
+|     <div id="wrapper">
+|_    <h4>Error 40
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=4/21%Time=6805B8E7%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,17A,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
+SF:0awselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:17:59\x20GMT\r
+SF:\nContent-Type:\x20text/html\r\nContent-Length:\x20134\r\nConnection:\x
+SF:20close\r\nLocation:\x20https://pe-pr-pegaa-tw36w82vy6bj-1778757778\.eu
+SF:-west-3\.elb\.amazonaws\.com:443/\r\n\r\n<html>\r\n<head><title>301\x20
+SF:Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Mov
+SF:ed\x20Permanently</h1></center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptio
+SF:ns,17A,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20awselb/2
+SF:\.0\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:17:59\x20GMT\r\nContent
+SF:-Type:\x20text/html\r\nContent-Length:\x20134\r\nConnection:\x20close\r
+SF:\nLocation:\x20https://pe-pr-pegaa-tw36w82vy6bj-1778757778\.eu-west-3\.
+SF:elb\.amazonaws\.com:443/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20
+SF:Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Per
+SF:manently</h1></center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,7A,"<h
+SF:tml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n
+SF:<center><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r
+SF:\n")%r(X11Probe,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20a
+SF:wselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:18:00\x20GMT\r\n
+SF:Content-Type:\x20text/html\r\nContent-Length:\x20122\r\nConnection:\x20
+SF:close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head
+SF:>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n</bod
+SF:y>\r\n</html>\r\n")%r(FourOhFourRequest,19D,"HTTP/1\.1\x20301\x20Moved\
+SF:x20Permanently\r\nServer:\x20awselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\
+SF:x202025\x2003:18:00\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:gth:\x20134\r\nConnection:\x20close\r\nLocation:\x20https://pe-pr-pegaa
+SF:-tw36w82vy6bj-1778757778\.eu-west-3\.elb\.amazonaws\.com:443/nice%20por
+SF:ts%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x
+SF:20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20P
+SF:ermanently</h1></center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/21%Time=6805B8EE%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,190,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nSer
+SF:ver:\x20awselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:18:05\x
+SF:20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20134\r\nConnec
+SF:tion:\x20close\r\nLocation:\x20https://pe-pr-pegaa-tw36w82vy6bj-1778757
+SF:778\.eu-west-3\.elb\.amazonaws\.com:443/prweb/PRAuth/Anonymous\r\n\r\n<
+SF:html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<bo
+SF:dy>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n</body>
+SF:\r\n</html>\r\n")%r(HTTPOptions,190,"HTTP/1\.1\x20301\x20Moved\x20Perma
+SF:nently\r\nServer:\x20awselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\x202025\
+SF:x2003:18:06\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20
+SF:134\r\nConnection:\x20close\r\nLocation:\x20https://pe-pr-pegaa-tw36w82
+SF:vy6bj-1778757778\.eu-west-3\.elb\.amazonaws\.com:443/prweb/PRAuth/Anony
+SF:mous\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title><
+SF:/head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></cente
+SF:r>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,428,"HTTP/1\.1\x2040
+SF:4\x20\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:18:06\x20GMT\r\nConte
+SF:nt-Type:\x20text/html;charset=UTF-8\r\nContent-Length:\x20520\r\nConnec
+SF:tion:\x20close\r\nSet-Cookie:\x20AWSALB=A2co5A1RCQ0JEqVPJRrSe3r/AxtGF/E
+SF:F\+wg0ctjRvhlZOUf5xHik7n8L/yIuxVspmCvYkiUelnxxe40anm\+xM8L2eFSdWYhmGjjz
+SF:3pqderMFc6cSTfayKVJ4xUVp;\x20Expires=Mon,\x2028\x20Apr\x202025\x2003:18
+SF::06\x20GMT;\x20Path=/\r\nSet-Cookie:\x20AWSALBCORS=A2co5A1RCQ0JEqVPJRrS
+SF:e3r/AxtGF/EF\+wg0ctjRvhlZOUf5xHik7n8L/yIuxVspmCvYkiUelnxxe40anm\+xM8L2e
+SF:FSdWYhmGjjz3pqderMFc6cSTfayKVJ4xUVp;\x20Expires=Mon,\x2028\x20Apr\x2020
+SF:25\x2003:18:06\x20GMT;\x20Path=/;\x20SameSite=None;\x20Secure\r\n\r\n<!
+SF:DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<head>\r\n\x20\x20\x20\x20
+SF:<meta\x20charset=\"UTF-8\">\r\n\x20\x20\x20\x20<title>404</title>\r\n\x
+SF:20\x20\x20\x20<style\x20type=\"text/css\">\r\ndiv#wrapper\x20{\r\n\x20\
+SF:x20\x20\x20position:\x20absolute;\r\n\x20\x20\x20\x20top:\x20\x2050%;\r
+SF:\n\x20\x20\x20\x20left:\x2050%;\r\n\x20\x20\x20\x20transform:\x20transl
+SF:ate\(-50%,-50%\);\r\n\tfont-family:Arial;\r\n\ttext-align:\x20center;\r
+SF:\n}\r\n\x20\x20\x20\x20</style>\r\n</head>\r\n\r\n<div>\r\n\x20\x20\x20
+SF:\x20<div\x20id=\"wrapper\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20<h4>Erro
+SF:r\x2040");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7443-TCP:V=7.92%T=SSL%I=7%D=4/21%Time=6805B8EE%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,14C,"HTTP/1\.1\x20503\x20Service\x20Temporarily\x20
+SF:Unavailable\r\nServer:\x20awselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\x20
+SF:2025\x2003:18:05\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length
+SF::\x20162\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>503\x20S
+SF:ervice\x20Temporarily\x20Unavailable</title></head>\r\n<body>\r\n<cente
+SF:r><h1>503\x20Service\x20Temporarily\x20Unavailable</h1></center>\r\n</b
+SF:ody>\r\n</html>\r\n")%r(HTTPOptions,14C,"HTTP/1\.1\x20503\x20Service\x2
+SF:0Temporarily\x20Unavailable\r\nServer:\x20awselb/2\.0\r\nDate:\x20Mon,\
+SF:x2021\x20Apr\x202025\x2003:18:11\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20162\r\nConnection:\x20close\r\n\r\n<html>\r\n<head
+SF:><title>503\x20Service\x20Temporarily\x20Unavailable</title></head>\r\n
+SF:<body>\r\n<center><h1>503\x20Service\x20Temporarily\x20Unavailable</h1>
+SF:</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,7A,"<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>4
+SF:00\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n")%r(RPCChe
+SF:ck,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\
+SF:nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:18:12\x20GMT\r\nContent-Type:
+SF:\x20text/html\r\nContent-Length:\x20122\r\nConnection:\x20close\r\n\r\n
+SF:<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r
+SF:\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>
+SF:\r\n")%r(DNSVersionBindReqTCP,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nServer:\x20awselb/2\.0\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:18
+SF::12\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20122\r\nC
+SF:onnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request
+SF:</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></ce
+SF:nter>\r\n</body>\r\n</html>\r\n")%r(DNSStatusRequestTCP,110,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nServer:\x20awselb/2\.0\r\nDate:\x20Mon,\x20
+SF:21\x20Apr\x202025\x2003:18:12\x20GMT\r\nContent-Type:\x20text/html\r\nC
+SF:ontent-Length:\x20122\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><t
+SF:itle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\
+SF:x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=4/21%Time=6805B8EE%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,428,"HTTP/1\.1\x20404\x20\r\nDate:\x20Mon,\x2021\x2
+SF:0Apr\x202025\x2003:18:05\x20GMT\r\nContent-Type:\x20text/html;charset=U
+SF:TF-8\r\nContent-Length:\x20520\r\nConnection:\x20close\r\nSet-Cookie:\x
+SF:20AWSALB=8NWHejTisRajGJGQ5m17ZAzx/VfJRswI2r/v5PYqRGuzQcVP2Su4MxpV4xf9sI
+SF:3EXN8rhhTrnQJeB/SavMGTJJqK9ecQj\+EJ\+/\+iG2ZMogoiAbS5gKtZCJ4IEDUv;\x20E
+SF:xpires=Mon,\x2028\x20Apr\x202025\x2003:18:05\x20GMT;\x20Path=/\r\nSet-C
+SF:ookie:\x20AWSALBCORS=8NWHejTisRajGJGQ5m17ZAzx/VfJRswI2r/v5PYqRGuzQcVP2S
+SF:u4MxpV4xf9sI3EXN8rhhTrnQJeB/SavMGTJJqK9ecQj\+EJ\+/\+iG2ZMogoiAbS5gKtZCJ
+SF:4IEDUv;\x20Expires=Mon,\x2028\x20Apr\x202025\x2003:18:05\x20GMT;\x20Pat
+SF:h=/;\x20SameSite=None;\x20Secure\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20
+SF:lang=\"en\">\r\n<head>\r\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\">\r
+SF:\n\x20\x20\x20\x20<title>404</title>\r\n\x20\x20\x20\x20<style\x20type=
+SF:\"text/css\">\r\ndiv#wrapper\x20{\r\n\x20\x20\x20\x20position:\x20absol
+SF:ute;\r\n\x20\x20\x20\x20top:\x20\x2050%;\r\n\x20\x20\x20\x20left:\x2050
+SF:%;\r\n\x20\x20\x20\x20transform:\x20translate\(-50%,-50%\);\r\n\tfont-f
+SF:amily:Arial;\r\n\ttext-align:\x20center;\r\n}\r\n\x20\x20\x20\x20</styl
+SF:e>\r\n</head>\r\n\r\n<div>\r\n\x20\x20\x20\x20<div\x20id=\"wrapper\">\r
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20<h4>Error\x2040")%r(HTTPOptions,428,"
+SF:HTTP/1\.1\x20404\x20\r\nDate:\x20Mon,\x2021\x20Apr\x202025\x2003:18:06\
+SF:x20GMT\r\nContent-Type:\x20text/html;charset=UTF-8\r\nContent-Length:\x
+SF:20520\r\nConnection:\x20close\r\nSet-Cookie:\x20AWSALB=DmtAXiqePgCIIO\+
+SF:StIG7W7SFNe2ExAE8TvJ8qkjehuyQqFv8gioyxr8vIY1Fvzt59qY924Miw59bBOL2pLKo9F
+SF:jCKRlRii2c4pGOg6bvz4j7ADSQkHcYIQLw8bgn;\x20Expires=Mon,\x2028\x20Apr\x2
+SF:02025\x2003:18:06\x20GMT;\x20Path=/\r\nSet-Cookie:\x20AWSALBCORS=DmtAXi
+SF:qePgCIIO\+StIG7W7SFNe2ExAE8TvJ8qkjehuyQqFv8gioyxr8vIY1Fvzt59qY924Miw59b
+SF:BOL2pLKo9FjCKRlRii2c4pGOg6bvz4j7ADSQkHcYIQLw8bgn;\x20Expires=Mon,\x2028
+SF:\x20Apr\x202025\x2003:18:06\x20GMT;\x20Path=/;\x20SameSite=None;\x20Sec
+SF:ure\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<head>\r\n\x2
+SF:0\x20\x20\x20<meta\x20charset=\"UTF-8\">\r\n\x20\x20\x20\x20<title>404<
+SF:/title>\r\n\x20\x20\x20\x20<style\x20type=\"text/css\">\r\ndiv#wrapper\
+SF:x20{\r\n\x20\x20\x20\x20position:\x20absolute;\r\n\x20\x20\x20\x20top:\
+SF:x20\x2050%;\r\n\x20\x20\x20\x20left:\x2050%;\r\n\x20\x20\x20\x20transfo
+SF:rm:\x20translate\(-50%,-50%\);\r\n\tfont-family:Arial;\r\n\ttext-align:
+SF:\x20center;\r\n}\r\n\x20\x20\x20\x20</style>\r\n</head>\r\n\r\n<div>\r\
+SF:n\x20\x20\x20\x20<div\x20id=\"wrapper\">\r\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20<h4>Error\x2040");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Apr 21 03:18:21 2025 -- 1 IP address (1 host up) scanned in 35.32 seconds
