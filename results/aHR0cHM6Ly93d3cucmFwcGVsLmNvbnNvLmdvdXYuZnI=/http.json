@@ -1,0 +1,189 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "D",
+    "error": null,
+    "score": 30,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 22 Apr 2025 03:29:53 GMT",
+      "server": "webServer1",
+      "set-cookie": [
+        ".AspNetCore.Antiforgery.O33mliWV2hE=CfDJ8ELf_VBBQOxAgwDtnn1qrQKQ0wo_JuYDCB2JDB86RTDn-1DiU7TLNCdUVz7ZPyGxPaqoF3IQTjz74u44phg2TXFrFDeCWz4jqcjTEZJgTawTA-7qh8nbnAAEVRkGzMhrgCRJz1YW0OWsWfXmSBfcuMU; path=/; secure; samesite=strict; httponly",
+        "BWROUTEID=3ddbb54ff84f9a8db100e8cb35c25ae2.1; Path=/; Secure"
+      ],
+      "cache-control": "no-cache, no-store",
+      "pragma": "no-cache",
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'none';script-src * 'self' 'nonce-JpNEe3ZWa/NOvjaeWrAyv5WHKBXJq4EFPHY0RksR0cE=';style-src 'self' 'unsafe-inline';connect-src 'self';form-action 'self';img-src * 'self';frame-ancestors 'none';frame-src 'none';base-uri 'self'",
+      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+      "x-powered-by": "CCRF",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+      "referrer-policy": "Same-origin",
+      "connection": "close",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'none'"
+        ],
+        "script-src": [
+          "'nonce-jpnee3zwa/novjaewrayv5whkbxjq4efphy0rksr0ce='",
+          "'self'",
+          "*"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'"
+        ],
+        "connect-src": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "img-src": [
+          "'self'",
+          "*"
+        ],
+        "frame-ancestors": [
+          "'none'"
+        ],
+        "frame-src": [
+          "'none'"
+        ],
+        "base-uri": [
+          "'self'"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": true,
+        "insecureBaseUri": false,
+        "insecureFormAction": false,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "SERVERID77446": {
+          "domain": "www.rappel.conso.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        ".AspNetCore.Antiforgery.O33mliWV2hE": {
+          "domain": "rappel.conso.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "strict",
+          "secure": true
+        },
+        "BWROUTEID": {
+          "domain": "rappel.conso.gouv.fr",
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-not-to-https-on-initial-redirection",
+      "scoreModifier": -10,
+      "destination": "https://rappel.conso.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://www.rappel.conso.gouv.fr/",
+        "http://rappel.conso.gouv.fr/",
+        "https://rappel.conso.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "Same-origin",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "SAMEORIGIN, SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
