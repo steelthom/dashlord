@@ -136,7 +136,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "cipher_order",
@@ -157,14 +157,14 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES256-SHA384"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "prime256v1 secp384r1 secp521r1"
+              "finding"      : "prime256v1"
           }
 ,         {
               "id"           : "TLS_extensions",
@@ -234,21 +234,21 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "SHA256 with RSA"
+              "finding"      : "ECDSA with SHA384"
           }
 ,         {
               "id"           : "cert_keySize",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA 2048 bits (exponent is 65537)"
+              "severity"     : "OK",
+              "finding"      : "EC 256 bits (curve P-256)"
           }
 ,         {
               "id"           : "cert_keyUsage",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Digital Signature, Key Encipherment"
+              "finding"      : "Digital Signature"
           }
 ,         {
               "id"           : "cert_extKeyUsage",
@@ -262,7 +262,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "04CF59C2166BE774CCBE50A6515F54EB2ABA"
+              "finding"      : "06193FE8F87C55BCEEFD7592F982CA36DEE2"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -276,21 +276,21 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "75588B979D9417670964F60F174D956E542EA13A"
+              "finding"      : "EBD9463DECDB8FDDABA3FCB9628AD5E2B0D10377"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "9ED6646DF968E9627E62F9BF13F092F9EF822A1B1132123E1CE0CFF7A554A2EB"
+              "finding"      : "6622C85330BA346A18911F1F2ED353D32CFBA03FFF8B048957B485CBEF91E085"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFNjCCBB6gAwIBAgISBM9ZwhZr53TMvlCmUV9U6yq6MA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTAwHhcNMjUwMjExMTgzMzA0WhcNMjUwNTEyMTgzMzAzWjAbMRkwFwYDVQQDExBpcmEtbWV0ei5nb3V2LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2heLSIz9aaxlVuirhJwUt/RAboivag6SKYugxcjW1/lzEMU6sDaSWhjr+lkE7RbhiaiJgClrOGBA4SBU0CwkH8LqHTkVWFmRSnQN2WHjLdljWr96iUyQ9+lbHFX/8RRZMHU4GrCKu/ETW+gOzfSBU+81N+B30wSevorKTgh1Y2VTzLIMthsC+WLQnsOlkoO82Zx6/rueQuzgEG1vdhgBVejeFW4EKuFmO3T1zxcUOL6qrQFpMIgbl9x0ciUaVNyClWDHb31a5z7xIBQgAORepfT2YOd0rctGe2qkkK29f6aq8fABJMjoA8d+zXtUoRCqkeu2OqnMGpVEIr5y84wyPQIDAQABo4ICWjCCAlYwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBTNnz0kSFS36kGvmrXv458fY7rfijAfBgNVHSMEGDAWgBS7vMNHpeS8qcbDpHIMEI2iNeHI6DBXBggrBgEFBQcBAQRLMEkwIgYIKwYBBQUHMAGGFmh0dHA6Ly9yMTAuby5sZW5jci5vcmcwIwYIKwYBBQUHMAKGF2h0dHA6Ly9yMTAuaS5sZW5jci5vcmcvMGEGA1UdEQRaMFiCFGRldi5pcmEtbWV0ei5nb3V2LmZyghBpcmEtbWV0ei5nb3V2LmZyghh3d3cuZGV2LmlyYS1tZXR6LmdvdXYuZnKCFHd3dy5pcmEtbWV0ei5nb3V2LmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHcAzPsPaoVxCWX+lZtTzumyfCLphVwNl422qX5UwP5MDbAAAAGU9n7UHAAABAMASDBGAiEA3ZjU8tqYoOMi4KFQP6ErtZzvUWzQIciwtDXHZAsJAtoCIQDwvXv1MIUBMyJ39N1u7WXjmaBCCKgXLW7gEz+t9MJW6QB1ABNK3xq1mEIJeAxv70x6kaQWtyNJzlhXat+u2qfCq+AiAAABlPZ+1P4AAAQDAEYwRAIgMEeowM6myewM3Te+PYuhlbTMha2VGZYBNsBosaQd/poCIHCIs6xNuu67pg63sPJF1Wm2EpLIBAyBTBFw+46VX4dkMA0GCSqGSIb3DQEBCwUAA4IBAQCK4APySddb9OX6GA4GI7rO/SxJBDoqpn8aYgorgeqWbKaXPNibl80aZQ5h10NKDxOwmeU0xgxmD8CZxZT4rJz6Y6HlTDx+9jSFI2Q04pmgyRKv6hzfRfr/n5wJt45MzyZtMi4Ubfy6u+2PvSCeuPMq+RLI8a4I+7BBeIloWI6V7B54UDHU9VBXk2KaRIFkHpBs3XGIBE2ztZHtyryMhHLSDnvQfhZyWFuSjWXisIkYLSoEV2XBSwnEzyJ90/1XPa3SHMNsjPsl8O9+1NoKnh/gHjlatFhN/vlLaZrp5BeGV3e5Q0cWkGwBnkGAPxOep7Sc6JBs5Z7E0YzuWFKoLa6z\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIID9TCCA3ugAwIBAgISBhk/6Ph8Vbzu/XWS+YLKNt7iMAoGCCqGSM49BAMDMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJFNTAeFw0yNTA0MjExNDM2MDJaFw0yNTA3MjAxNDM2MDFaMBsxGTAXBgNVBAMTEGlyYS1tZXR6LmdvdXYuZnIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASro2xkAs/wysMIA6h1JC+dHg+KCZ6J+sw+iZMdqs37DzQ5tpnLu1enaC+cjJBFOtFPRylv5RyimwXsjDina6TRo4IChjCCAoIwDgYDVR0PAQH/BAQDAgeAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBTwqjnzMjoRpDDNNwFDYXUfsLmnRTAfBgNVHSMEGDAWgBSfK1/PPCFPnQS37SssxMZwi9LXDTBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6Ly9lNS5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL2U1LmkubGVuY3Iub3JnLzBhBgNVHREEWjBYghRkZXYuaXJhLW1ldHouZ291di5mcoIQaXJhLW1ldHouZ291di5mcoIYd3d3LmRldi5pcmEtbWV0ei5nb3V2LmZyghR3d3cuaXJhLW1ldHouZ291di5mcjATBgNVHSAEDDAKMAgGBmeBDAECATAtBgNVHR8EJjAkMCKgIKAehhxodHRwOi8vZTUuYy5sZW5jci5vcmcvOTkuY3JsMIIBAwYKKwYBBAHWeQIEAgSB9ASB8QDvAHYAEvFONL1TckyEBhnDjz96E/jntWKHiJxtMAWE6+WGJjoAAAGWWPydBQAABAMARzBFAiA18D6lwsm85hD7KTPZraWQXchWFIOIiSUNsYlfDyykigIhAJ4M4pPHOAqMc5eQsWpIm9NCjMheA1VjL4xXjAbbA1RmAHUA7TxL1ugGwqSiAFfbyyTiOAHfUS/txIbFcA8g3bc+P+AAAAGWWPylKQAABAMARjBEAiBxvmoDffMmbqGxsCx8vzhRICjjzrHalFzDi+YEWVmf5QIgG59Wgn1kO6VnfCHeQna54gmWxBfvP5nv0IBizqPVO4UwCgYIKoZIzj0EAwMDaAAwZQIwe4J1bC5RGgueXdHQ8ml1h/cHbNtW5YaB726fPMkN5xGbpTfN35MTL6TchB3BoWF1AjEAnCm156W1BMrGucV34RWQQMUJjZb81lXMNZqkSHgkXrFp7buw0Ij+U1dJKrVA1zDJ\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -338,22 +338,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 30 days (22)"
+              "severity"     : "OK",
+              "finding"      : "85 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-02-11 18:33"
+              "finding"      : "2025-04-21 14:36"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "2025-05-12 18:33"
+              "severity"     : "OK",
+              "finding"      : "2025-07-20 14:36"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -374,14 +374,14 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "--"
+              "finding"      : "http://e5.c.lencr.org/99.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://r10.o.lencr.org"
+              "finding"      : "http://e5.o.lencr.org"
           }
 ,         {
               "id"           : "OCSP_stapling",
@@ -430,21 +430,21 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R10 (Let's Encrypt from US)"
+              "finding"      : "E5 (Let's Encrypt from US)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBTCCAu2gAwIBAgIQS6hSk/eaL6JzBkuoBI110DANBgkqhkiG9w0BAQsFADBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJuZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBYMTAeFw0yNDAzMTMwMDAwMDBaFw0yNzAzMTIyMzU5NTlaMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPV+XmxFQS7bRH/sknWHZGUCiMHT6I3wWd1bUYKb3dtVq/+vbOo76vACFLYlpaPAEvxVgD9on/jhFD68G14BQHlo9vH9fnuoE5CXVlt8KvGFs3Jijno/QHK20a/6tYvJWuQP/py1fEtVt/eA0YYbwX51TGu0mRzW4Y0YCF7qZlNrx06rxQTOr8IfM4FpOUurDTazgGzRYSespSdcitdrLCnF2YRVxvYXvGLe48E1KGAdlX5jgc3421H5KRmudKHMxFqHJV8LDmowfs/acbZp4/SItxhHFYyTr6717yW0QrPHTnj7JHwQdqzZq3DZb3EoEmUVQK7GH29/Xi8orIlQ2NAgMBAAGjgfgwgfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBS7vMNHpeS8qcbDpHIMEI2iNeHI6DAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAkrHnQTfreZ2B5s3iJeE6IOmQRJWjgVzPw139vaBw1bGWKCIL0vIozwzn1OZDjCQiHcFCktEJr59L9MhwTyAWsVrdAfYf+B9haxQnsHKNY67u4s5Lzzfdu6PUzeetUK29v+PsPmI2cJkxp+iN3epi4hKu9ZzUPSwMqtCceb7qPVxEbpYxY1p91n5PJKBLBX9eb9LU6l8zSxPWV7bK3lG4XaMJgnT9x3ies7msFtpKK5bDtotij/l0GaKeA97pb5uwD9KgWvaFXMIEt8jVTjLEvwRdvCn294GPDF08U8lAkIv7tghluaQh1QnlE4SEN4LOECj8dsIGJXpGUk3aU3KkJz9icKy+aUgA+2cP21uh6NcDIS3XyfaZQjmDQ993ChII8SXWupQZVBiIpcWO4RqZk3lr7Bz5MUCwzDIA359e57SSq5CCkY0N4B6Vulk7LktfwrdGNVI5BsC9qqxSwSKgRJeZ9wygIaehbHFHFhcBaMDKpiZlBHyzrsnnlFXCb5s8HKn5LsUgGvB24L7sGNZP2CX7dhHov+YhD+jozLW2p9W4959Bz2EiRmqDtmiXLnzqTpXbI+suyCsohKRg6Un0RC47+cpiVwHiXZAW+cn8eiNIjqbVgXLxKPpdzvvtTnOPlC7SQZSYmdunr3Bf9b77AiC/ZidstK36dRILKz7OA54=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIEVzCCAj+gAwIBAgIRAIOPbGPOsTmMYgZigxXJ/d4wDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDELMAkGA1UEAxMCRTUwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAAQNCzqKa2GOtu/cX1jnxkJFVKtj9mZhSAouWXW0gQI3ULc/FnncmOyhKJdyIBwsz9V8UiBOVHhbhBRrwJCuhezAUUE8Wod/Bk3U/mDR+mwt4X2VEIiiCFQPmRpM5uoKrNijgfgwgfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBSfK1/PPCFPnQS37SssxMZwi9LXDTAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAH3KdNEVCQdqk0LKyuNImTKdRJY1C2uw2SJajuhqkyGPY8C+zzsufZ+mgnhnq1A2KVQOSykOEnUbx1cy637rBAihx97r+bcwbZM6sTDIaEriR/PLk6LKs9Be0uoVxgOKDcpG9svD33J+G9Lcfv1K9luDmSTgG6XNFIN5vfI5gs/lMPyojEMdIzK9blcl2/1vKxO8WGCcjvsQ1nJ/Pwt8LQZBfOFyVXP8ubAp/au3dc4EKWG9MO5zcx1qT9+NXRGdVWxGvmBFRAajciMfXME1ZuGmk3/GOkoAM7ZkjZmleyokP1LGzmfJcUd9s7eeu1/9/eg5XlXd/55GtYjAM+C4DG5i7eaNqcm2F+yxYIPt6cbbtYVNJCGfHWqHEQ4FYStUyFnv8sjyqU8ypgZaNJ9aVcWSICLOIE1/Qv/7oKsnZCWJ926wU6RqG1OYPGOi1zuABhLw61cuPVDT28nQS/e6z95cJXq0eK1BcaJ6fJZsmbjRgD5p3mvEf5vdQM7MCEvU0tHbsx2I5mHHJoABHb8KVBgWp/lcXGWiWaeOyB7RP+OfDtvi2OsapxXiV7vNVs7fMlrRjY1joKaqmmycnBvAq14AEbtyLsVfOS66B8apkeFX2NY4XPEYV4ZSCe8VHPrdrERk2wILG3T/EGmSIkCYVUMSnjmJdVQD9F6Na/+zmXCc=\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "9D7C3F1AA6AD2B2EC0D5CF1E246F8D9AE6CBC9FD0755AD37BB974B1F2FB603F3"
+              "finding"      : "5DFDB3CF31B26F23D87C09F3A0CEF642F64069A9FB7CFE29270BB5DC0F1E16BB"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
@@ -472,7 +472,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R10 <-- ISRG Root X1"
+              "finding"      : "E5 <-- ISRG Root X1"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -500,7 +500,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1745118563"
+              "finding"      : "1745637892"
           }
 ,         {
               "id"           : "HSTS",
@@ -673,7 +673,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=9ED6646DF968E9627E62F9BF13F092F9EF822A1B1132123E1CE0CFF7A554A2EB"
+              "finding"      : "no RSA certificate, can't be used with SSLv2 elsewhere"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -734,14 +734,14 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_81",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_90",
@@ -811,35 +811,35 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_win81",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_winphone81",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_win10",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-edge_15_win10",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-edge_101_win10_21h2",
@@ -930,7 +930,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_111d",
@@ -958,7 +958,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-thunderbird_91_9",
@@ -1000,14 +1000,14 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "90"
+              "finding"      : "100"
           }
 ,         {
               "id"           : "key_exchange_score_weighted",
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "27"
+              "finding"      : "30"
           }
 ,         {
               "id"           : "cipher_strength_score",
@@ -1028,7 +1028,7 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "81"
+              "finding"      : "84"
           }
 ,         {
               "id"           : "overall_grade",
@@ -1049,6 +1049,6 @@
               "ip"           : "www.ira-metz.gouv.fr/54.36.91.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "57"
+              "finding"      : "63"
           }
 ]
