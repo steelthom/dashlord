@@ -1,56 +1,113 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C-",
+    "grade": "B-",
     "error": null,
-    "score": 45,
-    "statusCode": 403,
+    "score": 65,
+    "statusCode": 200,
     "testsFailed": 4,
     "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 21 Apr 2025 03:10:00 GMT",
-      "content-type": "text/html; charset=UTF-8",
-      "transfer-encoding": "chunked",
+      "date": "Sun, 27 Apr 2025 03:23:20 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": "40233",
       "connection": "close",
-      "x-frame-options": "SAMEORIGIN",
-      "referrer-policy": "same-origin",
-      "cache-control": "max-age=15",
-      "expires": "Mon, 21 Apr 2025 03:10:15 GMT",
-      "vary": "Accept-Encoding",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "content-security-policy": "frame-ancestors 'self';",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "permissions-policy": "geolocation=(self), microphone=(), camera=(), fullscreen=*",
+      "pragma": "no-cache",
+      "referrer-policy": "strict-origin",
+      "set-cookie": [
+        "PHPSESSID=3fa8a157619bee9c6f48b169e8236714; expires=Wed, 21-Aug-2080 07:46:36 GMT; Max-Age=1745727797; path=/; secure; HttpOnly; SameSite=Lax",
+        "PrestaShop-26c3cd900dc97433876483b2288652ca=def50200a6a9b7956265ea4ce916a8194b723ceb46b6c9311f0cf3d9957bc8e06d038411bec4098a3a02ac8d386c31daec083754ccd0d4b40a48cdb89a92e0c87be8920efca193e8d47b193986568f595e3d915ce0fc2885948354f7708d948f35b05d9c5f15c8fa7a66a95c5525c69cf0ae29b7d017a0c2f10bab3c26e9655ad7eed54ace756f202cf4f1510d93d713e8486e7bd8d88b57fa08846f39c949fe8ee897764d1800ba451e932dedb85e498b2bb099f479f58d85c4a309cf8b4b230fe4e2e249b03ac0904909ee75ac1a5661cfe0d6dc; expires=Sun, 27-Apr-2025 04:23:17 GMT; Max-Age=3598; path=/; domain=librairie.ademe.fr; secure; HttpOnly; SameSite=Lax",
+        "PrestaShop-68c8fe26e06b9c883a9909eeeefebcc0=def5020047ea9c810808f95584da7d2b77334a73816ad0d122245650b03af9b566f3976104e34f5238e8f2acbfe3b3f4cbe01051a92502b2cf4de03be924b104d9d6431132a979e50a871f7da86d801dbf8a1b239478b10d8eda054032c4425a6908c60c36d80702eb20d3db3d86dc115a754f67a47fc3ce79bdfcc4d0c8a499835a11b66096d550e72d443c340fb3d85aea994705deb1c518dab146660be8b5b5fccbf8ecb5821be989ff5b6614947e3342b703366fb1be71d81d607a847c79a6b9f003cfc48cba411a780130de2294e1279bd0ce87f8b7f0; expires=Sun, 27-Apr-2025 04:23:19 GMT; Max-Age=3600; path=/; domain=librairie.ademe.fr; HttpOnly; SameSite=Lax"
+      ],
+      "strict-transport-security": "max-age=16070400; includeSubDomains; preload",
+      "vary": "Accept-Encoding,Origin",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "sameorigin",
+      "x-xss-protection": "1; mode=block",
+      "cf-cache-status": "DYNAMIC",
       "server": "cloudflare",
-      "cf-ray": "9339af981fafc943-IAD"
+      "cf-ray": "936b334b0f04fae3-SJC"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "'self'"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-04-21T03:40:00.000Z",
+          "expires": "2025-04-27T03:53:17.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
           "samesite": "none",
           "secure": true
+        },
+        "PHPSESSID": {
+          "domain": "librairie.ademe.fr",
+          "expires": "2080-08-21T07:46:36.000Z",
+          "httponly": true,
+          "max-age": 1745727797,
+          "path": "/",
+          "port": null,
+          "samesite": "lax",
+          "secure": true
+        },
+        "PrestaShop-26c3cd900dc97433876483b2288652ca": {
+          "domain": "librairie.ademe.fr",
+          "expires": "2025-04-27T04:23:17.000Z",
+          "httponly": true,
+          "max-age": 3598,
+          "path": "/",
+          "port": null,
+          "samesite": "lax",
+          "secure": true
+        },
+        "PrestaShop-68c8fe26e06b9c883a9909eeeefebcc0": {
+          "domain": "librairie.ademe.fr",
+          "expires": "2025-04-27T04:23:19.000Z",
+          "httponly": true,
+          "max-age": 3600,
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -70,48 +127,57 @@
         "http://www.librairie.ademe.fr/",
         "https://librairie.ademe.fr/"
       ],
-      "statusCode": 403
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "same-origin",
+      "data": "strict-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=16070400; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 16070400,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://tarteaucitron.io/load.js?domain=librairie.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://eu1-config.doofinder.com/2.x/03793f47-e6f6-4627-a675-4f4e5ccbe2c5.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "sameorigin"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
