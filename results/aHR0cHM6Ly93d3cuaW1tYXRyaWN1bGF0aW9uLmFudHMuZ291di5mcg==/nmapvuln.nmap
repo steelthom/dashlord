@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Apr 20 03:20:43 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.immatriculation.ants.gouv.fr
+# Nmap 7.92 scan initiated Sun Apr 27 03:37:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.immatriculation.ants.gouv.fr
 Nmap scan report for www.immatriculation.ants.gouv.fr (66.22.33.162)
-Host is up (0.14s latency).
+Host is up (0.094s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE  VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE  VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Sun, 20 Apr 2025 03:20:54 GMT
+|     Date: Sun, 27 Apr 2025 03:37:48 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -24,25 +24,10 @@ PORT    STATE    SERVICE  VERSION
 |     <hr><center>rdwr</center>
 |     </body>
 |     </html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Sun, 20 Apr 2025 03:20:53 GMT
-|     Content-Type: text/html
-|     Content-Length: 161
-|     Connection: close
-|     Location: https://immatriculation.ants-2.gouv.fr:443/
-|     <html>
-|     <head><title>301 Moved Permanently</title></head>
-|     <body>
-|     <center><h1>301 Moved Permanently</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|     </html>
-|   HTTPOptions: 
-|     HTTP/1.1 301 Moved Permanently
-|     Server: rdwr
-|     Date: Sun, 20 Apr 2025 03:20:54 GMT
+|     Date: Sun, 27 Apr 2025 03:37:47 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -57,7 +42,7 @@ PORT    STATE    SERVICE  VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Sun, 20 Apr 2025 03:20:54 GMT
+|     Date: Sun, 27 Apr 2025 03:37:48 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -71,39 +56,39 @@ PORT    STATE    SERVICE  VERSION
 161/tcp filtered snmp
 179/tcp filtered bgp
 443/tcp open     ssl/http nginx 1.27.0
+|_http-server-header: rdwr
 | vulners: 
 |   nginx 1.27.0: 
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-server-header: rdwr
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=4/20%Time=68046815%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=4/27%Time=680DA68B%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,16E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Sun,\x2020\x20Apr\x202025\x2003:20:53\x20GMT\r\nConte
+SF:0rdwr\r\nDate:\x20Sun,\x2027\x20Apr\x202025\x2003:37:47\x20GMT\r\nConte
 SF:nt-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close
 SF:\r\nLocation:\x20https://immatriculation\.ants-2\.gouv\.fr:443/\r\n\r\n
 SF:<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<b
 SF:ody>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><c
 SF:enter>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,16E,"HTTP
 SF:/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Sun
-SF:,\x2020\x20Apr\x202025\x2003:20:54\x20GMT\r\nContent-Type:\x20text/html
+SF:,\x2027\x20Apr\x202025\x2003:37:47\x20GMT\r\nContent-Type:\x20text/html
 SF:\r\nContent-Length:\x20161\r\nConnection:\x20close\r\nLocation:\x20http
 SF:s://immatriculation\.ants-2\.gouv\.fr:443/\r\n\r\n<html>\r\n<head><titl
 SF:e>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>3
 SF:01\x20Moved\x20Permanently</h1></center>\r\n<hr><center>rdwr</center>\r
 SF:\n</body>\r\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nServer:\x20rdwr\r\nDate:\x20Sun,\x2020\x20Apr\x202025\x200
-SF:3:20:54\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\
+SF:20Request\r\nServer:\x20rdwr\r\nDate:\x20Sun,\x2027\x20Apr\x202025\x200
+SF:3:37:48\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\
 SF:r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Req
 SF:uest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1>
 SF:</center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X1
 SF:1Probe,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDa
-SF:te:\x20Sun,\x2020\x20Apr\x202025\x2003:20:54\x20GMT\r\nContent-Type:\x2
+SF:te:\x20Sun,\x2027\x20Apr\x202025\x2003:37:48\x20GMT\r\nContent-Type:\x2
 SF:0text/html\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<ht
 SF:ml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<
 SF:center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</cen
 SF:ter>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,191,"HTTP/1\.1\x20
-SF:301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Sun,\x2020\x
-SF:20Apr\x202025\x2003:20:54\x20GMT\r\nContent-Type:\x20text/html\r\nConte
+SF:301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Sun,\x2027\x
+SF:20Apr\x202025\x2003:37:48\x20GMT\r\nContent-Type:\x20text/html\r\nConte
 SF:nt-Length:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://immat
 SF:riculation\.ants-2\.gouv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r
 SF:\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>
@@ -111,4 +96,4 @@ SF:\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n
 SF:<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Apr 20 03:21:10 2025 -- 1 IP address (1 host up) scanned in 26.42 seconds
+# Nmap done at Sun Apr 27 03:38:00 2025 -- 1 IP address (1 host up) scanned in 22.11 seconds
