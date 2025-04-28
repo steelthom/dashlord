@@ -178,7 +178,7 @@
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -206,7 +206,7 @@
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -353,7 +353,7 @@
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (59)"
+              "finding"      : "expires < 60 days (52)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -401,8 +401,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "www.objectifco2.fr/104.18.31.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -654,7 +661,7 @@
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (59)"
+              "finding"      : "expires < 60 days (52)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -702,8 +709,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "www.objectifco2.fr/104.18.31.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -850,14 +864,14 @@
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.objectifco2.fr/104.18.31.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1745207452"
+              "finding"      : "1745811065"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -865,7 +879,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=3yP7StLZBhZMkHdXXzUppC0UJW2TS9ZX8nwfhBW2QbQ-1745207452-1.0.1.1-9yD62WA1wEm1OYnhBJfB5WRQqZoQAFgIAxk2eVlsgze5QZ7M1bk_SmLy8RzD.E0m8PvfE5lqJmchBkzcOBMgnLAMQo.SCQ1d6h6RuUaWMEI; path=/; expires=Mon, 21-Apr-25 04:20:52 GMT; domain=.objectifco2.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=bQ1waURS_N77U5o6eJtxaC_rF7WuNvF2hcGQCn7LjUQ-1745811065-1.0.1.1-cZjZ3AoFHkFRSSyuqF8DrcO.Cl5932q68NdmLQl1R6usN651Wq46cqoqj2fb3mJcIDvgTI6kEjWIPs8nX2xsQ3yZce04ZtEkO5MRbyUZH2E; path=/; expires=Mon, 28-Apr-25 04:01:05 GMT; domain=.objectifco2.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -1609,7 +1623,7 @@
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -1637,7 +1651,7 @@
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -1784,7 +1798,7 @@
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (59)"
+              "finding"      : "expires < 60 days (52)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -1832,8 +1846,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "www.objectifco2.fr/104.18.30.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -2085,7 +2106,7 @@
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (59)"
+              "finding"      : "expires < 60 days (52)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2133,8 +2154,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "www.objectifco2.fr/104.18.30.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -2288,7 +2316,7 @@
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1745207519"
+              "finding"      : "1745811126"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2296,7 +2324,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=BDIi.Aw3.V57wtBYu37Mg9I8110nrxKZrn.EsF.dTcc-1745207519-1.0.1.1-azFbxdE260QMRgE_w5BHJgpOHaOZqSymHTiRlQ80Z5CjgT3HmjiNu.vC9vYBDV54._diXKdc_GtCShcVPsQtHyWG6mFtvLxx2LHbFF5pnLM; path=/; expires=Mon, 21-Apr-25 04:21:59 GMT; domain=.objectifco2.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=RRfRFhRIZ3srDPqNWJ8VchVYWCPcrmcHhlz.Olhskzo-1745811126-1.0.1.1-vlay28GkD1jeUDIDhfqWj8OERJnfqZJSgGRKZAFtiFZkWOC97Rmsnhtds_vgPEezqnB4heaBzUd1Ysmt4oHvq4lhC8nZWtodHlpNuD.3WNM; path=/; expires=Mon, 28-Apr-25 04:02:06 GMT; domain=.objectifco2.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -2866,6 +2894,6 @@
               "ip"           : "www.objectifco2.fr/104.18.30.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "134"
+              "finding"      : "123"
           }
 ]
