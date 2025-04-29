@@ -1,11 +1,31 @@
-# Nmap 7.92 scan initiated Tue Apr 22 03:31:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.portailpro.gouv.fr
-Nmap scan report for www.portailpro.gouv.fr (145.242.17.12)
-Host is up (0.084s latency).
-Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE VERSION
-80/tcp  closed http
-113/tcp closed ident
-443/tcp closed https
+# Nmap 7.92 scan initiated Tue Apr 29 03:12:48 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.portailpro.gouv.fr
+Nmap scan report for www.portailpro.gouv.fr (176.100.182.23)
+Host is up (0.14s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///
+|_    Connection: close
+443/tcp open  ssl/http-proxy HAProxy http proxy 1.3.1 or later
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=4/29%Time=681043C1%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-len
+SF:gth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-le
+SF:ngth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%
+SF:r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nCon
+SF:tent-length:\x200\r\nLocation:\x20https:///nice%20ports%2C/Tri%6Eity\.t
+SF:xt%2ebak\r\nConnection:\x20close\r\n\r\n");
+Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Apr 22 03:31:08 2025 -- 1 IP address (1 host up) scanned in 7.24 seconds
+# Nmap done at Tue Apr 29 03:13:25 2025 -- 1 IP address (1 host up) scanned in 36.90 seconds

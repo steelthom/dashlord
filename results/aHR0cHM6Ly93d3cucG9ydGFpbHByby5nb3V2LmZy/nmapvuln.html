@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.portailpro.gouv.fr</pre>
-<p class="lead">Tue Apr 22 03:31:01 2025 – Tue Apr 22 03:31:08 2025<br>1 hosts scanned.
+<p class="lead">Tue Apr 29 03:12:48 2025 – Tue Apr 29 03:13:25 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>145.242.17.12</td>
+<td>176.100.182.23</td>
 <td>www.portailpro.gouv.fr</td>
-<td>0</td>
+<td>2</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#145-242-17-12"><h3 class="panel-title">145.242.17.12 - www.portailpro.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="145-242-17-12">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#176-100-182-23"><h3 class="panel-title">176.100.182.23 - www.portailpro.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="176-100-182-23">
 <h4>Hostnames</h4>
 <ul><li>www.portailpro.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -107,33 +107,39 @@
 <th>Extra Info</th>
 </tr></thead>
 <tbody>
-<tr class="active">
-<td>80</td>
-<td>tcp</td>
-<td>closed<br>reset</td>
-<td>http</td>
-<td></td>
-<td></td>
-<td></td>
+<tr class="success">
+<td title="Port">80</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
 </tr>
-<tr class="active">
-<td>113</td>
-<td>tcp</td>
-<td>closed<br>reset</td>
-<td>ident</td>
-<td></td>
-<td></td>
-<td></td>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 301 Moved Permanently
+    Content-length: 0
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+  GetRequest, HTTPOptions: 
+    HTTP/1.1 301 Moved Permanently
+    Content-length: 0
+    Location: https:///
+    Connection: close</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http-proxy</td>
+<td title="Product">HAProxy http proxy</td>
+<td title="Version">1.3.1 or later</td>
+<td title="Extra Info"></td>
 </tr>
-<tr class="active">
-<td>443</td>
-<td>tcp</td>
-<td>closed<br>reset</td>
-<td>https</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:haproxy:haproxy">cpe:/a:haproxy:haproxy</a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -150,7 +156,28 @@
 <th>CPE</th>
 <th>Extra info</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>176.100.182.23 - www.portailpro.gouv.fr</td>
+<td>80</td>
+<td>tcp</td>
+<td>http</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>176.100.182.23 - www.portailpro.gouv.fr</td>
+<td>443</td>
+<td>tcp</td>
+<td>http-proxy</td>
+<td>HAProxy http proxy</td>
+<td>1.3.1 or later</td>
+<td>cpe:/a:haproxy:haproxy</td>
+<td></td>
+</tr>
+</tbody>
 </table></div>
 <script>
             $(document).ready(function() {
