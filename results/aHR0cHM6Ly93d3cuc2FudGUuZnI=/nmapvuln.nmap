@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Tue Apr 22 03:17:09 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.fr
+# Nmap 7.92 scan initiated Tue Apr 29 03:18:29 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.fr
 Nmap scan report for www.sante.fr (185.231.164.109)
-Host is up (0.081s latency).
+Host is up (0.14s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Tue, 22 Apr 2025 03:17:23 GMT
+|     Date: Tue, 29 Apr 2025 03:18:47 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -19,9 +19,23 @@ PORT    STATE SERVICE   VERSION
 |     <hr><center>openresty</center>
 |     </body>
 |     </html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Tue, 22 Apr 2025 03:17:23 GMT
+|     Date: Tue, 29 Apr 2025 03:18:45 GMT
+|     Content-Type: text/html
+|     Content-Length: 166
+|     Connection: close
+|     Location: https://www.sante.fr/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Tue, 29 Apr 2025 03:18:46 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -35,7 +49,7 @@ PORT    STATE SERVICE   VERSION
 |     </html>
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Tue, 22 Apr 2025 03:17:23 GMT
+|     Date: Tue, 29 Apr 2025 03:18:46 GMT
 |     Content-Type: text/html
 |     Content-Length: 154
 |     Connection: close
@@ -50,7 +64,7 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 22 Apr 2025 03:17:30 GMT
+|     Date: Tue, 29 Apr 2025 03:18:53 GMT
 |     Content-Type: text/html
 |     Content-Length: 3979
 |     Connection: close
@@ -59,10 +73,10 @@ PORT    STATE SERVICE   VERSION
 |     Strict-Transport-Security: max-age=63072000
 |     X-Content-Type-Options: nosniff
 |     X-XSS-Protection: 1; mode=block
-|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"checkChallengeParams":{"request_fate":"challengejs","bot_category":"unknown","tracking_id":"","rule_id":""},"domain":".sante.fr","cookie":{"value":"S-80TxEhGj6JA6Xb8PIRov6w7rrn0momLe9iXbC1YH9sm-o2Q1HixpNQC3vrB_BwyZusl_IOWV7CEB5iwP3bZKbHGMEiXz0RCXUflzKID--FnGY4Fj8N9eTNhEoCw0n0oE0C1Z6U_iNxlSdciG7cBA","secure":true,"sameSite":"None","name":"bln_challengejs","maxAge":900,"path":"/"}};(()=>{"use strict";const e=function*({domain:e,maxAge:n,nam
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"cookie":{"path":"/","sameSite":"None","secure":true,"name":"bln_challengejs","value":"dm-MHpZ27pQB0Q1mb_y6h-7ha3dkeawZKlenNrwk8GlOOvpP1rg3BIOGcGo0t2UnckB0B2jwECDjLSfI9HKokE-PMVQ2pyJA_l17ge-E_KwN0n7bhAPjn3kS4DkMXNpk880qd-UFn6BK98TqVdCEfw","maxAge":900},"checkChallengeParams":{"request_fate":"challengejs","tracking_id":"","bot_category":"unknown","rule_id":""},"domain":".sante.fr"};(()=>{"use strict";const e=function*({domain:e,maxAge:n,nam
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 22 Apr 2025 03:17:29 GMT
+|     Date: Tue, 29 Apr 2025 03:18:52 GMT
 |     Content-Type: text/html
 |     Content-Length: 3979
 |     Connection: close
@@ -71,16 +85,16 @@ PORT    STATE SERVICE   VERSION
 |     Strict-Transport-Security: max-age=63072000
 |     X-Content-Type-Options: nosniff
 |     X-XSS-Protection: 1; mode=block
-|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"cookie":{"name":"bln_challengejs","secure":true,"value":"98qbK79kdcV_8OkV_4ouAjAvFWRiS1QDCStQYWBk7bYl1RTAX3yLLQnIq8a9Z8ZUcQBpTGRlDwbHyBxdxyhLPHcmhy3ds86JxKDvgYrUvzqEZxu3V7gOKt2Bqep9tG-wCE0C3bwSPllHuF0VLr_G3w","maxAge":900,"sameSite":"None","path":"/"},"checkChallengeParams":{"tracking_id":"","request_fate":"challengejs","bot_category":"unknown","rule_id":""},"domain":".sante.fr"};(()=>{"use strict";const e=function*({domain:e,maxAge:n,nam
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"domain":".sante.fr","checkChallengeParams":{"request_fate":"challengejs","bot_category":"unknown","tracking_id":"","rule_id":""},"cookie":{"secure":true,"maxAge":900,"path":"/","value":"S-80TxEhGj6JA6Xb8PIRorIcKvudzQpaPD534Ds9yQUrx1s_RCp_Cvfk3fWUVI4napxdyRp13l3U8JI4FxAcn8UXci7M22KGwcYkcpOqneAd4Hbmd93jtikn7ZVsKHAhgD7hOTX5wxyA5CNenMvXtQ","name":"bln_challengejs","sameSite":"None"}};(()=>{"use strict";const e=function*({domain:e,maxAge:n,nam
 |   HTTPOptions: 
 |     HTTP/1.1 405 Not Allowed
-|     Date: Tue, 22 Apr 2025 03:17:29 GMT
+|     Date: Tue, 29 Apr 2025 03:18:52 GMT
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
 |     x-cache: MISS
 |     x-cache-hits: 0
-|     X-Varnish: 108280463
+|     X-Varnish: 113603076
 |     Age: 0
 |     Strict-Transport-Security: max-age=63072000
 |     X-Content-Type-Options: nosniff
@@ -95,79 +109,79 @@ PORT    STATE SERVICE   VERSION
 |_    </html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=4/22%Time=68070A43%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=4/29%Time=68104516%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20T
-SF:ue,\x2022\x20Apr\x202025\x2003:17:23\x20GMT\r\nContent-Type:\x20text/ht
+SF:ue,\x2029\x20Apr\x202025\x2003:18:45\x20GMT\r\nContent-Type:\x20text/ht
 SF:ml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20ht
 SF:tps://www\.sante\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Per
 SF:manently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Perman
 SF:ently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</h
 SF:tml>\r\n")%r(HTTPOptions,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\
-SF:r\nDate:\x20Tue,\x2022\x20Apr\x202025\x2003:17:23\x20GMT\r\nContent-Typ
+SF:r\nDate:\x20Tue,\x2029\x20Apr\x202025\x2003:18:46\x20GMT\r\nContent-Typ
 SF:e:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLo
 SF:cation:\x20https://www\.sante\.fr/\r\n\r\n<html>\r\n<head><title>301\x2
 SF:0Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Mo
 SF:ved\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n<
 SF:/body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20R
-SF:equest\r\nDate:\x20Tue,\x2022\x20Apr\x202025\x2003:17:23\x20GMT\r\nCont
+SF:equest\r\nDate:\x20Tue,\x2029\x20Apr\x202025\x2003:18:46\x20GMT\r\nCont
 SF:ent-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20clos
 SF:e\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\
 SF:n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cent
 SF:er>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP/
-SF:1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2022\x20Apr\x202025\x20
-SF:03:17:23\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154
+SF:1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2029\x20Apr\x202025\x20
+SF:03:18:46\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154
 SF:\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Re
 SF:quest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1
 SF:></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n"
 SF:)%r(FourOhFourRequest,172,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
-SF:Date:\x20Tue,\x2022\x20Apr\x202025\x2003:17:23\x20GMT\r\nContent-Type:\
+SF:Date:\x20Tue,\x2029\x20Apr\x202025\x2003:18:47\x20GMT\r\nContent-Type:\
 SF:x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocat
 SF:ion:\x20https://www\.sante\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n
 SF:\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r
 SF:\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<h
 SF:r><center>openresty</center>\r\n</body>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/22%Time=68070A49%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,10AB,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2022\
-SF:x20Apr\x202025\x2003:17:29\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/29%Time=6810451C%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,10AB,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2029\
+SF:x20Apr\x202025\x2003:18:52\x20GMT\r\nContent-Type:\x20text/html\r\nCont
 SF:ent-Length:\x203979\r\nConnection:\x20close\r\nReferrer-Policy:\x20no-r
 SF:eferrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Security:\x20
 SF:max-age=63072000\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protect
 SF:ion:\x201;\x20mode=block\r\n\r\n<!doctypehtml><meta\x20name=\"viewport\
 SF:"content=\"width=device-width\"><meta\x20charset=\"utf-8\"><script></sc
 SF:ript><script>var\x20__blnChallengeStore={\"unregisterServiceWorker\":fa
-SF:lse,\"cookie\":{\"name\":\"bln_challengejs\",\"secure\":true,\"value\":
-SF:\"98qbK79kdcV_8OkV_4ouAjAvFWRiS1QDCStQYWBk7bYl1RTAX3yLLQnIq8a9Z8ZUcQBpT
-SF:GRlDwbHyBxdxyhLPHcmhy3ds86JxKDvgYrUvzqEZxu3V7gOKt2Bqep9tG-wCE0C3bwSPllH
-SF:uF0VLr_G3w\",\"maxAge\":900,\"sameSite\":\"None\",\"path\":\"\\/\"},\"c
-SF:heckChallengeParams\":{\"tracking_id\":\"\",\"request_fate\":\"challeng
-SF:ejs\",\"bot_category\":\"unknown\",\"rule_id\":\"\"},\"domain\":\"\.san
-SF:te\.fr\"};\(\(\)=>{\"use\x20strict\";const\x20e=function\*\({domain:e,m
+SF:lse,\"domain\":\"\.sante\.fr\",\"checkChallengeParams\":{\"request_fate
+SF:\":\"challengejs\",\"bot_category\":\"unknown\",\"tracking_id\":\"\",\"
+SF:rule_id\":\"\"},\"cookie\":{\"secure\":true,\"maxAge\":900,\"path\":\"\
+SF:\/\",\"value\":\"S-80TxEhGj6JA6Xb8PIRorIcKvudzQpaPD534Ds9yQUrx1s_RCp_Cv
+SF:fk3fWUVI4napxdyRp13l3U8JI4FxAcn8UXci7M22KGwcYkcpOqneAd4Hbmd93jtikn7ZVsK
+SF:HAhgD7hOTX5wxyA5CNenMvXtQ\",\"name\":\"bln_challengejs\",\"sameSite\":\
+SF:"None\"}};\(\(\)=>{\"use\x20strict\";const\x20e=function\*\({domain:e,m
 SF:axAge:n,nam")%r(HTTPOptions,1F0,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\n
-SF:Date:\x20Tue,\x2022\x20Apr\x202025\x2003:17:29\x20GMT\r\nContent-Type:\
+SF:Date:\x20Tue,\x2029\x20Apr\x202025\x2003:18:52\x20GMT\r\nContent-Type:\
 SF:x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\nx-cac
-SF:he:\x20MISS\r\nx-cache-hits:\x200\r\nX-Varnish:\x20108280463\r\nAge:\x2
+SF:he:\x20MISS\r\nx-cache-hits:\x200\r\nX-Varnish:\x20113603076\r\nAge:\x2
 SF:00\r\nStrict-Transport-Security:\x20max-age=63072000\r\nX-Content-Type-
 SF:Options:\x20nosniff\r\nReferrer-Policy:\x20origin-when-cross-origin\r\n
 SF:X-XSS-Protection:\x201;\x20mode=block\r\n\r\n<html>\r\n<head><title>405
 SF:\x20Not\x20Allowed</title></head>\r\n<body>\r\n<center><h1>405\x20Not\x
 SF:20Allowed</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</h
 SF:tml>\r\n")%r(FourOhFourRequest,10AB,"HTTP/1\.1\x20200\x20OK\r\nDate:\x2
-SF:0Tue,\x2022\x20Apr\x202025\x2003:17:30\x20GMT\r\nContent-Type:\x20text/
+SF:0Tue,\x2029\x20Apr\x202025\x2003:18:53\x20GMT\r\nContent-Type:\x20text/
 SF:html\r\nContent-Length:\x203979\r\nConnection:\x20close\r\nReferrer-Pol
 SF:icy:\x20no-referrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-S
 SF:ecurity:\x20max-age=63072000\r\nX-Content-Type-Options:\x20nosniff\r\nX
 SF:-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!doctypehtml><meta\x20name
 SF:=\"viewport\"content=\"width=device-width\"><meta\x20charset=\"utf-8\">
 SF:<script></script><script>var\x20__blnChallengeStore={\"unregisterServic
-SF:eWorker\":false,\"checkChallengeParams\":{\"request_fate\":\"challengej
-SF:s\",\"bot_category\":\"unknown\",\"tracking_id\":\"\",\"rule_id\":\"\"}
-SF:,\"domain\":\"\.sante\.fr\",\"cookie\":{\"value\":\"S-80TxEhGj6JA6Xb8PI
-SF:Rov6w7rrn0momLe9iXbC1YH9sm-o2Q1HixpNQC3vrB_BwyZusl_IOWV7CEB5iwP3bZKbHGM
-SF:EiXz0RCXUflzKID--FnGY4Fj8N9eTNhEoCw0n0oE0C1Z6U_iNxlSdciG7cBA\",\"secure
-SF:\":true,\"sameSite\":\"None\",\"name\":\"bln_challengejs\",\"maxAge\":9
-SF:00,\"path\":\"\\/\"}};\(\(\)=>{\"use\x20strict\";const\x20e=function\*\
+SF:eWorker\":false,\"cookie\":{\"path\":\"\\/\",\"sameSite\":\"None\",\"se
+SF:cure\":true,\"name\":\"bln_challengejs\",\"value\":\"dm-MHpZ27pQB0Q1mb_
+SF:y6h-7ha3dkeawZKlenNrwk8GlOOvpP1rg3BIOGcGo0t2UnckB0B2jwECDjLSfI9HKokE-PM
+SF:VQ2pyJA_l17ge-E_KwN0n7bhAPjn3kS4DkMXNpk880qd-UFn6BK98TqVdCEfw\",\"maxAg
+SF:e\":900},\"checkChallengeParams\":{\"request_fate\":\"challengejs\",\"t
+SF:racking_id\":\"\",\"bot_category\":\"unknown\",\"rule_id\":\"\"},\"doma
+SF:in\":\"\.sante\.fr\"};\(\(\)=>{\"use\x20strict\";const\x20e=function\*\
 SF:({domain:e,maxAge:n,nam");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Apr 22 03:17:44 2025 -- 1 IP address (1 host up) scanned in 35.09 seconds
+# Nmap done at Tue Apr 29 03:19:15 2025 -- 1 IP address (1 host up) scanned in 46.72 seconds
