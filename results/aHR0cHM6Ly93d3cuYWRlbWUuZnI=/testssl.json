@@ -346,7 +346,7 @@
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (43)"
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -647,7 +647,7 @@
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (43)"
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -843,28 +843,21 @@
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "+49 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1745464675"
-          }
-,         {
-              "id"           : "HTTP_headerAge",
-              "ip"           : "www.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "49 seconds"
+              "finding"      : "1746069549"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -872,7 +865,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=IYlkqovPPmvqvaUMuE4Nk20M_9GjLv3mo7sE16BQLIk-1745464675-1.0.1.1-sweODJ0hIn4QRWQrZbONKeYcVj4M1N2GqHwko1iOqco6PE17xVb4kvE4ALU7vayaWNlb4c9NMbY7pmMEglFotz3S7UJ8oYtLBypYhVjyfFo; path=/; expires=Thu, 24-Apr-25 03:47:55 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=lfPdocbEg88FwAw6KjhELFiHD3uCqvXAwbvH196LXHc-1746069549-1.0.1.1-ilo.2nqhPfDas2YIy74fDqXaDb9l7DMKer9d17oA5OtJ.9OoTgR3.kNAhhUlSGXfDPp5D66wEDAKndIjTPwJUGJp1MAKE4n_w51_Nlebkec; path=/; expires=Thu, 01-May-25 03:49:09 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -893,21 +886,21 @@
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "cloudflare"
+              "finding"      : "server-timing: chlray;desc='938c22bf4a896e72'cloudflare"
           }
 ,         {
               "id"           : "banner_application",
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "x-powered-by: PleskLin"
+              "finding"      : "No application banner found"
           }
 ,         {
               "id"           : "cookie_count",
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -921,14 +914,70 @@
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (maybe missed the application)"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
+          }
+,         {
+              "id"           : "Cross-Origin-Opener-Policy",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Cross-Origin-Resource-Policy",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Cross-Origin-Embedder-Policy",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "require-corp"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "www.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "public, max-age=14400"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -1777,7 +1826,7 @@
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (43)"
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2078,7 +2127,7 @@
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (43)"
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2274,28 +2323,21 @@
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "+36 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1745464732"
-          }
-,         {
-              "id"           : "HTTP_headerAge",
-              "ip"           : "www.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "36 seconds"
+              "finding"      : "1746069611"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2303,7 +2345,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=QngBM5aMlOh7SYs4kdAGrtaA4hWcgzxeICjmOcQdulw-1745464732-1.0.1.1-DRhrM1xo.sWi094NzN.8Ih8HyNggneJW2xw.W7TapbY6pq9s5tYuU0_6qNTwZvOUkM5dvoTNOjleDq19F.UJtpO7JEe1PcpmbhTdtqATGKU; path=/; expires=Thu, 24-Apr-25 03:48:52 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=duNaHJpio5Ny93Hz8MwPCl_8bUFqcmmU1eIVj0QpbBE-1746069611-1.0.1.1-07FvUSAYnC3BB3_a_0CoqJ60v6nOYjoowOQvLqdWfZ9k2tUG.5k0CeLHiYhRM.DywHtMp..KygF5phNOUWP4jH4E3lgIYgEDkhH69C0yhF0; path=/; expires=Thu, 01-May-25 03:50:11 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -2324,21 +2366,21 @@
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "cloudflare"
+              "finding"      : "server-timing: chlray;desc='938c24410bc60beb'cloudflare"
           }
 ,         {
               "id"           : "banner_application",
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "x-powered-by: PleskLin"
+              "finding"      : "No application banner found"
           }
 ,         {
               "id"           : "cookie_count",
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -2352,14 +2394,70 @@
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (maybe missed the application)"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
+          }
+,         {
+              "id"           : "Cross-Origin-Opener-Policy",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Cross-Origin-Resource-Policy",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Cross-Origin-Embedder-Policy",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "require-corp"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "public, max-age=14400"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -2866,6 +2964,6 @@
               "ip"           : "www.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "117"
+              "finding"      : "126"
           }
 ]

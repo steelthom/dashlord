@@ -3,29 +3,36 @@
     "algorithmVersion": 4,
     "grade": "D",
     "error": null,
-    "score": 30,
-    "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "score": 35,
+    "statusCode": 403,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 24 Apr 2025 03:17:29 GMT",
+      "date": "Thu, 01 May 2025 03:18:43 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "link": "<https://www.ademe.fr/wp-json/>; rel=\"https://api.w.org/\", <https://www.ademe.fr/wp-json/wp/v2/pages/2>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.ademe.fr/>; rel=shortlink",
-      "vary": "User-Agent,Accept-Encoding",
-      "x-powered-by": "PleskLin",
-      "last-modified": "Thu, 24 Apr 2025 03:17:06 GMT",
-      "cf-cache-status": "HIT",
-      "age": "23",
-      "expires": "Thu, 24 Apr 2025 07:17:29 GMT",
-      "cache-control": "public, max-age=14400",
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cf-mitigated": "challenge",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+      "referrer-policy": "same-origin",
+      "server-timing": "chlray;desc=\"938c22183e2a2e19\"",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
       "set-cookie": [
-        "__cf_bm=Q6oO8FchV0L0bOJWwf8OXtlvM_eCx5QkflP.rUWXhi4-1745464649-1.0.1.1-MewZIUA51tA.mV4lwS4wI3Y.K11jQUpTaI1uH0oEVDl1ca2kJC0KkNHuxxaZyXcoylWa.ZZ5fUo2aIlaTcPtB4ckWP9vXHfnJCDIyyojYsE; path=/; expires=Thu, 24-Apr-25 03:47:29 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
+        "__cf_bm=W2IH9V0Iw6_3_bC3AThBKEDWxMXNbSR3pIs8IcwBOdw-1746069523-1.0.1.1-WEYb4IM75XKWBOkvr8Hvs8YwwwTVhL.KDMvJbZSwixD8o9bm5uNDpiA7SyNAGmVW9Xgw82RerhBcYGvHKIRuJvCplnQ9XQNu2UlNpluC560; path=/; expires=Thu, 01-May-25 03:48:43 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
       ],
+      "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "935272aa4db2f94b-SJC"
+      "cf-ray": "938c22183e2a2e19-DFW"
     }
   },
   "tests": {
@@ -48,7 +55,7 @@
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-04-24T03:47:29.000Z",
+          "expires": "2025-05-01T03:48:43.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -67,24 +74,23 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://www.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://www.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://www.ademe.fr/",
-        "https://www.ademe.fr/"
+        "http://www.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -107,25 +113,25 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
       "pass": true,
-      "result": "corp-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "corp-implemented-with-same-origin",
+      "scoreModifier": 10,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     }
   }
