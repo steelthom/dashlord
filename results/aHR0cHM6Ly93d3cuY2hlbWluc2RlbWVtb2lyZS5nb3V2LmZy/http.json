@@ -1,27 +1,34 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "D",
     "error": null,
-    "score": 10,
+    "score": 30,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "content-type": "text/html; charset=UTF-8",
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "expires": "0",
-      "connection": "close",
+      "date": "Fri, 02 May 2025 01:41:08 GMT",
       "set-cookie": [
-        "visid_incap_1228040=I14CKw/QTh63jLuFXe09e2v8CmgAAAAAQUIPAAAAAAAvuKgqz3OXfY9npsQAsPTS; expires=Fri, 24 Apr 2026 07:54:45 GMT; HttpOnly; path=/; Domain=.cheminsdememoire.gouv.fr",
-        "nlbi_1228040=/hgaGrwMZibtcboQDE1ODwAAAADBAOQSRsZ3WJH3J7geymyM; HttpOnly; path=/; Domain=.cheminsdememoire.gouv.fr",
-        "incap_ses_170_1228040=QDIvIEZHgGDhQIQZcvZbAmv8CmgAAAAAXDyH/O9AzOHmYVueWOqaxg==; path=/; Domain=.cheminsdememoire.gouv.fr"
+        "cookiedef=!pV0S/NCOVLh5gG/UP24xCRy03FhIXJ8IScV/XDhcC6sX+NBkOXOdHwTOShfQkVRJoGP4jXgP/W+EZqU=; path=/; Httponly",
+        "BIGipServer~Tenant-Externe~application~pool-ubika=201486346.20480.0000; path=/; Httponly; Secure"
       ],
-      "x-cdn": "Imperva",
-      "transfer-encoding": "chunked",
-      "x-iinfo": "56-165039863-165039865 NNYY CT(145 305 0) RT(1745550443730 13) q(0 0 0 -1) r(2 2) U12"
+      "cache-control": "max-age=10800, public",
+      "x-drupal-dynamic-cache": "UNCACHEABLE",
+      "content-language": "fr",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "vary": "Cookie",
+      "x-generator": "Drupal 10 (https://www.drupal.org)",
+      "x-drupal-cache": "HIT",
+      "last-modified": "Fri, 02 May 2025 01:41:07 GMT",
+      "etag": "\"1746150067\"",
+      "content-length": "49826",
+      "content-type": "text/html; charset=UTF-8",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "connection": "close"
     }
   },
   "tests": {
@@ -42,23 +49,18 @@
       "result": "cookies-without-secure-flag",
       "scoreModifier": -20,
       "data": {
-        "visid_incap_1228040": {
-          "domain": "cheminsdememoire.gouv.fr",
-          "expires": "2026-04-24T07:54:45.000Z",
+        "cookiedef": {
+          "domain": "www.cheminsdememoire.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null
         },
-        "nlbi_1228040": {
-          "domain": "cheminsdememoire.gouv.fr",
+        "BIGipServer~Tenant-Externe~application~pool-ubika": {
+          "domain": "www.cheminsdememoire.gouv.fr",
           "httponly": true,
           "path": "/",
-          "port": null
-        },
-        "incap_ses_170_1228040": {
-          "domain": "cheminsdememoire.gouv.fr",
-          "path": "/",
-          "port": null
+          "port": null,
+          "secure": true
         }
       },
       "sameSite": false
@@ -73,20 +75,23 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": null,
+      "destination": "https://www.cheminsdememoire.gouv.fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.cheminsdememoire.gouv.fr/",
+        "https://www.cheminsdememoire.gouv.fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -102,24 +107,29 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://app.mailjet.com/statics/js/widget.modal.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
