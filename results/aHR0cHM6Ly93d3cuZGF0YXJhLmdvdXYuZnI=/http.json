@@ -9,20 +9,20 @@
     "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Fri, 25 Apr 2025 03:34:03 GMT",
+      "date": "Fri, 02 May 2025 03:24:09 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
       "vary": "Accept-Encoding",
       "x-frame-options": "SAMEORIGIN",
       "x-xss-protection": "1; mode=block",
-      "content-security-policy": "frame-ancestors 'self'; form-action 'self'; font-src 'self' fonts.gstatic.com; script-src 'self' ${URL_STAT} https://www.google.com https://www.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' ${URL_IMG} ${URL_STAT} data: https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://piwik.alkante.com",
+      "content-security-policy": "frame-ancestors 'self' ${URL_IMG}; form-action 'self'; font-src 'self' fonts.gstatic.com; script-src 'self' ${URL_STAT} https://www.google.com https://www.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' ${URL_IMG} ${URL_STAT} data: https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org; script-src-elem 'self' ${URL_STAT} https://www.google.com https://www.gstatic.com 'unsafe-inline' https://piwik.alkante.com",
       "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
       "cache-control": "no-store, no-cache, must-revalidate",
       "pragma": "no-cache",
       "set-cookie": [
-        "PHPSESSID=eh5sdkro59o2m65gl5ju0mtn6f; path=/; HttpOnly",
-        "PHPSESSID=eh5sdkro59o2m65gl5ju0mtn6f; path=/; HttpOnly"
+        "PHPSESSID=d282oimd9um0u1bnula0lon0nq; path=/; HttpOnly",
+        "PHPSESSID=d282oimd9um0u1bnula0lon0nq; path=/; HttpOnly"
       ],
       "p3p": "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\"",
       "strict-transport-security": "max-age=15768000"
@@ -36,6 +36,7 @@
       "scoreModifier": -20,
       "data": {
         "frame-ancestors": [
+          "${url_img}",
           "'self'"
         ],
         "form-action": [
@@ -68,10 +69,12 @@
           "https://c.tile.openstreetmap.org"
         ],
         "script-src-elem": [
+          "${url_stat}",
           "'self'",
-          "'unsafe-eval'",
           "'unsafe-inline'",
-          "https://piwik.alkante.com"
+          "https://piwik.alkante.com",
+          "https://www.google.com",
+          "https://www.gstatic.com"
         ]
       },
       "http": true,
