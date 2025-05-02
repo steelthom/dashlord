@@ -199,7 +199,7 @@
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -346,7 +346,7 @@
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "116 >= 60 days"
+              "finding"      : "109 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -500,42 +500,21 @@
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "302 Moved Temporarily ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-45495 seconds from localtime"
+              "finding"      : "Got no HTTP time, maybe try different URL?"
           }
 ,         {
-              "id"           : "HTTP_headerTime",
+              "id"           : "HSTS",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1745506878"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "domain is NOT marked for preloading"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "HPKP",
@@ -549,7 +528,7 @@
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Apache"
+              "finding"      : "No Server banner line in header, interesting!"
           }
 ,         {
               "id"           : "banner_application",
@@ -563,63 +542,28 @@
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "4 at '/'"
+              "finding"      : "3 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "cookie_secure",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0/4 at '/' marked as secure"
+              "finding"      : "0/3 at '/' marked as secure"
           }
 ,         {
               "id"           : "cookie_httponly",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0/4 at '/' marked as HttpOnly"
+              "finding"      : "0/3 at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
           }
 ,         {
-              "id"           : "cookie_bigip_f5",
+              "id"           : "security_headers",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "encrypted F5 cookie named lifekeeper"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN, SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
-              "id"           : "Referrer-Policy",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no-referrer"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "www.colsbleus.fr/45.60.12.211",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "max-age=2764800, public"
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -695,10 +639,10 @@
               "id"           : "BREACH",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1112,13 +1056,20 @@
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A+"
+              "finding"      : "A"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "www.colsbleus.fr/45.60.12.211",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to A. HSTS is not offered"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.colsbleus.fr/45.60.12.211",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "57"
+              "finding"      : "55"
           }
 ]
