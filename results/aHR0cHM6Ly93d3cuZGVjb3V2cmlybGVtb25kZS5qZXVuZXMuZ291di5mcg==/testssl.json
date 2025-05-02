@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -17,14 +17,21 @@
               "id"           : "SSLv2",
               "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not offered"
+              "severity"     : "WARN",
+              "finding"      : "couldn't be tested, socket problem"
           }
 ,         {
               "id"           : "SSLv3",
               "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
               "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -47,6 +54,13 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
           }
 ,         {
               "id"           : "ALPN",
@@ -116,62 +130,6 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "offered"
-          }
-,         {
-              "id"           : "cipher_order-tls1_2",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc030",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 521   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "cipher-tls1_2_x9f",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.2   x9f     DHE-RSA-AES256-GCM-SHA384         DH 2048    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_2",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384"
-          }
-,         {
-              "id"           : "cipher_order",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
-              "id"           : "FS",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "FS_ciphers",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
-          }
-,         {
-              "id"           : "FS_ECDHE_curves",
-              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "prime256v1 secp384r1 secp521r1"
           }
 ,         {
               "id"           : "scanProblem",
