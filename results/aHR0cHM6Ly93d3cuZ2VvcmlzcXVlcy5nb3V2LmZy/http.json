@@ -1,45 +1,63 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "D+",
     "error": null,
-    "score": 35,
+    "score": 40,
     "statusCode": 200,
     "testsFailed": 3,
     "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sat, 26 Apr 2025 01:20:50 GMT",
+      "date": "Sat, 03 May 2025 01:17:58 GMT",
       "cache-control": "max-age=43200, public",
       "x-drupal-dynamic-cache": "UNCACHEABLE (poor cacheability)",
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "vary": "Cookie,Accept-Encoding",
+      "vary": "Cookie,Accept-Encoding,Origin",
       "x-drupal-cache": "HIT",
-      "last-modified": "Sat, 26 Apr 2025 01:20:50 GMT",
-      "etag": "\"1745630450\"",
+      "last-modified": "Sat, 03 May 2025 01:17:57 GMT",
+      "etag": "\"1746235077\"",
+      "content-security-policy": "frame-ancestors 'self' 'virteem.com';",
       "connection": "close",
       "content-type": "text/html; charset=UTF-8",
       "set-cookie": [
-        "BIGipServerpool_georisques_preventix_web_https=2048399532.47873.0000; path=/; Httponly; Secure",
-        "TS01e3f304=01ce77d600c8bdbc9266a3129bf0af94f1cab47fe33bf15b06cb6714a24cdd62bfaafc324b9321f0b62e3356619947441648d7586c; Path=/; Domain=.www.georisques.gouv.fr"
+        "BIGipServerpool_georisques_preventix_web_https=1998067884.47873.0000; path=/; Httponly; Secure",
+        "TS01e3f304=01ce77d600b91491f4f755c9553e6ede699fc7c4bf7392afb9b3ee6d4b911c2db573cd82e3982c1452c0bd897d619c708bcd425001; Path=/; Domain=.www.georisques.gouv.fr"
       ],
-      "content-length": "15539"
+      "content-length": "15541"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "'self'",
+          "'virteem.com'"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -119,8 +137,8 @@
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
       "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
