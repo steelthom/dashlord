@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -132,11 +132,11 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "cipher_order-tls1_2",
+              "id"           : "cipher_order",
               "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "severity"     : "WARN",
+              "finding"      : "Could not determine server cipher order, no matching cipher in list found (pls report this): DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA"
           }
 ,         {
               "id"           : "cipher-tls1_2_xc030",
@@ -174,13 +174,6 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "cipher_order",
-              "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
               "id"           : "FS",
               "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
               "port"         : "443",
@@ -192,7 +185,7 @@
               "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -200,32 +193,4 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "prime256v1 secp384r1 secp521r1"
-          }
-,         {
-              "id"           : "TLS_extensions",
-              "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'status request/#5' 'supported_groups/#10' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
-          }
-,         {
-              "id"           : "TLS_session_ticket",
-              "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no -- no lifetime advertised"
-          }
-,         {
-              "id"           : "SSL_sessionID_support",
-              "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "yes"
-          }
-,         {
-              "id"           : "sessionresumption_ticket",
-              "ip"           : "www.enseignementsup-recherche.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not supported"
           }
