@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon Apr 28 03:22:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mairie.ants.gouv.fr
+# Nmap 7.92 scan initiated Mon May  5 03:29:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mairie.ants.gouv.fr
 Nmap scan report for www.mairie.ants.gouv.fr (66.22.32.165)
-Host is up (0.085s latency).
+Host is up (0.14s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE  VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE  VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Mon, 28 Apr 2025 03:23:03 GMT
+|     Date: Mon, 05 May 2025 03:29:19 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -27,7 +27,7 @@ PORT    STATE    SERVICE  VERSION
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Mon, 28 Apr 2025 03:23:03 GMT
+|     Date: Mon, 05 May 2025 03:29:18 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -42,7 +42,7 @@ PORT    STATE    SERVICE  VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Mon, 28 Apr 2025 03:23:03 GMT
+|     Date: Mon, 05 May 2025 03:29:19 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -62,38 +62,37 @@ PORT    STATE    SERVICE  VERSION
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_http-trane-info: ERROR: Script execution failed (use -d to debug)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=4/28%Time=680EF497%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,14B,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Mon,\x2028\x20Apr\x202025\x2003:23:03\x20GMT\r\nConte
-SF:nt-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close
-SF:\r\nLocation:\x20https://mairie\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<
-SF:head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x2
-SF:0Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>
-SF:\r\n")%r(HTTPOptions,14B,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nS
-SF:erver:\x20rdwr\r\nDate:\x20Mon,\x2028\x20Apr\x202025\x2003:23:03\x20GMT
-SF:\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:
-SF:\x20close\r\nLocation:\x20https://mairie\.ants\.gouv\.fr:443/\r\n\r\n<h
-SF:tml>\r\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><
-SF:h1>302\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r
-SF:\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r
-SF:\nServer:\x20rdwr\r\nDate:\x20Mon,\x2028\x20Apr\x202025\x2003:23:03\x20
-SF:GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnecti
-SF:on:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title
-SF:></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r
-SF:\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,
-SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Mon,
-SF:\x2028\x20Apr\x202025\x2003:23:03\x20GMT\r\nContent-Type:\x20text/html\
-SF:r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<hea
-SF:d><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>
-SF:400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</b
-SF:ody>\r\n</html>\r\n")%r(FourOhFourRequest,16E,"HTTP/1\.1\x20302\x20Move
-SF:d\x20Temporarily\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2028\x20Apr\x2020
-SF:25\x2003:23:03\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
-SF:x20137\r\nConnection:\x20close\r\nLocation:\x20https://mairie\.ants\.go
-SF:uv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head>
-SF:<title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Foun
-SF:d</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n"
-SF:);
+SF-Port80-TCP:V=7.92%I=7%D=5/5%Time=6818308E%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,14B,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x20
+SF:rdwr\r\nDate:\x20Mon,\x2005\x20May\x202025\x2003:29:18\x20GMT\r\nConten
+SF:t-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close\
+SF:r\nLocation:\x20https://mairie\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<h
+SF:ead><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20
+SF:Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\
+SF:r\n")%r(HTTPOptions,14B,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nSe
+SF:rver:\x20rdwr\r\nDate:\x20Mon,\x2005\x20May\x202025\x2003:29:18\x20GMT\
+SF:r\nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\
+SF:x20close\r\nLocation:\x20https://mairie\.ants\.gouv\.fr:443/\r\n\r\n<ht
+SF:ml>\r\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h
+SF:1>302\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\
+SF:n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nServer:\x20rdwr\r\nDate:\x20Mon,\x2005\x20May\x202025\x2003:29:19\x20G
+SF:MT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnectio
+SF:n:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title>
+SF:</head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"
+SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Mon,\
+SF:x2005\x20May\x202025\x2003:29:19\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>4
+SF:00\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</bo
+SF:dy>\r\n</html>\r\n")%r(FourOhFourRequest,16E,"HTTP/1\.1\x20302\x20Moved
+SF:\x20Temporarily\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2005\x20May\x20202
+SF:5\x2003:29:19\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:20137\r\nConnection:\x20close\r\nLocation:\x20https://mairie\.ants\.gou
+SF:v\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><
+SF:title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Found
+SF:</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Apr 28 03:23:16 2025 -- 1 IP address (1 host up) scanned in 21.89 seconds
+# Nmap done at Mon May  5 03:29:36 2025 -- 1 IP address (1 host up) scanned in 28.32 seconds
