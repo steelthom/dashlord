@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Mon Apr 28 03:13:58 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.maisondelautisme.gouv.fr
+# Nmap 7.92 scan initiated Mon May  5 03:35:02 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.maisondelautisme.gouv.fr
 Nmap scan report for www.maisondelautisme.gouv.fr (94.23.123.122)
 Host is up (0.10s latency).
 rDNS record for 94.23.123.122: ip122.ip-94-23-123.eu
@@ -14,7 +14,7 @@ PORT    STATE SERVICE        VERSION
 |     HTTP/1.0 502 Bad Gateway
 |     Cache-Control: private, max-age=0
 |     Content-Type: application/json
-|     Date: Mon, 28 Apr 2025 03:14:13 GMT
+|     Date: Mon, 05 May 2025 03:35:17 GMT
 |     Content-Length: 47
 |     {"status":502,"message":"No route known for "}
 |   GenericLines, Help, NessusTPv10, RTSPRequest, SSLSessionReq, Socks5: 
@@ -26,16 +26,16 @@ PORT    STATE SERVICE        VERSION
 |     HTTP/1.0 502 Bad Gateway
 |     Cache-Control: private, max-age=0
 |     Content-Type: application/json
-|     Date: Mon, 28 Apr 2025 03:14:12 GMT
+|     Date: Mon, 05 May 2025 03:35:16 GMT
 |     Content-Length: 47
 |_    {"status":502,"message":"No route known for "}
 443/tcp open  ssl/http-proxy (bad gateway)
 | fingerprint-strings: 
-|   FourOhFourRequest: 
+|   FourOhFourRequest, HTTPOptions: 
 |     HTTP/1.0 502 Bad Gateway
 |     Cache-Control: private, max-age=0
 |     Content-Type: application/json
-|     Date: Mon, 28 Apr 2025 03:14:20 GMT
+|     Date: Mon, 05 May 2025 03:35:23 GMT
 |     Content-Length: 47
 |     {"status":502,"message":"No route known for "}
 |   GenericLines, Help, NessusTPv10, RTSPRequest, SSLSessionReq, Socks5: 
@@ -43,73 +43,73 @@ PORT    STATE SERVICE        VERSION
 |     Content-Type: text/plain; charset=utf-8
 |     Connection: close
 |     Request
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.0 502 Bad Gateway
 |     Cache-Control: private, max-age=0
 |     Content-Type: application/json
-|     Date: Mon, 28 Apr 2025 03:14:19 GMT
+|     Date: Mon, 05 May 2025 03:35:22 GMT
 |     Content-Length: 47
 |_    {"status":502,"message":"No route known for "}
 3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port22-TCP:V=7.92%I=7%D=4/28%Time=680EF284%P=x86_64-alpine-linux-musl%r
-SF:(NULL,15,"SSH-2\.0-Platform\.sh\r\n");
+SF-Port22-TCP:V=7.92%I=7%D=5/5%Time=681831F4%P=x86_64-alpine-linux-musl%r(
+SF:NULL,15,"SSH-2\.0-Platform\.sh\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=4/28%Time=680EF284%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCache-Control:\x2
-SF:0private,\x20max-age=0\r\nContent-Type:\x20application/json\r\nDate:\x2
-SF:0Mon,\x2028\x20Apr\x202025\x2003:14:12\x20GMT\r\nContent-Length:\x2047\
-SF:r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\x20for\x20\"}
-SF:\n")%r(HTTPOptions,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCache-Cont
-SF:rol:\x20private,\x20max-age=0\r\nContent-Type:\x20application/json\r\nD
-SF:ate:\x20Mon,\x2028\x20Apr\x202025\x2003:14:12\x20GMT\r\nContent-Length:
-SF:\x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\x20for
-SF:\x20\"}\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
-SF:tent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\
-SF:r\n400\x20Bad\x20Request")%r(FourOhFourRequest,C7,"HTTP/1\.0\x20502\x20
-SF:Bad\x20Gateway\r\nCache-Control:\x20private,\x20max-age=0\r\nContent-Ty
-SF:pe:\x20application/json\r\nDate:\x20Mon,\x2028\x20Apr\x202025\x2003:14:
-SF:13\x20GMT\r\nContent-Length:\x2047\r\n\r\n{\"status\":502,\"message\":\
-SF:"No\x20route\x20known\x20for\x20\"}\n")%r(GenericLines,67,"HTTP/1\.1\x2
-SF:0400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8
-SF:\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP
-SF:/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20chars
-SF:et=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSe
-SF:ssionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
-SF:t/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
-SF:Request")%r(NessusTPv10,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConte
-SF:nt-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\
-SF:n400\x20Bad\x20Request")%r(Socks5,67,"HTTP/1\.1\x20400\x20Bad\x20Reques
-SF:t\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20cl
-SF:ose\r\n\r\n400\x20Bad\x20Request");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=4/28%Time=680EF28B%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCache-Cont
-SF:rol:\x20private,\x20max-age=0\r\nContent-Type:\x20application/json\r\nD
-SF:ate:\x20Mon,\x2028\x20Apr\x202025\x2003:14:19\x20GMT\r\nContent-Length:
-SF:\x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\x20for
-SF:\x20\"}\n")%r(HTTPOptions,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCac
-SF:he-Control:\x20private,\x20max-age=0\r\nContent-Type:\x20application/js
-SF:on\r\nDate:\x20Mon,\x2028\x20Apr\x202025\x2003:14:19\x20GMT\r\nContent-
-SF:Length:\x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known
-SF:\x20for\x20\"}\n")%r(FourOhFourRequest,C7,"HTTP/1\.0\x20502\x20Bad\x20G
-SF:ateway\r\nCache-Control:\x20private,\x20max-age=0\r\nContent-Type:\x20a
-SF:pplication/json\r\nDate:\x20Mon,\x2028\x20Apr\x202025\x2003:14:20\x20GM
-SF:T\r\nContent-Length:\x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20r
-SF:oute\x20known\x20for\x20\"}\n")%r(GenericLines,67,"HTTP/1\.1\x20400\x20
-SF:Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConn
-SF:ection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RTSPRequest,67,"HTTP/
+SF-Port80-TCP:V=7.92%I=7%D=5/5%Time=681831F4%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCache-Control:\x20
+SF:private,\x20max-age=0\r\nContent-Type:\x20application/json\r\nDate:\x20
+SF:Mon,\x2005\x20May\x202025\x2003:35:16\x20GMT\r\nContent-Length:\x2047\r
+SF:\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\x20for\x20\"}\
+SF:n")%r(HTTPOptions,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCache-Contr
+SF:ol:\x20private,\x20max-age=0\r\nContent-Type:\x20application/json\r\nDa
+SF:te:\x20Mon,\x2005\x20May\x202025\x2003:35:16\x20GMT\r\nContent-Length:\
+SF:x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\x20for\
+SF:x20\"}\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCont
+SF:ent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r
+SF:\n400\x20Bad\x20Request")%r(FourOhFourRequest,C7,"HTTP/1\.0\x20502\x20B
+SF:ad\x20Gateway\r\nCache-Control:\x20private,\x20max-age=0\r\nContent-Typ
+SF:e:\x20application/json\r\nDate:\x20Mon,\x2005\x20May\x202025\x2003:35:1
+SF:7\x20GMT\r\nContent-Length:\x2047\r\n\r\n{\"status\":502,\"message\":\"
+SF:No\x20route\x20known\x20for\x20\"}\n")%r(GenericLines,67,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\
+SF:r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/
 SF:1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charse
-SF:t=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,6
-SF:7,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x
-SF:20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%
-SF:r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
-SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
-SF:Bad\x20Request")%r(NessusTPv10,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r
-SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close
-SF:\r\n\r\n400\x20Bad\x20Request")%r(Socks5,67,"HTTP/1\.1\x20400\x20Bad\x2
-SF:0Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection
-SF::\x20close\r\n\r\n400\x20Bad\x20Request");
+SF:t=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSes
+SF:sionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text
+SF:/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20R
+SF:equest")%r(NessusTPv10,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConten
+SF:t-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n
+SF:400\x20Bad\x20Request")%r(Socks5,67,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20clo
+SF:se\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/5%Time=681831FA%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCache-Contr
+SF:ol:\x20private,\x20max-age=0\r\nContent-Type:\x20application/json\r\nDa
+SF:te:\x20Mon,\x2005\x20May\x202025\x2003:35:22\x20GMT\r\nContent-Length:\
+SF:x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\x20for\
+SF:x20\"}\n")%r(HTTPOptions,C7,"HTTP/1\.0\x20502\x20Bad\x20Gateway\r\nCach
+SF:e-Control:\x20private,\x20max-age=0\r\nContent-Type:\x20application/jso
+SF:n\r\nDate:\x20Mon,\x2005\x20May\x202025\x2003:35:23\x20GMT\r\nContent-L
+SF:ength:\x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20route\x20known\
+SF:x20for\x20\"}\n")%r(FourOhFourRequest,C7,"HTTP/1\.0\x20502\x20Bad\x20Ga
+SF:teway\r\nCache-Control:\x20private,\x20max-age=0\r\nContent-Type:\x20ap
+SF:plication/json\r\nDate:\x20Mon,\x2005\x20May\x202025\x2003:35:23\x20GMT
+SF:\r\nContent-Length:\x2047\r\n\r\n{\"status\":502,\"message\":\"No\x20ro
+SF:ute\x20known\x20for\x20\"}\n")%r(GenericLines,67,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConne
+SF:ction:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RTSPRequest,67,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset
+SF:=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67
+SF:,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x2
+SF:0charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r
+SF:(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\
+SF:x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20B
+SF:ad\x20Request")%r(NessusTPv10,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\
+SF:r\n\r\n400\x20Bad\x20Request")%r(Socks5,67,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:
+SF:\x20close\r\n\r\n400\x20Bad\x20Request");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Apr 28 03:14:24 2025 -- 1 IP address (1 host up) scanned in 25.89 seconds
+# Nmap done at Mon May  5 03:35:27 2025 -- 1 IP address (1 host up) scanned in 25.91 seconds
