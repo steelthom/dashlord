@@ -1,0 +1,91 @@
+# Nmap 7.92 scan initiated Mon May  5 03:57:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.masecurite.interieur.gouv.fr
+Nmap scan report for www.masecurite.interieur.gouv.fr (46.22.207.60)
+Host is up (0.12s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http?
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 245
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains
+|     X-XSS-Protection: 0; mode=block
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 472221764722981120<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Mon, 05 May 2025 03:57:57 GMT
+|     Content-Type: text/html
+|     Content-Length: 146
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Permitted-Cross-Domain-Policies: none
+|     Expect-CT: enforce, max-age=604800
+|     Feature-Policy: accelerometer 'self'; ambient-light-sensor 'self'; autoplay 'self'; camera 'self'; encrypted-media 'self'; fullscreen 'self'; geolocation 'self'; gyroscope 'self'; magnetometer 'self'; microphone 'self'; midi 'self'; payment 'self'; picture-in-picture *; speaker 'self'; sync-xhr *; usb 'self'; vr 'self'
+|     Set-Cookie: SESSION-RP=43475978.20480.0000; path=/; Httponly; Secure
+|     Set-Cookie: TS01a55be7=0161bc9718589bc7f3b0c15308821f996112a87f3cf3ab8033cfffa857ccad6a9663792dbee2058f2fa8557c34687694576525e2f7492537844718d0aad71f7283a9fea19
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 245
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains
+|     X-XSS-Protection: 0; mode=block
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 472221764664883683<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/5%Time=68183745%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,484,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Mon,\x
+SF:2005\x20May\x202025\x2003:57:57\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20146\r\nConnection:\x20close\r\nX-Frame-Options:\x20
+SF:SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x
+SF:201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-orig
+SF:in\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nExpect-CT:\x20enfor
+SF:ce,\x20max-age=604800\r\nFeature-Policy:\x20accelerometer\x20'self';\x2
+SF:0ambient-light-sensor\x20'self';\x20autoplay\x20'self';\x20camera\x20's
+SF:elf';\x20encrypted-media\x20'self';\x20fullscreen\x20'self';\x20geoloca
+SF:tion\x20'self';\x20gyroscope\x20'self';\x20magnetometer\x20'self';\x20m
+SF:icrophone\x20'self';\x20midi\x20'self';\x20payment\x20'self';\x20pictur
+SF:e-in-picture\x20\*;\x20speaker\x20'self';\x20sync-xhr\x20\*;\x20usb\x20
+SF:'self';\x20vr\x20'self'\r\nSet-Cookie:\x20SESSION-RP=43475978\.20480\.0
+SF:000;\x20path=/;\x20Httponly;\x20Secure\r\nSet-Cookie:\x20TS01a55be7=016
+SF:1bc9718589bc7f3b0c15308821f996112a87f3cf3ab8033cfffa857ccad6a9663792dbe
+SF:e2058f2fa8557c34687694576525e2f7492537844718d0aad71f7283a9fea19")%r(HTT
+SF:POptions,24A,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x20SAME
+SF:ORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\
+SF:nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-cache\r\
+SF:nContent-Length:\x20245\r\nStrict-Transport-Security:\x20max-age=630720
+SF:00;\x20includeSubdomains\r\nX-XSS-Protection:\x200;\x20mode=block\r\n\r
+SF:\n<html><head><title>Request\x20Rejected</title></head><body>The\x20req
+SF:uested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20your
+SF:\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20472221764664
+SF:883683<br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]
+SF:</a></body></html>")%r(FourOhFourRequest,24A,"HTTP/1\.1\x20403\x20Forbi
+SF:dden\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mo
+SF:de=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20no-
+SF:cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x20245\r\nStrict-Trans
+SF:port-Security:\x20max-age=63072000;\x20includeSubdomains\r\nX-XSS-Prote
+SF:ction:\x200;\x20mode=block\r\n\r\n<html><head><title>Request\x20Rejecte
+SF:d</title></head><body>The\x20requested\x20URL\x20was\x20rejected\.\x20P
+SF:lease\x20consult\x20with\x20your\x20administrator\.<br><br>Your\x20supp
+SF:ort\x20ID\x20is:\x20472221764722981120<br><br><a\x20href='javascript:hi
+SF:story\.back\(\);'>\[Go\x20Back\]</a></body></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May  5 04:00:11 2025 -- 1 IP address (1 host up) scanned in 155.96 seconds

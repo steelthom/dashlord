@@ -374,7 +374,7 @@
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "244 >= 60 days"
+              "finding"      : "230 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -604,114 +604,15 @@
               "id"           : "HTTP_status_code",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header request failed"
           }
 ,         {
-              "id"           : "HTTP_clock_skew",
+              "id"           : "scanProblem",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 (± 1.5) seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1744883689"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Apache/2.4.10 (Debian)"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 at '/'"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "default-src 'self'; frame-src 'self' www.google.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' www.gstatic.com www.google.com ajax.googleapis.com maps.googleapis.com; img-src 'self' data: ; style-src 'self' 'unsafe-inline';"
-          }
-,         {
-              "id"           : "X-Content-Security-Policy",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "default-src 'self'; frame-src 'self' www.google.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' www.gstatic.com www.google.com ajax.googleapis.com maps.googleapis.com; img-src 'self' data: ; style-src 'self' 'unsafe-inline';"
-          }
-,         {
-              "id"           : "X-WebKit-CSP",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "default-src 'self'; frame-src 'self' www.google.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' www.gstatic.com www.google.com ajax.googleapis.com maps.googleapis.com; img-src 'self' data: ; style-src 'self' 'unsafe-inline';"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "Via: 1.1 www.ac-wf.wf"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header was repeatedly zero."
           }
 ,         {
               "id"           : "heartbleed",
@@ -900,13 +801,6 @@
               "finding"      : "not vulnerable"
           }
 ,         {
-              "id"           : "clientsimulation-android_60",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
               "id"           : "clientsimulation-android_70",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
@@ -935,21 +829,14 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_11",
+              "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_12",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_79_win10",
+              "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
@@ -963,7 +850,7 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-firefox_66_win81",
+              "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
@@ -977,11 +864,11 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-ie_6_xp",
+              "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -989,13 +876,6 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_xp",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_win7",
@@ -1040,14 +920,14 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
+              "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
+              "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1061,6 +941,13 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "clientsimulation-safari_184_osx_154",
+              "ip"           : "www.ac-wf.wf/117.20.37.41",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
               "id"           : "clientsimulation-java_7u25",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
@@ -1068,21 +955,28 @@
               "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
           }
 ,         {
-              "id"           : "clientsimulation-java_8u161",
+              "id"           : "clientsimulation-java_80442",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-java1102",
+              "id"           : "clientsimulation-java_1102",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-java1703",
+              "id"           : "clientsimulation-java_1703",
+              "ip"           : "www.ac-wf.wf/117.20.37.41",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java_2106",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1096,7 +990,7 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-libressl_283",
+              "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1110,13 +1004,6 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "www.ac-wf.wf/117.20.37.41",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
               "id"           : "clientsimulation-openssl_111d",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
@@ -1124,7 +1011,7 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_303",
+              "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1240,6 +1127,6 @@
               "ip"           : "www.ac-wf.wf/117.20.37.41",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "206"
+              "finding"      : "219"
           }
 ]

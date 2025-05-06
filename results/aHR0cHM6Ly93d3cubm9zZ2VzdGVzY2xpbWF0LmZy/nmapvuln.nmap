@@ -1,0 +1,119 @@
+# Nmap 7.92 scan initiated Mon May  5 03:26:58 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.nosgestesclimat.fr
+Nmap scan report for www.nosgestesclimat.fr (76.76.21.241)
+Host is up (0.033s latency).
+Other addresses for www.nosgestesclimat.fr (not scanned): 66.33.60.34
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Vercel
+|_http-server-header: Vercel
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 308 Permanent Redirect
+|     Content-Type: text/plain
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Refresh: 0;url=https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     server: Vercel
+|     Redirecting...
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 308 Permanent Redirect
+|     Content-Type: text/plain
+|     Location: https:///
+|     Refresh: 0;url=https:///
+|     server: Vercel
+|_    Redirecting...
+443/tcp open  ssl/https Vercel
+|_http-server-header: Vercel
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Cache-Control: public, max-age=0, must-revalidate
+|     Content-Length: 107
+|     Content-Type: text/plain; charset=utf-8
+|     Date: Mon, 05 May 2025 03:27:15 GMT
+|     Server: Vercel
+|     Strict-Transport-Security: max-age=63072000
+|     X-Vercel-Error: DEPLOYMENT_NOT_FOUND
+|     X-Vercel-Id: sfo1::8nzjz-1746415635831-382f989c6dec
+|     deployment could not be found on Vercel.
+|     DEPLOYMENT_NOT_FOUND
+|     sfo1::8nzjz-1746415635831-382f989c6dec
+|   GenericLines, Help, RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Cache-Control: public, max-age=0, must-revalidate
+|     Content-Length: 107
+|     Content-Type: text/plain; charset=utf-8
+|     Date: Mon, 05 May 2025 03:27:15 GMT
+|     Server: Vercel
+|     Strict-Transport-Security: max-age=63072000
+|     X-Vercel-Error: DEPLOYMENT_NOT_FOUND
+|     X-Vercel-Id: sfo1::62qkl-1746415635454-2d823db80431
+|     deployment could not be found on Vercel.
+|     DEPLOYMENT_NOT_FOUND
+|     sfo1::62qkl-1746415635454-2d823db80431
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Cache-Control: public, max-age=0, must-revalidate
+|     Content-Length: 107
+|     Content-Type: text/plain; charset=utf-8
+|     Date: Mon, 05 May 2025 03:27:15 GMT
+|     Server: Vercel
+|     Strict-Transport-Security: max-age=63072000
+|     X-Vercel-Error: DEPLOYMENT_NOT_FOUND
+|     X-Vercel-Id: sfo1::xfb8x-1746415635642-7222626fbffb
+|     deployment could not be found on Vercel.
+|     DEPLOYMENT_NOT_FOUND
+|_    sfo1::xfb8x-1746415635642-7222626fbffb
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=5/5%Time=6818300D%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,8A,"HTTP/1\.0\x20308\x20Permanent\x20Redirect\r\nContent-Typ
+SF:e:\x20text/plain\r\nLocation:\x20https:///\r\nRefresh:\x200;url=https:/
+SF://\r\nserver:\x20Vercel\r\n\r\nRedirecting\.\.\.")%r(HTTPOptions,8A,"HT
+SF:TP/1\.0\x20308\x20Permanent\x20Redirect\r\nContent-Type:\x20text/plain\
+SF:r\nLocation:\x20https:///\r\nRefresh:\x200;url=https:///\r\nserver:\x20
+SF:Vercel\r\n\r\nRedirecting\.\.\.")%r(FourOhFourRequest,D0,"HTTP/1\.0\x20
+SF:308\x20Permanent\x20Redirect\r\nContent-Type:\x20text/plain\r\nLocation
+SF::\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nRefresh:\x200;url
+SF:=https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nserver:\x20Vercel\r\n
+SF:\r\nRedirecting\.\.\.");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/5%Time=68183013%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,1B3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nCache-Contro
+SF:l:\x20public,\x20max-age=0,\x20must-revalidate\r\nContent-Length:\x2010
+SF:7\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nDate:\x20Mon,\x20
+SF:05\x20May\x202025\x2003:27:15\x20GMT\r\nServer:\x20Vercel\r\nStrict-Tra
+SF:nsport-Security:\x20max-age=63072000\r\nX-Vercel-Error:\x20DEPLOYMENT_N
+SF:OT_FOUND\r\nX-Vercel-Id:\x20sfo1::62qkl-1746415635454-2d823db80431\r\n\
+SF:r\nThe\x20deployment\x20could\x20not\x20be\x20found\x20on\x20Vercel\.\n
+SF:\nDEPLOYMENT_NOT_FOUND\n\nsfo1::62qkl-1746415635454-2d823db80431\n")%r(
+SF:HTTPOptions,1B3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nCache-Control:\x20
+SF:public,\x20max-age=0,\x20must-revalidate\r\nContent-Length:\x20107\r\nC
+SF:ontent-Type:\x20text/plain;\x20charset=utf-8\r\nDate:\x20Mon,\x2005\x20
+SF:May\x202025\x2003:27:15\x20GMT\r\nServer:\x20Vercel\r\nStrict-Transport
+SF:-Security:\x20max-age=63072000\r\nX-Vercel-Error:\x20DEPLOYMENT_NOT_FOU
+SF:ND\r\nX-Vercel-Id:\x20sfo1::xfb8x-1746415635642-7222626fbffb\r\n\r\nThe
+SF:\x20deployment\x20could\x20not\x20be\x20found\x20on\x20Vercel\.\n\nDEPL
+SF:OYMENT_NOT_FOUND\n\nsfo1::xfb8x-1746415635642-7222626fbffb\n")%r(FourOh
+SF:FourRequest,1B3,"HTTP/1\.0\x20404\x20Not\x20Found\r\nCache-Control:\x20
+SF:public,\x20max-age=0,\x20must-revalidate\r\nContent-Length:\x20107\r\nC
+SF:ontent-Type:\x20text/plain;\x20charset=utf-8\r\nDate:\x20Mon,\x2005\x20
+SF:May\x202025\x2003:27:15\x20GMT\r\nServer:\x20Vercel\r\nStrict-Transport
+SF:-Security:\x20max-age=63072000\r\nX-Vercel-Error:\x20DEPLOYMENT_NOT_FOU
+SF:ND\r\nX-Vercel-Id:\x20sfo1::8nzjz-1746415635831-382f989c6dec\r\n\r\nThe
+SF:\x20deployment\x20could\x20not\x20be\x20found\x20on\x20Vercel\.\n\nDEPL
+SF:OYMENT_NOT_FOUND\n\nsfo1::8nzjz-1746415635831-382f989c6dec\n")%r(Generi
+SF:cLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n4
+SF:00\x20Bad\x20Request")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\
+SF:r\n\r\n400\x20Bad\x20Request");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May  5 03:28:45 2025 -- 1 IP address (1 host up) scanned in 107.35 seconds

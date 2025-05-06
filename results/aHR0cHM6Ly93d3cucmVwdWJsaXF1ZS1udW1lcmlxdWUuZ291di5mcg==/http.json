@@ -1,0 +1,183 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "C-",
+    "error": null,
+    "score": 45,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 06 May 2025 03:11:30 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "cf-ray": "93b54a62cf8a13a5-ORD",
+      "server": "cloudflare",
+      "vary": "Accept-Encoding, Accept-Encoding, Accept-Language, Origin, Access-Control-Request-Headers, Access-Control-Request-Method",
+      "cache-control": "max-age=0, must-revalidate, private, s-maxage=60",
+      "expires": "Tue, 06 May 2025 03:11:30 GMT",
+      "feature-policy": "xr-spatial-tracking 'self'; vr 'self';geolocation 'self';midi 'none';sync-xhr 'none';microphone 'self';camera 'self';magnetometer 'none';gyroscope 'none';fullscreen 'self';payment 'none';",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "content-security-policy": "default-src * 'unsafe-inline' 'unsafe-eval'; script-src * data: https://* 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src * data: blob: ;frame-ancestors 'self'; style-src * data: https://* 'unsafe-inline';",
+      "x-varnish": "8291138",
+      "age": "0",
+      "strict-transport-security": "max-age=2592000; preload",
+      "x-permitted-cross-domain-policies": "none",
+      "cf-cache-status": "DYNAMIC",
+      "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=SdCgVCw7FOCqaBB1%2B%2FKnG7QuwEgjU%2FialcDOtwwPPSVZB78gGFBgai1%2F6lprWc4DUtE%2B1PHWZ4nspKVzak1FeomPDmYF9OMVLlA3JJCNeVAsMmbCsoIufN42pw%2BMucZ1FxmQcqe%2BVXKML4QRsQ8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+      "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+      "alt-svc": "h3=\":443\"; ma=86400",
+      "server-timing": "cfL4;desc=\"?proto=TCP&rtt=2536&min_rtt=2408&rtt_var=995&sent=5&recv=5&lost=0&retrans=0&sent_bytes=2860&recv_bytes=804&delivery_rate=1779069&cwnd=252&unsent_bytes=0&cid=14fe4bde055c0638&ts=501&x=0\""
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "*"
+        ],
+        "script-src": [
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "*",
+          "data:",
+          "https://*"
+        ],
+        "connect-src": [
+          "'unsafe-inline'",
+          "*"
+        ],
+        "img-src": [
+          "'unsafe-inline'",
+          "*",
+          "blob:",
+          "data:"
+        ],
+        "frame-src": [
+          "*",
+          "blob:",
+          "data:"
+        ],
+        "frame-ancestors": [
+          "'self'"
+        ],
+        "style-src": [
+          "'unsafe-inline'",
+          "*",
+          "data:",
+          "https://*"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-implemented-with-restricted-access",
+      "scoreModifier": 0,
+      "data": "https://http-observatory.security.mozilla.org"
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-not-to-https-on-initial-redirection",
+      "scoreModifier": -10,
+      "destination": "https://www.republique-numerique.fr/",
+      "redirects": true,
+      "route": [
+        "http://www.republique-numerique.gouv.fr/",
+        "http://republique-numerique.fr/",
+        "https://www.republique-numerique.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": false,
+      "result": "referrer-policy-unsafe",
+      "scoreModifier": -5,
+      "data": "no-referrer-when-downgrade",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-implemented-and-external-scripts-loaded-securely",
+      "scoreModifier": 5,
+      "data": {
+        "https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}

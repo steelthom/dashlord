@@ -1,0 +1,97 @@
+# Nmap 7.92 scan initiated Thu May  1 03:34:11 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.stationnement.gouv.fr
+Nmap scan report for www.stationnement.gouv.fr (185.8.53.118)
+Host is up (0.14s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+443/tcp open  ssl/http-proxy (bad gateway)
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     x-frame-options: DENY
+|     x-xss-protection: 1; mode=block
+|     x-content-type-options: nosniff
+|     cache-control: no-cache
+|     content-security-policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';
+|     content-type: text/html; charset=utf-8
+|     pragma: no-cache
+|     x-blocked: yes
+|     content-length: 4064
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     connection: close
+|     <!DOCTYPE html>
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+|     <title>
+|     Security Error
+|     </title>
+|     <style type="text/css">
+|     .content {
+|     background-color:#0066a1;
+|     width:900px;
+|     margin:0px auto;
+|     margin-top:40px;
+|     margin-bottom:10px;
+|     border:2px solid #DDDDDD;
+|     height: 250px;
+|     font-family:Tahoma;
+|     color:white;
+|   GetRequest: 
+|     HTTP/1.1 502 Bad Gateway
+|     content-length: 107
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>502 Bad Gateway</h1>
+|     server returned an invalid or incomplete response.
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/1%Time=6812EBCB%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,E1,"HTTP/1\.1\x20502\x20Bad\x20Gateway\r\ncontent-len
+SF:gth:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html
+SF:\r\nconnection:\x20close\r\n\r\n<html><body><h1>502\x20Bad\x20Gateway</
+SF:h1>\nThe\x20server\x20returned\x20an\x20invalid\x20or\x20incomplete\x20
+SF:response\.\n</body></html>\n")%r(HTTPOptions,1189,"HTTP/1\.1\x20403\x20
+SF:Forbidden\r\nx-frame-options:\x20DENY\r\nx-xss-protection:\x201;\x20mod
+SF:e=block\r\nx-content-type-options:\x20nosniff\r\ncache-control:\x20no-c
+SF:ache\r\ncontent-security-policy:\x20default-src\x20'self'\x20'unsafe-in
+SF:line';\x20style-src\x20'self'\x20'unsafe-inline';\r\ncontent-type:\x20t
+SF:ext/html;\x20charset=utf-8\r\npragma:\x20no-cache\r\nx-blocked:\x20yes\
+SF:r\ncontent-length:\x204064\r\nstrict-transport-security:\x20max-age=160
+SF:00000;\x20includeSubDomains;\x20preload;\r\nconnection:\x20close\r\n\r\
+SF:n<!DOCTYPE\x20html>\r\n<html><head>\r\n<meta\x20http-equiv=\"content-ty
+SF:pe\"\x20content=\"text/html;\x20charset=ISO-8859-1\">\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<title>\r\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Security\x20Error\r\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</title>\r\n\x20\x20\x20\x20<st
+SF:yle\x20type=\"text/css\">\r\n\t\x20\x20\.content\x20{\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20background-color:#0066a1;\r\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20width:900px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20margin:0px\x20a
+SF:uto;\r\n\x20\x20\x20\x20\x20\x20\x20\x20margin-top:40px;\r\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20margin-bottom:10px;\r\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20border:2px\x20solid\x20#DDDDDD;\r\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0height:\x20250px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-family:Tahom
+SF:a;\r\n\t\tcolor:white;\r\n\x20\x20\x20\x20\x20\x20}\x20")%r(FourOhFourR
+SF:equest,1189,"HTTP/1\.1\x20403\x20Forbidden\r\nx-frame-options:\x20DENY\
+SF:r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-type-options:\x20
+SF:nosniff\r\ncache-control:\x20no-cache\r\ncontent-security-policy:\x20de
+SF:fault-src\x20'self'\x20'unsafe-inline';\x20style-src\x20'self'\x20'unsa
+SF:fe-inline';\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\npragma:\
+SF:x20no-cache\r\nx-blocked:\x20yes\r\ncontent-length:\x204064\r\nstrict-t
+SF:ransport-security:\x20max-age=16000000;\x20includeSubDomains;\x20preloa
+SF:d;\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head>\r\
+SF:n<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;\x20charse
+SF:t=ISO-8859-1\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<title>\
+SF:r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20Security\x20Error\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20</title>\r\n\x20\x20\x20\x20<style\x20type=\"text/css\">\r\n\t\x20\x2
+SF:0\.content\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20background-color:#00
+SF:66a1;\r\n\x20\x20\x20\x20\x20\x20\x20\x20width:900px;\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20margin:0px\x20auto;\r\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20margin-top:40px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:10p
+SF:x;\r\n\x20\x20\x20\x20\x20\x20\x20\x20border:2px\x20solid\x20#DDDDDD;\r
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20height:\x20250px;\r\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20font-family:Tahoma;\r\n\t\tcolor:white;\r\n\x20\x20\x20
+SF:\x20\x20\x20}\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May  1 03:34:47 2025 -- 1 IP address (1 host up) scanned in 35.94 seconds

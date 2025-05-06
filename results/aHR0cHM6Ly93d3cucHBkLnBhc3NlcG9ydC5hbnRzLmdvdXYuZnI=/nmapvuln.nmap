@@ -1,0 +1,213 @@
+# Nmap 7.92 scan initiated Tue May  6 03:50:02 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ppd.passeport.ants.gouv.fr
+Nmap scan report for www.ppd.passeport.ants.gouv.fr (66.22.32.31)
+Host is up (0.14s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT    STATE    SERVICE   VERSION
+20/tcp  filtered ftp-data
+21/tcp  filtered ftp
+22/tcp  filtered ssh
+80/tcp  open     http      rdwr
+|_http-server-header: rdwr
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:13 GMT
+|     Content-Type: text/html
+|     Content-Length: 161
+|     Connection: close
+|     Location: https://ppd.passeport.ants.gouv.fr:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:12 GMT
+|     Content-Type: text/html
+|     Content-Length: 161
+|     Connection: close
+|     Location: https://ppd.passeport.ants.gouv.fr:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:13 GMT
+|     Content-Type: text/html
+|     Content-Length: 149
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|_    </html>
+161/tcp filtered snmp
+179/tcp filtered bgp
+443/tcp open     ssl/https rdwr
+|_http-server-header: rdwr
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 303 See Other
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:20 GMT
+|     Content-Type: text/html
+|     Content-Length: 145
+|     Connection: close
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=8be7d54a180b93b7cdcc700d9bde45e9d25af8f17d663ec9a5cbf613c47ccbc1
+|     Strict-Transport-Security: max-age=31536000
+|     <html>
+|     <head><title>303 See Other</title></head>
+|     <body>
+|     <center><h1>303 See Other</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 303 See Other
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:19 GMT
+|     Content-Type: text/html
+|     Content-Length: 145
+|     Connection: close
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2d0274877965d8371c4445ecd67c260947819b09baa834a5b77d4ca962241c3c
+|     Strict-Transport-Security: max-age=31536000
+|     <html>
+|     <head><title>303 See Other</title></head>
+|     <body>
+|     <center><h1>303 See Other</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 303 See Other
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:19 GMT
+|     Content-Type: text/html
+|     Content-Length: 145
+|     Connection: close
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=7c29b0208f645218a76935f9b25b28ea9178325ae66c0445f560a9de966d2a07
+|     Strict-Transport-Security: max-age=31536000
+|     <html>
+|     <head><title>303 See Other</title></head>
+|     <body>
+|     <center><h1>303 See Other</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: rdwr
+|     Date: Tue, 06 May 2025 03:50:20 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body>
+|     <div class="container">
+|     <h2>400 Bad Request</h2>
+|     <p>The page you are looking for is unavailable.<br/>
+|     Please, try again later.</p>
+|     <br/>
+|     <hr/>
+|     </div>
+|     </body>
+|_    </html>
+|_http-trane-info: ERROR: Script execution failed (use -d to debug)
+|_hnap-info: ERROR: Script execution failed (use -d to debug)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=5/6%Time=681986F4%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,16A,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20
+SF:rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:50:12\x20GMT\r\nConten
+SF:t-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close\
+SF:r\nLocation:\x20https://ppd\.passeport\.ants\.gouv\.fr:443/\r\n\r\n<htm
+SF:l>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>
+SF:\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cente
+SF:r>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,16A,"HTTP/1\.
+SF:1\x20301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2
+SF:006\x20May\x202025\x2003:50:12\x20GMT\r\nContent-Type:\x20text/html\r\n
+SF:Content-Length:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://
+SF:ppd\.passeport\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<head><title>301\x
+SF:20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20M
+SF:oved\x20Permanently</h1></center>\r\n<hr><center>rdwr</center>\r\n</bod
+SF:y>\r\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:50:13
+SF:\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConn
+SF:ection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</t
+SF:itle></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cente
+SF:r>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,
+SF:125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20
+SF:Tue,\x2006\x20May\x202025\x2003:50:13\x20GMT\r\nContent-Type:\x20text/h
+SF:tml\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n
+SF:<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center>
+SF:<h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\
+SF:n</body>\r\n</html>\r\n")%r(FourOhFourRequest,18D,"HTTP/1\.1\x20301\x20
+SF:Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x
+SF:202025\x2003:50:13\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
+SF:th:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://ppd\.passepo
+SF:rt\.ants\.gouv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<htm
+SF:l>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>
+SF:\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cente
+SF:r>rdwr</center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/6%Time=681986FB%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,1F2,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20r
+SF:dwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:50:19\x20GMT\r\nContent
+SF:-Type:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\r
+SF:\nLocation:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s%
+SF:C3%A9curit%C3%A9_ANTS\?_event_transid=2d0274877965d8371c4445ecd67c26094
+SF:7819b09baa834a5b77d4ca962241c3c\r\nStrict-Transport-Security:\x20max-ag
+SF:e=31536000\r\n\r\n<html>\r\n<head><title>303\x20See\x20Other</title></h
+SF:ead>\r\n<body>\r\n<center><h1>303\x20See\x20Other</h1></center>\r\n<hr>
+SF:<center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1F2,"HT
+SF:TP/1\.1\x20303\x20See\x20Other\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x200
+SF:6\x20May\x202025\x2003:50:19\x20GMT\r\nContent-Type:\x20text/html\r\nCo
+SF:ntent-Length:\x20145\r\nConnection:\x20close\r\nLocation:\x20https://cs
+SF:irt\.docapost\.fr/index\.php/Information_de_s%C3%A9curit%C3%A9_ANTS\?_e
+SF:vent_transid=7c29b0208f645218a76935f9b25b28ea9178325ae66c0445f560a9de96
+SF:6d2a07\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<html>\
+SF:r\n<head><title>303\x20See\x20Other</title></head>\r\n<body>\r\n<center
+SF:><h1>303\x20See\x20Other</h1></center>\r\n<hr><center>rdwr</center>\r\n
+SF:</body>\r\n</html>\r\n")%r(FourOhFourRequest,1F2,"HTTP/1\.1\x20303\x20S
+SF:ee\x20Other\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2
+SF:003:50:20\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x2014
+SF:5\r\nConnection:\x20close\r\nLocation:\x20https://csirt\.docapost\.fr/i
+SF:ndex\.php/Information_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=8be7d5
+SF:4a180b93b7cdcc700d9bde45e9d25af8f17d663ec9a5cbf613c47ccbc1\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=31536000\r\n\r\n<html>\r\n<head><title>303
+SF:\x20See\x20Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20
+SF:Other</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\
+SF:r\n")%r(tor-versions,233,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:
+SF:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:50:20\x20GMT\r\nCo
+SF:ntent-Type:\x20text/html\r\nConnection:\x20close\r\nCache-Control:\x20n
+SF:o-store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check
+SF:=0\r\n\r\n<!DOCTYPE\x20html>\r\n<html>\r\n<head>\r\n<title>400\x20Bad\x
+SF:20Request</title>\r\n\r\n\x20\x20\x20\x20\r\n</head>\r\n<body>\r\n\x20\
+SF:x20\x20\x20<div\x20class=\"container\">\r\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<h2>400\x20Bad\x20Request</h2>\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20<p>The\x20page\x20you\x20are\x20looking\x20for\x20is\x20una
+SF:vailable\.<br/>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Plea
+SF:se,\x20try\x20again\x20later\.</p>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:<br/>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\r\n\x20\
+SF:x20\x20\x20</div>\r\n</body>\r\n</html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  6 03:50:42 2025 -- 1 IP address (1 host up) scanned in 39.54 seconds

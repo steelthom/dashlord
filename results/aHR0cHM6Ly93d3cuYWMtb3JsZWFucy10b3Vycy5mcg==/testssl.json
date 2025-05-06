@@ -185,7 +185,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "valid for 64799 seconds only (<daily)"
+              "finding"      : "valid for 64800 seconds only (<daily)"
           }
 ,         {
               "id"           : "SSL_sessionID_support",
@@ -206,7 +206,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -346,7 +346,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "247 >= 60 days"
+              "finding"      : "234 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -415,8 +415,8 @@
               "id"           : "DNS_CAArecord",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "issue=sectigo.com"
+              "severity"     : "LOW",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -556,7 +556,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1744882973"
+              "finding"      : "1745985117"
           }
 ,         {
               "id"           : "HSTS",
@@ -577,7 +577,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "server-timing: chlray;desc='931af9998cd9216d'cloudflare"
+              "finding"      : "server-timing: chlray;desc='938415681a5122a3'cloudflare"
           }
 ,         {
               "id"           : "banner_application",
@@ -599,6 +599,13 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
           }
 ,         {
               "id"           : "Permissions-Policy",
@@ -835,13 +842,6 @@
               "finding"      : "not vulnerable"
           }
 ,         {
-              "id"           : "clientsimulation-android_60",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
               "id"           : "clientsimulation-android_70",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
@@ -870,21 +870,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_11",
+              "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_12",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_79_win10",
+              "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
@@ -898,7 +891,7 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-firefox_66_win81",
+              "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
@@ -912,21 +905,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-ie_6_xp",
+              "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_xp",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
@@ -975,21 +961,28 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
+              "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
+              "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1003,21 +996,28 @@
               "finding"      : "No connection"
           }
 ,         {
-              "id"           : "clientsimulation-java_8u161",
+              "id"           : "clientsimulation-java_80442",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-java1102",
+              "id"           : "clientsimulation-java_1102",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-java1703",
+              "id"           : "clientsimulation-java_1703",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_2106",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1031,11 +1031,11 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-libressl_283",
+              "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1045,13 +1045,6 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
               "id"           : "clientsimulation-openssl_111d",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
@@ -1059,7 +1052,7 @@
               "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_303",
+              "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.104",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1370,7 +1363,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -1510,7 +1503,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "247 >= 60 days"
+              "finding"      : "234 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -1579,8 +1572,8 @@
               "id"           : "DNS_CAArecord",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "issue=sectigo.com"
+              "severity"     : "LOW",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -1720,7 +1713,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1744883130"
+              "finding"      : "1745985275"
           }
 ,         {
               "id"           : "HSTS",
@@ -1741,7 +1734,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "server-timing: chlray;desc='931afd6eef1af110'cloudflare"
+              "finding"      : "server-timing: chlray;desc='93841944c820040f'cloudflare"
           }
 ,         {
               "id"           : "banner_application",
@@ -1763,6 +1756,13 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
           }
 ,         {
               "id"           : "Permissions-Policy",
@@ -1999,13 +1999,6 @@
               "finding"      : "not vulnerable"
           }
 ,         {
-              "id"           : "clientsimulation-android_60",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
               "id"           : "clientsimulation-android_70",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
@@ -2034,21 +2027,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_11",
+              "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_12",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_79_win10",
+              "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2062,7 +2048,7 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-firefox_66_win81",
+              "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2076,21 +2062,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-ie_6_xp",
+              "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_xp",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2139,21 +2118,28 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
+              "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
+              "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2167,21 +2153,28 @@
               "finding"      : "No connection"
           }
 ,         {
-              "id"           : "clientsimulation-java_8u161",
+              "id"           : "clientsimulation-java_80442",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-java1102",
+              "id"           : "clientsimulation-java_1102",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-java1703",
+              "id"           : "clientsimulation-java_1703",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_2106",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2195,11 +2188,11 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-libressl_283",
+              "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -2209,13 +2202,6 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
               "id"           : "clientsimulation-openssl_111d",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
@@ -2223,7 +2209,7 @@
               "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_303",
+              "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.105",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2534,7 +2520,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -2674,7 +2660,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "247 >= 60 days"
+              "finding"      : "234 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -2743,8 +2729,8 @@
               "id"           : "DNS_CAArecord",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "issue=sectigo.com"
+              "severity"     : "LOW",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -2884,7 +2870,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1744883287"
+              "finding"      : "1745985434"
           }
 ,         {
               "id"           : "HSTS",
@@ -2905,7 +2891,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "server-timing: chlray;desc='931b01449d3422af'cloudflare"
+              "finding"      : "server-timing: chlray;desc='93841d271dd43c9b'cloudflare"
           }
 ,         {
               "id"           : "banner_application",
@@ -2927,6 +2913,13 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
           }
 ,         {
               "id"           : "Permissions-Policy",
@@ -3163,13 +3156,6 @@
               "finding"      : "not vulnerable"
           }
 ,         {
-              "id"           : "clientsimulation-android_60",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
               "id"           : "clientsimulation-android_70",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
@@ -3198,21 +3184,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_11",
+              "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_12",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_79_win10",
+              "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
@@ -3226,7 +3205,7 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-firefox_66_win81",
+              "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
@@ -3240,21 +3219,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-ie_6_xp",
+              "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_xp",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
@@ -3303,21 +3275,28 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
+              "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
+              "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
@@ -3331,21 +3310,28 @@
               "finding"      : "No connection"
           }
 ,         {
-              "id"           : "clientsimulation-java_8u161",
+              "id"           : "clientsimulation-java_80442",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-java1102",
+              "id"           : "clientsimulation-java_1102",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-java1703",
+              "id"           : "clientsimulation-java_1703",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_2106",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
@@ -3359,11 +3345,11 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-libressl_283",
+              "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -3373,13 +3359,6 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
               "id"           : "clientsimulation-openssl_111d",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
@@ -3387,7 +3366,7 @@
               "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_303",
+              "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.106",
               "port"         : "443",
               "severity"     : "INFO",
@@ -3698,7 +3677,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -3838,7 +3817,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "247 >= 60 days"
+              "finding"      : "234 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -3907,8 +3886,8 @@
               "id"           : "DNS_CAArecord",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "issue=sectigo.com"
+              "severity"     : "LOW",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -4041,14 +4020,14 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
+              "finding"      : "-1 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1744883445"
+              "finding"      : "1745985592"
           }
 ,         {
               "id"           : "HSTS",
@@ -4069,7 +4048,7 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "server-timing: chlray;desc='931b051d5c5a3d11'cloudflare"
+              "finding"      : "server-timing: chlray;desc='93842103ea1322ac'cloudflare"
           }
 ,         {
               "id"           : "banner_application",
@@ -4091,6 +4070,13 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
           }
 ,         {
               "id"           : "Permissions-Policy",
@@ -4327,13 +4313,6 @@
               "finding"      : "not vulnerable"
           }
 ,         {
-              "id"           : "clientsimulation-android_60",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
               "id"           : "clientsimulation-android_70",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
@@ -4362,21 +4341,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_11",
+              "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-android_12",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_79_win10",
+              "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
@@ -4390,7 +4362,7 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-firefox_66_win81",
+              "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
@@ -4404,21 +4376,14 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-ie_6_xp",
+              "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_xp",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
@@ -4467,21 +4432,28 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
+              "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
+              "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
@@ -4495,21 +4467,28 @@
               "finding"      : "No connection"
           }
 ,         {
-              "id"           : "clientsimulation-java_8u161",
+              "id"           : "clientsimulation-java_80442",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-java1102",
+              "id"           : "clientsimulation-java_1102",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-java1703",
+              "id"           : "clientsimulation-java_1703",
+              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_2106",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
@@ -4523,11 +4502,11 @@
               "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-libressl_283",
+              "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -4537,13 +4516,6 @@
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
               "id"           : "clientsimulation-openssl_111d",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
@@ -4551,7 +4523,7 @@
               "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-openssl_303",
+              "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
@@ -4660,6 +4632,6 @@
               "ip"           : "www.ac-orleans-tours.fr/141.101.90.107",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "632"
+              "finding"      : "637"
           }
 ]

@@ -1,0 +1,115 @@
+# Nmap 7.92 scan initiated Tue May  6 03:25:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.pop.culture.gouv.fr
+Nmap scan report for www.pop.culture.gouv.fr (87.98.187.73)
+Host is up (0.089s latency).
+rDNS record for 87.98.187.73: ip73.ip-87-98-187.eu
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:10 GMT
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:09 GMT
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:05 GMT
+|     connection: close
+|     Upgrade Required
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:07 GMT
+|     connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:01 GMT
+|     connection: close
+|     Upgrade Required
+|   HTTPOptions: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:02 GMT
+|     connection: close
+|     Upgrade Required
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:12 GMT
+|     connection: close
+|     Request
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:08 GMT
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:03 GMT
+|     connection: close
+|     Request
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Tue, 06 May 2025 03:26:04 GMT
+|     connection: close
+|_    Request
+443/tcp open  ssl/tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=5/6%Time=6819814A%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\ncontent-lengt
+SF:h:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Tue,\x2006\x20May\x
+SF:202025\x2003:26:01\x20GMT\r\nconnection:\x20close\r\n\r\nUpgrade\x20Req
+SF:uired")%r(HTTPOptions,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\nco
+SF:ntent-length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Tue,\x20
+SF:06\x20May\x202025\x2003:26:02\x20GMT\r\nconnection:\x20close\r\n\r\nUpg
+SF:rade\x20Required")%r(RTSPRequest,8D,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Tu
+SF:e,\x2006\x20May\x202025\x2003:26:03\x20GMT\r\nconnection:\x20close\r\n\
+SF:r\nBad\x20Request")%r(X11Probe,8D,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Tue,
+SF:\x2006\x20May\x202025\x2003:26:04\x20GMT\r\nconnection:\x20close\r\n\r\
+SF:nBad\x20Request")%r(FourOhFourRequest,97,"HTTP/1\.1\x20426\x20Upgrade\x
+SF:20Required\r\ncontent-length:\x2016\r\ncontent-type:\x20text/plain\r\nd
+SF:ate:\x20Tue,\x2006\x20May\x202025\x2003:26:05\x20GMT\r\nconnection:\x20
+SF:close\r\n\r\nUpgrade\x20Required")%r(GenericLines,8D,"HTTP/1\.1\x20400\
+SF:x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/pla
+SF:in\r\ndate:\x20Tue,\x2006\x20May\x202025\x2003:26:07\x20GMT\r\nconnecti
+SF:on:\x20close\r\n\r\nBad\x20Request")%r(RPCCheck,8D,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain
+SF:\r\ndate:\x20Tue,\x2006\x20May\x202025\x2003:26:08\x20GMT\r\nconnection
+SF::\x20close\r\n\r\nBad\x20Request")%r(DNSVersionBindReqTCP,8D,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20
+SF:text/plain\r\ndate:\x20Tue,\x2006\x20May\x202025\x2003:26:09\x20GMT\r\n
+SF:connection:\x20close\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,8D,"
+SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-
+SF:type:\x20text/plain\r\ndate:\x20Tue,\x2006\x20May\x202025\x2003:26:10\x
+SF:20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(Help,8D,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\
+SF:x20text/plain\r\ndate:\x20Tue,\x2006\x20May\x202025\x2003:26:12\x20GMT\
+SF:r\nconnection:\x20close\r\n\r\nBad\x20Request");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  6 03:26:50 2025 -- 1 IP address (1 host up) scanned in 59.97 seconds

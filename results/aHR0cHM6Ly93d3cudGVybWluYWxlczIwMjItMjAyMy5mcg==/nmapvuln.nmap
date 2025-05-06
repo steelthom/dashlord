@@ -1,0 +1,110 @@
+# Nmap 7.92 scan initiated Wed Apr 30 03:40:16 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.terminales2022-2023.fr
+Nmap scan report for www.terminales2022-2023.fr (109.234.167.32)
+Host is up (0.098s latency).
+rDNS record for 109.234.167.32: 109-234-167-32.reverse.odns.fr
+Not shown: 933 filtered tcp ports (no-response), 56 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+21/tcp  open  ftp        Pure-FTPd
+25/tcp  open  smtp?
+26/tcp  open  smtp       Exim smtpd 4.98.1
+80/tcp  open  http       o2switch-PowerBoost-v3
+|_http-server-header: o2switch-PowerBoost-v3
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 30 Apr 2025 03:40:26 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     Server: o2switch-PowerBoost-v3
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+|     <meta http-equiv="Cache-control" content="no-cache">
+|     <meta http-equiv="Pragma" content="no-cache">
+|     <meta http-equiv="Expires" content="0">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>400 Bad Request</title>
+|     <style type="text/css">
+|     body {
+|     font-family: Arial, Helvetica, sans-serif;
+|     font-size: 14px;
+|     line-height: 1.428571429;
+|     background-color: #ffffff;
+|     color: #2F3230;
+|     padding: 0;
+|     margin: 0;
+|     section, f
+|   HTTPOptions: 
+|     HTTP/1.1 429 Too Many Requests
+|     Date: Wed, 30 Apr 2025 03:40:27 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Vary: Accept-Encoding
+|     Server: o2switch-PowerBoost-v3
+|     Tiger-Protect-Security: https://faq.o2switch.fr/hebergement-mutualise/tutoriels-cpanel/tiger-protect
+|     Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Expires: Thu, 01 Jan 1970 00:00:01 GMT
+|     Access-Control-Allow-Origin: *
+|     <!--Debug [[Security_Rule = ""; More_info = ""; HTTP_Code = "429""; Request_ID = "9d91444c2b175eb8c85657803e7156e7"; Support = "support@o2switch.fr"; Link = "https://faq.o2switch.fr/hebergement-mutualise/tutoriels-cpanel/tiger-protect"]] EndOfDebug-->
+|     <!DOCTYPE HTML>
+|     <html lang="en-US">
+|     <head>
+|     <meta charset="UTF-8" />
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|_    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
+110/tcp open  pop3       Dovecot pop3d
+143/tcp open  imap       Dovecot imapd
+443/tcp open  ssl/https?
+465/tcp open  ssl/smtps?
+587/tcp open  smtp       Exim smtpd 4.98.1
+993/tcp open  imaps?
+995/tcp open  pop3s?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=4/30%Time=68119BAB%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1640,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x
+SF:2030\x20Apr\x202025\x2003:40:26\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nConnection:\x20close\r\nCache-Control:\x20no-cache,\x20no-store,\x20mu
+SF:st-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nServer:\x20o2s
+SF:witch-PowerBoost-v3\r\n\r\n\n\n\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x
+SF:20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20c
+SF:ontent=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20http-
+SF:equiv=\"Cache-control\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<meta
+SF:\x20http-equiv=\"Pragma\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<me
+SF:ta\x20http-equiv=\"Expires\"\x20content=\"0\">\n\x20\x20\x20\x20<meta\x
+SF:20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1
+SF:\.0\">\n\x20\x20\x20\x20<title>400\x20Bad\x20Request</title>\n\x20\x20\
+SF:x20\x20<style\x20type=\"text/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20bo
+SF:dy\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x
+SF:20Arial,\x20Helvetica,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20line-height:\x201\.428571429;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20background-color:\x20#ffffff;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20section,\x20f")%r(HTTPOptions,1964,"HTTP
+SF:/1\.1\x20429\x20Too\x20Many\x20Requests\r\nDate:\x20Wed,\x2030\x20Apr\x
+SF:202025\x2003:40:27\x20GMT\r\nContent-Type:\x20text/html\r\nConnection:\
+SF:x20close\r\nVary:\x20Accept-Encoding\r\nServer:\x20o2switch-PowerBoost-
+SF:v3\r\nTiger-Protect-Security:\x20https://faq\.o2switch\.fr/hebergement-
+SF:mutualise/tutoriels-cpanel/tiger-protect\r\nCache-Control:\x20private,\
+SF:x20max-age=0,\x20no-store,\x20no-cache,\x20must-revalidate,\x20post-che
+SF:ck=0,\x20pre-check=0\r\nExpires:\x20Thu,\x2001\x20Jan\x201970\x2000:00:
+SF:01\x20GMT\r\nAccess-Control-Allow-Origin:\x20\*\r\n\r\n<!--Debug\x20\[\
+SF:[Security_Rule\x20=\x20\"\";\x20More_info\x20=\x20\"\";\x20HTTP_Code\x2
+SF:0=\x20\"429\"\";\x20Request_ID\x20=\x20\"9d91444c2b175eb8c85657803e7156
+SF:e7\";\x20Support\x20=\x20\"support@o2switch\.fr\";\x20Link\x20=\x20\"ht
+SF:tps://faq\.o2switch\.fr/hebergement-mutualise/tutoriels-cpanel/tiger-pr
+SF:otect\"\]\]\x20EndOfDebug-->\n<!DOCTYPE\x20HTML>\n<html\x20lang=\"en-US
+SF:\">\n<head>\n\x20\x20<meta\x20charset=\"UTF-8\"\x20/>\n\x20\x20<meta\x2
+SF:0http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=UTF-8\"
+SF:\x20/>\n\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE
+SF:=Edge,chrome=1\"");
+Service Info: Host: origan.o2switch.net
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Apr 30 03:40:57 2025 -- 1 IP address (1 host up) scanned in 40.32 seconds
