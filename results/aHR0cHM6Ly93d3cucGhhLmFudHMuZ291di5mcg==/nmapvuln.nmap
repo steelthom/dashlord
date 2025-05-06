@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Apr 29 03:23:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.pha.ants.gouv.fr
+# Nmap 7.92 scan initiated Tue May  6 03:37:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.pha.ants.gouv.fr
 Nmap scan report for www.pha.ants.gouv.fr (66.22.32.116)
-Host is up (0.085s latency).
+Host is up (0.14s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE  VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE  VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Tue, 29 Apr 2025 03:23:55 GMT
+|     Date: Tue, 06 May 2025 03:37:57 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -27,7 +27,7 @@ PORT    STATE    SERVICE  VERSION
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Tue, 29 Apr 2025 03:23:54 GMT
+|     Date: Tue, 06 May 2025 03:37:56 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -39,24 +39,10 @@ PORT    STATE    SERVICE  VERSION
 |     <hr><center>rdwr</center>
 |     </body>
 |     </html>
-|   RTSPRequest: 
+|   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Tue, 29 Apr 2025 03:23:54 GMT
-|     Content-Type: text/html
-|     Content-Length: 149
-|     Connection: close
-|     <html>
-|     <head><title>400 Bad Request</title></head>
-|     <body>
-|     <center><h1>400 Bad Request</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|     </html>
-|   X11Probe: 
-|     HTTP/1.1 400 Bad Request
-|     Server: rdwr
-|     Date: Tue, 29 Apr 2025 03:23:55 GMT
+|     Date: Tue, 06 May 2025 03:37:57 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -71,42 +57,42 @@ PORT    STATE    SERVICE  VERSION
 179/tcp filtered bgp
 443/tcp open     ssl/http nginx 1.27.0
 |_hnap-info: ERROR: Script execution failed (use -d to debug)
+|_http-trane-info: ERROR: Script execution failed (use -d to debug)
 | vulners: 
 |   nginx 1.27.0: 
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-trane-info: ERROR: Script execution failed (use -d to debug)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=4/29%Time=6810464A%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Tue,\x2029\x20Apr\x202025\x2003:23:54\x20GMT\r\nConte
-SF:nt-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close
-SF:\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<hea
-SF:d><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Fo
-SF:und</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\
-SF:n")%r(HTTPOptions,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServ
-SF:er:\x20rdwr\r\nDate:\x20Tue,\x2029\x20Apr\x202025\x2003:23:54\x20GMT\r\
-SF:nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x2
-SF:0close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r
-SF:\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302
-SF:\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</ht
-SF:ml>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServ
-SF:er:\x20rdwr\r\nDate:\x20Tue,\x2029\x20Apr\x202025\x2003:23:54\x20GMT\r\
-SF:nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnection:\x2
-SF:0close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></hea
-SF:d>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr>
-SF:<center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"HTTP/
-SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2029
-SF:\x20Apr\x202025\x2003:23:55\x20GMT\r\nContent-Type:\x20text/html\r\nCon
-SF:tent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><tit
-SF:le>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x2
-SF:0Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r
-SF:\n</html>\r\n")%r(FourOhFourRequest,16B,"HTTP/1\.1\x20302\x20Moved\x20T
-SF:emporarily\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2029\x20Apr\x202025\x20
-SF:03:23:55\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137
-SF:\r\nConnection:\x20close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:44
-SF:3/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><title>30
-SF:2\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Found</h1></c
-SF:enter>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=5/6%Time=68198414%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x20
+SF:rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:37:56\x20GMT\r\nConten
+SF:t-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close\
+SF:r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<head
+SF:><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Fou
+SF:nd</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n
+SF:")%r(HTTPOptions,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServe
+SF:r:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:37:56\x20GMT\r\n
+SF:Content-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20
+SF:close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\
+SF:n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\
+SF:x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServe
+SF:r:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2003:37:57\x20GMT\r\n
+SF:Content-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnection:\x20
+SF:close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head
+SF:>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><
+SF:center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\
+SF:x20May\x202025\x2003:37:57\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><titl
+SF:e>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20
+SF:Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\
+SF:n</html>\r\n")%r(FourOhFourRequest,16B,"HTTP/1\.1\x20302\x20Moved\x20Te
+SF:mporarily\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x200
+SF:3:37:57\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137\
+SF:r\nConnection:\x20close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443
+SF:/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><title>302
+SF:\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Found</h1></ce
+SF:nter>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Apr 29 03:24:07 2025 -- 1 IP address (1 host up) scanned in 21.46 seconds
+# Nmap done at Tue May  6 03:38:14 2025 -- 1 IP address (1 host up) scanned in 27.86 seconds
