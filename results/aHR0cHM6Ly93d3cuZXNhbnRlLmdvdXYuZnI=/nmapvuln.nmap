@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri May  2 03:44:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.esante.gouv.fr
+# Nmap 7.92 scan initiated Thu May  8 03:43:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.esante.gouv.fr
 Nmap scan report for www.esante.gouv.fr (37.59.26.43)
-Host is up (0.085s latency).
+Host is up (0.086s latency).
 rDNS record for 37.59.26.43: ns329358.ip-37-59-26.eu
 Not shown: 996 filtered tcp ports (no-response)
 PORT     STATE  SERVICE      VERSION
@@ -28,29 +28,9 @@ PORT     STATE  SERVICE      VERSION
 443/tcp  open   ssl/https    Apache
 |_http-server-header: Apache
 | fingerprint-strings: 
-|   FourOhFourRequest: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
 |     HTTP/1.1 503 Service Unavailable
-|     date: Fri, 02 May 2025 03:44:27 GMT
-|     server: Apache
-|     content-length: 299
-|     content-type: text/html; charset=iso-8859-1
-|     strict-transport-security: max-age=31536000; preload
-|     x-xss-protection: 1; mode=block
-|     x-content-type-options: nosniff
-|     x-permitted-cross-domain-policies: none
-|     connection: close
-|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-|     <html><head>
-|     <title>503 Service Unavailable</title>
-|     </head><body>
-|     <h1>Service Unavailable</h1>
-|     <p>The server is temporarily unable to service your
-|     request due to maintenance downtime or capacity
-|     problems. Please try again later.</p>
-|     </body></html>
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.1 503 Service Unavailable
-|     date: Fri, 02 May 2025 03:44:26 GMT
+|     date: Thu, 08 May 2025 03:43:28 GMT
 |     server: Apache
 |     content-length: 299
 |     content-type: text/html; charset=iso-8859-1
@@ -72,7 +52,7 @@ PORT     STATE  SERVICE      VERSION
 1026/tcp closed LSA-or-nterm
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=5/2%Time=68143F94%P=x86_64-alpine-linux-musl%r(
+SF-Port80-TCP:V=7.92%I=7%D=5/8%Time=681C2859%P=x86_64-alpine-linux-musl%r(
 SF:GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-leng
 SF:th:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r(
 SF:HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
@@ -105,9 +85,9 @@ SF:Cache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20
 SF:text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20br
 SF:owser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/2%Time=68143F9A%P=x86_64-alpine-linux-
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/8%Time=681C2860%P=x86_64-alpine-linux-
 SF:musl%r(GetRequest,27A,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nda
-SF:te:\x20Fri,\x2002\x20May\x202025\x2003:44:26\x20GMT\r\nserver:\x20Apach
+SF:te:\x20Thu,\x2008\x20May\x202025\x2003:43:28\x20GMT\r\nserver:\x20Apach
 SF:e\r\ncontent-length:\x20299\r\ncontent-type:\x20text/html;\x20charset=i
 SF:so-8859-1\r\nstrict-transport-security:\x20max-age=31536000;\x20preload
 SF:\r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-type-options:\x2
@@ -118,8 +98,8 @@ SF:>\n</head><body>\n<h1>Service\x20Unavailable</h1>\n<p>The\x20server\x20
 SF:is\x20temporarily\x20unable\x20to\x20service\x20your\nrequest\x20due\x2
 SF:0to\x20maintenance\x20downtime\x20or\x20capacity\nproblems\.\x20Please\
 SF:x20try\x20again\x20later\.</p>\n</body></html>\n")%r(HTTPOptions,27A,"H
-SF:TTP/1\.1\x20503\x20Service\x20Unavailable\r\ndate:\x20Fri,\x2002\x20May
-SF:\x202025\x2003:44:26\x20GMT\r\nserver:\x20Apache\r\ncontent-length:\x20
+SF:TTP/1\.1\x20503\x20Service\x20Unavailable\r\ndate:\x20Thu,\x2008\x20May
+SF:\x202025\x2003:43:28\x20GMT\r\nserver:\x20Apache\r\ncontent-length:\x20
 SF:299\r\ncontent-type:\x20text/html;\x20charset=iso-8859-1\r\nstrict-tran
 SF:sport-security:\x20max-age=31536000;\x20preload\r\nx-xss-protection:\x2
 SF:01;\x20mode=block\r\nx-content-type-options:\x20nosniff\r\nx-permitted-
@@ -130,8 +110,8 @@ SF:rvice\x20Unavailable</h1>\n<p>The\x20server\x20is\x20temporarily\x20una
 SF:ble\x20to\x20service\x20your\nrequest\x20due\x20to\x20maintenance\x20do
 SF:wntime\x20or\x20capacity\nproblems\.\x20Please\x20try\x20again\x20later
 SF:\.</p>\n</body></html>\n")%r(FourOhFourRequest,27A,"HTTP/1\.1\x20503\x2
-SF:0Service\x20Unavailable\r\ndate:\x20Fri,\x2002\x20May\x202025\x2003:44:
-SF:27\x20GMT\r\nserver:\x20Apache\r\ncontent-length:\x20299\r\ncontent-typ
+SF:0Service\x20Unavailable\r\ndate:\x20Thu,\x2008\x20May\x202025\x2003:43:
+SF:28\x20GMT\r\nserver:\x20Apache\r\ncontent-length:\x20299\r\ncontent-typ
 SF:e:\x20text/html;\x20charset=iso-8859-1\r\nstrict-transport-security:\x2
 SF:0max-age=31536000;\x20preload\r\nx-xss-protection:\x201;\x20mode=block\
 SF:r\nx-content-type-options:\x20nosniff\r\nx-permitted-cross-domain-polic
@@ -144,4 +124,4 @@ SF:pacity\nproblems\.\x20Please\x20try\x20again\x20later\.</p>\n</body></h
 SF:tml>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri May  2 03:44:42 2025 -- 1 IP address (1 host up) scanned in 35.35 seconds
+# Nmap done at Thu May  8 03:43:44 2025 -- 1 IP address (1 host up) scanned in 35.90 seconds
