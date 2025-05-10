@@ -1,18 +1,18 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D-",
+    "grade": "F",
     "error": null,
-    "score": 25,
+    "score": 5,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Sun, 04 May 2025 04:02:51 GMT",
+      "date": "Sat, 10 May 2025 03:30:19 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "content-length": "16020",
+      "content-length": "16024",
       "connection": "close",
       "cache-control": "max-age=86400, public",
       "x-drupal-dynamic-cache": "MISS",
@@ -21,15 +21,15 @@
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Sat, 03 May 2025 22:06:17 GMT",
+      "last-modified": "Fri, 09 May 2025 22:46:33 GMT",
       "x-cacheable": "YES",
       "x-cache-ttl": "86400.000",
-      "etag": "W/\"1746309977\"",
+      "etag": "W/\"1746830793\"",
       "vary": "Accept-Encoding",
       "cache-tags": "HIT",
       "x-cache": "HIT",
-      "x-cache-age": "18928",
-      "x-cache-hits": "171",
+      "x-cache-age": "16967",
+      "x-cache-hits": "123",
       "accept-ranges": "bytes",
       "strict-transport-security": "max-age=31536000; includeSubdomains"
     }
@@ -64,12 +64,15 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "http://www.horizon-europe.gouv.fr/",
+      "destination": "https://www.horizon-europe.gouv.fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.horizon-europe.gouv.fr/",
+        "https://www.horizon-europe.gouv.fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -82,12 +85,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubdomains",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
