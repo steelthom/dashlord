@@ -339,7 +339,7 @@
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
               "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (20)"
+              "finding"      : "expires < 30 days (14)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -535,7 +535,14 @@
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Got no HTTP time, maybe try different URL?"
+              "finding"      : "-1069 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1746847583"
           }
 ,         {
               "id"           : "HSTS",
@@ -556,7 +563,7 @@
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "BigIP"
+              "finding"      : "No Server banner line in header, interesting!"
           }
 ,         {
               "id"           : "banner_application",
@@ -570,14 +577,42 @@
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/'"
+              "finding"      : "2 at '/'"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "cookie_secure",
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "INFO",
+              "finding"      : "0/2 at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "www.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/2 at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "public, max-age=86400"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -585,7 +620,7 @@
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "finding"      : "X-Cache: HIT"
           }
 ,         {
               "id"           : "heartbleed",
@@ -653,10 +688,10 @@
               "id"           : "BREACH",
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -801,6 +836,13 @@
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
+              "ip"           : "www.justice.fr/185.24.184.176",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_15",
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1084,6 +1126,6 @@
               "ip"           : "www.justice.fr/185.24.184.176",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "60"
+              "finding"      : "68"
           }
 ]
