@@ -1,13 +1,12 @@
-# Nmap 7.92 scan initiated Sun May  4 03:28:37 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
+# Nmap 7.92 scan initiated Sat May 10 03:25:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
 Nmap scan report for www.haut-conseil-egalite.gouv.fr (185.194.83.18)
-Host is up (0.081s latency).
+Host is up (0.13s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/https
-|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.0 404 Not Found
@@ -16,15 +15,15 @@ PORT    STATE  SERVICE    VERSION
 |     ERROR
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Sun, 04 May 2025 03:28:56 GMT
+|     Date: Sat, 10 May 2025 03:25:41 GMT
 |     X-Outils-CS: 
 |     Vary: Cookie,Accept-Encoding
 |     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
 |     X-Spip-Cache: 86400
-|     Last-Modified: Sun, 04 May 2025 03:28:56 GMT
+|     Last-Modified: Sat, 10 May 2025 03:25:41 GMT
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!gqhwsB/60ytU1S2QEus9KsUIQe0YedwRXGBvk8KxsaF+8Y0O+jS6JaSZDT5MPt0ZbetRrzzxWr6jKLTIfDSHPm6wgFc=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!irpWdbaCz2qG3YeQEus9KsUIQe0YeUHzDN4trT6b7RE7u1PEMx/ib3U8ZlTs+SGVsd/5hraWbCo+MvXpW9wslsSOFcE=; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 |     <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
@@ -38,36 +37,39 @@ PORT    STATE  SERVICE    VERSION
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |     ERROR
-|   RTSPRequest: 
+|   RTSPRequest, SIPOptions: 
 |     HTTP/1.0 400 Bad Request
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |_    ERROR
+|_http-trane-info: Problem with XML parsing of /evox/about
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/4%Time=6816DEF8%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2004\x
-SF:20May\x202025\x2003:28:56\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cookie
-SF:,Accept-Encoding\r\nComposed-By:\x20SPIP\x204\.3\.6\x20@\x20www\.spip\.
-SF:net\x20\+\x20https://https:/local/config\.txt\r\nX-Spip-Cache:\x2086400
-SF:\r\nLast-Modified:\x20Sun,\x2004\x20May\x202025\x2003:28:56\x20GMT\r\nC
-SF:onnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\n
-SF:Set-Cookie:\x20BIGipServerpool-dgcs-hautconseilegalite2\.cegedim\.cloud
-SF:-HTTP=!gqhwsB/60ytU1S2QEus9KsUIQe0YedwRXGBvk8KxsaF\+8Y0O\+jS6JaSZDT5MPt
-SF:0ZbetRrzzxWr6jKLTIfDSHPm6wgFc=;\x20path=/;\x20Httponly;\x20Secure\r\nSt
-SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\
-SF:r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tra
-SF:nsitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitio
-SF:nal\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20lan
-SF:g=\"fr\"\x20xml:lang=\"fr\">\r\n<head>\r\n\t<meta\x20http-equiv=\"Conte
-SF:nt-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<title>
-SF:Haut\x20Conseil\x20\xc3\xa0\x20l'\xc3\x89galit\xc3\xa9\x20entre\x20les\
-SF:x20femmes\x20et\x20les\x20hommes</ti")%r(HTTPOptions,4E,"HTTP/1\.0\x204
-SF:03\x20Forbidden\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\
-SF:n\r\n403\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20
-SF:Found\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x
-SF:20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConne
-SF:ction:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/10%Time=681EC735%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2010\
+SF:x20May\x202025\x2003:25:41\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cooki
+SF:e,Accept-Encoding\r\nComposed-By:\x20SPIP\x204\.3\.6\x20@\x20www\.spip\
+SF:.net\x20\+\x20https://https:/local/config\.txt\r\nX-Spip-Cache:\x208640
+SF:0\r\nLast-Modified:\x20Sat,\x2010\x20May\x202025\x2003:25:41\x20GMT\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\
+SF:nSet-Cookie:\x20BIGipServerpool-dgcs-hautconseilegalite2\.cegedim\.clou
+SF:d-HTTP=!irpWdbaCz2qG3YeQEus9KsUIQe0YeUHzDN4trT6b7RE7u1PEMx/ib3U8ZlTs\+S
+SF:GVsd/5hraWbCo\+MvXpW9wslsSOFcE=;\x20path=/;\x20Httponly;\x20Secure\r\nS
+SF:trict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n
+SF:\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tr
+SF:ansitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transiti
+SF:onal\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20la
+SF:ng=\"fr\"\x20xml:lang=\"fr\">\r\n<head>\r\n\t<meta\x20http-equiv=\"Cont
+SF:ent-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<title
+SF:>Haut\x20Conseil\x20\xc3\xa0\x20l'\xc3\x89galit\xc3\xa9\x20entre\x20les
+SF:\x20femmes\x20et\x20les\x20hommes</ti")%r(HTTPOptions,4E,"HTTP/1\.0\x20
+SF:403\x20Forbidden\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r
+SF:\n\r\n403\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x2
+SF:0Found\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\
+SF:x20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConn
+SF:ection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR")%r(S
+SF:IPOptions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep
+SF:-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun May  4 03:29:17 2025 -- 1 IP address (1 host up) scanned in 40.57 seconds
+# Nmap done at Sat May 10 03:27:56 2025 -- 1 IP address (1 host up) scanned in 156.55 seconds
