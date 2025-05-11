@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -374,7 +374,7 @@
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "119 >= 60 days"
+              "finding"      : "113 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -517,98 +517,6 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
-          }
-,         {
-              "id"           : "HTTP_clock_skew",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1746416052"
-          }
-,         {
-              "id"           : "HTTP_headerAge",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds"
-          }
-,         {
-              "id"           : "HSTS",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Apache"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 at '/'"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "must-revalidate, no-cache, private"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "x-varnish: 37371646via: 1.1 varnish (Varnish/6.5)"
-          }
-,         {
               "id"           : "heartbleed",
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
@@ -630,10 +538,10 @@
               "id"           : "ticketbleed",
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "INFO",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "no session ticket extension"
+              "finding"      : "not applicable, not HTTP"
           }
 ,         {
               "id"           : "ROBOT",
@@ -668,16 +576,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "BREACH",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cve"          : "CVE-2013-3587",
-              "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable (not using HTTP anyway)"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -822,6 +721,13 @@
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
+              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_15",
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1091,20 +997,13 @@
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A"
-          }
-,         {
-              "id"           : "grade_cap_reason_1",
-              "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to A. HSTS is not offered"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.ofpra.gouv.fr/46.18.193.152",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "67"
+              "finding"      : "55"
           }
 ]
