@@ -1,15 +1,15 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D+",
+    "grade": "C",
     "error": null,
-    "score": 40,
+    "score": 55,
     "statusCode": 200,
     "testsFailed": 3,
     "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 06 May 2025 13:37:03 GMT",
+      "date": "Mon, 12 May 2025 03:43:22 GMT",
       "server": "Apache/2.4.58 (Ubuntu)",
       "cache-control": "must-revalidate, no-cache, private",
       "x-drupal-dynamic-cache": "MISS",
@@ -80,11 +80,15 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": false,
-      "result": "redirection-invalid-cert",
-      "scoreModifier": -20,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
       "destination": "https://www.atout-france.fr/fr/tourisme-et-handicap",
       "redirects": true,
-      "route": [],
+      "route": [
+        "http://www.tourisme-handicap.gouv.fr/",
+        "https://tourisme-handicap.gouv.fr/",
+        "https://www.atout-france.fr/fr/tourisme-et-handicap"
+      ],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -99,7 +103,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-invalid-cert",
+      "result": "hsts-not-implemented",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
