@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Tue May  6 13:32:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ppd.autoecole.ants.gouv.fr
+# Nmap 7.92 scan initiated Mon May 12 03:37:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ppd.autoecole.ants.gouv.fr
 Nmap scan report for www.ppd.autoecole.ants.gouv.fr (141.226.253.172)
 Host is up (0.14s latency).
 Not shown: 993 closed tcp ports (reset)
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE   VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:05 GMT
+|     Date: Mon, 12 May 2025 03:37:31 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -27,7 +27,7 @@ PORT    STATE    SERVICE   VERSION
 |   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:03 GMT
+|     Date: Mon, 12 May 2025 03:37:30 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -42,7 +42,7 @@ PORT    STATE    SERVICE   VERSION
 |   HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:04 GMT
+|     Date: Mon, 12 May 2025 03:37:31 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -57,7 +57,7 @@ PORT    STATE    SERVICE   VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:04 GMT
+|     Date: Mon, 12 May 2025 03:37:31 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -71,16 +71,18 @@ PORT    STATE    SERVICE   VERSION
 161/tcp filtered snmp
 179/tcp filtered bgp
 443/tcp open     ssl/https rdwr
+|_http-trane-info: ERROR: Script execution failed (use -d to debug)
+|_hnap-info: ERROR: Script execution failed (use -d to debug)
 |_http-server-header: rdwr
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 303 See Other
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:11 GMT
+|     Date: Mon, 12 May 2025 03:37:38 GMT
 |     Content-Type: text/html
 |     Content-Length: 145
 |     Connection: close
-|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=aca5fedc4033355af28fc6839ab203636354d57c4aadbb2067974e4404e223cf
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=4bbf609a47f5041bc0cf9844507fe4400786020d70b228e818b9ed4e5d7c76cd
 |     <html>
 |     <head><title>303 See Other</title></head>
 |     <body>
@@ -91,11 +93,11 @@ PORT    STATE    SERVICE   VERSION
 |   GetRequest: 
 |     HTTP/1.1 303 See Other
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:10 GMT
+|     Date: Mon, 12 May 2025 03:37:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 145
 |     Connection: close
-|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=7661be98d58e1aecebedd36a7b3dbbce361c762fc991df676442c9d273bcbeaa
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=94fb72b3474a9e071fe0e1a366c0584bbd6e6617ce1f1fb704072e97fac818b7
 |     <html>
 |     <head><title>303 See Other</title></head>
 |     <body>
@@ -106,11 +108,11 @@ PORT    STATE    SERVICE   VERSION
 |   HTTPOptions: 
 |     HTTP/1.1 303 See Other
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:10 GMT
+|     Date: Mon, 12 May 2025 03:37:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 145
 |     Connection: close
-|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2f92b70affd20381aa62510598f168a1c27bda4f1ec5eff46a35614ab59945bc
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=7c2ade2f32a9948e76b3b349f70a86a7daacbb57362350b33ea69542e977b819
 |     <html>
 |     <head><title>303 See Other</title></head>
 |     <body>
@@ -121,7 +123,7 @@ PORT    STATE    SERVICE   VERSION
 |   tor-versions: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Tue, 06 May 2025 13:33:12 GMT
+|     Date: Mon, 12 May 2025 03:37:38 GMT
 |     Content-Type: text/html
 |     Connection: close
 |     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
@@ -140,84 +142,82 @@ PORT    STATE    SERVICE   VERSION
 |     </div>
 |     </body>
 |_    </html>
-|_http-trane-info: ERROR: Script execution failed (use -d to debug)
-|_hnap-info: ERROR: Script execution failed (use -d to debug)
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=5/6%Time=681A0F8F%P=x86_64-alpine-linux-musl%r(
-SF:GetRequest,16A,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20
-SF:rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2013:33:03\x20GMT\r\nConten
-SF:t-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close\
-SF:r\nLocation:\x20https://ppd\.autoecole\.ants\.gouv\.fr:443/\r\n\r\n<htm
-SF:l>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>
-SF:\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cente
-SF:r>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,16A,"HTTP/1\.
-SF:1\x20301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2
-SF:006\x20May\x202025\x2013:33:04\x20GMT\r\nContent-Type:\x20text/html\r\n
-SF:Content-Length:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://
-SF:ppd\.autoecole\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<head><title>301\x
-SF:20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20M
-SF:oved\x20Permanently</h1></center>\r\n<hr><center>rdwr</center>\r\n</bod
-SF:y>\r\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Reque
-SF:st\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2013:33:04
-SF:\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConn
-SF:ection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</t
-SF:itle></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cente
-SF:r>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,
-SF:125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20
-SF:Tue,\x2006\x20May\x202025\x2013:33:04\x20GMT\r\nContent-Type:\x20text/h
-SF:tml\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n
-SF:<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center>
-SF:<h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\
-SF:n</body>\r\n</html>\r\n")%r(FourOhFourRequest,18D,"HTTP/1\.1\x20301\x20
-SF:Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2006\x20May\x
-SF:202025\x2013:33:05\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
-SF:th:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://ppd\.autoeco
-SF:le\.ants\.gouv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<htm
-SF:l>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>
-SF:\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cente
-SF:r>rdwr</center>\r\n</body>\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=5/12%Time=68216CFA%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,16A,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
+SF:0rdwr\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:37:30\x20GMT\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close
+SF:\r\nLocation:\x20https://ppd\.autoecole\.ants\.gouv\.fr:443/\r\n\r\n<ht
+SF:ml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body
+SF:>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cent
+SF:er>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,16A,"HTTP/1\
+SF:.1\x20301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x
+SF:2012\x20May\x202025\x2003:37:31\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20161\r\nConnection:\x20close\r\nLocation:\x20https:/
+SF:/ppd\.autoecole\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<head><title>301\
+SF:x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20
+SF:Moved\x20Permanently</h1></center>\r\n<hr><center>rdwr</center>\r\n</bo
+SF:dy>\r\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:37:3
+SF:1\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nCon
+SF:nection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</
+SF:title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cent
+SF:er>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe
+SF:,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x2
+SF:0Mon,\x2012\x20May\x202025\x2003:37:31\x20GMT\r\nContent-Type:\x20text/
+SF:html\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\
+SF:n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center
+SF:><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r
+SF:\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,18D,"HTTP/1\.1\x20301\x2
+SF:0Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2012\x20May\
+SF:x202025\x2003:37:31\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:gth:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://ppd\.autoec
+SF:ole\.ants\.gouv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<ht
+SF:ml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body
+SF:>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cent
+SF:er>rdwr</center>\r\n</body>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/6%Time=681A0F96%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,1C5,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20r
-SF:dwr\r\nDate:\x20Tue,\x2006\x20May\x202025\x2013:33:10\x20GMT\r\nContent
-SF:-Type:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\r
-SF:\nLocation:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s%
-SF:C3%A9curit%C3%A9_ANTS\?_event_transid=7661be98d58e1aecebedd36a7b3dbbce3
-SF:61c762fc991df676442c9d273bcbeaa\r\n\r\n<html>\r\n<head><title>303\x20Se
-SF:e\x20Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20Other<
-SF:/h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%
-SF:r(HTTPOptions,1C5,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20rdwr\
-SF:r\nDate:\x20Tue,\x2006\x20May\x202025\x2013:33:10\x20GMT\r\nContent-Typ
-SF:e:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\r\nLo
-SF:cation:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s%C3%A
-SF:9curit%C3%A9_ANTS\?_event_transid=2f92b70affd20381aa62510598f168a1c27bd
-SF:a4f1ec5eff46a35614ab59945bc\r\n\r\n<html>\r\n<head><title>303\x20See\x2
-SF:0Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20Other</h1>
-SF:</center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(Fo
-SF:urOhFourRequest,1C5,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20rdw
-SF:r\r\nDate:\x20Tue,\x2006\x20May\x202025\x2013:33:11\x20GMT\r\nContent-T
-SF:ype:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\r\n
-SF:Location:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s%C3
-SF:%A9curit%C3%A9_ANTS\?_event_transid=aca5fedc4033355af28fc6839ab20363635
-SF:4d57c4aadbb2067974e4404e223cf\r\n\r\n<html>\r\n<head><title>303\x20See\
-SF:x20Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20Other</h
-SF:1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(
-SF:tor-versions,233,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr
-SF:\r\nDate:\x20Tue,\x2006\x20May\x202025\x2013:33:12\x20GMT\r\nContent-Ty
-SF:pe:\x20text/html\r\nConnection:\x20close\r\nCache-Control:\x20no-store,
-SF:\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r\n\r
-SF:\n<!DOCTYPE\x20html>\r\n<html>\r\n<head>\r\n<title>400\x20Bad\x20Reques
-SF:t</title>\r\n\r\n\x20\x20\x20\x20\r\n</head>\r\n<body>\r\n\x20\x20\x20\
-SF:x20<div\x20class=\"container\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
-SF:\x20\x20\x20<h2>400\x20Bad\x20Request</h2>\r\n\x20\x20\x20\x20\x20\x20\
-SF:x20\x20\x20\x20\x20\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
-SF:\x20<p>The\x20page\x20you\x20are\x20looking\x20for\x20is\x20unavailable
-SF:\.<br/>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Please,\x20t
-SF:ry\x20again\x20later\.</p>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
-SF:x20\x20\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br/>\r\
-SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\r\n\x20\x20\x20\
-SF:x20</div>\r\n</body>\r\n</html>");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/12%Time=68216D01%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1C5,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20
+SF:rdwr\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:37:37\x20GMT\r\nConten
+SF:t-Type:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\
+SF:r\nLocation:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s
+SF:%C3%A9curit%C3%A9_ANTS\?_event_transid=94fb72b3474a9e071fe0e1a366c0584b
+SF:bd6e6617ce1f1fb704072e97fac818b7\r\n\r\n<html>\r\n<head><title>303\x20S
+SF:ee\x20Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20Other
+SF:</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")
+SF:%r(HTTPOptions,1C5,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20rdwr
+SF:\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:37:37\x20GMT\r\nContent-Ty
+SF:pe:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\r\nL
+SF:ocation:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s%C3%
+SF:A9curit%C3%A9_ANTS\?_event_transid=7c2ade2f32a9948e76b3b349f70a86a7daac
+SF:bb57362350b33ea69542e977b819\r\n\r\n<html>\r\n<head><title>303\x20See\x
+SF:20Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20Other</h1
+SF:></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(F
+SF:ourOhFourRequest,1C5,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x20rd
+SF:wr\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:37:38\x20GMT\r\nContent-
+SF:Type:\x20text/html\r\nContent-Length:\x20145\r\nConnection:\x20close\r\
+SF:nLocation:\x20https://csirt\.docapost\.fr/index\.php/Information_de_s%C
+SF:3%A9curit%C3%A9_ANTS\?_event_transid=4bbf609a47f5041bc0cf9844507fe44007
+SF:86020d70b228e818b9ed4e5d7c76cd\r\n\r\n<html>\r\n<head><title>303\x20See
+SF:\x20Other</title></head>\r\n<body>\r\n<center><h1>303\x20See\x20Other</
+SF:h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r
+SF:(tor-versions,233,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdw
+SF:r\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:37:38\x20GMT\r\nContent-T
+SF:ype:\x20text/html\r\nConnection:\x20close\r\nCache-Control:\x20no-store
+SF:,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r\n\
+SF:r\n<!DOCTYPE\x20html>\r\n<html>\r\n<head>\r\n<title>400\x20Bad\x20Reque
+SF:st</title>\r\n\r\n\x20\x20\x20\x20\r\n</head>\r\n<body>\r\n\x20\x20\x20
+SF:\x20<div\x20class=\"container\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<h2>400\x20Bad\x20Request</h2>\r\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20<p>The\x20page\x20you\x20are\x20looking\x20for\x20is\x20unavailabl
+SF:e\.<br/>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Please,\x20
+SF:try\x20again\x20later\.</p>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<br/>\r
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hr/>\r\n\x20\x20\x20
+SF:\x20</div>\r\n</body>\r\n</html>");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue May  6 13:33:33 2025 -- 1 IP address (1 host up) scanned in 40.67 seconds
+# Nmap done at Mon May 12 03:37:59 2025 -- 1 IP address (1 host up) scanned in 39.11 seconds
