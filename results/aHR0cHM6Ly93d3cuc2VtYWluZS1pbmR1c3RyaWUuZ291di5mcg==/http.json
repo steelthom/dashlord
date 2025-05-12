@@ -1,16 +1,16 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D+",
+    "grade": "B",
     "error": null,
-    "score": 40,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Tue, 06 May 2025 03:26:19 GMT",
+      "date": "Mon, 12 May 2025 03:30:06 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
@@ -19,7 +19,7 @@
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
-      "expires": "Tue, 06 May 2025 03:36:19 GMT",
+      "expires": "Mon, 12 May 2025 03:40:06 GMT",
       "vary": "Accept-Encoding",
       "x-proxy-cache": "MISS",
       "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:;",
@@ -33,12 +33,12 @@
       "x-xss-protection": "1;mode=block",
       "upgrade-insecure-requests": "1",
       "set-cookie": [
-        "visid_incap_3062843=pXElZoHESP6QmKZCYQCuYFmBGWgAAAAAQUIPAAAAAABPwtwMOoN0WvpL31rPldsJ; expires=Tue, 05 May 2026 07:37:45 GMT; HttpOnly; path=/; Domain=.entreprises.gouv.fr; Secure; SameSite=None",
-        "nlbi_3062843=yy46I94+c237SVk29VRdHQAAAAAfNj+GamQsTYE7W6/uhWLV; HttpOnly; path=/; Domain=.entreprises.gouv.fr; Secure; SameSite=None",
-        "incap_ses_1295_3062843=yQHOGzhDGTNii/EO7sP4EVuBGWgAAAAAbPPCBIMa8nNxnoaWwxouXQ==; path=/; Domain=.entreprises.gouv.fr; Secure; SameSite=None"
+        "visid_incap_3062843=OgrPJjgdRUSZXyhMl6JvpTprIWgAAAAAQUIPAAAAAACUSdTYX3AW39o4dVf9P8kN; expires=Mon, 11 May 2026 07:08:36 GMT; HttpOnly; path=/; Domain=.entreprises.gouv.fr; Secure; SameSite=None",
+        "nlbi_3062843=EUolTiG4GTBWi6bC9VRdHQAAAAD4fm3xoxFTJC2mvkrH34Ew; HttpOnly; path=/; Domain=.entreprises.gouv.fr; Secure; SameSite=None",
+        "incap_ses_1841_3062843=k7oHHVtq2x8Nhzy3JYyMGT1rIWgAAAAAg3LZEe2npUQvGOJgiUNieQ==; path=/; Domain=.entreprises.gouv.fr; Secure; SameSite=None"
       ],
       "x-cdn": "Imperva",
-      "x-iinfo": "12-42358381-42358382 NNNN CT(189 454 0) RT(1746501978092 7) q(0 0 6 1) r(17 17) U12"
+      "x-iinfo": "62-247002304-247002309 NNNN CT(136 770 0) RT(1747020602972 8) q(0 0 9 0) r(34 35) U12"
     }
   },
   "tests": {
@@ -90,7 +90,7 @@
       "data": {
         "visid_incap_3062843": {
           "domain": "entreprises.gouv.fr",
-          "expires": "2026-05-05T07:37:45.000Z",
+          "expires": "2026-05-11T07:08:36.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -105,7 +105,7 @@
           "samesite": "none",
           "secure": true
         },
-        "incap_ses_1295_3062843": {
+        "incap_ses_1841_3062843": {
           "domain": "entreprises.gouv.fr",
           "path": "/",
           "port": null,
@@ -125,11 +125,15 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": false,
-      "result": "redirection-invalid-cert",
-      "scoreModifier": -20,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
       "destination": "https://www.entreprises.gouv.fr/semaine-de-lindustrie",
       "redirects": true,
-      "route": [],
+      "route": [
+        "http://www.semaine-industrie.gouv.fr/",
+        "https://semaine-industrie.gouv.fr/",
+        "https://www.entreprises.gouv.fr/semaine-de-lindustrie"
+      ],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -143,13 +147,13 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-invalid-cert",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
