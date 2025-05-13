@@ -19,11 +19,11 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on fv-az2246-474:/home/testssl/bin/openssl.Linux.x86_64
+  on fv-az792-143:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-05-07 03:11:53        --&gt;&gt; 145.242.11.58:443 (www.cadastre.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-05-13 03:44:42        --&gt;&gt; 145.242.11.58:443 (www.cadastre.gouv.fr) &lt;&lt;--</span>
 
- rDNS (145.242.11.58):   cadastre.gouv.fr.
+ rDNS (145.242.11.58):   www.cadastre.gouv.fr.
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -100,9 +100,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               www.cadastre.gouv.fr rpcu.cadastre.gouv.fr
                               www.rpcu.cadastre.gouv.fr api.cadastre.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (same w/o SNI)
-<span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#e52207;font-weight:bold;">NOT ok</span> (chain incomplete)
+<span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (51)</span> (2024-05-26 22:00 --&gt; 2025-06-27 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (45)</span> (2024-05-26 22:00 --&gt; 2025-06-27 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -112,8 +112,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#008817;">available</span> - please check for match with &quot;Issuer&quot; below: <i>issue=certigna.fr</i>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
-<span style="font-weight:bold;"> Certificates provided</span>        1
+<span style="font-weight:bold;"> Certificates provided</span>        3
 <span style="font-weight:bold;"> Issuer                       </span><i>Certigna Services CA</i> (<i>DHIMYOTIS</i> from <i>FR</i>)
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2025-11-22 11:33). <i></i> &lt;-- <i>Certigna</i>
+                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2027-06-29 15:13). <i>Certigna</i> &lt;-- <i>Certigna</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
@@ -169,6 +171,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  Android 10.0 (native)        TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Android 11/12 (native)       TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Android 13/14 (native)       TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Android 15 (native)          TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Chrome 101 (Win 10)          TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Chromium 137 (Win 11)        TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Firefox 100 (Win 10)         TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
@@ -203,15 +206,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> Rating specs</span> (not complete)  SSL Labs&apos;s &apos;SSL Server Rating Guide&apos; (version 2009q from 2020-01-30)
 <span style="font-weight:bold;"> Specification documentation  </span><a href="https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide" style="color:black;text-decoration:none;">https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide</a>
-<span style="font-weight:bold;"> Protocol Support</span> (weighted)  0 (0)
-<span style="font-weight:bold;"> Key Exchange</span>     (weighted)  0 (0)
-<span style="font-weight:bold;"> Cipher Strength</span>  (weighted)  0 (0)
-<span style="font-weight:bold;"> Final Score                  </span>0
-<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#e52207;font-weight:bold;">T</span>
-<span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to T. Issues with the chain of
-                                trust (chain incomplete)
+<span style="font-weight:bold;"> Protocol Support </span>(weighted)  100 (30)
+<span style="font-weight:bold;"> Key Exchange </span>    (weighted)  90 (27)
+<span style="font-weight:bold;"> Cipher Strength </span> (weighted)  60 (24)
+<span style="font-weight:bold;"> Final Score                  </span>81
+<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-05-07 03:12:55 [  64s] --&gt;&gt; 145.242.11.58:443 (www.cadastre.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-05-13 03:46:22 [ 102s] --&gt;&gt; 145.242.11.58:443 (www.cadastre.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
