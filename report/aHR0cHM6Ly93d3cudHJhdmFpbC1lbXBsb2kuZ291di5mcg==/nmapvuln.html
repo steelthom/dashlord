@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.travail-emploi.gouv.fr</pre>
-<p class="lead">Wed May  7 03:13:38 2025 – Wed May  7 03:16:34 2025<br>1 hosts scanned.
+<p class="lead">Tue May 13 03:46:20 2025 – Tue May 13 03:48:49 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,29 +111,14 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product"></td>
+<td title="Service">http-proxy</td>
+<td title="Product">F5 BIG-IP load balancer http proxy</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.0 302 Moved Temporarily
-    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
-    Connection: close
-    Content-Length: 0
-  GetRequest, HTTPOptions, RTSPRequest: 
-    HTTP/1.0 302 Moved Temporarily
-    Location: https:///
-    Connection: close
-    Content-Length: 0
-  SIPOptions: 
-    HTTP/1.0 302 Moved Temporarily
-    Location: https://sip:nm
-    Connection: close
-    Content-Length: 0</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -168,18 +153,18 @@
     X-Frame-Options: SAMEORIGIN
     X-XSS-Protection: 1; mode=block
     X-Content-Type-Options: nosniff
-    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;14185738778165980525&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
+    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;14185738778689336068&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
     HTTP/1.1 400 Bad Request
-    Date: Wed, 07 May 2025 03:14:06 GMT
+    Date: Tue, 13 May 2025 03:46:39 GMT
     Content-Length: 226
     Content-Type: text/html; charset=iso-8859-1
     Age: 0
     X-Cache: MISS
     X-Cache-Hits: 0
-    X-Cache-Ttl: -0.000
+    X-Cache-Ttl: 120.000
     Connection: close
-    Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!Q33mBa9DMFnHBcaQEus9KsUIQe0YeTx596O9pkaFa1jJzR1LDZ1SuXsnU8HAMRczwMbqF8HclZdq89P0IFmwXetZ/ynF; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!GtSbFbuhslWpRD+QEus9KsUIQe0YeYEZZH45WDVoJO3RZEVCkcZkjv1YiJA4dNWFiX/CvpGBwC3ViHMiIdsjYtVLoZVA; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
     &lt;html&gt;&lt;head&gt;
@@ -189,16 +174,26 @@
     &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
     &lt;/p&gt;
     &lt;/body&gt;&lt;/html&gt;
-  RTSPRequest: 
+  HTTPOptions: 
     HTTP/1.1 400 Bad Request
+    Date: Tue, 13 May 2025 03:46:39 GMT
+    Content-Length: 226
+    Content-Type: text/html; charset=iso-8859-1
+    Age: 0
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Cache-Ttl: -0.000
     Connection: close
-    Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!UKayk9X6AwAKjICQEus9KsUIQe0YeTU21Dgz5f8LRpjp95Ip1uhy1LLLDXLn0ITqS+Vr+rvd35WTPkkPg6D8EKAluVbc; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!L4deWgtZLvypuy6QEus9KsUIQe0YeQEs5UOtqUI5dTyNQBQqTex9HVPZFudVp+n50nF1mr7oQztCEjymdwxlVPYwjoSF; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
-  SIPOptions: 
-    HTTP/1.1 400 Bad Request
-    Connection: close
-    Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-TCP80=!L3lUPBG8RukcjemQEus9KsUIQe0YeWhcPJfYyhRjf4XbY2zI/XZKzytwbn1nHpGgnKaI8XC3vPv2guYXdOML2F1TYEW1; path=/; Httponly; Secure
-    Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
+    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+    &lt;html&gt;&lt;head&gt;
+    &lt;title&gt;400 Bad Request&lt;/title&gt;
+    &lt;/head&gt;&lt;body&gt;
+    &lt;h1&gt;Bad Request&lt;/h1&gt;
+    &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
+    &lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -221,8 +216,8 @@
 <td>185.194.83.138 - www.travail-emploi.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
-<td></td>
+<td>http-proxy</td>
+<td>F5 BIG-IP load balancer http proxy</td>
 <td></td>
 <td></td>
 <td></td>
