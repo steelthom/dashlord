@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.agrement.anah.gouv.fr</pre>
-<p class="lead">Wed May  7 03:29:55 2025 – Wed May  7 03:30:04 2025<br>1 hosts scanned.
+<p class="lead">Wed May 14 03:27:57 2025 – Wed May 14 03:28:37 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>31.193.53.253</td>
 <td>www.agrement.anah.gouv.fr</td>
-<td>0</td>
+<td>1</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -106,7 +106,82 @@
 <th>Version</th>
 <th>Extra Info</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https</td>
+<td title="Product">Apache</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 404 Not Found
+    date: Wed, 14 May 2025 03:28:21 GMT
+    server: Apache
+    content-length: 196
+    content-type: text/html; charset=iso-8859-1
+    strict-transport-security: max-age=16000000;includeSubDomains;
+    x-frame-options: SAMEORIGIN
+    x-content-type-options: nosniff
+    referrer-policy: no-referrer-when-downgrade
+    x-xss-protection: 1 ;mode=block
+    connection: close
+    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+    &lt;html&gt;&lt;head&gt;
+    &lt;title&gt;404 Not Found&lt;/title&gt;
+    &lt;/head&gt;&lt;body&gt;
+    &lt;h1&gt;Not Found&lt;/h1&gt;
+    &lt;p&gt;The requested URL was not found on this server.&lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
+    HTTP/1.1 200 OK
+    date: Wed, 14 May 2025 03:28:20 GMT
+    server: Apache
+    upgrade: h2,h2c
+    connection: Upgrade
+    last-modified: Thu, 06 Jun 2024 12:30:10 GMT
+    etag: "126de-61a37d80846cb"
+    accept-ranges: bytes
+    content-length: 75486
+    vary: Accept-Encoding
+    content-type: text/html
+    strict-transport-security: max-age=16000000;includeSubDomains;
+    x-frame-options: SAMEORIGIN
+    x-content-type-options: nosniff
+    referrer-policy: no-referrer-when-downgrade
+    x-xss-protection: 1 ;mode=block
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="fr" data-critters-container="" data-fr-js="true"&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Anah&lt;/title&gt;
+    &lt;link rel="icon" type="image/svg" href="https://agrement.anah.gouv.fr/assets/logos/logo-mar.svg"&gt;
+    &lt;style&gt;&lt;/style&gt;
+    &lt;link rel="stylesheet" href="assets/styles.b435e6387cdd17c0.css" media="all" onloa
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    date: Wed, 14 May 2025 03:28:21 GMT
+    server: Apache
+    upgrade: h2,h2c
+    connection: Upgrade
+    allow: POST,OPTIONS,HEAD,GET
+    content-length: 0
+    content-type: text/html
+    strict-transport-security: max-age=16000000;includeSubDomains;
+    x-frame-options: SAMEORIGIN
+    x-content-type-options: nosniff
+    referrer-policy: no-referrer-when-downgrade
+    x-xss-protection: 1 ;mode=block</pre>
+</td></tr>
+</tbody>
 </table></div>
 </div>
 </div>
@@ -122,7 +197,16 @@
 <th>CPE</th>
 <th>Extra info</th>
 </tr></thead>
-<tbody></tbody>
+<tbody><tr>
+<td>31.193.53.253 - www.agrement.anah.gouv.fr</td>
+<td>443</td>
+<td>tcp</td>
+<td>https</td>
+<td>Apache</td>
+<td></td>
+<td></td>
+<td></td>
+</tr></tbody>
 </table></div>
 <script>
             $(document).ready(function() {
