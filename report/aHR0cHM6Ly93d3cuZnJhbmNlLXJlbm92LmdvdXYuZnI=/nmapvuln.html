@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.france-renov.gouv.fr</pre>
-<p class="lead">Fri May  9 03:13:34 2025 – Fri May  9 03:14:22 2025<br>1 hosts scanned.
+<p class="lead">Thu May 15 03:54:07 2025 – Thu May 15 03:55:18 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>31.193.53.253</td>
 <td>www.france-renov.gouv.fr</td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -108,6 +108,38 @@
 </tr></thead>
 <tbody>
 <tr class="success">
+<td title="Port">80</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, X11Probe: 
+    HTTP/1.0 400 Bad request
+    cache-control: no-cache
+    content-type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
+    Your browser sent an invalid request.
+    &lt;/body&gt;&lt;/html&gt;
+  FourOhFourRequest: 
+    HTTP/1.1 302 Found
+    content-length: 0
+    location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    cache-control: no-cache
+    connection: close
+  GetRequest, HTTPOptions, RTSPRequest: 
+    HTTP/1.1 302 Found
+    content-length: 0
+    location: https:///
+    cache-control: no-cache
+    connection: close</pre>
+</td></tr>
+<tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
@@ -123,7 +155,7 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.1 404 Not Found
-    date: Fri, 09 May 2025 03:14:04 GMT
+    date: Thu, 15 May 2025 03:54:54 GMT
     server: Apache
     content-length: 196
     content-type: text/html; charset=iso-8859-1
@@ -142,7 +174,7 @@
     &lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.1 200 OK
-    date: Fri, 09 May 2025 03:14:03 GMT
+    date: Thu, 15 May 2025 03:54:53 GMT
     server: Apache
     upgrade: h2,h2c
     connection: Upgrade
@@ -168,11 +200,11 @@
     &lt;link rel="stylesheet" href="assets/styles.b435e6387cdd17c0.css" media="all" onloa
   HTTPOptions: 
     HTTP/1.1 200 OK
-    date: Fri, 09 May 2025 03:14:03 GMT
+    date: Thu, 15 May 2025 03:54:53 GMT
     server: Apache
     upgrade: h2,h2c
     connection: Upgrade
-    allow: OPTIONS,HEAD,GET,POST
+    allow: POST,OPTIONS,HEAD,GET
     content-length: 0
     content-type: text/html
     strict-transport-security: max-age=16000000;includeSubDomains;
@@ -197,7 +229,18 @@
 <th>CPE</th>
 <th>Extra info</th>
 </tr></thead>
-<tbody><tr>
+<tbody>
+<tr>
+<td>31.193.53.253 - www.france-renov.gouv.fr</td>
+<td>80</td>
+<td>tcp</td>
+<td>http</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>31.193.53.253 - www.france-renov.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
@@ -206,7 +249,8 @@
 <td></td>
 <td></td>
 <td></td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 <script>
             $(document).ready(function() {
