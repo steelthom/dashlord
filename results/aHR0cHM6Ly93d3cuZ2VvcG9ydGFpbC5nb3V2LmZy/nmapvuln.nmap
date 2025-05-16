@@ -1,158 +1,115 @@
-# Nmap 7.92 scan initiated Fri May  9 03:31:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.geoportail.gouv.fr
-Nmap scan report for www.geoportail.gouv.fr (178.33.22.54)
-Host is up (0.14s latency).
-rDNS record for 178.33.22.54: ip54.ip-178-33-22.eu
+# Nmap 7.92 scan initiated Fri May 16 03:16:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.geoportail.gouv.fr
+Nmap scan report for www.geoportail.gouv.fr (87.98.187.73)
+Host is up (0.15s latency).
+rDNS record for 87.98.187.73: ip73.ip-87-98-187.eu
 Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE   VERSION
+PORT    STATE SERVICE        VERSION
 80/tcp  open  http
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.0 503 Service Unavailable
-|     cache-control: no-cache
-|     content-type: text/html
-|     <!DOCTYPE html>
-|     <html><head><meta charset="utf-8"><title>Website not found</title>
-|     <link href="https://eu-west-2.cloudprotector.com/console/resources/css/error_page.css" rel="stylesheet" type="text/css"/>
-|     </head><body>
-|     <div id="top"></div>
-|     <div id="content"><div id="content2"><div id="logo"></div>
-|     <h2>The website you are trying to access does not exist.</h2>
-|     Possible reasons:
-|     <ul>
-|     <li>The website is new and has not been deployed yet.</li>
-|     <li>The website has been deleted.</li>
-|     <li>You are not using the server name of the website.</li>
-|     <li>You are using SSL (HTTPS) but the website has no SSL certificate configured.</li>
-|     <li>You are using SSL (HTTPS) but your browser is too old or does not support SNI.</li>
-|     </ul>
-|     </div></div>
-|     <div id="footer"><div id="ftleft"><a href="https://www
-|   NULL: 
-|     HTTP/1.1 408 Request Time-out
-|     Content-length: 110
-|     Cache-Control: no-cache
-|     Connection: close
-|     Content-Type: text/html
-|     <html><body><h1>408 Request Time-out</h1>
-|     Your browser didn't send a complete request in time.
-|_    </body></html>
-443/tcp open  ssl/https
-| fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.0 503 Service Unavailable
-|     cache-control: no-cache
-|     content-type: text/html
-|     <!DOCTYPE html>
-|     <html><head><meta charset="utf-8"><title>Website not found</title>
-|     <link href="https://eu-west-2.cloudprotector.com/console/resources/css/error_page.css" rel="stylesheet" type="text/css"/>
-|     </head><body>
-|     <div id="top"></div>
-|     <div id="content"><div id="content2"><div id="logo"></div>
-|     <h2>The website you are trying to access does not exist.</h2>
-|     Possible reasons:
-|     <ul>
-|     <li>The website is new and has not been deployed yet.</li>
-|     <li>The website has been deleted.</li>
-|     <li>You are not using the server name of the website.</li>
-|     <li>You are using SSL (HTTPS) but the website has no SSL certificate configured.</li>
-|     <li>You are using SSL (HTTPS) but your browser is too old or does not support SNI.</li>
-|     </ul>
-|     </div></div>
-|     <div id="footer"><div id="ftleft"><a href="https://www
-|   NULL: 
-|     HTTP/1.1 408 Request Time-out
-|     Content-length: 110
-|     Cache-Control: no-cache
-|     Connection: close
-|     Content-Type: text/html
-|     <html><body><h1>408 Request Time-out</h1>
-|     Your browser didn't send a complete request in time.
-|_    </body></html>
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=5/9%Time=681D772C%P=x86_64-alpine-linux-musl%r(
-SF:NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x20
-SF:110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Ty
-SF:pe:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1>
-SF:\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\x
-SF:20time\.\n</body></html>\n")%r(GetRequest,54C,"HTTP/1\.0\x20503\x20Serv
-SF:ice\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-type:\x20te
-SF:xt/html\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head><meta\x20charset=\"utf
-SF:-8\"><title>Website\x20not\x20found</title>\r\n<link\x20href=\"https://
-SF:eu-west-2\.cloudprotector\.com/console/resources/css/error_page\.css\"\
-SF:x20rel=\"stylesheet\"\x20type=\"text/css\"/>\r\n</head><body>\r\n<div\x
-SF:20id=\"top\"></div>\r\n<div\x20id=\"content\"><div\x20id=\"content2\"><
-SF:div\x20id=\"logo\"></div>\r\n<h2>The\x20website\x20you\x20are\x20trying
-SF:\x20to\x20access\x20does\x20not\x20exist\.</h2>\r\nPossible\x20reasons:
-SF:\r\n<ul>\r\n\x20\x20<li>The\x20website\x20is\x20new\x20and\x20has\x20no
-SF:t\x20been\x20deployed\x20yet\.</li>\r\n\x20\x20<li>The\x20website\x20ha
-SF:s\x20been\x20deleted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20using\x
-SF:20the\x20server\x20name\x20of\x20the\x20website\.</li>\r\n\x20\x20<li>Y
-SF:ou\x20are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\x20has\
-SF:x20no\x20SSL\x20certificate\x20configured\.</li>\r\n\x20\x20<li>You\x20
-SF:are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is\x20too
-SF:\x20old\x20or\x20does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r\n</div
-SF:></div>\r\n<div\x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20href=\"htt
-SF:ps://www")%r(HTTPOptions,54C,"HTTP/1\.0\x20503\x20Service\x20Unavailabl
-SF:e\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<!
-SF:DOCTYPE\x20html>\r\n<html><head><meta\x20charset=\"utf-8\"><title>Websi
-SF:te\x20not\x20found</title>\r\n<link\x20href=\"https://eu-west-2\.cloudp
-SF:rotector\.com/console/resources/css/error_page\.css\"\x20rel=\"styleshe
-SF:et\"\x20type=\"text/css\"/>\r\n</head><body>\r\n<div\x20id=\"top\"></di
-SF:v>\r\n<div\x20id=\"content\"><div\x20id=\"content2\"><div\x20id=\"logo\
-SF:"></div>\r\n<h2>The\x20website\x20you\x20are\x20trying\x20to\x20access\
-SF:x20does\x20not\x20exist\.</h2>\r\nPossible\x20reasons:\r\n<ul>\r\n\x20\
-SF:x20<li>The\x20website\x20is\x20new\x20and\x20has\x20not\x20been\x20depl
-SF:oyed\x20yet\.</li>\r\n\x20\x20<li>The\x20website\x20has\x20been\x20dele
-SF:ted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20using\x20the\x20server\x
-SF:20name\x20of\x20the\x20website\.</li>\r\n\x20\x20<li>You\x20are\x20usin
-SF:g\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\x20has\x20no\x20SSL\x20c
-SF:ertificate\x20configured\.</li>\r\n\x20\x20<li>You\x20are\x20using\x20S
-SF:SL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is\x20too\x20old\x20or\x20
-SF:does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r\n</div></div>\r\n<div\x
-SF:20id=\"footer\"><div\x20id=\"ftleft\"><a\x20href=\"https://www");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/9%Time=681D7732%P=x86_64-alpine-linux-
-SF:musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-leng
-SF:th:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCon
-SF:tent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-o
-SF:ut</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\
-SF:x20in\x20time\.\n</body></html>\n")%r(GetRequest,54C,"HTTP/1\.0\x20503\
-SF:x20Service\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-type
-SF::\x20text/html\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head><meta\x20charse
-SF:t=\"utf-8\"><title>Website\x20not\x20found</title>\r\n<link\x20href=\"h
-SF:ttps://eu-west-2\.cloudprotector\.com/console/resources/css/error_page\
-SF:.css\"\x20rel=\"stylesheet\"\x20type=\"text/css\"/>\r\n</head><body>\r\
-SF:n<div\x20id=\"top\"></div>\r\n<div\x20id=\"content\"><div\x20id=\"conte
-SF:nt2\"><div\x20id=\"logo\"></div>\r\n<h2>The\x20website\x20you\x20are\x2
-SF:0trying\x20to\x20access\x20does\x20not\x20exist\.</h2>\r\nPossible\x20r
-SF:easons:\r\n<ul>\r\n\x20\x20<li>The\x20website\x20is\x20new\x20and\x20ha
-SF:s\x20not\x20been\x20deployed\x20yet\.</li>\r\n\x20\x20<li>The\x20websit
-SF:e\x20has\x20been\x20deleted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20
-SF:using\x20the\x20server\x20name\x20of\x20the\x20website\.</li>\r\n\x20\x
-SF:20<li>You\x20are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\
-SF:x20has\x20no\x20SSL\x20certificate\x20configured\.</li>\r\n\x20\x20<li>
-SF:You\x20are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is
-SF:\x20too\x20old\x20or\x20does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r
-SF:\n</div></div>\r\n<div\x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20hre
-SF:f=\"https://www")%r(HTTPOptions,54C,"HTTP/1\.0\x20503\x20Service\x20Una
-SF:vailable\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\
-SF:n\r\n<!DOCTYPE\x20html>\r\n<html><head><meta\x20charset=\"utf-8\"><titl
-SF:e>Website\x20not\x20found</title>\r\n<link\x20href=\"https://eu-west-2\
-SF:.cloudprotector\.com/console/resources/css/error_page\.css\"\x20rel=\"s
-SF:tylesheet\"\x20type=\"text/css\"/>\r\n</head><body>\r\n<div\x20id=\"top
-SF:\"></div>\r\n<div\x20id=\"content\"><div\x20id=\"content2\"><div\x20id=
-SF:\"logo\"></div>\r\n<h2>The\x20website\x20you\x20are\x20trying\x20to\x20
-SF:access\x20does\x20not\x20exist\.</h2>\r\nPossible\x20reasons:\r\n<ul>\r
-SF:\n\x20\x20<li>The\x20website\x20is\x20new\x20and\x20has\x20not\x20been\
-SF:x20deployed\x20yet\.</li>\r\n\x20\x20<li>The\x20website\x20has\x20been\
-SF:x20deleted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20using\x20the\x20s
-SF:erver\x20name\x20of\x20the\x20website\.</li>\r\n\x20\x20<li>You\x20are\
-SF:x20using\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\x20has\x20no\x20S
-SF:SL\x20certificate\x20configured\.</li>\r\n\x20\x20<li>You\x20are\x20usi
-SF:ng\x20SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is\x20too\x20old\x2
-SF:0or\x20does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r\n</div></div>\r\
-SF:n<div\x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20href=\"https://www");
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:46 GMT
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:45 GMT
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:41 GMT
+|     connection: close
+|     Upgrade Required
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:42 GMT
+|     connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:36 GMT
+|     connection: close
+|     Upgrade Required
+|   HTTPOptions: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:37 GMT
+|     connection: close
+|     Upgrade Required
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:48 GMT
+|     connection: close
+|     Request
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:44 GMT
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:38 GMT
+|     connection: close
+|     Request
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 16 May 2025 03:16:40 GMT
+|     connection: close
+|_    Request
+443/tcp open  ssl/tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=5/16%Time=6826AE15%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\ncontent-leng
+SF:th:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Fri,\x2016\x20May\
+SF:x202025\x2003:16:36\x20GMT\r\nconnection:\x20close\r\n\r\nUpgrade\x20Re
+SF:quired")%r(HTTPOptions,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\nc
+SF:ontent-length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Fri,\x2
+SF:016\x20May\x202025\x2003:16:37\x20GMT\r\nconnection:\x20close\r\n\r\nUp
+SF:grade\x20Required")%r(RTSPRequest,8D,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20F
+SF:ri,\x2016\x20May\x202025\x2003:16:38\x20GMT\r\nconnection:\x20close\r\n
+SF:\r\nBad\x20Request")%r(X11Probe,8D,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Fri
+SF:,\x2016\x20May\x202025\x2003:16:40\x20GMT\r\nconnection:\x20close\r\n\r
+SF:\nBad\x20Request")%r(FourOhFourRequest,97,"HTTP/1\.1\x20426\x20Upgrade\
+SF:x20Required\r\ncontent-length:\x2016\r\ncontent-type:\x20text/plain\r\n
+SF:date:\x20Fri,\x2016\x20May\x202025\x2003:16:41\x20GMT\r\nconnection:\x2
+SF:0close\r\n\r\nUpgrade\x20Required")%r(GenericLines,8D,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/pl
+SF:ain\r\ndate:\x20Fri,\x2016\x20May\x202025\x2003:16:42\x20GMT\r\nconnect
+SF:ion:\x20close\r\n\r\nBad\x20Request")%r(RPCCheck,8D,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plai
+SF:n\r\ndate:\x20Fri,\x2016\x20May\x202025\x2003:16:44\x20GMT\r\nconnectio
+SF:n:\x20close\r\n\r\nBad\x20Request")%r(DNSVersionBindReqTCP,8D,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x2
+SF:0text/plain\r\ndate:\x20Fri,\x2016\x20May\x202025\x2003:16:45\x20GMT\r\
+SF:nconnection:\x20close\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,8D,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent
+SF:-type:\x20text/plain\r\ndate:\x20Fri,\x2016\x20May\x202025\x2003:16:46\
+SF:x20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(Help,8D,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:
+SF:\x20text/plain\r\ndate:\x20Fri,\x2016\x20May\x202025\x2003:16:48\x20GMT
+SF:\r\nconnection:\x20close\r\n\r\nBad\x20Request");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri May  9 03:32:33 2025 -- 1 IP address (1 host up) scanned in 53.04 seconds
+# Nmap done at Fri May 16 03:17:31 2025 -- 1 IP address (1 host up) scanned in 69.56 seconds
