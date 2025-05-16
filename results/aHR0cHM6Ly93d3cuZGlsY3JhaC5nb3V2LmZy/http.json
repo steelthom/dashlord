@@ -1,33 +1,35 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C+",
+    "grade": "C",
     "error": null,
-    "score": 60,
+    "score": 50,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Fri, 09 May 2025 03:58:41 GMT",
+      "date": "Fri, 16 May 2025 03:46:58 GMT",
       "content-type": "text/html; charset=UTF-8",
       "connection": "close",
       "cache-control": "max-age=600, public",
       "x-drupal-dynamic-cache": "HIT",
       "content-language": "fr",
-      "x-content-type-options": "nosniff",
+      "x-content-type-options": "nosniff, nosniff",
       "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
       "vary": "Cookie",
       "x-drupal-cache": "HIT",
-      "x-xss-protection": "1; mode=block",
-      "last-modified": "Thu, 08 May 2025 05:03:54 GMT",
-      "etag": "W/\"1746680634\"",
-      "x-varnish": "9718543",
-      "age": "0",
-      "x-cache": "MISS",
-      "x-cache-hits": "0",
-      "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; img-src 'self' data: https: http:; font-src 'self' data:; frame-ancestors 'self' https://www.dilcrah.gouv.fr;",
+      "x-xss-protection": "1; mode=block, 1; mode=block",
+      "last-modified": "Thu, 15 May 2025 05:04:41 GMT",
+      "etag": "W/\"1747285481\"",
+      "x-varnish": "17689171 17689103",
+      "age": "30",
+      "x-cache": "HIT",
+      "x-cache-hits": "4",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "content-security-policy": "base-uri 'self'; connect-src 'self' https://www.data.gouv.fr; default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://static.data.gouv.fr; frame-src 'self' https://www.youtube.com; img-src 'self' data: https://i.ytimg.com https://static.data.gouv.fr; manifest-src 'self'; media-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr; object-src 'none'; script-src 'report-sample' 'self' https://static.data.gouv.fr/static/oembed.js; style-src 'report-sample' 'self' https://static.data.gouv.fr; worker-src 'none';, base-uri 'self'; connect-src 'self' https://www.data.gouv.fr; default-src 'self'; font-src 'self' data: https://static.data.gouv.fr; frame-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr https://www.youtube-nocookie.com; img-src 'self' data: https://i.ytimg.com https://static.data.gouv.fr https://www.documentation-administrative.gouv.fr; manifest-src 'self'; media-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr; object-src 'none';  script-src 'report-sample' 'self' https://static.data.gouv.fr/static/oembed.js; style-src 'report-sample' 'self' https://static.data.gouv.fr; worker-src 'none';",
+      "referrer-policy": "no-referrer",
       "transfer-encoding": "chunked"
     }
   },
@@ -35,44 +37,12 @@
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "default-src": [
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "https:"
-        ],
-        "img-src": [
-          "'self'",
-          "data:",
-          "http:",
-          "https:"
-        ],
-        "font-src": [
-          "'self'",
-          "data:"
-        ],
-        "frame-ancestors": [
-          "'self'",
-          "https://www.dilcrah.gouv.fr"
-        ]
-      },
-      "http": true,
+      "result": "csp-header-invalid",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": true,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": true,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
+      "policy": null,
       "numPolicies": 1
     },
     "cookies": {
@@ -103,21 +73,21 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "no-referrer",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 63072000,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
@@ -129,16 +99,16 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-header-invalid",
+      "scoreModifier": -5,
+      "data": "nosniff, nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-implemented-via-csp",
-      "scoreModifier": 5,
+      "pass": false,
+      "result": "x-frame-options-header-invalid",
+      "scoreModifier": -20,
       "data": "SAMEORIGIN, SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
