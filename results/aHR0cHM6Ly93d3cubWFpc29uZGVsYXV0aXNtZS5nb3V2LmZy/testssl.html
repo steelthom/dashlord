@@ -19,9 +19,9 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on fv-az1721-735:/home/testssl/bin/openssl.Linux.x86_64
+  on pkrvmf6wy0o8zjz:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-05-11 03:16:43        --&gt;&gt; 94.23.123.122:443 (www.maisondelautisme.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-05-17 03:34:55        --&gt;&gt; 94.23.123.122:443 (www.maisondelautisme.gouv.fr) &lt;&lt;--</span>
 
  rDNS (94.23.123.122):   ip122.ip-94-23-123.eu.
  Service detected:       HTTP
@@ -62,9 +62,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  - 
 <u>TLSv1.2</u> (server order)
 <u>TLSv1.3</u>
-<span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
+<span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;font-weight:bold;">yes (OK)</span> -- TLS 1.3 and below
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
@@ -102,7 +102,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=AA7FD41618E0D5ECE5901CB3FA1F272EBD8B2155BBB92511C73EC659D6F8E19C
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">76 &gt;= 30 days</span> (2025-04-28 01:50 --&gt; 2025-07-27 01:50)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">70 &gt;= 30 days</span> (2025-04-28 01:50 --&gt; 2025-07-27 01:50)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://e5.c.lencr.org/90.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://e5.o.lencr.org
@@ -162,11 +162,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  Android 10.0 (native)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Android 11/12 (native)       TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Android 13/14 (native)       TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Android 15 (native)          TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Android 15 (native)          TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">X25519MLKEM768</span>
  Chrome 101 (Win 10)          TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Chromium 137 (Win 11)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Chromium 137 (Win 11)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">X25519MLKEM768</span>
  Firefox 100 (Win 10)         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Firefox 137 (Win 11)         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Firefox 137 (Win 11)         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">X25519MLKEM768</span>
  IE 8 Win 7                   No connection
  IE 11 Win 7                  TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  IE 11 Win 8.1                TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
@@ -174,7 +174,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  IE 11 Win 10                 TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Edge 15 Win 10               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Edge 101 Win 10 21H2         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Edge 133 Win 11 23H2         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Edge 133 Win 11 23H2         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">X25519MLKEM768</span>
  Safari 18.4 (iOS 18.4)       TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Safari 15.4 (macOS 12.3.1)   TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Safari 18.4 (macOS 15.4)     TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
@@ -184,11 +184,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  Java 17.0.3 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Java 21.0.6 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  go 1.17.8                    TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- LibreSSL 3.3.6 (macOS)       TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ LibreSSL 3.3.6 (macOS)       TLSv1.3   TLS_CHACHA20_POLY1305_SHA256      <span style="color:#008817;">253 bit ECDH (X25519)</span>
  OpenSSL 1.0.2e               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  OpenSSL 1.1.1d (Debian)      TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  OpenSSL 3.0.15 (Debian)      TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- OpenSSL 3.5.0 (git)          TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ OpenSSL 3.5.0 (git)          TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">X25519MLKEM768</span>
  Apple Mail (16.0)            TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Thunderbird (91.9)           TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
@@ -204,7 +204,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2025-05-11 03:17:43 [  62s] --&gt;&gt; 94.23.123.122:443 (www.maisondelautisme.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-05-17 03:36:30 [  97s] --&gt;&gt; 94.23.123.122:443 (www.maisondelautisme.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
