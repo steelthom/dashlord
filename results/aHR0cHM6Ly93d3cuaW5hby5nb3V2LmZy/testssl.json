@@ -346,7 +346,7 @@
               "ip"           : "www.inao.gouv.fr/135.125.25.149",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "247 >= 60 days"
+              "finding"      : "240 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -499,15 +499,184 @@
               "id"           : "HTTP_status_code",
               "ip"           : "www.inao.gouv.fr/135.125.25.149",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header request failed"
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "HTTP_clock_skew",
               "ip"           : "www.inao.gouv.fr/135.125.25.149",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header was repeatedly zero."
+              "severity"     : "INFO",
+              "finding"      : "-1780 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1747450832"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Apache"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "X-Powered-By: https://www.rdmc.fr"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "default-src data: blob: 'unsafe-inline' 'unsafe-eval'; script-src * data: blob: 'unsafe-inline' 'unsafe-eval'; connect-src * data: blob: 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src * data: blob: ; style-src * data: blob: 'unsafe-inline'; font-src * data: blob: 'unsafe-inline'"
+          }
+,         {
+              "id"           : "Expect-CT",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "enforce, max-age=300"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "geolocation=(),midi=(),sync-xhr=(self),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()"
+          }
+,         {
+              "id"           : "Cross-Origin-Opener-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Cross-Origin-Resource-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "cross-origin"
+          }
+,         {
+              "id"           : "Cross-Origin-Embedder-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "cross-origin"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block; report='https://rdmc.report-uri.com/r/d/xss/enforce'"
+          }
+,         {
+              "id"           : "Access-Control-Allow-Origin",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "*"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "geolocation=(),midi=(),sync-xhr=(self),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "strict-origin-when-cross-origin"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control_multiple",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple Cache-Control headers. Using first header: must-revalidate, no-cache, private"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "must-revalidate, no-cache, private"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.inao.gouv.fr/135.125.25.149",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "heartbleed",
@@ -1006,6 +1175,6 @@
               "ip"           : "www.inao.gouv.fr/135.125.25.149",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "110"
+              "finding"      : "109"
           }
 ]
