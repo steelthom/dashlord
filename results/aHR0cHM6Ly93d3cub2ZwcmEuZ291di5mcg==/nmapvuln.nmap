@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Sun May 11 03:37:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ofpra.gouv.fr
+# Nmap 7.92 scan initiated Sun May 18 03:35:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ofpra.gouv.fr
 Nmap scan report for www.ofpra.gouv.fr (46.18.193.152)
-Host is up (0.083s latency).
+Host is up (0.15s latency).
 rDNS record for 46.18.193.152: ds-193-152.dri-services.net
 Not shown: 996 closed tcp ports (reset)
 PORT    STATE SERVICE   VERSION
 25/tcp  open  smtp      Postfix smtpd
 80/tcp  open  http
 | fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, SSLSessionReq, X11Probe: 
 |     HTTP/1.1 400 Bad request
 |     content-length: 90
 |     cache-control: no-cache
@@ -25,8 +25,14 @@ PORT    STATE SERVICE   VERSION
 |     HTTP/1.1 308 Permanent Redirect
 |     content-length: 0
 |     location: https:///
+|     connection: close
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
 |_    connection: close
-443/tcp open  ssl/https
+443/tcp open  ssl/https Apache
 | fingerprint-strings: 
 |   FourOhFourRequest, GetRequest, HTTPOptions: 
 |     HTTP/1.1 503 Not Found
@@ -53,10 +59,11 @@ PORT    STATE SERVICE   VERSION
 |     <html><body><h1>400 Bad request</h1>
 |     Your browser sent an invalid request.
 |_    </body></html>
+|_http-server-header: Apache
 587/tcp open  smtp      Postfix smtpd
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=5/11%Time=68201B87%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=5/18%Time=682955A2%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\ncontent-le
 SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
 SF:r(HTTPOptions,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\ncontent-
@@ -69,25 +76,28 @@ SF:connection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\
 SF:nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\
 SF:n")%r(FourOhFourRequest,81,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r
 SF:\ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Ei
-SF:ty\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.
+SF:ty\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,75,"HTTP/1\.
 SF:1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x
 SF:20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\
-SF:n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x2
-SF:0an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,
-SF:CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncach
-SF:e-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20
-SF:close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browse
-SF:r\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatus
-SF:RequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2
-SF:090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconn
-SF:ection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYou
-SF:r\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%
-SF:r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\
-SF:r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnecti
-SF:on:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x2
-SF:0browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+SF:n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nco
+SF:ntent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20t
+SF:ext/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20r
+SF:equest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</b
+SF:ody></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20re
+SF:quest\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent
+SF:-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\
+SF:x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20req
+SF:uest\.\n</body></html>\n")%r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20reques
+SF:t\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-typ
+SF:e:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20B
+SF:ad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request
+SF:\.\n</body></html>\n")%r(SSLSessionReq,CF,"HTTP/1\.1\x20400\x20Bad\x20r
+SF:equest\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nconten
+SF:t-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400
+SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
+SF:quest\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/11%Time=68201B8E%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/18%Time=682955A9%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,18C,"HTTP/1\.1\x20503\x20Not\x20Found\r\ncache-contr
 SF:ol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r
 SF:\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\">\n\x20\x20<head>\n\x20\x
@@ -120,4 +130,4 @@ SF:valid\x20request\.\n</body></html>\n");
 Service Info: Host:  dvs17420.eva.produhost.net
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun May 11 03:38:15 2025 -- 1 IP address (1 host up) scanned in 39.74 seconds
+# Nmap done at Sun May 18 03:36:38 2025 -- 1 IP address (1 host up) scanned in 44.91 seconds
