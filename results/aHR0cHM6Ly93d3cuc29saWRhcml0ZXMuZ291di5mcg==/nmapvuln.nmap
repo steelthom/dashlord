@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon May 12 03:43:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.solidarites.gouv.fr
+# Nmap 7.92 scan initiated Mon May 19 03:48:02 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.solidarites.gouv.fr
 Nmap scan report for www.solidarites.gouv.fr (185.194.82.206)
-Host is up (0.081s latency).
+Host is up (0.098s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
@@ -9,20 +9,9 @@ PORT    STATE  SERVICE    VERSION
 443/tcp open   ssl/https
 |_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.1 200 OK
-|     Cache-Control: no-store, must-revalidate, no-cache
-|     Pragma: no-cache
-|     Connection: close
-|     Content-Type: text/html
-|     Content-Length: 245
-|     X-Frame-Options: SAMEORIGIN
-|     X-XSS-Protection: 1; mode=block
-|     X-Content-Type-Options: nosniff
-|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <14185738778574629220><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
-|   HTTPOptions: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Mon, 12 May 2025 03:44:17 GMT
+|     Date: Mon, 19 May 2025 03:48:22 GMT
 |     Access-Control-Allow-Methods: GET, POST, OPTIONS
 |     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
 |     Access-Control-Allow-Credentials: true
@@ -40,44 +29,39 @@ PORT    STATE  SERVICE    VERSION
 |     <h1>Bad Request</h1>
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
-|     </body></html>
-|   RTSPRequest, SIPOptions: 
-|     HTTP/1.1 400 Bad Request
-|     Connection: close
-|_    Set-Cookie: BIGipServerpool-handicap-v2.cegedim.cloud-HTTP=3485751562.20480.0000; path=/; Httponly; Secure
+|_    </body></html>
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/12%Time=68216E91%P=x86_64-alpine-linux
-SF:-musl%r(HTTPOptions,31E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Mon,\x2012\x20May\x202025\x2003:44:17\x20GMT\r\nAccess-Control-Allow-M
-SF:ethods:\x20GET,\x20POST,\x20OPTIONS\r\nAccess-Control-Allow-Headers:\x2
-SF:0Access-Control-Allow-Headers,\x20Authorization\x20Origin,Accept,\x20X-
-SF:Requested-With,\x20Content-Type,\x20Access-Control-Request-Method,\x20A
-SF:ccess-Control-Request-Headers\r\nAccess-Control-Allow-Credentials:\x20t
-SF:rue\r\nContent-Length:\x20226\r\nContent-Type:\x20text/html;\x20charset
-SF:=iso-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nC
-SF:onnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-handicap-v2\.cege
-SF:dim\.cloud-HTTP=3485751562\.20480\.0000;\x20path=/;\x20Httponly;\x20Sec
-SF:ure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.
-SF:0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><b
-SF:ody>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20reque
-SF:st\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n
-SF:</p>\n</body></html>\n")%r(FourOhFourRequest,1EE,"HTTP/1\.1\x20200\x20O
-SF:K\r\nCache-Control:\x20no-store,\x20must-revalidate,\x20no-cache\r\nPra
-SF:gma:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\
-SF:r\nContent-Length:\x20245\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Pr
-SF:otection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\n
-SF:\r\n<html><head><title>Request\x20Rejected</title></head><body>The\x20r
-SF:equested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20yo
-SF:ur\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20<141857387
-SF:78574629220><br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20
-SF:Back\]</body></html>")%r(RTSPRequest,9B,"HTTP/1\.1\x20400\x20Bad\x20Req
-SF:uest\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-handicap
-SF:-v2\.cegedim\.cloud-HTTP=3485751562\.20480\.0000;\x20path=/;\x20Httponl
-SF:y;\x20Secure\r\n\r\n")%r(SIPOptions,9B,"HTTP/1\.1\x20400\x20Bad\x20Requ
-SF:est\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-handicap-
-SF:v2\.cegedim\.cloud-HTTP=3485751562\.20480\.0000;\x20path=/;\x20Httponly
-SF:;\x20Secure\r\n\r\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/19%Time=682AAA06%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,31E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Mon,\x2019\x20May\x202025\x2003:48:22\x20GMT\r\nAccess-Control-Allow-Me
+SF:thods:\x20GET,\x20POST,\x20OPTIONS\r\nAccess-Control-Allow-Headers:\x20
+SF:Access-Control-Allow-Headers,\x20Authorization\x20Origin,Accept,\x20X-R
+SF:equested-With,\x20Content-Type,\x20Access-Control-Request-Method,\x20Ac
+SF:cess-Control-Request-Headers\r\nAccess-Control-Allow-Credentials:\x20tr
+SF:ue\r\nContent-Length:\x20226\r\nContent-Type:\x20text/html;\x20charset=
+SF:iso-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nCo
+SF:nnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-handicap-v2\.ceged
+SF:im\.cloud-HTTP=3485751562\.20480\.0000;\x20path=/;\x20Httponly;\x20Secu
+SF:re\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0
+SF://EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><bo
+SF:dy>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20reques
+SF:t\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n<
+SF:/p>\n</body></html>\n")%r(HTTPOptions,31E,"HTTP/1\.1\x20400\x20Bad\x20R
+SF:equest\r\nDate:\x20Mon,\x2019\x20May\x202025\x2003:48:22\x20GMT\r\nAcce
+SF:ss-Control-Allow-Methods:\x20GET,\x20POST,\x20OPTIONS\r\nAccess-Control
+SF:-Allow-Headers:\x20Access-Control-Allow-Headers,\x20Authorization\x20Or
+SF:igin,Accept,\x20X-Requested-With,\x20Content-Type,\x20Access-Control-Re
+SF:quest-Method,\x20Access-Control-Request-Headers\r\nAccess-Control-Allow
+SF:-Credentials:\x20true\r\nContent-Length:\x20226\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=iso-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cac
+SF:he-Hits:\x200\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool
+SF:-handicap-v2\.cegedim\.cloud-HTTP=3485751562\.20480\.0000;\x20path=/;\x
+SF:20Httponly;\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
+SF:DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request<
+SF:/title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20
+SF:sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20under
+SF:stand\.<br\x20/>\n</p>\n</body></html>\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon May 12 03:46:31 2025 -- 1 IP address (1 host up) scanned in 158.77 seconds
+# Nmap done at Mon May 19 03:50:38 2025 -- 1 IP address (1 host up) scanned in 156.50 seconds
