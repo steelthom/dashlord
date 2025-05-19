@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Tue May 13 03:21:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
+# Nmap 7.92 scan initiated Mon May 19 03:39:37 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
 Nmap scan report for www.vigipirate.gouv.fr (87.98.148.216)
 Host is up (0.086s latency).
 rDNS record for 87.98.148.216: vigipirate.gouv.fr
@@ -7,7 +7,6 @@ PORT     STATE SERVICE  VERSION
 22/tcp   open  ssh      OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:7.4p1: 
-|     	2C119FFA-ECE0-5E14-A4A4-354A2C38071A	10.0	https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A	*EXPLOIT*
 |     	CVE-2023-38408	9.8	https://vulners.com/cve/CVE-2023-38408
 |     	B8190CDB-3EB9-5631-9828-8064A1575B23	9.8	https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23	*EXPLOIT*
 |     	8FC9C5AB-3968-5F3C-825E-E8DB5379A623	9.8	https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623	*EXPLOIT*
@@ -22,6 +21,7 @@ PORT     STATE SERVICE  VERSION
 |     	1337DAY-ID-26576	7.5	https://vulners.com/zdt/1337DAY-ID-26576	*EXPLOIT*
 |     	CVE-2021-41617	7.0	https://vulners.com/cve/CVE-2021-41617
 |     	95499236-C9FE-56A6-9D7D-E943A24B633A	6.9	https://vulners.com/githubexploit/95499236-C9FE-56A6-9D7D-E943A24B633A	*EXPLOIT*
+|     	2C119FFA-ECE0-5E14-A4A4-354A2C38071A	6.9	https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A	*EXPLOIT*
 |     	PACKETSTORM:189283	6.8	https://vulners.com/packetstorm/PACKETSTORM:189283	*EXPLOIT*
 |     	F79E574D-30C8-5C52-A801-66FFA0610BAA	6.8	https://vulners.com/githubexploit/F79E574D-30C8-5C52-A801-66FFA0610BAA	*EXPLOIT*
 |     	EDB-ID:46516	6.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
@@ -65,12 +65,12 @@ PORT     STATE SERVICE  VERSION
 3306/tcp open  mysql?
 | fingerprint-strings: 
 |   NULL: 
-|_    Host '20.42.51.100' is not allowed to connect to this MariaDB server
+|_    Host '172.191.226.248' is not allowed to connect to this MariaDB server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3306-TCP:V=7.92%I=7%D=5/13%Time=6822BAA2%P=x86_64-alpine-linux-musl
-SF:%r(NULL,4B,"G\0\0\x01\xffj\x04Host\x20'20\.42\.51\.100'\x20is\x20not\x2
-SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+SF-Port3306-TCP:V=7.92%I=7%D=5/19%Time=682AA7FB%P=x86_64-alpine-linux-musl
+SF:%r(NULL,4E,"J\0\0\x01\xffj\x04Host\x20'172\.191\.226\.248'\x20is\x20not
+SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue May 13 03:21:20 2025 -- 1 IP address (1 host up) scanned in 16.07 seconds
+# Nmap done at Mon May 19 03:39:53 2025 -- 1 IP address (1 host up) scanned in 16.02 seconds
