@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon May 12 03:32:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.passeport.ants.gouv.fr
+# Nmap 7.92 scan initiated Mon May 19 03:24:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.passeport.ants.gouv.fr
 Nmap scan report for www.passeport.ants.gouv.fr (66.22.33.164)
-Host is up (0.11s latency).
+Host is up (0.10s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE  VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE  VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Mon, 12 May 2025 03:33:19 GMT
+|     Date: Mon, 19 May 2025 03:25:01 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -27,7 +27,7 @@ PORT    STATE    SERVICE  VERSION
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: rdwr
-|     Date: Mon, 12 May 2025 03:33:18 GMT
+|     Date: Mon, 19 May 2025 03:25:00 GMT
 |     Content-Type: text/html
 |     Content-Length: 161
 |     Connection: close
@@ -42,7 +42,7 @@ PORT    STATE    SERVICE  VERSION
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Mon, 12 May 2025 03:33:18 GMT
+|     Date: Mon, 19 May 2025 03:25:00 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -56,7 +56,7 @@ PORT    STATE    SERVICE  VERSION
 |   X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Mon, 12 May 2025 03:33:19 GMT
+|     Date: Mon, 19 May 2025 03:25:01 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -70,39 +70,39 @@ PORT    STATE    SERVICE  VERSION
 161/tcp filtered snmp
 179/tcp filtered bgp
 443/tcp open     ssl/http nginx 1.27.0
-|_http-server-header: rdwr
 | vulners: 
 |   nginx 1.27.0: 
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: rdwr
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=5/12%Time=68216BFE%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=5/19%Time=682AA48C%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,168,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:33:18\x20GMT\r\nConte
+SF:0rdwr\r\nDate:\x20Mon,\x2019\x20May\x202025\x2003:25:00\x20GMT\r\nConte
 SF:nt-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close
 SF:\r\nLocation:\x20https://passeport\.ants-2\.gouv\.fr:443/\r\n\r\n<html>
 SF:\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r
 SF:\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>
 SF:rdwr</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,168,"HTTP/1\.1\
 SF:x20301\x20Moved\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x201
-SF:2\x20May\x202025\x2003:33:18\x20GMT\r\nContent-Type:\x20text/html\r\nCo
+SF:9\x20May\x202025\x2003:25:00\x20GMT\r\nContent-Type:\x20text/html\r\nCo
 SF:ntent-Length:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://pa
 SF:sseport\.ants-2\.gouv\.fr:443/\r\n\r\n<html>\r\n<head><title>301\x20Mov
 SF:ed\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\
 SF:x20Permanently</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\
 SF:n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
-SF:nServer:\x20rdwr\r\nDate:\x20Mon,\x2012\x20May\x202025\x2003:33:18\x20G
+SF:nServer:\x20rdwr\r\nDate:\x20Mon,\x2019\x20May\x202025\x2003:25:00\x20G
 SF:MT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnectio
 SF:n:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title>
 SF:</head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
 SF:n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"
 SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Mon,\
-SF:x2012\x20May\x202025\x2003:33:19\x20GMT\r\nContent-Type:\x20text/html\r
+SF:x2019\x20May\x202025\x2003:25:01\x20GMT\r\nContent-Type:\x20text/html\r
 SF:\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<head
 SF:><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>4
 SF:00\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</bo
 SF:dy>\r\n</html>\r\n")%r(FourOhFourRequest,18B,"HTTP/1\.1\x20301\x20Moved
-SF:\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2012\x20May\x20202
-SF:5\x2003:33:19\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2019\x20May\x20202
+SF:5\x2003:25:01\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
 SF:20161\r\nConnection:\x20close\r\nLocation:\x20https://passeport\.ants-2
 SF:\.gouv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<h
 SF:ead><title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<cen
@@ -110,4 +110,4 @@ SF:ter><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>rdwr</
 SF:center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon May 12 03:33:32 2025 -- 1 IP address (1 host up) scanned in 39.29 seconds
+# Nmap done at Mon May 19 03:25:14 2025 -- 1 IP address (1 host up) scanned in 23.24 seconds
