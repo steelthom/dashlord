@@ -1,24 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "B",
     "error": null,
-    "score": 35,
+    "score": 70,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 15 May 2025 03:26:09 GMT",
+      "date": "Thu, 22 May 2025 03:33:04 GMT",
       "set-cookie": [
-        "cookiedef=!FSj83VlW1fmhlfjUP24xCRy03FhIXC7rIQczxo8E3hvkHmsHtX1GEsgzuB8yz3f6/lQKn5ri4ohNfA==; path=/; Httponly",
-        "BIGipServer~Tenant-Externe~application~pool-ubika=201486346.20480.0000; path=/; Httponly; Secure"
+        "JSESSIONID=2B83050BD08A84564C77DB57BED0A5EC; Path=/; Secure; HttpOnly",
+        "XSRF-TOKEN=1be321b5-744b-4e18-afcf-5fd9ff84fb15; Path=/; Secure; HttpOnly",
+        "cookiedef=!LA6b+8QIWKob+ZbUP24xCRy03FhIXDP9xq14wmktcCGDaAQQ+gHf3dfgegZX2+JG02y2mz55lXzXfA==; path=/; Httponly",
+        "BIGipServer~Tenant-Externe~application~pool-ubika=218263562.20480.0000; path=/; Httponly; Secure"
       ],
-      "last-modified": "Wed, 26 Mar 2025 16:11:36 GMT",
-      "etag": "\"172-631411778567d\"",
-      "accept-ranges": "bytes",
-      "content-length": "370",
-      "content-type": "text/html; charset=UTF-8",
+      "x-xss-protection": "0",
+      "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+      "pragma": "no-cache",
+      "expires": "0",
+      "strict-transport-security": "max-age=31536000 ; includeSubDomains",
+      "content-type": "text/html;charset=UTF-8",
+      "content-length": "88912",
       "referrer-policy": "strict-origin-when-cross-origin",
       "x-content-type-options": "nosniff",
       "x-frame-options": "DENY",
@@ -40,10 +44,24 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
         "BIGipServer~Tenant-Externe~application~pool-ubika": {
+          "domain": "admissio.defense.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "JSESSIONID": {
+          "domain": "admissio.defense.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "XSRF-TOKEN": {
           "domain": "admissio.defense.gouv.fr",
           "httponly": true,
           "path": "/",
@@ -91,19 +109,19 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000 ; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-no-scripts-loaded",
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
       "scoreModifier": 0,
       "data": {}
     },
