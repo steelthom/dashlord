@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri May 16 03:48:37 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dilcrah.gouv.fr
+# Nmap 7.92 scan initiated Fri May 23 04:04:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dilcrah.gouv.fr
 Nmap scan report for www.dilcrah.gouv.fr (160.92.148.78)
-Host is up (0.11s latency).
+Host is up (0.16s latency).
 rDNS record for 160.92.148.78: secure-ssl-dsaf-mutu-prod.as8677.net
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE        VERSION
@@ -10,22 +10,28 @@ PORT    STATE SERVICE        VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Fri, 16 May 2025 03:48:51 GMT
+|     Date: Fri, 23 May 2025 04:04:16 GMT
 |     Content-Type: text/html; charset=UTF-8
-|     Content-Length: 40848
+|     Content-Length: 40812
 |     Connection: close
-|     Cache-Control: max-age=86400, public
-|     X-Drupal-Dynamic-Cache: MISS
-|     Link: </profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/apple-touch-icon.png>; rel="apple-touch-icon", </profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/favicon.svg>; rel="icon"; type="image/svg+xml", </profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/favicon.ico>; rel="shortcut icon"; type="image/x-icon", </profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/manifest.webmanifest>; rel="manifest"; crossorigin="use-credentials"
-|     Content-language: fr
-|     X-Content-Type-Options: nosniff
-|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: max-age=600, public
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
 |     Vary: Cookie
-|     X-Drupal-Cache: MISS
-|     Last-Modified: Fri, 16 May 2025 03:46:55 GMT
-|     ETag: "1747367215"
-|     X-Varnish: 17625833
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     X-Xss-Protection: 1; mode=block
+|     X-Drupal-Dynamic-Cache: HIT
+|     Content-language: fr
+|     X-Drupal-Cache: HIT
+|     Last-Modified: Mon, 19 May 2025 08:51:26 GMT
+|     ETag: "1747644686"
+|     X-Varnish: 445740 644712
+|     Age: 259
+|     X-Cache: HIT
+|     X-Cache-Hits: 1
+|     Accept-Ranges: bytes
+|     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+|     Content-Security-Policy: base-uri 'self'; connect-src 'self' https://www.data.gouv.fr; default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://static.data.gouv.fr; frame-src 'self' https://www.youtube.com; img-src 'self' data: https://i.ytimg.com http
 |   HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
 |     X-Frame-Options: DENY
@@ -53,45 +59,46 @@ PORT    STATE SERVICE        VERSION
 |     height: 100%;
 |_    body
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/16%Time=6826B5A3%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,4762,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2016\
-SF:x20May\x202025\x2003:48:51\x20GMT\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=UTF-8\r\nContent-Length:\x2040848\r\nConnection:\x20close\r\nCache
-SF:-Control:\x20max-age=86400,\x20public\r\nX-Drupal-Dynamic-Cache:\x20MIS
-SF:S\r\nLink:\x20</profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/a
-SF:pple-touch-icon\.png>;\x20rel=\"apple-touch-icon\",\x20</profiles/custo
-SF:m/dsfr_profile/themes/dsfr/dist/favicon/favicon\.svg>;\x20rel=\"icon\";
-SF:\x20type=\"image/svg\+xml\",\x20</profiles/custom/dsfr_profile/themes/d
-SF:sfr/dist/favicon/favicon\.ico>;\x20rel=\"shortcut\x20icon\";\x20type=\"
-SF:image/x-icon\",\x20</profiles/custom/dsfr_profile/themes/dsfr/dist/favi
-SF:con/manifest\.webmanifest>;\x20rel=\"manifest\";\x20crossorigin=\"use-c
-SF:redentials\"\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x20n
-SF:osniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20N
-SF:ov\x201978\x2005:00:00\x20GMT\r\nVary:\x20Cookie\r\nX-Drupal-Cache:\x20
-SF:MISS\r\nLast-Modified:\x20Fri,\x2016\x20May\x202025\x2003:46:55\x20GMT\
-SF:r\nETag:\x20\"1747367215\"\r\nX-Varnish:\x2017625833")%r(HTTPOptions,27
-SF:FE,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x20DENY\r\nX-XSS-
-SF:Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r
-SF:\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Securit
-SF:y-Policy:\x20default-src\x20'self'\x20'unsafe-inline';\x20style-src\x20
-SF:'self'\x20'unsafe-inline';\r\nContent-Type:\x20text/html\r\nPragma:\x20
-SF:no-cache\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeS
-SF:ubDomains\r\nX-Blocked:\x20yes\r\nContent-Length:\x209838\r\n\r\n<!doct
-SF:ype\x20html>\n<html\x20lang=\"fr\">\n<head>\n\x20\x20\x20\x20<meta\x20c
-SF:harset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20conten
-SF:t=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x2
-SF:0\x20\x20\x20<title>Erreur\x20serveur</title>\n\x20\x20\x20\x20<style>\
-SF:n\x20\x20\x20\x20\x20\x20\x20\x20/\*!\n\x20\*\x20DSFR\x20v1\.6\.0\x20\|
-SF:\x20SPDX-License-Identifier:\x20MIT\x20\|\x20License-Filename:\x20LICEN
-SF:SE\.md\x20\|\x20restricted\x20use\x20\(see\x20terms\x20and\x20condition
-SF:s\)\n\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20@charset\x20\"UTF-8\";\n\
-SF:n\x20\x20\x20\x20\x20\x20\x20\x20/\*\x20\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xa
-SF:f\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\x20\*\\\n\x20\x20CONNECT\n\\\
-SF:*\x20\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\x
-SF:cb\x8d\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x20\x20\
-SF:x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x20\x
-SF:20\x20\x20\x20}\n\n\x20\x20\x20\x20\x20\x20\x20\x20body");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/23%Time=682FF3C0%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1C60,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2023\
+SF:x20May\x202025\x2004:04:16\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x2040812\r\nConnection:\x20close\r\nCache
+SF:-Control:\x20max-age=600,\x20public\r\nExpires:\x20Sun,\x2019\x20Nov\x2
+SF:01978\x2005:00:00\x20GMT\r\nVary:\x20Cookie\r\nX-Frame-Options:\x20SAME
+SF:ORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;
+SF:\x20mode=block\r\nX-Drupal-Dynamic-Cache:\x20HIT\r\nContent-language:\x
+SF:20fr\r\nX-Drupal-Cache:\x20HIT\r\nLast-Modified:\x20Mon,\x2019\x20May\x
+SF:202025\x2008:51:26\x20GMT\r\nETag:\x20\"1747644686\"\r\nX-Varnish:\x204
+SF:45740\x20644712\r\nAge:\x20259\r\nX-Cache:\x20HIT\r\nX-Cache-Hits:\x201
+SF:\r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x20max-age=63
+SF:072000;\x20includeSubDomains;\x20preload\r\nContent-Security-Policy:\x2
+SF:0base-uri\x20'self';\x20connect-src\x20'self'\x20https://www\.data\.gou
+SF:v\.fr;\x20default-src\x20'self';\x20style-src\x20'self'\x20'unsafe-inli
+SF:ne';\x20font-src\x20'self'\x20data:\x20https://static\.data\.gouv\.fr;\
+SF:x20frame-src\x20'self'\x20https://www\.youtube\.com;\x20img-src\x20'sel
+SF:f'\x20data:\x20https://i\.ytimg\.com\x20http")%r(HTTPOptions,27FE,"HTTP
+SF:/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x20DENY\r\nX-XSS-Protecti
+SF:on:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-
+SF:Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Security-Policy
+SF::\x20default-src\x20'self'\x20'unsafe-inline';\x20style-src\x20'self'\x
+SF:20'unsafe-inline';\r\nContent-Type:\x20text/html\r\nPragma:\x20no-cache
+SF:\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomain
+SF:s\r\nX-Blocked:\x20yes\r\nContent-Length:\x209838\r\n\r\n<!doctype\x20h
+SF:tml>\n<html\x20lang=\"fr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\
+SF:"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"widt
+SF:h=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x2
+SF:0\x20<title>Erreur\x20serveur</title>\n\x20\x20\x20\x20<style>\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20/\*!\n\x20\*\x20DSFR\x20v1\.6\.0\x20\|\x20SPDX
+SF:-License-Identifier:\x20MIT\x20\|\x20License-Filename:\x20LICENSE\.md\x
+SF:20\|\x20restricted\x20use\x20\(see\x20terms\x20and\x20conditions\)\n\x2
+SF:0\*/\n\x20\x20\x20\x20\x20\x20\x20\x20@charset\x20\"UTF-8\";\n\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20/\*\x20\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xa
+SF:f\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\x20\*\\\n\x20\x20CONNECT\n\\\*\x20\xc
+SF:b\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\x
+SF:20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20}\n\n\x20\x20\x20\x20\x20\x20\x20\x20body");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri May 16 03:51:04 2025 -- 1 IP address (1 host up) scanned in 147.62 seconds
+# Nmap done at Fri May 23 04:06:33 2025 -- 1 IP address (1 host up) scanned in 152.38 seconds
