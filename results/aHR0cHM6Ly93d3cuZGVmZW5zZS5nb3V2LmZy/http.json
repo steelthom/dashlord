@@ -1,27 +1,39 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "D",
     "error": null,
-    "score": 10,
+    "score": 35,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "content-type": "text/html; charset=UTF-8",
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "expires": "0",
-      "connection": "close",
+      "date": "Fri, 23 May 2025 16:25:08 GMT",
       "set-cookie": [
-        "visid_incap_999863=rgb0K+KhTsSPmWI/Fu9JiC62JmgAAAAAQUIPAAAAAABVwOm4qh1i9eCk+v9SB1hA; expires=Fri, 15 May 2026 06:36:00 GMT; HttpOnly; path=/; Domain=.defense.gouv.fr",
-        "nlbi_999863=JPUFCHlzs3NKig3sysOOugAAAABNWHpt6pN54DzqWHBggMaj; HttpOnly; path=/; Domain=.defense.gouv.fr",
-        "incap_ses_887_999863=96e+S15idEtSXtNuJUJPDC62JmgAAAAAQ3ggTsEr5JR5RN3jF+jQuA==; path=/; Domain=.defense.gouv.fr"
+        "cookiedef=!vsKiM8oO0Aj0RtLUP24xCRy03FhIXNzRF45CMd/FZQaDhab0tfZQqWH7MdPgZ9Ts7dIyweOtpAWuVg==; path=/; Httponly",
+        "BIGipServer~Tenant-Externe~application~pool-ubika=201486346.20480.0000; path=/; Httponly; Secure"
       ],
-      "x-cdn": "Imperva",
-      "transfer-encoding": "chunked",
-      "x-iinfo": "0-9605761-9605762 NNYY CT(86 190 0) RT(1747367470820 6) q(0 1 1 -1) r(2 2) U12"
+      "cache-control": "max-age=604800, public",
+      "x-drupal-dynamic-cache": "MISS",
+      "content-language": "fr",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "vary": "Cookie",
+      "x-generator": "Drupal 10 (https://www.drupal.org)",
+      "cache-tags": "config:block_list config:block.block.open_theme_onglets_2 config:block.block.open_theme_onglets config:block.block.open_theme_actionsdadministrationprincipales config:block.block.open_theme_messages config:block.block.open_theme_contenudelapageprincipale config:block.block.open_theme_connexionutilisateur config:block.block.blocktothetopopensde config:block.block.blocksocialmediaopensde config:block.block.blockfooteropensde config:block.block.blockheaderopensde config:block.block.open_theme_filsdariane node:491 config:block.block.open_theme_admin config:block.block.open_theme_tools config:block.block.typedecontenu config:block.block.groupescontenudegroupegroupeparentgroupetitre config:matomo.settings group_content_list:plugin:group_node:authority group_content_list:plugin:group_node:geozone group_content_list:plugin:group_node:map group_content_list:plugin:group_node:cold_content group_content_list:plugin:group_node:event group_content_list:plugin:group_node:homepage group_content_list:plugin:group_node:hub_news_list group_content_list:plugin:group_node:manual_list group_content_list:plugin:group_node:map_poi group_content_list:plugin:group_node:news_article group_content_list:plugin:group_node:poi block_view menu_link_content_list:menu_link_content footer group_list minarm_default_config config:minarm_social_networks.settings node_view paragraph_view paragraph:10201 config:paragraphs.settings paragraph:5087 paragraph:19733 paragraph:11043 paragraph:26741 paragraph:4144 paragraph:69996 paragraph:34600 paragraph:25675 paragraph:10200 paragraph:2026 node_list:news_article paragraph:2032 user:46 media:67652 config:system.site header menu:minarm-oicd-ministere-armees language_selector rendered http_response config:user.role.anonymous config:group_role_list config:group.role.organism_entity-anonymous flexible_permissions group_content_list:plugin:group_membership:entity:0 local_task config:workflows.workflow.minarm_workflow",
+      "x-drupal-cache": "HIT",
+      "access-control-allow-origin": "*",
+      "last-modified": "Fri, 23 May 2025 16:25:07 GMT",
+      "etag": "\"1748017507\"",
+      "content-length": "93827",
+      "content-type": "text/html; charset=UTF-8",
+      "x-varnish": "1705288 196676",
+      "age": "24896",
+      "accept-ranges": "bytes",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "connection": "close"
     }
   },
   "tests": {
@@ -42,23 +54,18 @@
       "result": "cookies-without-secure-flag",
       "scoreModifier": -20,
       "data": {
-        "visid_incap_999863": {
-          "domain": "defense.gouv.fr",
-          "expires": "2026-05-15T06:36:00.000Z",
+        "cookiedef": {
+          "domain": "www.defense.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null
         },
-        "nlbi_999863": {
-          "domain": "defense.gouv.fr",
+        "BIGipServer~Tenant-Externe~application~pool-ubika": {
+          "domain": "www.defense.gouv.fr",
           "httponly": true,
           "path": "/",
-          "port": null
-        },
-        "incap_ses_887_999863": {
-          "domain": "defense.gouv.fr",
-          "path": "/",
-          "port": null
+          "port": null,
+          "secure": true
         }
       },
       "sameSite": false
@@ -66,27 +73,30 @@
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
       "pass": true,
-      "result": "cross-origin-resource-sharing-not-implemented",
+      "result": "cross-origin-resource-sharing-implemented-with-public-access",
       "scoreModifier": 0,
-      "data": null
+      "data": "*"
     },
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": null,
+      "destination": "https://www.defense.gouv.fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.defense.gouv.fr/",
+        "https://www.defense.gouv.fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -109,17 +119,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
