@@ -1,12 +1,12 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "C",
     "error": null,
-    "score": 35,
+    "score": 55,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "date": "Tue, 28 Jan 2025 13:20:16 GMT",
@@ -54,12 +54,16 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-invalid-cert",
-      "scoreModifier": -20,
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
       "destination": "https://limitesmaritimes.gouv.fr/",
       "redirects": true,
-      "route": [],
+      "route": [
+        "http://www.limitesmaritimes.gouv.fr/",
+        "https://www.limitesmaritimes.gouv.fr/",
+        "https://limitesmaritimes.gouv.fr/"
+      ],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -74,7 +78,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-invalid-cert",
+      "result": "hsts-not-implemented",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
