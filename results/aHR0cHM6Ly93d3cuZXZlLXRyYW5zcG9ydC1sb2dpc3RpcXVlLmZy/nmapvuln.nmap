@@ -1,11 +1,14 @@
-# Nmap 7.92 scan initiated Sat May 17 03:36:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.eve-transport-logistique.fr
+# Nmap 7.92 scan initiated Sat May 24 03:34:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.eve-transport-logistique.fr
 Nmap scan report for www.eve-transport-logistique.fr (109.69.189.117)
-Host is up (0.087s latency).
+Host is up (0.086s latency).
 rDNS record for 109.69.189.117: ademe-vt-prod-plesk01.dcsrv.eu
 Not shown: 927 filtered tcp ports (no-response), 61 closed tcp ports (reset)
-PORT     STATE SERVICE       VERSION
-21/tcp   open  ftp           ProFTPD
-22/tcp   open  ssh           OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp?
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|_    220 ProFTPD Server (ProFTPD) [109.69.189.117]
+22/tcp   open  ssh        OpenSSH 8.9p1 Ubuntu 3ubuntu0.13 (Ubuntu Linux; protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:8.9p1: 
 |     	CVE-2023-38408	9.8	https://vulners.com/cve/CVE-2023-38408
@@ -105,134 +108,28 @@ PORT     STATE SERVICE       VERSION
 |     	1337DAY-ID-39918	6.8	https://vulners.com/zdt/1337DAY-ID-39918	*EXPLOIT*
 |     	CVE-2023-51385	6.5	https://vulners.com/cve/CVE-2023-51385
 |     	CVE-2023-48795	5.9	https://vulners.com/cve/CVE-2023-48795
+|     	CC3AE4FC-CF04-5EDA-A010-6D7E71538C92	5.9	https://vulners.com/githubexploit/CC3AE4FC-CF04-5EDA-A010-6D7E71538C92	*EXPLOIT*
 |     	54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	5.9	https://vulners.com/githubexploit/54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	*EXPLOIT*
 |     	CVE-2023-51384	5.5	https://vulners.com/cve/CVE-2023-51384
 |     	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
 |     	5C971D4B-2DD3-5894-9EC2-DAB952B4740D	0.0	https://vulners.com/githubexploit/5C971D4B-2DD3-5894-9EC2-DAB952B4740D	*EXPLOIT*
 |_    	39E70D1A-F5D8-59D5-A0CF-E73D9BAA3118	0.0	https://vulners.com/githubexploit/39E70D1A-F5D8-59D5-A0CF-E73D9BAA3118	*EXPLOIT*
-25/tcp   open  smtp          Postfix smtpd
-80/tcp   open  http          nginx
+25/tcp   open  smtp       Postfix smtpd
+80/tcp   open  http?
 106/tcp  open  tcpwrapped
-110/tcp  open  pop3          Dovecot pop3d
-143/tcp  open  imap          Dovecot imapd
-443/tcp  open  ssl/http      nginx
-465/tcp  open  ssl/smtp      Postfix smtpd
-993/tcp  open  ssl/imap      Dovecot imapd
-995/tcp  open  ssl/pop3      Dovecot pop3d
-8443/tcp open  ssl/https-alt sw-cp-server
-| fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.1 404 Not Found
-|     Server: sw-cp-server
-|     Date: Sat, 17 May 2025 03:36:58 GMT
-|     Content-Type: text/html
-|     Content-Length: 910
-|     Connection: close
-|     ETag: "68147f31-38e"
-|     <!DOCTYPE html>
-|     <!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. -->
-|     <html lang="en" dir="ltr">
-|     <head>
-|     <meta charset="utf-8">
-|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-|     <title>404 Page Not Found</title>
-|     <link rel="shortcut icon" href="/favicon.ico">
-|     <link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.40.10">
-|     <script src="/ui-library/plesk-ui-library.min.js?3.40.10"></script>
-|     <script src="/cp/javascript/vendors.js"></script>
-|     <script src="/cp/javascript/main.js"></script>
-|     <script src="/error_docs/uat.js?v4"></script>
-|     <link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"></head>
-|     <body>
-|   GetRequest: 
-|     HTTP/1.1 303 See Other
-|     Server: sw-cp-server
-|     Date: Sat, 17 May 2025 03:36:58 GMT
-|     Content-Type: text/html; charset=UTF-8
-|     Connection: close
-|     Expires: Fri, 28 May 1999 00:00:00 GMT
-|     Last-Modified: Sat, 17 May 2025 03:36:58 GMT
-|     Cache-Control: no-store, no-cache, must-revalidate
-|     Cache-Control: post-check=0, pre-check=0
-|     Pragma: no-cache
-|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
-|     X-Frame-Options: SAMEORIGIN
-|     X-XSS-Protection: 1; mode=block
-|     Location: https://localhost:8443/login.php
-|     X-Content-Type-Options: nosniff
-|   HTTPOptions: 
-|     HTTP/1.1 405 Not Allowed
-|     Server: sw-cp-server
-|     Date: Sat, 17 May 2025 03:36:58 GMT
-|     Content-Type: text/html
-|     Content-Length: 918
-|     Connection: close
-|     ETag: "68147f31-396"
-|     <!DOCTYPE html>
-|     <!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. -->
-|     <html lang="en" dir="ltr">
-|     <head>
-|     <meta charset="utf-8">
-|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-|     <title>405 Method Not Allowed</title>
-|     <link rel="shortcut icon" href="/favicon.ico">
-|     <link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.40.10">
-|     <script src="/ui-library/plesk-ui-library.min.js?3.40.10"></script>
-|     <script src="/cp/javascript/vendors.js"></script>
-|     <script src="/cp/javascript/main.js"></script>
-|     <script src="/error_docs/uat.js?v4"></script>
-|     <link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"></head>
-|_    <bod
-|_http-server-header: sw-cp-server
+110/tcp  open  pop3       Dovecot pop3d
+143/tcp  open  imap       Dovecot imapd
+443/tcp  open  https?
+465/tcp  open  smtps?
+993/tcp  open  imaps?
+995/tcp  open  pop3s?
+8443/tcp open  https-alt?
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=5/17%Time=6828045A%P=x86_64-alpine-linu
-SF:x-musl%r(GetRequest,216,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x2
-SF:0sw-cp-server\r\nDate:\x20Sat,\x2017\x20May\x202025\x2003:36:58\x20GMT\
-SF:r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close
-SF:\r\nExpires:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Mo
-SF:dified:\x20Sat,\x2017\x20May\x202025\x2003:36:58\x20GMT\r\nCache-Contro
-SF:l:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20po
-SF:st-check=0,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x
-SF:20COR\x20CURa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\nX-
-SF:Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r
-SF:\nLocation:\x20https://localhost:8443/login\.php\r\nX-Content-Type-Opti
-SF:ons:\x20nosniff\r\n\r\n")%r(HTTPOptions,444,"HTTP/1\.1\x20405\x20Not\x2
-SF:0Allowed\r\nServer:\x20sw-cp-server\r\nDate:\x20Sat,\x2017\x20May\x2020
-SF:25\x2003:36:58\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
-SF:x20918\r\nConnection:\x20close\r\nETag:\x20\"68147f31-396\"\r\n\r\n<!DO
-SF:CTYPE\x20html>\n<!--\x20Copyright\x201999-2025\.\x20WebPros\x20Internat
-SF:ional\x20GmbH\.\x20All\x20rights\x20reserved\.\x20-->\n<html\x20lang=\"
-SF:en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\
-SF:">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devic
-SF:e-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<t
-SF:itle>405\x20Method\x20Not\x20Allowed</title>\n\x20\x20\x20\x20<link\x20
-SF:rel=\"shortcut\x20icon\"\x20href=\"/favicon\.ico\">\n\x20\x20\x20\x20<l
-SF:ink\x20rel=\"stylesheet\"\x20href=\"/ui-library/plesk-ui-library\.css\?
-SF:3\.40\.10\">\n\x20\x20\x20\x20<script\x20src=\"/ui-library/plesk-ui-lib
-SF:rary\.min\.js\?3\.40\.10\"></script>\n\x20\x20\x20\x20<script\x20src=\"
-SF:/cp/javascript/vendors\.js\"></script>\n\x20\x20\x20\x20<script\x20src=
-SF:\"/cp/javascript/main\.js\"></script>\n\x20\x20\x20\x20<script\x20src=\
-SF:"/error_docs/uat\.js\?v4\"></script>\n<link\x20href=\"/error_docs/app\.
-SF:css\?3275a11af93002eb5427\"\x20rel=\"stylesheet\"></head>\n<bod")%r(Fou
-SF:rOhFourRequest,43A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20sw-c
-SF:p-server\r\nDate:\x20Sat,\x2017\x20May\x202025\x2003:36:58\x20GMT\r\nCo
-SF:ntent-Type:\x20text/html\r\nContent-Length:\x20910\r\nConnection:\x20cl
-SF:ose\r\nETag:\x20\"68147f31-38e\"\r\n\r\n<!DOCTYPE\x20html>\n<!--\x20Cop
-SF:yright\x201999-2025\.\x20WebPros\x20International\x20GmbH\.\x20All\x20r
-SF:ights\x20reserved\.\x20-->\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head
-SF:>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x
-SF:20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1
-SF:,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<title>404\x20Page\x20Not\x20
-SF:Found</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20hre
-SF:f=\"/favicon\.ico\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20hr
-SF:ef=\"/ui-library/plesk-ui-library\.css\?3\.40\.10\">\n\x20\x20\x20\x20<
-SF:script\x20src=\"/ui-library/plesk-ui-library\.min\.js\?3\.40\.10\"></sc
-SF:ript>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/vendors\.js\"></
-SF:script>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/main\.js\"></s
-SF:cript>\n\x20\x20\x20\x20<script\x20src=\"/error_docs/uat\.js\?v4\"></sc
-SF:ript>\n<link\x20href=\"/error_docs/app\.css\?3275a11af93002eb5427\"\x20
-SF:rel=\"stylesheet\"></head>\n<body>\n<di");
+SF-Port21-TCP:V=7.92%I=7%D=5/24%Time=68313E68%P=x86_64-alpine-linux-musl%r
+SF:(NULL,2F,"220\x20ProFTPD\x20Server\x20\(ProFTPD\)\x20\[109\.69\.189\.11
+SF:7\]\r\n")%r(GenericLines,2F,"220\x20ProFTPD\x20Server\x20\(ProFTPD\)\x2
+SF:0\[109\.69\.189\.117\]\r\n");
 Service Info: Host:  youthful-margulis.dcsrv.eu; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May 17 03:37:20 2025 -- 1 IP address (1 host up) scanned in 43.40 seconds
+# Nmap done at Sat May 24 03:35:24 2025 -- 1 IP address (1 host up) scanned in 30.72 seconds
