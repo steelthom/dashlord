@@ -1,14 +1,14 @@
-# Nmap 7.92 scan initiated Sat May 17 03:42:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.onisep-preprod.fr
+# Nmap 7.92 scan initiated Sat May 24 03:10:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.onisep-preprod.fr
 Nmap scan report for www.onisep-preprod.fr (213.91.3.180)
-Host is up (0.10s latency).
+Host is up (0.083s latency).
 rDNS record for 213.91.3.180: onisep-vm-preprod-fw.smile-ops.fr
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
-|   FourOhFourRequest: 
+|   FourOhFourRequest, HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sat, 17 May 2025 03:42:50 GMT
+|     date: Sat, 24 May 2025 03:10:22 GMT
 |     content-length: 199
 |     content-type: text/html; charset=iso-8859-1
 |     x-robots-tag: noindex
@@ -21,9 +21,9 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Forbidden</h1>
 |     <p>You don't have permission to access this resource.</p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sat, 17 May 2025 03:42:49 GMT
+|     date: Sat, 24 May 2025 03:10:21 GMT
 |     content-length: 199
 |     content-type: text/html; charset=iso-8859-1
 |     x-robots-tag: noindex
@@ -49,7 +49,7 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sat, 17 May 2025 03:42:57 GMT
+|     date: Sat, 24 May 2025 03:10:29 GMT
 |     content-length: 199
 |     content-type: text/html; charset=iso-8859-1
 |     x-robots-tag: noindex
@@ -64,7 +64,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sat, 17 May 2025 03:42:56 GMT
+|     date: Sat, 24 May 2025 03:10:28 GMT
 |     content-length: 199
 |     content-type: text/html; charset=iso-8859-1
 |     x-robots-tag: noindex
@@ -88,17 +88,17 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=5/17%Time=682805B9%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,19F,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2017\x
-SF:20May\x202025\x2003:42:49\x20GMT\r\ncontent-length:\x20199\r\ncontent-t
+SF-Port80-TCP:V=7.92%I=7%D=5/24%Time=6831389D%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,19F,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2024\x
+SF:20May\x202025\x2003:10:21\x20GMT\r\ncontent-length:\x20199\r\ncontent-t
 SF:ype:\x20text/html;\x20charset=iso-8859-1\r\nx-robots-tag:\x20noindex\r\
 SF:nstrict-transport-security:\x20max-age=63072000\r\nconnection:\x20close
 SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
 SF:EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h
 SF:1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access
 SF:\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,19F,"HTTP/
-SF:1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2017\x20May\x202025\x2003:42
-SF::49\x20GMT\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20
+SF:1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2024\x20May\x202025\x2003:10
+SF::22\x20GMT\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20
 SF:charset=iso-8859-1\r\nx-robots-tag:\x20noindex\r\nstrict-transport-secu
 SF:rity:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20H
 SF:TML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<
@@ -113,7 +113,7 @@ SF:equest\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnec
 SF:tion:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400
 SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
 SF:quest\.\n</body></html>\n")%r(FourOhFourRequest,19F,"HTTP/1\.1\x20403\x
-SF:20Forbidden\r\ndate:\x20Sat,\x2017\x20May\x202025\x2003:42:50\x20GMT\r\
+SF:20Forbidden\r\ndate:\x20Sat,\x2024\x20May\x202025\x2003:10:22\x20GMT\r\
 SF:ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20charset=iso-8
 SF:859-1\r\nx-robots-tag:\x20noindex\r\nstrict-transport-security:\x20max-
 SF:age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC
@@ -122,24 +122,24 @@ SF:Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x
 SF:20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body>
 SF:</html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/17%Time=682805C0%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/24%Time=683138A4%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,19F,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\
-SF:x2017\x20May\x202025\x2003:42:56\x20GMT\r\ncontent-length:\x20199\r\nco
+SF:x2024\x20May\x202025\x2003:10:28\x20GMT\r\ncontent-length:\x20199\r\nco
 SF:ntent-type:\x20text/html;\x20charset=iso-8859-1\r\nx-robots-tag:\x20noi
 SF:ndex\r\nstrict-transport-security:\x20max-age=63072000\r\nconnection:\x
 SF:20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x2
 SF:02\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><bo
 SF:dy>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x2
 SF:0access\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,19F
-SF:,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2017\x20May\x202025\x
-SF:2003:42:56\x20GMT\r\ncontent-length:\x20199\r\ncontent-type:\x20text/ht
+SF:,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2024\x20May\x202025\x
+SF:2003:10:28\x20GMT\r\ncontent-length:\x20199\r\ncontent-type:\x20text/ht
 SF:ml;\x20charset=iso-8859-1\r\nx-robots-tag:\x20noindex\r\nstrict-transpo
 SF:rt-security:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTY
 SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
 SF:ead>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1
 SF:>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20res
 SF:ource\.</p>\n</body></html>\n")%r(FourOhFourRequest,19F,"HTTP/1\.1\x204
-SF:03\x20Forbidden\r\ndate:\x20Sat,\x2017\x20May\x202025\x2003:42:57\x20GM
+SF:03\x20Forbidden\r\ndate:\x20Sat,\x2024\x20May\x202025\x2003:10:29\x20GM
 SF:T\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20charset=i
 SF:so-8859-1\r\nx-robots-tag:\x20noindex\r\nstrict-transport-security:\x20
 SF:max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PU
@@ -157,4 +157,4 @@ SF:ad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request
 SF:\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May 17 03:43:24 2025 -- 1 IP address (1 host up) scanned in 49.37 seconds
+# Nmap done at Sat May 24 03:10:53 2025 -- 1 IP address (1 host up) scanned in 45.45 seconds
