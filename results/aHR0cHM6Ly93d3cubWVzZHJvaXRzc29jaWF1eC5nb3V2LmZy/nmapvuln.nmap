@@ -1,15 +1,15 @@
-# Nmap 7.92 scan initiated Sat May 17 03:40:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mesdroitssociaux.gouv.fr
+# Nmap 7.92 scan initiated Sat May 24 03:14:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mesdroitssociaux.gouv.fr
 Nmap scan report for www.mesdroitssociaux.gouv.fr (81.80.42.167)
-Host is up (0.12s latency).
+Host is up (0.086s latency).
 rDNS record for 81.80.42.167: ouvrier-paradis.rain.fr
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  closed http
 443/tcp open   ssl/https
 | fingerprint-strings: 
-|   FourOhFourRequest: 
+|   FourOhFourRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 17 May 2025 03:40:40 GMT
+|     Date: Sat, 24 May 2025 03:14:28 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -21,9 +21,9 @@ PORT    STATE  SERVICE   VERSION
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 17 May 2025 03:40:39 GMT
+|     Date: Sat, 24 May 2025 03:14:27 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -37,7 +37,7 @@ PORT    STATE  SERVICE   VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 17 May 2025 03:40:51 GMT
+|     Date: Sat, 24 May 2025 03:14:39 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -50,31 +50,31 @@ PORT    STATE  SERVICE   VERSION
 |     </p>
 |_    </body></html>
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/17%Time=68280537%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=5/24%Time=68313993%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Sat,\x2017\x20May\x202025\x2003:40:39\x20GMT\r\nContent-Length:\x20226\
+SF:Sat,\x2024\x20May\x202025\x2003:14:27\x20GMT\r\nContent-Length:\x20226\
 SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8
 SF:859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
 SF:\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head>
 SF:<body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20req
 SF:uest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>
 SF:\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nDate:\x20Sat,\x2017\x20May\x202025\x2003:40:39\x20GMT\r\nC
+SF:20Request\r\nDate:\x20Sat,\x2024\x20May\x202025\x2003:14:28\x20GMT\r\nC
 SF:ontent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/
 SF:html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
 SF:IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Re
 SF:quest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brows
 SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
 SF:0understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,17
-SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2017\x20May\x20
-SF:2025\x2003:40:40\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
+SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2024\x20May\x20
+SF:2025\x2003:14:28\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
 SF:se\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYP
 SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
 SF:ad>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Re
 SF:quest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\
 SF:x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html
 SF:>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Sat,\x2017\x20May\x202025\x2003:40:51\x20GMT\r\nContent-Length:\x20226
+SF:0Sat,\x2024\x20May\x202025\x2003:14:39\x20GMT\r\nContent-Length:\x20226
 SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
 SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
 SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
@@ -83,4 +83,4 @@ SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
 SF:>\n</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May 17 03:42:20 2025 -- 1 IP address (1 host up) scanned in 122.88 seconds
+# Nmap done at Sat May 24 03:16:05 2025 -- 1 IP address (1 host up) scanned in 118.28 seconds
