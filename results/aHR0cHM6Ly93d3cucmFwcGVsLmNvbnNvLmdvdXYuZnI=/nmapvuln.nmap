@@ -1,63 +1,59 @@
-# Nmap 7.92 scan initiated Mon May 19 03:19:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.rappel.conso.gouv.fr
+# Nmap 7.92 scan initiated Sun May 25 03:45:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.rappel.conso.gouv.fr
 Nmap scan report for www.rappel.conso.gouv.fr (213.186.33.5)
-Host is up (0.084s latency).
+Host is up (0.15s latency).
 rDNS record for 213.186.33.5: redirect.ovh.net
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE VERSION
 25/tcp  open   smtp?
 | fingerprint-strings: 
 |   DNSStatusRequestTCP: 
-|     220-redirect.ovh.net smtp7
-|     redirect.ovh.net smtp7
-|   DNSVersionBindReqTCP: 
-|     220-redirect.ovh.net smtp8
-|     redirect.ovh.net smtp8
+|     220-redirect.ovh.net smtp2
+|     redirect.ovh.net smtp2
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     220-redirect.ovh.net smtp6
+|     redirect.ovh.net smtp6
 |   GenericLines: 
-|     220-redirect.ovh.net smtp1
-|     redirect.ovh.net smtp1
+|     220-redirect.ovh.net smtp5
+|     redirect.ovh.net smtp5
 |     5.5.2 Error: bad syntax
 |     5.5.2 Error: bad syntax
 |   GetRequest: 
-|     220-redirect.ovh.net smtp8
-|     redirect.ovh.net smtp8
+|     220-redirect.ovh.net smtp5
+|     redirect.ovh.net smtp5
 |     2.7.0 Error: I can break rules, too. Goodbye.
 |   HTTPOptions: 
-|     220-redirect.ovh.net smtp4
-|     redirect.ovh.net smtp4
+|     220 redirect.ovh.net smtp4
 |     5.5.2 Error: command not recognized
 |     5.5.2 Error: bad syntax
 |   Hello: 
-|     220-redirect.ovh.net smtp9
-|     redirect.ovh.net smtp9
+|     220-redirect.ovh.net smtp4
+|     redirect.ovh.net smtp4
 |     Syntax: EHLO hostname
-|   Help: 
+|   Help, TerminalServerCookie: 
 |     220-redirect.ovh.net smtp2
 |     redirect.ovh.net smtp2
 |     5.5.2 Error: command not recognized
 |   Kerberos: 
-|     220-redirect.ovh.net smtp4
-|     redirect.ovh.net smtp4
+|     220 redirect.ovh.net smtp4
 |     5.5.2 Error: bad syntax
 |   NULL: 
-|     220-redirect.ovh.net smtp9
-|   RPCCheck: 
-|     220-redirect.ovh.net smtp6
-|     redirect.ovh.net smtp6
+|     220-redirect.ovh.net smtp4
+|     redirect.ovh.net smtp4
 |   RTSPRequest: 
-|     220-redirect.ovh.net smtp6
-|     redirect.ovh.net smtp6
+|     220-redirect.ovh.net smtp5
+|     redirect.ovh.net smtp5
 |     5.5.2 Error: command not recognized
 |     5.5.2 Error: bad syntax
 |   SMBProgNeg: 
 |     220-redirect.ovh.net smtp3
 |     redirect.ovh.net smtp3
-|   SSLSessionReq, TLSSessionReq: 
-|     220-redirect.ovh.net smtp10
-|     redirect.ovh.net smtp10
+|   SSLSessionReq: 
+|     220-redirect.ovh.net smtp9
+|     redirect.ovh.net smtp9
 |     5.5.2 Error: command not recognized
-|   TerminalServerCookie: 
-|     220-redirect.ovh.net smtp3
-|     redirect.ovh.net smtp3
+|   TLSSessionReq: 
+|     220-redirect.ovh.net smtp7
+|     redirect.ovh.net smtp7
 |_    5.5.2 Error: command not recognized
 80/tcp  open   http    nginx
 |_http-server-header: nginx
@@ -65,14 +61,14 @@ PORT    STATE  SERVICE VERSION
 |   GetRequest: 
 |     HTTP/1.1 200 OK
 |     server: nginx
-|     date: Mon, 19 May 2025 03:19:32 GMT
+|     date: Sun, 25 May 2025 03:45:23 GMT
 |     content-type: text/html; charset=utf8
 |     pragma: no-cache
 |     cache-control: no-store, no-cache, must-revalidate
 |     content-length: 5146
-|     x-iplb-request-id: 34AA9CC7:0402_D5BA2105:0050_682AA33E_9DC44EB4:28C7
+|     x-iplb-request-id: 2876AB21:0401_D5BA2105:0050_6832924D_CF5564A5:28C7
 |     x-iplb-instance: 52243
-|     set-cookie: SERVERID77446=200172|aCqjR|aCqjR; path=/; HttpOnly
+|     set-cookie: SERVERID77446=200177|aDKSV|aDKSV; path=/; HttpOnly
 |     connection: close
 |     <html xml:lang="fr-FR" lang="fr-FR">
 |     <head>
@@ -89,14 +85,14 @@ PORT    STATE  SERVICE VERSION
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
 |     server: nginx
-|     date: Mon, 19 May 2025 03:19:32 GMT
+|     date: Sun, 25 May 2025 03:45:23 GMT
 |     content-type: text/html; charset=utf8
 |     pragma: no-cache
 |     cache-control: no-store, no-cache, must-revalidate
 |     content-length: 5146
-|     x-iplb-request-id: 34AA9CC7:0401_D5BA2105:0050_682AA344_5AA58AC1:63BF
-|     x-iplb-instance: 52345
-|     set-cookie: SERVERID77446=200172|aCqjR|aCqjR; path=/; HttpOnly
+|     x-iplb-request-id: 2876AB21:0402_D5BA2105:0050_68329253_CF55A29C:28C7
+|     x-iplb-instance: 52243
+|     set-cookie: SERVERID77446=200175|aDKSV|aDKSV; path=/; HttpOnly
 |     connection: close
 |     <html xml:lang="fr-FR" lang="fr-FR">
 |     <head>
@@ -113,46 +109,45 @@ PORT    STATE  SERVICE VERSION
 443/tcp closed https
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port25-TCP:V=7.92%I=7%D=5/19%Time=682AA344%P=x86_64-alpine-linux-musl%r
-SF:(NULL,1C,"220-redirect\.ovh\.net\x20smtp9\r\n")%r(Hello,53,"220-redirec
-SF:t\.ovh\.net\x20smtp9\r\n220\x20redirect\.ovh\.net\x20smtp9\r\n501\x20Sy
-SF:ntax:\x20EHLO\x20hostname\r\n")%r(Help,61,"220-redirect\.ovh\.net\x20sm
-SF:tp2\r\n220\x20redirect\.ovh\.net\x20smtp2\r\n502\x205\.5\.2\x20Error:\x
-SF:20command\x20not\x20recognized\r\n")%r(GenericLines,72,"220-redirect\.o
-SF:vh\.net\x20smtp1\r\n220\x20redirect\.ovh\.net\x20smtp1\r\n500\x205\.5\.
-SF:2\x20Error:\x20bad\x20syntax\r\n500\x205\.5\.2\x20Error:\x20bad\x20synt
-SF:ax\r\n")%r(GetRequest,6B,"220-redirect\.ovh\.net\x20smtp8\r\n220\x20red
-SF:irect\.ovh\.net\x20smtp8\r\n221\x202\.7\.0\x20Error:\x20I\x20can\x20bre
-SF:ak\x20rules,\x20too\.\x20Goodbye\.\r\n")%r(HTTPOptions,7E,"220-redirect
-SF:\.ovh\.net\x20smtp4\r\n220\x20redirect\.ovh\.net\x20smtp4\r\n502\x205\.
-SF:5\.2\x20Error:\x20command\x20not\x20recognized\r\n500\x205\.5\.2\x20Err
-SF:or:\x20bad\x20syntax\r\n")%r(RTSPRequest,7E,"220-redirect\.ovh\.net\x20
-SF:smtp6\r\n220\x20redirect\.ovh\.net\x20smtp6\r\n502\x205\.5\.2\x20Error:
-SF:\x20command\x20not\x20recognized\r\n500\x205\.5\.2\x20Error:\x20bad\x20
-SF:syntax\r\n")%r(RPCCheck,38,"220-redirect\.ovh\.net\x20smtp6\r\n220\x20r
-SF:edirect\.ovh\.net\x20smtp6\r\n")%r(DNSVersionBindReqTCP,38,"220-redirec
-SF:t\.ovh\.net\x20smtp8\r\n220\x20redirect\.ovh\.net\x20smtp8\r\n")%r(DNSS
-SF:tatusRequestTCP,38,"220-redirect\.ovh\.net\x20smtp7\r\n220\x20redirect\
-SF:.ovh\.net\x20smtp7\r\n")%r(SSLSessionReq,63,"220-redirect\.ovh\.net\x20
-SF:smtp10\r\n220\x20redirect\.ovh\.net\x20smtp10\r\n502\x205\.5\.2\x20Erro
-SF:r:\x20command\x20not\x20recognized\r\n")%r(TerminalServerCookie,61,"220
-SF:-redirect\.ovh\.net\x20smtp3\r\n220\x20redirect\.ovh\.net\x20smtp3\r\n5
-SF:02\x205\.5\.2\x20Error:\x20command\x20not\x20recognized\r\n")%r(TLSSess
-SF:ionReq,63,"220-redirect\.ovh\.net\x20smtp10\r\n220\x20redirect\.ovh\.ne
-SF:t\x20smtp10\r\n502\x205\.5\.2\x20Error:\x20command\x20not\x20recognized
-SF:\r\n")%r(Kerberos,55,"220-redirect\.ovh\.net\x20smtp4\r\n220\x20redirec
-SF:t\.ovh\.net\x20smtp4\r\n500\x205\.5\.2\x20Error:\x20bad\x20syntax\r\n")
-SF:%r(SMBProgNeg,38,"220-redirect\.ovh\.net\x20smtp3\r\n220\x20redirect\.o
-SF:vh\.net\x20smtp3\r\n");
+SF-Port25-TCP:V=7.92%I=7%D=5/25%Time=68329253%P=x86_64-alpine-linux-musl%r
+SF:(NULL,38,"220-redirect\.ovh\.net\x20smtp4\r\n220\x20redirect\.ovh\.net\
+SF:x20smtp4\r\n")%r(Hello,53,"220-redirect\.ovh\.net\x20smtp4\r\n220\x20re
+SF:direct\.ovh\.net\x20smtp4\r\n501\x20Syntax:\x20EHLO\x20hostname\r\n")%r
+SF:(Help,61,"220-redirect\.ovh\.net\x20smtp2\r\n220\x20redirect\.ovh\.net\
+SF:x20smtp2\r\n502\x205\.5\.2\x20Error:\x20command\x20not\x20recognized\r\
+SF:n")%r(GenericLines,72,"220-redirect\.ovh\.net\x20smtp5\r\n220\x20redire
+SF:ct\.ovh\.net\x20smtp5\r\n500\x205\.5\.2\x20Error:\x20bad\x20syntax\r\n5
+SF:00\x205\.5\.2\x20Error:\x20bad\x20syntax\r\n")%r(GetRequest,6B,"220-red
+SF:irect\.ovh\.net\x20smtp5\r\n220\x20redirect\.ovh\.net\x20smtp5\r\n221\x
+SF:202\.7\.0\x20Error:\x20I\x20can\x20break\x20rules,\x20too\.\x20Goodbye\
+SF:.\r\n")%r(HTTPOptions,62,"220\x20redirect\.ovh\.net\x20smtp4\r\n502\x20
+SF:5\.5\.2\x20Error:\x20command\x20not\x20recognized\r\n500\x205\.5\.2\x20
+SF:Error:\x20bad\x20syntax\r\n")%r(RTSPRequest,7E,"220-redirect\.ovh\.net\
+SF:x20smtp5\r\n220\x20redirect\.ovh\.net\x20smtp5\r\n502\x205\.5\.2\x20Err
+SF:or:\x20command\x20not\x20recognized\r\n500\x205\.5\.2\x20Error:\x20bad\
+SF:x20syntax\r\n")%r(RPCCheck,38,"220-redirect\.ovh\.net\x20smtp6\r\n220\x
+SF:20redirect\.ovh\.net\x20smtp6\r\n")%r(DNSVersionBindReqTCP,38,"220-redi
+SF:rect\.ovh\.net\x20smtp6\r\n220\x20redirect\.ovh\.net\x20smtp6\r\n")%r(D
+SF:NSStatusRequestTCP,38,"220-redirect\.ovh\.net\x20smtp2\r\n220\x20redire
+SF:ct\.ovh\.net\x20smtp2\r\n")%r(SSLSessionReq,61,"220-redirect\.ovh\.net\
+SF:x20smtp9\r\n220\x20redirect\.ovh\.net\x20smtp9\r\n502\x205\.5\.2\x20Err
+SF:or:\x20command\x20not\x20recognized\r\n")%r(TerminalServerCookie,61,"22
+SF:0-redirect\.ovh\.net\x20smtp2\r\n220\x20redirect\.ovh\.net\x20smtp2\r\n
+SF:502\x205\.5\.2\x20Error:\x20command\x20not\x20recognized\r\n")%r(TLSSes
+SF:sionReq,61,"220-redirect\.ovh\.net\x20smtp7\r\n220\x20redirect\.ovh\.ne
+SF:t\x20smtp7\r\n502\x205\.5\.2\x20Error:\x20command\x20not\x20recognized\
+SF:r\n")%r(Kerberos,39,"220\x20redirect\.ovh\.net\x20smtp4\r\n500\x205\.5\
+SF:.2\x20Error:\x20bad\x20syntax\r\n")%r(SMBProgNeg,38,"220-redirect\.ovh\
+SF:.net\x20smtp3\r\n220\x20redirect\.ovh\.net\x20smtp3\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=5/19%Time=682AA344%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=5/25%Time=68329253%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,1596,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20nginx\r\ndate:\x
-SF:20Mon,\x2019\x20May\x202025\x2003:19:32\x20GMT\r\ncontent-type:\x20text
+SF:20Sun,\x2025\x20May\x202025\x2003:45:23\x20GMT\r\ncontent-type:\x20text
 SF:/html;\x20charset=utf8\r\npragma:\x20no-cache\r\ncache-control:\x20no-s
 SF:tore,\x20no-cache,\x20must-revalidate\r\ncontent-length:\x205146\r\nx-i
-SF:plb-request-id:\x2034AA9CC7:0402_D5BA2105:0050_682AA33E_9DC44EB4:28C7\r
-SF:\nx-iplb-instance:\x2052243\r\nset-cookie:\x20SERVERID77446=200172\|aCq
-SF:jR\|aCqjR;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n<html\
+SF:plb-request-id:\x202876AB21:0401_D5BA2105:0050_6832924D_CF5564A5:28C7\r
+SF:\nx-iplb-instance:\x2052243\r\nset-cookie:\x20SERVERID77446=200177\|aDK
+SF:SV\|aDKSV;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n<html\
 SF:x20xml:lang=\"fr-FR\"\x20lang=\"fr-FR\">\n<head>\n<meta\x20name=\"viewp
 SF:ort\"\x20content=\"width=device-width\">\n<title\x20qtlid=\"74178\">Sit
 SF:e\x20en\x20construction</title>\n<meta\x20http-equiv=\"Content-Type\"\x
@@ -163,12 +158,12 @@ SF:<meta\x20name=\"robots\"\x20content=\"none,noindex,nofollow\">\n<meta\x
 SF:20http-equiv=\"cache-control\"\x20content=\"no-cache\">\n<meta\x20http-
 SF:equiv=\"pragma\"\x20content=\"no-cache\">\n<meta\x20name=\"DP\.Pop")%r(
 SF:HTTPOptions,1596,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20nginx\r\ndate:\x
-SF:20Mon,\x2019\x20May\x202025\x2003:19:32\x20GMT\r\ncontent-type:\x20text
+SF:20Sun,\x2025\x20May\x202025\x2003:45:23\x20GMT\r\ncontent-type:\x20text
 SF:/html;\x20charset=utf8\r\npragma:\x20no-cache\r\ncache-control:\x20no-s
 SF:tore,\x20no-cache,\x20must-revalidate\r\ncontent-length:\x205146\r\nx-i
-SF:plb-request-id:\x2034AA9CC7:0401_D5BA2105:0050_682AA344_5AA58AC1:63BF\r
-SF:\nx-iplb-instance:\x2052345\r\nset-cookie:\x20SERVERID77446=200172\|aCq
-SF:jR\|aCqjR;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n<html\
+SF:plb-request-id:\x202876AB21:0402_D5BA2105:0050_68329253_CF55A29C:28C7\r
+SF:\nx-iplb-instance:\x2052243\r\nset-cookie:\x20SERVERID77446=200175\|aDK
+SF:SV\|aDKSV;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n<html\
 SF:x20xml:lang=\"fr-FR\"\x20lang=\"fr-FR\">\n<head>\n<meta\x20name=\"viewp
 SF:ort\"\x20content=\"width=device-width\">\n<title\x20qtlid=\"74178\">Sit
 SF:e\x20en\x20construction</title>\n<meta\x20http-equiv=\"Content-Type\"\x
@@ -180,4 +175,4 @@ SF:20http-equiv=\"cache-control\"\x20content=\"no-cache\">\n<meta\x20http-
 SF:equiv=\"pragma\"\x20content=\"no-cache\">\n<meta\x20name=\"DP\.Pop");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon May 19 03:21:56 2025 -- 1 IP address (1 host up) scanned in 157.64 seconds
+# Nmap done at Sun May 25 03:47:50 2025 -- 1 IP address (1 host up) scanned in 163.91 seconds
