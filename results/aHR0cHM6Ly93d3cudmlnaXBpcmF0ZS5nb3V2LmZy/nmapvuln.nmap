@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon May 19 03:39:37 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
+# Nmap 7.92 scan initiated Mon May 26 03:24:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
 Nmap scan report for www.vigipirate.gouv.fr (87.98.148.216)
-Host is up (0.086s latency).
+Host is up (0.15s latency).
 rDNS record for 87.98.148.216: vigipirate.gouv.fr
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
@@ -38,6 +38,7 @@ PORT     STATE SERVICE  VERSION
 |     	CVE-2023-48795	5.9	https://vulners.com/cve/CVE-2023-48795
 |     	CVE-2020-14145	5.9	https://vulners.com/cve/CVE-2020-14145
 |     	CVE-2019-6111	5.9	https://vulners.com/cve/CVE-2019-6111
+|     	CC3AE4FC-CF04-5EDA-A010-6D7E71538C92	5.9	https://vulners.com/githubexploit/CC3AE4FC-CF04-5EDA-A010-6D7E71538C92	*EXPLOIT*
 |     	54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	5.9	https://vulners.com/githubexploit/54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	*EXPLOIT*
 |     	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
 |     	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
@@ -64,13 +65,15 @@ PORT     STATE SERVICE  VERSION
 |_http-server-header: Apache
 3306/tcp open  mysql?
 | fingerprint-strings: 
-|   NULL: 
-|_    Host '172.191.226.248' is not allowed to connect to this MariaDB server
+|   LDAPSearchReq, NULL: 
+|_    Host '20.171.140.75' is not allowed to connect to this MariaDB server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3306-TCP:V=7.92%I=7%D=5/19%Time=682AA7FB%P=x86_64-alpine-linux-musl
-SF:%r(NULL,4E,"J\0\0\x01\xffj\x04Host\x20'172\.191\.226\.248'\x20is\x20not
-SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+SF-Port3306-TCP:V=7.92%I=7%D=5/26%Time=6833DEE9%P=x86_64-alpine-linux-musl
+SF:%r(NULL,4C,"H\0\0\x01\xffj\x04Host\x20'20\.171\.140\.75'\x20is\x20not\x
+SF:20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LDAPS
+SF:earchReq,4C,"H\0\0\x01\xffj\x04Host\x20'20\.171\.140\.75'\x20is\x20not\
+SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon May 19 03:39:53 2025 -- 1 IP address (1 host up) scanned in 16.02 seconds
+# Nmap done at Mon May 26 03:24:40 2025 -- 1 IP address (1 host up) scanned in 18.18 seconds
