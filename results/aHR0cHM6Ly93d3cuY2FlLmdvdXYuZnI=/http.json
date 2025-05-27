@@ -1,28 +1,27 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D+",
+    "grade": "F",
     "error": null,
-    "score": 40,
+    "score": 0,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 6,
+    "testsPassed": 4,
     "testsQuantity": 10,
     "responseHeaders": {
-      "content-length": "7003",
-      "connection": "close",
+      "date": "Tue, 27 May 2025 03:40:36 GMT",
       "content-type": "text/html; charset=utf-8",
-      "date": "Wed, 21 May 2025 03:13:03 GMT",
-      "server": "Microsoft-IIS/10.0",
-      "set-cookie": [
-        "ARRAffinity=68a25d2e2c8419653f12706bc81dff2167c0488c79ef4ba4dbceae162527e73f;Path=/;HttpOnly;Secure;Domain=www.cae-eco.fr",
-        "ARRAffinitySameSite=68a25d2e2c8419653f12706bc81dff2167c0488c79ef4ba4dbceae162527e73f;Path=/;HttpOnly;SameSite=None;Secure;Domain=www.cae-eco.fr"
-      ],
-      "vary": "Cookie,Accept-Encoding",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "server": "OVHcloud",
+      "vary": "Accept-Encoding,Cookie",
+      "status": "200 OK",
       "x-frame-options": "SAMEORIGIN",
-      "x-content-type-options": "nosniff",
-      "referrer-policy": "same-origin",
-      "x-powered-by": "ASP.NET"
+      "x-powered-by": "Phusion Passenger(R)",
+      "set-cookie": [
+        "sessionid=wkn7hofbja0hreaolkcknfk1g8l342xx; expires=Tue, 10 Jun 2025 03:40:36 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax",
+        "_passenger_route=1558359214; Path=/; SameSite=Lax; Secure;"
+      ]
     }
   },
   "tests": {
@@ -39,23 +38,24 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions",
-      "scoreModifier": 0,
+      "pass": false,
+      "result": "cookies-session-without-secure-flag",
+      "scoreModifier": -40,
       "data": {
-        "ARRAffinity": {
-          "domain": "www.cae-eco.fr",
+        "sessionid": {
+          "domain": "cae-eco.fr",
+          "expires": "2025-06-10T03:40:36.000Z",
           "httponly": true,
+          "max-age": 1209600,
           "path": "/",
           "port": null,
-          "secure": true
+          "samesite": "lax"
         },
-        "ARRAffinitySameSite": {
-          "domain": "www.cae-eco.fr",
-          "httponly": true,
+        "_passenger_route": {
+          "domain": "cae-eco.fr",
           "path": "/",
           "port": null,
-          "samesite": "none",
+          "samesite": "lax",
           "secure": true
         }
       },
@@ -73,22 +73,22 @@
       "pass": false,
       "result": "redirection-not-to-https-on-initial-redirection",
       "scoreModifier": -10,
-      "destination": "https://www.cae-eco.fr/",
+      "destination": "https://cae-eco.fr/",
       "redirects": true,
       "route": [
         "http://www.cae.gouv.fr/",
         "http://www.cae-eco.fr/",
-        "https://www.cae-eco.fr/"
+        "https://cae-eco.fr/"
       ],
       "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "same-origin",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
@@ -116,10 +116,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
