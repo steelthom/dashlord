@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat May 24 03:32:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mairie.ants.gouv.fr
+# Nmap 7.92 scan initiated Sat May 31 03:23:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mairie.ants.gouv.fr
 Nmap scan report for www.mairie.ants.gouv.fr (66.22.32.165)
-Host is up (0.081s latency).
+Host is up (0.082s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE  VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE  VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Sat, 24 May 2025 03:32:15 GMT
+|     Date: Sat, 31 May 2025 03:24:04 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -24,25 +24,10 @@ PORT    STATE    SERVICE  VERSION
 |     <hr><center>rdwr</center>
 |     </body>
 |     </html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Sat, 24 May 2025 03:32:14 GMT
-|     Content-Type: text/html
-|     Content-Length: 137
-|     Connection: close
-|     Location: https://mairie.ants.gouv.fr:443/
-|     <html>
-|     <head><title>302 Found</title></head>
-|     <body>
-|     <center><h1>302 Found</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|     </html>
-|   HTTPOptions: 
-|     HTTP/1.1 302 Moved Temporarily
-|     Server: rdwr
-|     Date: Sat, 24 May 2025 03:32:15 GMT
+|     Date: Sat, 31 May 2025 03:24:03 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -57,7 +42,7 @@ PORT    STATE    SERVICE  VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Sat, 24 May 2025 03:32:15 GMT
+|     Date: Sat, 31 May 2025 03:24:03 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -77,33 +62,33 @@ PORT    STATE    SERVICE  VERSION
 |   nginx 1.27.0: 
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=5/24%Time=68313DBE%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=5/31%Time=683A7653%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,14B,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Sat,\x2024\x20May\x202025\x2003:32:14\x20GMT\r\nConte
+SF:0rdwr\r\nDate:\x20Sat,\x2031\x20May\x202025\x2003:24:03\x20GMT\r\nConte
 SF:nt-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close
 SF:\r\nLocation:\x20https://mairie\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<
 SF:head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x2
 SF:0Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>
 SF:\r\n")%r(HTTPOptions,14B,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nS
-SF:erver:\x20rdwr\r\nDate:\x20Sat,\x2024\x20May\x202025\x2003:32:15\x20GMT
+SF:erver:\x20rdwr\r\nDate:\x20Sat,\x2031\x20May\x202025\x2003:24:03\x20GMT
 SF:\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:
 SF:\x20close\r\nLocation:\x20https://mairie\.ants\.gouv\.fr:443/\r\n\r\n<h
 SF:tml>\r\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><
 SF:h1>302\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r
 SF:\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r
-SF:\nServer:\x20rdwr\r\nDate:\x20Sat,\x2024\x20May\x202025\x2003:32:15\x20
+SF:\nServer:\x20rdwr\r\nDate:\x20Sat,\x2031\x20May\x202025\x2003:24:03\x20
 SF:GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnecti
 SF:on:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title
 SF:></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r
 SF:\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,
 SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Sat,
-SF:\x2024\x20May\x202025\x2003:32:15\x20GMT\r\nContent-Type:\x20text/html\
+SF:\x2031\x20May\x202025\x2003:24:03\x20GMT\r\nContent-Type:\x20text/html\
 SF:r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<hea
 SF:d><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>
 SF:400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</b
 SF:ody>\r\n</html>\r\n")%r(FourOhFourRequest,16E,"HTTP/1\.1\x20302\x20Move
-SF:d\x20Temporarily\r\nServer:\x20rdwr\r\nDate:\x20Sat,\x2024\x20May\x2020
-SF:25\x2003:32:15\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
+SF:d\x20Temporarily\r\nServer:\x20rdwr\r\nDate:\x20Sat,\x2031\x20May\x2020
+SF:25\x2003:24:04\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
 SF:x20137\r\nConnection:\x20close\r\nLocation:\x20https://mairie\.ants\.go
 SF:uv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head>
 SF:<title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Foun
@@ -111,4 +96,4 @@ SF:d</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n"
 SF:);
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat May 24 03:32:27 2025 -- 1 IP address (1 host up) scanned in 21.67 seconds
+# Nmap done at Sat May 31 03:24:16 2025 -- 1 IP address (1 host up) scanned in 22.01 seconds
