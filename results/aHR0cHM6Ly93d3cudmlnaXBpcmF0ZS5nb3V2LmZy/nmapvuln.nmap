@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Mon May 26 03:24:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
+# Nmap 7.92 scan initiated Mon Jun  2 03:34:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
 Nmap scan report for www.vigipirate.gouv.fr (87.98.148.216)
 Host is up (0.15s latency).
 rDNS record for 87.98.148.216: vigipirate.gouv.fr
@@ -7,6 +7,7 @@ PORT     STATE SERVICE  VERSION
 22/tcp   open  ssh      OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:7.4p1: 
+|     	F0979183-AE88-53B4-86CF-3AF0523F3807	9.8	https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807	*EXPLOIT*
 |     	CVE-2023-38408	9.8	https://vulners.com/cve/CVE-2023-38408
 |     	B8190CDB-3EB9-5631-9828-8064A1575B23	9.8	https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23	*EXPLOIT*
 |     	8FC9C5AB-3968-5F3C-825E-E8DB5379A623	9.8	https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623	*EXPLOIT*
@@ -15,9 +16,10 @@ PORT     STATE SERVICE  VERSION
 |     	2227729D-6700-5C8F-8930-1EEAFD4B9FF0	9.8	https://vulners.com/githubexploit/2227729D-6700-5C8F-8930-1EEAFD4B9FF0	*EXPLOIT*
 |     	0221525F-07F5-5790-912D-F4B9E2D1B587	9.8	https://vulners.com/githubexploit/0221525F-07F5-5790-912D-F4B9E2D1B587	*EXPLOIT*
 |     	CVE-2020-15778	7.8	https://vulners.com/cve/CVE-2020-15778
+|     	C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	7.8	https://vulners.com/githubexploit/C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	*EXPLOIT*
+|     	10213DBE-F683-58BB-B6D3-353173626207	7.8	https://vulners.com/githubexploit/10213DBE-F683-58BB-B6D3-353173626207	*EXPLOIT*
 |     	SSV:92579	7.5	https://vulners.com/seebug/SSV:92579	*EXPLOIT*
 |     	PACKETSTORM:173661	7.5	https://vulners.com/packetstorm/PACKETSTORM:173661	*EXPLOIT*
-|     	F0979183-AE88-53B4-86CF-3AF0523F3807	7.5	https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807	*EXPLOIT*
 |     	1337DAY-ID-26576	7.5	https://vulners.com/zdt/1337DAY-ID-26576	*EXPLOIT*
 |     	CVE-2021-41617	7.0	https://vulners.com/cve/CVE-2021-41617
 |     	95499236-C9FE-56A6-9D7D-E943A24B633A	6.9	https://vulners.com/githubexploit/95499236-C9FE-56A6-9D7D-E943A24B633A	*EXPLOIT*
@@ -29,9 +31,7 @@ PORT     STATE SERVICE  VERSION
 |     	CVE-2025-26465	6.8	https://vulners.com/cve/CVE-2025-26465
 |     	CVE-2019-6110	6.8	https://vulners.com/cve/CVE-2019-6110
 |     	CVE-2019-6109	6.8	https://vulners.com/cve/CVE-2019-6109
-|     	C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	6.8	https://vulners.com/githubexploit/C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	*EXPLOIT*
 |     	1337DAY-ID-39918	6.8	https://vulners.com/zdt/1337DAY-ID-39918	*EXPLOIT*
-|     	10213DBE-F683-58BB-B6D3-353173626207	6.8	https://vulners.com/githubexploit/10213DBE-F683-58BB-B6D3-353173626207	*EXPLOIT*
 |     	CVE-2023-51385	6.5	https://vulners.com/cve/CVE-2023-51385
 |     	PACKETSTORM:181223	5.9	https://vulners.com/packetstorm/PACKETSTORM:181223	*EXPLOIT*
 |     	MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-	5.9	https://vulners.com/metasploit/MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-	*EXPLOIT*
@@ -65,15 +65,17 @@ PORT     STATE SERVICE  VERSION
 |_http-server-header: Apache
 3306/tcp open  mysql?
 | fingerprint-strings: 
-|   LDAPSearchReq, NULL: 
-|_    Host '20.171.140.75' is not allowed to connect to this MariaDB server
+|   GenericLines, NULL, afp: 
+|_    Host '20.172.31.2' is not allowed to connect to this MariaDB server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3306-TCP:V=7.92%I=7%D=5/26%Time=6833DEE9%P=x86_64-alpine-linux-musl
-SF:%r(NULL,4C,"H\0\0\x01\xffj\x04Host\x20'20\.171\.140\.75'\x20is\x20not\x
-SF:20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LDAPS
-SF:earchReq,4C,"H\0\0\x01\xffj\x04Host\x20'20\.171\.140\.75'\x20is\x20not\
-SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+SF-Port3306-TCP:V=7.92%I=7%D=6/2%Time=683D1BE2%P=x86_64-alpine-linux-musl%
+SF:r(NULL,4A,"F\0\0\x01\xffj\x04Host\x20'20\.172\.31\.2'\x20is\x20not\x20a
+SF:llowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(GenericL
+SF:ines,4A,"F\0\0\x01\xffj\x04Host\x20'20\.172\.31\.2'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(afp,4A,"F\
+SF:0\0\x01\xffj\x04Host\x20'20\.172\.31\.2'\x20is\x20not\x20allowed\x20to\
+SF:x20connect\x20to\x20this\x20MariaDB\x20server");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon May 26 03:24:40 2025 -- 1 IP address (1 host up) scanned in 18.18 seconds
+# Nmap done at Mon Jun  2 03:35:13 2025 -- 1 IP address (1 host up) scanned in 18.27 seconds
