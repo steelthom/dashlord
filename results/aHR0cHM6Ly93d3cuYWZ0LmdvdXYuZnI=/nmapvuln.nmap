@@ -1,7 +1,7 @@
-# Nmap 7.92 scan initiated Tue May 27 03:45:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.aft.gouv.fr
+# Nmap 7.92 scan initiated Tue Jun  3 03:46:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.aft.gouv.fr
 Nmap scan report for www.aft.gouv.fr (141.101.90.99)
-Host is up (0.0020s latency).
-Other addresses for www.aft.gouv.fr (not scanned): 141.101.90.98 141.101.90.96 141.101.90.97
+Host is up (0.0026s latency).
+Other addresses for www.aft.gouv.fr (not scanned): 141.101.90.97 141.101.90.96 141.101.90.98
 
 PORT      STATE SERVICE    VERSION
 1/tcp     open  tcpwrapped
@@ -589,7 +589,17 @@ PORT      STATE SERVICE    VERSION
 5225/tcp  open  tcpwrapped
 5226/tcp  open  tcpwrapped
 5269/tcp  open  tcpwrapped
-|_xmpp-info: ERROR: Script execution failed (use -d to debug)
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     compression_methods: 
+|     features: 
+|     capabilities: 
+|     xmpp: 
+|     auth_mechanisms: 
+|     unknown: 
+|     errors: 
+|_      (timeout)
 5280/tcp  open  tcpwrapped
 5298/tcp  open  tcpwrapped
 5357/tcp  open  tcpwrapped
@@ -1014,4 +1024,4 @@ PORT      STATE SERVICE    VERSION
 65389/tcp open  tcpwrapped
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue May 27 03:45:30 2025 -- 1 IP address (1 host up) scanned in 21.74 seconds
+# Nmap done at Tue Jun  3 03:46:57 2025 -- 1 IP address (1 host up) scanned in 25.32 seconds
