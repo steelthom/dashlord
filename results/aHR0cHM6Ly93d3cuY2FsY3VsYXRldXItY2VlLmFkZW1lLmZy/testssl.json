@@ -206,7 +206,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -346,7 +346,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (40)"
+              "finding"      : "expires < 60 days (33)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -647,7 +647,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (40)"
+              "finding"      : "expires < 60 days (33)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -839,104 +839,18 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
-              "id"           : "insecure_redirect",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "Redirect to insecure URL: 'http://dri-services.com/hosted-by/'"
-          }
-,         {
               "id"           : "HTTP_status_code",
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "302 Found ('/')"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header request failed"
           }
 ,         {
-              "id"           : "HTTP_clock_skew",
+              "id"           : "scanProblem",
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1748404554"
-          }
-,         {
-              "id"           : "ipv4_in_header",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=7TKPJyqxhhT_S5yRH3s43Vp1wr1oO5dk0rZs0NRik7U-1748404554-1.0.1.1-9LkS5JChFgkEn.iZMBJHG3f4TLaQtWa.u57TCfkoH8bcmtC.F1JCeIT2UDT3S8WtOKBh_ql5xXYI5kgNVubJljqv8ajmv.2GaDfmXC3FwjU; path=/; expires=Wed, 28-May-25 04:25:54 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
-          }
-,         {
-              "id"           : "HSTS",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "cloudflare"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1 at '/' (30x detected, better try target URL of 30x)"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
-          }
-,         {
-              "id"           : "security_headers",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header was repeatedly zero."
           }
 ,         {
               "id"           : "heartbleed",
@@ -1004,10 +918,10 @@
               "id"           : "BREACH",
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "WARN",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "Test failed as HTTP request stalled and was terminated"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1428,14 +1342,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A"
-          }
-,         {
-              "id"           : "grade_cap_reason_1",
-              "ip"           : "www.calculateur-cee.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to A. HSTS is not offered"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "service",
@@ -1784,7 +1691,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (40)"
+              "finding"      : "expires < 60 days (33)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2085,7 +1992,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (40)"
+              "finding"      : "expires < 60 days (33)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2302,7 +2209,7 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1748404608"
+              "finding"      : "1749008955"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2310,7 +2217,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=h9Hqt7fSEZIBuV3c3186vGLPvZT4y58RJTJRkdfRI2w-1748404608-1.0.1.1-O_xKaWnudpf8.gg83z8Ai2LsePy7q.XM5QtHqZsctGpug0r8sdaJIHs6w_IcxTSxdWWDGAsiDDf3UMAtB.1ZFtjoejcvvrb_sdZGvxefui4; path=/; expires=Wed, 28-May-25 04:26:48 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=6JM6hetkv.y.cf0ocSe2Y9YhkbI0vr.jt.QGbc50rcU-1749008955-1.0.1.1-owOEc_9ils1s9QXvz26zGd_va2zNY5fNgwBkN8pdsu1gaRMXrFriRMd2u7E99tSH_DyfXTZ.6YE3xVcpe8HH6DiC1N7fCKVN6t2kaBDVlDQ; path=/; expires=Wed, 04-Jun-25 04:19:15 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -2880,6 +2787,6 @@
               "ip"           : "www.calculateur-cee.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "111"
+              "finding"      : "139"
           }
 ]
