@@ -1,16 +1,17 @@
-# Nmap 7.92 scan initiated Thu May 29 03:16:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.drdjscs.gouv.fr
+# Nmap 7.92 scan initiated Wed Jun  4 03:43:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.drdjscs.gouv.fr
 Nmap scan report for www.drdjscs.gouv.fr (185.75.143.22)
-Host is up (0.090s latency).
+Host is up (0.11s latency).
 rDNS record for 185.75.143.22: MEN-MUTU-PROXY01.dedie.ate.info
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http      nginx
 443/tcp open  ssl/https
+|_http-server-header: nginx
 | fingerprint-strings: 
 |   OpenVPN: 
 |     HTTP/1.1 400 Bad Request
 |     Server: nginx
-|     Date: Thu, 29 May 2025 03:16:35 GMT
+|     Date: Wed, 04 Jun 2025 03:44:02 GMT
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
@@ -21,15 +22,14 @@ PORT    STATE SERVICE   VERSION
 |     <hr><center>nginx</center>
 |     </body>
 |_    </html>
-|_http-server-header: nginx
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%I=7%D=5/29%Time=6837D193%P=x86_64-alpine-linux-musl%
-SF:r(OpenVPN,127,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx\r
-SF:\nDate:\x20Thu,\x2029\x20May\x202025\x2003:16:35\x20GMT\r\nContent-Type
-SF::\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n\r\
-SF:n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\
-SF:r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>nginx
-SF:</center>\r\n</body>\r\n</html>\r\n");
+SF-Port443-TCP:V=7.92%I=7%D=6/4%Time=683FC102%P=x86_64-alpine-linux-musl%r
+SF:(OpenVPN,127,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx\r\
+SF:nDate:\x20Wed,\x2004\x20Jun\x202025\x2003:44:02\x20GMT\r\nContent-Type:
+SF:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n\r\n
+SF:<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r
+SF:\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>nginx<
+SF:/center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu May 29 03:16:41 2025 -- 1 IP address (1 host up) scanned in 21.19 seconds
+# Nmap done at Wed Jun  4 03:44:09 2025 -- 1 IP address (1 host up) scanned in 23.43 seconds
