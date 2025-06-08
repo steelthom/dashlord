@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr</pre>
-<p class="lead">Sun Jun  1 03:48:11 2025 – Sun Jun  1 03:50:45 2025<br>1 hosts scanned.
+<p class="lead">Sun Jun  8 03:47:42 2025 – Sun Jun  8 03:50:27 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,14 +111,34 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
-<td title="Product">F5 BIG-IP load balancer http proxy</td>
+<td title="Service">http</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+    Content-Length: 0
+  GetRequest, HTTPOptions, RTSPRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://sip:nm
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://mstshash=nmap
+    Connection: close
+    Content-Length: 0</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -150,15 +170,15 @@
     ERROR
   GetRequest: 
     HTTP/1.1 200 OK
-    Date: Sun, 01 Jun 2025 03:48:32 GMT
+    Date: Sun, 08 Jun 2025 03:48:02 GMT
     X-Outils-CS: 
     Vary: Cookie,Accept-Encoding
     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
     X-Spip-Cache: 86400
-    Last-Modified: Sun, 01 Jun 2025 03:48:32 GMT
+    Last-Modified: Sun, 08 Jun 2025 03:48:02 GMT
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!YWBO+GdcYeJMAGqQEus9KsUIQe0YeX5bmYGG8cw30c+qW8JJgkkgnNMPoZFFUy09atS/76jRtbv2uumpURctWzBbXYA=; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!IP0tEgjcjGlUpnyQEus9KsUIQe0YeVXF0GGn08bdd7o4Erqy3zQqrW3F14fSPNH4/rhFXce/Cj/x9MCKQb300boxE7g=; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
     &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"&gt;
@@ -199,8 +219,8 @@
 <td>185.194.83.18 - www.haut-conseil-egalite.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http-proxy</td>
-<td>F5 BIG-IP load balancer http proxy</td>
+<td>http</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>

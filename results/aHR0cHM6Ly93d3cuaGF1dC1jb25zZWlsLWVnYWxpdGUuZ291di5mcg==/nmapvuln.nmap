@@ -1,10 +1,30 @@
-# Nmap 7.92 scan initiated Sun Jun  1 03:48:11 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
+# Nmap 7.92 scan initiated Sun Jun  8 03:47:42 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
 Nmap scan report for www.haut-conseil-egalite.gouv.fr (185.194.83.18)
-Host is up (0.11s latency).
+Host is up (0.096s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE    VERSION
-80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
-|_http-server-header: BigIP
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
 |_http-trane-info: Problem with XML parsing of /evox/about
@@ -16,15 +36,15 @@ PORT    STATE  SERVICE    VERSION
 |     ERROR
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Sun, 01 Jun 2025 03:48:32 GMT
+|     Date: Sun, 08 Jun 2025 03:48:02 GMT
 |     X-Outils-CS: 
 |     Vary: Cookie,Accept-Encoding
 |     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
 |     X-Spip-Cache: 86400
-|     Last-Modified: Sun, 01 Jun 2025 03:48:32 GMT
+|     Last-Modified: Sun, 08 Jun 2025 03:48:02 GMT
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!YWBO+GdcYeJMAGqQEus9KsUIQe0YeX5bmYGG8cw30c+qW8JJgkkgnNMPoZFFUy09atS/76jRtbv2uumpURctWzBbXYA=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!IP0tEgjcjGlUpnyQEus9KsUIQe0YeVXF0GGn08bdd7o4Erqy3zQqrW3F14fSPNH4/rhFXce/Cj/x9MCKQb300boxE7g=; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 |     <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
@@ -43,33 +63,48 @@ PORT    STATE  SERVICE    VERSION
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |_    ERROR
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/1%Time=683BCD90%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2001\x
-SF:20Jun\x202025\x2003:48:32\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cookie
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=6/8%Time=684507EC%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x2
+SF:0https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(
+SF:HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLoc
+SF:ation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\
+SF:x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"H
+SF:TTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstshas
+SF:h=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPO
+SF:ptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20htt
+SF:ps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/8%Time=684507F2%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2008\x
+SF:20Jun\x202025\x2003:48:02\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cookie
 SF:,Accept-Encoding\r\nComposed-By:\x20SPIP\x204\.3\.6\x20@\x20www\.spip\.
 SF:net\x20\+\x20https://https:/local/config\.txt\r\nX-Spip-Cache:\x2086400
-SF:\r\nLast-Modified:\x20Sun,\x2001\x20Jun\x202025\x2003:48:32\x20GMT\r\nC
+SF:\r\nLast-Modified:\x20Sun,\x2008\x20Jun\x202025\x2003:48:02\x20GMT\r\nC
 SF:onnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\n
 SF:Set-Cookie:\x20BIGipServerpool-dgcs-hautconseilegalite2\.cegedim\.cloud
-SF:-HTTP=!YWBO\+GdcYeJMAGqQEus9KsUIQe0YeX5bmYGG8cw30c\+qW8JJgkkgnNMPoZFFUy
-SF:09atS/76jRtbv2uumpURctWzBbXYA=;\x20path=/;\x20Httponly;\x20Secure\r\nSt
-SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\
-SF:r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tra
-SF:nsitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitio
-SF:nal\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20lan
-SF:g=\"fr\"\x20xml:lang=\"fr\">\r\n<head>\r\n\t<meta\x20http-equiv=\"Conte
-SF:nt-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<title>
-SF:Haut\x20Conseil\x20\xc3\xa0\x20l'\xc3\x89galit\xc3\xa9\x20entre\x20les\
-SF:x20femmes\x20et\x20les\x20hommes</ti")%r(HTTPOptions,4E,"HTTP/1\.0\x204
-SF:03\x20Forbidden\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\
-SF:n\r\n403\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20
-SF:Found\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x
-SF:20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConne
-SF:ction:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR")%r(SI
-SF:POptions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-
-SF:Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
-Service Info: Device: load balancer
+SF:-HTTP=!IP0tEgjcjGlUpnyQEus9KsUIQe0YeVXF0GGn08bdd7o4Erqy3zQqrW3F14fSPNH4
+SF:/rhFXce/Cj/x9MCKQb300boxE7g=;\x20path=/;\x20Httponly;\x20Secure\r\nStri
+SF:ct-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\
+SF:n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Trans
+SF:itional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitiona
+SF:l\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20lang=
+SF:\"fr\"\x20xml:lang=\"fr\">\r\n<head>\r\n\t<meta\x20http-equiv=\"Content
+SF:-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<title>Ha
+SF:ut\x20Conseil\x20\xc3\xa0\x20l'\xc3\x89galit\xc3\xa9\x20entre\x20les\x2
+SF:0femmes\x20et\x20les\x20hommes</ti")%r(HTTPOptions,4E,"HTTP/1\.0\x20403
+SF:\x20Forbidden\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\
+SF:r\n403\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20Fo
+SF:und\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x20
+SF:ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnect
+SF:ion:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR")%r(SIPO
+SF:ptions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Al
+SF:ive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Jun  1 03:50:45 2025 -- 1 IP address (1 host up) scanned in 154.67 seconds
+# Nmap done at Sun Jun  8 03:50:27 2025 -- 1 IP address (1 host up) scanned in 165.30 seconds
