@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.gouv.fr</pre>
-<p class="lead">Mon Jun  2 03:30:27 2025 – Mon Jun  2 03:31:08 2025<br>1 hosts scanned.
+<p class="lead">Sun Jun  8 03:57:18 2025 – Sun Jun  8 03:58:12 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,14 +111,22 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
-<td title="Product">F5 BIG-IP load balancer http proxy</td>
+<td title="Service">http</td>
+<td title="Product">BigIP</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///
+    Server: BigIP
+    Connection: close
+    Content-Length: 0</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -139,19 +147,21 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   GetRequest: 
     HTTP/1.1 200 OK
-    Date: Mon, 02 Jun 2025 03:30:50 GMT
+    Date: Sun, 08 Jun 2025 03:57:41 GMT
     X-Spip-Cache: 21600
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Mon, 02 Jun 2025 03:30:50 GMT
+    Last-Modified: Sun, 08 Jun 2025 03:57:41 GMT
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!I/U45IRvlnnJ6UaQEus9KsUIQe0YeTj5PTknbXt0ZishuPX0tbhKcyM/L+9iixNGRvFx8WRdTE3LTwoiho4XgLgey2aU; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!Ubac00K+m0POXr2QEus9KsUIQe0YeY6x8DYktq1BD5EoKaEK+i5ejcIi70XH9VsEJ72gi37B32+GH77Y1kUvphkJ4+Bl; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
     &lt;!DOCTYPE HTML&gt;
     &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
@@ -164,15 +174,15 @@
     &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
   HTTPOptions: 
     HTTP/1.1 200 OK
-    Date: Mon, 02 Jun 2025 03:30:51 GMT
+    Date: Sun, 08 Jun 2025 03:57:42 GMT
     X-Spip-Cache: 21600
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Mon, 02 Jun 2025 03:30:51 GMT
+    Last-Modified: Sun, 08 Jun 2025 03:57:42 GMT
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!c6fkTe53Rbc8FiWQEus9KsUIQe0YecxBwmDbd87bpwFRxxVsHclDg/N6B8rKjvGOpyY4ZyNF+2ZpBV4buY81kVHCP+/e; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!NpbVXkRq33ouv8iQEus9KsUIQe0Yeagmv56a2DPfvlThIg/WlCMd9w42PQZBKVpecKtYTxMGQbBssnlNLnlII/ae97XP; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
     &lt;!DOCTYPE HTML&gt;
     &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
@@ -183,8 +193,6 @@
     l&amp;#039;acc
     soins&lt;/title&gt;
     &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl</pre>
-<h5>http-trane-info</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -207,8 +215,8 @@
 <td>185.194.82.27 - www.sante.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http-proxy</td>
-<td>F5 BIG-IP load balancer http proxy</td>
+<td>http</td>
+<td>BigIP</td>
 <td></td>
 <td></td>
 <td></td>
