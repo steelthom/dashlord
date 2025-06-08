@@ -1,24 +1,32 @@
-# Nmap 7.92 scan initiated Mon Jun  2 03:30:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.gouv.fr
+# Nmap 7.92 scan initiated Sun Jun  8 03:57:18 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.gouv.fr
 Nmap scan report for www.sante.gouv.fr (185.194.82.27)
 Host is up (0.14s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE    VERSION
-80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http      BigIP
 |_http-server-header: BigIP
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Server: BigIP
+|     Connection: close
+|_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Mon, 02 Jun 2025 03:30:50 GMT
+|     Date: Sun, 08 Jun 2025 03:57:41 GMT
 |     X-Spip-Cache: 21600
 |     X-Frame-Options: SAMEORIGIN
-|     Last-Modified: Mon, 02 Jun 2025 03:30:50 GMT
+|     Last-Modified: Sun, 08 Jun 2025 03:57:41 GMT
 |     Vary: Accept-Encoding
 |     X-Content-Type-Options: nosniff
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!I/U45IRvlnnJ6UaQEus9KsUIQe0YeTj5PTknbXt0ZishuPX0tbhKcyM/L+9iixNGRvFx8WRdTE3LTwoiho4XgLgey2aU; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!Ubac00K+m0POXr2QEus9KsUIQe0YeY6x8DYktq1BD5EoKaEK+i5ejcIi70XH9VsEJ72gi37B32+GH77Y1kUvphkJ4+Bl; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000
 |     <!DOCTYPE HTML>
 |     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
@@ -31,15 +39,15 @@ PORT    STATE  SERVICE    VERSION
 |     <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Mon, 02 Jun 2025 03:30:51 GMT
+|     Date: Sun, 08 Jun 2025 03:57:42 GMT
 |     X-Spip-Cache: 21600
 |     X-Frame-Options: SAMEORIGIN
-|     Last-Modified: Mon, 02 Jun 2025 03:30:51 GMT
+|     Last-Modified: Sun, 08 Jun 2025 03:57:42 GMT
 |     Vary: Accept-Encoding
 |     X-Content-Type-Options: nosniff
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!c6fkTe53Rbc8FiWQEus9KsUIQe0YecxBwmDbd87bpwFRxxVsHclDg/N6B8rKjvGOpyY4ZyNF+2ZpBV4buY81kVHCP+/e; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!NpbVXkRq33ouv8iQEus9KsUIQe0Yeagmv56a2DPfvlThIg/WlCMd9w42PQZBKVpecKtYTxMGQbBssnlNLnlII/ae97XP; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000
 |     <!DOCTYPE HTML>
 |     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
@@ -50,43 +58,47 @@ PORT    STATE  SERVICE    VERSION
 |     l&#039;acc
 |     soins</title>
 |_    <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
-|_http-trane-info: Problem with XML parsing of /evox/about
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/2%Time=683D1AEA%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2002\x
-SF:20Jun\x202025\x2003:30:50\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX-Frame-O
-SF:ptions:\x20SAMEORIGIN\r\nLast-Modified:\x20Mon,\x2002\x20Jun\x202025\x2
-SF:003:30:50\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-Options:
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=6/8%Time=68450A2F%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,6C,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x2
+SF:0https:///\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nContent-Lengt
+SF:h:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/8%Time=68450A35%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2008\x
+SF:20Jun\x202025\x2003:57:41\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX-Frame-O
+SF:ptions:\x20SAMEORIGIN\r\nLast-Modified:\x20Sun,\x2008\x20Jun\x202025\x2
+SF:003:57:41\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-Options:
 SF:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20c
 SF:harset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-dares\.ceg
-SF:edim\.cloud-HTTP=!I/U45IRvlnnJ6UaQEus9KsUIQe0YeTj5PTknbXt0ZishuPX0tbhKc
-SF:yM/L\+9iixNGRvFx8WRdTE3LTwoiho4XgLgey2aU;\x20path=/;\x20Httponly;\x20Se
-SF:cure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<!DOCTYPE
-SF:\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-js\"\x20la
-SF:ng=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\[\*/\(fun
-SF:ction\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'js'\)}\)\
-SF:(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>Accueil\x
-SF:20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20de\x20l&#0
-SF:39;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/css'>img\
-SF:.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20{display:
-SF:inline-bl")%r(HTTPOptions,7894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,
-SF:\x2002\x20Jun\x202025\x2003:30:51\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX
-SF:-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Mon,\x2002\x20Jun\x2
-SF:02025\x2003:30:51\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-
-SF:Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
-SF:ml;\x20charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-da
-SF:res\.cegedim\.cloud-HTTP=!c6fkTe53Rbc8FiWQEus9KsUIQe0YecxBwmDbd87bpwFRx
-SF:xVsHclDg/N6B8rKjvGOpyY4ZyNF\+2ZpBV4buY81kVHCP\+/e;\x20path=/;\x20Httpon
-SF:ly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n
-SF:<!DOCTYPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-j
-SF:s\"\x20lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\
-SF:[\*/\(function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'
-SF:js'\)}\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>
-SF:Accueil\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20d
-SF:e\x20l&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/
-SF:css'>img\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20
-SF:{display:inline-bl");
-Service Info: Device: load balancer
+SF:edim\.cloud-HTTP=!Ubac00K\+m0POXr2QEus9KsUIQe0YeY6x8DYktq1BD5EoKaEK\+i5
+SF:ejcIi70XH9VsEJ72gi37B32\+GH77Y1kUvphkJ4\+Bl;\x20path=/;\x20Httponly;\x2
+SF:0Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<!DOCT
+SF:YPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-js\"\x2
+SF:0lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\[\*/\(
+SF:function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'js'\)}
+SF:\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>Accuei
+SF:l\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20de\x20l
+SF:&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/css'>i
+SF:mg\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20{displ
+SF:ay:inline-bl")%r(HTTPOptions,21F4,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20S
+SF:un,\x2008\x20Jun\x202025\x2003:57:42\x20GMT\r\nX-Spip-Cache:\x2021600\r
+SF:\nX-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Sun,\x2008\x20Jun
+SF:\x202025\x2003:57:42\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Ty
+SF:pe-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text
+SF:/html;\x20charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail
+SF:-dares\.cegedim\.cloud-HTTP=!NpbVXkRq33ouv8iQEus9KsUIQe0Yeagmv56a2DPfvl
+SF:ThIg/WlCMd9w42PQZBKVpecKtYTxMGQbBssnlNLnlII/ae97XP;\x20path=/;\x20Httpo
+SF:nly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\
+SF:n<!DOCTYPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-
+SF:js\"\x20lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA
+SF:\[\*/\(function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,
+SF:'js'\)}\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title
+SF:>Accueil\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20
+SF:de\x20l&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text
+SF:/css'>img\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x2
+SF:0{display:inline-bl");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Jun  2 03:31:08 2025 -- 1 IP address (1 host up) scanned in 40.92 seconds
+# Nmap done at Sun Jun  8 03:58:12 2025 -- 1 IP address (1 host up) scanned in 53.50 seconds
