@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.solidarites.gouv.fr</pre>
-<p class="lead">Mon Jun  2 03:44:16 2025 – Mon Jun  2 03:46:57 2025<br>1 hosts scanned.
+<p class="lead">Mon Jun  9 03:53:15 2025 – Mon Jun  9 03:56:06 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,14 +111,34 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
-<td title="Product">F5 BIG-IP load balancer http proxy</td>
+<td title="Service">http</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+    Content-Length: 0
+  GetRequest, HTTPOptions, RTSPRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://sip:nm
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://mstshash=nmap
+    Connection: close
+    Content-Length: 0</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -139,11 +159,13 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   GetRequest: 
     HTTP/1.1 400 Bad Request
-    Date: Mon, 02 Jun 2025 03:44:38 GMT
+    Date: Mon, 09 Jun 2025 03:53:37 GMT
     Access-Control-Allow-Methods: GET, POST, OPTIONS
     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
     Access-Control-Allow-Credentials: true
@@ -153,7 +175,7 @@
     X-Cache: MISS
     X-Cache-Hits: 0
     Connection: close
-    Set-Cookie: BIGipServerpool-handicap-v2.cegedim.cloud-HTTP=3468974346.20480.0000; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-handicap-v2.cegedim.cloud-HTTP=3485751562.20480.0000; path=/; Httponly; Secure
     &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
     &lt;html&gt;&lt;head&gt;
     &lt;title&gt;400 Bad Request&lt;/title&gt;
@@ -164,7 +186,7 @@
     &lt;/body&gt;&lt;/html&gt;
   HTTPOptions: 
     HTTP/1.1 400 Bad Request
-    Date: Mon, 02 Jun 2025 03:44:39 GMT
+    Date: Mon, 09 Jun 2025 03:53:38 GMT
     Access-Control-Allow-Methods: GET, POST, OPTIONS
     Access-Control-Allow-Headers: Access-Control-Allow-Headers, Authorization Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
     Access-Control-Allow-Credentials: true
@@ -174,7 +196,7 @@
     X-Cache: MISS
     X-Cache-Hits: 0
     Connection: close
-    Set-Cookie: BIGipServerpool-handicap-v2.cegedim.cloud-HTTP=3468974346.20480.0000; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-handicap-v2.cegedim.cloud-HTTP=3485751562.20480.0000; path=/; Httponly; Secure
     &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
     &lt;html&gt;&lt;head&gt;
     &lt;title&gt;400 Bad Request&lt;/title&gt;
@@ -183,8 +205,6 @@
     &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
     &lt;/p&gt;
     &lt;/body&gt;&lt;/html&gt;</pre>
-<h5>http-trane-info</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -207,8 +227,8 @@
 <td>185.194.82.206 - www.solidarites.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http-proxy</td>
-<td>F5 BIG-IP load balancer http proxy</td>
+<td>http</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
