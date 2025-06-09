@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "www.mer.gouv.fr/37.235.89.97",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -346,7 +346,7 @@
               "ip"           : "www.mer.gouv.fr/37.235.89.97",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (44)"
+              "finding"      : "expires < 60 days (37)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -531,6 +531,147 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "+279 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1749440204"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "246 seconds"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "max-age too short. 30 days (=2592000 seconds) < 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "nginx"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "script-src 'self' *.gouv.fr gva.et-gv.fr *.google-analytics.com *.twitter.com; report-uri /report-csp-violation; upgrade-insecure-requests"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "camera=(), microphone=()"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "camera=(), microphone=()"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "strict-origin-when-cross-origin"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=3600, public"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "X-Cache: HIT"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "www.mer.gouv.fr/37.235.89.97",
               "port"         : "443",
@@ -552,10 +693,10 @@
               "id"           : "ticketbleed",
               "ip"           : "www.mer.gouv.fr/37.235.89.97",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "ROBOT",
@@ -590,7 +731,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "Test failed as first HTTP request stalled and was terminated"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1011,13 +1161,20 @@
               "ip"           : "www.mer.gouv.fr/37.235.89.97",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A+"
+              "finding"      : "A"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "www.mer.gouv.fr/37.235.89.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to A. HSTS max-age is too short"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.mer.gouv.fr/37.235.89.97",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "51"
+              "finding"      : "99"
           }
 ]
