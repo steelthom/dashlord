@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Jun  3 03:23:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.autoecole.ants.gouv.fr
+# Nmap 7.92 scan initiated Mon Jun  9 04:00:12 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.autoecole.ants.gouv.fr
 Nmap scan report for www.autoecole.ants.gouv.fr (66.22.32.215)
-Host is up (0.086s latency).
+Host is up (0.081s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE  VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE  VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Tue, 03 Jun 2025 03:23:14 GMT
+|     Date: Mon, 09 Jun 2025 04:00:22 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -27,7 +27,7 @@ PORT    STATE    SERVICE  VERSION
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Tue, 03 Jun 2025 03:23:14 GMT
+|     Date: Mon, 09 Jun 2025 04:00:21 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -39,10 +39,24 @@ PORT    STATE    SERVICE  VERSION
 |     <hr><center>rdwr</center>
 |     </body>
 |     </html>
-|   RTSPRequest, X11Probe: 
+|   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Tue, 03 Jun 2025 03:23:14 GMT
+|     Date: Mon, 09 Jun 2025 04:00:21 GMT
+|     Content-Type: text/html
+|     Content-Length: 149
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: rdwr
+|     Date: Mon, 09 Jun 2025 04:00:22 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -56,39 +70,39 @@ PORT    STATE    SERVICE  VERSION
 161/tcp filtered snmp
 179/tcp filtered bgp
 443/tcp open     ssl/http nginx 1.27.0
+|_http-trane-info: ERROR: Script execution failed (use -d to debug)
+|_hnap-info: ERROR: Script execution failed (use -d to debug)
 | vulners: 
 |   nginx 1.27.0: 
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-trane-info: ERROR: Script execution failed (use -d to debug)
-|_hnap-info: ERROR: Script execution failed (use -d to debug)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=6/3%Time=683E6AA2%P=x86_64-alpine-linux-musl%r(
+SF-Port80-TCP:V=7.92%I=7%D=6/9%Time=68465C55%P=x86_64-alpine-linux-musl%r(
 SF:GetRequest,14E,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x20
-SF:rdwr\r\nDate:\x20Tue,\x2003\x20Jun\x202025\x2003:23:14\x20GMT\r\nConten
+SF:rdwr\r\nDate:\x20Mon,\x2009\x20Jun\x202025\x2004:00:21\x20GMT\r\nConten
 SF:t-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close\
 SF:r\nLocation:\x20https://autoecole\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\
 SF:n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\
 SF:x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</htm
 SF:l>\r\n")%r(HTTPOptions,14E,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\
-SF:nServer:\x20rdwr\r\nDate:\x20Tue,\x2003\x20Jun\x202025\x2003:23:14\x20G
+SF:nServer:\x20rdwr\r\nDate:\x20Mon,\x2009\x20Jun\x202025\x2004:00:21\x20G
 SF:MT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnectio
 SF:n:\x20close\r\nLocation:\x20https://autoecole\.ants\.gouv\.fr:443/\r\n\
 SF:r\n<html>\r\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<cen
 SF:ter><h1>302\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</bo
 SF:dy>\r\n</html>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Requ
-SF:est\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2003\x20Jun\x202025\x2003:23:1
-SF:4\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nCon
+SF:est\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2009\x20Jun\x202025\x2004:00:2
+SF:1\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nCon
 SF:nection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</
 SF:title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cent
 SF:er>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe
 SF:,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x2
-SF:0Tue,\x2003\x20Jun\x202025\x2003:23:14\x20GMT\r\nContent-Type:\x20text/
+SF:0Mon,\x2009\x20Jun\x202025\x2004:00:22\x20GMT\r\nContent-Type:\x20text/
 SF:html\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\
 SF:n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center
 SF:><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r
 SF:\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,171,"HTTP/1\.1\x20302\x2
-SF:0Moved\x20Temporarily\r\nServer:\x20rdwr\r\nDate:\x20Tue,\x2003\x20Jun\
-SF:x202025\x2003:23:14\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:0Moved\x20Temporarily\r\nServer:\x20rdwr\r\nDate:\x20Mon,\x2009\x20Jun\
+SF:x202025\x2004:00:22\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
 SF:gth:\x20137\r\nConnection:\x20close\r\nLocation:\x20https://autoecole\.
 SF:ants\.gouv\.fr:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r
 SF:\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302
@@ -96,4 +110,4 @@ SF:\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</ht
 SF:ml>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Jun  3 03:23:26 2025 -- 1 IP address (1 host up) scanned in 21.92 seconds
+# Nmap done at Mon Jun  9 04:00:33 2025 -- 1 IP address (1 host up) scanned in 21.17 seconds
