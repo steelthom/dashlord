@@ -1,32 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "D",
     "error": null,
-    "score": 70,
-    "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 03 Jun 2025 03:28:29 GMT",
-      "server": "Apache",
-      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
-      "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
-      "pragma": "no-cache",
-      "set-cookie": [
-        "PHPSESSID=bdgg6stnun741mmou065f4qbk7; path=/; secure; HttpOnly"
-      ],
-      "x-xss-protection": "1; mode=block",
-      "referrer-policy": "strict-origin",
-      "feature-policy": "geolocation 'none'; midi 'none; notifications 'none'; push 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'",
-      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "x-frame-options": "sameorigin",
-      "x-content-type-options": "nosniff",
-      "upgrade": "h2,h2c",
-      "connection": "Upgrade, close",
+      "date": "Tue, 10 Jun 2025 03:20:35 GMT",
+      "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
-      "content-type": "text/html; charset=UTF-8"
+      "connection": "close",
+      "x-frame-options": "SAMEORIGIN",
+      "referrer-policy": "same-origin",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "set-cookie": [
+        "__cf_bm=TC5YCqVGxNNhVghZmejOJXuD4bCP3oPxv2leohLkjvc-1749525635-1.0.1.1-nTMULAS4nHLGYzjgFKh7NgF7hm6SQ042lAZoqn0SiMaKzs.YoXWfWPaT4GyCcXR7WEsLm5ockKy8uhxVb12tRTJtF4GsyTMSut0SrwkMuCQ; path=/; expires=Tue, 10-Jun-25 03:50:35 GMT; domain=.sinoe.org; HttpOnly; Secure; SameSite=None"
+      ],
+      "vary": "Accept-Encoding",
+      "server": "cloudflare",
+      "cf-ray": "94d5bbd3cf0e3165-DFW"
     }
   },
   "tests": {
@@ -44,18 +40,20 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-secure-with-httponly-sessions",
-      "scoreModifier": 0,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
       "data": {
-        "PHPSESSID": {
-          "domain": "www.sinoe.org",
+        "__cf_bm": {
+          "domain": "sinoe.org",
+          "expires": "2025-06-10T03:50:35.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
+          "samesite": "none",
           "secure": true
         }
       },
-      "sameSite": false
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -66,62 +64,56 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://www.sinoe.org/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://www.sinoe.org/",
+      "redirects": false,
       "route": [
-        "http://www.sinoe.org/",
-        "https://www.sinoe.org/"
+        "http://www.sinoe.org/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "strict-origin",
+      "data": "same-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=63072000; includeSubDomains; preload",
-      "includeSubDomains": true,
-      "maxAge": 63072000,
-      "preload": true,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=www.sinoe.org&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
       "result": "x-frame-options-sameorigin-or-deny",
       "scoreModifier": 0,
-      "data": "sameorigin"
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
