@@ -1,24 +1,34 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D+",
+    "grade": "B",
     "error": null,
-    "score": 40,
+    "score": 70,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
+      "date": "Thu, 12 Jun 2025 04:01:05 GMT",
       "server": "nginx",
-      "date": "Thu, 05 Jun 2025 03:40:25 GMT",
-      "content-type": "text/html;charset=UTF-8",
-      "content-length": "10276",
-      "connection": "close",
-      "set-cookie": [
-        "JSESSIONID=D7F3501D9838641280E3A5CFBF0C7679; Path=/; HttpOnly"
-      ],
-      "etag": "\"5bc2d55b\"",
-      "strict-transport-security": "max-age=63072000"
+      "content-type": "text/html; charset=UTF-8",
+      "content-length": "15518",
+      "cache-control": "max-age=600, public",
+      "x-drupal-dynamic-cache": "HIT",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "vary": "Cookie,Accept-Encoding",
+      "last-modified": "Wed, 11 Jun 2025 15:39:13 GMT",
+      "etag": "\"1749656353-gzip\"",
+      "age": "10",
+      "x-cache": "HIT",
+      "x-cache-hits": "1",
+      "accept-ranges": "bytes",
+      "strict-transport-security": "max-age=63072000",
+      "x-cp-via": "C3-206cf890-17537c6b",
+      "connection": "close"
     }
   },
   "tests": {
@@ -35,17 +45,10 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
-      "scoreModifier": -10,
-      "data": {
-        "JSESSIONID": {
-          "domain": "www.archives-nationales.culture.gouv.fr",
-          "httponly": true,
-          "path": "/",
-          "port": null
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -90,24 +93,29 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://webchat.wikit.ai/webchat-embed.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
