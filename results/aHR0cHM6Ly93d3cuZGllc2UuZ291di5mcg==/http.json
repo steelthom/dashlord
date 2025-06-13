@@ -1,19 +1,19 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "B",
     "error": null,
-    "score": 50,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sat, 07 Jun 2025 03:19:30 GMT",
+      "date": "Fri, 13 Jun 2025 03:58:21 GMT",
       "content-type": "text/html; charset=UTF-8",
       "connection": "close",
       "cache-control": "max-age=600, public",
-      "x-drupal-dynamic-cache": "HIT",
+      "x-drupal-dynamic-cache": "MISS",
       "content-language": "fr",
       "x-content-type-options": "nosniff, nosniff",
       "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
@@ -21,14 +21,14 @@
       "vary": "Cookie",
       "x-drupal-cache": "HIT",
       "x-xss-protection": "1; mode=block, 1; mode=block",
-      "last-modified": "Fri, 06 Jun 2025 09:43:02 GMT",
-      "etag": "W/\"1749202982\"",
-      "x-varnish": "2135518 1501614",
-      "age": "25",
-      "x-cache": "HIT",
-      "x-cache-hits": "1",
+      "last-modified": "Wed, 11 Jun 2025 14:21:35 GMT",
+      "etag": "W/\"1749651695\"",
+      "x-varnish": "1642382",
+      "age": "0",
+      "x-cache": "MISS",
+      "x-cache-hits": "0",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "content-security-policy": "base-uri 'self'; connect-src 'self' https://www.data.gouv.fr; default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://static.data.gouv.fr; frame-src 'self' https://www.youtube.com; img-src 'self' data: https://i.ytimg.com https://static.data.gouv.fr; manifest-src 'self'; media-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr; object-src 'none'; script-src 'report-sample' 'self' https://static.data.gouv.fr/static/oembed.js; style-src 'report-sample' 'self' https://static.data.gouv.fr; worker-src 'none';",
+      "content-security-policy": "base-uri 'self'; connect-src 'self' https://www.data.gouv.fr; default-src 'self'; font-src 'self' data: https://static.data.gouv.fr; frame-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr https://www.youtube-nocookie.com; img-src 'self' data: https://i.ytimg.com https://static.data.gouv.fr https://www.documentation-administrative.gouv.fr; manifest-src 'self'; media-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr https://www.youtube-nocookie.com; object-src 'none'; script-src 'report-sample' 'self' https://static.data.gouv.fr/static/oembed.js; style-src 'report-sample' 'self' https://static.data.gouv.fr 'unsafe-inline'; worker-src 'none';",
       "referrer-policy": "no-referrer",
       "transfer-encoding": "chunked"
     }
@@ -36,13 +36,80 @@
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
-      "pass": false,
-      "result": "csp-header-invalid",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "pass": true,
+      "result": "csp-implemented-with-unsafe-inline-in-style-src-only",
+      "scoreModifier": 0,
+      "data": {
+        "base-uri": [
+          "'self'"
+        ],
+        "connect-src": [
+          "'self'",
+          "https://www.data.gouv.fr"
+        ],
+        "default-src": [
+          "'self'"
+        ],
+        "font-src": [
+          "'self'",
+          "data:",
+          "https://static.data.gouv.fr"
+        ],
+        "frame-src": [
+          "'self'",
+          "https://www.documentation-administrative.gouv.fr",
+          "https://www.youtube-nocookie.com",
+          "https://www.youtube.com"
+        ],
+        "img-src": [
+          "'self'",
+          "data:",
+          "https://i.ytimg.com",
+          "https://static.data.gouv.fr",
+          "https://www.documentation-administrative.gouv.fr"
+        ],
+        "manifest-src": [
+          "'self'"
+        ],
+        "media-src": [
+          "'self'",
+          "https://www.documentation-administrative.gouv.fr",
+          "https://www.youtube-nocookie.com",
+          "https://www.youtube.com"
+        ],
+        "object-src": [
+          "'none'"
+        ],
+        "script-src": [
+          "'report-sample'",
+          "'self'",
+          "https://static.data.gouv.fr/static/oembed.js"
+        ],
+        "style-src": [
+          "'report-sample'",
+          "'self'",
+          "'unsafe-inline'",
+          "https://static.data.gouv.fr"
+        ],
+        "worker-src": [
+          "'none'"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": false,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": false,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
       "numPolicies": 1
     },
     "cookies": {
