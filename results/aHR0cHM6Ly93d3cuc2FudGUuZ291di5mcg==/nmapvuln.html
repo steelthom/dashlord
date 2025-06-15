@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.gouv.fr</pre>
-<p class="lead">Sun Jun  8 03:57:18 2025 – Sun Jun  8 03:58:12 2025<br>1 hosts scanned.
+<p class="lead">Sun Jun 15 03:29:58 2025 – Sun Jun 15 03:32:34 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,22 +111,14 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">BigIP</td>
+<td title="Service">http-proxy</td>
+<td title="Product">F5 BIG-IP load balancer http proxy</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GetRequest: 
-    HTTP/1.0 302 Moved Temporarily
-    Location: https:///
-    Server: BigIP
-    Connection: close
-    Content-Length: 0</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -151,17 +143,28 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GetRequest: 
+  FourOhFourRequest: 
     HTTP/1.1 200 OK
-    Date: Sun, 08 Jun 2025 03:57:41 GMT
+    Cache-Control: no-store, must-revalidate, no-cache
+    Pragma: no-cache
+    Connection: close
+    Content-Type: text/html
+    Content-Length: 245
+    X-Frame-Options: SAMEORIGIN
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;14185738781740865197&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    Date: Sun, 15 Jun 2025 03:30:23 GMT
     X-Spip-Cache: 21600
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Sun, 08 Jun 2025 03:57:41 GMT
+    Last-Modified: Sun, 15 Jun 2025 03:30:23 GMT
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!Ubac00K+m0POXr2QEus9KsUIQe0YeY6x8DYktq1BD5EoKaEK+i5ejcIi70XH9VsEJ72gi37B32+GH77Y1kUvphkJ4+Bl; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!SgZgTJgEIJy1lpOQEus9KsUIQe0YefrioCiHrdFWcX4KZ+GF24ZrKrQty/Nhg+6Sm5SvdCpg2RFxqC0nJ0hqj8sMOEsj; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
     &lt;!DOCTYPE HTML&gt;
     &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
@@ -172,27 +175,23 @@
     l&amp;#039;acc
     soins&lt;/title&gt;
     &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
-  HTTPOptions: 
-    HTTP/1.1 200 OK
-    Date: Sun, 08 Jun 2025 03:57:42 GMT
-    X-Spip-Cache: 21600
+  RTSPRequest: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 15 Jun 2025 03:30:35 GMT
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Sun, 08 Jun 2025 03:57:42 GMT
-    Vary: Accept-Encoding
-    X-Content-Type-Options: nosniff
+    Content-Length: 226
     Connection: close
-    Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!NpbVXkRq33ouv8iQEus9KsUIQe0Yeagmv56a2DPfvlThIg/WlCMd9w42PQZBKVpecKtYTxMGQbBssnlNLnlII/ae97XP; path=/; Httponly; Secure
+    Content-Type: text/html; charset=iso-8859-1
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-HTTP=!Li8hg7gRoCUbjSyQEus9KsUIQe0Yeb4LnfwucuhfAx1V2yKK/zX7fwUuwuJw4fa3QEd1ggSm/RAhXqMT158gG1s6lxj9; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
-    &lt;!DOCTYPE HTML&gt;
-    &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
-    &lt;head&gt;
-    &lt;script&gt;/*&lt;![CDATA[*/(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement);/*]]&gt;*/&lt;/script&gt;
-    &lt;title&gt;Accueil - Minist
-    sant
-    l&amp;#039;acc
-    soins&lt;/title&gt;
-    &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl</pre>
+    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+    &lt;html&gt;&lt;head&gt;
+    &lt;title&gt;400 Bad Request&lt;/title&gt;
+    &lt;/head&gt;&lt;body&gt;
+    &lt;h1&gt;Bad Request&lt;/h1&gt;
+    &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
+    &lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -215,8 +214,8 @@
 <td>185.194.82.27 - www.sante.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
-<td>BigIP</td>
+<td>http-proxy</td>
+<td>F5 BIG-IP load balancer http proxy</td>
 <td></td>
 <td></td>
 <td></td>
