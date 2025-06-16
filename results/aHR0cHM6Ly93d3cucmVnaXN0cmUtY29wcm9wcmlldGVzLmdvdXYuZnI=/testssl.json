@@ -139,6 +139,20 @@
               "finding"      : "ECDHE-RSA-AES256-SHA"
           }
 ,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
@@ -149,22 +163,36 @@
               "id"           : "FS",
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "No ciphers supporting Forward Secrecy offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "(none)"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'heartbeat/#15' 'application layer protocol negotiation/#16' 'session ticket/#35' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no -- no lifetime advertised"
+              "finding"      : "valid for 300 seconds only (<daily)"
           }
 ,         {
               "id"           : "SSL_sessionID_support",
@@ -177,8 +205,8 @@
               "id"           : "sessionresumption_ticket",
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not supported"
+              "severity"     : "WARN",
+              "finding"      : "check failed, pls report"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -381,7 +409,7 @@
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "WARN",
-              "finding"      : "Client problem: No server certificate could be retrieved. Thus we can't continue with 'server defaults'."
+              "finding"      : "Client problem, shouldn't happen: Host certificate found but we can't continue with 'server defaults'."
           }
 ,         {
               "id"           : "cert_numbers",
@@ -409,7 +437,7 @@
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1749441477"
+              "finding"      : "1750045286"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -444,7 +472,7 @@
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Server-Timing: dtRpid;desc='1218158472', dtSInfo;desc='0'"
+              "finding"      : "No Server banner line in header, interesting!"
           }
 ,         {
               "id"           : "banner_application",
@@ -1010,17 +1038,10 @@
               "finding"      : "Grade capped to B. TLS 1.1 offered"
           }
 ,         {
-              "id"           : "grade_cap_reason_2",
-              "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. Forward Secrecy (FS) is not supported"
-          }
-,         {
               "id"           : "scanTime",
               "ip"           : "www.registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "60"
+              "finding"      : "62"
           }
 ]
