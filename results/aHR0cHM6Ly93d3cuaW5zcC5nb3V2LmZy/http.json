@@ -1,38 +1,30 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "C",
     "error": null,
-    "score": 75,
+    "score": 55,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx/1.27.2",
-      "date": "Sat, 14 Jun 2025 03:33:38 GMT",
+      "date": "Sat, 21 Jun 2025 03:36:31 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "cache-control": "max-age=600, public",
+      "cache-control": "max-age=300",
       "x-drupal-dynamic-cache": "MISS",
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Fri, 13 Jun 2025 14:59:21 GMT",
-      "etag": "\"1749826761-gzip\"",
+      "expires": "Sat, 21 Jun 2025 03:41:31 GMT",
+      "last-modified": "Fri, 20 Jun 2025 14:26:21 GMT",
+      "etag": "\"1750429581-gzip\"",
       "vary": "Cookie,Accept-Encoding",
       "x-drupal-cache": "HIT",
-      "referrer-policy": "strict-origin-when-cross-origin",
-      "allow": "GET, POST, PUT, HEAD",
-      "access-control-allow-methods": "GET, POST, PUT, OPTIONS",
-      "access-control-allow-headers": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
-      "access-control-expose-headers": "Content-Length,Content-Range",
-      "strict-transport-security": "max-age=31536000; includeSubDomains",
-      "x-xss-protection": "1;mode=block",
-      "upgrade-insecure-requests": "1",
-      "access-control-allow-origin": "insp.gouv.fr"
+      "x-proxy-cache": "EXPIRED"
     }
   },
   "tests": {
@@ -71,6 +63,7 @@
       "redirects": true,
       "route": [
         "http://www.insp.gouv.fr/",
+        "https://www.insp.gouv.fr//",
         "https://www.insp.gouv.fr/"
       ],
       "statusCode": 200
@@ -78,20 +71,20 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "strict-origin-when-cross-origin",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubDomains",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
