@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Jun 15 03:41:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
+# Nmap 7.92 scan initiated Sun Jun 22 03:42:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
 Nmap scan report for www.haut-conseil-egalite.gouv.fr (185.194.83.18)
-Host is up (0.080s latency).
+Host is up (0.13s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -27,31 +27,13 @@ PORT    STATE  SERVICE   VERSION
 |_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.0 404 Not Found
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |     ERROR
-|   GetRequest: 
-|     HTTP/1.1 200 OK
-|     Date: Sun, 15 Jun 2025 03:41:25 GMT
-|     X-Outils-CS: 
-|     Vary: Cookie,Accept-Encoding
-|     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
-|     X-Spip-Cache: 86400
-|     Last-Modified: Sun, 15 Jun 2025 03:41:25 GMT
-|     Connection: close
-|     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!3N5JW/4Tb4Lzo4iQEus9KsUIQe0YeU4UbBkzlL6v7AlSFcq1SwMl47Kb4rJWvhz6vtNL35IUa3CQhl5m+GEduMWUoxI=; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-|     <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
-|     <head>
-|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-|     <title>Haut Conseil 
-|     galit
-|     entre les femmes et les hommes</ti
 |   HTTPOptions: 
 |     HTTP/1.0 403 Forbidden
 |     Connection: Keep-Alive
@@ -62,10 +44,9 @@ PORT    STATE  SERVICE   VERSION
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |_    ERROR
-|_http-trane-info: Problem with XML parsing of /evox/about
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=6/15%Time=684E40DE%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=6/22%Time=68577BBB%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
 SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
@@ -80,31 +61,15 @@ SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
 SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
 SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/15%Time=684E40E5%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2015\
-SF:x20Jun\x202025\x2003:41:25\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cooki
-SF:e,Accept-Encoding\r\nComposed-By:\x20SPIP\x204\.3\.6\x20@\x20www\.spip\
-SF:.net\x20\+\x20https://https:/local/config\.txt\r\nX-Spip-Cache:\x208640
-SF:0\r\nLast-Modified:\x20Sun,\x2015\x20Jun\x202025\x2003:41:25\x20GMT\r\n
-SF:Connection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\
-SF:nSet-Cookie:\x20BIGipServerpool-dgcs-hautconseilegalite2\.cegedim\.clou
-SF:d-HTTP=!3N5JW/4Tb4Lzo4iQEus9KsUIQe0YeU4UbBkzlL6v7AlSFcq1SwMl47Kb4rJWvhz
-SF:6vtNL35IUa3CQhl5m\+GEduMWUoxI=;\x20path=/;\x20Httponly;\x20Secure\r\nSt
-SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\
-SF:r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tra
-SF:nsitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitio
-SF:nal\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20lan
-SF:g=\"fr\"\x20xml:lang=\"fr\">\r\n<head>\r\n\t<meta\x20http-equiv=\"Conte
-SF:nt-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<title>
-SF:Haut\x20Conseil\x20\xc3\xa0\x20l'\xc3\x89galit\xc3\xa9\x20entre\x20les\
-SF:x20femmes\x20et\x20les\x20hommes</ti")%r(HTTPOptions,4E,"HTTP/1\.0\x204
-SF:03\x20Forbidden\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\
-SF:n\r\n403\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20
-SF:Found\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x
-SF:20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConne
-SF:ction:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR")%r(SI
-SF:POptions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-
-SF:Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/22%Time=68577BC7%P=x86_64-alpine-linux
+SF:-musl%r(HTTPOptions,4E,"HTTP/1\.0\x20403\x20Forbidden\r\nConnection:\x2
+SF:0Keep-Alive\r\nContent-Length:\x209\r\n\r\n403\x20ERROR")%r(FourOhFourR
+SF:equest,4E,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Aliv
+SF:e\r\nContent-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPRequest,50,"HTTP/
+SF:1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Alive\r\nContent-L
+SF:ength:\x209\r\n\r\n400\x20ERROR")%r(SIPOptions,50,"HTTP/1\.0\x20400\x20
+SF:Bad\x20Request\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n
+SF:\r\n400\x20ERROR");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Jun 15 03:43:48 2025 -- 1 IP address (1 host up) scanned in 163.09 seconds
+# Nmap done at Sun Jun 22 03:45:30 2025 -- 1 IP address (1 host up) scanned in 174.40 seconds
