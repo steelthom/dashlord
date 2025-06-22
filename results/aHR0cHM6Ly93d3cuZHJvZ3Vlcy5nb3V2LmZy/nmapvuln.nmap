@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Jun 13 03:41:03 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.drogues.gouv.fr
+# Nmap 7.92 scan initiated Sun Jun 22 03:39:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.drogues.gouv.fr
 Nmap scan report for www.drogues.gouv.fr (160.92.148.80)
-Host is up (0.12s latency).
+Host is up (0.088s latency).
 rDNS record for 160.92.148.80: secure-ssl-dsaf-marianne-prod.as8677.net
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE    VERSION
@@ -10,12 +10,12 @@ PORT    STATE SERVICE    VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Fri, 13 Jun 2025 03:41:18 GMT
+|     Date: Sun, 22 Jun 2025 03:39:37 GMT
 |     Content-Type: text/html; charset=UTF-8
-|     Content-Length: 50446
+|     Content-Length: 50722
 |     Connection: close
 |     Cache-Control: must-revalidate, no-cache, private
-|     X-Drupal-Dynamic-Cache: MISS
+|     X-Drupal-Dynamic-Cache: HIT
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
 |     X-Frame-Options: SAMEORIGIN
@@ -25,10 +25,11 @@ PORT    STATE SERVICE    VERSION
 |     Age: 0
 |     X-Varnish-Cache: MISS
 |     Accept-Ranges: bytes
+|     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 |     Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; img-src 'self' data: https: http:; font-src 'self' data:; frame-ancestors 'self' https://www.drogues.gouv.fr;
 |     X-Frame-Options: SAMEORIGIN
 |     <!DOCTYPE html>
-|     <html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema#
+|     <html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0
 |   HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
 |     X-Frame-Options: DENY
@@ -55,46 +56,46 @@ PORT    STATE SERVICE    VERSION
 |     html {
 |_    height: 100%;
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/13%Time=684B9DDE%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2013\
-SF:x20Jun\x202025\x2003:41:18\x20GMT\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=UTF-8\r\nContent-Length:\x2050446\r\nConnection:\x20close\r\nCache
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/22%Time=68577AF9%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2022\
+SF:x20Jun\x202025\x2003:39:37\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x2050722\r\nConnection:\x20close\r\nCache
 SF:-Control:\x20must-revalidate,\x20no-cache,\x20private\r\nX-Drupal-Dynam
-SF:ic-Cache:\x20MISS\r\nContent-language:\x20fr\r\nX-Content-Type-Options:
-SF:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019
-SF:\x20Nov\x201978\x2005:00:00\x20GMT\r\nX-Xss-Protection:\x201;\x20mode=b
-SF:lock\r\nVary:\x20Accept-Encoding\r\nAge:\x200\r\nX-Varnish-Cache:\x20MI
-SF:SS\r\nAccept-Ranges:\x20bytes\r\nContent-Security-Policy:\x20default-sr
-SF:c\x20https:\x20'unsafe-eval'\x20'unsafe-inline';\x20img-src\x20'self'\x
-SF:20data:\x20https:\x20http:;\x20font-src\x20'self'\x20data:;\x20frame-an
-SF:cestors\x20'self'\x20https://www\.drogues\.gouv\.fr;\r\nX-Frame-Options
-SF::\x20SAMEORIGIN\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=
-SF:\"ltr\"\x20prefix=\"content:\x20http://purl\.org/rss/1\.0/modules/conte
-SF:nt/\x20\x20dc:\x20http://purl\.org/dc/terms/\x20\x20foaf:\x20http://xml
-SF:ns\.com/foaf/0\.1/\x20\x20og:\x20http://ogp\.me/ns#\x20\x20rdfs:\x20htt
-SF:p://www\.w3\.org/2000/01/rdf-schema#\x20")%r(HTTPOptions,280D,"HTTP/1\.
-SF:1\x20403\x20Forbidden\r\nX-Frame-Options:\x20DENY\r\nX-XSS-Protection:\
-SF:x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Cont
-SF:rol:\x20no-cache\r\nConnection:\x20close\r\nContent-Security-Policy:\x2
-SF:0default-src\x20'self'\x20'unsafe-inline';\x20style-src\x20'self'\x20'u
-SF:nsafe-inline';\r\nPragma:\x20no-cache\r\nStrict-Transport-Security:\x20
-SF:max-age=31536000;\x20includeSubDomains\r\nX-Blocked:\x20yes\r\nContent-
-SF:Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x209838\r\n\r\n
-SF:<!doctype\x20html>\n<html\x20lang=\"fr\">\n<head>\n\x20\x20\x20\x20<met
-SF:a\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20
-SF:content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\"
-SF:>\n\x20\x20\x20\x20<title>Erreur\x20serveur</title>\n\x20\x20\x20\x20<s
-SF:tyle>\n\x20\x20\x20\x20\x20\x20\x20\x20/\*!\n\x20\*\x20DSFR\x20v1\.6\.0
-SF:\x20\|\x20SPDX-License-Identifier:\x20MIT\x20\|\x20License-Filename:\x2
-SF:0LICENSE\.md\x20\|\x20restricted\x20use\x20\(see\x20terms\x20and\x20con
-SF:ditions\)\n\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20@charset\x20\"UTF-8
-SF:\";\n\n\x20\x20\x20\x20\x20\x20\x20\x20/\*\x20\xc2\xaf\xc2\xaf\xc2\xaf\
-SF:xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\x20\*\\\n\x20\x20CONNEC
-SF:T\n\\\*\x20\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb
-SF:\x8d\xcb\x8d\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x2
-SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20
-SF:\x20\x20\x20\x20\x20");
+SF:ic-Cache:\x20HIT\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\
+SF:x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\
+SF:x20Nov\x201978\x2005:00:00\x20GMT\r\nX-Xss-Protection:\x201;\x20mode=bl
+SF:ock\r\nVary:\x20Accept-Encoding\r\nAge:\x200\r\nX-Varnish-Cache:\x20MIS
+SF:S\r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x20max-age=6
+SF:3072000;\x20includeSubDomains;\x20preload\r\nContent-Security-Policy:\x
+SF:20default-src\x20https:\x20'unsafe-eval'\x20'unsafe-inline';\x20img-src
+SF:\x20'self'\x20data:\x20https:\x20http:;\x20font-src\x20'self'\x20data:;
+SF:\x20frame-ancestors\x20'self'\x20https://www\.drogues\.gouv\.fr;\r\nX-F
+SF:rame-Options:\x20SAMEORIGIN\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"
+SF:fr\"\x20dir=\"ltr\"\x20prefix=\"content:\x20http://purl\.org/rss/1\.0/m
+SF:odules/content/\x20\x20dc:\x20http://purl\.org/dc/terms/\x20\x20foaf:\x
+SF:20http://xmlns\.com/foaf/0")%r(HTTPOptions,280D,"HTTP/1\.1\x20403\x20Fo
+SF:rbidden\r\nX-Frame-Options:\x20DENY\r\nX-XSS-Protection:\x201;\x20mode=
+SF:block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cac
+SF:he\r\nConnection:\x20close\r\nContent-Security-Policy:\x20default-src\x
+SF:20'self'\x20'unsafe-inline';\x20style-src\x20'self'\x20'unsafe-inline';
+SF:\r\nPragma:\x20no-cache\r\nStrict-Transport-Security:\x20max-age=315360
+SF:00;\x20includeSubDomains\r\nX-Blocked:\x20yes\r\nContent-Type:\x20text/
+SF:html;\x20charset=utf-8\r\nContent-Length:\x209838\r\n\r\n<!doctype\x20h
+SF:tml>\n<html\x20lang=\"fr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\
+SF:"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"widt
+SF:h=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x2
+SF:0\x20<title>Erreur\x20serveur</title>\n\x20\x20\x20\x20<style>\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20/\*!\n\x20\*\x20DSFR\x20v1\.6\.0\x20\|\x20SPDX
+SF:-License-Identifier:\x20MIT\x20\|\x20License-Filename:\x20LICENSE\.md\x
+SF:20\|\x20restricted\x20use\x20\(see\x20terms\x20and\x20conditions\)\n\x2
+SF:0\*/\n\x20\x20\x20\x20\x20\x20\x20\x20@charset\x20\"UTF-8\";\n\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20/\*\x20\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xa
+SF:f\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\x20\*\\\n\x20\x20CONNECT\n\\\*\x20\xc
+SF:b\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\x
+SF:20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Jun 13 03:43:31 2025 -- 1 IP address (1 host up) scanned in 148.44 seconds
+# Nmap done at Sun Jun 22 03:41:48 2025 -- 1 IP address (1 host up) scanned in 145.24 seconds
