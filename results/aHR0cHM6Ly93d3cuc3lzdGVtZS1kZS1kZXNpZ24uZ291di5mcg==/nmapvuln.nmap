@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Tue Jun 17 04:13:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.systeme-de-design.gouv.fr
+# Nmap 7.92 scan initiated Tue Jun 24 04:04:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.systeme-de-design.gouv.fr
 Nmap scan report for www.systeme-de-design.gouv.fr (160.92.148.78)
 Host is up (0.089s latency).
 rDNS record for 160.92.148.78: secure-ssl-dsaf-mutu-prod.as8677.net
@@ -10,8 +10,9 @@ PORT    STATE SERVICE        VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 17 Jun 2025 04:14:10 GMT
+|     Date: Tue, 24 Jun 2025 04:04:19 GMT
 |     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 42183
 |     Connection: close
 |     Cache-Control: max-age=604800, public
 |     X-Drupal-Dynamic-Cache: MISS
@@ -22,11 +23,9 @@ PORT    STATE SERVICE        VERSION
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
 |     Vary: Cookie
 |     X-Drupal-Cache: MISS
-|     Last-Modified: Tue, 17 Jun 2025 04:14:09 GMT
-|     ETag: "1750133649"
-|     X-Varnish: 5445574
-|     Age: 0
-|     X-Cache: MISS
+|     Last-Modified: Tue, 24 Jun 2025 04:03:59 GMT
+|     ETag: "1750737839"
+|     X-Varnish: 4361840
 |   HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
 |     X-Frame-Options: DENY
@@ -53,45 +52,45 @@ PORT    STATE SERVICE        VERSION
 |     html {
 |_    height: 100%;
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/17%Time=6850EB92%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2017\
-SF:x20Jun\x202025\x2004:14:10\x20GMT\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=UTF-8\r\nConnection:\x20close\r\nCache-Control:\x20max-age=604800,
-SF:\x20public\r\nX-Drupal-Dynamic-Cache:\x20MISS\r\nLink:\x20</profiles/cu
-SF:stom/dsfr_profile/themes/dsfr/dist/favicon/apple-touch-icon\.png>;\x20r
-SF:el=\"apple-touch-icon\",\x20</profiles/custom/dsfr_profile/themes/dsfr/
-SF:dist/favicon/favicon\.svg>;\x20rel=\"icon\";\x20type=\"image/svg\+xml\"
-SF:,\x20</profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/favicon\.i
-SF:co>;\x20rel=\"shortcut\x20icon\";\x20type=\"image/x-icon\",\x20</profil
-SF:es/custom/dsfr_profile/themes/dsfr/dist/favicon/manifest\.webmanifest>;
-SF:\x20rel=\"manifest\";\x20crossorigin=\"use-credentials\"\r\nContent-lan
-SF:guage:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\
-SF:x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20G
-SF:MT\r\nVary:\x20Cookie\r\nX-Drupal-Cache:\x20MISS\r\nLast-Modified:\x20T
-SF:ue,\x2017\x20Jun\x202025\x2004:14:09\x20GMT\r\nETag:\x20\"1750133649\"\
-SF:r\nX-Varnish:\x205445574\r\nAge:\x200\r\nX-Cache:\x20MISS")%r(HTTPOptio
-SF:ns,280D,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x20DENY\r\nX
-SF:-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosn
-SF:iff\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Se
-SF:curity-Policy:\x20default-src\x20'self'\x20'unsafe-inline';\x20style-sr
-SF:c\x20'self'\x20'unsafe-inline';\r\nPragma:\x20no-cache\r\nStrict-Transp
-SF:ort-Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Blocked:\x
-SF:20yes\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length
-SF::\x209838\r\n\r\n<!doctype\x20html>\n<html\x20lang=\"fr\">\n<head>\n\x2
-SF:0\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name
-SF:=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20s
-SF:hrink-to-fit=no\">\n\x20\x20\x20\x20<title>Erreur\x20serveur</title>\n\
-SF:x20\x20\x20\x20<style>\n\x20\x20\x20\x20\x20\x20\x20\x20/\*!\n\x20\*\x2
-SF:0DSFR\x20v1\.6\.0\x20\|\x20SPDX-License-Identifier:\x20MIT\x20\|\x20Lic
-SF:ense-Filename:\x20LICENSE\.md\x20\|\x20restricted\x20use\x20\(see\x20te
-SF:rms\x20and\x20conditions\)\n\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20@c
-SF:harset\x20\"UTF-8\";\n\n\x20\x20\x20\x20\x20\x20\x20\x20/\*\x20\xc2\xaf
-SF:\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\x20\*\
-SF:\\n\x20\x20CONNECT\n\\\*\x20\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xc
-SF:b\x8d\xcb\x8d\xcb\x8d\xcb\x8d\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20h
-SF:tml\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2010
-SF:0%;\n\x20\x20\x20\x20\x20\x20\x20\x20");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/24%Time=685A23C3%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2024\
+SF:x20Jun\x202025\x2004:04:19\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x2042183\r\nConnection:\x20close\r\nCache
+SF:-Control:\x20max-age=604800,\x20public\r\nX-Drupal-Dynamic-Cache:\x20MI
+SF:SS\r\nLink:\x20</profiles/custom/dsfr_profile/themes/dsfr/dist/favicon/
+SF:apple-touch-icon\.png>;\x20rel=\"apple-touch-icon\",\x20</profiles/cust
+SF:om/dsfr_profile/themes/dsfr/dist/favicon/favicon\.svg>;\x20rel=\"icon\"
+SF:;\x20type=\"image/svg\+xml\",\x20</profiles/custom/dsfr_profile/themes/
+SF:dsfr/dist/favicon/favicon\.ico>;\x20rel=\"shortcut\x20icon\";\x20type=\
+SF:"image/x-icon\",\x20</profiles/custom/dsfr_profile/themes/dsfr/dist/fav
+SF:icon/manifest\.webmanifest>;\x20rel=\"manifest\";\x20crossorigin=\"use-
+SF:credentials\"\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20
+SF:Nov\x201978\x2005:00:00\x20GMT\r\nVary:\x20Cookie\r\nX-Drupal-Cache:\x2
+SF:0MISS\r\nLast-Modified:\x20Tue,\x2024\x20Jun\x202025\x2004:03:59\x20GMT
+SF:\r\nETag:\x20\"1750737839\"\r\nX-Varnish:\x204361840")%r(HTTPOptions,28
+SF:0D,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x20DENY\r\nX-XSS-
+SF:Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r
+SF:\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Securit
+SF:y-Policy:\x20default-src\x20'self'\x20'unsafe-inline';\x20style-src\x20
+SF:'self'\x20'unsafe-inline';\r\nPragma:\x20no-cache\r\nStrict-Transport-S
+SF:ecurity:\x20max-age=31536000;\x20includeSubDomains\r\nX-Blocked:\x20yes
+SF:\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20
+SF:9838\r\n\r\n<!doctype\x20html>\n<html\x20lang=\"fr\">\n<head>\n\x20\x20
+SF:\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"vi
+SF:ewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink
+SF:-to-fit=no\">\n\x20\x20\x20\x20<title>Erreur\x20serveur</title>\n\x20\x
+SF:20\x20\x20<style>\n\x20\x20\x20\x20\x20\x20\x20\x20/\*!\n\x20\*\x20DSFR
+SF:\x20v1\.6\.0\x20\|\x20SPDX-License-Identifier:\x20MIT\x20\|\x20License-
+SF:Filename:\x20LICENSE\.md\x20\|\x20restricted\x20use\x20\(see\x20terms\x
+SF:20and\x20conditions\)\n\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20@charse
+SF:t\x20\"UTF-8\";\n\n\x20\x20\x20\x20\x20\x20\x20\x20/\*\x20\xc2\xaf\xc2\
+SF:xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\xc2\xaf\x20\*\\\n\x
+SF:20\x20CONNECT\n\\\*\x20\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d\xcb\x8d
+SF:\xcb\x8d\xcb\x8d\xcb\x8d\x20\*/\n\x20\x20\x20\x20\x20\x20\x20\x20html\x
+SF:20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Jun 17 04:16:20 2025 -- 1 IP address (1 host up) scanned in 145.22 seconds
+# Nmap done at Tue Jun 24 04:06:29 2025 -- 1 IP address (1 host up) scanned in 144.71 seconds
