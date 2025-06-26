@@ -1,9 +1,9 @@
-# Nmap 7.92 scan initiated Thu Jun 19 03:37:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ac-mayotte.fr
-Nmap scan report for www.ac-mayotte.fr (141.101.90.107)
-Host is up (0.0021s latency).
-Other addresses for www.ac-mayotte.fr (not scanned): 141.101.90.105 141.101.90.104 141.101.90.106 2a06:98c1:3200::90:83 2a06:98c1:3200::90:80 2a06:98c1:3200::90:82 2a06:98c1:3200::90:81
+# Nmap 7.92 scan initiated Thu Jun 26 03:30:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ac-mayotte.fr
+Nmap scan report for www.ac-mayotte.fr (141.101.90.105)
+Host is up (0.0086s latency).
+Other addresses for www.ac-mayotte.fr (not scanned): 141.101.90.106 141.101.90.107 141.101.90.104 2a06:98c1:3200::90:81 2a06:98c1:3200::90:82 2a06:98c1:3200::90:83 2a06:98c1:3200::90:80
 
-PORT      STATE SERVICE    VERSION
+PORT      STATE SERVICE         VERSION
 1/tcp     open  tcpwrapped
 3/tcp     open  tcpwrapped
 4/tcp     open  tcpwrapped
@@ -30,7 +30,7 @@ PORT      STATE SERVICE    VERSION
 53/tcp    open  tcpwrapped
 70/tcp    open  tcpwrapped
 79/tcp    open  tcpwrapped
-80/tcp    open  http       Cloudflare http proxy
+80/tcp    open  http            Cloudflare http proxy
 |_http-server-header: cloudflare
 81/tcp    open  tcpwrapped
 82/tcp    open  tcpwrapped
@@ -79,7 +79,7 @@ PORT      STATE SERVICE    VERSION
 417/tcp   open  tcpwrapped
 425/tcp   open  tcpwrapped
 427/tcp   open  tcpwrapped
-443/tcp   open  ssl/http   Cloudflare http proxy
+443/tcp   open  ssl/http        Cloudflare http proxy
 |_http-server-header: cloudflare
 444/tcp   open  tcpwrapped
 445/tcp   open  tcpwrapped
@@ -217,10 +217,10 @@ PORT      STATE SERVICE    VERSION
 1078/tcp  open  tcpwrapped
 1079/tcp  open  tcpwrapped
 1080/tcp  open  tcpwrapped
-1081/tcp  open  tcpwrapped
+1081/tcp  open  pvuniwien?
 1082/tcp  open  tcpwrapped
 1083/tcp  open  tcpwrapped
-1084/tcp  open  tcpwrapped
+1084/tcp  open  ansoft-lm-2?
 1085/tcp  open  tcpwrapped
 1086/tcp  open  tcpwrapped
 1087/tcp  open  tcpwrapped
@@ -240,7 +240,7 @@ PORT      STATE SERVICE    VERSION
 1102/tcp  open  tcpwrapped
 1104/tcp  open  tcpwrapped
 1105/tcp  open  tcpwrapped
-1106/tcp  open  tcpwrapped
+1106/tcp  open  isoipsigport-1?
 1107/tcp  open  tcpwrapped
 1108/tcp  open  tcpwrapped
 1110/tcp  open  tcpwrapped
@@ -273,7 +273,7 @@ PORT      STATE SERVICE    VERSION
 1165/tcp  open  tcpwrapped
 1166/tcp  open  tcpwrapped
 1169/tcp  open  tcpwrapped
-1174/tcp  open  tcpwrapped
+1174/tcp  open  fnet-remote-ui?
 1175/tcp  open  tcpwrapped
 1183/tcp  open  tcpwrapped
 1185/tcp  open  tcpwrapped
@@ -282,8 +282,8 @@ PORT      STATE SERVICE    VERSION
 1192/tcp  open  tcpwrapped
 1198/tcp  open  tcpwrapped
 1199/tcp  open  tcpwrapped
-1201/tcp  open  tcpwrapped
-1213/tcp  open  tcpwrapped
+1201/tcp  open  nucleus-sand?
+1213/tcp  open  mpc-lifenet?
 1216/tcp  open  tcpwrapped
 1217/tcp  open  tcpwrapped
 1218/tcp  open  tcpwrapped
@@ -296,11 +296,11 @@ PORT      STATE SERVICE    VERSION
 1259/tcp  open  tcpwrapped
 1271/tcp  open  tcpwrapped
 1272/tcp  open  tcpwrapped
-1277/tcp  open  tcpwrapped
+1277/tcp  open  miva-mqs?
 1287/tcp  open  tcpwrapped
 1296/tcp  open  tcpwrapped
 1300/tcp  open  tcpwrapped
-1301/tcp  open  tcpwrapped
+1301/tcp  open  ci3-software-1?
 1309/tcp  open  tcpwrapped
 1310/tcp  open  tcpwrapped
 1311/tcp  open  tcpwrapped
@@ -363,7 +363,7 @@ PORT      STATE SERVICE    VERSION
 1998/tcp  open  tcpwrapped
 1999/tcp  open  tcpwrapped
 2000/tcp  open  tcpwrapped
-2001/tcp  open  tcpwrapped
+2001/tcp  open  dc?
 2002/tcp  open  tcpwrapped
 2003/tcp  open  tcpwrapped
 2004/tcp  open  tcpwrapped
@@ -585,17 +585,7 @@ PORT      STATE SERVICE    VERSION
 5214/tcp  open  tcpwrapped
 5221/tcp  open  tcpwrapped
 5222/tcp  open  tcpwrapped
-| xmpp-info: 
-|   STARTTLS Failed
-|   info: 
-|     capabilities: 
-|     auth_mechanisms: 
-|     errors: 
-|       (timeout)
-|     unknown: 
-|     features: 
-|     xmpp: 
-|_    compression_methods: 
+|_xmpp-info: ERROR: Script execution failed (use -d to debug)
 5225/tcp  open  tcpwrapped
 5226/tcp  open  tcpwrapped
 5269/tcp  open  tcpwrapped
@@ -746,7 +736,7 @@ PORT      STATE SERVICE    VERSION
 8031/tcp  open  tcpwrapped
 8042/tcp  open  tcpwrapped
 8045/tcp  open  tcpwrapped
-8080/tcp  open  http       Cloudflare http proxy
+8080/tcp  open  http            Cloudflare http proxy
 |_http-server-header: cloudflare
 8081/tcp  open  tcpwrapped
 8082/tcp  open  tcpwrapped
@@ -777,7 +767,7 @@ PORT      STATE SERVICE    VERSION
 8383/tcp  open  tcpwrapped
 8400/tcp  open  tcpwrapped
 8402/tcp  open  tcpwrapped
-8443/tcp  open  ssl/http   Cloudflare http proxy
+8443/tcp  open  ssl/http        Cloudflare http proxy
 |_http-server-header: cloudflare
 8500/tcp  open  tcpwrapped
 8600/tcp  open  tcpwrapped
@@ -984,7 +974,6 @@ PORT      STATE SERVICE    VERSION
 49400/tcp open  tcpwrapped
 49999/tcp open  tcpwrapped
 50000/tcp open  tcpwrapped
-|_drda-info: ERROR
 50001/tcp open  tcpwrapped
 50002/tcp open  tcpwrapped
 50003/tcp open  tcpwrapped
@@ -1024,4 +1013,4 @@ PORT      STATE SERVICE    VERSION
 65389/tcp open  tcpwrapped
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jun 19 03:38:12 2025 -- 1 IP address (1 host up) scanned in 21.26 seconds
+# Nmap done at Thu Jun 26 03:31:11 2025 -- 1 IP address (1 host up) scanned in 29.40 seconds
