@@ -1,8 +1,8 @@
-# Nmap 7.92 scan initiated Thu Jun 19 03:58:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.je-teste-ma-professiondefoi.interieur.gouv.fr
+# Nmap 7.92 scan initiated Thu Jun 26 03:41:18 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.je-teste-ma-professiondefoi.interieur.gouv.fr
 Nmap scan report for www.je-teste-ma-professiondefoi.interieur.gouv.fr (45.138.194.15)
 Host is up (0.16s latency).
 Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE VERSION
+PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
@@ -17,10 +17,9 @@ PORT    STATE SERVICE VERSION
 |     Cache-Control: no-cache
 |     Location: https://45.138.194.15/
 |_    Content-Length: 0
-443/tcp open  https   Apache
-|_http-server-header: Apache
+443/tcp open  ssl/https
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=6/19%Time=68538AE0%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=6/26%Time=685CC170%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,7C,"HTTP/1\.0\x20302\x20Move\r\nContent-Type:\x20text/html\
 SF:r\nCache-Control:\x20no-cache\r\nLocation:\x20https://45\.138\.194\.15/
 SF:\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,7C,"HTTP/1\.0\x20302\x
@@ -32,4 +31,4 @@ SF:.194\.15/nice%20ports%2C/Trinity\.txt\.bak\r\nContent-Length:\x200\r\n\
 SF:r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jun 19 03:58:37 2025 -- 1 IP address (1 host up) scanned in 31.70 seconds
+# Nmap done at Thu Jun 26 03:41:50 2025 -- 1 IP address (1 host up) scanned in 31.39 seconds
