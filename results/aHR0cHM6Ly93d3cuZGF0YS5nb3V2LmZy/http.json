@@ -1,27 +1,23 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "F",
     "error": null,
-    "score": 55,
+    "score": 10,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "server": "nginx",
-      "date": "Thu, 19 Jun 2025 03:47:46 GMT",
-      "content-type": "text/html; charset=utf-8",
+      "server": "nginx/1.25.4",
+      "date": "Thu, 26 Jun 2025 03:48:13 GMT",
+      "content-type": "text/html;charset=utf-8",
       "transfer-encoding": "chunked",
-      "vary": "Accept-Encoding, Cookie",
-      "set-cookie": [
-        "session=d2~eyJjc3JmX3Rva2VuIjoiNTg5NDBkYjgxZjA5YWMyNzY3MTFhOGM5NGVjNzIzNjgyYzU0ODRjNyJ9.aFOIYg.o8qgwgHMTbZa_u0ir2lDTSMVdtE; Domain=.www.data.gouv.fr; Secure; HttpOnly; Path=/; SameSite=Lax"
-      ],
-      "pragma": "public",
-      "cache-control": "public",
-      "x-content-type-options": "nosniff",
-      "x-xss-protection": "1; mode=block",
-      "x-frame-options": "SAMEORIGIN",
+      "vary": "Accept-Encoding",
+      "x-powered-by": "Nuxt",
+      "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+      "pragma": "no-cache",
+      "expires": "0",
       "connection": "close"
     }
   },
@@ -39,27 +35,26 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
       "data": {
-        "session": {
+        "i18n_redirected": {
           "domain": "www.data.gouv.fr",
-          "httponly": true,
+          "expires": "2026-06-26T03:48:12.000Z",
           "path": "/",
           "port": null,
-          "samesite": "lax",
-          "secure": true
+          "samesite": "lax"
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
       "pass": true,
-      "result": "cross-origin-resource-sharing-not-implemented",
+      "result": "cross-origin-resource-sharing-implemented-with-public-access",
       "scoreModifier": 0,
-      "data": null
+      "data": "*"
     },
     "redirection": {
       "expectation": "redirection-to-https",
@@ -104,17 +99,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
