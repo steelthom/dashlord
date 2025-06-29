@@ -1,28 +1,44 @@
-# Nmap 7.92 scan initiated Sun Jun 22 04:00:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dares.travail-emploi.gouv.fr
+# Nmap 7.92 scan initiated Sun Jun 29 04:09:09 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dares.travail-emploi.gouv.fr
 Nmap scan report for www.dares.travail-emploi.gouv.fr (185.194.82.70)
-Host is up (0.13s latency).
+Host is up (0.082s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE    VERSION
-80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http      BigIP
 |_http-server-header: BigIP
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Server: BigIP
+|     Connection: close
+|_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
-|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.1 200 OK
-|     Cache-Control: no-store, must-revalidate, no-cache
-|     Pragma: no-cache
-|     Connection: close
-|     Content-Type: text/html
-|     Content-Length: 245
-|     X-Frame-Options: SAMEORIGIN
-|     X-XSS-Protection: 1; mode=block
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Sun, 29 Jun 2025 04:09:29 GMT
+|     Cache-Control: max-age=3600, public
+|     X-Drupal-Dynamic-Cache: MISS
+|     Content-language: fr
 |     X-Content-Type-Options: nosniff
-|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <14185738782417427068><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Last-Modified: Fri, 27 Jun 2025 16:53:12 GMT
+|     Vary: Cookie,Accept-Encoding
+|     Content-Length: 94996
+|     X-Drupal-Cache: HIT
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!fwyPV7Lhe4Sl/uWQEus9KsUIQe0YecSlBvP2zAcPN6f85p9NW9FMIXo9P6axd2+pH87loGAWc69gDF8RGRAbugnmWn3x; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Set-Cookie: TS0101001a=01352d3811f82d40d7c038abcc72dd247a336be0eb481ee9577387f2390cea2ba767f76c16a2353231c6bc6fdac09e7379cebaa6ef; Path=/
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
+|     <head>
 |   HTTPOptions: 
 |     HTTP/1.0 200 OK
-|     Date: Sun, 22 Jun 2025 04:01:16 GMT
+|     Date: Sun, 29 Jun 2025 04:09:29 GMT
 |     Allow: GET, POST
 |     Cache-Control: must-revalidate, no-cache, private
 |     Content-language: fr
@@ -34,64 +50,47 @@ PORT    STATE  SERVICE    VERSION
 |     Vary: Accept-Encoding
 |     Connection: close
 |     Content-Type: text/html; charset=UTF-8
-|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!rBErYdZzlR/doz6QEus9KsUIQe0YeTsj29fgkjhlTVBmyep1WFTBhmv5T6FxnVw19yd6oTsNUu8snUZLRCH0ZGohyrHy; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!CagL3YxxfKvG8DyQEus9KsUIQe0YeY+AzKKAFGfKWCr+7FdHGyWu+1FssGn6oXhlqSHYUSiDOEsAqJ7dATM/Pax6F1Kl; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     Set-Cookie: TS0101001a=01352d3811b4ffe9fd05212d17df2048b5500cf1eaf13719e20f58d92e43693ca9cac68dc4deccd473e942e0a05d9691ca03b771d7; Path=/
-|   RTSPRequest: 
-|     HTTP/1.1 400 Bad Request
-|     Date: Sun, 22 Jun 2025 04:01:28 GMT
-|     Content-Length: 226
-|     Connection: close
-|     Content-Type: text/html; charset=iso-8859-1
-|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!THLCuJ2kT0iQq0mQEus9KsUIQe0YeUKKAHDkLN7myHgNARnJn33YI4rLJHIXVbZbr1UWRh2mxKSs557PGNH/3s7yf7JN; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     Set-Cookie: TS0101001a=01352d38110df6515b8a658a1182b62710e84f610a4f6d7503b1487f3a56fba0879aaaf98f9d871912bd9a644176dca4cf7f19d1b6; Path=/
-|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-|     <html><head>
-|     <title>400 Bad Request</title>
-|     </head><body>
-|     <h1>Bad Request</h1>
-|     <p>Your browser sent a request that this server could not understand.<br />
-|     </p>
-|_    </body></html>
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/22%Time=6857800D%P=x86_64-alpine-linux
-SF:-musl%r(HTTPOptions,2D6,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sun,\x2022\
-SF:x20Jun\x202025\x2004:01:16\x20GMT\r\nAllow:\x20GET,\x20POST\r\nCache-Co
-SF:ntrol:\x20must-revalidate,\x20no-cache,\x20private\r\nContent-language:
-SF:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAM
-SF:EORIGIN\r\nexpires:\x20-1\r\nContent-Length:\x200\r\npragma:\x20no-cach
-SF:e\r\nVary:\x20Accept-Encoding\r\nConnection:\x20close\r\nContent-Type:\
-SF:x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20BIGipServerpool-dares-
-SF:site-v2\.cegedim\.cloud-HTTP=!rBErYdZzlR/doz6QEus9KsUIQe0YeTsj29fgkjhlT
-SF:VBmyep1WFTBhmv5T6FxnVw19yd6oTsNUu8snUZLRCH0ZGohyrHy;\x20path=/;\x20Http
-SF:only;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20i
-SF:ncludeSubDomains\r\nSet-Cookie:\x20TS0101001a=01352d3811b4ffe9fd05212d1
-SF:7df2048b5500cf1eaf13719e20f58d92e43693ca9cac68dc4deccd473e942e0a05d9691
-SF:ca03b771d7;\x20Path=/\r\n\r\n")%r(FourOhFourRequest,1EE,"HTTP/1\.1\x202
-SF:00\x20OK\r\nCache-Control:\x20no-store,\x20must-revalidate,\x20no-cache
-SF:\r\nPragma:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20tex
-SF:t/html\r\nContent-Length:\x20245\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX
-SF:-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosn
-SF:iff\r\n\r\n<html><head><title>Request\x20Rejected</title></head><body>T
-SF:he\x20requested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20wit
-SF:h\x20your\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20<14
-SF:185738782417427068><br><br><a\x20href='javascript:history\.back\(\);'>\
-SF:[Go\x20Back\]</body></html>")%r(RTSPRequest,2F9,"HTTP/1\.1\x20400\x20Ba
-SF:d\x20Request\r\nDate:\x20Sun,\x2022\x20Jun\x202025\x2004:01:28\x20GMT\r
-SF:\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20te
-SF:xt/html;\x20charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServerpool-dares-
-SF:site-v2\.cegedim\.cloud-HTTP=!THLCuJ2kT0iQq0mQEus9KsUIQe0YeUKKAHDkLN7my
-SF:HgNARnJn33YI4rLJHIXVbZbr1UWRh2mxKSs557PGNH/3s7yf7JN;\x20path=/;\x20Http
-SF:only;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20i
-SF:ncludeSubDomains\r\nSet-Cookie:\x20TS0101001a=01352d38110df6515b8a658a1
-SF:182b62710e84f610a4f6d7503b1487f3a56fba0879aaaf98f9d871912bd9a644176dca4
-SF:cf7f19d1b6;\x20Path=/\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
-SF:DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request<
-SF:/title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20
-SF:sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20under
-SF:stand\.<br\x20/>\n</p>\n</body></html>\n");
-Service Info: Device: load balancer
+|_    Set-Cookie: TS0101001a=01352d3811fb999747b955c8ab53e545fb23af94ed09db4e444d8dde7d6c9953d822624c45a83452c0d08a3cfb7a20cfc91211094d; Path=/
+|_http-trane-info: Problem with XML parsing of /evox/about
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=6/29%Time=6860BC72%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,6C,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nContent-Leng
+SF:th:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/29%Time=6860BC79%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sun,\x2029\
+SF:x20Jun\x202025\x2004:09:29\x20GMT\r\nCache-Control:\x20max-age=3600,\x2
+SF:0public\r\nX-Drupal-Dynamic-Cache:\x20MISS\r\nContent-language:\x20fr\r
+SF:\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nLast-Mod
+SF:ified:\x20Fri,\x2027\x20Jun\x202025\x2016:53:12\x20GMT\r\nVary:\x20Cook
+SF:ie,Accept-Encoding\r\nContent-Length:\x2094996\r\nX-Drupal-Cache:\x20HI
+SF:T\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UTF
+SF:-8\r\nSet-Cookie:\x20BIGipServerpool-dares-site-v2\.cegedim\.cloud-HTTP
+SF:=!fwyPV7Lhe4Sl/uWQEus9KsUIQe0YecSlBvP2zAcPN6f85p9NW9FMIXo9P6axd2\+pH87l
+SF:oGAWc69gDF8RGRAbugnmWn3x;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-T
+SF:ransport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nSet-Coo
+SF:kie:\x20TS0101001a=01352d3811f82d40d7c038abcc72dd247a336be0eb481ee95773
+SF:87f2390cea2ba767f76c16a2353231c6bc6fdac09e7379cebaa6ef;\x20Path=/\r\n\r
+SF:\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=\"o
+SF:g:\x20https://ogp\.me/ns#\">\n\x20\x20<head>\n\x20\x20\x20\x20<")%r(HTT
+SF:POptions,2D6,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sun,\x2029\x20Jun\x202
+SF:025\x2004:09:29\x20GMT\r\nAllow:\x20GET,\x20POST\r\nCache-Control:\x20m
+SF:ust-revalidate,\x20no-cache,\x20private\r\nContent-language:\x20fr\r\nX
+SF:-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\n
+SF:expires:\x20-1\r\nContent-Length:\x200\r\npragma:\x20no-cache\r\nVary:\
+SF:x20Accept-Encoding\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=UTF-8\r\nSet-Cookie:\x20BIGipServerpool-dares-site-v2\.ce
+SF:gedim\.cloud-HTTP=!CagL3YxxfKvG8DyQEus9KsUIQe0YeY\+AzKKAFGfKWCr\+7FdHGy
+SF:Wu\+1FssGn6oXhlqSHYUSiDOEsAqJ7dATM/Pax6F1Kl;\x20path=/;\x20Httponly;\x2
+SF:0Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSu
+SF:bDomains\r\nSet-Cookie:\x20TS0101001a=01352d3811fb999747b955c8ab53e545f
+SF:b23af94ed09db4e444d8dde7d6c9953d822624c45a83452c0d08a3cfb7a20cfc9121109
+SF:4d;\x20Path=/\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Jun 22 04:03:30 2025 -- 1 IP address (1 host up) scanned in 161.43 seconds
+# Nmap done at Sun Jun 29 04:11:53 2025 -- 1 IP address (1 host up) scanned in 163.59 seconds
