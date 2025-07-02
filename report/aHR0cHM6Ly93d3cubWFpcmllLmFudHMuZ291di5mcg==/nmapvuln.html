@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.mairie.ants.gouv.fr</pre>
-<p class="lead">Thu Jun 26 03:23:28 2025 – Thu Jun 26 03:24:00 2025<br>1 hosts scanned.
+<p class="lead">Wed Jul  2 03:47:04 2025 – Wed Jul  2 03:47:38 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -151,7 +151,7 @@
   FourOhFourRequest: 
     HTTP/1.1 302 Moved Temporarily
     Server: rdwr
-    Date: Thu, 26 Jun 2025 03:23:45 GMT
+    Date: Wed, 02 Jul 2025 03:47:14 GMT
     Content-Type: text/html
     Content-Length: 137
     Connection: close
@@ -166,7 +166,7 @@
   GetRequest, HTTPOptions: 
     HTTP/1.1 302 Moved Temporarily
     Server: rdwr
-    Date: Thu, 26 Jun 2025 03:23:44 GMT
+    Date: Wed, 02 Jul 2025 03:47:13 GMT
     Content-Type: text/html
     Content-Length: 137
     Connection: close
@@ -181,7 +181,7 @@
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     Server: rdwr
-    Date: Thu, 26 Jun 2025 03:23:44 GMT
+    Date: Wed, 02 Jul 2025 03:47:14 GMT
     Content-Type: text/html
     Content-Length: 149
     Connection: close
@@ -215,20 +215,75 @@
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">nginx</td>
-<td title="Version">1.27.0</td>
+<td title="Service">https</td>
+<td title="Product"></td>
+<td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx:1.27.0">cpe:/a:igor_sysoev:nginx:1.27.0</a><h5>hnap-info</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>hnap-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">ERROR: Script execution failed (use -d to debug)</pre>
-<h5>vulners</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  nginx 1.27.0: 
-    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419</pre>
 <h5>http-trane-info</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">ERROR: Script execution failed (use -d to debug)</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 303 Found
+    Content-Type: text/html
+    Content-Length: 650
+    Connection: close
+    Cache-Control: no-cache, private, no-store, must-revalidate
+    Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2057457709
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Security Page redirect&lt;/title&gt;
+    &lt;meta http-equiv="refresh" content="3;url=https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2057457709"&gt;
+    &lt;script type="text/javascript"&gt;
+    function GoSecure() { location.href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2057457709";}
+    function SetDelay() { setTimeout("GoSecure();",2000);}
+    &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onLoad="SetDelay();"&gt;
+    align="center"&gt;Click &lt;a href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2057457709"&gt;Here&lt;/a&gt; to continue.&lt;/h2&gt;
+    &lt;/body
+  GetRequest: 
+    HTTP/1.1 400 Bad Request
+    Content-Type: text/html
+    Content-Length: 150
+    Connection: close
+    Date: Wed, 02 Jul 2025 03:47:20 GMT
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    X-Frame-Options: SAMEORIGIN
+    Referrer-Policy: strict-origin-when-cross-origin
+    Content-Security-Policy: frame-ancestors 'self'
+    Permissions-Policy: camera=(), geolocation=(), microphone=()
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 303 Found
+    Content-Type: text/html
+    Content-Length: 650
+    Connection: close
+    Cache-Control: no-cache, private, no-store, must-revalidate
+    Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2041082245
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Security Page redirect&lt;/title&gt;
+    &lt;meta http-equiv="refresh" content="3;url=https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2041082245"&gt;
+    &lt;script type="text/javascript"&gt;
+    function GoSecure() { location.href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2041082245";}
+    function SetDelay() { setTimeout("GoSecure();",2000);}
+    &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body onLoad="SetDelay();"&gt;
+    align="center"&gt;Click &lt;a href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=2041082245"&gt;Here&lt;/a&gt; to continue.&lt;/h2&gt;
+    &lt;/body</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -261,10 +316,10 @@
 <td>66.22.32.165 - www.mairie.ants.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http</td>
-<td>nginx</td>
-<td>1.27.0</td>
-<td>cpe:/a:igor_sysoev:nginx:1.27.0</td>
+<td>https</td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
