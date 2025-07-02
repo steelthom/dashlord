@@ -213,7 +213,7 @@
               "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "off by -3 seconds from your localtime"
+              "finding"      : "off by -2 seconds from your localtime"
           }
 ,         {
               "id"           : "certificate_compression",
@@ -346,7 +346,7 @@
               "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (46)"
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -450,15 +450,22 @@
               "id"           : "HTTP_status_code",
               "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "301 Moved Permanently ('/')"
+              "severity"     : "WARN",
+              "finding"      : "Unexpected 503 Service Unavailable @ '/'"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Got no HTTP time, maybe try different URL?"
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1751427629"
           }
 ,         {
               "id"           : "HSTS",
@@ -493,7 +500,7 @@
               "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
+              "finding"      : "0 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "security_headers",
@@ -1021,6 +1028,6 @@
               "ip"           : "www.encheres-domaine.gouv.fr/51.77.161.209",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "83"
+              "finding"      : "86"
           }
 ]
