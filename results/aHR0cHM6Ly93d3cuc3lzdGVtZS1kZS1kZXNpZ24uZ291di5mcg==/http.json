@@ -1,48 +1,118 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "B+",
     "error": null,
-    "score": 35,
+    "score": 80,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 24 Jun 2025 04:03:00 GMT",
-      "content-type": "text/html",
+      "date": "Wed, 02 Jul 2025 03:28:57 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "transfer-encoding": "chunked",
       "connection": "close",
-      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
-      "x-content-type-options": "nosniff",
+      "last-modified": "Thu, 26 Jun 2025 14:02:13 GMT",
+      "vary": "Accept-Encoding",
       "x-xss-protection": "1; mode=block",
-      "last-modified": "Tue, 20 May 2025 09:06:44 GMT",
-      "etag": "W/\"b5fd-6358d9142d100\"",
-      "x-varnish": "1342471 1342422",
-      "age": "56",
-      "x-cache": "HIT",
-      "x-cache-hits": "2",
-      "transfer-encoding": "chunked"
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "geolocation=(), microphone=(), camera=()",
+      "content-security-policy": "default-src 'self';        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://gva.et-gv.fr https://zmmt.systeme-de-design.gouv.fr;        style-src 'self' 'unsafe-inline';        img-src 'self' data: https://i.vimeocdn.com https://gva.et-gv.fr https://zmmt.systeme-de-design.gouv.fr;        font-src 'self';        object-src 'none';        base-uri 'self';        form-action 'self';        frame-ancestors 'self';        frame-src 'self' https://player.vimeo.com https://49a6088a.sibforms.com;",
+      "cf-cache-status": "HIT",
+      "age": "38339",
+      "server": "cloudflare",
+      "cf-ray": "958b0e597e3d3cf8-CDG",
+      "alt-svc": "h3=\":443\"; ma=86400"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'self'"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https://cdnjs.cloudflare.com",
+          "https://gva.et-gv.fr",
+          "https://zmmt.systeme-de-design.gouv.fr"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'"
+        ],
+        "img-src": [
+          "'self'",
+          "data:",
+          "https://gva.et-gv.fr",
+          "https://i.vimeocdn.com",
+          "https://zmmt.systeme-de-design.gouv.fr"
+        ],
+        "font-src": [
+          "'self'"
+        ],
+        "object-src": [
+          "'none'"
+        ],
+        "base-uri": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "frame-ancestors": [
+          "'self'"
+        ],
+        "frame-src": [
+          "'self'",
+          "https://49a6088a.sibforms.com",
+          "https://player.vimeo.com"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": false,
+        "insecureFormAction": false,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
-      "sameSite": false
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
+      "data": {
+        "__cf_bm": {
+          "domain": "systeme-de-design.gouv.fr",
+          "expires": "2025-07-02T03:58:57.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        }
+      },
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -54,39 +124,76 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": null,
+      "destination": "https://www.systeme-de-design.gouv.fr/version-courante/fr",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.systeme-de-design.gouv.fr/",
+        "https://www.systeme-de-design.gouv.fr/",
+        "https://www.systeme-de-design.gouv.fr/version-courante/fr"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 63072000,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "result": "sri-implemented-and-external-scripts-loaded-securely",
+      "scoreModifier": 5,
+      "data": {
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-6yoqbrcLAHDWAdQmiRlHG4+m0g/CT/V9AGyxabG8j7Jk8j3r3K6due7oqpiRMZqcYe9WM2gPcaNNxnl2ux+3tA=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/javascript.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-XrpvbK+zc0wErJG1VptH0H4w4zyiniHOBR35DJ1VISA+cqYxhksvqFwZk0M8lX9ylaIjTXoMYolOPb93zdrGpg=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/xml.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-dG+W2e5Wf51XUF9HqsX31z5+nTTuxe8wpOEC3/1gCJImJusP1FZS1PHxiH3NjBUQJ6oDpVRKKXH7+aCVd+wkDA=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/scss.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-fhGqLFbE7MvF94wQ72OFn5VsWhqnvxciu8Zq2omUg641h1LxrluzrmGBXEF0Bhlev3p5Am9kpLfunqGw5JaRtA=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/css.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-fpDUuCO8gpUPZ7TzS3mjJsopogeCbFf94kXHQNzOdEQXksHWOiOHaynatkhBRQraX1GMVtLlU5Z/8NWuK8TLLw=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/bash.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-4ea7XTSjSgnYA2UCmeriRmmIfJ5iXR562Y8faBB+y3BKcwftFMofy6ff0wX4A4UmR155PlFghb5np+WrAVIoaw=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/json.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-hWf27MxSv3ZoSOnIh0STq7QrN5YWaGxD53WCPl8GS7WboKLvz+x/FK6431QNwZ6vz6tigXSw1D1z9gz1WwoObg=="
+        },
+        "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/yaml.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha512-10TmDDlpvsCOKvlpApa381uvcDbBL4WeJw0txuN8c786A6kMyS/Ts93o4XbtDtBnzXzdqtTbBb1xiDW5YP3x9w=="
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
@@ -97,10 +204,10 @@
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-header-invalid",
-      "scoreModifier": -20,
-      "data": "SAMEORIGIN, SAMEORIGIN"
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
