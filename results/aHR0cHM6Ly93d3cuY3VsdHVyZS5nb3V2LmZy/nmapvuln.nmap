@@ -1,159 +1,633 @@
-# Nmap 7.92 scan initiated Fri Jun 27 04:00:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.culture.gouv.fr
-Nmap scan report for www.culture.gouv.fr (178.33.22.53)
-Host is up (0.12s latency).
-rDNS record for 178.33.22.53: ip53.ip-178-33-22.eu
-Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE   VERSION
-80/tcp  open  http
+# Nmap 7.92 scan initiated Fri Jul  4 04:08:57 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.culture.gouv.fr
+Nmap scan report for www.culture.gouv.fr (87.98.187.73)
+Host is up (0.088s latency).
+rDNS record for 87.98.187.73: ip73.ip-87-98-187.eu
+Not shown: 483 closed tcp ports (reset)
+PORT      STATE SERVICE     VERSION
+6/tcp     open  unknown
+7/tcp     open  echo?
+19/tcp    open  chargen?
+22/tcp    open  tcpwrapped
+23/tcp    open  telnet?
+24/tcp    open  priv-mail?
+25/tcp    open  smtp?
+26/tcp    open  tcpwrapped
+30/tcp    open  tcpwrapped
+53/tcp    open  domain?
+79/tcp    open  tcpwrapped
+80/tcp    open  http
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.0 503 Service Unavailable
-|     cache-control: no-cache
-|     content-type: text/html
-|     <!DOCTYPE html>
-|     <html><head><meta charset="utf-8"><title>Website not found</title>
-|     <link href="https://eu-west-2.cloudprotector.com/console/resources/css/error_page.css" rel="stylesheet" type="text/css"/>
-|     </head><body>
-|     <div id="top"></div>
-|     <div id="content"><div id="content2"><div id="logo"></div>
-|     <h2>The website you are trying to access does not exist.</h2>
-|     Possible reasons:
-|     <ul>
-|     <li>The website is new and has not been deployed yet.</li>
-|     <li>The website has been deleted.</li>
-|     <li>You are not using the server name of the website.</li>
-|     <li>You are using SSL (HTTPS) but the website has no SSL certificate configured.</li>
-|     <li>You are using SSL (HTTPS) but your browser is too old or does not support SNI.</li>
-|     </ul>
-|     </div></div>
-|     <div id="footer"><div id="ftleft"><a href="https://www
-|   NULL: 
-|     HTTP/1.1 408 Request Time-out
-|     Content-length: 110
-|     Cache-Control: no-cache
-|     Connection: close
-|     Content-Type: text/html
-|     <html><body><h1>408 Request Time-out</h1>
-|     Your browser didn't send a complete request in time.
-|_    </body></html>
-443/tcp open  ssl/https
-| fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.0 503 Service Unavailable
-|     cache-control: no-cache
-|     content-type: text/html
-|     <!DOCTYPE html>
-|     <html><head><meta charset="utf-8"><title>Website not found</title>
-|     <link href="https://eu-west-2.cloudprotector.com/console/resources/css/error_page.css" rel="stylesheet" type="text/css"/>
-|     </head><body>
-|     <div id="top"></div>
-|     <div id="content"><div id="content2"><div id="logo"></div>
-|     <h2>The website you are trying to access does not exist.</h2>
-|     Possible reasons:
-|     <ul>
-|     <li>The website is new and has not been deployed yet.</li>
-|     <li>The website has been deleted.</li>
-|     <li>You are not using the server name of the website.</li>
-|     <li>You are using SSL (HTTPS) but the website has no SSL certificate configured.</li>
-|     <li>You are using SSL (HTTPS) but your browser is too old or does not support SNI.</li>
-|     </ul>
-|     </div></div>
-|     <div id="footer"><div id="ftleft"><a href="https://www
-|   NULL: 
-|     HTTP/1.1 408 Request Time-out
-|     Content-length: 110
-|     Cache-Control: no-cache
-|     Connection: close
-|     Content-Type: text/html
-|     <html><body><h1>408 Request Time-out</h1>
-|     Your browser didn't send a complete request in time.
-|_    </body></html>
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=6/27%Time=685E176C%P=x86_64-alpine-linux-musl%r
-SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
-SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
-SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
-SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
-SF:x20time\.\n</body></html>\n")%r(GetRequest,560,"HTTP/1\.0\x20503\x20Ser
-SF:vice\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-type:\x20t
-SF:ext/html\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head><meta\x20charset=\"ut
-SF:f-8\"><title>Website\x20not\x20found</title>\r\n<link\x20href=\"https:/
-SF:/eu-west-2\.cloudprotector\.com/console/resources/css/error_page\.css\"
-SF:\x20rel=\"stylesheet\"\x20type=\"text/css\"/>\r\n</head><body>\r\n<div\
-SF:x20id=\"top\"></div>\r\n<div\x20id=\"content\"><div\x20id=\"content2\">
-SF:<div\x20id=\"logo\"></div>\r\n<h2>The\x20website\x20you\x20are\x20tryin
-SF:g\x20to\x20access\x20does\x20not\x20exist\.</h2>\r\nPossible\x20reasons
-SF::\r\n<ul>\r\n\x20\x20<li>The\x20website\x20is\x20new\x20and\x20has\x20n
-SF:ot\x20been\x20deployed\x20yet\.</li>\r\n\x20\x20<li>The\x20website\x20h
-SF:as\x20been\x20deleted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20using\
-SF:x20the\x20server\x20name\x20of\x20the\x20website\.</li>\r\n\x20\x20<li>
-SF:You\x20are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\x20has
-SF:\x20no\x20SSL\x20certificate\x20configured\.</li>\r\n\x20\x20<li>You\x2
-SF:0are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is\x20to
-SF:o\x20old\x20or\x20does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r\n</di
-SF:v></div>\r\n<div\x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20href=\"ht
-SF:tps://www")%r(HTTPOptions,560,"HTTP/1\.0\x20503\x20Service\x20Unavailab
-SF:le\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<
-SF:!DOCTYPE\x20html>\r\n<html><head><meta\x20charset=\"utf-8\"><title>Webs
-SF:ite\x20not\x20found</title>\r\n<link\x20href=\"https://eu-west-2\.cloud
-SF:protector\.com/console/resources/css/error_page\.css\"\x20rel=\"stylesh
-SF:eet\"\x20type=\"text/css\"/>\r\n</head><body>\r\n<div\x20id=\"top\"></d
-SF:iv>\r\n<div\x20id=\"content\"><div\x20id=\"content2\"><div\x20id=\"logo
-SF:\"></div>\r\n<h2>The\x20website\x20you\x20are\x20trying\x20to\x20access
-SF:\x20does\x20not\x20exist\.</h2>\r\nPossible\x20reasons:\r\n<ul>\r\n\x20
-SF:\x20<li>The\x20website\x20is\x20new\x20and\x20has\x20not\x20been\x20dep
-SF:loyed\x20yet\.</li>\r\n\x20\x20<li>The\x20website\x20has\x20been\x20del
-SF:eted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20using\x20the\x20server\
-SF:x20name\x20of\x20the\x20website\.</li>\r\n\x20\x20<li>You\x20are\x20usi
-SF:ng\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\x20has\x20no\x20SSL\x20
-SF:certificate\x20configured\.</li>\r\n\x20\x20<li>You\x20are\x20using\x20
-SF:SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is\x20too\x20old\x20or\x2
-SF:0does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r\n</div></div>\r\n<div\
-SF:x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20href=\"https://www");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/27%Time=685E1773%P=x86_64-alpine-linux
-SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
-SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
-SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
-SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
-SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,560,"HTTP/1\.0\x20503
-SF:\x20Service\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-typ
-SF:e:\x20text/html\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head><meta\x20chars
-SF:et=\"utf-8\"><title>Website\x20not\x20found</title>\r\n<link\x20href=\"
-SF:https://eu-west-2\.cloudprotector\.com/console/resources/css/error_page
-SF:\.css\"\x20rel=\"stylesheet\"\x20type=\"text/css\"/>\r\n</head><body>\r
-SF:\n<div\x20id=\"top\"></div>\r\n<div\x20id=\"content\"><div\x20id=\"cont
-SF:ent2\"><div\x20id=\"logo\"></div>\r\n<h2>The\x20website\x20you\x20are\x
-SF:20trying\x20to\x20access\x20does\x20not\x20exist\.</h2>\r\nPossible\x20
-SF:reasons:\r\n<ul>\r\n\x20\x20<li>The\x20website\x20is\x20new\x20and\x20h
-SF:as\x20not\x20been\x20deployed\x20yet\.</li>\r\n\x20\x20<li>The\x20websi
-SF:te\x20has\x20been\x20deleted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x2
-SF:0using\x20the\x20server\x20name\x20of\x20the\x20website\.</li>\r\n\x20\
-SF:x20<li>You\x20are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website
-SF:\x20has\x20no\x20SSL\x20certificate\x20configured\.</li>\r\n\x20\x20<li
-SF:>You\x20are\x20using\x20SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20i
-SF:s\x20too\x20old\x20or\x20does\x20not\x20support\x20SNI\.</li>\r\n</ul>\
-SF:r\n</div></div>\r\n<div\x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20hr
-SF:ef=\"https://www")%r(HTTPOptions,560,"HTTP/1\.0\x20503\x20Service\x20Un
-SF:available\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r
-SF:\n\r\n<!DOCTYPE\x20html>\r\n<html><head><meta\x20charset=\"utf-8\"><tit
-SF:le>Website\x20not\x20found</title>\r\n<link\x20href=\"https://eu-west-2
-SF:\.cloudprotector\.com/console/resources/css/error_page\.css\"\x20rel=\"
-SF:stylesheet\"\x20type=\"text/css\"/>\r\n</head><body>\r\n<div\x20id=\"to
-SF:p\"></div>\r\n<div\x20id=\"content\"><div\x20id=\"content2\"><div\x20id
-SF:=\"logo\"></div>\r\n<h2>The\x20website\x20you\x20are\x20trying\x20to\x2
-SF:0access\x20does\x20not\x20exist\.</h2>\r\nPossible\x20reasons:\r\n<ul>\
-SF:r\n\x20\x20<li>The\x20website\x20is\x20new\x20and\x20has\x20not\x20been
-SF:\x20deployed\x20yet\.</li>\r\n\x20\x20<li>The\x20website\x20has\x20been
-SF:\x20deleted\.</li>\r\n\x20\x20<li>You\x20are\x20not\x20using\x20the\x20
-SF:server\x20name\x20of\x20the\x20website\.</li>\r\n\x20\x20<li>You\x20are
-SF:\x20using\x20SSL\x20\(HTTPS\)\x20but\x20the\x20website\x20has\x20no\x20
-SF:SSL\x20certificate\x20configured\.</li>\r\n\x20\x20<li>You\x20are\x20us
-SF:ing\x20SSL\x20\(HTTPS\)\x20but\x20your\x20browser\x20is\x20too\x20old\x
-SF:20or\x20does\x20not\x20support\x20SNI\.</li>\r\n</ul>\r\n</div></div>\r
-SF:\n<div\x20id=\"footer\"><div\x20id=\"ftleft\"><a\x20href=\"https://www"
-SF:);
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:11 GMT
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:10 GMT
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:07 GMT
+|     connection: close
+|     Upgrade Required
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:08 GMT
+|     connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:02 GMT
+|     connection: close
+|     Upgrade Required
+|   HTTPOptions: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:03 GMT
+|     connection: close
+|     Upgrade Required
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:13 GMT
+|     connection: close
+|     Request
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:09 GMT
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:04 GMT
+|     connection: close
+|     Request
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Fri, 04 Jul 2025 04:09:05 GMT
+|     connection: close
+|_    Request
+82/tcp    open  tcpwrapped
+84/tcp    open  ctf?
+85/tcp    open  mit-ml-dev?
+88/tcp    open  tcpwrapped
+89/tcp    open  su-mit-tg?
+90/tcp    open  tcpwrapped
+106/tcp   open  pop3pw?
+109/tcp   open  tcpwrapped
+119/tcp   open  tcpwrapped
+125/tcp   open  tcpwrapped
+135/tcp   open  tcpwrapped
+143/tcp   open  tcpwrapped
+144/tcp   open  tcpwrapped
+161/tcp   open  tcpwrapped
+163/tcp   open  tcpwrapped
+179/tcp   open  tcpwrapped
+199/tcp   open  tcpwrapped
+212/tcp   open  tcpwrapped
+255/tcp   open  tcpwrapped
+259/tcp   open  tcpwrapped
+301/tcp   open  tcpwrapped
+311/tcp   open  tcpwrapped
+340/tcp   open  tcpwrapped
+389/tcp   open  tcpwrapped
+406/tcp   open  tcpwrapped
+416/tcp   open  tcpwrapped
+425/tcp   open  tcpwrapped
+427/tcp   open  tcpwrapped
+443/tcp   open  ssl/https
+444/tcp   open  tcpwrapped
+445/tcp   open  tcpwrapped
+497/tcp   open  tcpwrapped
+512/tcp   open  tcpwrapped
+513/tcp   open  tcpwrapped
+514/tcp   open  tcpwrapped
+524/tcp   open  tcpwrapped
+541/tcp   open  tcpwrapped
+544/tcp   open  tcpwrapped
+554/tcp   open  tcpwrapped
+616/tcp   open  tcpwrapped
+617/tcp   open  tcpwrapped
+631/tcp   open  tcpwrapped
+646/tcp   open  tcpwrapped
+668/tcp   open  tcpwrapped
+687/tcp   open  tcpwrapped
+691/tcp   open  tcpwrapped
+700/tcp   open  tcpwrapped
+705/tcp   open  tcpwrapped
+711/tcp   open  tcpwrapped
+765/tcp   open  tcpwrapped
+777/tcp   open  tcpwrapped
+783/tcp   open  tcpwrapped
+801/tcp   open  tcpwrapped
+843/tcp   open  tcpwrapped
+880/tcp   open  tcpwrapped
+898/tcp   open  tcpwrapped
+912/tcp   open  tcpwrapped
+981/tcp   open  tcpwrapped
+990/tcp   open  tcpwrapped
+999/tcp   open  tcpwrapped
+1000/tcp  open  tcpwrapped
+1002/tcp  open  tcpwrapped
+1007/tcp  open  tcpwrapped
+1010/tcp  open  tcpwrapped
+1021/tcp  open  tcpwrapped
+1023/tcp  open  tcpwrapped
+1024/tcp  open  tcpwrapped
+1027/tcp  open  tcpwrapped
+1030/tcp  open  tcpwrapped
+1032/tcp  open  tcpwrapped
+1033/tcp  open  tcpwrapped
+1034/tcp  open  tcpwrapped
+1036/tcp  open  tcpwrapped
+1042/tcp  open  tcpwrapped
+1044/tcp  open  tcpwrapped
+1045/tcp  open  tcpwrapped
+1047/tcp  open  tcpwrapped
+1048/tcp  open  tcpwrapped
+1049/tcp  open  tcpwrapped
+1054/tcp  open  tcpwrapped
+1055/tcp  open  tcpwrapped
+1059/tcp  open  tcpwrapped
+1061/tcp  open  tcpwrapped
+1062/tcp  open  tcpwrapped
+1063/tcp  open  tcpwrapped
+1064/tcp  open  tcpwrapped
+1065/tcp  open  tcpwrapped
+1067/tcp  open  tcpwrapped
+1071/tcp  open  tcpwrapped
+1072/tcp  open  tcpwrapped
+1075/tcp  open  tcpwrapped
+1076/tcp  open  tcpwrapped
+1078/tcp  open  tcpwrapped
+1079/tcp  open  tcpwrapped
+1081/tcp  open  tcpwrapped
+1082/tcp  open  tcpwrapped
+1091/tcp  open  tcpwrapped
+1092/tcp  open  tcpwrapped
+1093/tcp  open  tcpwrapped
+1094/tcp  open  tcpwrapped
+1095/tcp  open  tcpwrapped
+1096/tcp  open  tcpwrapped
+1097/tcp  open  tcpwrapped
+1100/tcp  open  tcpwrapped
+1102/tcp  open  tcpwrapped
+1104/tcp  open  tcpwrapped
+1106/tcp  open  tcpwrapped
+1111/tcp  open  tcpwrapped
+1112/tcp  open  tcpwrapped
+1114/tcp  open  tcpwrapped
+1117/tcp  open  tcpwrapped
+1121/tcp  open  tcpwrapped
+1122/tcp  open  tcpwrapped
+1130/tcp  open  tcpwrapped
+1141/tcp  open  tcpwrapped
+1145/tcp  open  tcpwrapped
+1147/tcp  open  tcpwrapped
+1149/tcp  open  tcpwrapped
+1151/tcp  open  tcpwrapped
+1154/tcp  open  tcpwrapped
+1169/tcp  open  tcpwrapped
+1174/tcp  open  tcpwrapped
+1185/tcp  open  tcpwrapped
+1198/tcp  open  tcpwrapped
+1199/tcp  open  tcpwrapped
+1216/tcp  open  tcpwrapped
+1217/tcp  open  tcpwrapped
+1218/tcp  open  tcpwrapped
+1236/tcp  open  tcpwrapped
+1287/tcp  open  tcpwrapped
+1300/tcp  open  tcpwrapped
+1301/tcp  open  tcpwrapped
+1309/tcp  open  tcpwrapped
+1310/tcp  open  tcpwrapped
+1311/tcp  open  tcpwrapped
+1322/tcp  open  tcpwrapped
+1328/tcp  open  tcpwrapped
+1334/tcp  open  tcpwrapped
+1417/tcp  open  tcpwrapped
+1433/tcp  open  tcpwrapped
+1455/tcp  open  tcpwrapped
+1500/tcp  open  tcpwrapped
+1521/tcp  open  tcpwrapped
+1524/tcp  open  tcpwrapped
+1533/tcp  open  tcpwrapped
+1580/tcp  open  tcpwrapped
+1583/tcp  open  tcpwrapped
+1594/tcp  open  tcpwrapped
+1600/tcp  open  tcpwrapped
+1666/tcp  open  tcpwrapped
+1687/tcp  open  tcpwrapped
+1688/tcp  open  tcpwrapped
+1718/tcp  open  tcpwrapped
+1723/tcp  open  tcpwrapped
+|_pptp-version: ERROR: Script execution failed (use -d to debug)
+1801/tcp  open  tcpwrapped
+1805/tcp  open  tcpwrapped
+1839/tcp  open  tcpwrapped
+1840/tcp  open  tcpwrapped
+1862/tcp  open  tcpwrapped
+1914/tcp  open  tcpwrapped
+1947/tcp  open  tcpwrapped
+1972/tcp  open  tcpwrapped
+1974/tcp  open  tcpwrapped
+1984/tcp  open  tcpwrapped
+1998/tcp  open  tcpwrapped
+1999/tcp  open  tcpwrapped
+2004/tcp  open  tcpwrapped
+2005/tcp  open  tcpwrapped
+2006/tcp  open  tcpwrapped
+2009/tcp  open  tcpwrapped
+2010/tcp  open  tcpwrapped
+2013/tcp  open  tcpwrapped
+2022/tcp  open  tcpwrapped
+2030/tcp  open  tcpwrapped
+2033/tcp  open  tcpwrapped
+2034/tcp  open  tcpwrapped
+2035/tcp  open  tcpwrapped
+2038/tcp  open  tcpwrapped
+2042/tcp  open  tcpwrapped
+2046/tcp  open  tcpwrapped
+2049/tcp  open  tcpwrapped
+2065/tcp  open  tcpwrapped
+2099/tcp  open  tcpwrapped
+2103/tcp  open  tcpwrapped
+2106/tcp  open  tcpwrapped
+2107/tcp  open  tcpwrapped
+2121/tcp  open  tcpwrapped
+2126/tcp  open  tcpwrapped
+2144/tcp  open  tcpwrapped
+2161/tcp  open  tcpwrapped
+2170/tcp  open  tcpwrapped
+2179/tcp  open  tcpwrapped
+2251/tcp  open  tcpwrapped
+2260/tcp  open  tcpwrapped
+2288/tcp  open  tcpwrapped
+2301/tcp  open  tcpwrapped
+2323/tcp  open  tcpwrapped
+2366/tcp  open  tcpwrapped
+2381/tcp  open  tcpwrapped
+2393/tcp  open  tcpwrapped
+2399/tcp  open  tcpwrapped
+2401/tcp  open  tcpwrapped
+2492/tcp  open  tcpwrapped
+2500/tcp  open  tcpwrapped
+2525/tcp  open  tcpwrapped
+2601/tcp  open  tcpwrapped
+2607/tcp  open  tcpwrapped
+2608/tcp  open  tcpwrapped
+2710/tcp  open  tcpwrapped
+2725/tcp  open  tcpwrapped
+2800/tcp  open  tcpwrapped
+2809/tcp  open  tcpwrapped
+2909/tcp  open  tcpwrapped
+2910/tcp  open  tcpwrapped
+2967/tcp  open  tcpwrapped
+2968/tcp  open  tcpwrapped
+3000/tcp  open  tcpwrapped
+3001/tcp  open  tcpwrapped
+3003/tcp  open  tcpwrapped
+3005/tcp  open  tcpwrapped
+3007/tcp  open  tcpwrapped
+3013/tcp  open  tcpwrapped
+3017/tcp  open  tcpwrapped
+3077/tcp  open  tcpwrapped
+3168/tcp  open  tcpwrapped
+3211/tcp  open  tcpwrapped
+3221/tcp  open  tcpwrapped
+3260/tcp  open  tcpwrapped
+3268/tcp  open  tcpwrapped
+3283/tcp  open  tcpwrapped
+3306/tcp  open  tcpwrapped
+3322/tcp  open  tcpwrapped
+3367/tcp  open  tcpwrapped
+3369/tcp  open  tcpwrapped
+3370/tcp  open  tcpwrapped
+3371/tcp  open  tcpwrapped
+3389/tcp  open  tcpwrapped
+3390/tcp  open  tcpwrapped
+3476/tcp  open  tcpwrapped
+3517/tcp  open  tcpwrapped
+3527/tcp  open  tcpwrapped
+3551/tcp  open  tcpwrapped
+3659/tcp  open  tcpwrapped
+3690/tcp  open  tcpwrapped
+3703/tcp  open  tcpwrapped
+3784/tcp  open  tcpwrapped
+3800/tcp  open  tcpwrapped
+3801/tcp  open  tcpwrapped
+3826/tcp  open  tcpwrapped
+3828/tcp  open  tcpwrapped
+3851/tcp  open  tcpwrapped
+3869/tcp  open  tcpwrapped
+3878/tcp  open  tcpwrapped
+3880/tcp  open  tcpwrapped
+3914/tcp  open  tcpwrapped
+3918/tcp  open  tcpwrapped
+3920/tcp  open  tcpwrapped
+3945/tcp  open  tcpwrapped
+3971/tcp  open  tcpwrapped
+3986/tcp  open  tcpwrapped
+3995/tcp  open  tcpwrapped
+3998/tcp  open  tcpwrapped
+4000/tcp  open  tcpwrapped
+4001/tcp  open  tcpwrapped
+4002/tcp  open  tcpwrapped
+4005/tcp  open  tcpwrapped
+4045/tcp  open  tcpwrapped
+4111/tcp  open  tcpwrapped
+4129/tcp  open  tcpwrapped
+4224/tcp  open  tcpwrapped
+4242/tcp  open  tcpwrapped
+4343/tcp  open  tcpwrapped
+4445/tcp  open  tcpwrapped
+4550/tcp  open  tcpwrapped
+4662/tcp  open  tcpwrapped
+4848/tcp  open  tcpwrapped
+5000/tcp  open  tcpwrapped
+5002/tcp  open  tcpwrapped
+5003/tcp  open  tcpwrapped
+5004/tcp  open  tcpwrapped
+5009/tcp  open  tcpwrapped
+5050/tcp  open  tcpwrapped
+5051/tcp  open  tcpwrapped
+5061/tcp  open  tcpwrapped
+5080/tcp  open  tcpwrapped
+5087/tcp  open  tcpwrapped
+5100/tcp  open  tcpwrapped
+5190/tcp  open  tcpwrapped
+5214/tcp  open  tcpwrapped
+5221/tcp  open  tcpwrapped
+5222/tcp  open  tcpwrapped
+|_xmpp-info: ERROR: Script execution failed (use -d to debug)
+5225/tcp  open  tcpwrapped
+5357/tcp  open  tcpwrapped
+5405/tcp  open  tcpwrapped
+5432/tcp  open  tcpwrapped
+5500/tcp  open  tcpwrapped
+5544/tcp  open  tcpwrapped
+5555/tcp  open  tcpwrapped
+5678/tcp  open  tcpwrapped
+5718/tcp  open  tcpwrapped
+5730/tcp  open  tcpwrapped
+5800/tcp  open  tcpwrapped
+5811/tcp  open  tcpwrapped
+5822/tcp  open  tcpwrapped
+5825/tcp  open  tcpwrapped
+5859/tcp  open  tcpwrapped
+5877/tcp  open  tcpwrapped
+5903/tcp  open  tcpwrapped
+5904/tcp  open  tcpwrapped
+5910/tcp  open  tcpwrapped
+5911/tcp  open  tcpwrapped
+5950/tcp  open  tcpwrapped
+5952/tcp  open  tcpwrapped
+5959/tcp  open  tcpwrapped
+5960/tcp  open  tcpwrapped
+5962/tcp  open  tcpwrapped
+5987/tcp  open  tcpwrapped
+5988/tcp  open  tcpwrapped
+6000/tcp  open  tcpwrapped
+6001/tcp  open  tcpwrapped
+6006/tcp  open  tcpwrapped
+6007/tcp  open  tcpwrapped
+6009/tcp  open  tcpwrapped
+6025/tcp  open  tcpwrapped
+6100/tcp  open  tcpwrapped
+6101/tcp  open  tcpwrapped
+6112/tcp  open  tcpwrapped
+6123/tcp  open  tcpwrapped
+6129/tcp  open  tcpwrapped
+6156/tcp  open  tcpwrapped
+6389/tcp  open  tcpwrapped
+6510/tcp  open  tcpwrapped
+6547/tcp  open  tcpwrapped
+6566/tcp  open  tcpwrapped
+6646/tcp  open  tcpwrapped
+6666/tcp  open  tcpwrapped
+6668/tcp  open  tcpwrapped
+6669/tcp  open  tcpwrapped
+6692/tcp  open  tcpwrapped
+6699/tcp  open  tcpwrapped
+6779/tcp  open  tcpwrapped
+6792/tcp  open  tcpwrapped
+6839/tcp  open  tcpwrapped
+6969/tcp  open  tcpwrapped
+7000/tcp  open  tcpwrapped
+7001/tcp  open  tcpwrapped
+7002/tcp  open  tcpwrapped
+7004/tcp  open  tcpwrapped
+7007/tcp  open  tcpwrapped
+7025/tcp  open  tcpwrapped
+7100/tcp  open  tcpwrapped
+7106/tcp  open  tcpwrapped
+7200/tcp  open  tcpwrapped
+7402/tcp  open  tcpwrapped
+7435/tcp  open  tcpwrapped
+7512/tcp  open  tcpwrapped
+7741/tcp  open  tcpwrapped
+7777/tcp  open  tcpwrapped
+7800/tcp  open  tcpwrapped
+7911/tcp  open  tcpwrapped
+7921/tcp  open  tcpwrapped
+7938/tcp  open  tcpwrapped
+8000/tcp  open  tcpwrapped
+8002/tcp  open  tcpwrapped
+8007/tcp  open  tcpwrapped
+8008/tcp  open  tcpwrapped
+8010/tcp  open  tcpwrapped
+8011/tcp  open  tcpwrapped
+8031/tcp  open  tcpwrapped
+8045/tcp  open  tcpwrapped
+8081/tcp  open  tcpwrapped
+8083/tcp  open  tcpwrapped
+8084/tcp  open  tcpwrapped
+8085/tcp  open  tcpwrapped
+8086/tcp  open  tcpwrapped
+8088/tcp  open  tcpwrapped
+8093/tcp  open  tcpwrapped
+8100/tcp  open  tcpwrapped
+8180/tcp  open  tcpwrapped
+8181/tcp  open  tcpwrapped
+8194/tcp  open  tcpwrapped
+8254/tcp  open  tcpwrapped
+8290/tcp  open  tcpwrapped
+8291/tcp  open  tcpwrapped
+8292/tcp  open  tcpwrapped
+8300/tcp  open  tcpwrapped
+8402/tcp  open  tcpwrapped
+8649/tcp  open  tcpwrapped
+8651/tcp  open  tcpwrapped
+8654/tcp  open  tcpwrapped
+8701/tcp  open  tcpwrapped
+8800/tcp  open  tcpwrapped
+9000/tcp  open  tcpwrapped
+9002/tcp  open  tcpwrapped
+9003/tcp  open  tcpwrapped
+9009/tcp  open  tcpwrapped
+9040/tcp  open  tcpwrapped
+9050/tcp  open  tcpwrapped
+9090/tcp  open  tcpwrapped
+|_drda-info: ERROR
+9099/tcp  open  tcpwrapped
+9100/tcp  open  jetdirect?
+9102/tcp  open  jetdirect?
+9220/tcp  open  tcpwrapped
+9290/tcp  open  tcpwrapped
+9502/tcp  open  tcpwrapped
+9575/tcp  open  tcpwrapped
+9593/tcp  open  tcpwrapped
+9666/tcp  open  tcpwrapped
+9876/tcp  open  tcpwrapped
+9877/tcp  open  tcpwrapped
+9878/tcp  open  tcpwrapped
+9929/tcp  open  tcpwrapped
+9944/tcp  open  tcpwrapped
+9998/tcp  open  tcpwrapped
+9999/tcp  open  tcpwrapped
+10003/tcp open  tcpwrapped
+10009/tcp open  tcpwrapped
+10012/tcp open  tcpwrapped
+10024/tcp open  tcpwrapped
+10082/tcp open  tcpwrapped
+10215/tcp open  tcpwrapped
+10243/tcp open  tcpwrapped
+10617/tcp open  tcpwrapped
+10621/tcp open  tcpwrapped
+10626/tcp open  tcpwrapped
+10629/tcp open  tcpwrapped
+11110/tcp open  tcpwrapped
+11111/tcp open  tcpwrapped
+12265/tcp open  tcpwrapped
+13456/tcp open  tcpwrapped
+13722/tcp open  tcpwrapped
+14000/tcp open  tcpwrapped
+14238/tcp open  tcpwrapped
+15000/tcp open  tcpwrapped
+15002/tcp open  tcpwrapped
+15003/tcp open  tcpwrapped
+15660/tcp open  tcpwrapped
+15742/tcp open  tcpwrapped
+16012/tcp open  tcpwrapped
+16016/tcp open  tcpwrapped
+16113/tcp open  tcpwrapped
+16992/tcp open  tcpwrapped
+16993/tcp open  tcpwrapped
+17877/tcp open  tcpwrapped
+17988/tcp open  tcpwrapped
+18101/tcp open  tcpwrapped
+19283/tcp open  tcpwrapped
+19315/tcp open  tcpwrapped
+20031/tcp open  tcpwrapped
+20222/tcp open  tcpwrapped
+22939/tcp open  tcpwrapped
+24444/tcp open  tcpwrapped
+25734/tcp open  tcpwrapped
+26214/tcp open  tcpwrapped
+27353/tcp open  tcpwrapped
+27355/tcp open  tcpwrapped
+27356/tcp open  tcpwrapped
+30000/tcp open  tcpwrapped
+30718/tcp open  tcpwrapped
+31038/tcp open  tcpwrapped
+31337/tcp open  tcpwrapped
+32769/tcp open  tcpwrapped
+32770/tcp open  tcpwrapped
+32772/tcp open  tcpwrapped
+32776/tcp open  tcpwrapped
+32777/tcp open  tcpwrapped
+32782/tcp open  tcpwrapped
+32783/tcp open  tcpwrapped
+32785/tcp open  tcpwrapped
+33899/tcp open  tcpwrapped
+34572/tcp open  tcpwrapped
+35500/tcp open  tcpwrapped
+41511/tcp open  tcpwrapped
+44176/tcp open  tcpwrapped
+44443/tcp open  tcpwrapped
+44501/tcp open  tcpwrapped
+45100/tcp open  tcpwrapped
+48080/tcp open  tcpwrapped
+49153/tcp open  tcpwrapped
+49159/tcp open  tcpwrapped
+49160/tcp open  tcpwrapped
+49161/tcp open  tcpwrapped
+49163/tcp open  tcpwrapped
+49176/tcp open  tcpwrapped
+49400/tcp open  tcpwrapped
+49999/tcp open  tcpwrapped
+50001/tcp open  tcpwrapped
+50002/tcp open  tcpwrapped
+50003/tcp open  tcpwrapped
+50300/tcp open  tcpwrapped
+50389/tcp open  tcpwrapped
+52822/tcp open  tcpwrapped
+55055/tcp open  tcpwrapped
+55056/tcp open  tcpwrapped
+55555/tcp open  tcpwrapped
+55600/tcp open  tcpwrapped
+56738/tcp open  tcpwrapped
+57294/tcp open  tcpwrapped
+58080/tcp open  tcpwrapped
+60020/tcp open  tcpwrapped
+61532/tcp open  tcpwrapped
+64623/tcp open  tcpwrapped
+64680/tcp open  tcpwrapped
+65000/tcp open  tcpwrapped
+65389/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=7/4%Time=686753DF%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\ncontent-lengt
+SF:h:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Fri,\x2004\x20Jul\x
+SF:202025\x2004:09:02\x20GMT\r\nconnection:\x20close\r\n\r\nUpgrade\x20Req
+SF:uired")%r(HTTPOptions,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\nco
+SF:ntent-length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Fri,\x20
+SF:04\x20Jul\x202025\x2004:09:03\x20GMT\r\nconnection:\x20close\r\n\r\nUpg
+SF:rade\x20Required")%r(RTSPRequest,8D,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Fr
+SF:i,\x2004\x20Jul\x202025\x2004:09:04\x20GMT\r\nconnection:\x20close\r\n\
+SF:r\nBad\x20Request")%r(X11Probe,8D,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Fri,
+SF:\x2004\x20Jul\x202025\x2004:09:05\x20GMT\r\nconnection:\x20close\r\n\r\
+SF:nBad\x20Request")%r(FourOhFourRequest,97,"HTTP/1\.1\x20426\x20Upgrade\x
+SF:20Required\r\ncontent-length:\x2016\r\ncontent-type:\x20text/plain\r\nd
+SF:ate:\x20Fri,\x2004\x20Jul\x202025\x2004:09:07\x20GMT\r\nconnection:\x20
+SF:close\r\n\r\nUpgrade\x20Required")%r(GenericLines,8D,"HTTP/1\.1\x20400\
+SF:x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/pla
+SF:in\r\ndate:\x20Fri,\x2004\x20Jul\x202025\x2004:09:08\x20GMT\r\nconnecti
+SF:on:\x20close\r\n\r\nBad\x20Request")%r(RPCCheck,8D,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain
+SF:\r\ndate:\x20Fri,\x2004\x20Jul\x202025\x2004:09:09\x20GMT\r\nconnection
+SF::\x20close\r\n\r\nBad\x20Request")%r(DNSVersionBindReqTCP,8D,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20
+SF:text/plain\r\ndate:\x20Fri,\x2004\x20Jul\x202025\x2004:09:10\x20GMT\r\n
+SF:connection:\x20close\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,8D,"
+SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-
+SF:type:\x20text/plain\r\ndate:\x20Fri,\x2004\x20Jul\x202025\x2004:09:11\x
+SF:20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(Help,8D,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\
+SF:x20text/plain\r\ndate:\x20Fri,\x2004\x20Jul\x202025\x2004:09:13\x20GMT\
+SF:r\nconnection:\x20close\r\n\r\nBad\x20Request");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Jun 27 04:01:15 2025 -- 1 IP address (1 host up) scanned in 45.87 seconds
+# Nmap done at Fri Jul  4 04:09:56 2025 -- 1 IP address (1 host up) scanned in 58.85 seconds
