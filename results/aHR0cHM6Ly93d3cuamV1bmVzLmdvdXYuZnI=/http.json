@@ -1,18 +1,18 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "C",
     "error": null,
-    "score": 75,
+    "score": 55,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Sat, 28 Jun 2025 03:54:16 GMT",
+      "date": "Sat, 05 Jul 2025 03:45:27 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "content-length": "20750",
+      "content-length": "20721",
       "connection": "close",
       "cache-control": "max-age=86400, public",
       "x-drupal-dynamic-cache": "MISS",
@@ -21,15 +21,15 @@
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Fri, 27 Jun 2025 21:05:07 GMT",
+      "last-modified": "Fri, 04 Jul 2025 17:58:11 GMT",
       "x-cacheable": "YES",
       "x-cache-ttl": "86400.000",
-      "etag": "W/\"1751058307\"",
+      "etag": "W/\"1751651891\"",
       "vary": "Accept-Encoding",
       "cache-tags": "HIT",
       "x-cache": "HIT",
-      "x-cache-age": "24548",
-      "x-cache-hits": "714",
+      "x-cache-age": "35127",
+      "x-cache-hits": "958",
       "accept-ranges": "bytes",
       "strict-transport-security": "max-age=31536000; includeSubdomains"
     }
@@ -64,12 +64,15 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "http://www.jeunes.gouv.fr/",
+      "destination": "https://www.jeunes.gouv.fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.jeunes.gouv.fr/",
+        "https://www.jeunes.gouv.fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -82,12 +85,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubdomains",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
