@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dares.travail-emploi.gouv.fr</pre>
-<p class="lead">Sun Jun 29 04:09:09 2025 – Sun Jun 29 04:11:53 2025<br>1 hosts scanned.
+<p class="lead">Sun Jul  6 04:08:42 2025 – Sun Jul  6 04:11:13 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,22 +111,14 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">BigIP</td>
+<td title="Service">http-proxy</td>
+<td title="Product">F5 BIG-IP load balancer http proxy</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
-<h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GetRequest: 
-    HTTP/1.0 302 Moved Temporarily
-    Location: https:///
-    Server: BigIP
-    Connection: close
-    Content-Length: 0</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -147,32 +139,45 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 200 OK
+    Cache-Control: no-store, must-revalidate, no-cache
+    Pragma: no-cache
+    Connection: close
+    Content-Type: text/html
+    Content-Length: 245
+    X-Frame-Options: SAMEORIGIN
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;14185738783862878933&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.0 200 OK
-    Date: Sun, 29 Jun 2025 04:09:29 GMT
+    Date: Sun, 06 Jul 2025 04:09:02 GMT
     Cache-Control: max-age=3600, public
     X-Drupal-Dynamic-Cache: MISS
     Content-language: fr
     X-Content-Type-Options: nosniff
     X-Frame-Options: SAMEORIGIN
     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-    Last-Modified: Fri, 27 Jun 2025 16:53:12 GMT
+    Last-Modified: Fri, 04 Jul 2025 15:14:03 GMT
     Vary: Cookie,Accept-Encoding
-    Content-Length: 94996
+    Content-Length: 94596
     X-Drupal-Cache: HIT
     Connection: close
     Content-Type: text/html; charset=UTF-8
-    Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!fwyPV7Lhe4Sl/uWQEus9KsUIQe0YecSlBvP2zAcPN6f85p9NW9FMIXo9P6axd2+pH87loGAWc69gDF8RGRAbugnmWn3x; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!PBqH1BS0OJ7EsuGQEus9KsUIQe0YeTslFjhUagd/AHg0apAKeAfGgnb/GOIFOFdcNWNcijpFn+GDRkY5NCSv3aJGO4sd; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
-    Set-Cookie: TS0101001a=01352d3811f82d40d7c038abcc72dd247a336be0eb481ee9577387f2390cea2ba767f76c16a2353231c6bc6fdac09e7379cebaa6ef; Path=/
+    Set-Cookie: TS0101001a=01352d38110636fa3fb84c6b3447080b4890e53a227929cfc6af1693f454f1eed2f09eb9004a8889860d1e187ac389bb1d6406c219; Path=/
     &lt;!DOCTYPE html&gt;
     &lt;html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#"&gt;
     &lt;head&gt;
   HTTPOptions: 
     HTTP/1.0 200 OK
-    Date: Sun, 29 Jun 2025 04:09:29 GMT
+    Date: Sun, 06 Jul 2025 04:09:02 GMT
     Allow: GET, POST
     Cache-Control: must-revalidate, no-cache, private
     Content-language: fr
@@ -184,11 +189,9 @@
     Vary: Accept-Encoding
     Connection: close
     Content-Type: text/html; charset=UTF-8
-    Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!CagL3YxxfKvG8DyQEus9KsUIQe0YeY+AzKKAFGfKWCr+7FdHGyWu+1FssGn6oXhlqSHYUSiDOEsAqJ7dATM/Pax6F1Kl; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!QUtegPedLGjin32QEus9KsUIQe0YecfNEUZuBapq1b6frtxsTqZiQrw8lUmmh3IlcusZ5OGoluYO8ePK4NZOK0tkqiIL; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
-    Set-Cookie: TS0101001a=01352d3811fb999747b955c8ab53e545fb23af94ed09db4e444d8dde7d6c9953d822624c45a83452c0d08a3cfb7a20cfc91211094d; Path=/</pre>
-<h5>http-trane-info</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+    Set-Cookie: TS0101001a=01352d3811347c5dba9b344cb02df35f338c68d858002663ad9d0a22017254516e79ab93c52ffd4ec17130e939f05e27ee0edd1543; Path=/</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -211,8 +214,8 @@
 <td>185.194.82.70 - www.dares.travail-emploi.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
-<td>BigIP</td>
+<td>http-proxy</td>
+<td>F5 BIG-IP load balancer http proxy</td>
 <td></td>
 <td></td>
 <td></td>
