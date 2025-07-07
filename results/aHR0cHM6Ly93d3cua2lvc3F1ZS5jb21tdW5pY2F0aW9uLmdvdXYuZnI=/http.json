@@ -1,29 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "C-",
     "error": null,
-    "score": 50,
-    "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "score": 45,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 01 Jul 2025 04:08:30 GMT",
+      "date": "Mon, 07 Jul 2025 14:10:57 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "vary": "Accept-Encoding,Cookie",
-      "cache-control": "max-age=21600, public",
-      "content-language": "fr",
-      "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Sat, 28 Jun 2025 12:54:17 GMT",
-      "x-xss-protection": "1; mode=block",
-      "cf-cache-status": "DYNAMIC",
+      "referrer-policy": "same-origin",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "set-cookie": [
+        "__cf_bm=kIVYycD7hf4K0gCdVvF86.kopKBb9OFtfCuFX_Z0.64-1751897457-1.0.1.1-M5PPRx_5N8aqlYmjy44J.d_3pa5xpExIRIQlDJdM.Mpko.tVbGuvhPbWWqhqwYx5y.scPsJHxaCVkQCvtbTUXA1hii81Qx5Qkeb5FrYKfK0; path=/; expires=Mon, 07-Jul-25 14:40:57 GMT; domain=.communication.gouv.fr; HttpOnly; Secure; SameSite=None"
+      ],
+      "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "95830ae55d9bf5bf-AMS",
+      "cf-ray": "95b7eda71cc8ee3b-WAW",
       "alt-svc": "h3=\":443\"; ma=86400"
     }
   },
@@ -47,7 +46,7 @@
       "data": {
         "__cf_bm": {
           "domain": "communication.gouv.fr",
-          "expires": "2025-07-01T04:38:30.000Z",
+          "expires": "2025-07-07T14:40:57.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -69,22 +68,21 @@
       "pass": false,
       "result": "redirection-off-host-from-http",
       "scoreModifier": -5,
-      "destination": "https://kiosque.communication.gouv.fr/user/login",
+      "destination": "https://kiosque.communication.gouv.fr/",
       "redirects": true,
       "route": [
         "http://www.kiosque.communication.gouv.fr/",
-        "https://kiosque.communication.gouv.fr/",
-        "https://kiosque.communication.gouv.fr/user/login"
+        "https://kiosque.communication.gouv.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -107,10 +105,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
