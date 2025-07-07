@@ -53,7 +53,6 @@ jobs:
         run: |
           echo "${{ github.event.inputs.site }}" > urls.txt
       - id: init
-        if: github.event.inputs.site == 'all' || github.event.inputs.site == ''
         uses: SocialGouv/dashlord-actions/init-from-txt@v1
         with:
           count: 100
