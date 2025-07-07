@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon Jun 30 03:46:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.arretonslesviolences.gouv.fr
+# Nmap 7.92 scan initiated Mon Jul  7 04:04:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.arretonslesviolences.gouv.fr
 Nmap scan report for www.arretonslesviolences.gouv.fr (185.194.82.152)
-Host is up (0.081s latency).
+Host is up (0.082s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -30,29 +30,30 @@ PORT    STATE  SERVICE   VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.0 200 OK
-|     Date: Mon, 30 Jun 2025 03:46:32 GMT
+|     Date: Mon, 07 Jul 2025 04:05:01 GMT
 |     X-Content-Type-Options: nosniff
+|     Upgrade: h2,h2c
+|     Connection: close
 |     Cache-Control: max-age=43200, public
 |     X-Drupal-Dynamic-Cache: MISS
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
 |     X-Frame-Options: SAMEORIGIN
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Last-Modified: Sat, 28 Jun 2025 10:48:29 GMT
+|     Last-Modified: Sat, 05 Jul 2025 08:10:13 GMT
 |     X-Generator: Drupal 10 (https://www.drupal.org)
-|     Content-Length: 56612
+|     Content-Length: 56625
 |     X-Drupal-Cache: HIT
 |     Access-Control-Allow-Origin: *
 |     Vary: Accept-Encoding
-|     Connection: close
 |     Content-Type: text/html; charset=UTF-8
-|     Set-Cookie: BIGipServerpool-arlv-production.cegedim.cloud-TCP80=!EwAedf6NIzaVQ26QEus9KsUIQe0YeZDHZXv1YJ/mRvW6rg5QcGI6Vdp7hNCIS6dWgDDc8CeiRR5A/onQl5aXYcIXe3o=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-arlv-production.cegedim.cloud-TCP80=!i4vyNAbjpBoijqmQEus9KsUIQe0YeWNKiFk8w2sIGPBR797PAzqfYrjJK/myqphrxUDHTqvyK9fNpKfQb3hFRigRTvk=; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html>
-|     <html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.
+|     <html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/
 |   HTTPOptions: 
 |     HTTP/1.0 200 OK
-|     Date: Mon, 30 Jun 2025 03:46:32 GMT
+|     Date: Mon, 07 Jul 2025 04:05:01 GMT
 |     X-Content-Type-Options: nosniff
 |     Upgrade: h2,h2c
 |     Connection: close
@@ -68,56 +69,56 @@ PORT    STATE  SERVICE   VERSION
 |     Access-Control-Allow-Origin: *
 |     pragma: no-cache
 |     Content-Type: text/html; charset=UTF-8
-|     Set-Cookie: BIGipServerpool-arlv-production.cegedim.cloud-TCP80=!yi25Ui17EcyhGESQEus9KsUIQe0YeY8hDJLEcQARCSlo+Fyqi3nn4OdcGj/EgJofa1IMLCLugHswJ+oVOaKIs1WXJtA=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-arlv-production.cegedim.cloud-TCP80=!t3PRUE0zzfVyTmGQEus9KsUIQe0YeaWVmbTJ3so93+odN1ug/mbkfvIYU8PTTVGcfi+VDzT3TV1xs2lP0yy9Hv7UTD8=; path=/; Httponly; Secure
 |_    Strict-Transport-Security: max-age=31536000; includeSubDomains
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=6/30%Time=68620892%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF-Port80-TCP:V=7.92%I=7%D=7/7%Time=686B4767%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x2
+SF:0https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(
+SF:HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
 SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
-SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLoc
+SF:ation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\
+SF:x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"H
+SF:TTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstshas
+SF:h=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPO
+SF:ptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20htt
+SF:ps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=6/30%Time=68620898%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,3955,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x2030\
-SF:x20Jun\x202025\x2003:46:32\x20GMT\r\nX-Content-Type-Options:\x20nosniff
-SF:\r\nCache-Control:\x20max-age=43200,\x20public\r\nX-Drupal-Dynamic-Cach
-SF:e:\x20MISS\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x20nos
-SF:niff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov
-SF:\x201978\x2005:00:00\x20GMT\r\nLast-Modified:\x20Sat,\x2028\x20Jun\x202
-SF:025\x2010:48:29\x20GMT\r\nX-Generator:\x20Drupal\x2010\x20\(https://www
-SF:\.drupal\.org\)\r\nContent-Length:\x2056612\r\nX-Drupal-Cache:\x20HIT\r
-SF:\nAccess-Control-Allow-Origin:\x20\*\r\nVary:\x20Accept-Encoding\r\nCon
-SF:nection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nSe
-SF:t-Cookie:\x20BIGipServerpool-arlv-production\.cegedim\.cloud-TCP80=!EwA
-SF:edf6NIzaVQ26QEus9KsUIQe0YeZDHZXv1YJ/mRvW6rg5QcGI6Vdp7hNCIS6dWgDDc8CeiRR
-SF:5A/onQl5aXYcIXe3o=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transpo
-SF:rt-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE
-SF:\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=\"content:\x20
-SF:http://purl\.org/rss/1\.0/modules/content/\x20\x20dc:\x20http://purl\."
-SF:)%r(HTTPOptions,2EF,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x2030\x20J
-SF:un\x202025\x2003:46:32\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\n
-SF:Upgrade:\x20h2,h2c\r\nConnection:\x20close\r\nAllow:\x20GET,\x20POST\r\
-SF:nCache-Control:\x20must-revalidate,\x20no-cache,\x20private\r\nContent-
-SF:language:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Option
-SF:s:\x20SAMEORIGIN\r\nexpires:\x20-1\r\nX-Generator:\x20Drupal\x2010\x20\
-SF:(https://www\.drupal\.org\)\r\nContent-Length:\x200\r\nVary:\x20Access-
-SF:Control-Request-Method,Accept-Encoding\r\nAccess-Control-Allow-Origin:\
-SF:x20\*\r\npragma:\x20no-cache\r\nContent-Type:\x20text/html;\x20charset=
-SF:UTF-8\r\nSet-Cookie:\x20BIGipServerpool-arlv-production\.cegedim\.cloud
-SF:-TCP80=!yi25Ui17EcyhGESQEus9KsUIQe0YeY8hDJLEcQARCSlo\+Fyqi3nn4OdcGj/EgJ
-SF:ofa1IMLCLugHswJ\+oVOaKIs1WXJtA=;\x20path=/;\x20Httponly;\x20Secure\r\nS
-SF:trict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n
-SF:\r\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/7%Time=686B476D%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,394C,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x2007\x
+SF:20Jul\x202025\x2004:05:01\x20GMT\r\nX-Content-Type-Options:\x20nosniff\
+SF:r\nUpgrade:\x20h2,h2c\r\nConnection:\x20close\r\nCache-Control:\x20max-
+SF:age=43200,\x20public\r\nX-Drupal-Dynamic-Cache:\x20MISS\r\nContent-lang
+SF:uage:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GM
+SF:T\r\nLast-Modified:\x20Sat,\x2005\x20Jul\x202025\x2008:10:13\x20GMT\r\n
+SF:X-Generator:\x20Drupal\x2010\x20\(https://www\.drupal\.org\)\r\nContent
+SF:-Length:\x2056625\r\nX-Drupal-Cache:\x20HIT\r\nAccess-Control-Allow-Ori
+SF:gin:\x20\*\r\nVary:\x20Accept-Encoding\r\nContent-Type:\x20text/html;\x
+SF:20charset=UTF-8\r\nSet-Cookie:\x20BIGipServerpool-arlv-production\.cege
+SF:dim\.cloud-TCP80=!i4vyNAbjpBoijqmQEus9KsUIQe0YeWNKiFk8w2sIGPBR797PAzqfY
+SF:rjJK/myqphrxUDHTqvyK9fNpKfQb3hFRigRTvk=;\x20path=/;\x20Httponly;\x20Sec
+SF:ure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDom
+SF:ains\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20
+SF:prefix=\"content:\x20http://purl\.org/rss/1\.0/modules/content/\x20")%r
+SF:(HTTPOptions,2EF,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x2007\x20Jul\
+SF:x202025\x2004:05:01\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nUpg
+SF:rade:\x20h2,h2c\r\nConnection:\x20close\r\nAllow:\x20GET,\x20POST\r\nCa
+SF:che-Control:\x20must-revalidate,\x20no-cache,\x20private\r\nContent-lan
+SF:guage:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nexpires:\x20-1\r\nX-Generator:\x20Drupal\x2010\x20\(ht
+SF:tps://www\.drupal\.org\)\r\nContent-Length:\x200\r\nVary:\x20Access-Con
+SF:trol-Request-Method,Accept-Encoding\r\nAccess-Control-Allow-Origin:\x20
+SF:\*\r\npragma:\x20no-cache\r\nContent-Type:\x20text/html;\x20charset=UTF
+SF:-8\r\nSet-Cookie:\x20BIGipServerpool-arlv-production\.cegedim\.cloud-TC
+SF:P80=!t3PRUE0zzfVyTmGQEus9KsUIQe0YeaWVmbTJ3so93\+odN1ug/mbkfvIYU8PTTVGcf
+SF:i\+VDzT3TV1xs2lP0yy9Hv7UTD8=;\x20path=/;\x20Httponly;\x20Secure\r\nStri
+SF:ct-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\
+SF:n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Jun 30 03:48:56 2025 -- 1 IP address (1 host up) scanned in 163.30 seconds
+# Nmap done at Mon Jul  7 04:07:11 2025 -- 1 IP address (1 host up) scanned in 149.31 seconds
