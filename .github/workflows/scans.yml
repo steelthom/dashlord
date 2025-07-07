@@ -18,6 +18,7 @@ on:
           - zap
           - ecoindex
           - dsfr
+          - tracking
           - declaration-a11y
           - declaration-rgpd
   push:
@@ -151,6 +152,14 @@ jobs:
         run: |
           HOSTNAME=$(echo "${{ matrix.sites.url }}" | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')
           echo "::set-output name=value::$HOSTNAME"
+
+      - name: Tracking
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: Quentium-Forks/tracking-action@main
+        with:
+          url: ${{ matrix.sites.url }}
+          output: scans/tracking.json
 
       - name: testssl.sh scan
         continue-on-error: true
