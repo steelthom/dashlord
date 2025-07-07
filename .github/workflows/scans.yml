@@ -101,14 +101,6 @@ jobs:
           url: ${{ matrix.sites.url }}
           output: scans/declaration-a11y.json
 
-      - name: EcoIndex
-        continue-on-error: true
-        timeout-minutes: 10
-        uses: SocialGouv/dashlord-actions/ecoindex@v1
-        with:
-          url: ${{ matrix.sites.url }}
-          output: scans/ecoindex.json
-
       - name: Déclaration RGPD
         continue-on-error: true
         timeout-minutes: 10
@@ -117,6 +109,14 @@ jobs:
           url: ${{ matrix.sites.url }}
           output: scans/declaration-rgpd.json
 
+      - name: EcoIndex
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: SocialGouv/dashlord-actions/ecoindex@v1
+        with:
+          url: ${{ matrix.sites.url }}
+          output: scans/ecoindex.json
+
       - name: Detect 404
         continue-on-error: true
         timeout-minutes: 10
@@ -124,6 +124,14 @@ jobs:
         with:
           url: ${{ matrix.sites.url }}
           output: scans/404.json
+
+      - name: Tracking
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: Quentium-Forks/tracking-action@main
+        with:
+          url: ${{ matrix.sites.url }}
+          output: scans/tracking.json
 
       - name: Betagouv API scan
         continue-on-error: true
@@ -166,14 +174,6 @@ jobs:
         run: |
           HOSTNAME=$(echo "${{ matrix.sites.url }}" | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')
           echo "::set-output name=value::$HOSTNAME"
-
-      - name: Tracking
-        continue-on-error: true
-        timeout-minutes: 10
-        uses: Quentium-Forks/tracking-action@main
-        with:
-          url: ${{ matrix.sites.url }}
-          output: scans/tracking.json
 
       - name: testssl.sh scan
         continue-on-error: true
