@@ -48,14 +48,21 @@ jobs:
       sites: ${{ steps.init.outputs.sites }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          clean: false
       - name: Write urls.txt for single site
         if: github.event.inputs.site != 'all' && github.event.inputs.site != ''
         run: |
-          echo "${{ github.event.inputs.site }}" > urls.txt
+          echo "${{ github.event.inputs.site }}" > /tmp/urls.txt
+      - name: Use urls.txt for all sites
+        if: github.event.inputs.site == 'all' || github.event.inputs.site == ''
+        run: |
+          cp urls.txt /tmp/urls.txt
       - id: init
         uses: SocialGouv/dashlord-actions/init-from-txt@v1
         with:
           count: 100
+          txtPath: /tmp/urls.txt
   scans:
     runs-on: ubuntu-latest
     name: Scan
