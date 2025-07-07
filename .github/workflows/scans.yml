@@ -21,9 +21,12 @@ on:
           - tracking
           - declaration-a11y
           - declaration-rgpd
+      site:
+        description: "Single site to scan or use all sites"
+        type: string
+        default: all
   push:
     branches:
-      - master
       - main
     paths:
       - "dashlord.yaml"
@@ -46,9 +49,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: init
+        if: github.event.inputs.site == 'all' || github.event.inputs.site == ''
         uses: SocialGouv/dashlord-actions/init-from-txt@v1
         with:
           count: 100
+      # write to url.txt to be able to use the same file for the report
+      - name: Write url.txt for single site
+        if: github.event.inputs.site != 'all' && github.event.inputs.site != ''
+        run: |
+          echo "${{ github.event.inputs.site }}" > url.txt
+      - id: init
+        if: github.event.inputs.site != 'all' && github.event.inputs.site != ''
+        uses: SocialGouv/dashlord-actions/init-from-txt@v1
+        with:
+          count: 1
+          txtPath: url.txt
   scans:
     runs-on: ubuntu-latest
     name: Scan
