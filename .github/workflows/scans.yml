@@ -55,17 +55,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          clean: false
+          sparse-checkout: urls.txt
+
       - name: Write urls.txt for single site
         if: github.event.inputs.url != ''
         run: |
-          echo "${{ github.event.inputs.site }}" > /tmp/urls.txt
+          echo "${{ github.event.inputs.url }}" > /tmp/urls.txt
+
       - name: Use urls.txt for all sites
         if: github.event.inputs.url == ''
         run: |
           cp urls.txt /tmp/urls.txt
-      - id: init
+
+      - name: Init from text
         uses: SocialGouv/dashlord-actions/init-from-txt@v1
+        id: init
         with:
           count: 100
           txtPath: /tmp/urls.txt
@@ -82,6 +86,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
+          sparse-checkout: urls.txt
 
       - run: |
           mkdir scans
