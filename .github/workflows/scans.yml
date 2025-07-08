@@ -238,7 +238,6 @@ jobs:
         id: subpages
         run: |
           echo "subpages=${{ matrix.sites.subpages }}" >> $GITHUB_OUTPUT
-          echo "subpages_count=${{ matrix.sites.subpages | length }}" >> $GITHUB_OUTPUT
 
       - name: Lighthouse scan
         if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' }}
