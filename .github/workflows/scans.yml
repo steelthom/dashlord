@@ -3,6 +3,10 @@ name: DashLord scans
 on:
   workflow_dispatch:
     inputs:
+      url:
+        description: "Single url to scan or scan all urls"
+        required: false
+        default: ""
       tool:
         description: "Single tool to run or use all tools"
         type: choice
@@ -18,19 +22,21 @@ on:
           - zap
           - ecoindex
           - dsfr
+          - detect-404
           - tracking
+          - betagouv
+          - wappalyzer
+          - httpobs
+          - testssl
+          - nmapvuln
+          - betagouv-budget
+          - betagouv-stats
           - declaration-a11y
           - declaration-rgpd
-      site:
-        description: "Single site to scan or use all sites"
-        type: string
-        default: all
   push:
     branches:
       - main
     paths:
-      - "dashlord.yaml"
-      - "dashlord.yml"
       - "urls.txt"
   schedule:
     - cron: "0 2 * * *" # see https://crontab.guru
@@ -51,11 +57,11 @@ jobs:
         with:
           clean: false
       - name: Write urls.txt for single site
-        if: github.event.inputs.site != 'all' && github.event.inputs.site != ''
+        if: github.event.inputs.url != ''
         run: |
           echo "${{ github.event.inputs.site }}" > /tmp/urls.txt
       - name: Use urls.txt for all sites
-        if: github.event.inputs.site == 'all' || github.event.inputs.site == ''
+        if: github.event.inputs.url == ''
         run: |
           cp urls.txt /tmp/urls.txt
       - id: init
@@ -86,6 +92,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: dsfr
+        if: ${{ github.event.inputs.tool == 'dsfr' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/dsfr@v1
@@ -94,6 +101,7 @@ jobs:
           output: scans/dsfr.json
 
       - name: Déclaration a11y
+        if: ${{ github.event.inputs.tool == 'declaration-a11y' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/declaration-a11y@v1
@@ -102,6 +110,7 @@ jobs:
           output: scans/declaration-a11y.json
 
       - name: Déclaration RGPD
+        if: ${{ github.event.inputs.tool == 'declaration-rgpd' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/declaration-rgpd@v1
@@ -110,6 +119,7 @@ jobs:
           output: scans/declaration-rgpd.json
 
       - name: EcoIndex
+        if: ${{ github.event.inputs.tool == 'ecoindex' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/ecoindex@v1
@@ -118,6 +128,7 @@ jobs:
           output: scans/ecoindex.json
 
       - name: Detect 404
+        if: ${{ github.event.inputs.tool == 'detect-404' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/detect-404-action@master
@@ -126,6 +137,7 @@ jobs:
           output: scans/404.json
 
       - name: Tracking
+        if: ${{ github.event.inputs.tool == 'tracking' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: Quentium-Forks/tracking-action@main
@@ -134,15 +146,17 @@ jobs:
           output: scans/tracking.json
 
       - name: Betagouv API scan
+        if: ${{ github.event.inputs.tool == 'betagouv' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         id: betagouv
         uses: betagouv/dashlord-startup-action@main
         with:
           id: "${{ matrix.sites.betaId }}"
-          output: "scans/betagouv.json"
+          output: scans/betagouv.json
 
       - name: Wappalyzer scan
+        if: ${{ github.event.inputs.tool == 'wappalyzer' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/wappalyzer-action@master
@@ -151,13 +165,14 @@ jobs:
           output: scans/wappalyzer.json
 
       - name: Mozilla HTTP Observatory
+        if: ${{ github.event.inputs.tool == 'httpobs' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         id: http
         uses: SocialGouv/httpobs-action@master
         with:
           url: "${{ matrix.sites.url }}"
-          output: "scans/http.json"
+          output: scans/http.json
 
       - name: Mozilla HTTP Observatory retry
         if: steps.http.outcome=='failure'
@@ -166,9 +181,9 @@ jobs:
         uses: SocialGouv/httpobs-action@master
         with:
           url: "${{ matrix.sites.url }}"
-          output: "scans/http.json"
+          output: scans/http.json
 
-      # testssl.sh action needs an hostname to save its output so we build it here
+      # testssl.sh & nmap action needs an hostname to save its output
       - name: Extract hostname
         id: hostname
         run: |
@@ -176,27 +191,29 @@ jobs:
           echo "::set-output name=value::$HOSTNAME"
 
       - name: testssl.sh scan
+        if: ${{ github.event.inputs.tool == 'testssl' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
-        uses: mbogh/test-ssl-action@v3
+        uses: mbogh/test-ssl-action@main
         with:
           host: ${{ steps.hostname.outputs.value }}
           output: scans
-          grade: "F"
-          options: "--fast"
+          grade: F
 
-      - name: nmap vulnerabilities scan
+      - name: Nmap vulnerabilities scan
+        if: ${{ github.event.inputs.tool == 'nmapvuln' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: MTES-MCT/nmap-action@main
         with:
           host: ${{ steps.hostname.outputs.value }}
-          outputDir: "scans"
-          outputFile: "nmapvuln.json"
+          outputDir: scans
+          outputFile: nmapvuln.json
           withVulnerabilities: true
           raw: false
 
       - name: Budget page
+        if: ${{ github.event.inputs.tool == 'betagouv-budget' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: betagouv/check-url-action@main
@@ -206,6 +223,7 @@ jobs:
           exactExpectedRegex: ^budget$
 
       - name: Stats page
+        if: ${{ github.event.inputs.tool == 'betagouv-stats' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: betagouv/check-url-action@main
@@ -215,8 +233,15 @@ jobs:
           minExpectedRegex: ^stat
           exactExpectedRegex: ^stats$
 
-      # https://github.com/treosh/lighthouse-ci-action#inputs
+      - name: Display subpages
+        if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' }}
+        id: subpages
+        run: |
+          echo "subpages=${{ matrix.sites.subpages }}" >> $GITHUB_OUTPUT
+          echo "subpages_count=${{ matrix.sites.subpages | length }}" >> $GITHUB_OUTPUT
+
       - name: Lighthouse scan
+        if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/lhci@v1
@@ -229,7 +254,7 @@ jobs:
           # only clean up previous stats when all tools runned
           cleanup: ${{ github.event.inputs.tool == 'all' && true || false }}
 
-      - name: "Commit"
+      - name: Commit
         id: commit
         continue-on-error: true
         run: |
@@ -240,7 +265,7 @@ jobs:
           git pull --rebase --no-ff origin ${{ github.ref }}
           git push
 
-      - name: "Commit retry 1"
+      - name: Commit retry 1
         if: steps.commit.outcome=='failure'
         id: commit-retry
         continue-on-error: true
@@ -252,7 +277,7 @@ jobs:
           git pull --rebase --no-ff origin ${{ github.ref }}
           git push
 
-      - name: "Commit retry 2"
+      - name: Commit retry 2
         if: steps.commit-retry.outcome=='failure'
         run: |
           git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
