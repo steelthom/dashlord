@@ -1,35 +1,35 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D+",
+    "grade": "B",
     "error": null,
-    "score": 40,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 01 Jul 2025 04:02:18 GMT",
-      "server": "Apache",
-      "x-frame-options": "SAMEORIGIN",
-      "strict-transport-security": "max-age=31536000; includeSubdomains, max-age=31536000; includeSubDomains",
-      "x-content-type-options": "nosniff",
+      "date": "Thu, 03 Jul 2025 12:55:30 GMT",
+      "set-cookie": [
+        "cookiedef=!atYZdRYx2rteVSPfApP8J0Jp3G9dgSKvwYUzM+Wth3P4L9QRa7xO8/H3nEB4rRQFbYszRPk1ZRSplf4=; path=/; Httponly",
+        "BIGipServer~Tenant-Externe~application~pool-ubika=218263562.20480.0000; path=/; Httponly; Secure"
+      ],
       "cache-control": "must-revalidate, no-cache, private",
       "x-drupal-dynamic-cache": "MISS",
       "content-language": "fr",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
       "x-generator": "Drupal 10 (https://www.drupal.org)",
       "content-security-policy": "report-uri /report-csp-violation; upgrade-insecure-requests",
-      "x-xss-protection": "1; mode=block",
-      "referrer-policy": "no-referrer",
+      "x-xss-protection": "0",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
       "expect-ct": "max-age=86400",
-      "content-length": "100310",
       "x-drupal-cache": "HIT",
-      "connection": "close",
+      "content-length": "99491",
       "content-type": "text/html; charset=UTF-8",
-      "set-cookie": [
-        "lifekeeper=!tWk0ddJADaJv3vEYoERDmvykLCJ9WeSbNFAX3rsFUSeo7Suk3oGrZXtbMw984Z406B3nfrm2wjfNFg==; path=/; Httponly"
-      ]
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "connection": "close"
     }
   },
   "tests": {
@@ -66,14 +66,21 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
-        "lifekeeper": {
+        "cookiedef": {
           "domain": "www.terremag.defense.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null
+        },
+        "BIGipServer~Tenant-Externe~application~pool-ubika": {
+          "domain": "www.terremag.defense.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
         }
       },
       "sameSite": false
@@ -88,30 +95,33 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": null,
+      "destination": "https://www.terremag.defense.gouv.fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.terremag.defense.gouv.fr/",
+        "https://www.terremag.defense.gouv.fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "no-referrer",
+      "data": "strict-origin-when-cross-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-header-invalid",
-      "scoreModifier": -20,
-      "data": "max-age=31536000; includeSubdomains, max-age=31536000; includeSubDomains",
-      "includeSubDomains": false,
-      "maxAge": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
@@ -134,7 +144,7 @@
       "pass": true,
       "result": "x-frame-options-sameorigin-or-deny",
       "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "data": "DENY"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
