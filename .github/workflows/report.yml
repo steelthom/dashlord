@@ -29,12 +29,13 @@ jobs:
               repo: context.repo.repo,
               run_id,
             });
-            // Only continue if the input 'tool' is 'all'
+            const event = run.event;
             const toolInput = run?.inputs?.tool;
+            core.setOutput('event', event);
             core.setOutput('tool', toolInput);
 
       - name: Check tool input
-        if: steps.get-inputs.outputs.tool != 'all'
+        if: steps.get-inputs.outputs.event == 'workflow_dispatch' && steps.get-inputs.outputs.tool != 'all'
         run: |
           echo "Tool input is not 'all', skipping job."
           exit 1
