@@ -92,7 +92,7 @@ jobs:
           mkdir scans
 
       - name: dsfr
-        if: ${{ github.event.inputs.tool == 'dsfr' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'dsfr' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/dsfr@v1
@@ -101,7 +101,7 @@ jobs:
           output: scans/dsfr.json
 
       - name: Déclaration a11y
-        if: ${{ github.event.inputs.tool == 'declaration-a11y' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'declaration-a11y' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/declaration-a11y@v1
@@ -110,7 +110,7 @@ jobs:
           output: scans/declaration-a11y.json
 
       - name: Déclaration RGPD
-        if: ${{ github.event.inputs.tool == 'declaration-rgpd' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'declaration-rgpd' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/declaration-rgpd@v1
@@ -119,7 +119,7 @@ jobs:
           output: scans/declaration-rgpd.json
 
       - name: EcoIndex
-        if: ${{ github.event.inputs.tool == 'ecoindex' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'ecoindex' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/ecoindex@v1
@@ -128,7 +128,7 @@ jobs:
           output: scans/ecoindex.json
 
       - name: Detect 404
-        if: ${{ github.event.inputs.tool == 'detect-404' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'detect-404' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/detect-404-action@master
@@ -137,7 +137,7 @@ jobs:
           output: scans/404.json
 
       - name: Tracking
-        if: ${{ github.event.inputs.tool == 'tracking' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'tracking' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: Quentium-Forks/tracking-action@main
@@ -146,7 +146,7 @@ jobs:
           output: scans/tracking.json
 
       - name: Betagouv API scan
-        if: ${{ github.event.inputs.tool == 'betagouv' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'betagouv' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         id: betagouv
@@ -156,7 +156,7 @@ jobs:
           output: scans/betagouv.json
 
       - name: Wappalyzer scan
-        if: ${{ github.event.inputs.tool == 'wappalyzer' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'wappalyzer' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/wappalyzer-action@master
@@ -165,7 +165,7 @@ jobs:
           output: scans/wappalyzer.json
 
       - name: Mozilla HTTP Observatory
-        if: ${{ github.event.inputs.tool == 'httpobs' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'httpobs' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         id: http
@@ -191,7 +191,7 @@ jobs:
           echo "::set-output name=value::$HOSTNAME"
 
       - name: testssl.sh scan
-        if: ${{ github.event.inputs.tool == 'testssl' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'testssl' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: mbogh/test-ssl-action@main
@@ -201,7 +201,7 @@ jobs:
           grade: F
 
       - name: Nmap vulnerabilities scan
-        if: ${{ github.event.inputs.tool == 'nmapvuln' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'nmapvuln' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: MTES-MCT/nmap-action@main
@@ -213,7 +213,7 @@ jobs:
           raw: false
 
       - name: Budget page
-        if: ${{ github.event.inputs.tool == 'betagouv-budget' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'betagouv-budget' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: betagouv/check-url-action@main
@@ -223,7 +223,7 @@ jobs:
           exactExpectedRegex: ^budget$
 
       - name: Stats page
-        if: ${{ github.event.inputs.tool == 'betagouv-stats' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'betagouv-stats' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: betagouv/check-url-action@main
@@ -234,13 +234,13 @@ jobs:
           exactExpectedRegex: ^stats$
 
       - name: Display subpages
-        if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         id: subpages
         run: |
           echo "subpages=${{ matrix.sites.subpages }}" >> $GITHUB_OUTPUT
 
       - name: Lighthouse scan
-        if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' }}
+        if: ${{ github.event.inputs.tool == 'lighthouse' || github.event.inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
         timeout-minutes: 10
         uses: SocialGouv/dashlord-actions/lhci@v1
