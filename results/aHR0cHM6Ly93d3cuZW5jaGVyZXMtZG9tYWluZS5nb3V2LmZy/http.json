@@ -1,0 +1,180 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 70,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Thu, 10 Jul 2025 04:27:45 GMT",
+      "content-type": "text/html",
+      "connection": "close",
+      "last-modified": "Mon, 07 Jul 2025 07:04:19 GMT",
+      "vary": "Accept-Encoding",
+      "etag": "W/\"686b7173-91e\"",
+      "set-cookie": [
+        "cookiesession1=678A3E0F1584D662BDBA6EFAAADAE777;Expires=Fri, 10 Jul 2026 04:27:45 GMT;Path=/;Secure;HttpOnly"
+      ],
+      "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
+      "content-length": "1348"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": true,
+      "result": "csp-implemented-with-no-unsafe",
+      "scoreModifier": 5,
+      "data": {
+        "base-uri": [
+          "'self'"
+        ],
+        "object-src": [
+          "data:"
+        ],
+        "script-src": [
+          "'nonce-428m1pkkt26levduzllgdg=='",
+          "'nonce-9lpo945ho9kqa8wnaoeq/a=='",
+          "'nonce-csjc1v7hperkvlbtuu9kba=='",
+          "'nonce-gdcfwahyf4y7l8b6bk27cq=='",
+          "'nonce-yb8srcnthk1otzn/vlua5q=='",
+          "'sha256-wjdrxkaw/w1fapm4vz0yknprofqqiv/y9folryy0dse='",
+          "'strict-dynamic'"
+        ],
+        "style-src": [
+          "'nonce-thkh4os7kcdcpjcp/wnp6a=='",
+          "'self'"
+        ],
+        "default-src": [
+          "'self'"
+        ],
+        "img-src": [
+          "'self'",
+          "data:",
+          "https://encheres-domaine.gouv.fr/admin"
+        ],
+        "font-src": [
+          "'self'"
+        ],
+        "connect-src": [
+          "*"
+        ],
+        "frame-src": [
+          "*"
+        ]
+      },
+      "http": false,
+      "meta": true,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": false,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": true,
+        "unsafeEval": false,
+        "unsafeInline": false,
+        "unsafeInlineStyle": false,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
+      "data": {
+        "cookiesession1": {
+          "domain": "encheres-domaine.gouv.fr",
+          "expires": "2026-07-10T04:27:45.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://encheres-domaine.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://www.encheres-domaine.gouv.fr/",
+        "https://www.encheres-domaine.gouv.fr/",
+        "https://encheres-domaine.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=15552000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 15552000,
+      "preload": true,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://libs.hipay.com/js/sdkjs.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
