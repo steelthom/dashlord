@@ -1,0 +1,110 @@
+# Nmap 7.92 scan initiated Fri Jul 11 03:48:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr
+Nmap scan report for www.haut-conseil-egalite.gouv.fr (185.194.83.18)
+Host is up (0.081s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Fri, 11 Jul 2025 03:49:19 GMT
+|     X-Outils-CS: 
+|     Vary: Cookie,Accept-Encoding
+|     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
+|     X-Spip-Cache: 86400
+|     Last-Modified: Fri, 11 Jul 2025 03:49:19 GMT
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-HTTP=!cfkPqnuDs3cLkamQEus9KsUIQe0YeftBeqtGnrX2uKWJiylnbZErt+zAKgGNPvoLAhHq2YaOr1iCt1lGN3YBXW2+PCs=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <title>Haut Conseil 
+|     galit
+|     entre les femmes et les hommes</ti
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.0 400 Bad Request
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|_    ERROR
+|_http-trane-info: Problem with XML parsing of /evox/about
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=7/11%Time=687089B8%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/11%Time=687089BF%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,38CE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2011\
+SF:x20Jul\x202025\x2003:49:19\x20GMT\r\nX-Outils-CS:\x20\r\nVary:\x20Cooki
+SF:e,Accept-Encoding\r\nComposed-By:\x20SPIP\x204\.3\.6\x20@\x20www\.spip\
+SF:.net\x20\+\x20https://https:/local/config\.txt\r\nX-Spip-Cache:\x208640
+SF:0\r\nLast-Modified:\x20Fri,\x2011\x20Jul\x202025\x2003:49:19\x20GMT\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\
+SF:nSet-Cookie:\x20BIGipServerpool-dgcs-hautconseilegalite2\.cegedim\.clou
+SF:d-HTTP=!cfkPqnuDs3cLkamQEus9KsUIQe0YeftBeqtGnrX2uKWJiylnbZErt\+zAKgGNPv
+SF:oLAhHq2YaOr1iCt1lGN3YBXW2\+PCs=;\x20path=/;\x20Httponly;\x20Secure\r\nS
+SF:trict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n
+SF:\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Tr
+SF:ansitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transiti
+SF:onal\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20la
+SF:ng=\"fr\"\x20xml:lang=\"fr\">\r\n<head>\r\n\t<meta\x20http-equiv=\"Cont
+SF:ent-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\r\n\t<title
+SF:>Haut\x20Conseil\x20\xc3\xa0\x20l'\xc3\x89galit\xc3\xa9\x20entre\x20les
+SF:\x20femmes\x20et\x20les\x20hommes</ti")%r(HTTPOptions,4E,"HTTP/1\.0\x20
+SF:403\x20Forbidden\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r
+SF:\n\r\n403\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x2
+SF:0Found\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\
+SF:x20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConn
+SF:ection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR")%r(S
+SF:IPOptions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep
+SF:-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jul 11 03:51:43 2025 -- 1 IP address (1 host up) scanned in 163.39 seconds
