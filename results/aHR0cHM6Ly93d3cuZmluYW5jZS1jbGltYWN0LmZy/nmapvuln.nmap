@@ -1,0 +1,50 @@
+# Nmap 7.92 scan initiated Fri Jul 11 03:58:00 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.finance-climact.fr
+Nmap scan report for www.finance-climact.fr (164.132.127.165)
+Host is up (0.15s latency).
+rDNS record for 164.132.127.165: mediapilote53-003.medialibs.com
+Not shown: 989 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+21/tcp    open  ftp        vsftpd 2.0.8 or later
+22/tcp    open  ssh        OpenSSH 8.4p1 Debian 5+deb11u3 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:8.4p1: 
+|     	5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A	10.0	https://vulners.com/githubexploit/5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A	*EXPLOIT*
+|     	PACKETSTORM:173661	9.8	https://vulners.com/packetstorm/PACKETSTORM:173661	*EXPLOIT*
+|     	F0979183-AE88-53B4-86CF-3AF0523F3807	9.8	https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807	*EXPLOIT*
+|     	CVE-2023-38408	9.8	https://vulners.com/cve/CVE-2023-38408
+|     	B8190CDB-3EB9-5631-9828-8064A1575B23	9.8	https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23	*EXPLOIT*
+|     	8FC9C5AB-3968-5F3C-825E-E8DB5379A623	9.8	https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623	*EXPLOIT*
+|     	8AD01159-548E-546E-AA87-2DE89F3927EC	9.8	https://vulners.com/githubexploit/8AD01159-548E-546E-AA87-2DE89F3927EC	*EXPLOIT*
+|     	2227729D-6700-5C8F-8930-1EEAFD4B9FF0	9.8	https://vulners.com/githubexploit/2227729D-6700-5C8F-8930-1EEAFD4B9FF0	*EXPLOIT*
+|     	0221525F-07F5-5790-912D-F4B9E2D1B587	9.8	https://vulners.com/githubexploit/0221525F-07F5-5790-912D-F4B9E2D1B587	*EXPLOIT*
+|     	SSV:92579	7.5	https://vulners.com/seebug/SSV:92579	*EXPLOIT*
+|     	1337DAY-ID-26576	7.5	https://vulners.com/zdt/1337DAY-ID-26576	*EXPLOIT*
+|     	CVE-2021-28041	7.1	https://vulners.com/cve/CVE-2021-28041
+|     	CVE-2021-41617	7.0	https://vulners.com/cve/CVE-2021-41617
+|     	PACKETSTORM:189283	6.8	https://vulners.com/packetstorm/PACKETSTORM:189283	*EXPLOIT*
+|     	F79E574D-30C8-5C52-A801-66FFA0610BAA	6.8	https://vulners.com/githubexploit/F79E574D-30C8-5C52-A801-66FFA0610BAA	*EXPLOIT*
+|     	CVE-2025-26465	6.8	https://vulners.com/cve/CVE-2025-26465
+|     	9D8432B9-49EC-5F45-BB96-329B1F2B2254	6.8	https://vulners.com/githubexploit/9D8432B9-49EC-5F45-BB96-329B1F2B2254	*EXPLOIT*
+|     	1337DAY-ID-39918	6.8	https://vulners.com/zdt/1337DAY-ID-39918	*EXPLOIT*
+|     	CVE-2023-51385	6.5	https://vulners.com/cve/CVE-2023-51385
+|     	CVE-2023-48795	5.9	https://vulners.com/cve/CVE-2023-48795
+|     	CVE-2020-14145	5.9	https://vulners.com/cve/CVE-2020-14145
+|     	CC3AE4FC-CF04-5EDA-A010-6D7E71538C92	5.9	https://vulners.com/githubexploit/CC3AE4FC-CF04-5EDA-A010-6D7E71538C92	*EXPLOIT*
+|     	54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	5.9	https://vulners.com/githubexploit/54E1BB01-2C69-5AFD-A23D-9783C9D9FC4C	*EXPLOIT*
+|     	CVE-2016-20012	5.3	https://vulners.com/cve/CVE-2016-20012
+|_    	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
+80/tcp    open  http       Apache httpd
+|_http-server-header: Apache
+443/tcp   open  ssl/http   Apache httpd
+|_http-server-header: Apache
+5666/tcp  open  tcpwrapped
+9100/tcp  open  jetdirect?
+9101/tcp  open  jetdirect?
+9102/tcp  open  jetdirect?
+9103/tcp  open  jetdirect?
+60020/tcp open  tcpwrapped
+60443/tcp open  tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jul 11 03:59:51 2025 -- 1 IP address (1 host up) scanned in 111.00 seconds
