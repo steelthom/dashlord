@@ -1,0 +1,185 @@
+# Nmap 7.92 scan initiated Sat Jul 12 04:00:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.maprimerenov.gouv.fr
+Nmap scan report for www.maprimerenov.gouv.fr (51.44.152.119)
+Host is up (0.083s latency).
+Other addresses for www.maprimerenov.gouv.fr (not scanned): 13.39.57.76 13.37.136.19
+rDNS record for 51.44.152.119: ec2-51-44-152-119.eu-west-3.compute.amazonaws.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      awselb/2.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Sat, 12 Jul 2025 04:00:41 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://fe-lb20250428112247680200000015-609542321.eu-west-3.elb.amazonaws.com:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Sat, 12 Jul 2025 04:00:40 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://fe-lb20250428112247680200000015-609542321.eu-west-3.elb.amazonaws.com:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: awselb/2.0
+|     Date: Sat, 12 Jul 2025 04:00:41 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     Location: https://fe-lb20250428112247680200000015-609542321.eu-west-3.elb.amazonaws.com:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 12 Jul 2025 04:00:41 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+|_http-server-header: awselb/2.0
+443/tcp open  ssl/https webserver
+|_http-server-header: webserver
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 12 Jul 2025 04:00:47 GMT
+|     Content-Length: 0
+|     Connection: close
+|     set-cookie: PEGA-SESSION-COOKIE=j5ym96AAahL3FcO6; HttpOnly; Path=/; Expires=Sat, 12 Jul 2025 04:17:47 GMT
+|     set-cookie: PEGA-SESSION-COOKIE-CORS=j5ym96AAahL3FcO6; HttpOnly; SameSite=None; Secure; Path=/; Expires=Sat, 12 Jul 2025 04:17:47 GMT
+|     server: webserver
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 12 Jul 2025 04:00:47 GMT
+|     Content-Length: 0
+|     Connection: close
+|     set-cookie: PEGA-SESSION-COOKIE=HNiTndSeNokSUJeR; HttpOnly; Path=/; Expires=Sat, 12 Jul 2025 04:17:47 GMT
+|     set-cookie: PEGA-SESSION-COOKIE-CORS=HNiTndSeNokSUJeR; HttpOnly; SameSite=None; Secure; Path=/; Expires=Sat, 12 Jul 2025 04:17:47 GMT
+|     server: webserver
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sat, 12 Jul 2025 04:00:47 GMT
+|     Content-Length: 0
+|     Connection: close
+|     set-cookie: PEGA-SESSION-COOKIE=aIOyOaptxKVTF4k6; HttpOnly; Path=/; Expires=Sat, 12 Jul 2025 04:17:47 GMT
+|     set-cookie: PEGA-SESSION-COOKIE-CORS=aIOyOaptxKVTF4k6; HttpOnly; SameSite=None; Secure; Path=/; Expires=Sat, 12 Jul 2025 04:17:47 GMT
+|     server: webserver
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: awselb/2.0
+|     Date: Sat, 12 Jul 2025 04:00:48 GMT
+|     Content-Type: text/html
+|     Content-Length: 122
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=7/12%Time=6871DDE8%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,180,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
+SF:0awselb/2\.0\r\nDate:\x20Sat,\x2012\x20Jul\x202025\x2004:00:40\x20GMT\r
+SF:\nContent-Type:\x20text/html\r\nContent-Length:\x20134\r\nConnection:\x
+SF:20close\r\nLocation:\x20https://fe-lb20250428112247680200000015-6095423
+SF:21\.eu-west-3\.elb\.amazonaws\.com:443/\r\n\r\n<html>\r\n<head><title>3
+SF:01\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\
+SF:x20Moved\x20Permanently</h1></center>\r\n</body>\r\n</html>\r\n")%r(HTT
+SF:POptions,180,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20aw
+SF:selb/2\.0\r\nDate:\x20Sat,\x2012\x20Jul\x202025\x2004:00:41\x20GMT\r\nC
+SF:ontent-Type:\x20text/html\r\nContent-Length:\x20134\r\nConnection:\x20c
+SF:lose\r\nLocation:\x20https://fe-lb20250428112247680200000015-609542321\
+SF:.eu-west-3\.elb\.amazonaws\.com:443/\r\n\r\n<html>\r\n<head><title>301\
+SF:x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20
+SF:Moved\x20Permanently</h1></center>\r\n</body>\r\n</html>\r\n")%r(RTSPRe
+SF:quest,7A,"<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r
+SF:\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\
+SF:r\n</html>\r\n")%r(X11Probe,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Server:\x20awselb/2\.0\r\nDate:\x20Sat,\x2012\x20Jul\x202025\x2004:00:4
+SF:1\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20122\r\nCon
+SF:nection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</
+SF:title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cent
+SF:er>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,1A3,"HTTP/1\.1\x203
+SF:01\x20Moved\x20Permanently\r\nServer:\x20awselb/2\.0\r\nDate:\x20Sat,\x
+SF:2012\x20Jul\x202025\x2004:00:41\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20134\r\nConnection:\x20close\r\nLocation:\x20https:/
+SF:/fe-lb20250428112247680200000015-609542321\.eu-west-3\.elb\.amazonaws\.
+SF:com:443/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><ti
+SF:tle>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1
+SF:>301\x20Moved\x20Permanently</h1></center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/12%Time=6871DDEF%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,16A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sa
+SF:t,\x2012\x20Jul\x202025\x2004:00:47\x20GMT\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20close\r\nset-cookie:\x20PEGA-SESSION-COOKIE=HNiTndSeNokSU
+SF:JeR;\x20HttpOnly;\x20Path=/;\x20Expires=Sat,\x2012\x20Jul\x202025\x2004
+SF::17:47\x20GMT\r\nset-cookie:\x20PEGA-SESSION-COOKIE-CORS=HNiTndSeNokSUJ
+SF:eR;\x20HttpOnly;\x20SameSite=None;\x20Secure;\x20Path=/;\x20Expires=Sat
+SF:,\x2012\x20Jul\x202025\x2004:17:47\x20GMT\r\nserver:\x20webserver\r\n\r
+SF:\n")%r(HTTPOptions,16A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sa
+SF:t,\x2012\x20Jul\x202025\x2004:00:47\x20GMT\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20close\r\nset-cookie:\x20PEGA-SESSION-COOKIE=aIOyOaptxKVTF
+SF:4k6;\x20HttpOnly;\x20Path=/;\x20Expires=Sat,\x2012\x20Jul\x202025\x2004
+SF::17:47\x20GMT\r\nset-cookie:\x20PEGA-SESSION-COOKIE-CORS=aIOyOaptxKVTF4
+SF:k6;\x20HttpOnly;\x20SameSite=None;\x20Secure;\x20Path=/;\x20Expires=Sat
+SF:,\x2012\x20Jul\x202025\x2004:17:47\x20GMT\r\nserver:\x20webserver\r\n\r
+SF:\n")%r(FourOhFourRequest,16A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:
+SF:\x20Sat,\x2012\x20Jul\x202025\x2004:00:47\x20GMT\r\nContent-Length:\x20
+SF:0\r\nConnection:\x20close\r\nset-cookie:\x20PEGA-SESSION-COOKIE=j5ym96A
+SF:AahL3FcO6;\x20HttpOnly;\x20Path=/;\x20Expires=Sat,\x2012\x20Jul\x202025
+SF:\x2004:17:47\x20GMT\r\nset-cookie:\x20PEGA-SESSION-COOKIE-CORS=j5ym96AA
+SF:ahL3FcO6;\x20HttpOnly;\x20SameSite=None;\x20Secure;\x20Path=/;\x20Expir
+SF:es=Sat,\x2012\x20Jul\x202025\x2004:17:47\x20GMT\r\nserver:\x20webserver
+SF:\r\n\r\n")%r(tor-versions,110,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSe
+SF:rver:\x20awselb/2\.0\r\nDate:\x20Sat,\x2012\x20Jul\x202025\x2004:00:48\
+SF:x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20122\r\nConne
+SF:ction:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</ti
+SF:tle></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center
+SF:>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,7A,"<html>\r\n<head><title>
+SF:400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Ba
+SF:d\x20Request</h1></center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul 12 04:01:03 2025 -- 1 IP address (1 host up) scanned in 36.23 seconds
