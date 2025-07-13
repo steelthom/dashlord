@@ -1,0 +1,95 @@
+# Nmap 7.92 scan initiated Sun Jul 13 03:56:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.signalement-igpn.fsi.interieur.gouv.fr
+Nmap scan report for www.signalement-igpn.fsi.interieur.gouv.fr (185.209.55.191)
+Host is up (0.089s latency).
+rDNS record for 185.209.55.191: vip-minist-sso.jaguar-network.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http?
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 246
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains
+|     X-XSS-Protection: 0; mode=block
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 4182713937129302337<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Sun, 13 Jul 2025 03:56:40 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     X-Permitted-Cross-Domain-Policies: none
+|     Expect-CT: enforce, max-age=604800
+|     Set-Cookie: SESSION-RP=45835274.20480.0000; path=/; Httponly; Secure
+|     Set-Cookie: TS011d594e=0161bc97184a6e35699cd9a393c88ece323ae2c1e1863318e1aa7bad6ce19365c4901882cf681b6c14ad5810d66455fff4d8705c384afeb3813be0a2400eec86ae01d27190; Path=/
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains
+|     X-XSS-Protection: 0; mode=block
+|     <html>
+|     <head><title>403 Forbidden</title></head>
+|     <body>
+|     <center><h1>403 Forbidden</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 246
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains
+|     X-XSS-Protection: 0; mode=block
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 4182713937129302329<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/13%Time=68732E78%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2FB,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Sun,\
+SF:x2013\x20Jul\x202025\x2003:56:40\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nConnection:\x20close\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Content-T
+SF:ype-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-P
+SF:ermitted-Cross-Domain-Policies:\x20none\r\nExpect-CT:\x20enforce,\x20ma
+SF:x-age=604800\r\nSet-Cookie:\x20SESSION-RP=45835274\.20480\.0000;\x20pat
+SF:h=/;\x20Httponly;\x20Secure\r\nSet-Cookie:\x20TS011d594e=0161bc97184a6e
+SF:35699cd9a393c88ece323ae2c1e1863318e1aa7bad6ce19365c4901882cf681b6c14ad5
+SF:810d66455fff4d8705c384afeb3813be0a2400eec86ae01d27190;\x20Path=/\r\nStr
+SF:ict-Transport-Security:\x20max-age=63072000;\x20includeSubdomains\r\nX-
+SF:XSS-Protection:\x200;\x20mode=block\r\n\r\n<html>\r\n<head><title>403\x
+SF:20Forbidden</title></head>\r\n<body>\r\n<center><h1>403\x20Forbidden</h
+SF:1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r
+SF:(HTTPOptions,24B,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x20
+SF:SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20clos
+SF:e\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-cach
+SF:e\r\nContent-Length:\x20246\r\nStrict-Transport-Security:\x20max-age=63
+SF:072000;\x20includeSubdomains\r\nX-XSS-Protection:\x200;\x20mode=block\r
+SF:\n\r\n<html><head><title>Request\x20Rejected</title></head><body>The\x2
+SF:0requested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20
+SF:your\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x2041827139
+SF:37129302329<br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20B
+SF:ack\]</a></body></html>")%r(FourOhFourRequest,24B,"HTTP/1\.1\x20403\x20
+SF:Forbidden\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\
+SF:x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x
+SF:20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x20246\r\nStrict-
+SF:Transport-Security:\x20max-age=63072000;\x20includeSubdomains\r\nX-XSS-
+SF:Protection:\x200;\x20mode=block\r\n\r\n<html><head><title>Request\x20Re
+SF:jected</title></head><body>The\x20requested\x20URL\x20was\x20rejected\.
+SF:\x20Please\x20consult\x20with\x20your\x20administrator\.<br><br>Your\x2
+SF:0support\x20ID\x20is:\x204182713937129302337<br><br><a\x20href='javascr
+SF:ipt:history\.back\(\);'>\[Go\x20Back\]</a></body></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 13 03:58:51 2025 -- 1 IP address (1 host up) scanned in 151.36 seconds
