@@ -1,46 +1,19 @@
-# Nmap 7.92 scan initiated Tue Jul  8 10:40:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.insp.gouv.fr
+# Nmap 7.92 scan initiated Sun Jul 13 04:19:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.insp.gouv.fr
 Nmap scan report for www.insp.gouv.fr (46.105.200.168)
-Host is up (0.038s latency).
+Host is up (0.018s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 400 Bad Request
-|     date: Tue, 08 Jul 2025 10:40:32 GMT
+|     date: Sun, 13 Jul 2025 04:19:44 GMT
 |     x-cacheable: Not cacheable: not http 200
 |     x-cdn-pop: bhs
 |     x-cdn-pop-ip: 137.74.122.0/26
 |     content-type: text/html; charset=utf-8
 |     content-length: 28501
-|     x-iplb-request-id: 28564CCD:0448_2E69C8A8:0050_686CF59A_1738A:0B86
-|     x-iplb-instance: 54450
-|     connection: close
-|     <html>
-|     <head>
-|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-|     <title>Error: there is a problem...</title>
-|     <style type="text/css">
-|     font-family: 'lato', "Trebuchet MS", "Arial", "Lucida grande", "Bitstream Charter", "Liberation sans", "FreeSans", sans-serif;
-|     font-size: 16px;
-|     line-height: 20px;
-|     color: #494949;
-|     padding: 0;
-|     margin: 0;
-|     font-size: normal;
-|     font-weight: 200;
-|     @font-face {
-|     font-family: 'lato';
-|     src: url('http://www.ovh.com/fr/themes/14/
-|   HTTPOptions: 
-|     HTTP/1.1 400 Bad Request
-|     date: Tue, 08 Jul 2025 10:40:32 GMT
-|     x-cacheable: Not cacheable: not http 200
-|     x-cdn-pop: bhs
-|     x-cdn-pop-ip: 137.74.122.0/26
-|     content-type: text/html; charset=utf-8
-|     content-length: 28501
-|     x-iplb-request-id: 28564CCD:0441_2E69C8A8:0050_686CF5A0_173C5:7B50
+|     x-iplb-request-id: ACACD4E2:6F44_2E69C8A8:0050_687333DA_1C1A:784A
 |     x-iplb-instance: 54500
 |     connection: close
 |     <html>
@@ -58,18 +31,18 @@ PORT    STATE SERVICE   VERSION
 |     font-weight: 200;
 |     @font-face {
 |     font-family: 'lato';
-|_    src: url('http://www.ovh.com/fr/themes/14/
-443/tcp open  ssl/https
-| fingerprint-strings: 
-|   GetRequest: 
+|     src: url('http://www.ovh.com/fr/themes/14/f
+|   HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Tue, 08 Jul 2025 10:40:37 GMT
-|     X-Cacheable: Not cacheable: not http 200
-|     X-CDN-Pop: bhs
-|     X-CDN-Pop-IP: 137.74.122.0/26
-|     Content-Type: text/html; charset=utf-8
-|     Content-Length: 28501
-|     Connection: close
+|     date: Sun, 13 Jul 2025 04:19:44 GMT
+|     x-cacheable: Not cacheable: not http 200
+|     x-cdn-pop: bhs
+|     x-cdn-pop-ip: 137.74.122.0/26
+|     content-type: text/html; charset=utf-8
+|     content-length: 28501
+|     x-iplb-request-id: ACACD4E2:6F43_2E69C8A8:0050_687333E0_1634:79C7
+|     x-iplb-instance: 54179
+|     connection: close
 |     <html>
 |     <head>
 |     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -85,11 +58,12 @@ PORT    STATE SERVICE   VERSION
 |     font-weight: 200;
 |     @font-face {
 |     font-family: 'lato';
-|     src: url('http://www.ovh.com/fr/themes/14/fonts/lato/lato-regular-webfont.eot');
-|     src: url('http://www.ovh.com/fr/themes/14/font
-|   HTTPOptions: 
+|_    src: url('http://www.ovh.com/fr/themes/14/f
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Tue, 08 Jul 2025 10:40:38 GMT
+|     Date: Sun, 13 Jul 2025 04:19:49 GMT
 |     X-Cacheable: Not cacheable: not http 200
 |     X-CDN-Pop: bhs
 |     X-CDN-Pop-IP: 137.74.122.0/26
@@ -115,13 +89,13 @@ PORT    STATE SERVICE   VERSION
 |_    src: url('http://www.ovh.com/fr/themes/14/font
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=7/8%Time=686CF5A0%P=x86_64-alpine-linux-musl%r(
-SF:GetRequest,37C8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Tue,\x2
-SF:008\x20Jul\x202025\x2010:40:32\x20GMT\r\nx-cacheable:\x20Not\x20cacheab
-SF:le:\x20not\x20http\x20200\r\nx-cdn-pop:\x20bhs\r\nx-cdn-pop-ip:\x20137\
-SF:.74\.122\.0/26\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\nconte
-SF:nt-length:\x2028501\r\nx-iplb-request-id:\x2028564CCD:0448_2E69C8A8:005
-SF:0_686CF59A_1738A:0B86\r\nx-iplb-instance:\x2054450\r\nconnection:\x20cl
+SF-Port80-TCP:V=7.92%I=7%D=7/13%Time=687333E0%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,37C8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Sun,\x
+SF:2013\x20Jul\x202025\x2004:19:44\x20GMT\r\nx-cacheable:\x20Not\x20cachea
+SF:ble:\x20not\x20http\x20200\r\nx-cdn-pop:\x20bhs\r\nx-cdn-pop-ip:\x20137
+SF:\.74\.122\.0/26\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\ncont
+SF:ent-length:\x2028501\r\nx-iplb-request-id:\x20ACACD4E2:6F44_2E69C8A8:00
+SF:50_687333DA_1C1A:784A\r\nx-iplb-instance:\x2054500\r\nconnection:\x20cl
 SF:ose\r\n\r\n<html>\n\t<head>\n\t\t<meta\x20http-equiv=\"Content-Type\"\x
 SF:20content=\"text/html;\x20charset=utf-8\"/>\n\t\t<title>Error:\x20there
 SF:\x20is\x20a\x20problem\.\.\.</title>\n\n\t\t<style\x20type=\"text/css\"
@@ -135,12 +109,12 @@ SF:dding:\x200;\n\t\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:
 SF:\x200;\n\t\t\t\tfont-size:\x20normal;\n\t\t\t\tfont-weight:\x20200;\n\t
 SF:\t\t}\n\n\t\t\t@font-face\x20{\n\t\t\t\x20\x20\x20\x20font-family:\x20'
 SF:lato';\n\t\t\t\x20\x20\x20\x20src:\x20url\('http://www\.ovh\.com/fr/the
-SF:mes/14/")%r(HTTPOptions,37C8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndat
-SF:e:\x20Tue,\x2008\x20Jul\x202025\x2010:40:32\x20GMT\r\nx-cacheable:\x20N
-SF:ot\x20cacheable:\x20not\x20http\x20200\r\nx-cdn-pop:\x20bhs\r\nx-cdn-po
-SF:p-ip:\x20137\.74\.122\.0/26\r\ncontent-type:\x20text/html;\x20charset=u
-SF:tf-8\r\ncontent-length:\x2028501\r\nx-iplb-request-id:\x2028564CCD:0441
-SF:_2E69C8A8:0050_686CF5A0_173C5:7B50\r\nx-iplb-instance:\x2054500\r\nconn
+SF:mes/14/f")%r(HTTPOptions,37C8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nda
+SF:te:\x20Sun,\x2013\x20Jul\x202025\x2004:19:44\x20GMT\r\nx-cacheable:\x20
+SF:Not\x20cacheable:\x20not\x20http\x20200\r\nx-cdn-pop:\x20bhs\r\nx-cdn-p
+SF:op-ip:\x20137\.74\.122\.0/26\r\ncontent-type:\x20text/html;\x20charset=
+SF:utf-8\r\ncontent-length:\x2028501\r\nx-iplb-request-id:\x20ACACD4E2:6F4
+SF:3_2E69C8A8:0050_687333E0_1634:79C7\r\nx-iplb-instance:\x2054179\r\nconn
 SF:ection:\x20close\r\n\r\n<html>\n\t<head>\n\t\t<meta\x20http-equiv=\"Con
 SF:tent-Type\"\x20content=\"text/html;\x20charset=utf-8\"/>\n\t\t<title>Er
 SF:ror:\x20there\x20is\x20a\x20problem\.\.\.</title>\n\n\t\t<style\x20type
@@ -154,48 +128,48 @@ SF:0\x20\x20\tpadding:\x200;\n\t\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
 SF:20\x20margin:\x200;\n\t\t\t\tfont-size:\x20normal;\n\t\t\t\tfont-weight
 SF::\x20200;\n\t\t\t}\n\n\t\t\t@font-face\x20{\n\t\t\t\x20\x20\x20\x20font
 SF:-family:\x20'lato';\n\t\t\t\x20\x20\x20\x20src:\x20url\('http://www\.ov
-SF:h\.com/fr/themes/14/");
+SF:h\.com/fr/themes/14/f");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/8%Time=686CF5A5%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,16A0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Tue,\x2008\x20Jul\x202025\x2010:40:37\x20GMT\r\nX-Cacheable:\x20Not\x20
-SF:cacheable:\x20not\x20http\x20200\r\nX-CDN-Pop:\x20bhs\r\nX-CDN-Pop-IP:\
-SF:x20137\.74\.122\.0/26\r\nContent-Type:\x20text/html;\x20charset=utf-8\r
-SF:\nContent-Length:\x2028501\r\nConnection:\x20close\r\n\r\n<html>\n\t<he
-SF:ad>\n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x
-SF:20charset=utf-8\"/>\n\t\t<title>Error:\x20there\x20is\x20a\x20problem\.
-SF:\.\.</title>\n\n\t\t<style\x20type=\"text/css\">\n\t\t\t\*\x20{\n\t\t\t
-SF:\tfont-family:\x20'lato',\x20\"Trebuchet\x20MS\",\x20\"Arial\",\x20\"Lu
-SF:cida\x20grande\",\x20\"Bitstream\x20Charter\",\x20\"Liberation\x20sans\
-SF:",\x20\"FreeSans\",\x20sans-serif;\n\t\x20\x20\x20\x20\x20\x20\x20\x20\
-SF:x20\x20\x20\x20font-size:\x2016px;\n\x20\x20\x20\x20\x20\x20\x20\x20\t\
-SF:x20\x20\x20\x20line-height:\x2020px;\n\t\t\t\tcolor:\x20#494949;\n\x20\
-SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\tpadding:\x200;\n\t\x20\x20
-SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\t\t\t\tfont-siz
-SF:e:\x20normal;\n\t\t\t\tfont-weight:\x20200;\n\t\t\t}\n\n\t\t\t@font-fac
-SF:e\x20{\n\t\t\t\x20\x20\x20\x20font-family:\x20'lato';\n\t\t\t\x20\x20\x
-SF:20\x20src:\x20url\('http://www\.ovh\.com/fr/themes/14/fonts/lato/lato-r
-SF:egular-webfont\.eot'\);\n\t\t\t\x20\x20\x20\x20src:\x20url\('http://www
-SF:\.ovh\.com/fr/themes/14/font")%r(HTTPOptions,7041,"HTTP/1\.1\x20400\x20
-SF:Bad\x20Request\r\nDate:\x20Tue,\x2008\x20Jul\x202025\x2010:40:38\x20GMT
-SF:\r\nX-Cacheable:\x20Not\x20cacheable:\x20not\x20http\x20200\r\nX-CDN-Po
-SF:p:\x20bhs\r\nX-CDN-Pop-IP:\x20137\.74\.122\.0/26\r\nContent-Type:\x20te
-SF:xt/html;\x20charset=utf-8\r\nContent-Length:\x2028501\r\nConnection:\x2
-SF:0close\r\n\r\n<html>\n\t<head>\n\t\t<meta\x20http-equiv=\"Content-Type\
-SF:"\x20content=\"text/html;\x20charset=utf-8\"/>\n\t\t<title>Error:\x20th
-SF:ere\x20is\x20a\x20problem\.\.\.</title>\n\n\t\t<style\x20type=\"text/cs
-SF:s\">\n\t\t\t\*\x20{\n\t\t\t\tfont-family:\x20'lato',\x20\"Trebuchet\x20
-SF:MS\",\x20\"Arial\",\x20\"Lucida\x20grande\",\x20\"Bitstream\x20Charter\
-SF:",\x20\"Liberation\x20sans\",\x20\"FreeSans\",\x20sans-serif;\n\t\x20\x
-SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\n\x20\x20
-SF:\x20\x20\x20\x20\x20\x20\t\x20\x20\x20\x20line-height:\x2020px;\n\t\t\t
-SF:\tcolor:\x20#494949;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
-SF:tpadding:\x200;\n\t\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20marg
-SF:in:\x200;\n\t\t\t\tfont-size:\x20normal;\n\t\t\t\tfont-weight:\x20200;\
-SF:n\t\t\t}\n\n\t\t\t@font-face\x20{\n\t\t\t\x20\x20\x20\x20font-family:\x
-SF:20'lato';\n\t\t\t\x20\x20\x20\x20src:\x20url\('http://www\.ovh\.com/fr/
-SF:themes/14/fonts/lato/lato-regular-webfont\.eot'\);\n\t\t\t\x20\x20\x20\
-SF:x20src:\x20url\('http://www\.ovh\.com/fr/themes/14/font");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/13%Time=687333E5%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1C48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
+SF:0Sun,\x2013\x20Jul\x202025\x2004:19:49\x20GMT\r\nX-Cacheable:\x20Not\x2
+SF:0cacheable:\x20not\x20http\x20200\r\nX-CDN-Pop:\x20bhs\r\nX-CDN-Pop-IP:
+SF:\x20137\.74\.122\.0/26\r\nContent-Type:\x20text/html;\x20charset=utf-8\
+SF:r\nContent-Length:\x2028501\r\nConnection:\x20close\r\n\r\n<html>\n\t<h
+SF:ead>\n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\
+SF:x20charset=utf-8\"/>\n\t\t<title>Error:\x20there\x20is\x20a\x20problem\
+SF:.\.\.</title>\n\n\t\t<style\x20type=\"text/css\">\n\t\t\t\*\x20{\n\t\t\
+SF:t\tfont-family:\x20'lato',\x20\"Trebuchet\x20MS\",\x20\"Arial\",\x20\"L
+SF:ucida\x20grande\",\x20\"Bitstream\x20Charter\",\x20\"Liberation\x20sans
+SF:\",\x20\"FreeSans\",\x20sans-serif;\n\t\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20font-size:\x2016px;\n\x20\x20\x20\x20\x20\x20\x20\x20\t
+SF:\x20\x20\x20\x20line-height:\x2020px;\n\t\t\t\tcolor:\x20#494949;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\tpadding:\x200;\n\t\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\t\t\t\tfont-si
+SF:ze:\x20normal;\n\t\t\t\tfont-weight:\x20200;\n\t\t\t}\n\n\t\t\t@font-fa
+SF:ce\x20{\n\t\t\t\x20\x20\x20\x20font-family:\x20'lato';\n\t\t\t\x20\x20\
+SF:x20\x20src:\x20url\('http://www\.ovh\.com/fr/themes/14/fonts/lato/lato-
+SF:regular-webfont\.eot'\);\n\t\t\t\x20\x20\x20\x20src:\x20url\('http://ww
+SF:w\.ovh\.com/fr/themes/14/font")%r(HTTPOptions,7041,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nDate:\x20Sun,\x2013\x20Jul\x202025\x2004:19:49\x20GM
+SF:T\r\nX-Cacheable:\x20Not\x20cacheable:\x20not\x20http\x20200\r\nX-CDN-P
+SF:op:\x20bhs\r\nX-CDN-Pop-IP:\x20137\.74\.122\.0/26\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=utf-8\r\nContent-Length:\x2028501\r\nConnection:\x
+SF:20close\r\n\r\n<html>\n\t<head>\n\t\t<meta\x20http-equiv=\"Content-Type
+SF:\"\x20content=\"text/html;\x20charset=utf-8\"/>\n\t\t<title>Error:\x20t
+SF:here\x20is\x20a\x20problem\.\.\.</title>\n\n\t\t<style\x20type=\"text/c
+SF:ss\">\n\t\t\t\*\x20{\n\t\t\t\tfont-family:\x20'lato',\x20\"Trebuchet\x2
+SF:0MS\",\x20\"Arial\",\x20\"Lucida\x20grande\",\x20\"Bitstream\x20Charter
+SF:\",\x20\"Liberation\x20sans\",\x20\"FreeSans\",\x20sans-serif;\n\t\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\t\x20\x20\x20\x20line-height:\x2020px;\n\t\t\
+SF:t\tcolor:\x20#494949;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\tpadding:\x200;\n\t\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mar
+SF:gin:\x200;\n\t\t\t\tfont-size:\x20normal;\n\t\t\t\tfont-weight:\x20200;
+SF:\n\t\t\t}\n\n\t\t\t@font-face\x20{\n\t\t\t\x20\x20\x20\x20font-family:\
+SF:x20'lato';\n\t\t\t\x20\x20\x20\x20src:\x20url\('http://www\.ovh\.com/fr
+SF:/themes/14/fonts/lato/lato-regular-webfont\.eot'\);\n\t\t\t\x20\x20\x20
+SF:\x20src:\x20url\('http://www\.ovh\.com/fr/themes/14/font");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Jul  8 10:42:48 2025 -- 1 IP address (1 host up) scanned in 147.17 seconds
+# Nmap done at Sun Jul 13 04:21:58 2025 -- 1 IP address (1 host up) scanned in 145.22 seconds
