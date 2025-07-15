@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Jul 10 03:34:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.diese.gouv.fr
+# Nmap 7.92 scan initiated Tue Jul 15 03:52:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.diese.gouv.fr
 Nmap scan report for www.diese.gouv.fr (160.92.148.78)
-Host is up (0.15s latency).
+Host is up (0.14s latency).
 rDNS record for 160.92.148.78: secure-ssl-dsaf-mutu-prod.as8677.net
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE        VERSION
@@ -10,25 +10,25 @@ PORT    STATE SERVICE        VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Thu, 10 Jul 2025 03:34:38 GMT
+|     Date: Tue, 15 Jul 2025 03:52:17 GMT
 |     Content-Type: text/html; charset=UTF-8
-|     Content-Length: 49896
+|     Content-Length: 53470
 |     Connection: close
 |     Cache-Control: max-age=600, public
+|     X-Drupal-Dynamic-Cache: HIT
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
 |     Vary: Cookie
-|     X-Frame-Options: SAMEORIGIN
-|     X-Content-Type-Options: nosniff
-|     X-Xss-Protection: 1; mode=block
-|     X-Drupal-Dynamic-Cache: MISS
-|     Content-language: fr
 |     X-Drupal-Cache: HIT
-|     Last-Modified: Wed, 09 Jul 2025 15:28:10 GMT
-|     ETag: "1752074890"
-|     X-Varnish: 1763964 1889548
-|     Age: 59
+|     X-Xss-Protection: 1; mode=block
+|     Last-Modified: Fri, 11 Jul 2025 15:12:25 GMT
+|     ETag: "1752246745"
+|     X-Varnish: 5510938 4253276
+|     Age: 177
 |     X-Cache: HIT
-|     X-Cache-Hits: 5
+|     X-Cache-Hits: 7
 |     Accept-Ranges: bytes
 |     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 |     Content-Security-Policy: base-uri 'self'; connect-src 'self' https://www.data.gouv.fr; default-src 'self'; font-src 'self' data: https://static.data.gouv.fr; frame-src 'self' https://www.youtube.com https://www.documentation-administrative.gouv.fr https://www.youtube-nocookie.
@@ -58,18 +58,18 @@ PORT    STATE SERVICE        VERSION
 |     html {
 |_    height: 100%;
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/10%Time=686F34CE%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,2E95,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2010\
-SF:x20Jul\x202025\x2003:34:38\x20GMT\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=UTF-8\r\nContent-Length:\x2049896\r\nConnection:\x20close\r\nCache
-SF:-Control:\x20max-age=600,\x20public\r\nExpires:\x20Sun,\x2019\x20Nov\x2
-SF:01978\x2005:00:00\x20GMT\r\nVary:\x20Cookie\r\nX-Frame-Options:\x20SAME
-SF:ORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;
-SF:\x20mode=block\r\nX-Drupal-Dynamic-Cache:\x20MISS\r\nContent-language:\
-SF:x20fr\r\nX-Drupal-Cache:\x20HIT\r\nLast-Modified:\x20Wed,\x2009\x20Jul\
-SF:x202025\x2015:28:10\x20GMT\r\nETag:\x20\"1752074890\"\r\nX-Varnish:\x20
-SF:1763964\x201889548\r\nAge:\x2059\r\nX-Cache:\x20HIT\r\nX-Cache-Hits:\x2
-SF:05\r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x20max-age=
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/15%Time=6875D071%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2015\
+SF:x20Jul\x202025\x2003:52:17\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x2053470\r\nConnection:\x20close\r\nCache
+SF:-Control:\x20max-age=600,\x20public\r\nX-Drupal-Dynamic-Cache:\x20HIT\r
+SF:\nContent-language:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Fr
+SF:ame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x20
+SF:05:00:00\x20GMT\r\nVary:\x20Cookie\r\nX-Drupal-Cache:\x20HIT\r\nX-Xss-P
+SF:rotection:\x201;\x20mode=block\r\nLast-Modified:\x20Fri,\x2011\x20Jul\x
+SF:202025\x2015:12:25\x20GMT\r\nETag:\x20\"1752246745\"\r\nX-Varnish:\x205
+SF:510938\x204253276\r\nAge:\x20177\r\nX-Cache:\x20HIT\r\nX-Cache-Hits:\x2
+SF:07\r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x20max-age=
 SF:63072000;\x20includeSubDomains;\x20preload\r\nContent-Security-Policy:\
 SF:x20base-uri\x20'self';\x20connect-src\x20'self'\x20https://www\.data\.g
 SF:ouv\.fr;\x20default-src\x20'self';\x20font-src\x20'self'\x20data:\x20ht
@@ -100,4 +100,4 @@ SF:0\x20\x20");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jul 10 03:36:53 2025 -- 1 IP address (1 host up) scanned in 150.76 seconds
+# Nmap done at Tue Jul 15 03:54:33 2025 -- 1 IP address (1 host up) scanned in 151.32 seconds
