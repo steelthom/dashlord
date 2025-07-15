@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Thu Jul 10 03:54:34 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.drees.solidarites-sante.gouv.fr
+# Nmap 7.92 scan initiated Tue Jul 15 03:52:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.drees.solidarites-sante.gouv.fr
 Nmap scan report for www.drees.solidarites-sante.gouv.fr (185.194.82.72)
 Host is up (0.081s latency).
 Not shown: 997 filtered tcp ports (no-response)
@@ -27,8 +27,13 @@ PORT    STATE  SERVICE  VERSION
 |_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/http Apache httpd 2.4.62
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.62: 
+|     	95499236-C9FE-56A6-9D7D-E943A24B633A	10.0	https://vulners.com/githubexploit/95499236-C9FE-56A6-9D7D-E943A24B633A	*EXPLOIT*
+|     	2C119FFA-ECE0-5E14-A4A4-354A2C38071A	10.0	https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A	*EXPLOIT*
+|_    	A5425A79-9D81-513A-9CC5-549D6321897C	9.8	https://vulners.com/githubexploit/A5425A79-9D81-513A-9CC5-549D6321897C	*EXPLOIT*
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=7/10%Time=686F3987%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=7/15%Time=6875D094%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
 SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
@@ -45,4 +50,4 @@ SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 Service Info: Host: drees-site-v2.cegedim.cloud
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jul 10 03:57:06 2025 -- 1 IP address (1 host up) scanned in 152.01 seconds
+# Nmap done at Tue Jul 15 03:55:08 2025 -- 1 IP address (1 host up) scanned in 149.00 seconds
