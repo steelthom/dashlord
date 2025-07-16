@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Fri Jul 11 03:46:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.inscription-concours.interieur.gouv.fr
+# Nmap 7.92 scan initiated Wed Jul 16 03:33:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.inscription-concours.interieur.gouv.fr
 Nmap scan report for www.inscription-concours.interieur.gouv.fr (143.196.253.88)
-Host is up (0.10s latency).
+Host is up (0.11s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Fri, 11 Jul 2025 03:46:49 GMT
+|     Date: Wed, 16 Jul 2025 03:34:02 GMT
 |     Location: https://www.inscription-concours.interieur.gouv.fr/nice ports,/Trinity.txt.bak
 |     Content-Length: 286
 |     Connection: close
@@ -19,9 +19,23 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Moved Permanently</h1>
 |     <p>The document has moved <a href="https://www.inscription-concours.interieur.gouv.fr/nice ports,/Trinity.txt.bak">here</a>.</p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Fri, 11 Jul 2025 03:46:39 GMT
+|     Date: Wed, 16 Jul 2025 03:33:51 GMT
+|     Location: https://www.inscription-concours.interieur.gouv.fr/
+|     Content-Length: 259
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://www.inscription-concours.interieur.gouv.fr/">here</a>.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Wed, 16 Jul 2025 03:33:52 GMT
 |     Location: https://www.inscription-concours.interieur.gouv.fr/
 |     Content-Length: 259
 |     Connection: close
@@ -35,7 +49,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   Help: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Fri, 11 Jul 2025 03:47:10 GMT
+|     Date: Wed, 16 Jul 2025 03:34:23 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -51,7 +65,7 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Fri, 11 Jul 2025 03:46:46 GMT
+|     Date: Wed, 16 Jul 2025 03:33:59 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -65,7 +79,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Fri, 11 Jul 2025 03:46:45 GMT
+|     Date: Wed, 16 Jul 2025 03:33:58 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -79,7 +93,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Fri, 11 Jul 2025 03:46:57 GMT
+|     Date: Wed, 16 Jul 2025 03:34:10 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -93,9 +107,9 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=7/11%Time=6870891F%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,1DE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20F
-SF:ri,\x2011\x20Jul\x202025\x2003:46:39\x20GMT\r\nLocation:\x20https://www
+SF-Port80-TCP:V=7.92%I=7%D=7/16%Time=68771DA0%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1DE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20W
+SF:ed,\x2016\x20Jul\x202025\x2003:33:51\x20GMT\r\nLocation:\x20https://www
 SF:\.inscription-concours\.interieur\.gouv\.fr/\r\nContent-Length:\x20259\
 SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8
 SF:859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
@@ -103,8 +117,8 @@ SF:\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n<
 SF:/head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\
 SF:x20moved\x20<a\x20href=\"https://www\.inscription-concours\.interieur\.
 SF:gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(HTTPOptions,1DE,"HTTP/
-SF:1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Fri,\x2011\x20Jul\x2020
-SF:25\x2003:46:39\x20GMT\r\nLocation:\x20https://www\.inscription-concours
+SF:1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Wed,\x2016\x20Jul\x2020
+SF:25\x2003:33:52\x20GMT\r\nLocation:\x20https://www\.inscription-concours
 SF:\.interieur\.gouv\.fr/\r\nContent-Length:\x20259\r\nConnection:\x20clos
 SF:e\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE
 SF:\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><hea
@@ -112,7 +126,7 @@ SF:d>\n<title>301\x20Moved\x20Permanently</title>\n</head><body>\n<h1>Move
 SF:d\x20Permanently</h1>\n<p>The\x20document\x20has\x20moved\x20<a\x20href
 SF:=\"https://www\.inscription-concours\.interieur\.gouv\.fr/\">here</a>\.
 SF:</p>\n</body></html>\n")%r(FourOhFourRequest,214,"HTTP/1\.1\x20301\x20M
-SF:oved\x20Permanently\r\nDate:\x20Fri,\x2011\x20Jul\x202025\x2003:46:49\x
+SF:oved\x20Permanently\r\nDate:\x20Wed,\x2016\x20Jul\x202025\x2003:34:02\x
 SF:20GMT\r\nLocation:\x20https://www\.inscription-concours\.interieur\.gou
 SF:v\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nContent-Length:\x20286\r\nCon
 SF:nection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\
@@ -121,8 +135,8 @@ SF:N\">\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head>
 SF:<body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20mov
 SF:ed\x20<a\x20href=\"https://www\.inscription-concours\.interieur\.gouv\.
 SF:fr/nice\x20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n</body></html>\n"
-SF:)%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2011
-SF:\x20Jul\x202025\x2003:47:10\x20GMT\r\nContent-Length:\x20226\r\nConnect
+SF:)%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2016
+SF:\x20Jul\x202025\x2003:34:23\x20GMT\r\nContent-Length:\x20226\r\nConnect
 SF:ion:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\
 SF:r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">
 SF:\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h
@@ -130,31 +144,31 @@ SF:1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20th
 SF:at\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</
 SF:body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/11%Time=68708925%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/16%Time=68771DA6%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Fri,\x2011\x20Jul\x202025\x2003:46:45\x20GMT\r\nContent-Length:\x20226\
+SF:Wed,\x2016\x20Jul\x202025\x2003:33:58\x20GMT\r\nContent-Length:\x20226\
 SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8
 SF:859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
 SF:\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head>
 SF:<body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20req
 SF:uest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>
 SF:\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nDate:\x20Fri,\x2011\x20Jul\x202025\x2003:46:45\x20GMT\r\nC
+SF:20Request\r\nDate:\x20Wed,\x2016\x20Jul\x202025\x2003:33:58\x20GMT\r\nC
 SF:ontent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/
 SF:html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
 SF:IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Re
 SF:quest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brows
 SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
 SF:0understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,17
-SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2011\x20Jul\x20
-SF:2025\x2003:46:46\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
+SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2016\x20Jul\x20
+SF:2025\x2003:33:59\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
 SF:se\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYP
 SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
 SF:ad>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Re
 SF:quest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\
 SF:x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html
 SF:>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Fri,\x2011\x20Jul\x202025\x2003:46:57\x20GMT\r\nContent-Length:\x20226
+SF:0Wed,\x2016\x20Jul\x202025\x2003:34:10\x20GMT\r\nContent-Length:\x20226
 SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
 SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
 SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
@@ -163,4 +177,4 @@ SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
 SF:>\n</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Jul 11 03:48:33 2025 -- 1 IP address (1 host up) scanned in 129.48 seconds
+# Nmap done at Wed Jul 16 03:35:47 2025 -- 1 IP address (1 host up) scanned in 131.06 seconds
