@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -661,7 +661,7 @@
               "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "86 >= 30 days"
+              "finding"      : "81 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -846,6 +846,20 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "HTTP header request failed"
+          }
+,         {
+              "id"           : "scanProblem",
+              "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "HTTP header was repeatedly zero."
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
               "port"         : "443",
@@ -867,10 +881,10 @@
               "id"           : "ticketbleed",
               "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "ROBOT",
@@ -905,7 +919,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "Test failed as HTTP request stalled and was terminated"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1370,6 +1393,6 @@
               "ip"           : "www.mediateurdelamusique.fr/143.126.211.105",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "213"
+              "finding"      : "130"
           }
 ]
