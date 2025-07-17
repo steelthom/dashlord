@@ -1,20 +1,29 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D-",
+    "grade": "C-",
     "error": null,
-    "score": 25,
-    "statusCode": 401,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "score": 45,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
+      "date": "Thu, 17 Jul 2025 03:36:44 GMT",
       "server": "nginx",
-      "date": "Sun, 13 Jul 2025 03:30:01 GMT",
-      "content-type": "text/html",
-      "content-length": "172",
+      "strict-transport-security": "max-age=31536000",
+      "content-type": "text/html; charset=utf-8",
+      "composed-by": "SPIP @ www.spip.net",
+      "link": "<https://www.consultations-publiques.developpement-durable.gouv.fr/local/cache-css/53d2d4ef46384cf08034d0eb05dd5b7e.css?1750855871>;rel=\"preload\";as=\"style\"",
+      "x-spip-cache": "3600",
+      "last-modified": "Thu, 17 Jul 2025 03:36:44 GMT",
+      "set-cookie": [
+        "SRV=c24ad79d-b7fe-4480-8d22-0db8012d8461; path=/"
+      ],
+      "vary": "Cookie,Accept-Encoding",
+      "cache-control": "private",
       "connection": "close",
-      "www-authenticate": "Basic realm=\"Ecedi access restrictions\""
+      "transfer-encoding": "chunked"
     }
   },
   "tests": {
@@ -31,10 +40,16 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "SRV": {
+          "domain": "www.consultations-publiques.developpement-durable.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -46,14 +61,15 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-off-host-from-http",
-      "scoreModifier": -5,
-      "destination": "https://programme-nitrate.gouv.fr/",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.consultations-publiques.developpement-durable.gouv.fr/consultation-du-public-relative-au-decret-sur-les-a2685.html",
       "redirects": true,
       "route": [
         "http://www.programme-nitrate.gouv.fr/",
-        "https://programme-nitrate.gouv.fr/"
+        "https://www.programme-nitrate.gouv.fr/",
+        "https://www.consultations-publiques.developpement-durable.gouv.fr/consultation-du-public-relative-au-decret-sur-les-a2685.html"
       ],
       "statusCode": 200
     },
@@ -68,19 +84,19 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-invalid-cert",
-      "scoreModifier": -20,
-      "data": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
       "includeSubDomains": false,
-      "maxAge": null,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-no-scripts-loaded",
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
       "scoreModifier": 0,
       "data": {}
     },
