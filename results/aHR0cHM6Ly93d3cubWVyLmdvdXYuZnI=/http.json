@@ -1,16 +1,16 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C+",
+    "grade": "B",
     "error": null,
-    "score": 60,
+    "score": 70,
     "statusCode": 200,
     "testsFailed": 2,
     "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Sat, 12 Jul 2025 03:57:46 GMT",
+      "date": "Thu, 17 Jul 2025 04:10:19 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
@@ -20,14 +20,14 @@
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Fri, 11 Jul 2025 15:14:59 GMT",
-      "etag": "W/\"1752246899\"",
+      "last-modified": "Wed, 16 Jul 2025 15:49:29 GMT",
+      "etag": "W/\"1752680969\"",
       "content-security-policy": "script-src 'self' *.gouv.fr gva.et-gv.fr *.google-analytics.com *.twitter.com; report-uri /report-csp-violation; upgrade-insecure-requests",
       "x-xss-protection": "1; mode=block",
       "strict-transport-security": "max-age=2592000; includeSubDomains; preload",
       "referrer-policy": "strict-origin-when-cross-origin",
       "permissions-policy": "camera=(), microphone=()",
-      "x-micro-cache": "EXPIRED"
+      "x-micro-cache": "HIT"
     }
   },
   "tests": {
@@ -108,12 +108,12 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented-no-https",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "result": "hsts-implemented-max-age-less-than-six-months",
+      "scoreModifier": -10,
+      "data": "max-age=2592000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 2592000,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
