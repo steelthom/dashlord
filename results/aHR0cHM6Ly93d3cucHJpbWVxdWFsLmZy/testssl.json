@@ -153,6 +153,20 @@
               "finding"      : "offered"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "www.primequal.fr/51.159.86.157",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server -- server prioritizes ChaCha ciphers when preferred by clients"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "www.primequal.fr/51.159.86.157",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 521   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
               "id"           : "cipher-tls1_3_x1302",
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
@@ -167,32 +181,53 @@
               "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH 521   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "www.primequal.fr/51.159.86.157",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 521   AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_3",
+              "id"           : "cipherorder_TLSv1_3",
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "prioritize_chacha_TLSv1_3",
+              "ip"           : "www.primequal.fr/51.159.86.157",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "true"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not a cipher order for TLS 1.3 configured"
+              "finding"      : "server (TLS 1.3)"
           }
 ,         {
               "id"           : "FS",
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "No ciphers supporting Forward Secrecy offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "www.primequal.fr/51.159.86.157",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "www.primequal.fr/51.159.86.157",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "secp384r1 secp521r1"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "www.primequal.fr/51.159.86.157",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA512 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA256"
           }
 ,         {
               "id"           : "TLS_extensions",
@@ -374,7 +409,7 @@
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "45 >= 30 days"
+              "finding"      : "41 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -535,7 +570,7 @@
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1752377567"
+              "finding"      : "1752725634"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1111,21 +1146,14 @@
               "id"           : "overall_grade",
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "B"
-          }
-,         {
-              "id"           : "grade_cap_reason_1",
-              "ip"           : "www.primequal.fr/51.159.86.157",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. Forward Secrecy (FS) is not supported"
+              "severity"     : "OK",
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.primequal.fr/51.159.86.157",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "136"
+              "finding"      : "162"
           }
 ]
