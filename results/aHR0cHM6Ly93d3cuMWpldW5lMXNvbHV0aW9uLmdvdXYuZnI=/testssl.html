@@ -21,13 +21,13 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on pkrvmq0rgcvqdmg:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>172.67.40.181 172.66.175.42
+<span style="font-weight:bold;">Testing all IP addresses (port 443): </span>172.66.175.42 104.20.21.7
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-07-13 03:56:01        --&gt;&gt; 172.67.40.181:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-07-18 03:46:31        --&gt;&gt; 172.66.175.42:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   172.66.175.42 2606:4700:10::ac43:28b5
-                         2606:4700:10::ac42:af2a 
- rDNS (172.67.40.181):   --
+ Further IP addresses:   104.20.21.7 2606:4700:10::ac42:af2a
+                         2606:4700:10::6814:1507 
+ rDNS (172.66.175.42):   --
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -123,25 +123,25 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication
-<span style="font-weight:bold;"> Serial                       </span>C5C314F27B1FF579A96B3F29EEB9F738 (OK: length 16)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 2F942010B0CA43EC7B64675B325F5CA1AAD9B823
-                              SHA256 AE7B1FB517A8AB684EC0F4F6A21B96CA445B053B32A1EC04899F79D029C7C328
+<span style="font-weight:bold;"> Serial                       </span>18C10365BDE4191A5B81F1FB58FE5E62 (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 5B98D0DE5E0F21D2214A116730BC9B616CD94640
+                              SHA256 7ACB7B0EDC61CEE32E381E6313D5E1FD97B9559ADDCE9DEDD6AA85AA62602B39
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>www.1jeune1solution.gouv.fr </i> (request w/o SNI didn&apos;t succeed)
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>stage.1jeune1solution.gouv.fr
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>edito.1jeune1solution.gouv.fr
+                              recette.1jeune1solution.gouv.fr
                               sms.1jeune1solution.gouv.fr
-                              1jeune1solution.gouv.fr
-                              edito.1jeune1solution.gouv.fr
                               www.1jeune1solution.gouv.fr
-                              recette.1jeune1solution.gouv.fr </i>
+                              1jeune1solution.gouv.fr
+                              stage.1jeune1solution.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#e52207;">expires &lt; 30 days (14)</span> (2024-06-25 22:00 --&gt; 2025-07-27 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">116 &gt;= 60 days</span> (2025-07-09 00:00 --&gt; 2025-11-11 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.dhimyotis.com/servicesca.crl
-                              http://crl.certigna.fr/servicesca.crl
-<span style="font-weight:bold;"> OCSP URI                     </span>http://servicesca.ocsp.certigna.fr
-                              http://servicesca.ocsp.dhimyotis.com
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
+                              http://crl.dhimyotis.com/servicesca.crl
+<span style="font-weight:bold;"> OCSP URI                     </span>http://servicesca.ocsp.dhimyotis.com
+                              http://servicesca.ocsp.certigna.fr
 <span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#008817;">available</span> - please check for match with &quot;Issuer&quot; below
@@ -197,7 +197,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services, see
-                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=AE7B1FB517A8AB684EC0F4F6A21B96CA445B053B32A1EC04899F79D029C7C328" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=AE7B1FB517A8AB684EC0F4F6A21B96CA445B053B32A1EC04899F79D029C7C328</a>
+                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7ACB7B0EDC61CEE32E381E6313D5E1FD97B9559ADDCE9DEDD6AA85AA62602B39" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7ACB7B0EDC61CEE32E381E6313D5E1FD97B9559ADDCE9DEDD6AA85AA62602B39</a>
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no DH key detected with &lt;= TLS 1.2
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     potentially <span style="color:#a86437;">VULNERABLE</span>, uses cipher block chaining (CBC) ciphers with TLS. Check patches
@@ -256,14 +256,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-07-13 03:57:18 [  78s] --&gt;&gt; 172.67.40.181:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-07-18 03:47:47 [  77s] --&gt;&gt; 172.66.175.42:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-07-13 03:57:18        --&gt;&gt; 172.66.175.42:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-07-18 03:47:47        --&gt;&gt; 104.20.21.7:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   172.67.40.181 2606:4700:10::ac43:28b5
-                         2606:4700:10::ac42:af2a 
- rDNS (172.66.175.42):   --
+ Further IP addresses:   172.66.175.42 2606:4700:10::ac42:af2a
+                         2606:4700:10::6814:1507 
+ rDNS (104.20.21.7):     --
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -351,7 +351,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;renegotiation info/#65281&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: yes
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -359,25 +359,25 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication
-<span style="font-weight:bold;"> Serial                       </span>C5C314F27B1FF579A96B3F29EEB9F738 (OK: length 16)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 2F942010B0CA43EC7B64675B325F5CA1AAD9B823
-                              SHA256 AE7B1FB517A8AB684EC0F4F6A21B96CA445B053B32A1EC04899F79D029C7C328
+<span style="font-weight:bold;"> Serial                       </span>18C10365BDE4191A5B81F1FB58FE5E62 (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 5B98D0DE5E0F21D2214A116730BC9B616CD94640
+                              SHA256 7ACB7B0EDC61CEE32E381E6313D5E1FD97B9559ADDCE9DEDD6AA85AA62602B39
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>www.1jeune1solution.gouv.fr </i> (request w/o SNI didn&apos;t succeed)
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>stage.1jeune1solution.gouv.fr
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>edito.1jeune1solution.gouv.fr
+                              recette.1jeune1solution.gouv.fr
                               sms.1jeune1solution.gouv.fr
-                              1jeune1solution.gouv.fr
-                              edito.1jeune1solution.gouv.fr
                               www.1jeune1solution.gouv.fr
-                              recette.1jeune1solution.gouv.fr </i>
+                              1jeune1solution.gouv.fr
+                              stage.1jeune1solution.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#e52207;">expires &lt; 30 days (14)</span> (2024-06-25 22:00 --&gt; 2025-07-27 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">116 &gt;= 60 days</span> (2025-07-09 00:00 --&gt; 2025-11-11 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.dhimyotis.com/servicesca.crl
-                              http://crl.certigna.fr/servicesca.crl
-<span style="font-weight:bold;"> OCSP URI                     </span>http://servicesca.ocsp.certigna.fr
-                              http://servicesca.ocsp.dhimyotis.com
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
+                              http://crl.dhimyotis.com/servicesca.crl
+<span style="font-weight:bold;"> OCSP URI                     </span>http://servicesca.ocsp.dhimyotis.com
+                              http://servicesca.ocsp.certigna.fr
 <span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#008817;">available</span> - please check for match with &quot;Issuer&quot; below
@@ -433,7 +433,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services, see
-                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=AE7B1FB517A8AB684EC0F4F6A21B96CA445B053B32A1EC04899F79D029C7C328" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=AE7B1FB517A8AB684EC0F4F6A21B96CA445B053B32A1EC04899F79D029C7C328</a>
+                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7ACB7B0EDC61CEE32E381E6313D5E1FD97B9559ADDCE9DEDD6AA85AA62602B39" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7ACB7B0EDC61CEE32E381E6313D5E1FD97B9559ADDCE9DEDD6AA85AA62602B39</a>
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no DH key detected with &lt;= TLS 1.2
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     potentially <span style="color:#a86437;">VULNERABLE</span>, uses cipher block chaining (CBC) ciphers with TLS. Check patches
@@ -492,10 +492,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-07-13 03:58:35 [ 155s] --&gt;&gt; 172.66.175.42:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-07-18 03:49:03 [ 153s] --&gt;&gt; 104.20.21.7:443 (www.1jeune1solution.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>172.67.40.181 172.66.175.42
+<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>172.66.175.42 104.20.21.7
 
 </pre>
 </body>
