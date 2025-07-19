@@ -1,23 +1,23 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "F",
     "error": null,
-    "score": 30,
+    "score": 0,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 6,
+    "testsPassed": 4,
     "testsQuantity": 10,
     "responseHeaders": {
-      "server": "nginx",
-      "date": "Tue, 15 Jul 2025 03:28:10 GMT",
+      "date": "Sat, 19 Jul 2025 04:17:52 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "content-length": "0",
+      "transfer-encoding": "chunked",
       "connection": "close",
-      "x-powered-by": "PHP/8.3.23, PleskLin",
+      "server": "OVHcloud",
+      "x-powered-by": "PHP/8.4",
       "cache-control": "no-cache",
       "wpo-cache-status": "cached",
-      "last-modified": "Tue, 15 Jul 2025 03:26:18 GMT"
+      "last-modified": "Sat, 19 Jul 2025 00:56:14 GMT"
     }
   },
   "tests": {
@@ -49,14 +49,13 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://www.ecole-air-espace.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://www.ecole-air-espace.fr/",
+      "redirects": false,
       "route": [
-        "http://www.ecole-air-espace.fr/",
-        "https://www.ecole-air-espace.fr/"
+        "http://www.ecole-air-espace.fr/"
       ],
       "statusCode": 200
     },
@@ -82,10 +81,79 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-no-scripts-loaded",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "https://cdn-cookieyes.com/client_data/44bf2353b845156a5e54c3b8/script.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "//www.googletagmanager.com/gtag/js?id=G-W3EECX6PGR": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery-migrate.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://widgetlogic.org/v2/js/data.js?t=1752883200&ver=6.0.0": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/underscore.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/wp-util.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/backbone.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://stats.wp.com/e-202529.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/imagesloaded.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/ui/menu.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/dist/dom-ready.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/dist/hooks.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/dist/i18n.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/dist/a11y.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/mediaelement-and-player.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/mediaelement-migrate.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
