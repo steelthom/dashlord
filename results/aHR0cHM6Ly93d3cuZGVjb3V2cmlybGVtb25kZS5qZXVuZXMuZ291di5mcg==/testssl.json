@@ -3,15 +3,15 @@
               "id"           : "service",
               "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
               "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No 128 cipher limit bug"
+              "severity"     : "MEDIUM",
+              "finding"      : "128 cipher limit bug"
           }
 ,         {
               "id"           : "SSLv2",
@@ -21,10 +21,10 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "SSLv3",
+              "id"           : "TLS1",
               "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -68,6 +68,22 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "www.decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "scanProblem",
