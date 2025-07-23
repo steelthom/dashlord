@@ -1,26 +1,26 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C+",
+    "grade": "B+",
     "error": null,
-    "score": 60,
+    "score": 80,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Fri, 18 Jul 2025 03:26:34 GMT",
+      "date": "Wed, 23 Jul 2025 03:37:01 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
       "cache-control": "max-age=0, must-revalidate, private",
       "pragma": "no-cache",
-      "expires": "Fri, 18 Jul 2025 03:27:08 GMT",
+      "expires": "Wed, 23 Jul 2025 03:37:39 GMT",
       "set-cookie": [
-        "public=kbnemibpgie0ke4ai2j2mhu89v; path=/; secure; httponly; samesite=lax",
-        "visid_incap_3031704=osWpzg5zS+6cTgXuAnjUDgu/eWgAAAAAQUIPAAAAAACQRodwZucpzjqmtoCEgRsp; expires=Fri, 17 Jul 2026 06:55:47 GMT; HttpOnly; path=/; Domain=.prix-carburants.gouv.fr; Secure; SameSite=None",
-        "incap_ses_1349_3031704=5d3eJfP9PUfDjNl2t5y4Egu/eWgAAAAAwy1D54XAGJfU3UfplhqY5w==; path=/; Domain=.prix-carburants.gouv.fr; Secure; SameSite=None"
+        "public=rj5oickkrmeqldb5rptpcpc392; path=/; secure; httponly; samesite=lax",
+        "visid_incap_3031704=0jqguVQFSzKwGpYzleL9uwRZgGgAAAAAQUIPAAAAAACXx9UjpSTHOju2/7NK+dHx; expires=Wed, 22 Jul 2026 07:06:23 GMT; HttpOnly; path=/; Domain=.prix-carburants.gouv.fr; Secure; SameSite=None",
+        "incap_ses_1002_3031704=xxqIUA9kb23r5LZuCdLnDQRZgGgAAAAAqDK0hAItrrVvVuRzMzhr8g==; path=/; Domain=.prix-carburants.gouv.fr; Secure; SameSite=None"
       ],
       "vary": "Accept-Encoding",
       "referrer-policy": "same-origin",
@@ -37,7 +37,7 @@
       "upgrade-insecure-requests": "1",
       "permissions-policy": "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), bluetooth=(), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), sync-xhr=(self), usb=(), vr=()",
       "x-cdn": "Imperva",
-      "x-iinfo": "8-23721975-23721979 NNNN CT(106 107 0) RT(1752809227731 8) q(0 0 2 -1) r(3 4) U12"
+      "x-iinfo": "16-28715229-28715233 NNNN CT(171 173 0) RT(1753241859495 6) q(0 0 3 -1) r(5 6) U12"
     }
   },
   "tests": {
@@ -117,14 +117,14 @@
         },
         "visid_incap_3031704": {
           "domain": "prix-carburants.gouv.fr",
-          "expires": "2026-07-17T06:55:47.000Z",
+          "expires": "2026-07-22T07:06:23.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
           "samesite": "none",
           "secure": true
         },
-        "incap_ses_1349_3031704": {
+        "incap_ses_1002_3031704": {
           "domain": "prix-carburants.gouv.fr",
           "path": "/",
           "port": null,
@@ -143,12 +143,15 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-invalid-cert",
-      "scoreModifier": -20,
+      "pass": true,
+      "result": "redirection-all-redirects-preloaded",
+      "scoreModifier": 0,
       "destination": "https://www.prix-carburants.gouv.fr/",
       "redirects": true,
-      "route": [],
+      "route": [
+        "http://www.prix-carburants.gouv.fr/",
+        "https://www.prix-carburants.gouv.fr/"
+      ],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -165,10 +168,10 @@
       "pass": true,
       "result": "hsts-preloaded",
       "scoreModifier": 5,
-      "data": null,
+      "data": "max-age=31536000; includeSubDomains; preload",
       "includeSubDomains": true,
-      "maxAge": null,
-      "preload": false,
+      "maxAge": 31536000,
+      "preload": true,
       "preloaded": true
     },
     "subresource-integrity": {
