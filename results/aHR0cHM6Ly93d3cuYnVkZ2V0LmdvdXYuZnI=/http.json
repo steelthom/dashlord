@@ -1,37 +1,89 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "B+",
     "error": null,
-    "score": 50,
-    "statusCode": 403,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "score": 80,
+    "statusCode": 200,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "content-type": "text/html",
-      "cache-control": "no-cache, no-store",
+      "server": "nginx",
+      "date": "Thu, 24 Jul 2025 03:38:22 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
       "connection": "close",
-      "content-length": "863",
-      "x-iinfo": "1-1732940-0 0NNN RT(1752898344079 13) q(0 -1 -1 -1) r(0 -1) B17(11,6022111,0) U18",
+      "cache-control": "max-age=600",
+      "x-drupal-dynamic-cache": "HIT",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Thu, 24 Jul 2025 03:48:22 GMT",
+      "last-modified": "Thu, 24 Jul 2025 03:34:18 GMT",
+      "etag": "\"1753328058-gzip\"",
+      "vary": "Cookie,Accept-Encoding",
+      "x-drupal-cache": "MISS",
+      "x-proxy-cache": "HIT",
+      "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:;",
+      "referrer-policy": "same-origin",
+      "allow": "GET, POST, HEAD",
+      "access-control-allow-methods": "GET, POST, OPTIONS",
+      "access-control-allow-origin": "*",
+      "access-control-allow-headers": "DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range",
+      "access-control-expose-headers": "Content-Length,Content-Range",
       "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-xss-protection": "1;mode=block",
+      "upgrade-insecure-requests": "1",
       "set-cookie": [
-        "visid_incap_3058694=QnTfDc3hQu6qsYe0L3v5rScbe2gAAAAAQUIPAAAAAACnfBSiAdNiCkOkv64Cpl+n; expires=Sat, 18 Jul 2026 06:28:29 GMT; HttpOnly; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None",
-        "incap_ses_328_3058694=EC8dYwOh2zn3MUdGoEqNBCcbe2gAAAAAg+6Ejpc1TI7x3hcVG4H5bA==; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None"
-      ]
+        "visid_incap_3058694=4dbSx5C0RgG/9jQmhGE++a2qgWgAAAAAQUIPAAAAAADJFroRVj4JPvhFdOF60Lld; expires=Thu, 23 Jul 2026 06:54:03 GMT; HttpOnly; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None",
+        "nlbi_3058694=uuqhJxIz9geIE0VzwQW67wAAAABzS7GaHteT0id0Ncu7MCg9; HttpOnly; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None",
+        "incap_ses_4556_3058694=NBsBeAuk/CZ+WE4UEio6P62qgWgAAAAAGC81v/spWho2+99+Wnmc4A==; path=/; Domain=.budget.gouv.fr; Secure; SameSite=None"
+      ],
+      "x-cdn": "Imperva",
+      "x-iinfo": "59-36192479-36192492 NNNN CT(173 208 0) RT(1753328302032 18) q(0 0 3 -1) r(5 7) U12"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https:"
+        ],
+        "object-src": [
+          "https:"
+        ],
+        "child-src": [
+          "https:",
+          "platform.twitter.com"
+        ],
+        "img-src": [
+          "data:",
+          "https:"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -41,14 +93,22 @@
       "data": {
         "visid_incap_3058694": {
           "domain": "budget.gouv.fr",
-          "expires": "2026-07-18T06:28:29.000Z",
+          "expires": "2026-07-23T06:54:03.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
           "samesite": "none",
           "secure": true
         },
-        "incap_ses_328_3058694": {
+        "nlbi_3058694": {
+          "domain": "budget.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "incap_ses_4556_3058694": {
           "domain": "budget.gouv.fr",
           "path": "/",
           "port": null,
@@ -76,15 +136,15 @@
         "http://www.budget.gouv.fr/",
         "https://www.budget.gouv.fr/"
       ],
-      "statusCode": 403
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -107,17 +167,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
