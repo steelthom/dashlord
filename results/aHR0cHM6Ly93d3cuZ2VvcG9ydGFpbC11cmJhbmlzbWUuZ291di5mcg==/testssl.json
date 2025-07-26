@@ -451,7 +451,7 @@
               "ip"           : "www.geoportail-urbanisme.gouv.fr/145.239.193.231",
               "port"         : "443",
               "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (19)"
+              "finding"      : "expires < 30 days (14)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -654,7 +654,7 @@
               "ip"           : "www.geoportail-urbanisme.gouv.fr/145.239.193.231",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1753071224"
+              "finding"      : "1753500927"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -741,11 +741,25 @@
               "finding"      : "strict-origin"
           }
 ,         {
+              "id"           : "Cache-Control_multiple",
+              "ip"           : "www.geoportail-urbanisme.gouv.fr/145.239.193.231",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple Cache-Control headers. Using first header: no-store, no-cache, must-revalidate, private"
+          }
+,         {
               "id"           : "Cache-Control",
               "ip"           : "www.geoportail-urbanisme.gouv.fr/145.239.193.231",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=0, must-revalidate, private"
+              "finding"      : "no-store, no-cache, must-revalidate, private"
+          }
+,         {
+              "id"           : "Pragma",
+              "ip"           : "www.geoportail-urbanisme.gouv.fr/145.239.193.231",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -824,7 +838,7 @@
               "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "potentially VULNERABLE, gzip deflate HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1252,6 +1266,6 @@
               "ip"           : "www.geoportail-urbanisme.gouv.fr/145.239.193.231",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "172"
+              "finding"      : "163"
           }
 ]
