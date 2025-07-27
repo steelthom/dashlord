@@ -1,13 +1,27 @@
-# Nmap 7.92 scan initiated Tue Jul 22 03:43:09 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ih2ef.gouv.fr
+# Nmap 7.92 scan initiated Sun Jul 27 04:17:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ih2ef.gouv.fr
 Nmap scan report for www.ih2ef.gouv.fr (185.75.143.93)
-Host is up (0.12s latency).
+Host is up (0.11s latency).
 rDNS record for 185.75.143.93: men-tandem-lb-vip.dedie.ate.info
-Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE        VERSION
-80/tcp  open  tcpwrapped
+Not shown: 984 filtered tcp ports (no-response)
+PORT      STATE  SERVICE        VERSION
+80/tcp    open   tcpwrapped
 |_http-server-header: nginx
-443/tcp open  ssl/tcpwrapped
+81/tcp    closed hosts2-ns
+443/tcp   open   ssl/tcpwrapped
 |_http-server-header: nginx
+514/tcp   closed shell
+808/tcp   closed ccproxy-http
+1078/tcp  closed avocent-proxy
+1108/tcp  closed ratio-adp
+2107/tcp  closed msmq-mgmt
+2126/tcp  closed pktcable-cops
+2382/tcp  closed ms-olap3
+5002/tcp  closed rfe
+5269/tcp  closed xmpp-server
+6129/tcp  closed unknown
+44501/tcp closed unknown
+49175/tcp closed unknown
+60020/tcp closed unknown
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Jul 22 03:43:30 2025 -- 1 IP address (1 host up) scanned in 20.83 seconds
+# Nmap done at Sun Jul 27 04:18:08 2025 -- 1 IP address (1 host up) scanned in 27.82 seconds
