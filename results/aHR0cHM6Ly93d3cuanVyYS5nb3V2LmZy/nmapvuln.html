@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.jura.gouv.fr</pre>
-<p class="lead">Mon Jul 21 04:12:06 2025 – Mon Jul 21 04:12:47 2025<br>1 hosts scanned.
+<p class="lead">Sun Jul 27 03:49:54 2025 – Sun Jul 27 03:50:33 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,9 +122,27 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest, GetRequest: 
+  DNSVersionBindReqTCP, RPCCheck: 
+    HTTP/1.0 400 Bad request
+    cache-control: no-cache
+    content-type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
+    Your browser sent an invalid request.
+    &lt;/body&gt;&lt;/html&gt;
+  FourOhFourRequest: 
     HTTP/1.1 403 Forbidden
-    date: Mon, 21 Jul 2025 04:12:21 GMT
+    date: Sun, 27 Jul 2025 03:50:09 GMT
+    cache-control: no-cache
+    content-type: text/html
+    age: 0
+    x-cache: Miss
+    connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
+    Request forbidden by administrative rules.
+    &lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
+    HTTP/1.1 403 Forbidden
+    date: Sun, 27 Jul 2025 03:50:08 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
@@ -137,7 +155,7 @@
     &lt;/body&gt;&lt;/html&gt;
   HTTPOptions: 
     HTTP/1.1 403 Forbidden
-    date: Mon, 21 Jul 2025 04:12:21 GMT
+    date: Sun, 27 Jul 2025 03:50:08 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
@@ -146,16 +164,9 @@
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
     Request forbidden by administrative rules.
     &lt;/body&gt;&lt;/html&gt;
-  RPCCheck, X11Probe: 
-    HTTP/1.0 400 Bad request
-    cache-control: no-cache
-    content-type: text/html
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
-    Your browser sent an invalid request.
-    &lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.1 400 Bad Request
-    date: Mon, 21 Jul 2025 04:12:21 GMT
+    date: Sun, 27 Jul 2025 03:50:08 GMT
     content-length: 226
     content-type: text/html; charset=iso-8859-1
     connection: close
@@ -166,7 +177,11 @@
     &lt;h1&gt;Bad Request&lt;/h1&gt;
     &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
     &lt;/p&gt;
-    &lt;/body&gt;&lt;/html&gt;</pre>
+    &lt;/body&gt;&lt;/html&gt;
+  X11Probe: 
+    HTTP/1.0 400 Bad request
+    cache-control: no-cache
+    content-type: text/html</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
@@ -180,35 +195,20 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
+  FourOhFourRequest, HTTPOptions: 
     HTTP/1.1 403 Forbidden
-    date: Mon, 21 Jul 2025 04:12:28 GMT
+    date: Sun, 27 Jul 2025 03:50:15 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
     x-cache: Miss
-    content-length: 94
-    keep-alive: timeout=5, max=100
     connection: close
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
     Request forbidden by administrative rules.
     &lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.1 403 Forbidden
-    date: Mon, 21 Jul 2025 04:12:27 GMT
-    cache-control: no-cache
-    content-type: text/html
-    age: 0
-    x-cache: Miss
-    content-length: 94
-    keep-alive: timeout=5, max=100
-    connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
-    Request forbidden by administrative rules.
-    &lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.1 403 Forbidden
-    date: Mon, 21 Jul 2025 04:12:27 GMT
+    date: Sun, 27 Jul 2025 03:50:14 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
@@ -226,7 +226,7 @@
     &lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.1 400 Bad Request
-    date: Mon, 21 Jul 2025 04:12:34 GMT
+    date: Sun, 27 Jul 2025 03:50:21 GMT
     content-length: 226
     content-type: text/html; charset=iso-8859-1
     connection: close
