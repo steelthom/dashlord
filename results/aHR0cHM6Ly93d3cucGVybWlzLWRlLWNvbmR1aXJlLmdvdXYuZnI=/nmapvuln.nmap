@@ -1,1 +1,173 @@
-# Nmap 7.92 scan initiated Tue Jul 22 04:08:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.permis-de-conduire.gouv.fr
+# Nmap 7.92 scan initiated Mon Jul 28 03:43:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.permis-de-conduire.gouv.fr
+Nmap scan report for www.permis-de-conduire.gouv.fr (213.186.33.5)
+Host is up (0.086s latency).
+rDNS record for 213.186.33.5: redirect.ovh.net
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE VERSION
+25/tcp  open   smtp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, RPCCheck: 
+|     220-redirect.ovh.net smtp20
+|     redirect.ovh.net smtp20
+|   DNSVersionBindReqTCP: 
+|     220-redirect.ovh.net smtp13
+|     redirect.ovh.net smtp13
+|   GenericLines: 
+|     220-redirect.ovh.net smtp15
+|     redirect.ovh.net smtp15
+|     5.5.2 Error: bad syntax
+|     5.5.2 Error: bad syntax
+|   GetRequest, SSLSessionReq, TerminalServerCookie: 
+|     220-redirect.ovh.net smtp13
+|     redirect.ovh.net smtp13
+|     2.7.0 Error: I can break rules, too. Goodbye.
+|   HTTPOptions: 
+|     220-redirect.ovh.net smtp20
+|     redirect.ovh.net smtp20
+|     5.5.2 Error: command not recognized
+|     5.5.2 Error: bad syntax
+|   Hello: 
+|     220-redirect.ovh.net smtp12
+|     redirect.ovh.net smtp12
+|     Syntax: EHLO hostname
+|   Help: 
+|     220-redirect.ovh.net smtp13
+|     redirect.ovh.net smtp13
+|     5.5.2 Error: command not recognized
+|   Kerberos: 
+|     220-redirect.ovh.net smtp13
+|     redirect.ovh.net smtp13
+|     5.5.2 Error: bad syntax
+|   NULL: 
+|     220-redirect.ovh.net smtp12
+|   RTSPRequest: 
+|     220-redirect.ovh.net smtp16
+|     redirect.ovh.net smtp16
+|     5.5.2 Error: command not recognized
+|     5.5.2 Error: bad syntax
+|   TLSSessionReq: 
+|     220-redirect.ovh.net smtp16
+|     redirect.ovh.net smtp16
+|_    2.7.0 Error: I can break rules, too. Goodbye.
+80/tcp  open   http    nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     server: nginx
+|     date: Mon, 28 Jul 2025 03:43:36 GMT
+|     content-type: text/html; charset=utf8
+|     pragma: no-cache
+|     cache-control: no-store, no-cache, must-revalidate
+|     content-length: 5146
+|     x-iplb-request-id: 14A14DA3:D019_D5BA2105:0050_6886F1E2_C12B5347:038A
+|     x-iplb-instance: 52217
+|     set-cookie: SERVERID77446=200172|aIbx6|aIbx6; path=/; HttpOnly
+|     connection: close
+|     <html xml:lang="fr-FR" lang="fr-FR">
+|     <head>
+|     <meta name="viewport" content="width=device-width">
+|     <title qtlid="74178">Site en construction</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+|     <meta http-equiv="Content-Language" content="fr-FR">
+|     <meta name="Copyright" content="OVHcloud">
+|     <meta name="Author" content="OVHcloud">
+|     <meta name="robots" content="none,noindex,nofollow">
+|     <meta http-equiv="cache-control" content="no-cache">
+|     <meta http-equiv="pragma" content="no-cache">
+|     <meta name="DP.Pop
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     server: nginx
+|     date: Mon, 28 Jul 2025 03:43:36 GMT
+|     content-type: text/html; charset=utf8
+|     pragma: no-cache
+|     cache-control: no-store, no-cache, must-revalidate
+|     content-length: 5146
+|     x-iplb-request-id: 14A14DA3:D01A_D5BA2105:0050_6886F1E8_C147EACF:47AB
+|     x-iplb-instance: 52193
+|     set-cookie: SERVERID77446=200177|aIbx6|aIbx6; path=/; HttpOnly
+|     connection: close
+|     <html xml:lang="fr-FR" lang="fr-FR">
+|     <head>
+|     <meta name="viewport" content="width=device-width">
+|     <title qtlid="74178">Site en construction</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+|     <meta http-equiv="Content-Language" content="fr-FR">
+|     <meta name="Copyright" content="OVHcloud">
+|     <meta name="Author" content="OVHcloud">
+|     <meta name="robots" content="none,noindex,nofollow">
+|     <meta http-equiv="cache-control" content="no-cache">
+|     <meta http-equiv="pragma" content="no-cache">
+|_    <meta name="DP.Pop
+443/tcp closed https
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.92%I=7%D=7/28%Time=6886F1E8%P=x86_64-alpine-linux-musl%r
+SF:(NULL,1D,"220-redirect\.ovh\.net\x20smtp12\r\n")%r(Hello,55,"220-redire
+SF:ct\.ovh\.net\x20smtp12\r\n220\x20redirect\.ovh\.net\x20smtp12\r\n501\x2
+SF:0Syntax:\x20EHLO\x20hostname\r\n")%r(Help,63,"220-redirect\.ovh\.net\x2
+SF:0smtp13\r\n220\x20redirect\.ovh\.net\x20smtp13\r\n500\x205\.5\.2\x20Err
+SF:or:\x20command\x20not\x20recognized\r\n")%r(GenericLines,74,"220-redire
+SF:ct\.ovh\.net\x20smtp15\r\n220\x20redirect\.ovh\.net\x20smtp15\r\n500\x2
+SF:05\.5\.2\x20Error:\x20bad\x20syntax\r\n500\x205\.5\.2\x20Error:\x20bad\
+SF:x20syntax\r\n")%r(GetRequest,6D,"220-redirect\.ovh\.net\x20smtp13\r\n22
+SF:0\x20redirect\.ovh\.net\x20smtp13\r\n221\x202\.7\.0\x20Error:\x20I\x20c
+SF:an\x20break\x20rules,\x20too\.\x20Goodbye\.\r\n")%r(HTTPOptions,80,"220
+SF:-redirect\.ovh\.net\x20smtp20\r\n220\x20redirect\.ovh\.net\x20smtp20\r\
+SF:n500\x205\.5\.2\x20Error:\x20command\x20not\x20recognized\r\n500\x205\.
+SF:5\.2\x20Error:\x20bad\x20syntax\r\n")%r(RTSPRequest,80,"220-redirect\.o
+SF:vh\.net\x20smtp16\r\n220\x20redirect\.ovh\.net\x20smtp16\r\n500\x205\.5
+SF:\.2\x20Error:\x20command\x20not\x20recognized\r\n500\x205\.5\.2\x20Erro
+SF:r:\x20bad\x20syntax\r\n")%r(RPCCheck,3A,"220-redirect\.ovh\.net\x20smtp
+SF:20\r\n220\x20redirect\.ovh\.net\x20smtp20\r\n")%r(DNSVersionBindReqTCP,
+SF:3A,"220-redirect\.ovh\.net\x20smtp13\r\n220\x20redirect\.ovh\.net\x20sm
+SF:tp13\r\n")%r(DNSStatusRequestTCP,3A,"220-redirect\.ovh\.net\x20smtp20\r
+SF:\n220\x20redirect\.ovh\.net\x20smtp20\r\n")%r(SSLSessionReq,6D,"220-red
+SF:irect\.ovh\.net\x20smtp13\r\n220\x20redirect\.ovh\.net\x20smtp13\r\n221
+SF:\x202\.7\.0\x20Error:\x20I\x20can\x20break\x20rules,\x20too\.\x20Goodby
+SF:e\.\r\n")%r(TerminalServerCookie,6D,"220-redirect\.ovh\.net\x20smtp13\r
+SF:\n220\x20redirect\.ovh\.net\x20smtp13\r\n221\x202\.7\.0\x20Error:\x20I\
+SF:x20can\x20break\x20rules,\x20too\.\x20Goodbye\.\r\n")%r(TLSSessionReq,6
+SF:D,"220-redirect\.ovh\.net\x20smtp16\r\n220\x20redirect\.ovh\.net\x20smt
+SF:p16\r\n221\x202\.7\.0\x20Error:\x20I\x20can\x20break\x20rules,\x20too\.
+SF:\x20Goodbye\.\r\n")%r(Kerberos,57,"220-redirect\.ovh\.net\x20smtp13\r\n
+SF:220\x20redirect\.ovh\.net\x20smtp13\r\n500\x205\.5\.2\x20Error:\x20bad\
+SF:x20syntax\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=7/28%Time=6886F1E8%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1596,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20nginx\r\ndate:\x
+SF:20Mon,\x2028\x20Jul\x202025\x2003:43:36\x20GMT\r\ncontent-type:\x20text
+SF:/html;\x20charset=utf8\r\npragma:\x20no-cache\r\ncache-control:\x20no-s
+SF:tore,\x20no-cache,\x20must-revalidate\r\ncontent-length:\x205146\r\nx-i
+SF:plb-request-id:\x2014A14DA3:D019_D5BA2105:0050_6886F1E2_C12B5347:038A\r
+SF:\nx-iplb-instance:\x2052217\r\nset-cookie:\x20SERVERID77446=200172\|aIb
+SF:x6\|aIbx6;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n<html\
+SF:x20xml:lang=\"fr-FR\"\x20lang=\"fr-FR\">\n<head>\n<meta\x20name=\"viewp
+SF:ort\"\x20content=\"width=device-width\">\n<title\x20qtlid=\"74178\">Sit
+SF:e\x20en\x20construction</title>\n<meta\x20http-equiv=\"Content-Type\"\x
+SF:20content=\"text/html;\x20charset=utf-8\">\n<meta\x20http-equiv=\"Conte
+SF:nt-Language\"\x20content=\"fr-FR\">\n<meta\x20name=\"Copyright\"\x20con
+SF:tent=\"OVHcloud\">\n<meta\x20name=\"Author\"\x20content=\"OVHcloud\">\n
+SF:<meta\x20name=\"robots\"\x20content=\"none,noindex,nofollow\">\n<meta\x
+SF:20http-equiv=\"cache-control\"\x20content=\"no-cache\">\n<meta\x20http-
+SF:equiv=\"pragma\"\x20content=\"no-cache\">\n<meta\x20name=\"DP\.Pop")%r(
+SF:HTTPOptions,1596,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20nginx\r\ndate:\x
+SF:20Mon,\x2028\x20Jul\x202025\x2003:43:36\x20GMT\r\ncontent-type:\x20text
+SF:/html;\x20charset=utf8\r\npragma:\x20no-cache\r\ncache-control:\x20no-s
+SF:tore,\x20no-cache,\x20must-revalidate\r\ncontent-length:\x205146\r\nx-i
+SF:plb-request-id:\x2014A14DA3:D01A_D5BA2105:0050_6886F1E8_C147EACF:47AB\r
+SF:\nx-iplb-instance:\x2052193\r\nset-cookie:\x20SERVERID77446=200177\|aIb
+SF:x6\|aIbx6;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n<html\
+SF:x20xml:lang=\"fr-FR\"\x20lang=\"fr-FR\">\n<head>\n<meta\x20name=\"viewp
+SF:ort\"\x20content=\"width=device-width\">\n<title\x20qtlid=\"74178\">Sit
+SF:e\x20en\x20construction</title>\n<meta\x20http-equiv=\"Content-Type\"\x
+SF:20content=\"text/html;\x20charset=utf-8\">\n<meta\x20http-equiv=\"Conte
+SF:nt-Language\"\x20content=\"fr-FR\">\n<meta\x20name=\"Copyright\"\x20con
+SF:tent=\"OVHcloud\">\n<meta\x20name=\"Author\"\x20content=\"OVHcloud\">\n
+SF:<meta\x20name=\"robots\"\x20content=\"none,noindex,nofollow\">\n<meta\x
+SF:20http-equiv=\"cache-control\"\x20content=\"no-cache\">\n<meta\x20http-
+SF:equiv=\"pragma\"\x20content=\"no-cache\">\n<meta\x20name=\"DP\.Pop");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 28 03:45:36 2025 -- 1 IP address (1 host up) scanned in 133.35 seconds
