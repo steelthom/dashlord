@@ -1,10 +1,11 @@
-# Nmap 7.92 scan initiated Thu Jul 24 04:29:24 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ac-wf.wf
+# Nmap 7.92 scan initiated Tue Jul 29 04:28:42 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ac-wf.wf
 Nmap scan report for www.ac-wf.wf (117.20.37.41)
-Host is up (0.21s latency).
+Host is up (0.20s latency).
 rDNS record for 117.20.37.41: webhost.ac-wf.wf
 Not shown: 997 filtered tcp ports (no-response)
 PORT     STATE SERVICE  VERSION
 80/tcp   open  http     Apache httpd 2.4.25
+|_http-server-header: Apache/2.4.25 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.25: 
 |     	C94CBDE1-4CC5-5C06-9D18-23CAB216705E	10.0	https://vulners.com/githubexploit/C94CBDE1-4CC5-5C06-9D18-23CAB216705E	*EXPLOIT*
@@ -209,6 +210,7 @@ PORT     STATE SERVICE  VERSION
 |     	DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D	7.5	https://vulners.com/githubexploit/DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D	*EXPLOIT*
 |     	DBF996C3-DC2A-5859-B767-6B2FC38F2185	7.5	https://vulners.com/githubexploit/DBF996C3-DC2A-5859-B767-6B2FC38F2185	*EXPLOIT*
 |     	DB6E1BBD-08B1-574D-A351-7D6BB9898A4A	7.5	https://vulners.com/githubexploit/DB6E1BBD-08B1-574D-A351-7D6BB9898A4A	*EXPLOIT*
+|     	D228B59B-465A-509D-A681-012DB9348698	7.5	https://vulners.com/githubexploit/D228B59B-465A-509D-A681-012DB9348698	*EXPLOIT*
 |     	D0E79214-C9E8-52BD-BC24-093970F5F34E	7.5	https://vulners.com/githubexploit/D0E79214-C9E8-52BD-BC24-093970F5F34E	*EXPLOIT*
 |     	CVE-2025-53020	7.5	https://vulners.com/cve/CVE-2025-53020
 |     	CVE-2024-47252	7.5	https://vulners.com/cve/CVE-2024-47252
@@ -394,7 +396,6 @@ PORT     STATE SERVICE  VERSION
 |     	PACKETSTORM:164418	0.0	https://vulners.com/packetstorm/PACKETSTORM:164418	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	05403438-4985-5E78-A702-784E03F724D4	0.0	https://vulners.com/githubexploit/05403438-4985-5E78-A702-784E03F724D4	*EXPLOIT*
-|_http-server-header: Apache/2.4.25 (Debian)
 443/tcp  open  ssl/http Apache httpd 2.4.25
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.25: 
@@ -600,6 +601,7 @@ PORT     STATE SERVICE  VERSION
 |     	DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D	7.5	https://vulners.com/githubexploit/DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D	*EXPLOIT*
 |     	DBF996C3-DC2A-5859-B767-6B2FC38F2185	7.5	https://vulners.com/githubexploit/DBF996C3-DC2A-5859-B767-6B2FC38F2185	*EXPLOIT*
 |     	DB6E1BBD-08B1-574D-A351-7D6BB9898A4A	7.5	https://vulners.com/githubexploit/DB6E1BBD-08B1-574D-A351-7D6BB9898A4A	*EXPLOIT*
+|     	D228B59B-465A-509D-A681-012DB9348698	7.5	https://vulners.com/githubexploit/D228B59B-465A-509D-A681-012DB9348698	*EXPLOIT*
 |     	D0E79214-C9E8-52BD-BC24-093970F5F34E	7.5	https://vulners.com/githubexploit/D0E79214-C9E8-52BD-BC24-093970F5F34E	*EXPLOIT*
 |     	CVE-2025-53020	7.5	https://vulners.com/cve/CVE-2025-53020
 |     	CVE-2024-47252	7.5	https://vulners.com/cve/CVE-2024-47252
@@ -785,10 +787,10 @@ PORT     STATE SERVICE  VERSION
 |     	PACKETSTORM:164418	0.0	https://vulners.com/packetstorm/PACKETSTORM:164418	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	05403438-4985-5E78-A702-784E03F724D4	0.0	https://vulners.com/githubexploit/05403438-4985-5E78-A702-784E03F724D4	*EXPLOIT*
-|_http-trane-info: Problem with XML parsing of /evox/about
 | http-server-header: 
 |   Apache/2.4.10 (Debian)
 |_  Apache/2.4.25 (Debian)
+|_http-trane-info: Problem with XML parsing of /evox/about
 4443/tcp open  http     Apache httpd 2.4.25
 |_http-server-header: Apache/2.4.25 (Debian)
 | vulners: 
@@ -995,6 +997,7 @@ PORT     STATE SERVICE  VERSION
 |     	DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D	7.5	https://vulners.com/githubexploit/DF57E8F1-FE21-5EB9-8FC7-5F2EA267B09D	*EXPLOIT*
 |     	DBF996C3-DC2A-5859-B767-6B2FC38F2185	7.5	https://vulners.com/githubexploit/DBF996C3-DC2A-5859-B767-6B2FC38F2185	*EXPLOIT*
 |     	DB6E1BBD-08B1-574D-A351-7D6BB9898A4A	7.5	https://vulners.com/githubexploit/DB6E1BBD-08B1-574D-A351-7D6BB9898A4A	*EXPLOIT*
+|     	D228B59B-465A-509D-A681-012DB9348698	7.5	https://vulners.com/githubexploit/D228B59B-465A-509D-A681-012DB9348698	*EXPLOIT*
 |     	D0E79214-C9E8-52BD-BC24-093970F5F34E	7.5	https://vulners.com/githubexploit/D0E79214-C9E8-52BD-BC24-093970F5F34E	*EXPLOIT*
 |     	CVE-2025-53020	7.5	https://vulners.com/cve/CVE-2025-53020
 |     	CVE-2024-47252	7.5	https://vulners.com/cve/CVE-2024-47252
@@ -1183,4 +1186,4 @@ PORT     STATE SERVICE  VERSION
 Service Info: Hosts: www.ac-wf.wf, pronote.ac-wf.wf
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Jul 24 04:30:19 2025 -- 1 IP address (1 host up) scanned in 55.34 seconds
+# Nmap done at Tue Jul 29 04:29:36 2025 -- 1 IP address (1 host up) scanned in 54.34 seconds
