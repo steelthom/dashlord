@@ -1,44 +1,37 @@
-# Nmap 7.92 scan initiated Fri Jul 25 03:38:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dares.travail-emploi.gouv.fr
+# Nmap 7.92 scan initiated Wed Jul 30 03:52:02 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dares.travail-emploi.gouv.fr
 Nmap scan report for www.dares.travail-emploi.gouv.fr (185.194.82.70)
-Host is up (0.095s latency).
+Host is up (0.080s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE   VERSION
-80/tcp  open   http      BigIP
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-| fingerprint-strings: 
-|   GetRequest: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///
-|     Server: BigIP
-|     Connection: close
-|_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
 |_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.0 200 OK
-|     Date: Fri, 25 Jul 2025 03:38:54 GMT
+|     Date: Wed, 30 Jul 2025 03:52:21 GMT
 |     Cache-Control: max-age=3600, public
 |     X-Drupal-Dynamic-Cache: MISS
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
 |     X-Frame-Options: SAMEORIGIN
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Last-Modified: Thu, 24 Jul 2025 16:08:42 GMT
+|     Last-Modified: Tue, 29 Jul 2025 14:14:52 GMT
 |     Vary: Cookie,Accept-Encoding
-|     Content-Length: 94674
+|     Content-Length: 94554
 |     X-Drupal-Cache: HIT
 |     Connection: close
 |     Content-Type: text/html; charset=UTF-8
-|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!b89vpEd+z0F76GiGSajX/n7IEULO/KGmpnHI4Ki7jOz3uuQLjISbiH2hHwWQra/lDQ0X2ctO9adcjNazsUarSItrAQTn; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!4LV37yXgg5Ul6QaGSajX/n7IEULO/NY9PNSiYxIj5AVydXGnjnnykUrvIPlAj/GYywLmbl+zVYrrEJK2YCfvWVXHAJHW; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     Set-Cookie: TS0101001a=01352d3811dfbf9072210e2f933e29e2e27f9fca51b0f85fbe0b1a0f0fd630a651697c266953332c98b0927154d4de3d36ad143be0; Path=/; Secure; HttpOnly
+|     Set-Cookie: TS0101001a=01352d3811f61e1bde0a48223f0355e4d8ff9dfa1dd847cb0507303b4d48ec13d5c02da7c40debc90b32cc3ea880fc6295b0842a2b; Path=/; Secure; HttpOnly
 |     <!DOCTYPE html>
 |     <html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns
 |   HTTPOptions: 
 |     HTTP/1.0 200 OK
-|     Date: Fri, 25 Jul 2025 03:38:54 GMT
+|     Date: Wed, 30 Jul 2025 03:52:22 GMT
 |     Allow: GET, POST
 |     Cache-Control: must-revalidate, no-cache, private
 |     Content-language: fr
@@ -50,46 +43,41 @@ PORT    STATE  SERVICE   VERSION
 |     Vary: Accept-Encoding
 |     Connection: close
 |     Content-Type: text/html; charset=UTF-8
-|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!r5ta16/IIKOsWamGSajX/n7IEULO/H1K4mSgsMqjK7paKlXQgOTz4l+ToinmfEJLiRP/vGKPIZEJasQI4S/+71VdKVdK; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dares-site-v2.cegedim.cloud-HTTP=!2H+KABUj//O2MsyGSajX/n7IEULO/O3b7I9aRowEq0TDavxbwlt7nmQkrpwJEP2ZzZYFVSRMc98kpb+HoKZjrh/XsQbs; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|_    Set-Cookie: TS0101001a=01352d3811cc63f93c34793e15f7de468ee302ec28740c2c7f2a562761ae90579e7abc4000c31f48722dcd303d9ed72147ecdd719e; Path=/; Secure; HttpOnly
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=7/25%Time=6882FC47%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,6C,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nContent-Leng
-SF:th:\x200\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/25%Time=6882FC4E%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Fri,\x2025\
-SF:x20Jul\x202025\x2003:38:54\x20GMT\r\nCache-Control:\x20max-age=3600,\x2
+|_    Set-Cookie: TS0101001a=01352d38117f8247657c30ce122179c0fba4d3319e2161fc1bff8d7e502b9f067c6cfccb8f9882f00e91bac67fa17c215721eef08f; Path=/; Secure; HttpOnly
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/30%Time=688996F5%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2030\
+SF:x20Jul\x202025\x2003:52:21\x20GMT\r\nCache-Control:\x20max-age=3600,\x2
 SF:0public\r\nX-Drupal-Dynamic-Cache:\x20MISS\r\nContent-language:\x20fr\r
 SF:\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\
 SF:r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nLast-Mod
-SF:ified:\x20Thu,\x2024\x20Jul\x202025\x2016:08:42\x20GMT\r\nVary:\x20Cook
-SF:ie,Accept-Encoding\r\nContent-Length:\x2094674\r\nX-Drupal-Cache:\x20HI
+SF:ified:\x20Tue,\x2029\x20Jul\x202025\x2014:14:52\x20GMT\r\nVary:\x20Cook
+SF:ie,Accept-Encoding\r\nContent-Length:\x2094554\r\nX-Drupal-Cache:\x20HI
 SF:T\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UTF
 SF:-8\r\nSet-Cookie:\x20BIGipServerpool-dares-site-v2\.cegedim\.cloud-HTTP
-SF:=!b89vpEd\+z0F76GiGSajX/n7IEULO/KGmpnHI4Ki7jOz3uuQLjISbiH2hHwWQra/lDQ0X
-SF:2ctO9adcjNazsUarSItrAQTn;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-T
+SF:=!4LV37yXgg5Ul6QaGSajX/n7IEULO/NY9PNSiYxIj5AVydXGnjnnykUrvIPlAj/GYywLmb
+SF:l\+zVYrrEJK2YCfvWVXHAJHW;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-T
 SF:ransport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nSet-Coo
-SF:kie:\x20TS0101001a=01352d3811dfbf9072210e2f933e29e2e27f9fca51b0f85fbe0b
-SF:1a0f0fd630a651697c266953332c98b0927154d4de3d36ad143be0;\x20Path=/;\x20S
+SF:kie:\x20TS0101001a=01352d3811f61e1bde0a48223f0355e4d8ff9dfa1dd847cb0507
+SF:303b4d48ec13d5c02da7c40debc90b32cc3ea880fc6295b0842a2b;\x20Path=/;\x20S
 SF:ecure;\x20HttpOnly\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20d
 SF:ir=\"ltr\"\x20prefix=\"og:\x20https://ogp\.me/ns")%r(HTTPOptions,2E8,"H
-SF:TTP/1\.0\x20200\x20OK\r\nDate:\x20Fri,\x2025\x20Jul\x202025\x2003:38:54
+SF:TTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2030\x20Jul\x202025\x2003:52:22
 SF:\x20GMT\r\nAllow:\x20GET,\x20POST\r\nCache-Control:\x20must-revalidate,
 SF:\x20no-cache,\x20private\r\nContent-language:\x20fr\r\nX-Content-Type-O
 SF:ptions:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nexpires:\x20-1\
 SF:r\nContent-Length:\x200\r\npragma:\x20no-cache\r\nVary:\x20Accept-Encod
 SF:ing\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=U
 SF:TF-8\r\nSet-Cookie:\x20BIGipServerpool-dares-site-v2\.cegedim\.cloud-HT
-SF:TP=!r5ta16/IIKOsWamGSajX/n7IEULO/H1K4mSgsMqjK7paKlXQgOTz4l\+ToinmfEJLiR
-SF:P/vGKPIZEJasQI4S/\+71VdKVdK;\x20path=/;\x20Httponly;\x20Secure\r\nStric
+SF:TP=!2H\+KABUj//O2MsyGSajX/n7IEULO/O3b7I9aRowEq0TDavxbwlt7nmQkrpwJEP2ZzZ
+SF:YFVSRMc98kpb\+HoKZjrh/XsQbs;\x20path=/;\x20Httponly;\x20Secure\r\nStric
 SF:t-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nSet-
-SF:Cookie:\x20TS0101001a=01352d3811cc63f93c34793e15f7de468ee302ec28740c2c7
-SF:f2a562761ae90579e7abc4000c31f48722dcd303d9ed72147ecdd719e;\x20Path=/;\x
+SF:Cookie:\x20TS0101001a=01352d38117f8247657c30ce122179c0fba4d3319e2161fc1
+SF:bff8d7e502b9f067c6cfccb8f9882f00e91bac67fa17c215721eef08f;\x20Path=/;\x
 SF:20Secure;\x20HttpOnly\r\n\r\n");
+Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Jul 25 03:39:39 2025 -- 1 IP address (1 host up) scanned in 66.25 seconds
+# Nmap done at Wed Jul 30 03:54:31 2025 -- 1 IP address (1 host up) scanned in 149.07 seconds
