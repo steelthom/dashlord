@@ -1,104 +1,104 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Dashlord configuration file",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "tools": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "404": {
-          "type": "boolean",
-          "description": "Enable 404 detection"
-        },
-        "screenshot": {
-          "type": "boolean",
-          "description": "Enable screenshots"
-        },
-        "lighthouse": {
-          "type": "boolean",
-          "description": "Enable Lighthouse"
-        },
-        "testssl": {
-          "type": "boolean",
-          "description": "Enable testssl.sh"
-        },
-        "wappalyzer": {
-          "type": "boolean",
-          "description": "Enable wappalyzer scan"
-        },
-        "nuclei": {
-          "type": "boolean",
-          "description": "Enable nuclei scan"
-        },
-        "zap": {
-          "type": "boolean",
-          "description": "Enable ZaProxy baseline scan"
-        },
-        "thirdparties": {
-          "type": "boolean",
-          "description": "Enable thirdparties scan"
-        },
-        "dependabot": {
-          "type": "boolean",
-          "description": "Enable dependabot alerts"
-        },
-        "codescan": {
-          "type": "boolean",
-          "description": "Enable codescan alerts"
-        },
-        "http": {
-          "type": "boolean",
-          "description": "Enable Mozilla HTTP Observatory scan"
-        },
-        "nmap": {
-          "type": "boolean",
-          "description": "Enable nmapvuln scan"
-        },
-        "stats": {
-          "type": "boolean",
-          "description": "Enable /stats page check"
-        },
-        "trivy": {
-          "type": "boolean",
-          "description": "Enable trivy docker scans"
-        },
-        "declaration-a11y": {
-          "type": "boolean",
-          "description": "Enable declaration a11y scan"
-        },
-        "declaration-rgpd": {
-          "type": "boolean",
-          "description": "Enable declaration RGPD scan"
+          "description": "Enable 404 detection",
+          "type": "boolean"
         },
         "betagouv": {
-          "type": "boolean",
-          "description": "Enable betagouv API data"
-        },
-        "ecoindex": {
-          "type": "boolean",
-          "description": "Enable ecoindex scan"
-        },
-        "sonarcloud": {
-          "type": "boolean",
-          "description": "Enable sonarcloud API results"
+          "description": "Enable betagouv API data",
+          "type": "boolean"
         },
         "budget_page": {
-          "type": "boolean",
-          "description": "Enable budget page detection"
+          "description": "Enable budget page detection",
+          "type": "boolean"
+        },
+        "codescan": {
+          "description": "Enable codescan alerts",
+          "type": "boolean"
+        },
+        "declaration-a11y": {
+          "description": "Enable declaration a11y scan",
+          "type": "boolean"
+        },
+        "declaration-rgpd": {
+          "description": "Enable declaration RGPD scan",
+          "type": "boolean"
+        },
+        "dependabot": {
+          "description": "Enable dependabot alerts",
+          "type": "boolean"
         },
         "dsfr": {
-          "type": "boolean",
-          "description": "Enable DSFR detection"
+          "description": "Enable DSFR detection",
+          "type": "boolean"
         },
-        "tracking": {
-          "type": "boolean",
-          "description": "Enable tracking detection"
+        "ecoindex": {
+          "description": "Enable ecoindex scan",
+          "type": "boolean"
         },
         "github_repository": {
-          "type": "boolean",
-          "description": "Enable GitHub repository detection (from betagouv data)"
+          "description": "Enable GitHub repository detection (from betagouv data)",
+          "type": "boolean"
+        },
+        "http": {
+          "description": "Enable Mozilla HTTP Observatory scan",
+          "type": "boolean"
+        },
+        "lighthouse": {
+          "description": "Enable Lighthouse",
+          "type": "boolean"
+        },
+        "nmap": {
+          "description": "Enable nmapvuln scan",
+          "type": "boolean"
+        },
+        "nuclei": {
+          "description": "Enable nuclei scan",
+          "type": "boolean"
+        },
+        "screenshot": {
+          "description": "Enable screenshots",
+          "type": "boolean"
+        },
+        "sonarcloud": {
+          "description": "Enable sonarcloud API results",
+          "type": "boolean"
+        },
+        "stats": {
+          "description": "Enable /stats page check",
+          "type": "boolean"
+        },
+        "testssl": {
+          "description": "Enable testssl.sh",
+          "type": "boolean"
+        },
+        "thirdparties": {
+          "description": "Enable thirdparties scan",
+          "type": "boolean"
+        },
+        "tracking": {
+          "description": "Enable tracking detection",
+          "type": "boolean"
+        },
+        "trivy": {
+          "description": "Enable trivy docker scans",
+          "type": "boolean"
+        },
+        "wappalyzer": {
+          "description": "Enable wappalyzer scan",
+          "type": "boolean"
+        },
+        "zap": {
+          "description": "Enable ZaProxy baseline scan",
+          "type": "boolean"
         }
       },
       "required": []
@@ -166,10 +166,15 @@
                 "direction": {
                   "type": "string",
                   "default": "horizontal",
-                  "enum": ["horizontal", "vertical"]
+                  "enum": [
+                    "horizontal",
+                    "vertical"
+                  ]
                 }
               },
-              "required": ["src"]
+              "required": [
+                "src"
+              ]
             }
           ]
         },
@@ -177,7 +182,10 @@
           "type": "string"
         }
       },
-      "required": ["logo", "name"]
+      "required": [
+        "logo",
+        "name"
+      ]
     },
     "tools": {
       "$ref": "#/definitions/tools"
@@ -212,7 +220,10 @@
           "pages": {
             "type": "array",
             "description": "Additionnal URLs to scan with LightHouse",
-            "examples": ["/actu", "/partners"],
+            "examples": [
+              "/actu",
+              "/partners"
+            ],
             "items": {
               "type": "string"
             }
@@ -220,7 +231,10 @@
           "repositories": {
             "type": "array",
             "description": "Repositories no GitHub",
-            "examples": ["SocialGouv/www", "SocialGouv/template"],
+            "examples": [
+              "SocialGouv/www",
+              "SocialGouv/template"
+            ],
             "items": {
               "type": "string"
             }
@@ -228,7 +242,9 @@
           "docker": {
             "type": "array",
             "description": "Docker images to scan",
-            "examples": ["ghcr.io/socialgouv/www/app"],
+            "examples": [
+              "ghcr.io/socialgouv/www/app"
+            ],
             "items": {
               "type": "string"
             }
@@ -237,9 +253,17 @@
             "$ref": "#/definitions/tools"
           }
         },
-        "required": ["url"]
+        "required": [
+          "url"
+        ]
       }
     }
   },
-  "required": ["title", "description", "entity", "tools", "urls"]
+  "required": [
+    "title",
+    "description",
+    "entity",
+    "tools",
+    "urls"
+  ]
 }
