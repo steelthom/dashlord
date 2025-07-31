@@ -3,7 +3,7 @@
     "algorithmVersion": 4,
     "grade": "C",
     "error": null,
-    "score": 50,
+    "score": 55,
     "statusCode": 200,
     "testsFailed": 3,
     "testsPassed": 7,
@@ -11,23 +11,24 @@
     "responseHeaders": {
       "content-type": "text/html; charset=UTF-8",
       "x-id-fe": "ptpp01-hw-edge-or0001",
-      "traceparent": "00-c8043cf0470fb6097b8340bd2c4d10a3-5470463a1f6bae4c-01",
+      "traceparent": "00-78d6538d4e0f113dd564730e0e73a57b-244cf8f82da3848b-01",
       "vary": "Accept-Encoding",
       "strict-transport-security": "max-age=34560000; includeSubDomains, max-age=34560000; preload",
       "content-language": "fr",
-      "last-modified": "Mon, 21 Jul 2025 13:41:16 GMT",
-      "etag": "W/\"1753105276\"",
+      "x-frame-options": "SAMEORIGIN",
+      "last-modified": "Wed, 30 Jul 2025 15:42:49 GMT",
+      "etag": "W/\"1753890169\"",
       "from-origin": "same",
       "cache-control": "max-age=0, s-maxage=120, public, must-revalidate, proxy-revalidate",
       "x-xss-protection": "1; mode=block",
-      "x-frame-options": "SAMEORIGIN",
+      "content-security-policy": "default-src 'self'; img-src 'self' impots.gouv.fr *.impots.gouv.fr *.france-services.gouv.fr *.openstreetmap.org *.w3.org data: *.w3.org; script-src 'self' impots.gouv.fr *.impots.gouv.fr 'unsafe-eval' 'unsafe-inline'; style-src 'unsafe-eval' 'unsafe-inline' *.impots.gouv.fr 'self';frame-ancestors 'self';",
       "x-id-shield": "parf17-hw-edge-or1001",
       "x-id": "ptpp01-hw-edge-or0001",
       "x-orange-rule-name": "default_www",
       "cache": "HIT",
-      "x-cached-since": "2025-07-26T03:56:10+00:00",
-      "date": "Sat, 26 Jul 2025 03:57:31 GMT",
-      "content-length": "45451",
+      "x-cached-since": "2025-07-31T03:59:42+00:00",
+      "date": "Thu, 31 Jul 2025 04:00:30 GMT",
+      "content-length": "45411",
       "connection": "close"
     }
   },
@@ -35,13 +36,54 @@
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'self'"
+        ],
+        "img-src": [
+          "'self'",
+          "*.france-services.gouv.fr",
+          "*.impots.gouv.fr",
+          "*.openstreetmap.org",
+          "*.w3.org",
+          "data:",
+          "impots.gouv.fr"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "*.impots.gouv.fr",
+          "impots.gouv.fr"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "*.impots.gouv.fr"
+        ],
+        "frame-ancestors": [
+          "'self'"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -109,8 +151,8 @@
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
       "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
