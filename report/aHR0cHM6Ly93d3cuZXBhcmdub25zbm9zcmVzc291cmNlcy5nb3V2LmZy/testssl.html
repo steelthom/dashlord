@@ -19,14 +19,14 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on pkrvmpptgkbjq6m:/home/testssl/bin/openssl.Linux.x86_64
+  on pkrvmjbmru5nbw0:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="font-weight:bold;">Testing all IP addresses (port 443): </span>51.159.86.157 51.159.204.137
+<span style="font-weight:bold;">Testing all IP addresses (port 443): </span>51.159.204.137 51.159.86.157
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-07-26 03:42:30        --&gt;&gt; 51.159.86.157:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-07-31 03:38:41        --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   51.159.204.137 
- rDNS (51.159.86.157):   51-159-86-157.lb.fr-par.scw.cloud.
+ Further IP addresses:   51.159.86.157 
+ rDNS (51.159.204.137):  51-159-204-137.lb.fr-par.scw.cloud.
 
  Service detected:       HTTP
  www.epargnonsnosressources.gouv.fr:443 appeared to support TLS 1.3 ONLY. Thus switched automagically from
@@ -57,7 +57,6 @@
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="color:#cd00cd;">Fixme: something weird happened around line 7063</span>
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -70,13 +69,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  - 
 <u>TLSv1.2</u>
  - 
-<u>TLSv1.3</u> (server order -- server prioritizes ChaCha ciphers when preferred by clients)
- x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 521</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+<u>TLSv1.3</u> (listed by strength)
  x1302   TLS_AES_256_GCM_SHA384            ECDH<span style="color:#008817;"> 521</span>   AESGCM      256      TLS_AES_256_GCM_SHA384                             
  x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH<span style="color:#008817;"> 521</span>   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 521</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
 
-<span style="font-weight:bold;"> Has server cipher order?     </span>yes (TLS 1.3 only)
-
+<span style="font-weight:bold;"> Has server cipher order?     </span>no (TLS 1.3 only)
+ (limited sense as client will pick)
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -100,27 +99,27 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>064165F42E2A2CFAA620F0D60B5F8604FD13 (OK: length 18)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 072AF75BD51B110382AEB0D8F88C9FE4EAF18E3B
-                              SHA256 DEB9F729E48631163BC9CA893331251375F56FD919394DF23E5F0722065DF833
+<span style="font-weight:bold;"> Serial                       </span>0582D9A24AAB854078D6D217A7BC05C446AC (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 2A6115E7868CE63E8E45C249CFF586E1E7D7A72D
+                              SHA256 1863FD2000C82DD12D734238AAA4E53C3AE52815D3E4722D0D750548478FC670
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>www.epargnonsnosressources.gouv.fr </i> (CN in response to request w/o SNI: <i>*.prod.ademe-scw.fr </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>www.epargnonsnosressources.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
                               <span style="color:#a86437;">wildcard certificate</span> could be problematic, see other hosts at
-                              https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=DEB9F729E48631163BC9CA893331251375F56FD919394DF23E5F0722065DF833
+                              https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=1863FD2000C82DD12D734238AAA4E53C3AE52815D3E4722D0D750548478FC670
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">32 &gt;= 30 days</span> (2025-05-29 10:56 --&gt; 2025-08-27 10:56)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">87 &gt;= 30 days</span> (2025-07-28 09:58 --&gt; 2025-10-26 09:58)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>http://r11.c.lencr.org/20.crl
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://r10.c.lencr.org/45.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>--
 <span style="font-weight:bold;"> OCSP stapling                </span>not offered
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
 <span style="font-weight:bold;"> Certificates provided</span>        2
-<span style="font-weight:bold;"> Issuer                       </span><i>R11</i> (<i>Let&apos;s Encrypt</i> from <i>US</i>)
-<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2027-03-12 23:59). <i>R11</i> &lt;-- <i>ISRG Root X1</i>
+<span style="font-weight:bold;"> Issuer                       </span><i>R10</i> (<i>Let&apos;s Encrypt</i> from <i>US</i>)
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2027-03-12 23:59). <i>R10</i> &lt;-- <i>ISRG Root X1</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
@@ -158,7 +157,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services, see
-                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=DEB9F729E48631163BC9CA893331251375F56FD919394DF23E5F0722065DF833" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=DEB9F729E48631163BC9CA893331251375F56FD919394DF23E5F0722065DF833</a>
+                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=1863FD2000C82DD12D734238AAA4E53C3AE52815D3E4722D0D750548478FC670" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=1863FD2000C82DD12D734238AAA4E53C3AE52815D3E4722D0D750548478FC670</a>
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no DH key detected with &lt;= TLS 1.2
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
@@ -217,13 +216,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-07-26 03:45:09 [ 161s] --&gt;&gt; 51.159.86.157:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-07-31 03:40:53 [ 135s] --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-07-26 03:45:09        --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-07-31 03:40:53        --&gt;&gt; 51.159.86.157:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   51.159.86.157 
- rDNS (51.159.204.137):  51-159-204-137.lb.fr-par.scw.cloud.
+ Further IP addresses:   51.159.204.137 
+ rDNS (51.159.86.157):   51-159-86-157.lb.fr-par.scw.cloud.
 <span style="color:#cd00cd;">This shouldn&apos;t happen (pls report): Testing www.epargnonsnosressources.gouv.fr:443 only succeeded using /usr/bin/openssl.</span>
 <span style="color:#cd00cd;">But testssl.sh also needs bash sockets to perform its checks correctly.
 </span>
