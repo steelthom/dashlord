@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.secnumacademie.gouv.fr</pre>
-<p class="lead">Sun Jul 27 03:46:58 2025 – Sun Jul 27 03:47:27 2025<br>1 hosts scanned.
+<p class="lead">Fri Aug  1 03:54:58 2025 – Fri Aug  1 03:55:34 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -127,7 +127,7 @@
   FourOhFourRequest: 
     HTTP/1.1 301 Moved Permanently
     server: nginx
-    date: Sun, 27 Jul 2025 03:47:12 GMT
+    date: Fri, 01 Aug 2025 03:55:16 GMT
     content-type: text/html
     content-length: 178
     keep-alive: timeout=25
@@ -144,10 +144,30 @@
     &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
     &lt;/body&gt;
     &lt;/html&gt;
-  GetRequest, HTTPOptions: 
+  GetRequest: 
     HTTP/1.1 301 Moved Permanently
     server: nginx
-    date: Sun, 27 Jul 2025 03:47:11 GMT
+    date: Fri, 01 Aug 2025 03:55:15 GMT
+    content-type: text/html
+    content-length: 178
+    keep-alive: timeout=25
+    location: https://secnumacademie.gouv.fr/
+    x-frame-options: SAMEORIGIN
+    x-xss-protection: 1; mode=block
+    x-content-type-options: nosniff
+    strict-transport-security: max-age=31536000; includeSubDomains
+    connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;
+    &lt;body bgcolor="white"&gt;
+    &lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 301 Moved Permanently
+    server: nginx
+    date: Fri, 01 Aug 2025 03:55:16 GMT
     content-type: text/html
     content-length: 178
     keep-alive: timeout=25
@@ -184,14 +204,16 @@
 <td title="Extra Info">bad gateway</td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nginx</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.1 404 Not Found
     server: nginx
     content-type: text/html; charset=UTF-8
     cache-control: no-cache, private
-    date: Sun, 27 Jul 2025 03:47:18 GMT
+    date: Fri, 01 Aug 2025 03:55:23 GMT
     strict-transport-security: max-age=31536000; includeSubDomains
     connection: close
     &lt;!DOCTYPE html&gt;
@@ -213,15 +235,15 @@
     server: nginx
     content-type: text/html; charset=UTF-8
     cache-control: private, must-revalidate
-    date: Sun, 27 Jul 2025 03:47:18 GMT
+    date: Fri, 01 Aug 2025 03:55:22 GMT
     pragma: no-cache
     expires: -1
-    set-cookie: XSRF-TOKEN=eyJpdiI6IkdmSVFiY0RPd3BaYkxlY2RaQ2hNMUE9PSIsInZhbHVlIjoib0xic2Q4b2FJVjJNdEQ4bmNPTG5RTFVqUUNNOW5QS3Yyemd0U2hiS3h2RGFOSjc3ZG1UU25UaFBMZHg0ZXphUlBqdFNsSlJjbGxmamo3ZmlYeTNiVVwvUzhyVnIwbUNORWtGWU1VeVIwQmxNSnJINVcrSFVNQTljMWhySlZZTVhrIiwibWFjIjoiNTUzNDU0N2I5NDA4ZDQ2MGE1NDg5YjI0NTdiYjM2NGMwMjk3MDYwNWNhYTk4OGEwMWYyMzBjYmU4YTY4ZWU5NiJ9; expires=Sun, 27-Jul-2025 05:47:18 GMT; Max-Age=7200; path=/; domain=secnumacademie.gouv.fr; secure; samesite=lax
-    set-cookie: laravel_session=eyJpdiI6InVBSkpjUWRPQ29aN2lOSDJXdHFmV3c9PSIsInZhbHVlIjoiSW9BOGlMcUgzRTdlZ0c5enJIdHNMT21tdld5S01PZ1FnbDhoSFhLT2VRU3BRajJyNmNEUWlvTU5xME9hTCsyalVTbFE4XC9iT01Db2F5ZEJvWFdoT3NDaW5KbzA1QjF5ajV3S2FqUE9FRGU3d1NCSGZzbzNOUDdWWnNtcGxI
+    set-cookie: XSRF-TOKEN=eyJpdiI6IjZ4b3orYXBPNGJuUjlIcE5FUTh6YkE9PSIsInZhbHVlIjoiZkRwcTBQSjF3eGQrU2tGMDJjNGV5dGhyV1N5aUZEYTNMZXFQejRKQlRUSlMwVXFMQ21sOWIxOWV0M3lsT0VJdUJVdlgwbmVIRUVcL2JPeXhOUHVhQ0xhOXd2dEVwUFFyMEo4ZGJMZEszRmRCQmY3TVBWZVpIQUcydTBoOXoyeUtYIiwibWFjIjoiNmMyNzMzYWFlMzAzNzJkMzhiNDI5ZDAxNzczMmJlYmJkNDc3MjZlMzk0MzM5NjdkNmZlOTI1ZGU2NDQ5Y2VjZCJ9; expires=Fri, 01-Aug-2025 05:55:22 GMT; Max-Age=7200; path=/; domain=secnumacademie.gouv.fr; secure; samesite=lax
+    set-cookie: laravel_session=eyJpdiI6ImtEWUZqSDYramRXWWtPT3NDYSt0TWc9PSIsInZhbHVlIjoiSFluVncyMkh3U0NUZ2E4RHJsUG5PeG53amNhdFFjQmVZQ21NOWc4V2hjaGJMbFZOTm8zMmxDTVE3enBIM3RGXC9xbkNyKzBXeGRCaFhzUUxtdlA0ZytQQ1NvTXVmc1wvbDhpZW5lUlg0SFh5MTl2VW5uSnBubGtrR2F4aWhH
   HTTPOptions: 
     HTTP/1.1 405 Not Allowed
     server: nginx
-    date: Sun, 27 Jul 2025 03:47:18 GMT
+    date: Fri, 01 Aug 2025 03:55:23 GMT
     content-type: text/html; charset=utf-8
     content-length: 166
     keep-alive: timeout=25
@@ -234,8 +256,6 @@
     &lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
     &lt;/body&gt;
     &lt;/html&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nginx</pre>
 </td></tr>
 </tbody>
 </table></div>
