@@ -1,28 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "D",
     "error": null,
-    "score": 0,
-    "statusCode": 200,
-    "testsFailed": 6,
-    "testsPassed": 4,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 28 Jul 2025 04:26:20 GMT",
+      "date": "Sat, 02 Aug 2025 03:41:32 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "cache-control": "max-age=0, must-revalidate, private",
-      "expires": "Mon, 28 Jul 2025 04:26:20 GMT",
+      "x-frame-options": "SAMEORIGIN",
+      "referrer-policy": "same-origin",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
       "set-cookie": [
-        "PHPSESSID=c800rhlu1fdbe9e10tobnit5oq; path=/; HttpOnly",
-        "__cf_bm=tugbL5aJcz0L8lrn131YkFB48uMKjBFcSUT5mfXpKDs-1753676780-1.0.1.1-z_LP68e6awe4vrQu1tGypxeX_d04dGcksXitWdvnD184owIuINFShii6DcsRk4bLaQwUcQ_kNiHGo9tB8Uj_Z2Rn8YAiJLk82p1hxi4h2mc; path=/; expires=Mon, 28-Jul-25 04:56:20 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
+        "__cf_bm=BaTqmqTJxeMyBcxcSiGKjwCk8EPBFxh7ujR625V07Z0-1754106092-1.0.1.1-BLSVpPNnazwaqbX6wpllO7sTEF4ylAWkV6WlJk4gW3C7qyuEAc_dPk4ByH25RQqWVeCikYNJnv2bb_W24BCOtVkqIKJTAn8QP0Ldy44v9E4; path=/; expires=Sat, 02-Aug-25 04:11:32 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
       ],
-      "content-language": "fr",
-      "cf-cache-status": "DYNAMIC",
+      "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "96619e1ece98173a-SJC"
+      "cf-ray": "968a8f64196cf993-SJC"
     }
   },
   "tests": {
@@ -39,19 +39,13 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-session-without-secure-flag",
-      "scoreModifier": -40,
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
       "data": {
-        "PHPSESSID": {
-          "domain": "www.territoires-climat.ademe.fr",
-          "httponly": true,
-          "path": "/",
-          "port": null
-        },
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-07-28T04:56:20.000Z",
+          "expires": "2025-08-02T04:11:32.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -59,7 +53,7 @@
           "secure": true
         }
       },
-      "sameSite": false
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -70,24 +64,23 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://www.territoires-climat.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://www.territoires-climat.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://www.territoires-climat.ademe.fr/",
-        "https://www.territoires-climat.ademe.fr/"
+        "http://www.territoires-climat.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -103,23 +96,10 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=www.territoires-climat.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://www.google.com/recaptcha/api.js?render=explicit": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
@@ -130,10 +110,10 @@
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
