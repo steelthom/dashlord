@@ -1,16 +1,15 @@
-# Nmap 7.92 scan initiated Mon Jul 28 04:12:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.terre.defense.gouv.fr
+# Nmap 7.92 scan initiated Sat Aug  2 04:00:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.terre.defense.gouv.fr
 Nmap scan report for www.terre.defense.gouv.fr (185.24.185.2)
-Host is up (0.11s latency).
-Not shown: 993 filtered tcp ports (no-response)
-PORT      STATE  SERVICE         VERSION
-80/tcp    open   http-proxy      F5 BIG-IP load balancer http proxy
+Host is up (0.099s latency).
+Not shown: 964 filtered tcp ports (no-response), 34 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-113/tcp   closed ident
-443/tcp   open   ssl/https
+443/tcp open  ssl/https
 | fingerprint-strings: 
-|   FourOhFourRequest, HTTPOptions: 
+|   FourOhFourRequest: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Mon, 28 Jul 2025 04:20:20 GMT
+|     Date: Sat, 02 Aug 2025 04:05:57 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -22,9 +21,9 @@ PORT      STATE  SERVICE         VERSION
 |     <h1>Forbidden</h1>
 |     <p>You don't have permission to access this resource.</p>
 |     </body></html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Mon, 28 Jul 2025 04:20:19 GMT
+|     Date: Sat, 02 Aug 2025 04:05:56 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -38,7 +37,7 @@ PORT      STATE  SERVICE         VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Mon, 28 Jul 2025 04:20:31 GMT
+|     Date: Sat, 02 Aug 2025 04:06:08 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -51,48 +50,44 @@ PORT      STATE  SERVICE         VERSION
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
 |_    </body></html>
-1083/tcp  closed ansoft-lm-1
-2106/tcp  closed ekshell
-32780/tcp closed sometimes-rpc23
-50006/tcp closed unknown
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=7/28%Time=6886FA83%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Mon,\
-SF:x2028\x20Jul\x202025\x2004:20:19\x20GMT\r\nContent-Length:\x20199\r\nCo
-SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
-SF:\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~application~pool-ubika=21
-SF:8263562\.20480\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYP
-SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
-SF:ad>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>
-SF:\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20reso
-SF:urce\.</p>\n</body></html>\n")%r(HTTPOptions,1C9,"HTTP/1\.0\x20403\x20F
-SF:orbidden\r\nDate:\x20Mon,\x2028\x20Jul\x202025\x2004:20:20\x20GMT\r\nCo
-SF:ntent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\x20text/h
-SF:tml;\x20charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe
-SF:~application~pool-ubika=218263562\.20480\.0000;\x20path=/;\x20Httponly;
-SF:\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
-SF:\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head>
-SF:<body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to
-SF:\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(FourOhFourRe
-SF:quest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Mon,\x2028\x20Jul\
-SF:x202025\x2004:20:20\x20GMT\r\nContent-Length:\x20199\r\nConnection:\x20
-SF:close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nSet-Cooki
-SF:e:\x20BIGipServer~Tenant-Externe~application~pool-ubika=218263562\.2048
-SF:0\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20
-SF:PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>4
-SF:03\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20d
-SF:on't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n<
-SF:/body></html>\n")%r(RTSPRequest,1E6,"HTTP/1\.1\x20400\x20Bad\x20Request
-SF:\r\nDate:\x20Mon,\x2028\x20Jul\x202025\x2004:20:31\x20GMT\r\nContent-Le
-SF:ngth:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20
-SF:charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~applica
-SF:tion~pool-ubika=218263562\.20480\.0000;\x20path=/;\x20Httponly;\x20Secu
-SF:re\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0
-SF://EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><bo
-SF:dy>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20reques
-SF:t\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n<
-SF:/p>\n</body></html>\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/2%Time=688D8EA4%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Sat,\x
+SF:2002\x20Aug\x202025\x2004:05:56\x20GMT\r\nContent-Length:\x20199\r\nCon
+SF:nection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\
+SF:r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~application~pool-ubika=218
+SF:263562\.20480\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYPE
+SF:\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><hea
+SF:d>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\
+SF:n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20resou
+SF:rce\.</p>\n</body></html>\n")%r(HTTPOptions,1C9,"HTTP/1\.0\x20403\x20Fo
+SF:rbidden\r\nDate:\x20Sat,\x2002\x20Aug\x202025\x2004:05:56\x20GMT\r\nCon
+SF:tent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~
+SF:application~pool-ubika=218263562\.20480\.0000;\x20path=/;\x20Httponly;\
+SF:x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\
+SF:x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><
+SF:body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\
+SF:x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(FourOhFourReq
+SF:uest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Sat,\x2002\x20Aug\x
+SF:202025\x2004:05:57\x20GMT\r\nContent-Length:\x20199\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nSet-Cookie
+SF::\x20BIGipServer~Tenant-Externe~application~pool-ubika=218263562\.20480
+SF:\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20P
+SF:UBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>40
+SF:3\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20do
+SF:n't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</
+SF:body></html>\n")%r(RTSPRequest,1E6,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nDate:\x20Sat,\x2002\x20Aug\x202025\x2004:06:08\x20GMT\r\nContent-Len
+SF:gth:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20c
+SF:harset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~applicat
+SF:ion~pool-ubika=218263562\.20480\.0000;\x20path=/;\x20Httponly;\x20Secur
+SF:e\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0/
+SF:/EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><bod
+SF:y>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request
+SF:\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</
+SF:p>\n</body></html>\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Jul 28 04:22:32 2025 -- 1 IP address (1 host up) scanned in 582.92 seconds
+# Nmap done at Sat Aug  2 04:08:07 2025 -- 1 IP address (1 host up) scanned in 434.61 seconds
