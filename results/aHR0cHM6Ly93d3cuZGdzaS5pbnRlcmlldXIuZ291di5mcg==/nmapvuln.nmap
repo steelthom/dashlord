@@ -1,7 +1,7 @@
-# Nmap 7.92 scan initiated Wed Jul 30 04:35:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dgsi.interieur.gouv.fr
-Nmap scan report for www.dgsi.interieur.gouv.fr (141.101.90.104)
-Host is up (0.0021s latency).
-Other addresses for www.dgsi.interieur.gouv.fr (not scanned): 141.101.90.106 141.101.90.105 141.101.90.107 2a06:98c1:3200::90:83 2a06:98c1:3200::90:82 2a06:98c1:3200::90:80 2a06:98c1:3200::90:81
+# Nmap 7.92 scan initiated Mon Aug  4 04:17:34 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.dgsi.interieur.gouv.fr
+Nmap scan report for www.dgsi.interieur.gouv.fr (141.101.90.107)
+Host is up (0.0060s latency).
+Other addresses for www.dgsi.interieur.gouv.fr (not scanned): 141.101.90.104 141.101.90.106 141.101.90.105 2a06:98c1:3200::90:83 2a06:98c1:3200::90:80 2a06:98c1:3200::90:81 2a06:98c1:3200::90:82
 
 PORT      STATE SERVICE    VERSION
 1/tcp     open  tcpwrapped
@@ -585,7 +585,17 @@ PORT      STATE SERVICE    VERSION
 5214/tcp  open  tcpwrapped
 5221/tcp  open  tcpwrapped
 5222/tcp  open  tcpwrapped
-|_xmpp-info: ERROR: Script execution failed (use -d to debug)
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     unknown: 
+|     auth_mechanisms: 
+|     errors: 
+|       (timeout)
+|     features: 
+|     compression_methods: 
+|     capabilities: 
+|_    xmpp: 
 5225/tcp  open  tcpwrapped
 5226/tcp  open  tcpwrapped
 5269/tcp  open  tcpwrapped
@@ -794,6 +804,7 @@ PORT      STATE SERVICE    VERSION
 9080/tcp  open  tcpwrapped
 9081/tcp  open  tcpwrapped
 9090/tcp  open  tcpwrapped
+|_drda-info: ERROR
 9091/tcp  open  tcpwrapped
 9099/tcp  open  tcpwrapped
 9100/tcp  open  jetdirect?
@@ -1014,4 +1025,4 @@ PORT      STATE SERVICE    VERSION
 65389/tcp open  tcpwrapped
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Jul 30 04:35:36 2025 -- 1 IP address (1 host up) scanned in 22.28 seconds
+# Nmap done at Mon Aug  4 04:17:59 2025 -- 1 IP address (1 host up) scanned in 25.03 seconds
