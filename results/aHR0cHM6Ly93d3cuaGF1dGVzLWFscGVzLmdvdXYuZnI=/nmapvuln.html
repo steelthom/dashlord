@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.hautes-alpes.gouv.fr</pre>
-<p class="lead">Thu Jul 31 04:05:27 2025 – Thu Jul 31 04:06:18 2025<br>1 hosts scanned.
+<p class="lead">Tue Aug  5 04:13:19 2025 – Tue Aug  5 04:14:03 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,20 +122,22 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
+  FourOhFourRequest, HTTPOptions: 
     HTTP/1.1 403 Forbidden
-    date: Thu, 31 Jul 2025 04:05:46 GMT
+    date: Tue, 05 Aug 2025 04:13:35 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
     x-cache: Miss
+    content-length: 94
+    keep-alive: timeout=5, max=100
     connection: close
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
     Request forbidden by administrative rules.
     &lt;/body&gt;&lt;/html&gt;
-  GetRequest, HTTPOptions: 
+  GetRequest: 
     HTTP/1.1 403 Forbidden
-    date: Thu, 31 Jul 2025 04:05:45 GMT
+    date: Tue, 05 Aug 2025 04:13:34 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
@@ -153,7 +155,7 @@
     &lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.1 400 Bad Request
-    date: Thu, 31 Jul 2025 04:05:45 GMT
+    date: Tue, 05 Aug 2025 04:13:35 GMT
     content-length: 226
     content-type: text/html; charset=iso-8859-1
     connection: close
@@ -178,9 +180,9 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest, HTTPOptions: 
+  FourOhFourRequest: 
     HTTP/1.1 403 Forbidden
-    date: Thu, 31 Jul 2025 04:05:52 GMT
+    date: Tue, 05 Aug 2025 04:13:42 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
@@ -189,27 +191,26 @@
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
     Request forbidden by administrative rules.
     &lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
+  GetRequest, HTTPOptions: 
     HTTP/1.1 403 Forbidden
-    date: Thu, 31 Jul 2025 04:05:51 GMT
+    date: Tue, 05 Aug 2025 04:13:41 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
     x-cache: Miss
+    content-length: 94
+    keep-alive: timeout=5, max=100
     connection: close
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
     Request forbidden by administrative rules.
     &lt;/body&gt;&lt;/html&gt;
-  RPCCheck, tor-versions: 
+  RPCCheck: 
     HTTP/1.0 400 Bad request
     cache-control: no-cache
     content-type: text/html
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
-    Your browser sent an invalid request.
-    &lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.1 400 Bad Request
-    date: Thu, 31 Jul 2025 04:05:59 GMT
+    date: Tue, 05 Aug 2025 04:13:48 GMT
     content-length: 226
     content-type: text/html; charset=iso-8859-1
     connection: close
@@ -220,6 +221,13 @@
     &lt;h1&gt;Bad Request&lt;/h1&gt;
     &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
     &lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;
+  tor-versions: 
+    HTTP/1.0 400 Bad request
+    cache-control: no-cache
+    content-type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
+    Your browser sent an invalid request.
     &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 </tbody>
