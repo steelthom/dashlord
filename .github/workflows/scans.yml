@@ -87,6 +87,32 @@ jobs:
       - run: |
           mkdir scans
 
+      - name: Mozilla HTTP Observatory
+        if: ${{ inputs.tool == 'httpobs' || inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
+        continue-on-error: true
+        timeout-minutes: 10
+        id: http
+        uses: Quentium-Forks/dashlord-actions/httpobs@main
+        with:
+          url: ${{ matrix.sites.url }}
+          output: scans/http.json
+
+      - name: Mozilla HTTP Observatory retry
+        if: steps.http.outcome=='failure'
+        continue-on-error: true
+        timeout-minutes: 10
+        uses: Quentium-Forks/dashlord-actions/httpobs@main
+        with:
+          url: ${{ matrix.sites.url }}
+          output: scans/http.json
+
+      - name: Cancel next steps if HTTP Observatory failed
+        run: |
+          if grep -q "The site seems to be down." scans/http.json; then
+            echo "HTTP Observatory failed, cancelling next steps"
+            exit 1
+          fi
+
       - name: dsfr
         if: ${{ inputs.tool == 'dsfr' || inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
         continue-on-error: true
@@ -149,25 +175,6 @@ jobs:
         with:
           url: ${{ matrix.sites.url }}
           output: scans/wappalyzer.json
-
-      - name: Mozilla HTTP Observatory
-        if: ${{ inputs.tool == 'httpobs' || inputs.tool == 'all' || github.event_name != 'workflow_dispatch' }}
-        continue-on-error: true
-        timeout-minutes: 10
-        id: http
-        uses: Quentium-Forks/dashlord-actions/httpobs@main
-        with:
-          url: ${{ matrix.sites.url }}
-          output: scans/http.json
-
-      - name: Mozilla HTTP Observatory retry
-        if: steps.http.outcome=='failure'
-        continue-on-error: true
-        timeout-minutes: 10
-        uses: Quentium-Forks/dashlord-actions/httpobs@main
-        with:
-          url: ${{ matrix.sites.url }}
-          output: scans/http.json
 
       # testssl.sh & nmap action needs an hostname to save its output
       - name: Extract hostname
