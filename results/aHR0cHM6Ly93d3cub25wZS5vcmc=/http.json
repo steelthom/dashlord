@@ -1,46 +1,92 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "B",
     "error": null,
-    "score": 10,
+    "score": 70,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "connection": "Close",
-      "content-type": "text/html",
+      "cache-control": "max-age=10800, public",
+      "content-language": "fr",
+      "content-security-policy": "frame-ancestors 'self';",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 06 Aug 2025 03:40:34 GMT",
+      "etag": "\"1754294568\"",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "last-modified": "Mon, 04 Aug 2025 08:02:48 GMT",
+      "permissions-policy": "geolocation=(self), microphone=(), camera=(), fullscreen=*",
+      "referrer-policy": "strict-origin",
+      "strict-transport-security": "max-age=16070400; includeSubDomains; preload",
+      "vary": "Cookie,Origin",
+      "x-content-type-options": "nosniff",
+      "x-drupal-cache": "HIT",
+      "x-drupal-dynamic-cache": "MISS",
+      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+      "x-xss-protection": "1; mode=block",
       "set-cookie": [
-        "BNIS_x-bni-jas=XDlBfGBg2SxeYbDJi6fmLLchsFIg68zafI7h61ohO4Y=; Path=/",
-        "x-bni-ci=vL7cwWepn3YttrEz0XkCiJezzH_Zh9SOSceXMgc2ZF7qPPG4gNFCHQmwtJDsBoFB6pAqW2sqYpc=; Path=/"
-      ]
+        "BNIS_vid=WQxkr2gyHhC+AJtWOicJEaOj1SnLluW/tvpkTJncbFdKcoZ4Hw3XMHdN1/p5l9bFwK5Awsm6tMs1PfKv3NuspY3UIpMDUpm+mFHVZ5sXGt/d9tQps7CYSF1eALh1Ie++n9/QJDhcu8LQL0RW5J9I588E2+NZM3XraP7h9UzNU0Q7w/Ky3yhXwLS0OJx038UphWo+oEWSjZ8=; Path=/",
+        "BNIS___utm_is1=sWeIIAL9ro8rw/oU1ju1O2UDposkUQ3BPyy+B8HWO2cCfl5qGh8J8Pqi9vZmY+/dq5zvvgpvqIQyuZNSLpcTwTZT5uAEgnLWVebGl45cHdI7e2YQ1tNwrg==; Max-Age=31536000; Path=/",
+        "BNIS___utm_is2=VU8sgP7GHCC5EDnn9/Cq7ssDObdAwtmiBZBG5OZ3eccBcEgN4m2EvQ88kGFTuIE7X61T9MA/p4g=; Max-Age=10800; Path=/",
+        "BNIS___utm_is3=MD/zWvhahFO7sMu5/BUkdoZAHuqZIK4lGaHsMOMfkU0w1LF/aSJSNyUEbh7SZdopkN9sb0ZggyIAm1eGpxGY58wj3WyEt11TUDgblvQ5yO0=;  Path=/"
+      ],
+      "connection": "close"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "'self'"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
-        "BNIS_x-bni-jas": {
+        "BNIS_vid": {
           "domain": "onpe.org",
           "path": "/",
           "port": null
         },
-        "x-bni-ci": {
+        "BNIS___utm_is1": {
+          "domain": "onpe.org",
+          "max-age": 31536000,
+          "path": "/",
+          "port": null
+        },
+        "BNIS___utm_is2": {
+          "domain": "onpe.org",
+          "max-age": 10800,
+          "path": "/",
+          "port": null
+        },
+        "BNIS___utm_is3": {
           "domain": "onpe.org",
           "path": "/",
           "port": null
@@ -72,43 +118,52 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=16070400; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 16070400,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-no-scripts-loaded",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://tarteaucitron.io/load.js?domain=onpe.org&uuid=2df1000bf385655312abede8e30421664e7d594e": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.infisecure.com/barracuda.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "SAMEORIGIN, SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
