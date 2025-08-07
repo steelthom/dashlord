@@ -21,14 +21,14 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on pkrvmjbmru5nbw0:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="font-weight:bold;">Testing all IP addresses (port 443): </span>141.101.90.99 141.101.90.97 141.101.90.98 141.101.90.96
+<span style="font-weight:bold;">Testing all IP addresses (port 443): </span>141.101.90.96 141.101.90.97 141.101.90.99 141.101.90.98
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-08-03 04:34:24        --&gt;&gt; 141.101.90.99:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-08-07 14:53:24        --&gt;&gt; 141.101.90.96:443 (www.agora.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   141.101.90.97 141.101.90.96 141.101.90.98
-                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0
-                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1 
- rDNS (141.101.90.99):   --
+ Further IP addresses:   141.101.90.97 141.101.90.99 141.101.90.98
+                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1
+                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0 
+ rDNS (141.101.90.96):   --
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -116,7 +116,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;renegotiation info/#65281&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -134,7 +134,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">71 &gt;= 60 days</span> (2024-10-13 22:00 --&gt; 2025-10-13 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">67 &gt;= 60 days</span> (2024-10-13 22:00 --&gt; 2025-10-13 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -153,9 +153,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+1 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          1
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=ZIyk9W5hgqwMa2gVkgIk9j.V4BwKxx7ch_RFkJ9ZpLE-1754195803-1.0.1.1-MWM29sMkQs2MWgA9yy3oeXkwvnnpCP4AaUXVWe7jkfN2q1YCfSiSfCEw4ioohYXNvzn9YhdGRr3h6ULdZbCzvz4GGhBbr0t77DOkpzLpKFk; path=/; expires=Sun, 03-Aug-25 05:06:43 GMT; domain=.agora.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> HTTP clock skew              </span>+2256 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          2256
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=wLrGltGjdqapgMYoVbiCoUY_0sa589Ks1.4.T2t6ce4-1754578530-1.0.1.1-au1EXHIcJwB_jrNXZLz4oRWnI6bo2wImPxhBMi9SCTG4eKi8darDJeV.TINKRAHSs574hjl5NWhAT0iysvty9jWg8pNA4HuZhifYq5mlRkM; path=/; expires=Thu, 07-Aug-25 15:25:30 GMT; domain=.agora.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -247,14 +247,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-08-03 04:38:11 [ 229s] --&gt;&gt; 141.101.90.99:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-08-07 14:56:29 [ 186s] --&gt;&gt; 141.101.90.96:443 (www.agora.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-08-03 04:38:11        --&gt;&gt; 141.101.90.97:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-08-07 14:56:29        --&gt;&gt; 141.101.90.97:443 (www.agora.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   141.101.90.96 141.101.90.98 141.101.90.99
-                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0
-                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1 
+ Further IP addresses:   141.101.90.99 141.101.90.98 141.101.90.96
+                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1
+                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0 
  rDNS (141.101.90.97):   --
  Service detected:       HTTP
 
@@ -361,7 +361,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">71 &gt;= 60 days</span> (2024-10-13 22:00 --&gt; 2025-10-13 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">67 &gt;= 60 days</span> (2024-10-13 22:00 --&gt; 2025-10-13 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -380,9 +380,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+225 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          226
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=NoFWwVEHnXTBXr6jxVmOZ0ESuzrq2m.E_5ik05WG3sc-1754196028-1.0.1.1-Sp6BjxqLUDPA5YNDLTrBnTw1AFx7p0sFX8RLvai2uFEiItdgSc4_S_jaJRjSXV9MhWko7QOEyiGfS0ATZoh2nULeOkKgmVkLkJeqsSIxV44; path=/; expires=Sun, 03-Aug-25 05:10:28 GMT; domain=.agora.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> HTTP clock skew              </span>+1145 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          1145
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=tQ_taKBbdKjtEUmiGkWlh1hNcXBT37Q5.l7Q8q.Os8Y-1754578714-1.0.1.1-epNTgq7XXkgsth3Wel2Jxt27RdB10..c3qBIwrE9an_AmqbiGHcqc20MXulTapbPX1R0g4_4hxOpt5Ct_An7SStrV_TqER4rZM80S4J.0aU; path=/; expires=Thu, 07-Aug-25 15:28:34 GMT; domain=.agora.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -474,15 +474,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-08-03 04:41:51 [ 449s] --&gt;&gt; 141.101.90.97:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-08-07 14:59:37 [ 374s] --&gt;&gt; 141.101.90.97:443 (www.agora.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-08-03 04:41:51        --&gt;&gt; 141.101.90.98:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-08-07 14:59:37        --&gt;&gt; 141.101.90.99:443 (www.agora.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   141.101.90.97 141.101.90.96 141.101.90.99
-                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0
-                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1 
- rDNS (141.101.90.98):   --
+ Further IP addresses:   141.101.90.97 141.101.90.98 141.101.90.96
+                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1
+                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0 
+ rDNS (141.101.90.99):   --
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -570,7 +570,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;renegotiation info/#65281&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: yes
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -588,7 +588,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">71 &gt;= 60 days</span> (2024-10-13 22:00 --&gt; 2025-10-13 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">67 &gt;= 60 days</span> (2024-10-13 22:00 --&gt; 2025-10-13 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -607,9 +607,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+447 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          447
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=dKU6cBh5YbdvVQUhA5Aoj0As9rb9.jt19D70tSU7n5U-1754196249-1.0.1.1-ZYZ8LQNd4RaU.GMPAwq.1Pd1O3OG58X9x2LDysCxg.xKVhPgsMw19MG1CKXvc20raURd1Ax5UdR8R05iLjWXWmqggIvS00SwBCB2hb4FjDs; path=/; expires=Sun, 03-Aug-25 05:14:09 GMT; domain=.agora.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> HTTP clock skew              </span>+2628 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          2628
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=mIxiPRKetgmtTN38o66bod165GyU78fuvzckyWysacQ-1754578902-1.0.1.1-cDe3aAUcUN4gRc6uMfAz5qRLSmMp_vK3ppsmzMYrHWzAA0Ny1S47UIjtZ2ASRr5TlSaIbEVnVA1CdqGouuU6PkWpn5bv67hhd76.52g5IHE; path=/; expires=Thu, 07-Aug-25 15:31:42 GMT; domain=.agora.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -685,4 +685,103 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  LibreSSL 3.3.6 (macOS)       TLSv1.3   TLS_CHACHA20_POLY1305_SHA256      <span style="color:#008817;">253 bit ECDH (X25519)</span>
  OpenSSL 1.0.2e               TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  OpenSSL 1.1.1d (Debian)      TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- OpenSSL 3.0.15 (Debian)      
+ OpenSSL 3.0.15 (Debian)      TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ OpenSSL 3.5.0 (git)          TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">X25519MLKEM768</span>
+ Apple Mail (16.0)            TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Thunderbird (91.9)           TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+
+
+<span style="text-decoration:underline;font-weight:bold;"> Rating (experimental) </span>
+
+<span style="font-weight:bold;"> Rating specs</span> (not complete)  SSL Labs&apos;s &apos;SSL Server Rating Guide&apos; (version 2009r from 2025-05-16)
+<span style="font-weight:bold;"> Specification documentation  </span><a href="https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide" style="color:black;text-decoration:none;">https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide</a>
+<span style="font-weight:bold;"> Protocol Support </span>(weighted)  100 (30)
+<span style="font-weight:bold;"> Key Exchange </span>    (weighted)  90 (27)
+<span style="font-weight:bold;"> Cipher Strength </span> (weighted)  90 (36)
+<span style="font-weight:bold;"> Final Score                  </span>93
+<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
+
+<span style="color:white;background-color:black;"> Done 2025-08-07 15:02:42 [ 559s] --&gt;&gt; 141.101.90.99:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+
+-----------------------------------------------------
+<span style="color:white;background-color:black;"> Start 2025-08-07 15:02:42        --&gt;&gt; 141.101.90.98:443 (www.agora.gouv.fr) &lt;&lt;--</span>
+
+ Further IP addresses:   141.101.90.97 141.101.90.99 141.101.90.96
+                         2a06:98c1:3200::90:2 2a06:98c1:3200::90:1
+                         2a06:98c1:3200::90:3 2a06:98c1:3200::90:0 
+ rDNS (141.101.90.98):   --
+ Service detected:       HTTP
+
+<span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
+
+<span style="font-weight:bold;"> SSLv2      </span><span style="color:#008817;font-weight:bold;">not offered (OK)</span>
+<span style="font-weight:bold;"> SSLv3      </span><span style="color:#008817;font-weight:bold;">not offered (OK)</span>
+<span style="font-weight:bold;"> TLS 1      </span>not offered
+<span style="font-weight:bold;"> TLS 1.1    </span>not offered
+<span style="font-weight:bold;"> TLS 1.2    </span><span style="color:#008817;font-weight:bold;">offered (OK)</span>
+<span style="font-weight:bold;"> TLS 1.3    </span><span style="color:#008817;font-weight:bold;">offered (OK)</span>: final
+<span style="font-weight:bold;"> NPN/SPDY   </span>h2, http/1.1 (advertised)
+<span style="font-weight:bold;"> ALPN/HTTP2 </span><span style="color:#008817;">h2</span>, http/1.1 (offered)
+
+<span style="text-decoration:underline;font-weight:bold;"> Testing cipher categories </span>
+
+<span style="font-weight:bold;"> NULL ciphers (no encryption)                      </span><span style="color:#008817;font-weight:bold;">not offered (OK)</span>
+<span style="font-weight:bold;"> Anonymous NULL Ciphers (no authentication)        </span><span style="color:#008817;font-weight:bold;">not offered (OK)</span>
+<span style="font-weight:bold;"> Export ciphers (w/o ADH+NULL)                     </span><span style="color:#008817;font-weight:bold;">not offered (OK)</span>
+<span style="font-weight:bold;"> LOW: 64 Bit + DES, RC[2,4], MD5 (w/o export)      </span><span style="color:#008817;">not offered (OK)</span>
+<span style="font-weight:bold;"> Triple DES Ciphers / IDEA                         </span>not offered
+<span style="font-weight:bold;"> Obsoleted CBC ciphers (AES, ARIA etc.)            </span><span style="color:#a86437;">offered</span>
+<span style="font-weight:bold;"> Strong encryption (AEAD ciphers) with no FS       </span><span style="color:#008817;">offered (OK)</span>
+<span style="font-weight:bold;"> Forward Secrecy strong encryption (AEAD ciphers)  </span><span style="color:#008817;font-weight:bold;">offered (OK)</span>
+
+
+<span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+<u>SSLv2</u>
+ - 
+<u>SSLv3</u>
+ - 
+<u>TLSv1</u>
+ - 
+<u>TLSv1.1</u>
+ - 
+<u>TLSv1.2</u> (server order -- server prioritizes ChaCha ciphers when preferred by clients)
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH<span style="color:#008817;"> 253</span>   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH<span style="color:#008817;"> 253</span>   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
+ xc013   ECDHE-RSA-AES128-SHA              ECDH<span style="color:#008817;"> 253</span>   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
+ x9c     AES128-GCM-SHA256                 RSA        AESGCM      128      TLS_RSA_WITH_AES_128_GCM_SHA256                    
+ x2f     AES128-SHA                        RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA                       
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH<span style="color:#008817;"> 253</span>   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ xc014   ECDHE-RSA-AES256-SHA              ECDH<span style="color:#008817;"> 253</span>   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                 
+ x9d     AES256-GCM-SHA384                 RSA        AESGCM      256      TLS_RSA_WITH_AES_256_GCM_SHA384                    
+ x35     AES256-SHA                        RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA                       
+ xc027   ECDHE-RSA-AES128-SHA256           ECDH<span style="color:#008817;"> 253</span>   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256              
+ x3c     AES128-SHA256                     RSA        AES         128      TLS_RSA_WITH_AES_128_CBC_SHA256                    
+ xc028   ECDHE-RSA-AES256-SHA384           ECDH<span style="color:#008817;"> 253</span>   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384              
+ x3d     AES256-SHA256                     RSA        AES         256      TLS_RSA_WITH_AES_256_CBC_SHA256                    
+<u>TLSv1.3</u> (no server order, thus listed by strength)
+ x1302   TLS_AES_256_GCM_SHA384            ECDH/MLKEM AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH/MLKEM ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256                             
+
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
+
+
+<span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
+
+<span style="color:#008817;"> FS is offered (OK) </span>          TLS_AES_256_GCM_SHA384
+                              TLS_CHACHA20_POLY1305_SHA256
+                              ECDHE-RSA-AES256-GCM-SHA384
+                              ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA
+                              ECDHE-RSA-CHACHA20-POLY1305
+                              TLS_AES_128_GCM_SHA256
+                              ECDHE-RSA-AES128-GCM-SHA256
+                              ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA 
+<span style="font-weight:bold;"> KEMs offered                 </span><span style="color:#008817;">X25519MLKEM768</span> <span style="color:#008817;">X25519Kyber768Draft00</span> 
+<span style="font-weight:bold;"> Elliptic curves offered:     </span><span style="color:#008817;">prime256v1</span> <span style="color:#008817;">secp384r1</span> <span style="color:#008817;">secp521r1</span> <span style="color:#008817;">X25519</span> 
+<span style="font-weight:bold;"> TLS 1.2 sig_algs offered:    </span>RSA-PSS-RSAE+SHA256 RSA+SHA256 
+                              RSA-PSS-RSAE+SHA384 
+<span style="font-weight:bold;"> TLS 1.3 sig_algs offered:    </span>RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 
+                              RSA-PSS-RSAE+SHA512 
