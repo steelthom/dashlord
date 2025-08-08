@@ -1,28 +1,38 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C-",
+    "grade": "C",
     "error": null,
-    "score": 45,
+    "score": 50,
     "statusCode": 403,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 04 Aug 2025 04:42:48 GMT",
+      "date": "Fri, 08 Aug 2025 04:01:13 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "x-frame-options": "SAMEORIGIN",
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cf-mitigated": "challenge",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
       "referrer-policy": "same-origin",
+      "server-timing": "chlray;desc=\"96bc1c7a798e99eb\"",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
       "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
       "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
       "set-cookie": [
-        "__cf_bm=lGTZrITr.I72hXxqwmOoAz_9jF8SMkfFXpKP1B9sAUY-1754282568-1.0.1.1-hiyj_fNFHEakJ6K0zflYIPKlMw0UEBwNvvEPRL1KA6pvyUHqXD3EInCKyPwOScRmhtYpqB1E6XPu_VlmUKTO.7ND1A4JbN9_WyRSjDuaf6M; path=/; expires=Mon, 04-Aug-25 05:12:48 GMT; domain=.communication.gouv.fr; HttpOnly; Secure; SameSite=None"
+        "__cf_bm=qxBl7nX3PsFU0.NO1iKgL.jkyYLrd9M9ZBLWx8M3zJ4-1754625673-1.0.1.1-EO19BvKhn26ZxoPIUTmMAf2Eo1moSStCMmdBa4NFN8GqfAeAJ3IvfjUcp.uvYUib2FXkOrD9RQ2QpBaCzfIGt6A9NDKILq08jNKV0AmhAyI; path=/; expires=Fri, 08-Aug-25 04:31:13 GMT; domain=.communication.gouv.fr; HttpOnly; Secure; SameSite=None"
       ],
       "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "969b63e48bba355a-WAW",
+      "cf-ray": "96bc1c7a798e99eb-CDG",
       "alt-svc": "h3=\":443\"; ma=86400"
     }
   },
@@ -46,7 +56,7 @@
       "data": {
         "__cf_bm": {
           "domain": "communication.gouv.fr",
-          "expires": "2025-08-04T05:12:48.000Z",
+          "expires": "2025-08-08T04:31:13.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -105,10 +115,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
@@ -120,10 +130,10 @@
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
       "pass": true,
-      "result": "corp-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "corp-implemented-with-same-origin",
+      "scoreModifier": 10,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     }
   }
