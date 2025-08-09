@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.haut-conseil-egalite.gouv.fr</pre>
-<p class="lead">Tue Aug  5 04:31:13 2025 – Tue Aug  5 04:33:56 2025<br>1 hosts scanned.
+<p class="lead">Sat Aug  9 04:02:31 2025 – Sat Aug  9 04:05:01 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,12 +111,35 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
+<td title="Service">http</td>
 <td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+    Content-Length: 0
+  GetRequest, HTTPOptions, RTSPRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://sip:nm
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://mstshash=nmap
+    Connection: close
+    Content-Length: 0</pre>
+</td></tr>
 <tr class="active">
 <td>113</td>
 <td>tcp</td>
@@ -136,7 +159,9 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.0 404 Not Found
@@ -145,15 +170,15 @@
     ERROR
   GetRequest: 
     HTTP/1.1 200 OK
-    Date: Tue, 05 Aug 2025 04:31:35 GMT
+    Date: Sat, 09 Aug 2025 04:02:51 GMT
     X-Outils-CS: 
     Vary: Cookie,Accept-Encoding
     Composed-By: SPIP 4.3.6 @ www.spip.net + https://https:/local/config.txt
     X-Spip-Cache: 86400
-    Last-Modified: Tue, 05 Aug 2025 04:31:35 GMT
+    Last-Modified: Sat, 09 Aug 2025 04:02:51 GMT
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-http=!f0uNbfxx/faTujKGSajX/n7IEULO/OoZI1pQcVsibL0S4Pk1Lm92F2G2uOGxmvxnusL7RiCnyZVbkKPQJ2o7qzM6fQY=; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dgcs-hautconseilegalite2.cegedim.cloud-http=!KIbZ1G8OYaWjfs+GSajX/n7IEULO/FCwr2GF8DWmkDZ8mxRYQ26PkW/jvQNEQgyZ4NKtoyrz5oVvJ3CqBz6SeJQXMzg=; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
     &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"&gt;
@@ -166,14 +191,7 @@
     HTTP/1.0 403 Forbidden
     Connection: Keep-Alive
     Content-Length: 9
-    ERROR
-  RTSPRequest, SIPOptions: 
-    HTTP/1.0 400 Bad Request
-    Connection: Keep-Alive
-    Content-Length: 9
     ERROR</pre>
-<h5>http-trane-info</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -196,7 +214,7 @@
 <td>185.194.83.18 - www.haut-conseil-egalite.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
+<td>http</td>
 <td></td>
 <td></td>
 <td></td>
