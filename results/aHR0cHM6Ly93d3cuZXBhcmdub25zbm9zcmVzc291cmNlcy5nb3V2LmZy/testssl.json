@@ -153,6 +153,20 @@
               "finding"      : "not offered"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server -- server prioritizes ChaCha ciphers when preferred by clients"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 521   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
               "id"           : "cipher-tls1_3_x1302",
               "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
               "port"         : "443",
@@ -167,25 +181,25 @@
               "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH 521   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 521   AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_3",
+              "id"           : "cipherorder_TLSv1_3",
               "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "prioritize_chacha_TLSv1_3",
+              "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "true"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not a cipher order for TLS 1.3 configured"
+              "finding"      : "server (TLS 1.3)"
           }
 ,         {
               "id"           : "FS",
@@ -395,7 +409,7 @@
               "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "79 >= 30 days"
+              "finding"      : "74 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -549,14 +563,14 @@
               "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
+              "finding"      : "-1 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1754627260"
+              "finding"      : "1755056461"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1136,10 +1150,9 @@
               "finding"      : "A+"
           }
 ,         {
-              "id"           : "scanTime",
-              "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.204.137",
+              "id"           : "optimal_proto",
+              "ip"           : "www.epargnonsnosressources.gouv.fr/51.159.86.157",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "146"
+              "severity"     : "WARN",
+              "finding"      : "Sockets didn't work. Testing NODE:443 only succeeded using /usr/bin/openssl."
           }
-]

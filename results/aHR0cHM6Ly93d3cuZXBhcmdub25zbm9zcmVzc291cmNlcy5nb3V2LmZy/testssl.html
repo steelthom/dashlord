@@ -19,10 +19,13 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on pkrvmjbmru5nbw0:/home/testssl/bin/openssl.Linux.x86_64
+  on pkrvmsl9tci6h6u:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-08-08 04:26:12        --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
+<span style="font-weight:bold;">Testing all IP addresses (port 443): </span>51.159.204.137 51.159.86.157
+-----------------------------------------------------
+<span style="color:white;background-color:black;"> Start 2025-08-13 03:39:23        --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
 
+ Further IP addresses:   51.159.86.157 
  rDNS (51.159.204.137):  51-159-204-137.lb.fr-par.scw.cloud.
 
  Service detected:       HTTP
@@ -54,6 +57,8 @@
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
+<span style="color:#cd00cd;">Fixme: something weird happened around line 7058</span>
+<span style="color:#cd00cd;">Fixme: something weird happened around line 7063</span>
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -66,13 +71,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  - 
 <u>TLSv1.2</u>
  - 
-<u>TLSv1.3</u> (listed by strength)
+<u>TLSv1.3</u> (server order -- server prioritizes ChaCha ciphers when preferred by clients)
+ x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 521</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
  x1302   TLS_AES_256_GCM_SHA384            ECDH<span style="color:#008817;"> 521</span>   AESGCM      256      TLS_AES_256_GCM_SHA384                             
  x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH<span style="color:#008817;"> 521</span>   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
- x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 521</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
 
-<span style="font-weight:bold;"> Has server cipher order?     </span>no (TLS 1.3 only)
- (limited sense as client will pick)
+<span style="font-weight:bold;"> Has server cipher order?     </span>yes (TLS 1.3 only)
+
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -106,7 +111,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=1863FD2000C82DD12D734238AAA4E53C3AE52815D3E4722D0D750548478FC670
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">79 &gt;= 30 days</span> (2025-07-28 09:58 --&gt; 2025-10-26 09:58)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">74 &gt;= 30 days</span> (2025-07-28 09:58 --&gt; 2025-10-26 09:58)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://r10.c.lencr.org/45.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>--
@@ -123,7 +128,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  301 Moved Permanently, redirecting to &quot;<a href="https://epargnonsnosressources.gouv.fr/" style="color:black;text-decoration:none;">https://epargnonsnosressources.gouv.fr/</a>&quot;
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">186 days</span>=16070400 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>ADEME-CLOUD&apos;
@@ -213,9 +218,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-08-08 04:28:36 [ 146s] --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-08-13 03:41:58 [ 158s] --&gt;&gt; 51.159.204.137:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
 
+-----------------------------------------------------
+<span style="color:white;background-color:black;"> Start 2025-08-13 03:41:58        --&gt;&gt; 51.159.86.157:443 (www.epargnonsnosressources.gouv.fr) &lt;&lt;--</span>
 
-</pre>
-</body>
-</html>
+ Further IP addresses:   51.159.204.137 
+ rDNS (51.159.86.157):   51-159-86-157.lb.fr-par.scw.cloud.
+<span style="color:#cd00cd;">This shouldn&apos;t happen (pls report): Testing www.epargnonsnosressources.gouv.fr:443 only succeeded using /usr/bin/openssl.</span>
+<span style="color:#cd00cd;">But testssl.sh also needs bash sockets to perform its checks correctly.
+</span>
+You can try to continue using the --ssl-native option but the results are likely not complete.
+Or you can restart using --ssl-native with another openssl version (--openssl &lt;PATH&gt;).
