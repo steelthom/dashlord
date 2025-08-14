@@ -1,12 +1,21 @@
-# Nmap 7.92 scan initiated Sat Aug  9 04:14:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.horizon-europe.gouv.fr
+# Nmap 7.92 scan initiated Thu Aug 14 04:17:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.horizon-europe.gouv.fr
 Nmap scan report for www.horizon-europe.gouv.fr (185.75.143.93)
-Host is up (0.13s latency).
+Host is up (0.11s latency).
 rDNS record for 185.75.143.93: men-tandem-lb-vip.dedie.ate.info
-Not shown: 945 filtered tcp ports (no-response), 53 closed tcp ports (reset)
-PORT    STATE SERVICE        VERSION
-80/tcp  open  tcpwrapped
+Not shown: 990 filtered tcp ports (no-response)
+PORT      STATE  SERVICE        VERSION
+80/tcp    open   tcpwrapped
 |_http-server-header: nginx
-443/tcp open  ssl/tcpwrapped
+443/tcp   open   ssl/tcpwrapped
+|_http-server-header: nginx
+911/tcp   closed xact-backup
+1037/tcp  closed ams
+1039/tcp  closed sbl
+5102/tcp  closed admeng
+5280/tcp  closed xmpp-bosh
+5815/tcp  closed unknown
+8443/tcp  closed https-alt
+56738/tcp closed unknown
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Aug  9 04:14:30 2025 -- 1 IP address (1 host up) scanned in 26.09 seconds
+# Nmap done at Thu Aug 14 04:18:29 2025 -- 1 IP address (1 host up) scanned in 29.45 seconds
