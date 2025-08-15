@@ -1,12 +1,13 @@
-# Nmap 7.92 scan initiated Mon Aug 11 03:33:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
+# Nmap 7.92 scan initiated Fri Aug 15 04:03:44 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.vigipirate.gouv.fr
 Nmap scan report for www.vigipirate.gouv.fr (87.98.148.216)
-Host is up (0.089s latency).
+Host is up (0.088s latency).
 rDNS record for 87.98.148.216: vigipirate.gouv.fr
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
 22/tcp   open  ssh      OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:7.4p1: 
+|     	FF02A46B-33EF-5995-B22B-451D42342473	10.0	https://vulners.com/githubexploit/FF02A46B-33EF-5995-B22B-451D42342473	*EXPLOIT*
 |     	A158559B-0D11-5BBE-BADD-93C4CE1BAB79	10.0	https://vulners.com/githubexploit/A158559B-0D11-5BBE-BADD-93C4CE1BAB79	*EXPLOIT*
 |     	95499236-C9FE-56A6-9D7D-E943A24B633A	10.0	https://vulners.com/githubexploit/95499236-C9FE-56A6-9D7D-E943A24B633A	*EXPLOIT*
 |     	5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A	10.0	https://vulners.com/githubexploit/5E6968B4-DBD6-57FA-BF6E-D9B2219DB27A	*EXPLOIT*
@@ -91,12 +92,12 @@ PORT     STATE SERVICE  VERSION
 3306/tcp open  mysql?
 | fingerprint-strings: 
 |   NULL: 
-|_    Host '20.109.86.225' is not allowed to connect to this MariaDB server
+|_    Host '68.154.54.96' is not allowed to connect to this MariaDB server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3306-TCP:V=7.92%I=7%D=8/11%Time=68996487%P=x86_64-alpine-linux-musl
-SF:%r(NULL,4C,"H\0\0\x01\xffj\x04Host\x20'20\.109\.86\.225'\x20is\x20not\x
-SF:20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+SF-Port3306-TCP:V=7.92%I=7%D=8/15%Time=689EB1A2%P=x86_64-alpine-linux-musl
+SF:%r(NULL,4B,"G\0\0\x01\xffj\x04Host\x20'68\.154\.54\.96'\x20is\x20not\x2
+SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Aug 11 03:33:41 2025 -- 1 IP address (1 host up) scanned in 16.04 seconds
+# Nmap done at Fri Aug 15 04:04:00 2025 -- 1 IP address (1 host up) scanned in 15.99 seconds
