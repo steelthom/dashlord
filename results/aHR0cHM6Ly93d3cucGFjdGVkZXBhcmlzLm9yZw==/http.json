@@ -9,7 +9,7 @@
     "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 14 Aug 2025 03:21:49 GMT",
+      "date": "Mon, 18 Aug 2025 03:59:13 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
@@ -22,14 +22,17 @@
       "origin-agent-cluster": "?1",
       "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
       "referrer-policy": "same-origin",
-      "server-timing": "chlray;desc=\"96ed53045d1d09e5\"",
+      "server-timing": "chlray;desc=\"970e7f4d792d67ee\"",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
       "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "set-cookie": [
+        "__cf_bm=CPa9ijXW2O1Xc7Z9tm8N8LuziZYtMNEywJnP3KagXFk-1755489553-1.0.1.1-oaCcGqyIOGs4gJH0sEWwtUroUFAQ20H9oJr0BCOaYQFVQ3yKIMpWD9xA.3fukAYre5O61RHBR518Bq7G9Pj.2i_atDcsjIxC6BSHTdfuols; path=/; expires=Mon, 18-Aug-25 04:29:13 GMT; domain=.pact-prosperity-people-planet.org; HttpOnly; Secure; SameSite=None"
+      ],
       "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "96ed53045d1d09e5-IAD"
+      "cf-ray": "970e7f4d792d67ee-SJC"
     }
   },
   "tests": {
@@ -47,10 +50,20 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
-      "sameSite": false
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
+      "data": {
+        "__cf_bm": {
+          "domain": "pact-prosperity-people-planet.org",
+          "expires": "2025-08-18T04:29:13.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        }
+      },
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
