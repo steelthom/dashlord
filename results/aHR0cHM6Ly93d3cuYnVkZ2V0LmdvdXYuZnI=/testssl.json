@@ -507,7 +507,7 @@
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "98 >= 60 days"
+              "finding"      : "94 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -661,21 +661,14 @@
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1755401090"
+              "finding"      : "Got no HTTP time, maybe try different URL?"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -710,7 +703,7 @@
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "nginx"
+              "finding"      : "No Server banner line in header, interesting!"
           }
 ,         {
               "id"           : "banner_application",
@@ -724,70 +717,28 @@
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "3 at '/'"
+              "finding"      : "2 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (3) at '/' marked as secure"
+              "finding"      : "All (2) at '/' marked as secure"
           }
 ,         {
               "id"           : "cookie_httponly",
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "3/3 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:;"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1;mode=block"
-          }
-,         {
-              "id"           : "Access-Control-Allow-Origin",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "*"
-          }
-,         {
-              "id"           : "Referrer-Policy",
-              "ip"           : "www.budget.gouv.fr/45.223.57.83",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "same-origin"
+              "finding"      : "2/2 at '/' marked as HttpOnly (maybe missed the application)"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=600"
+              "finding"      : "no-cache, no-store"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -863,10 +814,10 @@
               "id"           : "BREACH",
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip deflate compress br HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1294,6 +1245,6 @@
               "ip"           : "www.budget.gouv.fr/45.223.57.83",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "78"
+              "finding"      : "73"
           }
 ]
