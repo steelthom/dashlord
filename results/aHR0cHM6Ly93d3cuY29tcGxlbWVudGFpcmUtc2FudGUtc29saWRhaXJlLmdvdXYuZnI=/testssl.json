@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -160,6 +160,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
@@ -178,7 +206,7 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -188,18 +216,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -237,11 +279,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -290,7 +332,7 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "4BD300294FF022019BFC633404F05497"
+              "finding"      : "A85752CC7ABAA7E6FDE0E8FCB94C380B"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -304,21 +346,21 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "4186CF3C72DBE23ED5073006B657706A89ED5262"
+              "finding"      : "811328C31D213D8C7D28485C54E48A2EB4B59D95"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "B9B13E748EE48DF10F8ABF8F411BD48A40EE639336DA2B4EFD272580C020E958"
+              "finding"      : "FAD21FFBF89A86FB3661D5C068D6606F19F245018DBEC11EAF9BC37DFA9F2755"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIJRzCCBy+gAwIBAgIQS9MAKU/wIgGb/GM0BPBUlzANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJGUjESMBAGA1UECgwJREhJTVlPVElTMRwwGgYDVQQLDBMwMDAyIDQ4MTQ2MzA4MTAwMDM2MR0wGwYDVQRhDBROVFJGUi00ODE0NjMwODEwMDAzNjEdMBsGA1UEAwwUQ2VydGlnbmEgU2VydmljZXMgQ0EwHhcNMjUwNjAyMDAwMDAwWhcNMjUwODMwMjM1OTU5WjCBsjELMAkGA1UEBhMCRlIxDjAMBgNVBAcMBVBBUklTMUkwRwYDVQQKDEBTRUNSRVRBUklBVCBHRU5FUkFMIERFUyBNSU5JU1RFUkVTIENIQVJHRVMgREVTIEFGRkFJUkVTIFNPQ0lBTEVTMTMwMQYDVQQDDCp3d3cuY29tcGxlbWVudGFpcmUtc2FudGUtc29saWRhaXJlLmdvdXYuZnIxEzARBgNVBAUTClMzNDc3Nzk5MDMwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDfkUBxBOSQb+qAItAFXy2j7Cv0V/4YhrI5sCaJ3/+zSqrxCFRMHt4aXawadicEARu5UY0NyBG6Oz7y4ySKsIMkBSjwyg+i5Az2+ZQojWU0jyOewCOT72v9jBvI7rT27LUizc5dDEj4nwLxHXn3vN930eFDiLn8nf2g8qdvOYah4mhpxZ21U6HaKO0ikbM20TBMxx6qJk47jZGshJ7qZKH7cCVKEvx12OJKKFrPQoRDZgelU6xNiS90cFqxpZp8/U9U5tQXdDey2I7xpif190dgmpHvnRBaYP5O4FCiZoTVlomv2Ph8966V4HXgukFtPlGQ3AK2U44qSJkVVDAfXxSKMvyX3DNUf6jxQW0aA1G9B63HZhWiK1ElGWlol2mizl1F1YPSr+U+eAzqrqA/k04JLjImAoE7XFuV6W3xTAD4bJy1zntuq1DvihUltI8QjtyR+TW4HkMJA5Rpgi3ZY6RJNF+obmF3TiSfxZ/Ll/OIF0VByclOryya7wBR1ZF1ja0CAwEAAaOCBAswggQHMIHkBggrBgEFBQcBAQSB1zCB1DA4BggrBgEFBQcwAoYsaHR0cDovL2F1dG9yaXRlLmRoaW15b3Rpcy5jb20vc2VydmljZXNjYS5kZXIwNgYIKwYBBQUHMAKGKmh0dHA6Ly9hdXRvcml0ZS5jZXJ0aWduYS5mci9zZXJ2aWNlc2NhLmRlcjAuBggrBgEFBQcwAYYiaHR0cDovL3NlcnZpY2VzY2Eub2NzcC5jZXJ0aWduYS5mcjAwBggrBgEFBQcwAYYkaHR0cDovL3NlcnZpY2VzY2Eub2NzcC5kaGlteW90aXMuY29tMB8GA1UdIwQYMBaAFKzsho9LNxy4fxcbGdCu6E7jNFwSMAwGA1UdEwEB/wQCMAAwYQYDVR0gBFowWDAIBgZngQwBAgIwTAYLKoF6AYExAgUBAQIwPTA7BggrBgEFBQcCARYvaHR0cHM6Ly93d3cuY2VydGlnbmEuY29tL2F1dG9yaXRlLWNlcnRpZmljYXRpb24wZQYDVR0fBF4wXDAtoCugKYYnaHR0cDovL2NybC5kaGlteW90aXMuY29tL3NlcnZpY2VzY2EuY3JsMCugKaAnhiVodHRwOi8vY3JsLmNlcnRpZ25hLmZyL3NlcnZpY2VzY2EuY3JsMBMGA1UdJQQMMAoGCCsGAQUFBwMBMA4GA1UdDwEB/wQEAwIFoDBdBgNVHREEVjBUgip3d3cuY29tcGxlbWVudGFpcmUtc2FudGUtc29saWRhaXJlLmdvdXYuZnKCJmNvbXBsZW1lbnRhaXJlLXNhbnRlLXNvbGlkYWlyZS5nb3V2LmZyMB0GA1UdDgQWBBQKajp0U7WmP5sc6gN+BdKEvPMpGDCCAYAGCisGAQQB1nkCBAIEggFwBIIBbAFqAHcAKOKBOP2DIUXpqdaqdTdtg3eohRKzwH9yQUgh3L3pjGYAAAGXL8ZDdQAABAMASDBGAiEAvf3+8aOIaem0iABzBJOpDQN3gTz7mWNhMty3wuvo/MMCIQCoFXUb+rHejm6l4TOcMJo5BN4x1JKrZdi17nMU5MntBAB3AA3h8jAr0w3BQGISCepVLvxHdHyx1+kw7w5CHrR+Tqo0AAABly/GRX8AAAQDAEgwRgIhAIAeRe3HuGPZyDkKLYAB76UJKidWwax3DvaI2HFmTR+cAiEA5Tnz9orvV3nQroWpHFsZ4B92VM4zMIfaQwxZk3aSr6gAdgAS8U40vVNyTIQGGcOPP3oT+Oe1YoeInG0wBYTr5YYmOgAAAZcvxkQEAAAEAwBHMEUCIQDGQMJ7K96NB2N3xQ0uKGQ44z4HFnikDXFTz0kAcEI1gwIgMayt0GNaGB0PtFmYsNDKx0+D1u7S8gAzujfHm4n99nAwDQYJKoZIhvcNAQELBQADggIBADe6wmkYS0ILSVyZ3p6Ob2QhLZ4KuNK+fe7gaZixcR/NPrh2ylOenPkzghH+Ju/avKRX7ICFjp2umuzVaUT+eSMI8SmNQCpHTM9nh7TkoDKFbbEPc4E1cbfum4/Bm8igQ+6o2AvJxVK3YBrH46ZyGvC6R1lTcZy65fumHPwFyy5vtOwhrohtVZRdqYm55YMXYCA4rq/nK4ksfGDFQW1NXGP3o099Rfc75Bf0BjQAgBcVqBeyrAiNDTbWEDi3DGp9Aom0U1n9P8+bFrXisgjdBKwtCeVVyl+59GyoWo2GT723HrMUlqxV4QsPgOu1qADfFIh326gX0G2xrVx/1zwfPmZ2HFS9UNGvqeP1XmOh/LB4s1DwA6kquwbv1CoCPZ5nvCADixrtQBx9iP9KQaHCqwty6qoSyIIC5j+l5jyH4wo1JROO1420CDWFE777bxz9EvWp/rPFMVx2apFxi/1pp0eGLnhPqtNcKoijLfCmlIiKQxkbajSwMgYr0kLFZb9rWpiBKhKcYedonGJWoUORSNSqguOw2wcYDhQYZSWEZpwJD3XPuPO6eNfIwY4f8x1yxbEn96hspwcRY6MvhgJbHBLJfS+zVim+BD3UQRdhpfyrb2xvwNqBMJhULqtPULkFzoA4yp0zUo7qg/EeXG6uduJMzaLsdw6R4tPDSvVInori\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -339,7 +381,7 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "www.complementaire-sante-solidaire.gouv.fr complementaire-sante-solidaire.gouv.fr"
+              "finding"      : "complementaire-sante-solidaire.gouv.fr www.complementaire-sante-solidaire.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
@@ -366,22 +408,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (13)"
+              "severity"     : "OK",
+              "finding"      : "90 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-06-02 00:00"
+              "finding"      : "2025-08-12 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-08-30 23:59"
+              "severity"     : "OK",
+              "finding"      : "2025-11-20 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -521,7 +563,7 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-832464 seconds from localtime"
+              "finding"      : "-1261552 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
@@ -743,7 +785,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=B9B13E748EE48DF10F8ABF8F411BD48A40EE639336DA2B4EFD272580C020E958"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=FAD21FFBF89A86FB3661D5C068D6606F19F245018DBEC11EAF9BC37DFA9F2755"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -818,63 +860,63 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -923,35 +965,35 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -965,42 +1007,42 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1014,21 +1056,21 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1042,7 +1084,7 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1112,20 +1154,13 @@
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.complementaire-sante-solidaire.gouv.fr/185.194.83.92",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "111"
+              "finding"      : "76"
           }
 ]
