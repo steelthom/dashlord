@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -395,7 +395,7 @@
               "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "141 >= 60 days"
+              "finding"      : "137 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -538,112 +538,6 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
-          }
-,         {
-              "id"           : "HTTP_clock_skew",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-34300 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1755625618"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "182 days (=15768000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "only for this domain"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "domain is NOT marked for preloading"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Apache"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "X-Powered-By: PHP/8.0.30"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 at '/'"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "X-UA-Compatible",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "IE=edge"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "must-revalidate, no-cache, private"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
-          }
-,         {
               "id"           : "heartbleed",
               "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
               "port"         : "443",
@@ -665,10 +559,10 @@
               "id"           : "ticketbleed",
               "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "INFO",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not vulnerable"
+              "finding"      : "not applicable, not HTTP"
           }
 ,         {
               "id"           : "ROBOT",
@@ -703,16 +597,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "BREACH",
-              "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cve"          : "CVE-2013-3587",
-              "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable (not using HTTP anyway)"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1147,6 +1032,6 @@
               "ip"           : "www.observatoire-des-territoires.gouv.fr/217.115.162.98",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "133"
+              "finding"      : "103"
           }
 ]
