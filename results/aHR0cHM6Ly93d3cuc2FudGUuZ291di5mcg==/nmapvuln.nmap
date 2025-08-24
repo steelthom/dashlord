@@ -1,91 +1,38 @@
-# Nmap 7.92 scan initiated Wed Aug 20 03:24:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.gouv.fr
+# Nmap 7.92 scan initiated Sun Aug 24 03:54:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.sante.gouv.fr
 Nmap scan report for www.sante.gouv.fr (185.194.82.27)
 Host is up (0.081s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
-80/tcp  open   tcpwrapped
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/https
-| fingerprint-strings: 
-|   GetRequest: 
-|     HTTP/1.1 200 OK
-|     Date: Wed, 20 Aug 2025 03:24:45 GMT
-|     X-Spip-Cache: 21600
-|     X-Frame-Options: SAMEORIGIN
-|     Last-Modified: Wed, 20 Aug 2025 03:24:45 GMT
-|     Vary: Accept-Encoding
-|     X-Content-Type-Options: nosniff
-|     Connection: close
-|     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!GSroxFnPs2omDaaGSajX/n7IEULO/FCr4N9wHchQ5IqLUswe3mgIos/wC+QfwZhtxu2YPshLmMGxTKalls07juDYmSN9; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=31536000
-|     <!DOCTYPE HTML>
-|     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
-|     <head>
-|     <script>/*<![CDATA[*/(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement);/*]]>*/</script>
-|     <title>Accueil - Minist
-|     sant
-|     l&#039;acc
-|     soins</title>
-|     <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
-|   HTTPOptions: 
-|     HTTP/1.1 200 OK
-|     Date: Wed, 20 Aug 2025 03:24:45 GMT
-|     X-Spip-Cache: 21600
-|     X-Frame-Options: SAMEORIGIN
-|     Last-Modified: Wed, 20 Aug 2025 03:24:45 GMT
-|     Vary: Accept-Encoding
-|     X-Content-Type-Options: nosniff
-|     Connection: close
-|     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!veZm+1XkMbpef0uGSajX/n7IEULO/FzILAHCVE5a0oOfE3AQqC2ijBAAZMvTlUHisaCyqZNzVfVZH6gCJYzLU06WQHAq; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=31536000
-|     <!DOCTYPE HTML>
-|     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
-|     <head>
-|     <script>/*<![CDATA[*/(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement);/*]]>*/</script>
-|     <title>Accueil - Minist
-|     sant
-|     l&#039;acc
-|     soins</title>
-|_    <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
 |_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Cache-Control: no-store, must-revalidate, no-cache
+|     Pragma: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 245
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <14074802990692623089><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/20%Time=68A53FFD%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,41F4,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2020\
-SF:x20Aug\x202025\x2003:24:45\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX-Frame-
-SF:Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Wed,\x2020\x20Aug\x202025\x
-SF:2003:24:45\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-Options
-SF::\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20
-SF:charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-dares\.ce
-SF:gedim\.cloud-http=!GSroxFnPs2omDaaGSajX/n7IEULO/FCr4N9wHchQ5IqLUswe3mgI
-SF:os/wC\+QfwZhtxu2YPshLmMGxTKalls07juDYmSN9;\x20path=/;\x20Httponly;\x20S
-SF:ecure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<!DOCTYP
-SF:E\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-js\"\x20l
-SF:ang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\[\*/\(fu
-SF:nction\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'js'\)}\)
-SF:\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>Accueil\
-SF:x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20de\x20l&#
-SF:039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/css'>img
-SF:\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20{display
-SF::inline-bl")%r(HTTPOptions,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed
-SF:,\x2020\x20Aug\x202025\x2003:24:45\x20GMT\r\nX-Spip-Cache:\x2021600\r\n
-SF:X-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Wed,\x2020\x20Aug\x
-SF:202025\x2003:24:45\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type
-SF:-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/h
-SF:tml;\x20charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-d
-SF:ares\.cegedim\.cloud-http=!veZm\+1XkMbpef0uGSajX/n7IEULO/FzILAHCVE5a0oO
-SF:fE3AQqC2ijBAAZMvTlUHisaCyqZNzVfVZH6gCJYzLU06WQHAq;\x20path=/;\x20Httpon
-SF:ly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n
-SF:<!DOCTYPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-j
-SF:s\"\x20lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\
-SF:[\*/\(function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'
-SF:js'\)}\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>
-SF:Accueil\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20d
-SF:e\x20l&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/
-SF:css'>img\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20
-SF:{display:inline-bl");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/24%Time=68AA8D0F%P=x86_64-alpine-linux
+SF:-musl%r(FourOhFourRequest,1EE,"HTTP/1\.1\x20200\x20OK\r\nCache-Control:
+SF:\x20no-store,\x20must-revalidate,\x20no-cache\r\nPragma:\x20no-cache\r\
+SF:nConnection:\x20close\r\nContent-Type:\x20text/html\r\nContent-Length:\
+SF:x20245\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20
+SF:mode=block\r\nX-Content-Type-Options:\x20nosniff\r\n\r\n<html><head><ti
+SF:tle>Request\x20Rejected</title></head><body>The\x20requested\x20URL\x20
+SF:was\x20rejected\.\x20Please\x20consult\x20with\x20your\x20administrator
+SF:\.<br><br>Your\x20support\x20ID\x20is:\x20<14074802990692623089><br><br
+SF:><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]</body></html
+SF:>");
+Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Aug 20 03:27:01 2025 -- 1 IP address (1 host up) scanned in 155.04 seconds
+# Nmap done at Sun Aug 24 03:55:09 2025 -- 1 IP address (1 host up) scanned in 43.84 seconds
