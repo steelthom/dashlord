@@ -1,17 +1,10 @@
-# Nmap 7.92 scan initiated Wed Aug 20 03:17:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln travail-emploi.gouv.fr
+# Nmap 7.92 scan initiated Sun Aug 24 04:10:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln travail-emploi.gouv.fr
 Nmap scan report for travail-emploi.gouv.fr (185.194.83.138)
-Host is up (0.082s latency).
+Host is up (0.080s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE   VERSION
-80/tcp  open   http      BigIP
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-| fingerprint-strings: 
-|   GetRequest: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///
-|     Server: BigIP
-|     Connection: close
-|_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
 | fingerprint-strings: 
@@ -25,10 +18,10 @@ PORT    STATE  SERVICE   VERSION
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 1; mode=block
 |     X-Content-Type-Options: nosniff
-|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <14074802990392581351><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <14074802990715225228><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
 |   GetRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 20 Aug 2025 03:18:09 GMT
+|     Date: Sun, 24 Aug 2025 04:11:11 GMT
 |     Content-Length: 226
 |     Content-Type: text/html; charset=iso-8859-1
 |     Age: 0
@@ -36,7 +29,7 @@ PORT    STATE  SERVICE   VERSION
 |     X-Cache-Hits: 0
 |     X-Cache-Ttl: 120.000
 |     Connection: close
-|     Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-tcp80=!p0bCWrnOoHk+HqKGSajX/n7IEULO/K4PdjJ+Qz89L7XozV9EkMF61Uh29TUBkvBX6hWJRnJSIWIByhF74CV8SaQtQAaI; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-tcp80=!Nt7taG8UguSsMziGSajX/n7IEULO/Dwz84XSzNMSW34lVsvuRtJIQP7UJGfUiMl7+9nkcldUmAImuXD64VUhwQagcphv; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 |     <html><head>
@@ -48,7 +41,7 @@ PORT    STATE  SERVICE   VERSION
 |     </body></html>
 |   HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 20 Aug 2025 03:18:09 GMT
+|     Date: Sun, 24 Aug 2025 04:11:11 GMT
 |     Content-Length: 226
 |     Content-Type: text/html; charset=iso-8859-1
 |     Age: 0
@@ -56,7 +49,7 @@ PORT    STATE  SERVICE   VERSION
 |     X-Cache-Hits: 0
 |     X-Cache-Ttl: -0.000
 |     Connection: close
-|     Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-tcp80=!1gDYWDzA9jcmSLqGSajX/n7IEULO/P5nA7JrVVoV3Zwmbx2RTUJ8ssPn3tf2TGscKcZlFFFWu3n7OLJJfJiV6zUb+ljy; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-travail-production.cegedim.cloud-tcp80=!+KRSu235nz8BKXCGSajX/n7IEULO/JFIbd4fx6abuoIAftUDEV4xBdpNJ2t0QtCJpq8tdhTBShFfqIcHr2aY+cjg5Jio; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 |     <html><head>
@@ -67,34 +60,28 @@ PORT    STATE  SERVICE   VERSION
 |     </p>
 |_    </body></html>
 |_http-trane-info: Problem with XML parsing of /evox/about
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=8/20%Time=68A53E6A%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,6C,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nContent-Leng
-SF:th:\x200\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/20%Time=68A53E71%P=x86_64-alpine-linux
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/24%Time=68AA90DF%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,2B2,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Wed,\x2020\x20Aug\x202025\x2003:18:09\x20GMT\r\nContent-Length:\x20226\
+SF:Sun,\x2024\x20Aug\x202025\x2004:11:11\x20GMT\r\nContent-Length:\x20226\
 SF:r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nAge:\x200\r\nX-
 SF:Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nX-Cache-Ttl:\x20120\.000\r\nCon
 SF:nection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-travail-production\
-SF:.cegedim\.cloud-tcp80=!p0bCWrnOoHk\+HqKGSajX/n7IEULO/K4PdjJ\+Qz89L7XozV
-SF:9EkMF61Uh29TUBkvBX6hWJRnJSIWIByhF74CV8SaQtQAaI;\x20path=/;\x20Httponly;
-SF:\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
-SF:eSubDomains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTM
-SF:L\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n<
-SF:/head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\
-SF:x20request\x20that\x20this\x20server\x20could\x20not\x20understand\.<br
-SF:\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,2B1,"HTTP/1\.1\x20400\x2
-SF:0Bad\x20Request\r\nDate:\x20Wed,\x2020\x20Aug\x202025\x2003:18:09\x20GM
-SF:T\r\nContent-Length:\x20226\r\nContent-Type:\x20text/html;\x20charset=i
-SF:so-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nX-C
-SF:ache-Ttl:\x20-0\.000\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGipSer
-SF:verpool-travail-production\.cegedim\.cloud-tcp80=!1gDYWDzA9jcmSLqGSajX/
-SF:n7IEULO/P5nA7JrVVoV3Zwmbx2RTUJ8ssPn3tf2TGscKcZlFFFWu3n7OLJJfJiV6zUb\+lj
-SF:y;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20m
+SF:.cegedim\.cloud-tcp80=!Nt7taG8UguSsMziGSajX/n7IEULO/Dwz84XSzNMSW34lVsvu
+SF:RtJIQP7UJGfUiMl7\+9nkcldUmAImuXD64VUhwQagcphv;\x20path=/;\x20Httponly;\
+SF:x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20include
+SF:SubDomains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
+SF:\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</
+SF:head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x
+SF:20request\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\
+SF:x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,2B1,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nDate:\x20Sun,\x2024\x20Aug\x202025\x2004:11:11\x20GMT
+SF:\r\nContent-Length:\x20226\r\nContent-Type:\x20text/html;\x20charset=is
+SF:o-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nX-Ca
+SF:che-Ttl:\x20-0\.000\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGipServ
+SF:erpool-travail-production\.cegedim\.cloud-tcp80=!\+KRSu235nz8BKXCGSajX/
+SF:n7IEULO/JFIbd4fx6abuoIAftUDEV4xBdpNJ2t0QtCJpq8tdhTBShFfqIcHr2aY\+cjg5Ji
+SF:o;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20m
 SF:ax-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLI
 SF:C\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x2
 SF:0Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>You
@@ -107,8 +94,9 @@ SF:Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Co
 SF:ntent-Type-Options:\x20nosniff\r\n\r\n<html><head><title>Request\x20Rej
 SF:ected</title></head><body>The\x20requested\x20URL\x20was\x20rejected\.\
 SF:x20Please\x20consult\x20with\x20your\x20administrator\.<br><br>Your\x20
-SF:support\x20ID\x20is:\x20<14074802990392581351><br><br><a\x20href='javas
+SF:support\x20ID\x20is:\x20<14074802990715225228><br><br><a\x20href='javas
 SF:cript:history\.back\(\);'>\[Go\x20Back\]</body></html>");
+Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Aug 20 03:20:33 2025 -- 1 IP address (1 host up) scanned in 163.41 seconds
+# Nmap done at Sun Aug 24 04:13:21 2025 -- 1 IP address (1 host up) scanned in 149.26 seconds
