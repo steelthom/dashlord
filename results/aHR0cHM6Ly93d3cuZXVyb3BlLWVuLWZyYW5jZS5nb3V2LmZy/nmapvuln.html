@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.europe-en-france.gouv.fr</pre>
-<p class="lead">Fri Aug 22 04:00:07 2025 – Fri Aug 22 04:00:36 2025<br>1 hosts scanned.
+<p class="lead">Wed Aug 27 03:29:08 2025 – Wed Aug 27 03:29:59 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -157,13 +157,66 @@
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
-<td title="Product"></td>
+<td title="Service">https</td>
+<td title="Product">Apache</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.1 200 OK
+    date: Wed, 27 Aug 2025 03:29:32 GMT
+    server: Apache
+    content-security-policy: frame-ancestors 'self';
+    last-modified: Wed, 26 Mar 2025 08:06:21 GMT
+    etag: "3c4-6313a50177583"
+    accept-ranges: bytes
+    content-length: 964
+    vary: Accept-Encoding
+    x-xss-protection: 0
+    x-content-type-options: nosniff
+    keep-alive: timeout=2, max=500
+    content-type: text/html
+    set-cookie: BACKENDID=vs1002.anct; path=/
+    cache-control: private
+    connection: close
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="fr"&gt;
+    &lt;head&gt;
+    &lt;title&gt;vs1002.anct.cognix-systems.net&lt;/title&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;style&gt;
+    body { background-color:#171a1f; }
+    div.shadow {
+    position:absolute;
+    max-width:45%;
+    max-height:45%;
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    date: Wed, 27 Aug 2025 03:29:33 GMT
+    server: Apache
+    content-security-policy: frame-ancestors 'self';
+    allow: HEAD,GET,POST,OPTIONS
+    x-xss-protection: 0
+    x-content-type-options: nosniff
+    content-length: 0
+    keep-alive: timeout=2, max=500
+    content-type: text/html
+    set-cookie: BACKENDID=vs1003.anct; path=/
+    connection: close
+  NULL: 
+    HTTP/1.1 408 Request Time-out
+    Content-length: 110
+    Cache-Control: no-cache
+    Connection: close
+    Content-Type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;408 Request Time-out&lt;/h1&gt;
+    Your browser didn't send a complete request in time.
+    &lt;/body&gt;&lt;/html&gt;</pre>
+<h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
 </td></tr>
 <tr class="success">
@@ -248,8 +301,8 @@
 <td>46.105.190.177 - www.europe-en-france.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
-<td></td>
+<td>https</td>
+<td>Apache</td>
 <td></td>
 <td></td>
 <td></td>
