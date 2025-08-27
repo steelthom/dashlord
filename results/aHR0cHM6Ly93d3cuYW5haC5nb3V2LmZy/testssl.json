@@ -549,7 +549,7 @@
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (38)"
+              "finding"      : "expires < 60 days (33)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -695,8 +695,8 @@
               "id"           : "HTTP_status_code",
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "Unexpected 421 Misdirected Request @ '/'"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -710,7 +710,7 @@
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1755835046"
+              "finding"      : "1756264614"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -718,7 +718,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "remoteip: 20.55.13.165 (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "remoteip: 48.214.54.97 (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -767,21 +767,7 @@
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "www.anah.gouv.fr/31.193.53.253",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "www.anah.gouv.fr/31.193.53.253",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as HttpOnly"
+              "finding"      : "0 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -798,13 +784,6 @@
               "finding"      : "nosniff"
           }
 ,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "www.anah.gouv.fr/31.193.53.253",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "font-src 'self' themes.googleusercontent.com data:; frame-src 'self' https://player.vimeo.com/ https://www.dailymotion.com/ https://youtu.be/ https://www.youtube.com/ https://simulaides.ademe.fr/ https://bo-ris.ademe.fr/ https://preprod-simulaidesv2.ademe-dri.fr/ http://preprod-ris.ademe.fr/ https://prod-ris.ademe-dri.fr/ https://www3.ademe.fr/ https://experience.arcgis.com/ https://geo.dailymotion.com/ https://*.arcgis.com; img-src 'self' data: https://logs1412.xiti.com https://vocalcom01.teleperformance.fr http://gva.et-gv.fr http://muth.anah.fr; manifest-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://player.vimeo.com/api/ wss://widget-mediator.zopim.com https://static.zdassets.com https://cdnjs.cloudflare.com; script-src-attr 'self' 'unsafe-inline'; script-src-elem 'self' 'unsafe-inline' https://static.zdassets.com http://gva.et-gv.fr http://muth.anah.fr https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://vocalcom01.teleperformance.fr https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'"
-          }
-,         {
               "id"           : "X-XSS-Protection",
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
@@ -817,13 +796,6 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "no-referrer-when-downgrade"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "www.anah.gouv.fr/31.193.53.253",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "max-age=86400, public"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -899,10 +871,10 @@
               "id"           : "BREACH",
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1330,6 +1302,6 @@
               "ip"           : "www.anah.gouv.fr/31.193.53.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "97"
+              "finding"      : "129"
           }
 ]
