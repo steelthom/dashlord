@@ -29,4 +29,4 @@ for url in urls:
                             file.write(line)
         else:
             print(f"Error accessing {url}")
-            print(e)
+            print(e, "\n")
