@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -167,6 +167,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "www.igas.gouv.fr/185.194.83.89",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "www.igas.gouv.fr/185.194.83.89",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "www.igas.gouv.fr/185.194.83.89",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "www.igas.gouv.fr/185.194.83.89",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
@@ -185,7 +213,7 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -195,18 +223,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "www.igas.gouv.fr/185.194.83.89",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "www.igas.gouv.fr/185.194.83.89",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -244,11 +286,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -297,7 +339,7 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "98A412B2C4D9255C4405CF75B8766E5E"
+              "finding"      : "8D12D4D091547EE25786F33E8715E2C7"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -311,21 +353,21 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "D7958C3AAA6C2A5F3E04187F5B45A6762897C210"
+              "finding"      : "717350C58715EEB4FB03B2DF703F29527AF7B917"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "04903C45D0E658979CEE3EB3B6D05EC18B3F12E3197BCD5174F46D76E888DB8F"
+              "finding"      : "0D90F4DB185A43E884020C300CA2323899820EB7881D4C11330A00562CF45BAF"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -373,22 +415,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (17)"
+              "severity"     : "OK",
+              "finding"      : "84 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-06-02 00:00"
+              "finding"      : "2025-08-27 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-09-09 23:59"
+              "severity"     : "OK",
+              "finding"      : "2025-11-20 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -409,20 +451,20 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.dhimyotis.com/servicesca.crl http://crl.certigna.fr/servicesca.crl"
+              "finding"      : "http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.certigna.fr http://servicesca.ocsp.dhimyotis.com"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "OCSP_stapling",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -465,35 +507,35 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 (Certigna from FR)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFhTCCBG2gAwIBAgIUZC/nHF2pouqOZECc9JYzehjW3kAwDQYJKoZIhvcNAQEMBQAwNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwHhcNMjUwMjI4MDk0OTA0WhcNMjcwNjI4MDk0OTAzWjB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANZ0kTuG6eFTF0KPbtvYBB5zIq+eR03FgyQAyRZE0lqCGRyx96ko+W/yyfxbCgPxMw5jlxdXteXBh8DLc5S4w0ICfOSc8vabFuXKhKa8BAB5/VtdzZosAF1AvFC1WLEVvPiUJRTsY0BkhnFI0UKdLN145hY4EL+CaSUENQ19006BR5P5HeWtmikYHgiq/TBlhTsnaYB6SL8mT40GfBxmp6PEjjrhKLurSQOMbF+6HiEnfZUr3OrKDncxN0GHxFYcIFBTL53JBNFA9qbPYsD6KubJmUqVoImyRKR+eXJHVNfPMhYzQv3EaYh2rpHRsjV96yZBIqBc3QSw82gj8bxh+rZRz8e+QISMlvljhHXqn+Qy4puuMt+3yQmnwFTYJQ13NFv1Uh3cJ5tEHP+yaLLCDqjy+cGCwNGMgsdWhS/67F4/AvRyI424psxuS/RbnKRrva0ZpDLTABgqfnONeU0LdkP817nGKNTKX2BDMD93BzOKzjDSBITJIRR8QICTKtQzmaKhd4UgbqPp+Bq1dMVhk5wW+x+bIHcB+wpqkO534SRMz93ijW2hSKrDWa2CB0Pl5tgcoGZThtjB3/Fm45XQLfW+vcTf+7nH8CRjMXO9swS6TovOXIpa5aG3jM+Dgewg6RbxtO/uIjv1zuIdS02d2h8Is2CvJ9/duOKucuYt1YnfAgMBAAGjggFLMIIBRzBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAKGJWh0dHA6Ly9jZXJ0LmNlcnRpZ25hLmNvbS9DZXJ0aWduYS5jZXIwHwYDVR0jBBgwFoAUGu3+QTmQtCRZvgHyUtVF9lo53BEwEgYDVR0TAQH/BAgwBgEB/wIBADBIBgNVHSAEQTA/MAgGBmeBDAECAjAzBgoqgXoBgTEBAAECMCUwIwYIKwYBBQUHAgEWF2h0dHA6Ly9jcHMuY2VydGlnbmEuY29tMDUGA1UdHwQuMCwwKqAooCaGJGh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSgcuZGxDBc5K3CHMLVYjiYgVpUpjANBgkqhkiG9w0BAQwFAAOCAQEAkYjFkMa/La7tXDId/3ltDS8PKsxhxmOBA6bRsLeDQWIU2E1M/1A1y0bRkw4Y6ZRGmkVLLdQRD9mJIvxnllTyoeOzJPk0BVW6xVgPncatyhNx0bKEFouetx7k+J7yKhu/k3jJP9XAxtbCWViQ4rZ3BvABYHA8rBmfccbVMr04a/+ILTpT/1QiGzhHcpo2fnlQ+okXq0cuikN5/WMlHNgsTJIG2b5yEFtYY84Hlx0ejJX3cOAd4pot9vHdjv8e2KvIq/jopdB5lyv/wbaQ4EHz9i5Z4dvmECjsx9oEHRDmUoeEoV1sb/I/2np3PHjtYTrzzoOTYUaebmdXkFasRpTx1w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "1A209DB499625B4EA29F597BE7744BA1E240B8C7629F75B41A3373339FD7EDDF"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2025-02-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-11-22 11:33"
+              "finding"      : "2027-06-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
@@ -507,7 +549,7 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 <-- Certigna"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -528,21 +570,21 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-92 seconds from localtime"
+              "finding"      : "-1 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1755911391"
+              "finding"      : "1756347590"
           }
 ,         {
               "id"           : "HTTP_headerAge",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "8672 seconds"
+              "finding"      : "3899 seconds"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -620,7 +662,7 @@
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "X-Cache: HITX-Cache-Hits: 78"
+              "finding"      : "X-Cache: HITX-Cache-Hits: 37"
           }
 ,         {
               "id"           : "heartbleed",
@@ -743,7 +785,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=04903C45D0E658979CEE3EB3B6D05EC18B3F12E3197BCD5174F46D76E888DB8F"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=0D90F4DB185A43E884020C300CA2323899820EB7881D4C11330A00562CF45BAF"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -818,63 +860,63 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -923,35 +965,35 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -965,42 +1007,42 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1014,21 +1056,21 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1042,7 +1084,7 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1112,20 +1154,13 @@
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "www.igas.gouv.fr/185.194.83.89",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.igas.gouv.fr/185.194.83.89",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "56"
+              "finding"      : "155"
           }
 ]
