@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Aug 30 04:25:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln elysee.fr
+# Nmap 7.92 scan initiated Mon Sep  1 04:58:28 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln elysee.fr
 Nmap scan report for elysee.fr (185.194.81.29)
-Host is up (0.15s latency).
+Host is up (0.13s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
@@ -11,22 +11,34 @@ PORT    STATE SERVICE   VERSION
 |     Connection: close
 |_    Content-Length: 0
 443/tcp open  ssl/https
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=8/30%Time=68B27D37%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
-SF:20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Length:\x
-SF:200\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanentl
-SF:y\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nC
-SF:ontent-Length:\x200\r\n\r\n")%r(RTSPRequest,6A,"HTTP/1\.0\x20301\x20Mov
-SF:ed\x20Permanently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnectio
-SF:n:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,6A,"H
-SF:TTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://www\.el
-SF:ysee\.fr/\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(T
-SF:erminalServerCookie,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLoc
-SF:ation:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-L
-SF:ength:\x200\r\n\r\n")%r(SIPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Per
-SF:manently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20clo
-SF:se\r\nContent-Length:\x200\r\n\r\n");
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://www.elysee.fr/
+|     Connection: close
+|_    Content-Length: 0
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=9/1%Time=68B52804%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x2
+SF:0https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Length:\x2
+SF:00\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently
+SF:\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nCo
+SF:ntent-Length:\x200\r\n\r\n")%r(RTSPRequest,6A,"HTTP/1\.0\x20301\x20Move
+SF:d\x20Permanently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,6A,"HT
+SF:TP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://www\.ely
+SF:see\.fr/\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(Te
+SF:rminalServerCookie,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLoca
+SF:tion:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Le
+SF:ngth:\x200\r\n\r\n")%r(SIPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Perm
+SF:anently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20clos
+SF:e\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/1%Time=68B5280B%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocat
+SF:ion:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Len
+SF:gth:\x200\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Aug 30 04:27:46 2025 -- 1 IP address (1 host up) scanned in 156.02 seconds
+# Nmap done at Mon Sep  1 05:01:03 2025 -- 1 IP address (1 host up) scanned in 154.46 seconds
