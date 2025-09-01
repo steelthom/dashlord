@@ -47,6 +47,12 @@ jobs:
         with:
           base-path: /dashlord
 
+      - name: Simplify report.json
+        run: |
+          mv report.json report_full.json
+          # keep only url and summary
+          jq '[.[] | {url, summary}]' report_full.json > report.json
+
       - uses: EndBug/add-and-commit@v9
         with:
           add: "report.json"
