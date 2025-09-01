@@ -21,10 +21,10 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on pkrvmccyg1gnepe:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-08-30 03:47:50        --&gt;&gt; 185.24.187.242:443 (rappel.conso.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-09-01 05:03:13        --&gt;&gt; 185.24.187.242:443 (rappel.conso.gouv.fr) &lt;&lt;--</span>
 
  rDNS (185.24.187.242):  --
- Service detected:       Couldn&apos;t determine what&apos;s running on port 443, assuming no HTTP service =&gt; skipping all HTTP checks
+ Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
 
@@ -74,15 +74,18 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
-<span style="color:#008817;"> FS is offered (OK) </span>          <span style="color:#cd00cd;"> Oops: TCP connect problem</span>
-
-<span style="color:#cd00cd;">Unable to open a socket to 185.24.187.242:443. </span>ECDHE-RSA-AES256-GCM-SHA384
+<span style="color:#008817;"> FS is offered (OK) </span>          ECDHE-RSA-AES256-GCM-SHA384
                               DHE-RSA-AES256-GCM-SHA384
                               ECDHE-RSA-AES128-GCM-SHA256
                               DHE-RSA-AES128-GCM-SHA256 
 <span style="font-weight:bold;"> Elliptic curves offered:     </span><span style="color:#008817;">prime256v1</span> <span style="color:#008817;">secp384r1</span> <span style="color:#008817;">secp521r1</span> <span style="color:#008817;">X25519</span> <span style="color:#008817;">X448</span> 
 <span style="font-weight:bold;"> DH group offered:            </span><i>RFC3526/Oakley Group 14</i> (<span style="color:#008817;">2048 bits</span>)
+<span style="font-weight:bold;"> TLS 1.2 sig_algs offered:    </span>RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 
+                              RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 
+                              RSA+SHA512 RSA+SHA224 <span style="color:#a86437;">RSA+SHA1</span> 
+<span style="color:#cd00cd;"> Oops: TCP connect problem</span>
 
+<span style="color:#cd00cd;">Unable to open a socket to 185.24.187.242:443. </span>
 <span style="color:#be32d0;font-weight:bold;">Fatal error: repeated TCP connect problems, giving up</span>
 Consider increasing MAX_SOCKET_FAIL (currently: 2)
 
