@@ -17,9 +17,9 @@ jobs:
   website:
     runs-on: ubuntu-latest
     name: Website
-    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Get triggering workflow inputs
+        if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
         id: get-inputs
         uses: actions/github-script@v7
         with:
