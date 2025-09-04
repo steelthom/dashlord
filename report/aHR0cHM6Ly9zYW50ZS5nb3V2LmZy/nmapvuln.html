@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sante.gouv.fr</pre>
-<p class="lead">Sun Aug 31 04:36:05 2025 – Sun Aug 31 04:36:50 2025<br>1 hosts scanned.
+<p class="lead">Thu Sep  4 04:23:31 2025 – Thu Sep  4 04:26:23 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,14 +111,22 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
-<td title="Product"></td>
+<td title="Service">http</td>
+<td title="Product">BigIP</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///
+    Server: BigIP
+    Connection: close
+    Content-Length: 0</pre>
 </td></tr>
 <tr class="active">
 <td>113</td>
@@ -145,15 +153,15 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   GetRequest: 
     HTTP/1.1 200 OK
-    Date: Sun, 31 Aug 2025 04:36:27 GMT
+    Date: Thu, 04 Sep 2025 04:23:54 GMT
     X-Spip-Cache: 21600
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Sun, 31 Aug 2025 04:36:27 GMT
+    Last-Modified: Thu, 04 Sep 2025 04:23:54 GMT
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!MJCDmDfDkDMFmT2GSajX/n7IEULO/Nc43sgUKJuRTPq3tOiB9P2v/pfqP1KkvgawFflN/h4Nxe3IMtXpc++aSfvrwtIj; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!eKh8QiUPybpvKbqGSajX/n7IEULO/O2FC1C/AUqWIYOhXfE2qWcf/6PMc5k6K9ZLIRxndkoZ0UnV2M2Q+Iy4nXu4Ngi7; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
     &lt;!DOCTYPE HTML&gt;
     &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
@@ -166,15 +174,15 @@
     &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
   HTTPOptions: 
     HTTP/1.1 200 OK
-    Date: Sun, 31 Aug 2025 04:36:28 GMT
+    Date: Thu, 04 Sep 2025 04:23:55 GMT
     X-Spip-Cache: 21600
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Sun, 31 Aug 2025 04:36:28 GMT
+    Last-Modified: Thu, 04 Sep 2025 04:23:55 GMT
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!4tuZrgYsqg3oy8aGSajX/n7IEULO/HFIWoUiSLsfs9+NLqK/+wG1mfo+JVfTW1rgsGr0M8FTXwfSSYY6Eb68vRM3zozm; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!wR1vndWDs5kcSgWGSajX/n7IEULO/Dv3QIph2BzWJuUhMzjupdR1FU3rKq7ZwhPA8yyOSV7Nf7Wroqk2HOontL0eCVc4; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
     &lt;!DOCTYPE HTML&gt;
     &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
@@ -207,8 +215,8 @@
 <td>185.194.82.27 - sante.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
-<td></td>
+<td>http</td>
+<td>BigIP</td>
 <td></td>
 <td></td>
 <td></td>
