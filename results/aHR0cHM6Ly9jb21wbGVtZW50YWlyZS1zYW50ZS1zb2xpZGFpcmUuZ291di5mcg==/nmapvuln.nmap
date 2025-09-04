@@ -1,27 +1,11 @@
-# Nmap 7.92 scan initiated Sun Aug 31 04:21:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln complementaire-sante-solidaire.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep  4 04:34:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln complementaire-sante-solidaire.gouv.fr
 Nmap scan report for complementaire-sante-solidaire.gouv.fr (185.194.83.92)
-Host is up (0.13s latency).
+Host is up (0.11s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE  VERSION
-80/tcp  open   http
-| fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
-|     Connection: close
-|     Content-Length: 0
-|   GetRequest, HTTPOptions, RTSPRequest: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///
-|     Connection: close
-|     Content-Length: 0
-|   SIPOptions: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https://sip:nm
-|     Connection: close
-|_    Content-Length: 0
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   tcpwrapped
 113/tcp closed ident
-443/tcp open   ssl/http nginx 1.18.0
+443/tcp open   ssl/http   nginx 1.18.0
 | vulners: 
 |   nginx 1.18.0: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -56,19 +40,6 @@ PORT    STATE  SERVICE  VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_    	PACKETSTORM:162830	0.0	https://vulners.com/packetstorm/PACKETSTORM:162830	*EXPLOIT*
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=8/31%Time=68B3CDCA%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
-SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
-SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,62,"HTTP/1\.0\
-SF:x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://sip:nm\r\nConnec
-SF:tion:\x20close\r\nContent-Length:\x200\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Aug 31 04:23:48 2025 -- 1 IP address (1 host up) scanned in 153.66 seconds
+# Nmap done at Thu Sep  4 04:35:23 2025 -- 1 IP address (1 host up) scanned in 31.00 seconds
