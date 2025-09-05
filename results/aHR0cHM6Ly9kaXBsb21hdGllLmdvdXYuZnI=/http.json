@@ -9,15 +9,15 @@
     "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sun, 31 Aug 2025 04:51:28 GMT",
+      "date": "Fri, 05 Sep 2025 03:01:07 GMT",
       "vary": "Cookie,Accept-Encoding",
-      "last-modified": "Sun, 31 Aug 2025 04:51:28 GMT",
-      "content-length": "32392",
+      "last-modified": "Fri, 05 Sep 2025 03:01:07 GMT",
+      "content-length": "32305",
       "connection": "close",
       "content-type": "text/html; charset=utf-8",
       "set-cookie": [
-        "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO=705763756.20480.0000; path=/; Httponly; Secure",
-        "TS017a74ff=011854090838b1f55f595daeb39b5482119fbd48085ac19a277cb70787026080b9ac8de2a8c3ffcc56e4665c3efc81e4fe96cf96f4e6464f5693a658d6e59548eec70506919d427b417cc8bac697444a6b22e6745c; Path=/; Domain=.www.diplomatie.gouv.fr;"
+        "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO=722540972.20480.0000; path=/; Httponly; Secure",
+        "TS017a74ff=011854090887f314530f11b9da4f57bf5965e19e14c3d195b6317c882d7a9134de49706b1bc6651e62e1d39ea55981984783e3adcbac015f1d81b57a7ef35fd30c591d989b84c9fd79e49cc5a183737324a9425b18; Path=/; Domain=.www.diplomatie.gouv.fr;"
       ],
       "x-xss-protection": "1",
       "x-content-type-options": "nosniff"
@@ -78,12 +78,18 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "http://www.diplomatie.gouv.fr/",
+      "destination": "https://www.diplomatie.gouv.fr/fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://diplomatie.gouv.fr/",
+        "https://diplomatie.gouv.fr/",
+        "http://www.diplomatie.gouv.fr/",
+        "https://www.diplomatie.gouv.fr/",
+        "https://www.diplomatie.gouv.fr/fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
