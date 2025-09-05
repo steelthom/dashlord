@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Aug 31 05:06:31 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln esante.gouv.fr
+# Nmap 7.92 scan initiated Fri Sep  5 03:29:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln esante.gouv.fr
 Nmap scan report for esante.gouv.fr (37.59.26.43)
-Host is up (0.12s latency).
+Host is up (0.10s latency).
 rDNS record for 37.59.26.43: ns329358.ip-37-59-26.eu
 Not shown: 996 filtered tcp ports (no-response)
 PORT     STATE  SERVICE      VERSION
@@ -29,7 +29,7 @@ PORT     STATE  SERVICE      VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Sun, 31 Aug 2025 05:06:53 GMT
+|     date: Fri, 05 Sep 2025 03:30:01 GMT
 |     server: Apache
 |     content-security-policy: object-src 'none'; frame-ancestors 'self';
 |     content-length: 315
@@ -50,7 +50,7 @@ PORT     STATE  SERVICE      VERSION
 |     </body></html>
 |   GetRequest: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sun, 31 Aug 2025 05:06:52 GMT
+|     date: Fri, 05 Sep 2025 03:30:00 GMT
 |     server: Apache
 |     content-security-policy: object-src 'none'; frame-ancestors 'self';
 |     content-length: 199
@@ -69,10 +69,10 @@ PORT     STATE  SERVICE      VERSION
 |     </body></html>
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Sun, 31 Aug 2025 05:06:52 GMT
+|     date: Fri, 05 Sep 2025 03:30:00 GMT
 |     server: Apache
 |     content-security-policy: object-src 'none'; frame-ancestors 'self';
-|     allow: HEAD,GET,POST,OPTIONS
+|     allow: POST,OPTIONS,HEAD,GET
 |     content-length: 0
 |     content-type: httpd/unix-directory
 |     strict-transport-security: max-age=31536000; preload
@@ -85,72 +85,72 @@ PORT     STATE  SERVICE      VERSION
 1026/tcp closed LSA-or-nterm
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=8/31%Time=68B3D866%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
+SF-Port80-TCP:V=7.92%I=7%D=9/5%Time=68BA5932%P=x86_64-alpine-linux-musl%r(
+SF:GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-leng
+SF:th:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r(
+SF:HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
-SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
-SF:r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
-SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
-SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
-SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
-SF:")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
-SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
-SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
-SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
-SF:")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
-SF:content-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity
-SF:\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\
-SF:x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20
-SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<
-SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
-SF:n\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF
-SF:,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-
-SF:Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/h
-SF:tml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\
-SF:x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRe
-SF:questTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x209
-SF:0\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type
-SF::\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\
-SF:x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(
-SF:Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\
-SF:nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x2
-SF:0text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
-SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+SF:(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\
+SF:x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-
+SF:Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nY
+SF:our\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n"
+SF:)%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\
+SF:x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-
+SF:Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nY
+SF:our\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nc
+SF:ontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity\
+SF:.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x
+SF:20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20n
+SF:o-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<h
+SF:tml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an
+SF:\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,
+SF:"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-C
+SF:ontrol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x
+SF:20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusReq
+SF:uestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(H
+SF:elp,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\n
+SF:Cache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20
+SF:text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20br
+SF:owser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/31%Time=68B3D86C%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,251,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sun,\
-SF:x2031\x20Aug\x202025\x2005:06:52\x20GMT\r\nserver:\x20Apache\r\ncontent
-SF:-security-policy:\x20object-src\x20'none';\x20frame-ancestors\x20'self'
-SF:;\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20charset=i
-SF:so-8859-1\r\nstrict-transport-security:\x20max-age=31536000;\x20preload
-SF:\r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-type-options:\x2
-SF:0nosniff\r\nx-permitted-cross-domain-policies:\x20none\r\nconnection:\x
-SF:20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x2
-SF:02\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><bo
-SF:dy>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x2
-SF:0access\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,196
-SF:,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Sun,\x2031\x20Aug\x202025\x2005:06
-SF::52\x20GMT\r\nserver:\x20Apache\r\ncontent-security-policy:\x20object-s
-SF:rc\x20'none';\x20frame-ancestors\x20'self';\r\nallow:\x20HEAD,GET,POST,
-SF:OPTIONS\r\ncontent-length:\x200\r\ncontent-type:\x20httpd/unix-director
-SF:y\r\nstrict-transport-security:\x20max-age=31536000;\x20preload\r\nx-xs
-SF:s-protection:\x201;\x20mode=block\r\nx-content-type-options:\x20nosniff
-SF:\r\nx-permitted-cross-domain-policies:\x20none\r\nconnection:\x20close\
-SF:r\n\r\n")%r(FourOhFourRequest,2C5,"HTTP/1\.1\x20404\x20Not\x20Found\r\n
-SF:date:\x20Sun,\x2031\x20Aug\x202025\x2005:06:53\x20GMT\r\nserver:\x20Apa
-SF:che\r\ncontent-security-policy:\x20object-src\x20'none';\x20frame-ances
-SF:tors\x20'self';\r\ncontent-length:\x20315\r\ncontent-type:\x20text/html
-SF:;\x20charset=iso-8859-1\r\nstrict-transport-security:\x20max-age=315360
-SF:00;\x20preload\r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-ty
-SF:pe-options:\x20nosniff\r\nx-permitted-cross-domain-policies:\x20none\r\
-SF:nconnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
-SF:DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20Found</t
-SF:itle>\n</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL
-SF:\x20was\x20not\x20found\x20on\x20this\x20server\.</p>\n<p>Additionally,
-SF:\x20a\x20404\x20Not\x20Found\nerror\x20was\x20encountered\x20while\x20t
-SF:rying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x20the\x20req
-SF:uest\.</p>\n</body></html>\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/5%Time=68BA5938%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,251,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Fri,\x
+SF:2005\x20Sep\x202025\x2003:30:00\x20GMT\r\nserver:\x20Apache\r\ncontent-
+SF:security-policy:\x20object-src\x20'none';\x20frame-ancestors\x20'self';
+SF:\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20charset=is
+SF:o-8859-1\r\nstrict-transport-security:\x20max-age=31536000;\x20preload\
+SF:r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-type-options:\x20
+SF:nosniff\r\nx-permitted-cross-domain-policies:\x20none\r\nconnection:\x2
+SF:0close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
+SF:2\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><bod
+SF:y>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20
+SF:access\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,196,
+SF:"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Fri,\x2005\x20Sep\x202025\x2003:30:
+SF:00\x20GMT\r\nserver:\x20Apache\r\ncontent-security-policy:\x20object-sr
+SF:c\x20'none';\x20frame-ancestors\x20'self';\r\nallow:\x20POST,OPTIONS,HE
+SF:AD,GET\r\ncontent-length:\x200\r\ncontent-type:\x20httpd/unix-directory
+SF:\r\nstrict-transport-security:\x20max-age=31536000;\x20preload\r\nx-xss
+SF:-protection:\x201;\x20mode=block\r\nx-content-type-options:\x20nosniff\
+SF:r\nx-permitted-cross-domain-policies:\x20none\r\nconnection:\x20close\r
+SF:\n\r\n")%r(FourOhFourRequest,2C5,"HTTP/1\.1\x20404\x20Not\x20Found\r\nd
+SF:ate:\x20Fri,\x2005\x20Sep\x202025\x2003:30:01\x20GMT\r\nserver:\x20Apac
+SF:he\r\ncontent-security-policy:\x20object-src\x20'none';\x20frame-ancest
+SF:ors\x20'self';\r\ncontent-length:\x20315\r\ncontent-type:\x20text/html;
+SF:\x20charset=iso-8859-1\r\nstrict-transport-security:\x20max-age=3153600
+SF:0;\x20preload\r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-typ
+SF:e-options:\x20nosniff\r\nx-permitted-cross-domain-policies:\x20none\r\n
+SF:connection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//D
+SF:TD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20Found</ti
+SF:tle>\n</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\
+SF:x20was\x20not\x20found\x20on\x20this\x20server\.</p>\n<p>Additionally,\
+SF:x20a\x20404\x20Not\x20Found\nerror\x20was\x20encountered\x20while\x20tr
+SF:ying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x20the\x20requ
+SF:est\.</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Aug 31 05:07:16 2025 -- 1 IP address (1 host up) scanned in 44.81 seconds
+# Nmap done at Fri Sep  5 03:30:21 2025 -- 1 IP address (1 host up) scanned in 41.28 seconds
