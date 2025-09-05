@@ -1,21 +1,15 @@
-# Nmap 7.92 scan initiated Mon Sep  1 04:37:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln alternance.emploi.gouv.fr
+# Nmap 7.92 scan initiated Fri Sep  5 04:46:42 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln alternance.emploi.gouv.fr
 Nmap scan report for alternance.emploi.gouv.fr (185.194.82.123)
-Host is up (0.15s latency).
+Host is up (0.081s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE   VERSION
-80/tcp  open   http
-| fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///
-|     Connection: close
-|_    Content-Length: 0
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   tcpwrapped
 113/tcp closed ident
 443/tcp open   ssl/https
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Mon, 01 Sep 2025 04:37:33 GMT
+|     Date: Fri, 05 Sep 2025 04:47:01 GMT
 |     X-Drupal-Dynamic-Cache: UNCACHEABLE (no cacheability)
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
@@ -26,7 +20,7 @@ PORT    STATE  SERVICE   VERSION
 |     Location: /accueil
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dgefp-pa-v2-prod.cegedim.cloud-http=!N4h/feKDRvPSiFmGSajX/n7IEULO/LaO956k+2ONM6j8qvOGBBwrOcrrkP/rSN3gK2lb4pP2y6pYK30fgx1VUa+/DZvx; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dgefp-pa-v2-prod.cegedim.cloud-http=!sSmwD/04kxvoIg2GSajX/n7IEULO/CQeV9EczW7vYfDoW9iIBqDP36/Hb+W21/pzqOypMd7mZS8CLEx43G5lllavmQMG; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html>
 |     <html>
@@ -39,7 +33,7 @@ PORT    STATE  SERVICE   VERSION
 |     Redirecting to <a href="/accueil">/accueil</a>.
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Mon, 01 Sep 2025 04:37:33 GMT
+|     Date: Fri, 05 Sep 2025 04:47:01 GMT
 |     Allow: GET, POST
 |     Cache-Control: must-revalidate, no-cache, private
 |     Content-language: fr
@@ -51,46 +45,39 @@ PORT    STATE  SERVICE   VERSION
 |     Keep-Alive: timeout=5, max=100
 |     Connection: close
 |     Content-Type: text/html; charset=UTF-8
-|     Set-Cookie: BIGipServerpool-dgefp-pa-v2-prod.cegedim.cloud-http=!3Q4tHY06axJ5+V2GSajX/n7IEULO/ANt3OdDn4cknarNm8W/4NjbUQhiuBlXbiUdUPmmuJt7dAMxXvMsP08Jh6lt7js4; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dgefp-pa-v2-prod.cegedim.cloud-http=!2Cop0aMW9JdgbGeGSajX/n7IEULO/NU46uP55/tSH1BVRnaW3aqc1vFANsedDnNzbv5PPLN+uCJ4Ll/594PqoJ1hOCz+; path=/; Httponly; Secure
 |_    Strict-Transport-Security: max-age=31536000; includeSubDomains
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/1%Time=68B52306%P=x86_64-alpine-linux-musl%r(
-SF:GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x2
-SF:0https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(
-SF:HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/1%Time=68B5230D%P=x86_64-alpine-linux-
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/5%Time=68BA6B45%P=x86_64-alpine-linux-
 SF:musl%r(GetRequest,396,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate
-SF::\x20Mon,\x2001\x20Sep\x202025\x2004:37:33\x20GMT\r\nX-Drupal-Dynamic-C
+SF::\x20Fri,\x2005\x20Sep\x202025\x2004:47:01\x20GMT\r\nX-Drupal-Dynamic-C
 SF:ache:\x20UNCACHEABLE\x20\(no\x20cacheability\)\r\nContent-language:\x20
 SF:fr\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20must-reva
 SF:lidate,\x20no-cache,\x20private\r\nexpires:\x20-1\r\nX-Generator:\x20Dr
 SF:upal\x2010\x20\(https://www\.drupal\.org\)\r\npragma:\x20no-cache\r\nLo
 SF:cation:\x20/accueil\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
 SF:ml;\x20charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dgefp-pa-v2-prod
-SF:\.cegedim\.cloud-http=!N4h/feKDRvPSiFmGSajX/n7IEULO/LaO956k\+2ONM6j8qvO
-SF:GBBwrOcrrkP/rSN3gK2lb4pP2y6pYK30fgx1VUa\+/DZvx;\x20path=/;\x20Httponly;
-SF:\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
-SF:eSubDomains\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x20\x20<head>\n
-SF:\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\x20/>\n\x20\
-SF:x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"refresh\"\x20content=\
-SF:"0;url='/accueil'\"\x20/>\n\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Red
-SF:irecting\x20to\x20/accueil</title>\n\x20\x20\x20\x20</head>\n\x20\x20\x
-SF:20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20Redirecting\x20to\x20<a\x
-SF:20href=\"/accueil\">/accueil</a>\.\n\x20")%r(HTTPOptions,26B,"HTTP/1\.1
-SF:\x20200\x20OK\r\nDate:\x20Mon,\x2001\x20Sep\x202025\x2004:37:33\x20GMT\
-SF:r\nAllow:\x20GET,\x20POST\r\nCache-Control:\x20must-revalidate,\x20no-c
-SF:ache,\x20private\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\
-SF:x20nosniff\r\nexpires:\x20-1\r\nX-Generator:\x20Drupal\x2010\x20\(https
-SF:://www\.drupal\.org\)\r\npragma:\x20no-cache\r\nContent-Length:\x200\r\
-SF:nKeep-Alive:\x20timeout=5,\x20max=100\r\nConnection:\x20close\r\nConten
-SF:t-Type:\x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20BIGipServerpoo
-SF:l-dgefp-pa-v2-prod\.cegedim\.cloud-http=!3Q4tHY06axJ5\+V2GSajX/n7IEULO/
-SF:ANt3OdDn4cknarNm8W/4NjbUQhiuBlXbiUdUPmmuJt7dAMxXvMsP08Jh6lt7js4;\x20pat
+SF:\.cegedim\.cloud-http=!sSmwD/04kxvoIg2GSajX/n7IEULO/CQeV9EczW7vYfDoW9iI
+SF:BqDP36/Hb\+W21/pzqOypMd7mZS8CLEx43G5lllavmQMG;\x20path=/;\x20Httponly;\
+SF:x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20include
+SF:SubDomains\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x20\x20<head>\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\x20/>\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"refresh\"\x20content=\"
+SF:0;url='/accueil'\"\x20/>\n\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Redi
+SF:recting\x20to\x20/accueil</title>\n\x20\x20\x20\x20</head>\n\x20\x20\x2
+SF:0\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20Redirecting\x20to\x20<a\x2
+SF:0href=\"/accueil\">/accueil</a>\.\n\x20")%r(HTTPOptions,26B,"HTTP/1\.1\
+SF:x20200\x20OK\r\nDate:\x20Fri,\x2005\x20Sep\x202025\x2004:47:01\x20GMT\r
+SF:\nAllow:\x20GET,\x20POST\r\nCache-Control:\x20must-revalidate,\x20no-ca
+SF:che,\x20private\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x
+SF:20nosniff\r\nexpires:\x20-1\r\nX-Generator:\x20Drupal\x2010\x20\(https:
+SF://www\.drupal\.org\)\r\npragma:\x20no-cache\r\nContent-Length:\x200\r\n
+SF:Keep-Alive:\x20timeout=5,\x20max=100\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20BIGipServerpool
+SF:-dgefp-pa-v2-prod\.cegedim\.cloud-http=!2Cop0aMW9JdgbGeGSajX/n7IEULO/NU
+SF:46uP55/tSH1BVRnaW3aqc1vFANsedDnNzbv5PPLN\+uCJ4Ll/594PqoJ1hOCz\+;\x20pat
 SF:h=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31
 SF:536000;\x20includeSubDomains\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Sep  1 04:40:02 2025 -- 1 IP address (1 host up) scanned in 171.92 seconds
+# Nmap done at Fri Sep  5 04:49:17 2025 -- 1 IP address (1 host up) scanned in 155.09 seconds
