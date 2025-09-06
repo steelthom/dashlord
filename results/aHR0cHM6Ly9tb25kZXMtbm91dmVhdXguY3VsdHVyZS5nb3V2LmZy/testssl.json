@@ -451,7 +451,7 @@
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "88 >= 30 days"
+              "finding"      : "83 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -597,29 +597,29 @@
               "id"           : "HTTP_status_code",
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "Unexpected 503 Backend fetch failed @ '/'"
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
+              "finding"      : "+3569 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1756703075"
+              "finding"      : "1757127424"
           }
 ,         {
               "id"           : "HTTP_headerAge",
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 seconds"
+              "finding"      : "3569 seconds"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -668,14 +668,28 @@
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/' (maybe missed the application)"
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "X-Frame-Options",
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -683,7 +697,7 @@
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "X-Cache: MISS"
+              "finding"      : "X-Cache: HIT"
           }
 ,         {
               "id"           : "heartbleed",
@@ -1182,6 +1196,6 @@
               "ip"           : "mondes-nouveaux.culture.gouv.fr/51.159.155.253",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "143"
+              "finding"      : "69"
           }
 ]
