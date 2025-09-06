@@ -10,8 +10,8 @@
               "id"           : "pre_128cipher",
               "ip"           : "ac-montpellier.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No 128 cipher limit bug"
+              "severity"     : "MEDIUM",
+              "finding"      : "128 cipher limit bug"
           }
 ,         {
               "id"           : "SSLv2",
@@ -63,6 +63,13 @@
               "finding"      : "offered with h2, http/1.1 (advertised)"
           }
 ,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "ac-montpellier.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
+          }
+,         {
               "id"           : "ALPN",
               "ip"           : "ac-montpellier.fr/185.75.143.93",
               "port"         : "443",
@@ -109,3 +116,40 @@
               "cwe"          : "CWE-310",
               "finding"      : "not offered"
           }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "ac-montpellier.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "ac-montpellier.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "ac-montpellier.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "scanProblem",
+              "ip"           : "ac-montpellier.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "ac-montpellier.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
+          }
+]
