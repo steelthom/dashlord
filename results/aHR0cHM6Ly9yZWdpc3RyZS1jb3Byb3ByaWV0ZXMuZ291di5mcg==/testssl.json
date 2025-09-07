@@ -279,32 +279,11 @@
               "finding"      : "TLSv1.2   xc027   ECDHE-RSA-AES128-SHA256           ECDH 256   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_2_xc013",
-              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc013   ECDHE-RSA-AES128-SHA              ECDH 256   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"
-          }
-,         {
-              "id"           : "cipher-tls1_2_x67",
-              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   x67     DHE-RSA-AES128-SHA256             DH 2048    AES         128      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256"
-          }
-,         {
-              "id"           : "cipher-tls1_2_x33",
-              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   x33     DHE-RSA-AES128-SHA                DH 2048    AES         128      TLS_DHE_RSA_WITH_AES_128_CBC_SHA"
-          }
-,         {
               "id"           : "cipherorder_TLSv1_2",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-SHA256"
           }
 ,         {
               "id"           : "cipher_order",
@@ -317,8 +296,36 @@
               "id"           : "FS",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "No ciphers supporting Forward Secrecy offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1"
+          }
+,         {
+              "id"           : "DH_groups",
+              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "HAProxy"
+          }
+,         {
+              "id"           : "FS_TLS12_sig_algs",
+              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "RSA+SHA512 RSA+SHA384 RSA+SHA256 RSA+SHA224 RSA+SHA1"
           }
 ,         {
               "id"           : "TLS_extensions",
@@ -661,7 +668,7 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "76 >= 60 days"
+              "finding"      : "74 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -1374,13 +1381,6 @@
               "finding"      : "Grade capped to B. TLS 1.1 offered"
           }
 ,         {
-              "id"           : "grade_cap_reason_3",
-              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. Forward Secrecy (FS) is not supported"
-          }
-,         {
               "id"           : "grade_cap_warning_1",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
@@ -1392,6 +1392,6 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "149"
+              "finding"      : "175"
           }
 ]

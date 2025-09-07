@@ -1,22 +1,8 @@
-# Nmap 7.92 scan initiated Fri Sep  5 02:59:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln registre-coproprietes.gouv.fr
+# Nmap 7.92 scan initiated Sun Sep  7 03:31:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln registre-coproprietes.gouv.fr
 Nmap scan report for registre-coproprietes.gouv.fr (178.237.111.255)
-Host is up (0.13s latency).
-Not shown: 998 filtered tcp ports (no-response)
+Host is up (0.15s latency).
+Not shown: 999 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
-80/tcp  open  http
-| fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.1 302 Found
-|     Cache-Control: no-cache
-|     Content-length: 0
-|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
-|     Connection: close
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.1 302 Found
-|     Cache-Control: no-cache
-|     Content-length: 0
-|     Location: https:///
-|_    Connection: close
 443/tcp open  ssl/https
 | fingerprint-strings: 
 |   FourOhFourRequest, GetRequest, HTTPOptions: 
@@ -24,19 +10,8 @@ PORT    STATE SERVICE   VERSION
 |     Content-length: 0
 |     Location: https://www.
 |_    Connection: close
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/5%Time=68BA5233%P=x86_64-alpine-linux-musl%r(
-SF:GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20no-cache\
-SF:r\nContent-length:\x200\r\nLocation:\x20https:///\r\nConnection:\x20clo
-SF:se\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\nCache-Contr
-SF:ol:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nCo
-SF:nnection:\x20close\r\n\r\n")%r(FourOhFourRequest,8D,"HTTP/1\.1\x20302\x
-SF:20Found\r\nCache-Control:\x20no-cache\r\nContent-length:\x200\r\nLocati
-SF:on:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20
-SF:close\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/5%Time=68BA523A%P=x86_64-alpine-linux-
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/7%Time=68BCFCCE%P=x86_64-alpine-linux-
 SF:musl%r(GetRequest,60,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nConte
 SF:nt-length:\x200\r\nLocation:\x20https://www\.\r\nConnection:\x20close\r
 SF:\n\r\n")%r(HTTPOptions,60,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
@@ -46,4 +21,4 @@ SF:anently\r\nContent-length:\x200\r\nLocation:\x20https://www\.\r\nConnec
 SF:tion:\x20close\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Sep  5 03:00:34 2025 -- 1 IP address (1 host up) scanned in 48.20 seconds
+# Nmap done at Sun Sep  7 03:32:56 2025 -- 1 IP address (1 host up) scanned in 56.91 seconds

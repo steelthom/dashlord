@@ -21,7 +21,7 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on pkrvm7jw40e0xgp:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-09-05 02:57:16        --&gt;&gt; 178.237.111.255:443 (registre-coproprietes.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-09-07 03:29:04        --&gt;&gt; 178.237.111.255:443 (registre-coproprietes.gouv.fr) &lt;&lt;--</span>
 
  rDNS (178.237.111.255): --
  Service detected:       HTTP
@@ -79,9 +79,6 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  x6b     DHE-RSA-AES256-SHA256             DH<span style="color:#008817;"> 2048</span>    AES         256      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256                
  x39     DHE-RSA-AES256-SHA                DH<span style="color:#008817;"> 2048</span>    AES         256      TLS_DHE_RSA_WITH_AES_256_CBC_SHA                   
  xc027   ECDHE-RSA-AES128-SHA256           ECDH<span style="color:#008817;"> 256</span>   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256              
- xc013   ECDHE-RSA-AES128-SHA              ECDH<span style="color:#008817;"> 256</span>   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                 
- x67     DHE-RSA-AES128-SHA256             DH<span style="color:#008817;"> 2048</span>    AES         128      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256                
- x33     DHE-RSA-AES128-SHA                DH<span style="color:#008817;"> 2048</span>    AES         128      TLS_DHE_RSA_WITH_AES_128_CBC_SHA                   
 <u>TLSv1.3</u>
  - 
 
@@ -90,7 +87,17 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
-<span style="color:#c05600;"> No ciphers supporting Forward Secrecy (FS) offered</span>
+<span style="color:#008817;"> FS is offered (OK) </span>          ECDHE-RSA-AES256-GCM-SHA384
+                              ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA
+                              DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256
+                              DHE-RSA-AES256-SHA ECDHE-RSA-AES128-GCM-SHA256
+                              ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA
+                              DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256
+                              DHE-RSA-AES128-SHA 
+<span style="font-weight:bold;"> Elliptic curves offered:     </span><span style="color:#008817;">prime256v1</span> 
+<span style="font-weight:bold;"> DH group offered:            </span><i>HAProxy</i> (<span style="color:#008817;">2048 bits</span>)
+<span style="font-weight:bold;"> TLS 1.2 sig_algs offered:    </span>RSA+SHA512 RSA+SHA384 RSA+SHA256 RSA+SHA224 
+                              <span style="color:#a86437;">RSA+SHA1</span> 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
@@ -139,7 +146,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#e52207;">certificate does not match supplied URI</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">76 &gt;= 60 days</span> (2025-08-18 00:00 --&gt; 2025-11-20 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">74 &gt;= 60 days</span> (2025-08-18 00:00 --&gt; 2025-11-20 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
                               http://crl.dhimyotis.com/servicesca.crl
@@ -246,11 +253,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to M. Domain name mismatch
                               Grade capped to
                                 B. TLS 1.1 offered
-                              Grade capped to
-                                B. Forward Secrecy (FS) is not supported
 <span style="font-weight:bold;"> Grade warning                </span><span style="color:#c05600;">TLS 1.3 is not supported</span>
 
-<span style="color:white;background-color:black;"> Done 2025-09-05 02:59:43 [ 149s] --&gt;&gt; 178.237.111.255:443 (registre-coproprietes.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-09-07 03:31:57 [ 175s] --&gt;&gt; 178.237.111.255:443 (registre-coproprietes.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
