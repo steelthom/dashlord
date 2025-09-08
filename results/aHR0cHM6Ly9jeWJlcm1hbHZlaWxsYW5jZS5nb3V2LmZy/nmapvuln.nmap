@@ -1,17 +1,16 @@
-# Nmap 7.92 scan initiated Sat Sep  6 03:29:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cybermalveillance.gouv.fr
+# Nmap 7.92 scan initiated Mon Sep  8 04:30:03 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cybermalveillance.gouv.fr
 Nmap scan report for cybermalveillance.gouv.fr (81.92.94.54)
-Host is up (0.019s latency).
-Other addresses for cybermalveillance.gouv.fr (not scanned): 81.92.95.55 152.89.172.56 2a09:35c0:102::56 2a01:c8:101::55 2a01:c8:100::54
+Host is up (0.022s latency).
+Other addresses for cybermalveillance.gouv.fr (not scanned): 81.92.95.55 152.89.172.56 2a09:35c0:102::56 2a01:c8:100::54 2a01:c8:101::55
 rDNS record for 81.92.94.54: cdn.perf1.com
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 53/tcp  closed domain
 80/tcp  open   http      Apache
-|_http-server-header: Apache
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     date: Sat, 06 Sep 2025 03:29:36 GMT
+|     date: Mon, 08 Sep 2025 04:30:13 GMT
 |     server: Apache
 |     x-content-type-options: nosniff
 |     x-frame-options: SAMEORIGIN
@@ -34,13 +33,13 @@ PORT    STATE  SERVICE   VERSION
 |     <link hre
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Sat, 06 Sep 2025 03:29:37 GMT
+|     date: Mon, 08 Sep 2025 04:30:13 GMT
 |     server: Apache
 |     x-content-type-options: nosniff
 |     x-frame-options: SAMEORIGIN
 |     x-xss-protection: 1; mode=block
 |     referrer-policy: strict-origin-when-cross-origin
-|     allow: POST,OPTIONS,HEAD,GET
+|     allow: GET,POST,OPTIONS,HEAD
 |     content-length: 0
 |     content-type: text/html
 |     content-security-policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'none'
@@ -55,12 +54,13 @@ PORT    STATE  SERVICE   VERSION
 |     <html><body><h1>408 Request Time-out</h1>
 |     Your browser didn't send a complete request in time.
 |_    </body></html>
+|_http-server-header: Apache
 443/tcp open   ssl/https Apache
 |_http-server-header: Apache
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     date: Sat, 06 Sep 2025 03:29:43 GMT
+|     date: Mon, 08 Sep 2025 04:30:19 GMT
 |     server: Apache
 |     x-content-type-options: nosniff
 |     x-frame-options: SAMEORIGIN
@@ -82,13 +82,13 @@ PORT    STATE  SERVICE   VERSION
 |     <meta name="keywords" content="nameshield, par
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Sat, 06 Sep 2025 03:29:43 GMT
+|     date: Mon, 08 Sep 2025 04:30:19 GMT
 |     server: Apache
 |     x-content-type-options: nosniff
 |     x-frame-options: SAMEORIGIN
 |     x-xss-protection: 1; mode=block
 |     referrer-policy: strict-origin-when-cross-origin
-|     allow: GET,POST,OPTIONS,HEAD
+|     allow: POST,OPTIONS,HEAD,GET
 |     content-length: 0
 |     content-type: text/html
 |     strict-transport-security: max-age=604800
@@ -106,13 +106,13 @@ PORT    STATE  SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/6%Time=68BBAAA0%P=x86_64-alpine-linux-musl%r(
+SF-Port80-TCP:V=7.92%I=7%D=9/8%Time=68BE5BD5%P=x86_64-alpine-linux-musl%r(
 SF:NULL,D5,"HTTP/1\.0\x20408\x20Request\x20Time-out\r\ncache-control:\x20n
 SF:o-cache\r\nconnection:\x20close\r\ncontent-type:\x20text/html\r\n\r\n<h
 SF:tml><body><h1>408\x20Request\x20Time-out</h1>\nYour\x20browser\x20didn'
 SF:t\x20send\x20a\x20complete\x20request\x20in\x20time\.\n</body></html>\n
-SF:\n")%r(GetRequest,E1E,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Sat,\x2006\x2
-SF:0Sep\x202025\x2003:29:36\x20GMT\r\nserver:\x20Apache\r\nx-content-type-
+SF:\n")%r(GetRequest,E1E,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2008\x2
+SF:0Sep\x202025\x2004:30:13\x20GMT\r\nserver:\x20Apache\r\nx-content-type-
 SF:options:\x20nosniff\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protecti
 SF:on:\x201;\x20mode=block\r\nreferrer-policy:\x20strict-origin-when-cross
 SF:-origin\r\nlast-modified:\x20Mon,\x2009\x20Jun\x202025\x2010:13:09\x20G
@@ -129,10 +129,10 @@ SF:tml\x20lang=\"fr-FR\">\r\n<head>\r\n\x20\x20\x20\x20<meta\x20charset=\"
 SF:utf-8\">\r\n\x20\x20\x20\x20<meta\x20name=\"keywords\"\x20content=\"nam
 SF:eshield,\x20parking\"/>\r\n\x20\x20\x20\x20<title></title>\r\n\x20\x20\
 SF:x20\x20<link\x20hre")%r(HTTPOptions,2B4,"HTTP/1\.1\x20200\x20OK\r\ndate
-SF::\x20Sat,\x2006\x20Sep\x202025\x2003:29:37\x20GMT\r\nserver:\x20Apache\
+SF::\x20Mon,\x2008\x20Sep\x202025\x2004:30:13\x20GMT\r\nserver:\x20Apache\
 SF:r\nx-content-type-options:\x20nosniff\r\nx-frame-options:\x20SAMEORIGIN
 SF:\r\nx-xss-protection:\x201;\x20mode=block\r\nreferrer-policy:\x20strict
-SF:-origin-when-cross-origin\r\nallow:\x20POST,OPTIONS,HEAD,GET\r\ncontent
+SF:-origin-when-cross-origin\r\nallow:\x20GET,POST,OPTIONS,HEAD\r\ncontent
 SF:-length:\x200\r\ncontent-type:\x20text/html\r\ncontent-security-policy:
 SF:\x20default-src\x20'self';\x20base-uri\x20'self';\x20object-src\x20'non
 SF:e';\x20script-src\x20'self';\x20style-src\x20'self';\x20frame-src\x20'n
@@ -143,13 +143,13 @@ SF:ocation=\(\),\x20gyroscope=\(\),\x20magnetometer=\(\),\x20payment=\(\),
 SF:\x20usb=\(\),\x20vr=\(\),\x20wake-lock=\(\)\r\nconnection:\x20close\r\n
 SF:\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/6%Time=68BBAAA7%P=x86_64-alpine-linux-
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/8%Time=68BE5BDB%P=x86_64-alpine-linux-
 SF:musl%r(NULL,D5,"HTTP/1\.0\x20408\x20Request\x20Time-out\r\ncache-contro
 SF:l:\x20no-cache\r\nconnection:\x20close\r\ncontent-type:\x20text/html\r\
 SF:n\r\n<html><body><h1>408\x20Request\x20Time-out</h1>\nYour\x20browser\x
 SF:20didn't\x20send\x20a\x20complete\x20request\x20in\x20time\.\n</body></
-SF:html>\n\n")%r(GetRequest,E49,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Sat,\x
-SF:2006\x20Sep\x202025\x2003:29:43\x20GMT\r\nserver:\x20Apache\r\nx-conten
+SF:html>\n\n")%r(GetRequest,E49,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x
+SF:2008\x20Sep\x202025\x2004:30:19\x20GMT\r\nserver:\x20Apache\r\nx-conten
 SF:t-type-options:\x20nosniff\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-p
 SF:rotection:\x201;\x20mode=block\r\nreferrer-policy:\x20strict-origin-whe
 SF:n-cross-origin\r\nlast-modified:\x20Mon,\x2009\x20Jun\x202025\x2010:13:
@@ -165,11 +165,11 @@ SF:eter=\(\),\x20payment=\(\),\x20usb=\(\),\x20vr=\(\),\x20wake-lock=\(\)\
 SF:r\nconnection:\x20close\r\n\r\n<!doctype\x20html>\r\n<html\x20lang=\"fr
 SF:-FR\">\r\n<head>\r\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\r\n\x20
 SF:\x20\x20\x20<meta\x20name=\"keywords\"\x20content=\"nameshield,\x20par"
-SF:)%r(HTTPOptions,2DF,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Sat,\x2006\x20S
-SF:ep\x202025\x2003:29:43\x20GMT\r\nserver:\x20Apache\r\nx-content-type-op
+SF:)%r(HTTPOptions,2DF,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2008\x20S
+SF:ep\x202025\x2004:30:19\x20GMT\r\nserver:\x20Apache\r\nx-content-type-op
 SF:tions:\x20nosniff\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protection
 SF::\x201;\x20mode=block\r\nreferrer-policy:\x20strict-origin-when-cross-o
-SF:rigin\r\nallow:\x20GET,POST,OPTIONS,HEAD\r\ncontent-length:\x200\r\ncon
+SF:rigin\r\nallow:\x20POST,OPTIONS,HEAD,GET\r\ncontent-length:\x200\r\ncon
 SF:tent-type:\x20text/html\r\nstrict-transport-security:\x20max-age=604800
 SF:\r\ncontent-security-policy:\x20default-src\x20'self';\x20base-uri\x20'
 SF:self';\x20object-src\x20'none';\x20script-src\x20'self';\x20style-src\x
@@ -181,4 +181,4 @@ SF:meter=\(\),\x20payment=\(\),\x20usb=\(\),\x20vr=\(\),\x20wake-lock=\(\)
 SF:\r\nconnection:\x20close\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Sep  6 03:29:50 2025 -- 1 IP address (1 host up) scanned in 23.62 seconds
+# Nmap done at Mon Sep  8 04:30:26 2025 -- 1 IP address (1 host up) scanned in 23.68 seconds
