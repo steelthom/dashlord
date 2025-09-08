@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Sep  6 04:24:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln code.gouv.fr
+# Nmap 7.92 scan initiated Mon Sep  8 05:14:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln code.gouv.fr
 Nmap scan report for code.gouv.fr (62.210.173.74)
-Host is up (0.14s latency).
+Host is up (0.15s latency).
 rDNS record for 62.210.173.74: mail.code.gouv.fr
 Not shown: 988 closed tcp ports (reset)
 PORT     STATE SERVICE         VERSION
@@ -122,7 +122,6 @@ PORT     STATE SERVICE         VERSION
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 143/tcp  open  imap            Dovecot imapd
 443/tcp  open  ssl/http        nginx 1.22.1
-|_http-server-header: nginx/1.22.1
 | vulners: 
 |   nginx 1.22.1: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -144,6 +143,7 @@ PORT     STATE SERVICE         VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: nginx/1.22.1
 465/tcp  open  ssl/smtp        Postfix smtpd
 587/tcp  open  smtp            Postfix smtpd
 993/tcp  open  imaps?
@@ -175,7 +175,7 @@ PORT     STATE SERVICE         VERSION
 |     HTTP/1.1 404 Not Found
 |     content-length: 10
 |     Server: http-kit
-|     Date: Sat, 6 Sep 2025 04:24:59 GMT
+|     Date: Mon, 8 Sep 2025 05:14:36 GMT
 |     found.
 |   GetRequest: 
 |     HTTP/1.1 200 OK
@@ -185,7 +185,7 @@ PORT     STATE SERVICE         VERSION
 |     Content-Security-Policy: default-src 'self';script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;img-src 'self' data: https://cdn.jsdelivr.net;font-src 'self' https://cdn.jsdelivr.net;
 |     content-length: 6778
 |     Server: http-kit
-|     Date: Sat, 6 Sep 2025 04:24:59 GMT
+|     Date: Mon, 8 Sep 2025 05:14:35 GMT
 |     <!DOCTYPE html>
 |     <html lang=":en" data-fr-theme>
 |     <head>
@@ -199,24 +199,24 @@ PORT     STATE SERVICE         VERSION
 |     HTTP/1.1 404 Not Found
 |     content-length: 10
 |     Server: http-kit
-|     Date: Sat, 6 Sep 2025 04:25:10 GMT
+|     Date: Mon, 8 Sep 2025 05:14:47 GMT
 |     found.
 |   SIPOptions: 
 |     HTTP/1.1 404 Not Found
 |     content-length: 10
 |     Server: http-kit
-|     Date: Sat, 6 Sep 2025 04:25:48 GMT
+|     Date: Mon, 8 Sep 2025 05:15:25 GMT
 |_    found.
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port8888-TCP:V=7.92%I=7%D=9/6%Time=68BBB79B%P=x86_64-alpine-linux-musl%
-SF:r(GetRequest,10BC,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/html
+SF-Port8888-TCP:V=7.92%I=7%D=9/8%Time=68BE663C%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,1C33,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/html
 SF:;\x20charset=UTF-8\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Opt
 SF:ions:\x20DENY\r\nContent-Security-Policy:\x20default-src\x20'self';scri
 SF:pt-src\x20'self'\x20'unsafe-inline'\x20https://cdn\.jsdelivr\.net;style
 SF:-src\x20'self'\x20'unsafe-inline'\x20https://cdn\.jsdelivr\.net;img-src
 SF:\x20'self'\x20data:\x20https://cdn\.jsdelivr\.net;font-src\x20'self'\x2
 SF:0https://cdn\.jsdelivr\.net;\r\ncontent-length:\x206778\r\nServer:\x20h
-SF:ttp-kit\r\nDate:\x20Sat,\x206\x20Sep\x202025\x2004:24:59\x20GMT\r\n\r\n
+SF:ttp-kit\r\nDate:\x20Mon,\x208\x20Sep\x202025\x2005:14:35\x20GMT\r\n\r\n
 SF:<!DOCTYPE\x20html>\n<html\x20lang=\":en\"\x20data-fr-theme>\n\x20\x20<h
 SF:ead>\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\">\n\x20\x20\x20\x20<met
 SF:a\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scal
@@ -227,17 +227,17 @@ SF:t/npm/@gouvfr/dsfr@1\.13\.1/dist/dsfr/dsfr\.min\.css\">\n\x20\x20\x20\x
 SF:20<link\x20rel=\"apple-touch-icon\"\x20href=\"https://cdn\.jsdelivr\.ne
 SF:t/npm/@gouvfr/dsfr@1\.13\.1/dist/favicon/apple-touch-icon\.p")%r(HTTPOp
 SF:tions,6E,"HTTP/1\.1\x20404\x20Not\x20Found\r\ncontent-length:\x2010\r\n
-SF:Server:\x20http-kit\r\nDate:\x20Sat,\x206\x20Sep\x202025\x2004:24:59\x2
+SF:Server:\x20http-kit\r\nDate:\x20Mon,\x208\x20Sep\x202025\x2005:14:36\x2
 SF:0GMT\r\n\r\nNot\x20found\.")%r(FourOhFourRequest,6E,"HTTP/1\.1\x20404\x
 SF:20Not\x20Found\r\ncontent-length:\x2010\r\nServer:\x20http-kit\r\nDate:
-SF:\x20Sat,\x206\x20Sep\x202025\x2004:24:59\x20GMT\r\n\r\nNot\x20found\.")
+SF:\x20Mon,\x208\x20Sep\x202025\x2005:14:36\x20GMT\r\n\r\nNot\x20found\.")
 SF:%r(RTSPRequest,6E,"HTTP/1\.1\x20404\x20Not\x20Found\r\ncontent-length:\
-SF:x2010\r\nServer:\x20http-kit\r\nDate:\x20Sat,\x206\x20Sep\x202025\x2004
-SF::25:10\x20GMT\r\n\r\nNot\x20found\.")%r(SIPOptions,6E,"HTTP/1\.1\x20404
+SF:x2010\r\nServer:\x20http-kit\r\nDate:\x20Mon,\x208\x20Sep\x202025\x2005
+SF::14:47\x20GMT\r\n\r\nNot\x20found\.")%r(SIPOptions,6E,"HTTP/1\.1\x20404
 SF:\x20Not\x20Found\r\ncontent-length:\x2010\r\nServer:\x20http-kit\r\nDat
-SF:e:\x20Sat,\x206\x20Sep\x202025\x2004:25:48\x20GMT\r\n\r\nNot\x20found\.
+SF:e:\x20Mon,\x208\x20Sep\x202025\x2005:15:25\x20GMT\r\n\r\nNot\x20found\.
 SF:");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Sep  6 04:26:45 2025 -- 1 IP address (1 host up) scanned in 114.68 seconds
+# Nmap done at Mon Sep  8 05:16:22 2025 -- 1 IP address (1 host up) scanned in 116.31 seconds
