@@ -184,8 +184,15 @@
               "id"           : "cipher_order-tls1_3",
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "severity"     : "OK",
+              "finding"      : "server -- server prioritizes ChaCha ciphers when preferred by clients"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "cipher-tls1_3_x1302",
@@ -202,25 +209,25 @@
               "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH/MLKEM ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_3",
+              "id"           : "cipherorder_TLSv1_3",
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "prioritize_chacha_TLSv1_3",
+              "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "true"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server -- TLS 1.3 client determined"
+              "finding"      : "server"
           }
 ,         {
               "id"           : "FS",
@@ -444,7 +451,7 @@
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "59 >= 30 days"
+              "finding"      : "56 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -605,7 +612,7 @@
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1757048718"
+              "finding"      : "1757306699"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1168,13 +1175,20 @@
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A+"
+              "finding"      : "A-"
+          }
+,         {
+              "id"           : "grade_cap_warning_1",
+              "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS 1.3 is not supported"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "basedeslieux.culture.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "98"
+              "finding"      : "175"
           }
 ]
