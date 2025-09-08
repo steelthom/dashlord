@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Sep  6 03:25:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln autoecoles.securite-routiere.gouv.fr
+# Nmap 7.92 scan initiated Mon Sep  8 03:41:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln autoecoles.securite-routiere.gouv.fr
 Nmap scan report for autoecoles.securite-routiere.gouv.fr (77.159.252.145)
-Host is up (0.094s latency).
+Host is up (0.16s latency).
 rDNS record for 77.159.252.145: 145.252.159.77.rev.sfr.net
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
@@ -40,7 +40,20 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   FourOhFourRequest: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sat, 06 Sep 2025 03:26:12 GMT
+|     date: Mon, 08 Sep 2025 03:42:25 GMT
+|     cache-control: no-cache
+|     content-type: text/html
+|     age: 0
+|     x-cache: Miss
+|     content-length: 94
+|     keep-alive: timeout=5, max=100
+|     connection: close
+|     <html><body><h1>403 Forbidden</h1>
+|     Request forbidden by administrative rules.
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     date: Mon, 08 Sep 2025 03:42:23 GMT
 |     cache-control: no-cache
 |     content-type: text/html
 |     age: 0
@@ -49,9 +62,9 @@ PORT    STATE SERVICE   VERSION
 |     <html><body><h1>403 Forbidden</h1>
 |     Request forbidden by administrative rules.
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sat, 06 Sep 2025 03:26:11 GMT
+|     date: Mon, 08 Sep 2025 03:42:24 GMT
 |     cache-control: no-cache
 |     content-type: text/html
 |     age: 0
@@ -62,7 +75,7 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/6%Time=68BBA9CD%P=x86_64-alpine-linux-musl%r(
+SF-Port80-TCP:V=7.92%I=7%D=9/8%Time=68BE5099%P=x86_64-alpine-linux-musl%r(
 SF:GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nloc
 SF:ation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20clo
 SF:se\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-len
@@ -96,39 +109,39 @@ SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bo
 SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
 SF:alid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/6%Time=68BBA9D3%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,F9,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2
-SF:006\x20Sep\x202025\x2003:26:11\x20GMT\r\ncache-control:\x20no-cache\r\n
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/8%Time=68BE509F%P=x86_64-alpine-linux-
+SF:musl%r(GetRequest,F9,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Mon,\x2
+SF:008\x20Sep\x202025\x2003:42:23\x20GMT\r\ncache-control:\x20no-cache\r\n
 SF:content-type:\x20text/html\r\nage:\x200\r\nx-cache:\x20Miss\r\nconnecti
 SF:on:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x20f
 SF:orbidden\x20by\x20administrative\x20rules\.\n</body></html>\n\n")%r(HTT
-SF:POptions,F9,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2006\x20Se
-SF:p\x202025\x2003:26:11\x20GMT\r\ncache-control:\x20no-cache\r\ncontent-t
+SF:POptions,F9,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Mon,\x2008\x20Se
+SF:p\x202025\x2003:42:24\x20GMT\r\ncache-control:\x20no-cache\r\ncontent-t
 SF:ype:\x20text/html\r\nage:\x200\r\nx-cache:\x20Miss\r\nconnection:\x20cl
 SF:ose\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x20forbidden\
 SF:x20by\x20administrative\x20rules\.\n</body></html>\n\n")%r(FourOhFourRe
-SF:quest,F9,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sat,\x2006\x20Sep\x
-SF:202025\x2003:26:12\x20GMT\r\ncache-control:\x20no-cache\r\ncontent-type
-SF::\x20text/html\r\nage:\x200\r\nx-cache:\x20Miss\r\nconnection:\x20close
-SF:\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x20forbidden\x20
-SF:by\x20administrative\x20rules\.\n</body></html>\n\n")%r(tor-versions,CF
-SF:,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-
-SF:Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/h
-SF:tml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\
-SF:x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(RTSPRequest
-SF:,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCac
-SF:he-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20tex
-SF:t/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brows
-SF:er\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(RPCCheck
-SF:,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCac
-SF:he-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20tex
-SF:t/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brows
-SF:er\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersi
-SF:onBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\
-SF:x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-
-SF:Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nY
-SF:our\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n"
-SF:);
+SF:quest,12D,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Mon,\x2008\x20Sep\
+SF:x202025\x2003:42:25\x20GMT\r\ncache-control:\x20no-cache\r\ncontent-typ
+SF:e:\x20text/html\r\nage:\x200\r\nx-cache:\x20Miss\r\ncontent-length:\x20
+SF:94\r\nkeep-alive:\x20timeout=5,\x20max=100\r\nconnection:\x20close\r\n\
+SF:r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x20forbidden\x20by\x2
+SF:0administrative\x20rules\.\n</body></html>\n\n")%r(tor-versions,CF,"HTT
+SF:P/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Contr
+SF:ol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r
+SF:\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20se
+SF:nt\x20an\x20invalid\x20request\.\n</body></html>\n")%r(RTSPRequest,CF,"
+SF:HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Co
+SF:ntrol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x2
+SF:0sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(RPCCheck,CF,"
+SF:HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Co
+SF:ntrol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x2
+SF:0sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBin
+SF:dReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Sep  6 03:26:29 2025 -- 1 IP address (1 host up) scanned in 39.14 seconds
+# Nmap done at Mon Sep  8 03:42:58 2025 -- 1 IP address (1 host up) scanned in 58.48 seconds
