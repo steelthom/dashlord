@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -35,17 +35,37 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "TLS1_1",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "FATAL",
-              "finding"      : "repeated TCP connect problems, giving up"
+              "severity"     : "INFO",
+              "finding"      : "not offered"
           }
 ,         {
-              "id"           : "scanTime",
+              "id"           : "TLS1_2",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "Scan interrupted"
+              "severity"     : "OK",
+              "finding"      : "offered"
           }
-]
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "etudiant.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "CRITICAL",
+              "finding"      : "connection failed rather than downgrading to TLSv1.2"
+          }
+,         {
+              "id"           : "NPN",
+              "ip"           : "etudiant.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "offered with h2, http/1.1 (advertised)"
+          }
+,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "etudiant.gouv.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
+          }
