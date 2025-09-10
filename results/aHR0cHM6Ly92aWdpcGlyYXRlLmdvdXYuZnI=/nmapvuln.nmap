@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon Sep  8 04:11:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln vigipirate.gouv.fr
+# Nmap 7.92 scan initiated Wed Sep 10 03:54:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln vigipirate.gouv.fr
 Nmap scan report for vigipirate.gouv.fr (87.98.148.216)
-Host is up (0.11s latency).
+Host is up (0.13s latency).
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
 22/tcp   open  ssh      OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
@@ -39,6 +39,7 @@ PORT     STATE SERVICE  VERSION
 |     	C07ADB46-24B8-57B7-B375-9C761F4750A2	6.5	https://vulners.com/githubexploit/C07ADB46-24B8-57B7-B375-9C761F4750A2	*EXPLOIT*
 |     	A88CDD3E-67CC-51CC-97FB-AB0CACB6B08C	6.5	https://vulners.com/githubexploit/A88CDD3E-67CC-51CC-97FB-AB0CACB6B08C	*EXPLOIT*
 |     	65B15AA1-2A8D-53C1-9499-69EBA3619F1C	6.5	https://vulners.com/githubexploit/65B15AA1-2A8D-53C1-9499-69EBA3619F1C	*EXPLOIT*
+|     	5325A9D6-132B-590C-BDEF-0CB105252732	6.5	https://vulners.com/gitee/5325A9D6-132B-590C-BDEF-0CB105252732	*EXPLOIT*
 |     	530326CF-6AB3-5643-AA16-73DC8CB44742	6.5	https://vulners.com/githubexploit/530326CF-6AB3-5643-AA16-73DC8CB44742	*EXPLOIT*
 |     	PACKETSTORM:181223	5.9	https://vulners.com/packetstorm/PACKETSTORM:181223	*EXPLOIT*
 |     	MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-	5.9	https://vulners.com/metasploit/MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-	*EXPLOIT*
@@ -73,15 +74,13 @@ PORT     STATE SERVICE  VERSION
 |_http-server-header: Apache
 3306/tcp open  mysql?
 | fingerprint-strings: 
-|   NULL, SMBProgNeg: 
-|_    Host '64.236.176.149' is not allowed to connect to this MariaDB server
+|   NULL: 
+|_    Host '52.176.124.178' is not allowed to connect to this MariaDB server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3306-TCP:V=7.92%I=7%D=9/8%Time=68BE578C%P=x86_64-alpine-linux-musl%
-SF:r(NULL,4D,"I\0\0\x01\xffj\x04Host\x20'64\.236\.176\.149'\x20is\x20not\x
-SF:20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SMBPr
-SF:ogNeg,4D,"I\0\0\x01\xffj\x04Host\x20'64\.236\.176\.149'\x20is\x20not\x2
-SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+SF-Port3306-TCP:V=7.92%I=7%D=9/10%Time=68C0F672%P=x86_64-alpine-linux-musl
+SF:%r(NULL,4D,"I\0\0\x01\xffj\x04Host\x20'52\.176\.124\.178'\x20is\x20not\
+SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Sep  8 04:12:10 2025 -- 1 IP address (1 host up) scanned in 16.96 seconds
+# Nmap done at Wed Sep 10 03:54:41 2025 -- 1 IP address (1 host up) scanned in 17.19 seconds
