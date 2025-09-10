@@ -103,8 +103,12 @@ jobs:
 
       - name: Cancel next steps if HTTP Observatory failed
         run: |
+          if grep -q "Attention Required! | Cloudflare" scans/http.json; then
+            echo "HTTP Observatory failed because of Cloudflare, cancelling next steps"
+            exit 1
+          fi
           if grep -q "The site seems to be down." scans/http.json; then
-            echo "HTTP Observatory failed, cancelling next steps"
+            echo "HTTP Observatory failed because the site might be down, cancelling next steps"
             exit 1
           fi
 
