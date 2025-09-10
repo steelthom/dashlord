@@ -3,32 +3,15 @@
     "algorithmVersion": 4,
     "grade": "D",
     "error": null,
-    "score": 35,
+    "score": 30,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 08 Sep 2025 03:27:10 GMT",
-      "x-drupal-cache-timestamp": "1756803887",
-      "content-language": "fr",
-      "x-frame-options": "SAMEORIGIN",
-      "x-content-type-options": "nosniff",
-      "cache-control": "public, max-age=86400",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "etag": "\"1757302030-1\"",
-      "last-modified": "Mon, 08 Sep 2025 03:27:10 GMT",
-      "content-type": "text/html; charset=utf-8",
-      "x-ua-device": "DESKTOP",
-      "x-cache": "HIT",
-      "vary": "Accept-Encoding",
-      "accept-ranges": "bytes",
-      "content-length": "59870",
+      "server": "BigIP",
       "connection": "close",
-      "set-cookie": [
-        "BIGipServer34MTuypDk3zboBHeznTQiA=!Q4p9uaS8ovEqcU0YTBk+ysGHVXtqdw3POmMPsFuYYpPSgasB0TBtcN9Fv8R+EA+Jkj+kx+y4kuKR; path=/; Httponly",
-        "TS01ffdb6c=01a6efdeadff31aaecc88bff177ac5bea5a13b2a1c79604fdf4471f6a6bd5e351c77d467668aadf5b1d1f170d35b72c9cb295d8d896bc789bbfeb72d2bcc5184c6f6e5f938; Path=/; Domain=.www.justice.fr"
-      ]
+      "content-length": "15139"
     }
   },
   "tests": {
@@ -45,22 +28,10 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
-      "data": {
-        "BIGipServer34MTuypDk3zboBHeznTQiA": {
-          "domain": "www.justice.fr",
-          "httponly": true,
-          "path": "/",
-          "port": null
-        },
-        "TS01ffdb6c": {
-          "domain": "www.justice.fr",
-          "path": "/",
-          "port": null
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -108,23 +79,23 @@
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "result": "sri-not-implemented-response-not-html",
       "scoreModifier": 0,
       "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
