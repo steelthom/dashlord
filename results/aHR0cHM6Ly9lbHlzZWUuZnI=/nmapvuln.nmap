@@ -1,46 +1,30 @@
-# Nmap 7.92 scan initiated Mon Sep  8 03:12:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln elysee.fr
+# Nmap 7.92 scan initiated Wed Sep 10 03:46:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln elysee.fr
 Nmap scan report for elysee.fr (185.194.81.29)
-Host is up (0.12s latency).
+Host is up (0.081s latency).
 Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE   VERSION
-80/tcp  open  http
-| fingerprint-strings: 
-|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, SIPOptions, TerminalServerCookie: 
-|     HTTP/1.0 301 Moved Permanently
-|     Location: https://www.elysee.fr/
-|     Connection: close
-|_    Content-Length: 0
+PORT    STATE SERVICE    VERSION
+80/tcp  open  tcpwrapped
 443/tcp open  ssl/https
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
+|   FourOhFourRequest, HTTPOptions, RTSPRequest, SIPOptions, TerminalServerCookie: 
 |     HTTP/1.0 301 Moved Permanently
 |     Location: https://www.elysee.fr/
 |     Connection: close
 |_    Content-Length: 0
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/8%Time=68BE49BF%P=x86_64-alpine-linux-musl%r(
-SF:GetRequest,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x2
-SF:0https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Length:\x2
-SF:00\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/10%Time=68C0F497%P=x86_64-alpine-linux
+SF:-musl%r(HTTPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLoc
+SF:ation:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-L
+SF:ength:\x200\r\n\r\n")%r(FourOhFourRequest,6A,"HTTP/1\.0\x20301\x20Moved
+SF:\x20Permanently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,6A,"HTTP/1\.0
+SF:\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://www\.elysee\.fr
+SF:/\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalS
+SF:erverCookie,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
+SF:20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Length:\x
+SF:200\r\n\r\n")%r(SIPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently
 SF:\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nCo
-SF:ntent-Length:\x200\r\n\r\n")%r(RTSPRequest,6A,"HTTP/1\.0\x20301\x20Move
-SF:d\x20Permanently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection
-SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,6A,"HT
-SF:TP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://www\.ely
-SF:see\.fr/\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(Te
-SF:rminalServerCookie,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLoca
-SF:tion:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Le
-SF:ngth:\x200\r\n\r\n")%r(SIPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Perm
-SF:anently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20clos
-SF:e\r\nContent-Length:\x200\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/8%Time=68BE49C5%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,6A,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocat
-SF:ion:\x20https://www\.elysee\.fr/\r\nConnection:\x20close\r\nContent-Len
-SF:gth:\x200\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.0\x20301\x20Moved\x20Perm
-SF:anently\r\nLocation:\x20https://www\.elysee\.fr/\r\nConnection:\x20clos
-SF:e\r\nContent-Length:\x200\r\n\r\n");
+SF:ntent-Length:\x200\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Sep  8 03:15:21 2025 -- 1 IP address (1 host up) scanned in 153.83 seconds
+# Nmap done at Wed Sep 10 03:48:46 2025 -- 1 IP address (1 host up) scanned in 160.50 seconds
