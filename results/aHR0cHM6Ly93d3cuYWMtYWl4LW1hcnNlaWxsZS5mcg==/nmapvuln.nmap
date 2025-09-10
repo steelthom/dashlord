@@ -1,7 +1,7 @@
-# Nmap 7.92 scan initiated Sun Sep  7 04:44:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ac-aix-marseille.fr
+# Nmap 7.92 scan initiated Wed Sep 10 03:11:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.ac-aix-marseille.fr
 Nmap scan report for www.ac-aix-marseille.fr (141.101.90.106)
-Host is up (0.0057s latency).
-Other addresses for www.ac-aix-marseille.fr (not scanned): 141.101.90.105 141.101.90.107 141.101.90.104 2a06:98c1:3200::90:81 2a06:98c1:3200::90:82 2a06:98c1:3200::90:83 2a06:98c1:3200::90:80
+Host is up (0.019s latency).
+Other addresses for www.ac-aix-marseille.fr (not scanned): 141.101.90.105 141.101.90.107 141.101.90.104 2a06:98c1:3200::90:83 2a06:98c1:3200::90:80 2a06:98c1:3200::90:81 2a06:98c1:3200::90:82
 
 PORT      STATE SERVICE    VERSION
 1/tcp     open  tcpwrapped
@@ -585,7 +585,17 @@ PORT      STATE SERVICE    VERSION
 5214/tcp  open  tcpwrapped
 5221/tcp  open  tcpwrapped
 5222/tcp  open  tcpwrapped
-|_xmpp-info: ERROR: Script execution failed (use -d to debug)
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     compression_methods: 
+|     features: 
+|     auth_mechanisms: 
+|     xmpp: 
+|     unknown: 
+|     capabilities: 
+|     errors: 
+|_      (timeout)
 5225/tcp  open  tcpwrapped
 5226/tcp  open  tcpwrapped
 5269/tcp  open  tcpwrapped
@@ -1013,4 +1023,4 @@ PORT      STATE SERVICE    VERSION
 65389/tcp open  tcpwrapped
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep  7 04:44:29 2025 -- 1 IP address (1 host up) scanned in 24.23 seconds
+# Nmap done at Wed Sep 10 03:12:01 2025 -- 1 IP address (1 host up) scanned in 28.11 seconds
