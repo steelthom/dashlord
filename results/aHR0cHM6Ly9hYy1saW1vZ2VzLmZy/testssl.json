@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "ac-limoges.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -28,13 +28,6 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "TLS1",
-              "ip"           : "ac-limoges.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
-          }
-,         {
               "id"           : "TLS1_1",
               "ip"           : "ac-limoges.fr/185.75.143.93",
               "port"         : "443",
@@ -47,6 +40,58 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "NPN",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "offered with h2, http/1.1 (advertised)"
+          }
+,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "ac-limoges.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "scanProblem",
