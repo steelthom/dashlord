@@ -1,55 +1,62 @@
-# Nmap 7.92 scan initiated Mon Sep  8 04:51:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln signalement.social-sante.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep 11 03:32:57 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln signalement.social-sante.gouv.fr
 Nmap scan report for signalement.social-sante.gouv.fr (51.178.236.12)
-Host is up (0.10s latency).
+Host is up (0.13s latency).
 rDNS record for 51.178.236.12: ip12.ip-51-178-236.eu
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 113/tcp closed ident
 443/tcp open   ssl/https
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 503 Service Unavailable
-|     Date: Mon Sep 8 04:51:46 2025 GMT
-|     Content-Length: 33163
+|     Date: Thu Sep 11 03:33:20 2025 GMT
+|     Content-Length: 33164
+|     Connection: close
+|     Content-Type: text/html
+|     <!DOCTYPE html><html lang="fr" dir="ltr"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Service indisponible</title> <style> @media (max-width: 750px) { header { flex-direction: column; } header h1 { display: none !important; } #wrapper { text-align: center; } } </style> </head> <body> <div id="wrapper" style="max-width: 1200px; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif;"> <header style="display: flex; align-items: center; gap: 3rem;"> <img width="200" src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/4QCORXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAABJADAAIAAAAUAAAAXJAEAAIAAAAUAAAAcJKRAAIAAAADM
+|   HTTPOptions: 
+|     HTTP/1.1 503 Service Unavailable
+|     Date: Thu Sep 11 03:33:21 2025 GMT
+|     Content-Length: 33164
 |     Connection: close
 |     Content-Type: text/html
 |_    <!DOCTYPE html><html lang="fr" dir="ltr"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Service indisponible</title> <style> @media (max-width: 750px) { header { flex-direction: column; } header h1 { display: none !important; } #wrapper { text-align: center; } } </style> </head> <body> <div id="wrapper" style="max-width: 1200px; margin: 0 auto; padding: 1rem; font-family: system-ui, sans-serif;"> <header style="display: flex; align-items: center; gap: 3rem;"> <img width="200" src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/4QCORXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAABJADAAIAAAAUAAAAXJAEAAIAAAAUAAAAcJKRAAIAAAADM
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/8%Time=68BE60E2%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,2F70,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nD
-SF:ate:\x20Mon\x20Sep\x20\x208\x2004:51:46\x202025\x20GMT\r\nContent-Lengt
-SF:h:\x2033163\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r
-SF:\n<!DOCTYPE\x20html><html\x20lang=\"fr\"\x20dir=\"ltr\">\x20<head>\x20<
-SF:meta\x20charset=\"UTF-8\">\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x
-SF:20content=\"IE=edge\">\x20<meta\x20name=\"viewport\"\x20content=\"width
-SF:=device-width,\x20initial-scale=1\.0\">\x20<title>Service\x20indisponib
-SF:le</title>\x20<style>\x20@media\x20\(max-width:\x20750px\)\x20{\x20head
-SF:er\x20{\x20flex-direction:\x20column;\x20}\x20header\x20h1\x20{\x20disp
-SF:lay:\x20none\x20!important;\x20}\x20#wrapper\x20{\x20text-align:\x20cen
-SF:ter;\x20}\x20}\x20</style>\x20</head>\x20<body>\x20<div\x20id=\"wrapper
-SF:\"\x20style=\"max-width:\x201200px;\x20margin:\x200\x20auto;\x20padding
-SF::\x201rem;\x20font-family:\x20system-ui,\x20sans-serif;\">\x20<header\x
-SF:20style=\"display:\x20flex;\x20align-items:\x20center;\x20gap:\x203rem;
-SF:\">\x20<img\x20width=\"200\"\x20src=data:image/jpeg;base64,/9j/4AAQSkZJ
-SF:RgABAQEAeAB4AAD/4QCORXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAA
-SF:AJgAAAAAABJADAAIAAAAUAAAAXJAEAAIAAAAUAAAAcJKRAAIAAAADM")%r(HTTPOptions,
-SF:2F70,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nDate:\x20Mon\x20Sep
-SF:\x20\x208\x2004:51:46\x202025\x20GMT\r\nContent-Length:\x2033163\r\nCon
-SF:nection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<!DOCTYPE\x20htm
-SF:l><html\x20lang=\"fr\"\x20dir=\"ltr\">\x20<head>\x20<meta\x20charset=\"
-SF:UTF-8\">\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edg
-SF:e\">\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20
-SF:initial-scale=1\.0\">\x20<title>Service\x20indisponible</title>\x20<sty
-SF:le>\x20@media\x20\(max-width:\x20750px\)\x20{\x20header\x20{\x20flex-di
-SF:rection:\x20column;\x20}\x20header\x20h1\x20{\x20display:\x20none\x20!i
-SF:mportant;\x20}\x20#wrapper\x20{\x20text-align:\x20center;\x20}\x20}\x20
-SF:</style>\x20</head>\x20<body>\x20<div\x20id=\"wrapper\"\x20style=\"max-
-SF:width:\x201200px;\x20margin:\x200\x20auto;\x20padding:\x201rem;\x20font
-SF:-family:\x20system-ui,\x20sans-serif;\">\x20<header\x20style=\"display:
-SF:\x20flex;\x20align-items:\x20center;\x20gap:\x203rem;\">\x20<img\x20wid
-SF:th=\"200\"\x20src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/4Q
-SF:CORXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAABJADAAIAA
-SF:AAUAAAAXJAEAAIAAAAUAAAAcJKRAAIAAAADM");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/11%Time=68C24300%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2F70,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\n
+SF:Date:\x20Thu\x20Sep\x2011\x2003:33:20\x202025\x20GMT\r\nContent-Length:
+SF:\x2033164\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n
+SF:<!DOCTYPE\x20html><html\x20lang=\"fr\"\x20dir=\"ltr\">\x20<head>\x20<me
+SF:ta\x20charset=\"UTF-8\">\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20
+SF:content=\"IE=edge\">\x20<meta\x20name=\"viewport\"\x20content=\"width=d
+SF:evice-width,\x20initial-scale=1\.0\">\x20<title>Service\x20indisponible
+SF:</title>\x20<style>\x20@media\x20\(max-width:\x20750px\)\x20{\x20header
+SF:\x20{\x20flex-direction:\x20column;\x20}\x20header\x20h1\x20{\x20displa
+SF:y:\x20none\x20!important;\x20}\x20#wrapper\x20{\x20text-align:\x20cente
+SF:r;\x20}\x20}\x20</style>\x20</head>\x20<body>\x20<div\x20id=\"wrapper\"
+SF:\x20style=\"max-width:\x201200px;\x20margin:\x200\x20auto;\x20padding:\
+SF:x201rem;\x20font-family:\x20system-ui,\x20sans-serif;\">\x20<header\x20
+SF:style=\"display:\x20flex;\x20align-items:\x20center;\x20gap:\x203rem;\"
+SF:>\x20<img\x20width=\"200\"\x20src=data:image/jpeg;base64,/9j/4AAQSkZJRg
+SF:ABAQEAeAB4AAD/4QCORXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJ
+SF:gAAAAAABJADAAIAAAAUAAAAXJAEAAIAAAAUAAAAcJKRAAIAAAADM")%r(HTTPOptions,2F
+SF:70,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nDate:\x20Thu\x20Sep\x
+SF:2011\x2003:33:21\x202025\x20GMT\r\nContent-Length:\x2033164\r\nConnecti
+SF:on:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<!DOCTYPE\x20html><ht
+SF:ml\x20lang=\"fr\"\x20dir=\"ltr\">\x20<head>\x20<meta\x20charset=\"UTF-8
+SF:\">\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\
+SF:x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initi
+SF:al-scale=1\.0\">\x20<title>Service\x20indisponible</title>\x20<style>\x
+SF:20@media\x20\(max-width:\x20750px\)\x20{\x20header\x20{\x20flex-directi
+SF:on:\x20column;\x20}\x20header\x20h1\x20{\x20display:\x20none\x20!import
+SF:ant;\x20}\x20#wrapper\x20{\x20text-align:\x20center;\x20}\x20}\x20</sty
+SF:le>\x20</head>\x20<body>\x20<div\x20id=\"wrapper\"\x20style=\"max-width
+SF::\x201200px;\x20margin:\x200\x20auto;\x20padding:\x201rem;\x20font-fami
+SF:ly:\x20system-ui,\x20sans-serif;\">\x20<header\x20style=\"display:\x20f
+SF:lex;\x20align-items:\x20center;\x20gap:\x203rem;\">\x20<img\x20width=\"
+SF:200\"\x20src=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/4QCORXh
+SF:pZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAABJADAAIAAAAUAA
+SF:AAXJAEAAIAAAAUAAAAcJKRAAIAAAADM");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Sep  8 04:52:24 2025 -- 1 IP address (1 host up) scanned in 59.51 seconds
+# Nmap done at Thu Sep 11 03:34:02 2025 -- 1 IP address (1 host up) scanned in 64.90 seconds
