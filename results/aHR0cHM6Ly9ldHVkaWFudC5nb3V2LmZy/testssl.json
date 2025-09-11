@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -17,55 +17,21 @@
               "id"           : "SSLv2",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not offered"
+              "severity"     : "WARN",
+              "finding"      : "couldn't be tested, socket problem"
           }
 ,         {
-              "id"           : "SSLv3",
+              "id"           : "scanProblem",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not offered"
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
           }
 ,         {
-              "id"           : "TLS1",
+              "id"           : "scanTime",
               "ip"           : "etudiant.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
           }
-,         {
-              "id"           : "TLS1_1",
-              "ip"           : "etudiant.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "TLS1_2",
-              "ip"           : "etudiant.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "TLS1_3",
-              "ip"           : "etudiant.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "CRITICAL",
-              "finding"      : "connection failed rather than downgrading to TLSv1.2"
-          }
-,         {
-              "id"           : "NPN",
-              "ip"           : "etudiant.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "offered with h2, http/1.1 (advertised)"
-          }
-,         {
-              "id"           : "ALPN_HTTP2",
-              "ip"           : "etudiant.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "h2"
-          }
+]
