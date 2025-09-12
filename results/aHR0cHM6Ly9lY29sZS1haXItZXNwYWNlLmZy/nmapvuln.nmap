@@ -1,23 +1,24 @@
-# Nmap 7.92 scan initiated Wed Sep 10 03:43:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ecole-air-espace.fr
+# Nmap 7.92 scan initiated Fri Sep 12 03:48:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ecole-air-espace.fr
 Nmap scan report for ecole-air-espace.fr (54.36.91.62)
-Host is up (0.086s latency).
+Host is up (0.15s latency).
 Other addresses for ecole-air-espace.fr (not scanned): 2001:41d0:301::27
 rDNS record for 54.36.91.62: cluster027.hosting.ovh.net
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http      OVHcloud
+|_http-server-header: OVHcloud
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Wed, 10 Sep 2025 03:44:17 GMT
+|     date: Fri, 12 Sep 2025 03:48:39 GMT
 |     content-type: text/html; charset=utf8
-|     content-length: 4958
-|     x-ovh-webhosting-id: 20d3c4e39b0cade37f3bee94af3705d3
+|     content-length: 4961
+|     x-ovh-webhosting-id: e0236ef813e67783b06dc782a356ede4
 |     pragma: no-cache
 |     cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 |     server: OVHcloud
-|     x-iplb-request-id: 146D5F62:BC44_36245B3E:0050_68C0F40B_24737:1982
-|     x-iplb-instance: 52208
+|     x-iplb-request-id: ACB8D3F7:702D_36245B3E:0050_68C39811_3466C:2522
+|     x-iplb-instance: 52245
 |     connection: close
 |     <html xml:lang="en-EN" lang="en-EN">
 |     <head>
@@ -31,15 +32,15 @@ PORT    STATE SERVICE   VERSION
 |     <met
 |   HTTPOptions: 
 |     HTTP/1.1 404 Not Found
-|     date: Wed, 10 Sep 2025 03:44:18 GMT
+|     date: Fri, 12 Sep 2025 03:48:39 GMT
 |     content-type: text/html; charset=utf8
-|     content-length: 4958
-|     x-ovh-webhosting-id: de515e6b05e6726f3497e157b0361c85
+|     content-length: 4961
+|     x-ovh-webhosting-id: aa31f4337f7d290a6b7daa3c19ec9d38
 |     pragma: no-cache
 |     cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 |     server: OVHcloud
-|     x-iplb-request-id: 146D5F62:BC13_36245B3E:0050_68C0F412_635C:5C1A
-|     x-iplb-instance: 52233
+|     x-iplb-request-id: ACB8D3F7:702B_36245B3E:0050_68C39817_CCE5:6EB8
+|     x-iplb-instance: 52208
 |     connection: close
 |     <html xml:lang="en-EN" lang="en-EN">
 |     <head>
@@ -51,16 +52,16 @@ PORT    STATE SERVICE   VERSION
 |     <meta name="robots" content="noindex, nofollow">
 |     <meta name="description" qtlid="283606" content="Site not installed">
 |_    <meta
-|_http-server-header: OVHcloud
 443/tcp open  ssl/https OVHcloud
+|_http-server-header: OVHcloud
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 404 Not Found
-|     Date: Wed, 10 Sep 2025 03:44:24 GMT
+|     Date: Fri, 12 Sep 2025 03:48:45 GMT
 |     Content-Type: text/html; charset=utf8
-|     Content-Length: 4958
+|     Content-Length: 4961
 |     Connection: close
-|     X-OVH-Webhosting-Id: 7f1be7eb373bb14836acea1aab6d9027
+|     X-OVH-Webhosting-Id: 5acefc9f9df5fe94c62e1588c2c09e60
 |     pragma: no-cache
 |     cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 |     Server: OVHcloud
@@ -77,11 +78,11 @@ PORT    STATE SERVICE   VERSION
 |     <meta http-equiv="pragma" content="
 |   HTTPOptions: 
 |     HTTP/1.1 404 Not Found
-|     Date: Wed, 10 Sep 2025 03:44:24 GMT
+|     Date: Fri, 12 Sep 2025 03:48:46 GMT
 |     Content-Type: text/html; charset=utf8
-|     Content-Length: 4958
+|     Content-Length: 4961
 |     Connection: close
-|     X-OVH-Webhosting-Id: b0d39bc43d061de69068dd71ab70ba2e
+|     X-OVH-Webhosting-Id: 9a83484cc8ca4b32a9d376f03562881c
 |     pragma: no-cache
 |     cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 |     Server: OVHcloud
@@ -96,17 +97,16 @@ PORT    STATE SERVICE   VERSION
 |     <meta name="description" qtlid="283606" content="Site not installed">
 |     <meta http-equiv="cache-control" content="no-cache">
 |_    <meta http-equiv="pragma" content="
-|_http-server-header: OVHcloud
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/10%Time=68C0F412%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,14F3,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Wed,\x20
-SF:10\x20Sep\x202025\x2003:44:17\x20GMT\r\ncontent-type:\x20text/html;\x20
-SF:charset=utf8\r\ncontent-length:\x204958\r\nx-ovh-webhosting-id:\x2020d3
-SF:c4e39b0cade37f3bee94af3705d3\r\npragma:\x20no-cache\r\ncache-control:\x
+SF-Port80-TCP:V=7.92%I=7%D=9/12%Time=68C39817%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,14F6,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Fri,\x20
+SF:12\x20Sep\x202025\x2003:48:39\x20GMT\r\ncontent-type:\x20text/html;\x20
+SF:charset=utf8\r\ncontent-length:\x204961\r\nx-ovh-webhosting-id:\x20e023
+SF:6ef813e67783b06dc782a356ede4\r\npragma:\x20no-cache\r\ncache-control:\x
 SF:20no-store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-ch
-SF:eck=0\r\nserver:\x20OVHcloud\r\nx-iplb-request-id:\x20146D5F62:BC44_362
-SF:45B3E:0050_68C0F40B_24737:1982\r\nx-iplb-instance:\x2052208\r\nconnecti
+SF:eck=0\r\nserver:\x20OVHcloud\r\nx-iplb-request-id:\x20ACB8D3F7:702D_362
+SF:45B3E:0050_68C39811_3466C:2522\r\nx-iplb-instance:\x2052245\r\nconnecti
 SF:on:\x20close\r\n\r\n<html\x20xml:lang=\"en-EN\"\x20lang=\"en-EN\">\n\x2
 SF:0\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Site\x20not
 SF:\x20installed\x20-\x20OVHcloud</title>\n\x20\x20\x20\x20\x20\x20\x20\x2
@@ -118,14 +118,14 @@ SF:20\x20\x20<meta\x20http-equiv=\"Content-Language\"\x20content=\"en-EN\"
 SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"robots\"\x20content=
 SF:\"noindex,\x20nofollow\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20nam
 SF:e=\"description\"\x20\x20qtlid=\"283606\"\x20content=\"Site\x20not\x20i
-SF:nstalled\">\n\x20\x20\x20\x20\x20\x20\x20\x20<met")%r(HTTPOptions,14F2,
-SF:"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Wed,\x2010\x20Sep\x202025
-SF:\x2003:44:18\x20GMT\r\ncontent-type:\x20text/html;\x20charset=utf8\r\nc
-SF:ontent-length:\x204958\r\nx-ovh-webhosting-id:\x20de515e6b05e6726f3497e
-SF:157b0361c85\r\npragma:\x20no-cache\r\ncache-control:\x20no-store,\x20no
+SF:nstalled\">\n\x20\x20\x20\x20\x20\x20\x20\x20<met")%r(HTTPOptions,14F5,
+SF:"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Fri,\x2012\x20Sep\x202025
+SF:\x2003:48:39\x20GMT\r\ncontent-type:\x20text/html;\x20charset=utf8\r\nc
+SF:ontent-length:\x204961\r\nx-ovh-webhosting-id:\x20aa31f4337f7d290a6b7da
+SF:a3c19ec9d38\r\npragma:\x20no-cache\r\ncache-control:\x20no-store,\x20no
 SF:-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r\nserver:\
-SF:x20OVHcloud\r\nx-iplb-request-id:\x20146D5F62:BC13_36245B3E:0050_68C0F4
-SF:12_635C:5C1A\r\nx-iplb-instance:\x2052233\r\nconnection:\x20close\r\n\r
+SF:x20OVHcloud\r\nx-iplb-request-id:\x20ACB8D3F7:702B_36245B3E:0050_68C398
+SF:17_CCE5:6EB8\r\nx-iplb-instance:\x2052208\r\nconnection:\x20close\r\n\r
 SF:\n<html\x20xml:lang=\"en-EN\"\x20lang=\"en-EN\">\n\x20\x20\x20\x20<head
 SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Site\x20not\x20installed\x20-
 SF:\x20OVHcloud</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"v
@@ -139,11 +139,11 @@ SF:llow\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"description\"\
 SF:x20\x20qtlid=\"283606\"\x20content=\"Site\x20not\x20installed\">\n\x20\
 SF:x20\x20\x20\x20\x20\x20\x20<meta");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/10%Time=68C0F418%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,1497,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20W
-SF:ed,\x2010\x20Sep\x202025\x2003:44:24\x20GMT\r\nContent-Type:\x20text/ht
-SF:ml;\x20charset=utf8\r\nContent-Length:\x204958\r\nConnection:\x20close\
-SF:r\nX-OVH-Webhosting-Id:\x207f1be7eb373bb14836acea1aab6d9027\r\npragma:\
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/12%Time=68C3981E%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,149A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20F
+SF:ri,\x2012\x20Sep\x202025\x2003:48:45\x20GMT\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=utf8\r\nContent-Length:\x204961\r\nConnection:\x20close\
+SF:r\nX-OVH-Webhosting-Id:\x205acefc9f9df5fe94c62e1588c2c09e60\r\npragma:\
 SF:x20no-cache\r\ncache-control:\x20no-store,\x20no-cache,\x20must-revalid
 SF:ate,\x20post-check=0,\x20pre-check=0\r\nServer:\x20OVHcloud\r\n\r\n<htm
 SF:l\x20xml:lang=\"en-EN\"\x20lang=\"en-EN\">\n\x20\x20\x20\x20<head>\n\x2
@@ -159,11 +159,11 @@ SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"description\"\x20\x2
 SF:0qtlid=\"283606\"\x20content=\"Site\x20not\x20installed\">\n\x20\x20\x2
 SF:0\x20\x20\x20\x20\x20<meta\x20http-equiv=\"cache-control\"\x20content=\
 SF:"no-cache\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"pra
-SF:gma\"\x20content=\"")%r(HTTPOptions,1497,"HTTP/1\.1\x20404\x20Not\x20Fo
-SF:und\r\nDate:\x20Wed,\x2010\x20Sep\x202025\x2003:44:24\x20GMT\r\nContent
-SF:-Type:\x20text/html;\x20charset=utf8\r\nContent-Length:\x204958\r\nConn
-SF:ection:\x20close\r\nX-OVH-Webhosting-Id:\x20b0d39bc43d061de69068dd71ab7
-SF:0ba2e\r\npragma:\x20no-cache\r\ncache-control:\x20no-store,\x20no-cache
+SF:gma\"\x20content=\"")%r(HTTPOptions,149A,"HTTP/1\.1\x20404\x20Not\x20Fo
+SF:und\r\nDate:\x20Fri,\x2012\x20Sep\x202025\x2003:48:46\x20GMT\r\nContent
+SF:-Type:\x20text/html;\x20charset=utf8\r\nContent-Length:\x204961\r\nConn
+SF:ection:\x20close\r\nX-OVH-Webhosting-Id:\x209a83484cc8ca4b32a9d376f0356
+SF:2881c\r\npragma:\x20no-cache\r\ncache-control:\x20no-store,\x20no-cache
 SF:,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r\nServer:\x20OVH
 SF:cloud\r\n\r\n<html\x20xml:lang=\"en-EN\"\x20lang=\"en-EN\">\n\x20\x20\x
 SF:20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Site\x20not\x20ins
@@ -181,4 +181,4 @@ SF:ol\"\x20content=\"no-cache\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x2
 SF:0http-equiv=\"pragma\"\x20content=\"");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Sep 10 03:44:42 2025 -- 1 IP address (1 host up) scanned in 43.70 seconds
+# Nmap done at Fri Sep 12 03:49:12 2025 -- 1 IP address (1 host up) scanned in 49.84 seconds
