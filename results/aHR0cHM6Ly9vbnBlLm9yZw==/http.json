@@ -3,18 +3,19 @@
     "algorithmVersion": 4,
     "grade": "B",
     "error": null,
-    "score": 70,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
+      "date": "Fri, 12 Sep 2025 04:45:42 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
       "cache-control": "max-age=10800, public",
       "content-language": "fr",
       "content-security-policy": "frame-ancestors 'self';",
-      "content-type": "text/html; charset=UTF-8",
-      "date": "Wed, 10 Sep 2025 03:33:14 GMT",
-      "etag": "\"1756371588\"",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
       "last-modified": "Thu, 28 Aug 2025 08:59:48 GMT",
       "permissions-policy": "geolocation=(self), microphone=(), camera=(), fullscreen=*",
@@ -24,15 +25,14 @@
       "x-content-type-options": "nosniff",
       "x-drupal-cache": "HIT",
       "x-drupal-dynamic-cache": "MISS",
-      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+      "x-frame-options": "SAMEORIGIN",
       "x-xss-protection": "1; mode=block",
+      "cf-cache-status": "DYNAMIC",
       "set-cookie": [
-        "BNIS_vid=t2lwsdrIUgb09HG69XQYgRfQZjdcj7SBqPaHIROdfrEGO1WIp4JtOTZli41I2e7sA1vymg+jgLFseDpsKMhiAhGA8dbDpAITZxAiIodhvsxTAYyH2KkXj2gWEnukFqnNP5jzfJoq9b10xC4SaNtTtZn2SqW1M49/jRLmhuR6gieFZwR4jE9VOyDjszG1o8L/0qaXt86ettk=; Path=/",
-        "BNIS___utm_is1=4LqLIP28y63ZJJa9/WFnDKvwKKYqC5m+GexCQGinpG2pATgJB64o1ooNDn1uUbNOpBZMAuGfmHtLsAZLDKoGgPmpEVMPDWauM5ItnF3x5wmG3g4bNdp8eA==; Max-Age=31536000; Path=/",
-        "BNIS___utm_is2=7+qnYCupOufF9AFo/gSxbsObwkmZaU1y3npJso1ZWNHrW3RP+DaFsGeVpUaXTlZsJ7WaB4T+o+A=; Max-Age=10800; Path=/",
-        "BNIS___utm_is3=dO48EZSKBwvvuucR/zuzT/Fk0VJ46oK0uowMbdzDS/fvHk/TlDMo+/f8GP19ynC/xCYWDMKpuXvXweTLqIq+e9/NeD8cQhkptBtxfJl4+O8=;  Path=/"
+        "__cf_bm=IuohsmMyctEY9_sYHMZ..sXHznlwnDTsHeoXzLqwVbE-1757652342-1.0.1.1-kAq1K8ubfAQxKrBAoJaIDCI4TGB0yenkbxngyr83MIefrdpc3D1PE4Wx0cK3YawBITRnGsMEOA1blTYOp7imF6UkOmfjrvRWHuNKcAD0h0U; path=/; expires=Fri, 12-Sep-25 05:15:42 GMT; domain=.onpe.org; HttpOnly; Secure; SameSite=None"
       ],
-      "connection": "close"
+      "server": "cloudflare",
+      "cf-ray": "97dcc1c1efeb826c-IAD"
     }
   },
   "tests": {
@@ -65,34 +65,21 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-without-secure-flag-but-protected-by-hsts",
-      "scoreModifier": -5,
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
       "data": {
-        "BNIS_vid": {
+        "__cf_bm": {
           "domain": "onpe.org",
+          "expires": "2025-09-12T05:15:42.000Z",
+          "httponly": true,
           "path": "/",
-          "port": null
-        },
-        "BNIS___utm_is1": {
-          "domain": "onpe.org",
-          "max-age": 31536000,
-          "path": "/",
-          "port": null
-        },
-        "BNIS___utm_is2": {
-          "domain": "onpe.org",
-          "max-age": 10800,
-          "path": "/",
-          "port": null
-        },
-        "BNIS___utm_is3": {
-          "domain": "onpe.org",
-          "path": "/",
-          "port": null
+          "port": null,
+          "samesite": "none",
+          "secure": true
         }
       },
-      "sameSite": false
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -143,10 +130,6 @@
         "https://tarteaucitron.io/load.js?domain=onpe.org&uuid=2df1000bf385655312abede8e30421664e7d594e": {
           "crossorigin": null,
           "integrity": null
-        },
-        "https://cdn.infisecure.com/barracuda.js": {
-          "crossorigin": null,
-          "integrity": null
         }
       }
     },
@@ -162,7 +145,7 @@
       "pass": true,
       "result": "x-frame-options-implemented-via-csp",
       "scoreModifier": 5,
-      "data": "SAMEORIGIN, SAMEORIGIN"
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
