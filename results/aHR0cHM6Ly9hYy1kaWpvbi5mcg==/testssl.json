@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "ac-dijon.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -139,13 +139,6 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "cipher_order-tls1_2",
-              "ip"           : "ac-dijon.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
               "id"           : "cipher-tls1_2_xc02c",
               "ip"           : "ac-dijon.fr/185.75.143.93",
               "port"         : "443",
@@ -174,13 +167,6 @@
               "finding"      : "ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-CHACHA20-POLY1305 ECDHE-ECDSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "cipher_order-tls1_3",
-              "ip"           : "ac-dijon.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
               "id"           : "cipher-tls1_3_x1302",
               "ip"           : "ac-dijon.fr/185.75.143.93",
               "port"         : "443",
@@ -202,18 +188,18 @@
               "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 253   AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
+              "id"           : "cipher-tls1_3_x1304",
+              "ip"           : "ac-dijon.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1304   TLS_AES_128_CCM_SHA256            ECDH 253   AESCCM      128      TLS_AES_128_CCM_SHA256"
+          }
+,         {
               "id"           : "supportedciphers_TLSv1_3",
               "ip"           : "ac-dijon.fr/185.75.143.93",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "cipher_order",
-              "ip"           : "ac-dijon.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256 TLS_AES_128_CCM_SHA256"
           }
 ,         {
               "id"           : "FS",
@@ -222,3 +208,18 @@
               "severity"     : "OK",
               "finding"      : "offered"
           }
+,         {
+              "id"           : "scanProblem",
+              "ip"           : "ac-dijon.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
+          }
+,         {
+              "id"           : "scanTime",
+              "ip"           : "ac-dijon.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
+          }
+]
