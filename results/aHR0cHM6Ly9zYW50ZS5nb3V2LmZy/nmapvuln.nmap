@@ -1,24 +1,25 @@
-# Nmap 7.92 scan initiated Wed Sep 10 05:02:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sante.gouv.fr
+# Nmap 7.92 scan initiated Sat Sep 13 03:24:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sante.gouv.fr
 Nmap scan report for sante.gouv.fr (185.194.82.27)
-Host is up (0.082s latency).
+Host is up (0.094s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Wed, 10 Sep 2025 05:02:56 GMT
+|     Date: Sat, 13 Sep 2025 03:24:58 GMT
 |     X-Spip-Cache: 21600
 |     X-Frame-Options: SAMEORIGIN
-|     Last-Modified: Wed, 10 Sep 2025 05:02:56 GMT
+|     Last-Modified: Sat, 13 Sep 2025 03:24:58 GMT
 |     Vary: Accept-Encoding
 |     X-Content-Type-Options: nosniff
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!NlvC3JsSEvSGzH6GSajX/n7IEULO/OqfIq93hJzPprtRbltyNh1cZvXlGO1Texh1KJK+CzHoit2cL2YmXs3BbrMBkc5G; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!hMoF72L4TgR+kFSGSajX/n7IEULO/DVNG4lvy95dfl0tyIANzdwrG/i14M395NoZUqv72z/QTkKrTuJ5oTBLnuDecN1O; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000
 |     <!DOCTYPE HTML>
 |     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
@@ -31,15 +32,15 @@ PORT    STATE  SERVICE    VERSION
 |     <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Wed, 10 Sep 2025 05:02:56 GMT
+|     Date: Sat, 13 Sep 2025 03:24:58 GMT
 |     X-Spip-Cache: 21600
 |     X-Frame-Options: SAMEORIGIN
-|     Last-Modified: Wed, 10 Sep 2025 05:02:56 GMT
+|     Last-Modified: Sat, 13 Sep 2025 03:24:58 GMT
 |     Vary: Accept-Encoding
 |     X-Content-Type-Options: nosniff
 |     Connection: close
 |     Content-Type: text/html; charset=utf-8
-|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!g2c2XMg8Ag6m9+yGSajX/n7IEULO/EkKiEKe2yPsVfrrhjPNt3ro2MuIc8Gt+NoCQP8aqC3MSle6mlax5Mr0Ca/0kq40; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!1b3t6ieGlwaI5NCGSajX/n7IEULO/Dc9Dkwsj/wJf8p005uUsll0J6CubBJ4La7oEs5wMejfp9Dg+Md9YYMDKuLoECWL; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000
 |     <!DOCTYPE HTML>
 |     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
@@ -50,17 +51,16 @@ PORT    STATE  SERVICE    VERSION
 |     l&#039;acc
 |     soins</title>
 |_    <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
-|_http-trane-info: Problem with XML parsing of /evox/about
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/10%Time=68C10680%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2010\
-SF:x20Sep\x202025\x2005:02:56\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX-Frame-
-SF:Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Wed,\x2010\x20Sep\x202025\x
-SF:2005:02:56\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-Options
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/13%Time=68C4E40A%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2013\
+SF:x20Sep\x202025\x2003:24:58\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX-Frame-
+SF:Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Sat,\x2013\x20Sep\x202025\x
+SF:2003:24:58\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-Options
 SF::\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20
 SF:charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-dares\.ce
-SF:gedim\.cloud-http=!NlvC3JsSEvSGzH6GSajX/n7IEULO/OqfIq93hJzPprtRbltyNh1c
-SF:ZvXlGO1Texh1KJK\+CzHoit2cL2YmXs3BbrMBkc5G;\x20path=/;\x20Httponly;\x20S
+SF:gedim\.cloud-http=!hMoF72L4TgR\+kFSGSajX/n7IEULO/DVNG4lvy95dfl0tyIANzdw
+SF:rG/i14M395NoZUqv72z/QTkKrTuJ5oTBLnuDecN1O;\x20path=/;\x20Httponly;\x20S
 SF:ecure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<!DOCTYP
 SF:E\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-js\"\x20l
 SF:ang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\[\*/\(fu
@@ -69,24 +69,24 @@ SF:\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>Accueil\
 SF:x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20de\x20l&#
 SF:039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/css'>img
 SF:\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20{display
-SF::inline-bl")%r(HTTPOptions,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed
-SF:,\x2010\x20Sep\x202025\x2005:02:56\x20GMT\r\nX-Spip-Cache:\x2021600\r\n
-SF:X-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Wed,\x2010\x20Sep\x
-SF:202025\x2005:02:56\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type
+SF::inline-bl")%r(HTTPOptions,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat
+SF:,\x2013\x20Sep\x202025\x2003:24:58\x20GMT\r\nX-Spip-Cache:\x2021600\r\n
+SF:X-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Sat,\x2013\x20Sep\x
+SF:202025\x2003:24:58\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type
 SF:-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/h
 SF:tml;\x20charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-d
-SF:ares\.cegedim\.cloud-http=!g2c2XMg8Ag6m9\+yGSajX/n7IEULO/EkKiEKe2yPsVfr
-SF:rhjPNt3ro2MuIc8Gt\+NoCQP8aqC3MSle6mlax5Mr0Ca/0kq40;\x20path=/;\x20Httpo
-SF:nly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\
-SF:n<!DOCTYPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-
-SF:js\"\x20lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA
-SF:\[\*/\(function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,
-SF:'js'\)}\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title
-SF:>Accueil\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20
-SF:de\x20l&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text
-SF:/css'>img\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x2
-SF:0{display:inline-bl");
+SF:ares\.cegedim\.cloud-http=!1b3t6ieGlwaI5NCGSajX/n7IEULO/Dc9Dkwsj/wJf8p0
+SF:05uUsll0J6CubBJ4La7oEs5wMejfp9Dg\+Md9YYMDKuLoECWL;\x20path=/;\x20Httpon
+SF:ly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n
+SF:<!DOCTYPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-j
+SF:s\"\x20lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\
+SF:[\*/\(function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'
+SF:js'\)}\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>
+SF:Accueil\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20d
+SF:e\x20l&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/
+SF:css'>img\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20
+SF:{display:inline-bl");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Sep 10 05:05:06 2025 -- 1 IP address (1 host up) scanned in 149.73 seconds
+# Nmap done at Sat Sep 13 03:27:09 2025 -- 1 IP address (1 host up) scanned in 151.44 seconds
