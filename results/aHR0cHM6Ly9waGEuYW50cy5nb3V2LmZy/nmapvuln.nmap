@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Sep 12 03:57:29 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pha.ants.gouv.fr
+# Nmap 7.92 scan initiated Sun Sep 14 04:06:28 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pha.ants.gouv.fr
 Nmap scan report for pha.ants.gouv.fr (66.22.32.116)
-Host is up (0.080s latency).
+Host is up (0.084s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE   VERSION
 20/tcp  filtered ftp-data
@@ -12,7 +12,7 @@ PORT    STATE    SERVICE   VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Fri, 12 Sep 2025 03:57:38 GMT
+|     Date: Sun, 14 Sep 2025 04:06:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -24,25 +24,10 @@ PORT    STATE    SERVICE   VERSION
 |     <hr><center>rdwr</center>
 |     </body>
 |     </html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Fri, 12 Sep 2025 03:57:37 GMT
-|     Content-Type: text/html
-|     Content-Length: 137
-|     Connection: close
-|     Location: https://pha.ants.gouv.fr:443/
-|     <html>
-|     <head><title>302 Found</title></head>
-|     <body>
-|     <center><h1>302 Found</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|     </html>
-|   HTTPOptions: 
-|     HTTP/1.1 302 Moved Temporarily
-|     Server: rdwr
-|     Date: Fri, 12 Sep 2025 03:57:38 GMT
+|     Date: Sun, 14 Sep 2025 04:06:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 137
 |     Connection: close
@@ -57,7 +42,7 @@ PORT    STATE    SERVICE   VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: rdwr
-|     Date: Fri, 12 Sep 2025 03:57:38 GMT
+|     Date: Sun, 14 Sep 2025 04:06:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 149
 |     Connection: close
@@ -71,8 +56,6 @@ PORT    STATE    SERVICE   VERSION
 161/tcp filtered snmp
 179/tcp filtered bgp
 443/tcp open     ssl/https
-|_http-trane-info: ERROR: Script execution failed (use -d to debug)
-|_hnap-info: ERROR: Script execution failed (use -d to debug)
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 303 Found
@@ -80,25 +63,25 @@ PORT    STATE    SERVICE   VERSION
 |     Content-Length: 650
 |     Connection: close
 |     Cache-Control: no-cache, private, no-store, must-revalidate
-|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869278410
+|     Location: https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869287028
 |     <html>
 |     <head>
 |     <title>Security Page redirect</title>
-|     <meta http-equiv="refresh" content="3;url=https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869278410">
+|     <meta http-equiv="refresh" content="3;url=https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869287028">
 |     <script type="text/javascript">
-|     function GoSecure() { location.href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869278410";}
+|     function GoSecure() { location.href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869287028";}
 |     function SetDelay() { setTimeout("GoSecure();",2000);}
 |     </script>
 |     </head>
 |     <body onLoad="SetDelay();">
-|     align="center">Click <a href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869278410">Here</a> to continue.</h2>
+|     align="center">Click <a href="https://csirt.docapost.fr/index.php/Information_de_s%C3%A9curit%C3%A9_ANTS?_event_transid=1869287028">Here</a> to continue.</h2>
 |     </body
 |   GetRequest: 
 |     HTTP/1.1 400 Bad Request
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
-|     Date: Fri, 12 Sep 2025 03:57:44 GMT
+|     Date: Sun, 14 Sep 2025 04:06:43 GMT
 |     X-Content-Type-Options: nosniff
 |     X-XSS-Protection: 1; mode=block
 |     X-Frame-Options: SAMEORIGIN
@@ -117,7 +100,7 @@ PORT    STATE    SERVICE   VERSION
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
-|     Date: Fri, 12 Sep 2025 03:57:45 GMT
+|     Date: Sun, 14 Sep 2025 04:06:44 GMT
 |     X-Content-Type-Options: nosniff
 |     X-XSS-Protection: 1; mode=block
 |     X-Frame-Options: SAMEORIGIN
@@ -131,44 +114,46 @@ PORT    STATE    SERVICE   VERSION
 |     <hr><center>nginx</center>
 |     </body>
 |_    </html>
+|_http-trane-info: ERROR: Script execution failed (use -d to debug)
+|_hnap-info: ERROR: Script execution failed (use -d to debug)
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/12%Time=68C39A32%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/14%Time=68C63F4D%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Fri,\x2012\x20Sep\x202025\x2003:57:37\x20GMT\r\nConte
+SF:0rdwr\r\nDate:\x20Sun,\x2014\x20Sep\x202025\x2004:06:37\x20GMT\r\nConte
 SF:nt-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close
 SF:\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<hea
 SF:d><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Fo
 SF:und</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\
 SF:n")%r(HTTPOptions,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServ
-SF:er:\x20rdwr\r\nDate:\x20Fri,\x2012\x20Sep\x202025\x2003:57:38\x20GMT\r\
+SF:er:\x20rdwr\r\nDate:\x20Sun,\x2014\x20Sep\x202025\x2004:06:37\x20GMT\r\
 SF:nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x2
 SF:0close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r
 SF:\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302
 SF:\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</ht
 SF:ml>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServ
-SF:er:\x20rdwr\r\nDate:\x20Fri,\x2012\x20Sep\x202025\x2003:57:38\x20GMT\r\
+SF:er:\x20rdwr\r\nDate:\x20Sun,\x2014\x20Sep\x202025\x2004:06:37\x20GMT\r\
 SF:nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnection:\x2
 SF:0close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></hea
 SF:d>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr>
 SF:<center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"HTTP/
-SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Fri,\x2012
-SF:\x20Sep\x202025\x2003:57:38\x20GMT\r\nContent-Type:\x20text/html\r\nCon
+SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Sun,\x2014
+SF:\x20Sep\x202025\x2004:06:37\x20GMT\r\nContent-Type:\x20text/html\r\nCon
 SF:tent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><tit
 SF:le>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x2
 SF:0Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r
 SF:\n</html>\r\n")%r(FourOhFourRequest,16B,"HTTP/1\.1\x20302\x20Moved\x20T
-SF:emporarily\r\nServer:\x20rdwr\r\nDate:\x20Fri,\x2012\x20Sep\x202025\x20
-SF:03:57:38\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137
+SF:emporarily\r\nServer:\x20rdwr\r\nDate:\x20Sun,\x2014\x20Sep\x202025\x20
+SF:04:06:37\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137
 SF:\r\nConnection:\x20close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:44
 SF:3/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><title>30
 SF:2\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Found</h1></c
 SF:enter>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/12%Time=68C39A39%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/14%Time=68C63F53%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,218,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-T
 SF:ype:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n
-SF:Date:\x20Fri,\x2012\x20Sep\x202025\x2003:57:44\x20GMT\r\nX-Content-Type
+SF:Date:\x20Sun,\x2014\x20Sep\x202025\x2004:06:43\x20GMT\r\nX-Content-Type
 SF:-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Fram
 SF:e-Options:\x20SAMEORIGIN\r\nReferrer-Policy:\x20strict-origin-when-cros
 SF:s-origin\r\nContent-Security-Policy:\x20frame-ancestors\x20'self'\r\nPe
@@ -177,8 +162,8 @@ SF:\)\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r
 SF:\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cen
 SF:ter>nginx</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,218,"HTTP/
 SF:1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nContent-
-SF:Length:\x20150\r\nConnection:\x20close\r\nDate:\x20Fri,\x2012\x20Sep\x2
-SF:02025\x2003:57:45\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS
+SF:Length:\x20150\r\nConnection:\x20close\r\nDate:\x20Sun,\x2014\x20Sep\x2
+SF:02025\x2004:06:44\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS
 SF:-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nR
 SF:eferrer-Policy:\x20strict-origin-when-cross-origin\r\nContent-Security-
 SF:Policy:\x20frame-ancestors\x20'self'\r\nPermissions-Policy:\x20camera=\
@@ -189,18 +174,18 @@ SF:\r\n</html>\r\n")%r(FourOhFourRequest,38E,"HTTP/1\.1\x20303\x20Found\r\
 SF:nContent-Type:\x20text/html\r\nContent-Length:\x20650\r\nConnection:\x2
 SF:0close\r\nCache-Control:\x20no-cache,\x20private,\x20no-store,\x20must-
 SF:revalidate\r\nLocation:\x20https://csirt\.docapost\.fr/index\.php/Infor
-SF:mation_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869278410\r\n\r\n<ht
+SF:mation_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869287028\r\n\r\n<ht
 SF:ml>\n<head>\n<title>Security\x20Page\x20redirect</title>\n<meta\x20http
 SF:-equiv=\"refresh\"\x20content=\"3;url=https://csirt\.docapost\.fr/index
-SF:\.php/Information_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869278410
+SF:\.php/Information_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869287028
 SF:\">\n<script\x20type=\"text/javascript\">\nfunction\x20GoSecure\(\)\x20
 SF:{\x20location\.href=\"https://csirt\.docapost\.fr/index\.php/Informatio
-SF:n_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869278410\";}\nfunction\x
+SF:n_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869287028\";}\nfunction\x
 SF:20SetDelay\(\)\x20{\x20setTimeout\(\"GoSecure\(\);\",2000\);}\n</script
 SF:>\n</head>\n<body\x20onLoad=\"SetDelay\(\);\">\n<h2\x20align=\"center\"
 SF:>Click\x20<a\x20href=\"https://csirt\.docapost\.fr/index\.php/Informati
-SF:on_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869278410\">Here</a>\x20
+SF:on_de_s%C3%A9curit%C3%A9_ANTS\?_event_transid=1869287028\">Here</a>\x20
 SF:to\x20continue\.</h2>\n</body");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Sep 12 03:58:00 2025 -- 1 IP address (1 host up) scanned in 31.23 seconds
+# Nmap done at Sun Sep 14 04:07:00 2025 -- 1 IP address (1 host up) scanned in 32.09 seconds
