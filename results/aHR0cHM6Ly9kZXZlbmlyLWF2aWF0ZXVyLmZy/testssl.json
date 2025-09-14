@@ -444,7 +444,7 @@
               "ip"           : "devenir-aviateur.fr/46.105.199.66",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "34 >= 30 days"
+              "finding"      : "32 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -590,15 +590,115 @@
               "id"           : "HTTP_status_code",
               "ip"           : "devenir-aviateur.fr/46.105.199.66",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header request failed"
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "HTTP_clock_skew",
               "ip"           : "devenir-aviateur.fr/46.105.199.66",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header was repeatedly zero due to missing X25519/X448 curves."
+              "severity"     : "INFO",
+              "finding"      : "-3916 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1757819659"
+          }
+,         {
+              "id"           : "ipv4_in_header",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cwe"          : "CWE-212",
+              "finding"      : "X-CDN-Pop-IP: 137.74.122.0/26 (check if it's your IP address or e.g. a cluster IP)"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "max-age too short. 0 days (=300 seconds) < 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "default-src self; script-src 'unsafe-eval' 'unsafe-inline' blob: *; object-src *; style-src 'unsafe-inline' *; img-src 'unsafe-inline' data: *; media-src 'unsafe-inline' *; frame-src *; font-src 'unsafe-inline' data: *; connect-src 'unsafe-inline' *; report-uri /report-csp-violation"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=10800, public"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "X-Cacheable: Matched cache"
           }
 ,         {
               "id"           : "heartbleed",
@@ -1090,13 +1190,20 @@
               "ip"           : "devenir-aviateur.fr/46.105.199.66",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A+"
+              "finding"      : "A-"
+          }
+,         {
+              "id"           : "grade_cap_warning_1",
+              "ip"           : "devenir-aviateur.fr/46.105.199.66",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HSTS max-age is too short"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "devenir-aviateur.fr/46.105.199.66",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "82"
+              "finding"      : "61"
           }
 ]
