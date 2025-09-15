@@ -465,7 +465,7 @@
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "97 >= 60 days"
+              "finding"      : "94 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -535,7 +535,7 @@
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "issue=harica.gr, issue=letsencrypt.org, issue=pki.goog, issue=trust-provider.com, issue=usertrust.com, issuewild=harica.gr"
+              "finding"      : "issue=harica.gr, issue=letsencrypt.org, issue=pki.goog, issue=sectigo.com, issue=trust-provider.com, issue=usertrust.com, issuewild=harica.gr"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -702,22 +702,22 @@
               "id"           : "HTTP_status_code",
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "Unexpected 503 Service Unavailable @ '/'"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-2 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1757653295"
+              "finding"      : "1757910115"
           }
 ,         {
               "id"           : "HSTS",
@@ -738,7 +738,7 @@
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Apache/2.4.10 (Debian)"
+              "finding"      : "Apache"
           }
 ,         {
               "id"           : "banner_application",
@@ -752,70 +752,14 @@
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "0 at '/' (maybe missed the application)"
           }
 ,         {
-              "id"           : "cookie_secure",
+              "id"           : "security_headers",
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "sameorigin"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "frame-ancestors 'self' 217.128.240.124;"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
-              "id"           : "Access-Control-Allow-Origin",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "api.gouv.fr"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-          }
-,         {
-              "id"           : "Pragma",
-              "ip"           : "opendata.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no-cache"
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -891,10 +835,10 @@
               "id"           : "BREACH",
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1322,6 +1266,6 @@
               "ip"           : "opendata.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "215"
+              "finding"      : "89"
           }
 ]
