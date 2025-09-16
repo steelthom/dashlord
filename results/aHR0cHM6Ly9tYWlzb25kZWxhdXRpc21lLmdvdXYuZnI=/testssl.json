@@ -184,8 +184,15 @@
               "id"           : "cipher_order-tls1_3",
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "severity"     : "OK",
+              "finding"      : "server -- server prioritizes ChaCha ciphers when preferred by clients"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "cipher-tls1_3_x1302",
@@ -202,25 +209,25 @@
               "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH/MLKEM ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_3",
+              "id"           : "cipherorder_TLSv1_3",
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "prioritize_chacha_TLSv1_3",
+              "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "true"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server -- TLS 1.3 client determined"
+              "finding"      : "server"
           }
 ,         {
               "id"           : "FS",
@@ -254,8 +261,8 @@
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "ECDSA+SHA512 ECDSA+SHA384 ECDSA+SHA256 ECDSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "ECDSA+SHA512 ECDSA+SHA384 ECDSA+SHA256"
           }
 ,         {
               "id"           : "FS_TLS13_sig_algs",
@@ -269,7 +276,7 @@
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -444,7 +451,7 @@
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "74 >= 30 days"
+              "finding"      : "72 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -605,7 +612,7 @@
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1757819245"
+              "finding"      : "1757994686"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1196,6 +1203,6 @@
               "ip"           : "maisondelautisme.gouv.fr/94.23.123.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "84"
+              "finding"      : "177"
           }
 ]
