@@ -3,15 +3,15 @@
               "id"           : "service",
               "ip"           : "ac-paris.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
               "ip"           : "ac-paris.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "128 cipher limit bug"
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
           }
 ,         {
               "id"           : "SSLv2",
@@ -63,13 +63,6 @@
               "finding"      : "offered with h2, http/1.1 (advertised)"
           }
 ,         {
-              "id"           : "ALPN_HTTP2",
-              "ip"           : "ac-paris.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "h2"
-          }
-,         {
               "id"           : "ALPN",
               "ip"           : "ac-paris.fr/185.75.143.93",
               "port"         : "443",
@@ -93,17 +86,48 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "cipherlist_EXPORT",
               "ip"           : "ac-paris.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "FATAL",
-              "finding"      : "repeated TCP connect problems, giving up"
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
           }
 ,         {
-              "id"           : "scanTime",
+              "id"           : "cipherlist_LOW",
               "ip"           : "ac-paris.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "Scan interrupted"
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
           }
-]
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "ac-paris.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "ac-paris.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "ac-paris.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "ac-paris.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
