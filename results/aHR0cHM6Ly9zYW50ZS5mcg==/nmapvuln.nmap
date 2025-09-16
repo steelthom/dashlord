@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Sep 14 04:07:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sante.fr
+# Nmap 7.92 scan initiated Tue Sep 16 04:28:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sante.fr
 Nmap scan report for sante.fr (51.68.85.251)
-Host is up (0.088s latency).
+Host is up (0.091s latency).
 Not shown: 995 filtered tcp ports (no-response)
 PORT     STATE  SERVICE   VERSION
 80/tcp   open   http
@@ -26,9 +26,9 @@ PORT     STATE  SERVICE   VERSION
 |_    connection: close
 443/tcp  open   ssl/https
 | fingerprint-strings: 
-|   FourOhFourRequest, HTTPOptions: 
+|   FourOhFourRequest: 
 |     HTTP/1.1 400 Bad Request
-|     date: Sun, 14 Sep 2025 04:07:42 GMT
+|     date: Tue, 16 Sep 2025 04:29:15 GMT
 |     content-type: text/html
 |     content-length: 150
 |     age: 0
@@ -44,9 +44,9 @@ PORT     STATE  SERVICE   VERSION
 |     <hr><center>nginx</center>
 |     </body>
 |     </html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     date: Sun, 14 Sep 2025 04:07:41 GMT
+|     date: Tue, 16 Sep 2025 04:29:14 GMT
 |     content-type: text/html
 |     content-length: 150
 |     age: 0
@@ -81,7 +81,7 @@ PORT     STATE  SERVICE   VERSION
 1029/tcp closed ms-lsa
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/14%Time=68C63F87%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/16%Time=68C8E794%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
@@ -114,23 +114,23 @@ SF:nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x2
 SF:0text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
 SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/14%Time=68C63F8D%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/16%Time=68C8E79A%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,182,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20
-SF:Sun,\x2014\x20Sep\x202025\x2004:07:41\x20GMT\r\ncontent-type:\x20text/h
+SF:Tue,\x2016\x20Sep\x202025\x2004:29:14\x20GMT\r\ncontent-type:\x20text/h
 SF:tml\r\ncontent-length:\x20150\r\nage:\x200\r\nx-cache:\x20MISS\r\nx-cac
 SF:he-hits:\x200\r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-typ
 SF:e-options:\x20nosniff\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><t
 SF:itle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\
 SF:x20Bad\x20Request</h1></center>\r\n<hr><center>nginx</center>\r\n</body
 SF:>\r\n</html>\r\n")%r(HTTPOptions,182,"HTTP/1\.1\x20400\x20Bad\x20Reques
-SF:t\r\ndate:\x20Sun,\x2014\x20Sep\x202025\x2004:07:42\x20GMT\r\ncontent-t
+SF:t\r\ndate:\x20Tue,\x2016\x20Sep\x202025\x2004:29:14\x20GMT\r\ncontent-t
 SF:ype:\x20text/html\r\ncontent-length:\x20150\r\nage:\x200\r\nx-cache:\x2
 SF:0MISS\r\nx-cache-hits:\x200\r\nx-xss-protection:\x201;\x20mode=block\r\
 SF:nx-content-type-options:\x20nosniff\r\nconnection:\x20close\r\n\r\n<htm
 SF:l>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<c
 SF:enter><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>nginx</cen
 SF:ter>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,182,"HTTP/1\.1\x20
-SF:400\x20Bad\x20Request\r\ndate:\x20Sun,\x2014\x20Sep\x202025\x2004:07:42
+SF:400\x20Bad\x20Request\r\ndate:\x20Tue,\x2016\x20Sep\x202025\x2004:29:15
 SF:\x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length:\x20150\r\nage:
 SF:\x200\r\nx-cache:\x20MISS\r\nx-cache-hits:\x200\r\nx-xss-protection:\x2
 SF:01;\x20mode=block\r\nx-content-type-options:\x20nosniff\r\nconnection:\
@@ -150,4 +150,4 @@ SF:</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></
 SF:html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 14 04:07:58 2025 -- 1 IP address (1 host up) scanned in 36.33 seconds
+# Nmap done at Tue Sep 16 04:29:31 2025 -- 1 IP address (1 host up) scanned in 36.08 seconds
