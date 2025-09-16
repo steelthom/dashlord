@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Sep 14 04:15:18 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln vigipirate.gouv.fr
+# Nmap 7.92 scan initiated Tue Sep 16 04:19:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln vigipirate.gouv.fr
 Nmap scan report for vigipirate.gouv.fr (87.98.148.216)
-Host is up (0.089s latency).
+Host is up (0.16s latency).
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
 22/tcp   open  ssh      OpenSSH 7.4p1 Debian 10+deb9u7 (protocol 2.0)
@@ -79,17 +79,13 @@ PORT     STATE SERVICE  VERSION
 |_http-server-header: Apache
 3306/tcp open  mysql?
 | fingerprint-strings: 
-|   GetRequest, NULL, WMSRequest: 
-|_    Host '145.132.102.250' is not allowed to connect to this MariaDB server
+|   NULL: 
+|_    Host '52.159.247.196' is not allowed to connect to this MariaDB server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3306-TCP:V=7.92%I=7%D=9/14%Time=68C64158%P=x86_64-alpine-linux-musl
-SF:%r(NULL,4E,"J\0\0\x01\xffj\x04Host\x20'145\.132\.102\.250'\x20is\x20not
-SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Get
-SF:Request,4E,"J\0\0\x01\xffj\x04Host\x20'145\.132\.102\.250'\x20is\x20not
-SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(WMS
-SF:Request,4E,"J\0\0\x01\xffj\x04Host\x20'145\.132\.102\.250'\x20is\x20not
-SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+SF-Port3306-TCP:V=7.92%I=7%D=9/16%Time=68C8E53D%P=x86_64-alpine-linux-musl
+SF:%r(NULL,4D,"I\0\0\x01\xffj\x04Host\x20'52\.159\.247\.196'\x20is\x20not\
+SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 14 04:15:34 2025 -- 1 IP address (1 host up) scanned in 16.12 seconds
+# Nmap done at Tue Sep 16 04:19:24 2025 -- 1 IP address (1 host up) scanned in 18.42 seconds
