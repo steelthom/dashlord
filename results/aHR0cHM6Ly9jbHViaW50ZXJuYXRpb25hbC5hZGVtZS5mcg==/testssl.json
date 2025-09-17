@@ -556,7 +556,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (47)"
+              "finding"      : "expires < 60 days (45)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -857,7 +857,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (47)"
+              "finding"      : "expires < 60 days (45)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -1053,7 +1053,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -1067,7 +1067,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1757907828"
+              "finding"      : "1758082854"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1075,14 +1075,28 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=I02pmCiXAG9B8.0iJ5hVCRto3fI7gdlrFaY.tCPlYhY-1757907828-1.0.1.1-HQU4MNF1kVhdRfgUpfnaCP_sBcVcTJId4F5tmCmJS9y.Ml3qkh1j1L4jQfsp6wrdFgrBXvs8DOg0gV4H5ZG0sfy.a9tZUqx_nWTEQIUZ.cE; path=/; expires=Mon, 15-Sep-25 04:13:48 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=heyaiCyYdper_T9J9CshJw9H3_3J5eIl7K9lZGyPjbo-1758082854-1.0.1.1-ChCGUhOlr1d9RSYaTO2_CVV0ozq9OZmDVNVHBnRPt9N7SNrWL8p.hYVkCpBTJ8mnWJzrOgYd2zpagClK1zBk3cy0kBoDg4LipgQoogMg.Q8; path=/; expires=Wed, 17-Sep-25 04:50:54 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
-              "id"           : "HSTS",
+              "id"           : "HSTS_time",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
           }
 ,         {
               "id"           : "HPKP",
@@ -1103,14 +1117,14 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "x-powered-by: PHP/7.4.33, x-powered-by: PleskLin"
+              "finding"      : "No application banner found"
           }
 ,         {
               "id"           : "cookie_count",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -1124,7 +1138,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "security_headers",
@@ -1207,10 +1221,10 @@
               "id"           : "BREACH",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -2190,7 +2204,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (47)"
+              "finding"      : "expires < 60 days (45)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2491,7 +2505,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (47)"
+              "finding"      : "expires < 60 days (45)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2687,7 +2701,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -2701,7 +2715,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1757907908"
+              "finding"      : "1758082933"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2709,14 +2723,28 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=jWq31s2PyqRD.satD_QBV6fPIz_xawZ88eWEMcKr1e0-1757907908-1.0.1.1-e6AOz5XbpyokaTbjjhOkztvzXN6jZHEU76p1GMsDPEqb5JfhPib8UyJltDTO.VVEpVVclxpoaaMBY7bvc4xFWgpoXSSetqp4ddWsLua.F7A; path=/; expires=Mon, 15-Sep-25 04:15:08 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=Nh8WF57co1ozeFTgN23SPDQG4iXzSC9lJIVePYIfQa4-1758082933-1.0.1.1-Dj7BvoPSTN6z5l7t_M3oC9DSFaOJDePq0yKupwa4_vqBjOIiScE7cTX4LKwXgi8nw.BYG_prb8H_D9peYsfxJHOgT8q.wSTINJdWWCavlIs; path=/; expires=Wed, 17-Sep-25 04:52:13 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
-              "id"           : "HSTS",
+              "id"           : "HSTS_time",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
           }
 ,         {
               "id"           : "HPKP",
@@ -2737,14 +2765,14 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "x-powered-by: PHP/7.4.33, x-powered-by: PleskLin"
+              "finding"      : "No application banner found"
           }
 ,         {
               "id"           : "cookie_count",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -2758,7 +2786,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "security_headers",
@@ -2841,10 +2869,10 @@
               "id"           : "BREACH",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -3272,6 +3300,6 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "162"
+              "finding"      : "159"
           }
 ]

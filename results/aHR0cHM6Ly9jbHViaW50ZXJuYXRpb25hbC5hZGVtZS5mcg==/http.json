@@ -1,27 +1,26 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D-",
+    "grade": "B-",
     "error": null,
-    "score": 25,
+    "score": 65,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 15 Sep 2025 03:31:04 GMT",
-      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 17 Sep 2025 04:18:39 GMT",
+      "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "x-powered-by": "PHP/7.4.33, PleskLin",
-      "vary": "User-Agent,Accept-Encoding",
-      "last-modified": "Sun, 14 Sep 2025 22:06:02 GMT",
-      "cf-cache-status": "DYNAMIC",
-      "set-cookie": [
-        "__cf_bm=E6FleefYUrdIEBBn5E5hjPNddPv2jn5JJ_10p_PsU2Q-1757907064-1.0.1.1-3ecjEYUqYE9VqLrUXWRw3txwUkyxsZrS2l8UKG4hGeEjmii63q02aT9GdMXyz5YT9he68YvmL0qW4.m50Ccky0BUEHfVwFENARn4nzVrs8k; path=/; expires=Mon, 15-Sep-25 04:01:04 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
-      ],
-      "server": "cloudflare",
-      "cf-ray": "97f50c8bac421573-SJC"
+      "x-request-id": "db393c56-79c3-4911-9a48-a8cbbcb1a49b",
+      "x-frame-options": "DENY",
+      "vary": "Accept-Language, Cookie",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "same-origin",
+      "cross-origin-opener-policy": "same-origin",
+      "strict-transport-security": "max-age=31536000"
     }
   },
   "tests": {
@@ -44,7 +43,7 @@
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-09-15T04:01:04.000Z",
+          "expires": "2025-09-17T04:48:39.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -63,34 +62,34 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://clubinternational.ademe.fr/",
+      "pass": false,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
+      "destination": "https://clubinternational.sites.beta.gouv.fr/",
       "redirects": true,
       "route": [
         "http://clubinternational.ademe.fr/",
-        "https://clubinternational.ademe.fr/"
+        "https://clubinternational.sites.beta.gouv.fr/"
       ],
       "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
       "includeSubDomains": false,
-      "maxAge": null,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
@@ -103,26 +102,22 @@
         "https://tarteaucitron.io/load.js?domain=clubinternational.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
           "crossorigin": null,
           "integrity": null
-        },
-        "https://kit.fontawesome.com/401551aca6.js?ver=1733754754": {
-          "crossorigin": null,
-          "integrity": null
         }
       }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "DENY"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
