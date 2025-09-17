@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "ac-guyane.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -28,76 +28,17 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "TLS1",
+              "id"           : "scanProblem",
               "ip"           : "ac-guyane.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
           }
 ,         {
-              "id"           : "TLS1_1",
+              "id"           : "scanTime",
               "ip"           : "ac-guyane.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
           }
-,         {
-              "id"           : "TLS1_2",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "TLS1_3",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered with final"
-          }
-,         {
-              "id"           : "NPN",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "offered with h2, http/1.1 (advertised)"
-          }
-,         {
-              "id"           : "ALPN_HTTP2",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "h2"
-          }
-,         {
-              "id"           : "cipherlist_NULL",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_aNULL",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_EXPORT",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_LOW",
-              "ip"           : "ac-guyane.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
+]
