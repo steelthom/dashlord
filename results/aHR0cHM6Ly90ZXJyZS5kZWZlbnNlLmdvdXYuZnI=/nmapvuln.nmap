@@ -1,17 +1,15 @@
-# Nmap 7.92 scan initiated Mon Sep 15 05:15:09 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln terre.defense.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep 18 03:14:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln terre.defense.gouv.fr
 Nmap scan report for terre.defense.gouv.fr (185.24.185.2)
-Host is up (0.097s latency).
-Not shown: 978 filtered tcp ports (no-response)
-PORT      STATE  SERVICE              VERSION
-80/tcp    open   http-proxy           F5 BIG-IP load balancer http proxy
+Host is up (0.15s latency).
+Not shown: 892 filtered tcp ports (no-response), 106 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-113/tcp   closed ident
-255/tcp   closed unknown
-443/tcp   open   ssl/https
+443/tcp open  ssl/https
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Mon, 15 Sep 2025 05:23:05 GMT
+|     Date: Thu, 18 Sep 2025 03:22:56 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -25,7 +23,7 @@ PORT      STATE  SERVICE              VERSION
 |     </body></html>
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Mon, 15 Sep 2025 05:23:04 GMT
+|     Date: Thu, 18 Sep 2025 03:22:55 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -39,7 +37,7 @@ PORT      STATE  SERVICE              VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Mon, 15 Sep 2025 05:23:15 GMT
+|     Date: Thu, 18 Sep 2025 03:23:07 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -52,28 +50,10 @@ PORT      STATE  SERVICE              VERSION
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
 |_    </body></html>
-514/tcp   closed shell
-787/tcp   closed qsc
-1050/tcp  closed java-or-OTGfileshare
-1056/tcp  closed vfo
-2135/tcp  closed gris
-2500/tcp  closed rtsserv
-3283/tcp  closed netassistant
-3869/tcp  closed ovsam-mgmt
-5001/tcp  closed commplex-link
-5906/tcp  closed unknown
-8654/tcp  closed unknown
-9040/tcp  closed tor-trans
-9090/tcp  closed zeus-admin
-12000/tcp closed cce4x
-15000/tcp closed hydap
-15004/tcp closed unknown
-16012/tcp closed unknown
-60020/tcp closed unknown
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/15%Time=68C7A2B8%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Mon,\
-SF:x2015\x20Sep\x202025\x2005:23:04\x20GMT\r\nContent-Length:\x20199\r\nCo
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/18%Time=68CB7B0F%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Thu,\
+SF:x2018\x20Sep\x202025\x2003:22:55\x20GMT\r\nContent-Length:\x20199\r\nCo
 SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
 SF:\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~application~pool-ubika=20
 SF:1486346\.20480\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYP
@@ -81,7 +61,7 @@ SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
 SF:ad>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>
 SF:\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20reso
 SF:urce\.</p>\n</body></html>\n")%r(HTTPOptions,1C9,"HTTP/1\.0\x20403\x20F
-SF:orbidden\r\nDate:\x20Mon,\x2015\x20Sep\x202025\x2005:23:04\x20GMT\r\nCo
+SF:orbidden\r\nDate:\x20Thu,\x2018\x20Sep\x202025\x2003:22:55\x20GMT\r\nCo
 SF:ntent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\x20text/h
 SF:tml;\x20charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe
 SF:~application~pool-ubika=201486346\.20480\.0000;\x20path=/;\x20Httponly;
@@ -89,8 +69,8 @@ SF:\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
 SF:\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head>
 SF:<body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to
 SF:\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(FourOhFourRe
-SF:quest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Mon,\x2015\x20Sep\
-SF:x202025\x2005:23:05\x20GMT\r\nContent-Length:\x20199\r\nConnection:\x20
+SF:quest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Thu,\x2018\x20Sep\
+SF:x202025\x2003:22:56\x20GMT\r\nContent-Length:\x20199\r\nConnection:\x20
 SF:close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nSet-Cooki
 SF:e:\x20BIGipServer~Tenant-Externe~application~pool-ubika=201486346\.2048
 SF:0\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20
@@ -98,7 +78,7 @@ SF:PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>4
 SF:03\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20d
 SF:on't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n<
 SF:/body></html>\n")%r(RTSPRequest,1E6,"HTTP/1\.1\x20400\x20Bad\x20Request
-SF:\r\nDate:\x20Mon,\x2015\x20Sep\x202025\x2005:23:15\x20GMT\r\nContent-Le
+SF:\r\nDate:\x20Thu,\x2018\x20Sep\x202025\x2003:23:07\x20GMT\r\nContent-Le
 SF:ngth:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20
 SF:charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~applica
 SF:tion~pool-ubika=201486346\.20480\.0000;\x20path=/;\x20Httponly;\x20Secu
@@ -110,4 +90,4 @@ SF:/p>\n</body></html>\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Sep 15 05:25:15 2025 -- 1 IP address (1 host up) scanned in 605.37 seconds
+# Nmap done at Thu Sep 18 03:25:10 2025 -- 1 IP address (1 host up) scanned in 616.74 seconds
