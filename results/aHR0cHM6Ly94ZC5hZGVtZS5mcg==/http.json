@@ -10,16 +10,16 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "openresty",
-      "date": "Tue, 16 Sep 2025 03:24:00 GMT",
+      "date": "Thu, 18 Sep 2025 03:58:27 GMT",
       "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "connection": "close",
       "vary": "Accept-Encoding",
       "strikingly-cache": "current",
-      "strikingly-cache-version": "1622527331-2",
+      "strikingly-cache-version": "1622527331-0",
       "strikingly-cache-region": "us-east-1",
       "set-cookie": [
-        "__strk_viewer_info=eyJsYXRpdHVkZSI6IjM2LjY2NzYwIiwibG9uZ2l0dWRlIjoiLTc4LjM4NzUwIiwiY29udGluZW50Q29kZSI6Ik5BIiwiY29udGluZW50TmFtZSI6Ik5vcnRoIEFtZXJpY2EiLCJjb3VudHJ5Q29kZSI6IlVTIiwicG9zdGFsQ29kZSI6IjIzOTE3IiwiaXAiOiIyMC4xMDkuMzguMjMwIiwidGltZVpvbmUiOiJBbWVyaWNhXC9OZXdfWW9yayIsInJlZ2lvbk5hbWUiOiJWaXJnaW5pYSIsImNvdW50cnlOYW1lIjoiVW5pdGVkIFN0YXRlcyIsImNpdHlOYW1lIjoiQm95ZHRvbiJ9; Path=/; Expires=Wed, 16-Sep-26 03:24:00 GMT; Secure",
+        "__strk_viewer_info=eyJsYXRpdHVkZSI6IjM4LjcwOTUwIiwiaXAiOiIxNzIuMjA4LjYyLjE2NyIsImNvbnRpbmVudENvZGUiOiJOQSIsImNvbnRpbmVudE5hbWUiOiJOb3J0aCBBbWVyaWNhIiwiY291bnRyeUNvZGUiOiJVUyIsInBvc3RhbENvZGUiOiIyMjc0NyIsImNvdW50cnlOYW1lIjoiVW5pdGVkIFN0YXRlcyIsInRpbWVab25lIjoiQW1lcmljYVwvTmV3X1lvcmsiLCJyZWdpb25OYW1lIjoiVmlyZ2luaWEiLCJsb25naXR1ZGUiOiItNzguMTUzOTAiLCJjaXR5TmFtZSI6Ildhc2hpbmd0b24ifQ==; Path=/; Expires=Fri, 18-Sep-26 03:58:27 GMT; Secure",
         "__strk_cookie_eu_visitor=false; Path=/; Secure"
       ]
     }
@@ -44,7 +44,7 @@
       "data": {
         "__strk_viewer_info": {
           "domain": "xd.ademe.fr",
-          "expires": "2026-09-16T03:24:00.000Z",
+          "expires": "2026-09-18T03:58:27.000Z",
           "path": "/",
           "port": null,
           "secure": true
@@ -68,12 +68,15 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "http://xd.ademe.fr/",
+      "destination": "https://xd.ademe.fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://xd.ademe.fr/",
+        "https://xd.ademe.fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -87,7 +90,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-not-implemented-no-https",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
