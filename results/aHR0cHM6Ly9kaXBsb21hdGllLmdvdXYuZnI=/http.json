@@ -9,12 +9,16 @@
     "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 18 Sep 2025 03:00:48 GMT",
+      "date": "Sat, 20 Sep 2025 03:55:10 GMT",
       "vary": "Cookie,Accept-Encoding",
-      "last-modified": "Thu, 18 Sep 2025 03:00:48 GMT",
-      "content-length": "32391",
+      "last-modified": "Sat, 20 Sep 2025 03:55:10 GMT",
+      "content-length": "32313",
       "connection": "close",
       "content-type": "text/html; charset=utf-8",
+      "set-cookie": [
+        "fdiplo-prst=!LvRzcv4TGszHu7mD+aYzgL+mhw7C289vsmP0DVXDAA69GkyphP0CFzG+rmWeB1H4UFCsuVVcFxW75w==; path=/; Httponly; Secure",
+        "TS017a74ff=01185409086ec80cfac64ec266639569db3a9370550402ebe29e852cfdbedb9c204c8b4911192b7923288c50d9d80fd99e07d9e47fcaff3d32828e3cf679f9b3c463ffb65c2c26becc27a5c4edc362b85727f92e7f; Path=/; Domain=.www.diplomatie.gouv.fr;"
+      ],
       "x-xss-protection": "1",
       "x-content-type-options": "nosniff"
     }
@@ -49,6 +53,13 @@
           "path": "/",
           "port": null
         },
+        "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO": {
+          "domain": "www.diplomatie.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
         "TS017a74ff": {
           "domain": "www.diplomatie.gouv.fr",
           "path": "/",
@@ -67,18 +78,12 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-to-https",
+      "result": "redirection-not-needed-no-http",
       "scoreModifier": 0,
-      "destination": "https://www.diplomatie.gouv.fr/fr/",
+      "destination": "http://www.diplomatie.gouv.fr/",
       "redirects": true,
-      "route": [
-        "http://diplomatie.gouv.fr/",
-        "https://diplomatie.gouv.fr/",
-        "http://www.diplomatie.gouv.fr/",
-        "https://www.diplomatie.gouv.fr/",
-        "https://www.diplomatie.gouv.fr/fr/"
-      ],
-      "statusCode": 200
+      "route": [],
+      "statusCode": null
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -92,7 +97,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented-no-https",
+      "result": "hsts-not-implemented",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
