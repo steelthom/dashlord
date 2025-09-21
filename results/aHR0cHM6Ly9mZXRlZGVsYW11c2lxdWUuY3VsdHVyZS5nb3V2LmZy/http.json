@@ -1,28 +1,21 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "D",
     "error": null,
-    "score": 5,
-    "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 18 Sep 2025 04:40:51 GMT",
-      "content-type": "text/html; charset=UTF-8",
-      "x-content-type-options": "nosniff",
-      "strict-transport-security": "max-age=31536000; includeSubDomains",
-      "referrer-policy": "no-referrer, strict-origin-when-cross-origin, no-referrer, strict-origin-when-cross-origin",
-      "x-xss-protection": "1; mode=block; report=/nelmio/xss/report",
-      "age": "54108",
-      "vary": "Origin,X-Editorial-Mode,X-Requested-With",
-      "cache-control": "public, s-maxage=86400, stale-while-revalidate=3600, stale-if-error=3600",
+      "date": "Sun, 21 Sep 2025 03:44:53 GMT",
       "accept-ranges": "bytes",
-      "x-forwarded-for": ";",
-      "x-cp-via": "C3-ea454046-36d750a4",
-      "connection": "close",
-      "transfer-encoding": "chunked"
+      "content-type": "text/html",
+      "vary": "Accept-Encoding",
+      "content-length": "322",
+      "x-cp-via": "C2-25d00df7-06cac982",
+      "connection": "close"
     }
   },
   "tests": {
@@ -63,50 +56,41 @@
         "http://fetedelamusique.culture.gouv.fr/",
         "https://fetedelamusique.culture.gouv.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "no-referrer, strict-origin-when-cross-origin, no-referrer, strict-origin-when-cross-origin",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubDomains",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
-      "scoreModifier": -50,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=fetedelamusique.culture.gouv.fr&uuid=cb6c31eaf0d65c6f8768c5734dd1a8df6bfd7780": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "//www.instagram.com/embed.js": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-no-scripts-loaded",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
