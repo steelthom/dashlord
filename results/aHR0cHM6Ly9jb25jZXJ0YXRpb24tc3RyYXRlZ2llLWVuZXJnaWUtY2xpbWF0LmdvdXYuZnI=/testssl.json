@@ -318,7 +318,7 @@
               "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -465,7 +465,7 @@
               "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "87 >= 30 days"
+              "finding"      : "85 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -611,121 +611,15 @@
               "id"           : "HTTP_status_code",
               "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header request failed"
           }
 ,         {
-              "id"           : "HTTP_clock_skew",
+              "id"           : "scanProblem",
               "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-15527 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1758409847"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "only for this domain"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "domain is NOT marked for preloading"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "nginx"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Cache-Control_multiple",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "Multiple Cache-Control headers. Using first header: must-revalidate, no-cache, private"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "must-revalidate, no-cache, private"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header was repeatedly zero due to missing X25519/X448 curves."
           }
 ,         {
               "id"           : "heartbleed",
@@ -1224,6 +1118,6 @@
               "ip"           : "concertation-strategie-energie-climat.gouv.fr/194.5.170.186",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "275"
+              "finding"      : "250"
           }
 ]
