@@ -1,44 +1,18 @@
-# Nmap 7.92 scan initiated Sun Sep 21 04:40:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln agribalyse.ademe.fr
-Nmap scan report for agribalyse.ademe.fr (13.52.188.95)
-Host is up (0.0025s latency).
-Other addresses for agribalyse.ademe.fr (not scanned): 52.52.192.191 2600:1f1c:446:4900::259 2600:1f1c:446:4900::258
-rDNS record for 13.52.188.95: ec2-13-52-188-95.us-west-1.compute.amazonaws.com
+# Nmap 7.92 scan initiated Tue Sep 23 04:14:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln agribalyse.ademe.fr
+Nmap scan report for agribalyse.ademe.fr (18.208.88.157)
+Host is up (0.027s latency).
+Other addresses for agribalyse.ademe.fr (not scanned): 98.84.224.111 2600:1f18:16e:df01::258 2600:1f18:16e:df01::259
+rDNS record for 18.208.88.157: ec2-18-208-88-157.compute-1.amazonaws.com
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http      Netlify
 |_http-server-header: Netlify
 | fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, Help, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
-|     HTTP/1.1 400 Bad Request
-|     Content-Type: text/plain; charset=utf-8
-|     Connection: close
-|     Request
 |   FourOhFourRequest: 
 |     HTTP/1.0 400 Bad Request
-|     Date: Sun, 21 Sep 2025 04:40:34 GMT
+|     Date: Tue, 23 Sep 2025 04:15:07 GMT
 |     Server: Netlify
-|     X-Nf-Request-Id: 01K5N95R8DTRHXYYKDHC9FFB91
-|     Content-Length: 0
-|   GetRequest: 
-|     HTTP/1.0 400 Bad Request
-|     Date: Sun, 21 Sep 2025 04:40:29 GMT
-|     Server: Netlify
-|     X-Nf-Request-Id: 01K5N95KBHTSSKQ4PAQS1Q43RR
-|     Content-Length: 0
-|   HTTPOptions: 
-|     HTTP/1.0 400 Bad Request
-|     Date: Sun, 21 Sep 2025 04:40:29 GMT
-|     Server: Netlify
-|     X-Nf-Request-Id: 01K5N95KBQ0Q36VZA2TJHRYQ8V
-|_    Content-Length: 0
-443/tcp open  ssl/https Netlify
-|_http-server-header: Netlify
-| fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.0 400 Bad Request
-|     Date: Sun, 21 Sep 2025 04:40:34 GMT
-|     Server: Netlify
-|     X-Nf-Request-Id: 01K5N95RCTTDT4KEBY8HYYZ5N5
+|     X-Nf-Request-Id: 01K5TCGJNEFGZ7V2ZJA6QTE3NZ
 |     Content-Length: 0
 |   GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
 |     HTTP/1.1 400 Bad Request
@@ -47,60 +21,86 @@ PORT    STATE SERVICE   VERSION
 |     Request
 |   GetRequest: 
 |     HTTP/1.0 400 Bad Request
-|     Date: Sun, 21 Sep 2025 04:40:34 GMT
+|     Date: Tue, 23 Sep 2025 04:15:02 GMT
 |     Server: Netlify
-|     X-Nf-Request-Id: 01K5N95R9K9AANCE8H5RTH69XG
+|     X-Nf-Request-Id: 01K5TCGDK75D4K842HERJ78MS3
 |     Content-Length: 0
 |   HTTPOptions: 
 |     HTTP/1.0 400 Bad Request
-|     Date: Sun, 21 Sep 2025 04:40:34 GMT
+|     Date: Tue, 23 Sep 2025 04:15:02 GMT
 |     Server: Netlify
-|     X-Nf-Request-Id: 01K5N95RB6ANNVZD4YJE7M6NR3
+|     X-Nf-Request-Id: 01K5TCGDMXHVN8K77XM3764D1D
+|_    Content-Length: 0
+443/tcp open  ssl/https Netlify
+|_http-server-header: Netlify
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Date: Tue, 23 Sep 2025 04:15:07 GMT
+|     Server: Netlify
+|     X-Nf-Request-Id: 01K5TCGK096RDQJAZA5062H5G4
+|     Content-Length: 0
+|   GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Date: Tue, 23 Sep 2025 04:15:07 GMT
+|     Server: Netlify
+|     X-Nf-Request-Id: 01K5TCGJPR9HT28ETM8S2CDT2V
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.0 400 Bad Request
+|     Date: Tue, 23 Sep 2025 04:15:07 GMT
+|     Server: Netlify
+|     X-Nf-Request-Id: 01K5TCGJVDD7EK9X7HDNMXDSJF
 |_    Content-Length: 0
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/21%Time=68CF81BD%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x20
-SF:21\x20Sep\x202025\x2004:40:29\x20GMT\r\nServer:\x20Netlify\r\nX-Nf-Requ
-SF:est-Id:\x2001K5N95KBHTSSKQ4PAQS1Q43RR\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(HTTPOptions,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\
-SF:x2021\x20Sep\x202025\x2004:40:29\x20GMT\r\nServer:\x20Netlify\r\nX-Nf-R
-SF:equest-Id:\x2001K5N95KBQ0Q36VZA2TJHRYQ8V\r\nContent-Length:\x200\r\n\r\
+SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D21EC6%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x20
+SF:23\x20Sep\x202025\x2004:15:02\x20GMT\r\nServer:\x20Netlify\r\nX-Nf-Requ
+SF:est-Id:\x2001K5TCGDK75D4K842HERJ78MS3\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(HTTPOptions,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\
+SF:x2023\x20Sep\x202025\x2004:15:02\x20GMT\r\nServer:\x20Netlify\r\nX-Nf-R
+SF:equest-Id:\x2001K5TCGDMXHVN8K77XM3764D1D\r\nContent-Length:\x200\r\n\r\
 SF:n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Typ
 SF:e:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x
 SF:20Bad\x20Request")%r(FourOhFourRequest,92,"HTTP/1\.0\x20400\x20Bad\x20R
-SF:equest\r\nDate:\x20Sun,\x2021\x20Sep\x202025\x2004:40:34\x20GMT\r\nServ
-SF:er:\x20Netlify\r\nX-Nf-Request-Id:\x2001K5N95R8DTRHXYYKDHC9FFB91\r\nCon
+SF:equest\r\nDate:\x20Tue,\x2023\x20Sep\x202025\x2004:15:07\x20GMT\r\nServ
+SF:er:\x20Netlify\r\nX-Nf-Request-Id:\x2001K5TCGJNEFGZ7V2ZJA6QTE3NZ\r\nCon
 SF:tent-Length:\x200\r\n\r\n")%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\
 SF:x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnecti
-SF:on:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RPCCheck,67,"HTTP/1\.1\x2
-SF:0400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8
-SF:\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(DNSVersionBin
-SF:dReqTCP,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text
-SF:/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20R
-SF:equest")%r(DNSStatusRequestTCP,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r
-SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close
-SF:\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20R
-SF:equest\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\
-SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,67,"HTTP/1\.1\x
-SF:20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-
-SF:8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TerminalServ
-SF:erCookie,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
+SF:on:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:Connection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,67,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20
+SF:charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(
+SF:TerminalServerCookie,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-
+SF:Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n40
+SF:0\x20Bad\x20Request")%r(TLSSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Re
+SF:quest\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x
+SF:20close\r\n\r\n400\x20Bad\x20Request")%r(Kerberos,67,"HTTP/1\.1\x20400\
+SF:x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nC
+SF:onnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(LPDString,67,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20chars
+SF:et=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(LDAPS
+SF:earchReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
 SF:t/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
-SF:Request")%r(TLSSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
-SF:tent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\
-SF:r\n400\x20Bad\x20Request");
+SF:Request");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/21%Time=68CF81C2%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x20S
-SF:un,\x2021\x20Sep\x202025\x2004:40:34\x20GMT\r\nServer:\x20Netlify\r\nX-
-SF:Nf-Request-Id:\x2001K5N95R9K9AANCE8H5RTH69XG\r\nContent-Length:\x200\r\
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/23%Time=68D21ECB%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x20T
+SF:ue,\x2023\x20Sep\x202025\x2004:15:07\x20GMT\r\nServer:\x20Netlify\r\nX-
+SF:Nf-Request-Id:\x2001K5TCGJPR9HT28ETM8S2CDT2V\r\nContent-Length:\x200\r\
 SF:n\r\n")%r(HTTPOptions,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nDate:\x
-SF:20Sun,\x2021\x20Sep\x202025\x2004:40:34\x20GMT\r\nServer:\x20Netlify\r\
-SF:nX-Nf-Request-Id:\x2001K5N95RB6ANNVZD4YJE7M6NR3\r\nContent-Length:\x200
+SF:20Tue,\x2023\x20Sep\x202025\x2004:15:07\x20GMT\r\nServer:\x20Netlify\r\
+SF:nX-Nf-Request-Id:\x2001K5TCGJVDD7EK9X7HDNMXDSJF\r\nContent-Length:\x200
 SF:\r\n\r\n")%r(FourOhFourRequest,92,"HTTP/1\.0\x20400\x20Bad\x20Request\r
-SF:\nDate:\x20Sun,\x2021\x20Sep\x202025\x2004:40:34\x20GMT\r\nServer:\x20N
-SF:etlify\r\nX-Nf-Request-Id:\x2001K5N95RCTTDT4KEBY8HYYZ5N5\r\nContent-Len
+SF:\nDate:\x20Tue,\x2023\x20Sep\x202025\x2004:15:07\x20GMT\r\nServer:\x20N
+SF:etlify\r\nX-Nf-Request-Id:\x2001K5TCGK096RDQJAZA5062H5G4\r\nContent-Len
 SF:gth:\x200\r\n\r\n")%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Reque
 SF:st\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20c
 SF:lose\r\n\r\n400\x20Bad\x20Request")%r(RTSPRequest,67,"HTTP/1\.1\x20400\
@@ -124,4 +124,4 @@ SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
 SF:Bad\x20Request");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 21 04:42:01 2025 -- 1 IP address (1 host up) scanned in 102.17 seconds
+# Nmap done at Tue Sep 23 04:16:36 2025 -- 1 IP address (1 host up) scanned in 104.27 seconds
