@@ -388,7 +388,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -556,7 +556,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (41)"
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -604,15 +604,8 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cert_ocspRevoked <hostCert#1>",
-              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not revoked"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -857,7 +850,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (41)"
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -905,15 +898,8 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cert_ocspRevoked <hostCert#2>",
-              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not revoked"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -1053,7 +1039,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "301 Moved Permanently ('/')"
+              "finding"      : "200 OK ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -1067,7 +1053,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758429800"
+              "finding"      : "1758598909"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1075,7 +1061,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=ZhAJlJQTOm9DQx_9l0iEw1nrW35mYvIhBdeHfndNqoA-1758429800-1.0.1.1-68yx0Y77VcRbIe5Z8WbVY67kOXhp.HYh2kNeI2jA4rYM_sMpXwiOLmgOSecYc0JeZxLg7DmX5fgb1pSH5siU6xSH_i9pdpwC8nEoC.UE7S8; path=/; expires=Sun, 21-Sep-25 05:13:20 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=zc5TiVDQPiVTPTIH_qK4HAjjNq8SeCis7gWBRO6MAfg-1758598909-1.0.1.1-aFPMbxGEG6R0mE0LjWqQabBeNX3OI_yPbE.qzpCIC9Od5haLeabgFbwaoCDtNHNzn9.x9V5CleqIHlF0Kc9_BP1iV3YwmiN3jFhtziK6dhs; path=/; expires=Tue, 23-Sep-25 04:11:49 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -1124,7 +1110,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/' (30x detected, better try target URL of 30x)"
+              "finding"      : "1 at '/'"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -1138,14 +1124,35 @@
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
+              "finding"      : "All (1) at '/' marked as HttpOnly"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "X-Frame-Options",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "OK",
+              "finding"      : "DENY"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Cross-Origin-Opener-Policy",
+              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "clubinternational.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -1221,10 +1228,10 @@
               "id"           : "BREACH",
               "ip"           : "clubinternational.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -2036,7 +2043,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -2057,7 +2064,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -2204,7 +2211,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (41)"
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2252,15 +2259,8 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cert_ocspRevoked <hostCert#1>",
-              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not revoked"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -2505,7 +2505,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (41)"
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2553,15 +2553,8 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cert_ocspRevoked <hostCert#2>",
-              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not revoked"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -2701,7 +2694,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "301 Moved Permanently ('/')"
+              "finding"      : "200 OK ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -2715,7 +2708,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758429878"
+              "finding"      : "1758598994"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2723,7 +2716,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=nKzjWgwlabnxIcDOLCF8.Afen6XAZ6xKZTRnQcZL7bw-1758429878-1.0.1.1-NnUpFIMfE_WiTGikU1jBjrnr_uljCTLxwV.F_d7xdznx_lQWdB7q1E31yyRtFLd.8aVnzvvGmsuh0t8Q2Bd2_9yTEzVC.QOCEbQ6LTm6P40; path=/; expires=Sun, 21-Sep-25 05:14:38 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=j1ZN_yFikb1be2jMVNMlKOtxciQQxGvs_ENEocS9690-1758598994-1.0.1.1-kmPoYClLnowUZrYLt7UtHZjy0WJDhPzP2muWAfx2BPfXUhATqZR9wYptVvQgatBUJu1Wxa.cnr1SUplQltu7Jxt5tAin3dLwB7JOU0PUXIQ; path=/; expires=Tue, 23-Sep-25 04:13:14 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -2772,7 +2765,7 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/' (30x detected, better try target URL of 30x)"
+              "finding"      : "1 at '/'"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -2786,14 +2779,35 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
+              "finding"      : "All (1) at '/' marked as HttpOnly"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "X-Frame-Options",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "OK",
+              "finding"      : "DENY"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Cross-Origin-Opener-Policy",
+              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "clubinternational.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -2869,10 +2883,10 @@
               "id"           : "BREACH",
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -3300,6 +3314,6 @@
               "ip"           : "clubinternational.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "158"
+              "finding"      : "171"
           }
 ]
