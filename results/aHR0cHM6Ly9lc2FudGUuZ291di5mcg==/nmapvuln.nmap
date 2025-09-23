@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Sep 21 04:39:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln esante.gouv.fr
+# Nmap 7.92 scan initiated Tue Sep 23 05:14:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln esante.gouv.fr
 Nmap scan report for esante.gouv.fr (37.59.26.43)
-Host is up (0.15s latency).
+Host is up (0.086s latency).
 rDNS record for 37.59.26.43: ns329358.ip-37-59-26.eu
 Not shown: 996 filtered tcp ports (no-response)
 PORT     STATE  SERVICE      VERSION
@@ -26,11 +26,10 @@ PORT     STATE  SERVICE      VERSION
 |     location: https:///
 |_    connection: close
 443/tcp  open   ssl/https    Apache
-|_http-server-header: Apache
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Sun, 21 Sep 2025 04:39:38 GMT
+|     date: Tue, 23 Sep 2025 05:14:56 GMT
 |     server: Apache
 |     content-security-policy: object-src 'none'; frame-ancestors 'self';
 |     content-length: 315
@@ -51,7 +50,7 @@ PORT     STATE  SERVICE      VERSION
 |     </body></html>
 |   GetRequest: 
 |     HTTP/1.1 403 Forbidden
-|     date: Sun, 21 Sep 2025 04:39:37 GMT
+|     date: Tue, 23 Sep 2025 05:14:55 GMT
 |     server: Apache
 |     content-security-policy: object-src 'none'; frame-ancestors 'self';
 |     content-length: 199
@@ -70,7 +69,7 @@ PORT     STATE  SERVICE      VERSION
 |     </body></html>
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Sun, 21 Sep 2025 04:39:38 GMT
+|     date: Tue, 23 Sep 2025 05:14:55 GMT
 |     server: Apache
 |     content-security-policy: object-src 'none'; frame-ancestors 'self';
 |     allow: GET,POST,OPTIONS,HEAD
@@ -81,11 +80,12 @@ PORT     STATE  SERVICE      VERSION
 |     x-content-type-options: nosniff
 |     x-permitted-cross-domain-policies: none
 |_    connection: close
+|_http-server-header: Apache
 1025/tcp closed NFS-or-IIS
 1026/tcp closed LSA-or-nterm
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/21%Time=68CF8183%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D22CC9%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
@@ -118,9 +118,9 @@ SF:nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x2
 SF:0text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
 SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/21%Time=68CF8189%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,251,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Sun,\
-SF:x2021\x20Sep\x202025\x2004:39:37\x20GMT\r\nserver:\x20Apache\r\ncontent
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/23%Time=68D22CCF%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,251,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Tue,\
+SF:x2023\x20Sep\x202025\x2005:14:55\x20GMT\r\nserver:\x20Apache\r\ncontent
 SF:-security-policy:\x20object-src\x20'none';\x20frame-ancestors\x20'self'
 SF:;\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20charset=i
 SF:so-8859-1\r\nstrict-transport-security:\x20max-age=31536000;\x20preload
@@ -130,15 +130,15 @@ SF:20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x2
 SF:02\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><bo
 SF:dy>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x2
 SF:0access\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,196
-SF:,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Sun,\x2021\x20Sep\x202025\x2004:39
-SF::38\x20GMT\r\nserver:\x20Apache\r\ncontent-security-policy:\x20object-s
+SF:,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Tue,\x2023\x20Sep\x202025\x2005:14
+SF::55\x20GMT\r\nserver:\x20Apache\r\ncontent-security-policy:\x20object-s
 SF:rc\x20'none';\x20frame-ancestors\x20'self';\r\nallow:\x20GET,POST,OPTIO
 SF:NS,HEAD\r\ncontent-length:\x200\r\ncontent-type:\x20httpd/unix-director
 SF:y\r\nstrict-transport-security:\x20max-age=31536000;\x20preload\r\nx-xs
 SF:s-protection:\x201;\x20mode=block\r\nx-content-type-options:\x20nosniff
 SF:\r\nx-permitted-cross-domain-policies:\x20none\r\nconnection:\x20close\
 SF:r\n\r\n")%r(FourOhFourRequest,2C5,"HTTP/1\.1\x20404\x20Not\x20Found\r\n
-SF:date:\x20Sun,\x2021\x20Sep\x202025\x2004:39:38\x20GMT\r\nserver:\x20Apa
+SF:date:\x20Tue,\x2023\x20Sep\x202025\x2005:14:56\x20GMT\r\nserver:\x20Apa
 SF:che\r\ncontent-security-policy:\x20object-src\x20'none';\x20frame-ances
 SF:tors\x20'self';\r\ncontent-length:\x20315\r\ncontent-type:\x20text/html
 SF:;\x20charset=iso-8859-1\r\nstrict-transport-security:\x20max-age=315360
@@ -153,4 +153,4 @@ SF:rying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x20the\x20req
 SF:uest\.</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 21 04:40:04 2025 -- 1 IP address (1 host up) scanned in 50.38 seconds
+# Nmap done at Tue Sep 23 05:15:14 2025 -- 1 IP address (1 host up) scanned in 38.17 seconds
