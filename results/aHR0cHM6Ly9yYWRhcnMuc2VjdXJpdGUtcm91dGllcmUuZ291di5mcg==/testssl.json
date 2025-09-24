@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -430,7 +430,7 @@
               "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (51)"
+              "finding"      : "expires < 60 days (49)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -573,6 +573,140 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1758690317"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options_multiple",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple X-Frame-Options headers. Using first header: DENY"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "DENY"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "script-src 'self' 'unsafe-inline' 'unsafe-eval' http://kzfo.radars.securite-routiere.gouv.fr https://gva.et-gv.fr http://gva.et-gv.fr https://cdn.trustcommander.net https://data.geopf.fr https://cstatic.weborama.fr https://www.googletagmanager.com https://cdn.tagcommander.com unpkg.com; script-src-attr 'self'; script-src-elem 'self' 'unsafe-inline' http://kzfo.radars.securite-routiere.gouv.fr https://gva.et-gv.fr http://gva.et-gv.fr https://wxs.ign.fr/essentiels/geoportail/ols https://cdn.trustcommander.net https://data.geopf.fr https://cstatic.weborama.fr https://www.googletagmanager.com https://cdn.tagcommander.com unpkg.com; style-src 'self' 'unsafe-inline' unpkg.com; style-src-attr 'self' 'unsafe-inline'; frame-ancestors 'self'"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=3600, public"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "x-cache: Miss"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
@@ -594,10 +728,10 @@
               "id"           : "ticketbleed",
               "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "no session ticket extension"
           }
 ,         {
               "id"           : "ROBOT",
@@ -632,7 +766,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1060,6 +1203,6 @@
               "ip"           : "radars.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "153"
+              "finding"      : "161"
           }
 ]
