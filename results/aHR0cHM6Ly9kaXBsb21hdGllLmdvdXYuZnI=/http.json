@@ -9,12 +9,16 @@
     "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 22 Sep 2025 04:08:08 GMT",
+      "date": "Wed, 24 Sep 2025 04:46:37 GMT",
       "vary": "Cookie,Accept-Encoding",
-      "last-modified": "Mon, 22 Sep 2025 04:08:08 GMT",
-      "content-length": "32316",
+      "last-modified": "Wed, 24 Sep 2025 04:46:37 GMT",
+      "content-length": "32309",
       "connection": "close",
       "content-type": "text/html; charset=utf-8",
+      "set-cookie": [
+        "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO=739318188.20480.0000; path=/; Httponly; Secure",
+        "TS017a74ff=011854090804171ca116fe8648484d2ce299750bbea38acaa717775a3177cf64a61f053efdc5f03d739a36f6141971d49ecdcf01c23a3fcae6e753f3edc8e78553d8a6ad94bfec39b5c9df0f09dfeafedfd8cc8a49; Path=/; Domain=.www.diplomatie.gouv.fr;"
+      ],
       "x-xss-protection": "1",
       "x-content-type-options": "nosniff"
     }
@@ -38,7 +42,7 @@
       "scoreModifier": -20,
       "data": {
         "fdiplo-prst": {
-          "domain": "diplomatie.gouv.fr",
+          "domain": "www.diplomatie.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -49,17 +53,17 @@
           "path": "/",
           "port": null
         },
+        "TS017a74ff": {
+          "domain": "www.diplomatie.gouv.fr",
+          "path": "/",
+          "port": null
+        },
         "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO": {
           "domain": "www.diplomatie.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null,
           "secure": true
-        },
-        "TS017a74ff": {
-          "domain": "www.diplomatie.gouv.fr",
-          "path": "/",
-          "port": null
         }
       },
       "sameSite": false
@@ -74,12 +78,18 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://diplomatie.gouv.fr/",
+      "destination": "https://www.diplomatie.gouv.fr/fr/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://diplomatie.gouv.fr/",
+        "https://diplomatie.gouv.fr/",
+        "http://www.diplomatie.gouv.fr/",
+        "https://www.diplomatie.gouv.fr/",
+        "https://www.diplomatie.gouv.fr/fr/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
