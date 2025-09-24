@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Sep 21 05:02:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln service-public.fr
+# Nmap 7.92 scan initiated Wed Sep 24 02:59:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln service-public.fr
 Nmap scan report for service-public.fr (160.92.168.33)
-Host is up (0.15s latency).
+Host is up (0.10s latency).
 rDNS record for 160.92.168.33: secure-www-sp-dila-prod.as8677.net
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE    VERSION
@@ -10,17 +10,17 @@ PORT    STATE SERVICE    VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Sun, 21 Sep 2025 05:02:57 GMT
+|     Date: Wed, 24 Sep 2025 02:59:44 GMT
 |     Content-Type: text/html
 |     Connection: close
 |     Location: https://www.service-public.fr/
 |     X-OneAgent-JS-Injection: true
 |     X-ruxit-JS-Agent: true
-|     Server-Timing: dtSInfo;desc="0", dtRpid;desc="-516577169"
-|     Set-Cookie: dtCookiezqmpvejo=v_4_srv_1_sn_CECE830B7A413CDDBEA25EF21D3BB683_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1; Path=/
-|     Set-Cookie: TS01ad993f=012a7f58e000c887c3d2263a999bc929393bed271e70206a2d5b165fed309ddd5af0bfba61d102a39eed4f1284d64e5a970f2ebf7f39c9f381fe4d22c76398369efe8f320d; Path=/; Secure; HttpOnly; 
+|     Server-Timing: dtSInfo;desc="0", dtRpid;desc="985303988"
+|     Set-Cookie: dtCookiezqmpvejo=v_4_srv_1_sn_3F29064F95199F76D1E77D6C760ED5E9_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1; Path=/
+|     Set-Cookie: TS01ad993f=012a7f58e07fc8ad2f94e324e7e0da5ba2f39dc5612eae695d121d98ea3625cf3387e36806567fe938640a21b6ef2f3d94bf7468a556228013b7037fda967c18679e33080e; Path=/; Secure; HttpOnly; 
 |     <html>
-|     <head><title>301 Moved Permanently</title><script type="text/javascript" src="/ruxitagentjs_ICA7NVfqrux_10313250422105919.js" data-dtconfig="rid=RID_2418|rpid=-516577169|reportUrl=/rb_74283360-d674-42c3-9172-8d58fb6b0f80|app=ea7c4b59f27d43eb|cuc=zqmpvejo|mel=100000|expw=1|featureHash=ICA7NVfqrux|d
+|     <head><title>301 Moved Permanently</title><script type="text/javascript" src="/ruxitagentjs_ICA7NVfqrux_10313250422105919.js" data-dtconfig="rid=RID_2418|rpid=985303988|reportUrl=/rb_74283360-d674-42c3-9172-8d58fb6b0f80|app=ea7c4b59f27d43eb|cuc=zqmpvejo|owasp=1|mel=100000|expw=1|featureHash=ICA7NVf
 |   HTTPOptions: 
 |     HTTP/1.1 499 Unknown Code
 |     X-Frame-Options: SAMEORIGIN
@@ -44,22 +44,22 @@ PORT    STATE SERVICE    VERSION
 |     DSFR Mini */
 |_    a{text-decoration:var(--text-decoration);color:inherit}:root{--underline-max-width:100%;--underline-hover-width:0;--unde
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/21%Time=68CF8701%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,488,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDat
-SF:e:\x20Sun,\x2021\x20Sep\x202025\x2005:02:57\x20GMT\r\nContent-Type:\x20
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/24%Time=68D35EA0%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,48E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDat
+SF:e:\x20Wed,\x2024\x20Sep\x202025\x2002:59:44\x20GMT\r\nContent-Type:\x20
 SF:text/html\r\nConnection:\x20close\r\nLocation:\x20https://www\.service-
 SF:public\.fr/\r\nX-OneAgent-JS-Injection:\x20true\r\nX-ruxit-JS-Agent:\x2
-SF:0true\r\nServer-Timing:\x20dtSInfo;desc=\"0\",\x20dtRpid;desc=\"-516577
-SF:169\"\r\nSet-Cookie:\x20dtCookiezqmpvejo=v_4_srv_1_sn_CECE830B7A413CDDB
-SF:EA25EF21D3BB683_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1;\x20Pat
-SF:h=/\r\nSet-Cookie:\x20TS01ad993f=012a7f58e000c887c3d2263a999bc929393bed
-SF:271e70206a2d5b165fed309ddd5af0bfba61d102a39eed4f1284d64e5a970f2ebf7f39c
-SF:9f381fe4d22c76398369efe8f320d;\x20Path=/;\x20Secure;\x20HttpOnly;\x20\r
-SF:\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title><script
-SF:\x20type=\"text/javascript\"\x20src=\"/ruxitagentjs_ICA7NVfqrux_1031325
-SF:0422105919\.js\"\x20data-dtconfig=\"rid=RID_2418\|rpid=-516577169\|repo
-SF:rtUrl=/rb_74283360-d674-42c3-9172-8d58fb6b0f80\|app=ea7c4b59f27d43eb\|c
-SF:uc=zqmpvejo\|mel=100000\|expw=1\|featureHash=ICA7NVfqrux\|d")%r(HTTPOpt
+SF:0true\r\nServer-Timing:\x20dtSInfo;desc=\"0\",\x20dtRpid;desc=\"9853039
+SF:88\"\r\nSet-Cookie:\x20dtCookiezqmpvejo=v_4_srv_1_sn_3F29064F95199F76D1
+SF:E77D6C760ED5E9_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1;\x20Path
+SF:=/\r\nSet-Cookie:\x20TS01ad993f=012a7f58e07fc8ad2f94e324e7e0da5ba2f39dc
+SF:5612eae695d121d98ea3625cf3387e36806567fe938640a21b6ef2f3d94bf7468a55622
+SF:8013b7037fda967c18679e33080e;\x20Path=/;\x20Secure;\x20HttpOnly;\x20\r\
+SF:n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title><script\
+SF:x20type=\"text/javascript\"\x20src=\"/ruxitagentjs_ICA7NVfqrux_10313250
+SF:422105919\.js\"\x20data-dtconfig=\"rid=RID_2418\|rpid=985303988\|report
+SF:Url=/rb_74283360-d674-42c3-9172-8d58fb6b0f80\|app=ea7c4b59f27d43eb\|cuc
+SF:=zqmpvejo\|owasp=1\|mel=100000\|expw=1\|featureHash=ICA7NVf")%r(HTTPOpt
 SF:ions,80D5,"HTTP/1\.1\x20499\x20Unknown\x20Code\r\nX-Frame-Options:\x20S
 SF:AMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Op
 SF:tions:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20close
@@ -80,4 +80,4 @@ SF:line-hover-width:0;--unde");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 21 05:05:13 2025 -- 1 IP address (1 host up) scanned in 159.80 seconds
+# Nmap done at Wed Sep 24 03:01:55 2025 -- 1 IP address (1 host up) scanned in 152.30 seconds
