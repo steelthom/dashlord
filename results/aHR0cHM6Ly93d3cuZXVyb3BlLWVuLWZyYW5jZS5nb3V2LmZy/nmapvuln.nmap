@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Sep 23 03:34:43 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.europe-en-france.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep 25 04:42:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.europe-en-france.gouv.fr
 Nmap scan report for www.europe-en-france.gouv.fr (46.105.190.177)
-Host is up (0.086s latency).
+Host is up (0.10s latency).
 rDNS record for 46.105.190.177: vs1001.anct.cognix-systems.net
 Not shown: 997 filtered tcp ports (no-response)
 PORT     STATE SERVICE   VERSION
@@ -37,10 +37,11 @@ PORT     STATE SERVICE   VERSION
 |     Your browser didn't send a complete request in time.
 |_    </body></html>
 443/tcp  open  ssl/https Apache
+|_http-server-header: Apache
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     date: Tue, 23 Sep 2025 03:35:02 GMT
+|     date: Thu, 25 Sep 2025 04:43:15 GMT
 |     server: Apache
 |     content-security-policy: frame-ancestors 'self';
 |     last-modified: Wed, 26 Mar 2025 08:06:21 GMT
@@ -69,10 +70,10 @@ PORT     STATE SERVICE   VERSION
 |     max-height:45%;
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Tue, 23 Sep 2025 03:35:03 GMT
+|     date: Thu, 25 Sep 2025 04:43:16 GMT
 |     server: Apache
 |     content-security-policy: frame-ancestors 'self';
-|     allow: POST,OPTIONS,HEAD,GET
+|     allow: HEAD,GET,POST,OPTIONS
 |     x-xss-protection: 0
 |     x-content-type-options: nosniff
 |     content-length: 0
@@ -89,7 +90,6 @@ PORT     STATE SERVICE   VERSION
 |     <html><body><h1>408 Request Time-out</h1>
 |     Your browser didn't send a complete request in time.
 |_    </body></html>
-|_http-server-header: Apache
 8000/tcp open  http-alt
 | fingerprint-strings: 
 |   GetRequest: 
@@ -132,7 +132,7 @@ PORT     STATE SERVICE   VERSION
 |_    </body></html>
 3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D21560%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4C85D%P=x86_64-alpine-linux-musl%r
 SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
 SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
 SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
@@ -167,13 +167,13 @@ SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
 SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
 SF:");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/23%Time=68D21566%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/25%Time=68D4C863%P=x86_64-alpine-linux
 SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
 SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
 SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
 SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
 SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,58E,"HTTP/1\.1\x20200
-SF:\x20OK\r\ndate:\x20Tue,\x2023\x20Sep\x202025\x2003:35:02\x20GMT\r\nserv
+SF:\x20OK\r\ndate:\x20Thu,\x2025\x20Sep\x202025\x2004:43:15\x20GMT\r\nserv
 SF:er:\x20Apache\r\ncontent-security-policy:\x20frame-ancestors\x20'self';
 SF:\r\nlast-modified:\x20Wed,\x2026\x20Mar\x202025\x2008:06:21\x20GMT\r\ne
 SF:tag:\x20\"3c4-6313a501776dc\"\r\naccept-ranges:\x20bytes\r\ncontent-len
@@ -193,15 +193,15 @@ SF:iv\.shadow\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
 SF:20\x20\x20position:absolute;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
 SF:x20\x20\x20\x20\x20\x20max-width:45%;\n\x20\x20\x20\x20\x20\x20\x20\x20
 SF:\x20\x20\x20\x20\x20\x20\x20\x20max-height:45%;\n\x20\x20\x20")%r(HTTPO
-SF:ptions,158,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Tue,\x2023\x20Sep\x20202
-SF:5\x2003:35:03\x20GMT\r\nserver:\x20Apache\r\ncontent-security-policy:\x
-SF:20frame-ancestors\x20'self';\r\nallow:\x20POST,OPTIONS,HEAD,GET\r\nx-xs
+SF:ptions,158,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Thu,\x2025\x20Sep\x20202
+SF:5\x2004:43:16\x20GMT\r\nserver:\x20Apache\r\ncontent-security-policy:\x
+SF:20frame-ancestors\x20'self';\r\nallow:\x20HEAD,GET,POST,OPTIONS\r\nx-xs
 SF:s-protection:\x200\r\nx-content-type-options:\x20nosniff\r\ncontent-len
 SF:gth:\x200\r\nkeep-alive:\x20timeout=2,\x20max=500\r\ncontent-type:\x20t
 SF:ext/html\r\nset-cookie:\x20BACKENDID=vs1002\.anct;\x20path=/\r\nconnect
 SF:ion:\x20close\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port8000-TCP:V=7.92%I=7%D=9/23%Time=68D21560%P=x86_64-alpine-linux-musl
+SF-Port8000-TCP:V=7.92%I=7%D=9/25%Time=68D4C85D%P=x86_64-alpine-linux-musl
 SF:%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\
 SF:x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
 SF:-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</
@@ -236,4 +236,4 @@ SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
 SF:n\x20invalid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Sep 23 03:35:19 2025 -- 1 IP address (1 host up) scanned in 36.32 seconds
+# Nmap done at Thu Sep 25 04:43:34 2025 -- 1 IP address (1 host up) scanned in 39.45 seconds
