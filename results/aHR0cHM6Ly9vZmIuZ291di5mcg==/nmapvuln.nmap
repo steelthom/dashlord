@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Sep 23 03:03:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ofb.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep 25 04:15:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ofb.gouv.fr
 Nmap scan report for ofb.gouv.fr (147.135.143.41)
-Host is up (0.089s latency).
+Host is up (0.15s latency).
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE  VERSION
 80/tcp  open  http
@@ -25,9 +25,6 @@ PORT    STATE SERVICE  VERSION
 |     location: https:///
 |_    connection: close
 443/tcp open  ssl/http Apache httpd 2.4.62
-| http-server-header: 
-|   Apache/2.4.62 (Debian)
-|_  Apache/2.4.65 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
 |     	CVE-2025-23048	9.1	https://vulners.com/cve/CVE-2025-23048
@@ -38,8 +35,11 @@ PORT    STATE SERVICE  VERSION
 |     	CVE-2024-43204	7.5	https://vulners.com/cve/CVE-2024-43204
 |     	CVE-2024-42516	7.5	https://vulners.com/cve/CVE-2024-42516
 |_    	CVE-2025-49812	7.4	https://vulners.com/cve/CVE-2025-49812
+| http-server-header: 
+|   Apache/2.4.62 (Debian)
+|_  Apache/2.4.65 (Debian)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D20E03%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4C1DF%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
@@ -74,4 +74,4 @@ SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 Service Info: Host: OFB-P-MNTAP-G11-01.ofb.intra
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Sep 23 03:03:42 2025 -- 1 IP address (1 host up) scanned in 19.74 seconds
+# Nmap done at Thu Sep 25 04:15:43 2025 -- 1 IP address (1 host up) scanned in 25.46 seconds
