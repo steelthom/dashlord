@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ciivise.fr</pre>
-<p class="lead">Tue Sep 23 04:07:46 2025 – Tue Sep 23 04:10:30 2025<br>1 hosts scanned.
+<p class="lead">Thu Sep 25 04:39:59 2025 – Thu Sep 25 04:42:42 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,9 +119,24 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GetRequest: 
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+    Content-Length: 0
+  GetRequest, HTTPOptions, RTSPRequest: 
     HTTP/1.0 302 Moved Temporarily
     Location: https:///
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://sip:nm
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://mstshash=nmap
     Connection: close
     Content-Length: 0</pre>
 </td></tr>
@@ -146,9 +161,27 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+  FourOhFourRequest: 
     HTTP/1.1 400 Bad Request
-    Date: Tue, 23 Sep 2025 04:08:06 GMT
+    Date: Thu, 25 Sep 2025 04:40:19 GMT
+    Content-Length: 226
+    Content-Type: text/html; charset=iso-8859-1
+    Age: 0
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    Connection: close
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+    &lt;html&gt;&lt;head&gt;
+    &lt;title&gt;400 Bad Request&lt;/title&gt;
+    &lt;/head&gt;&lt;body&gt;
+    &lt;h1&gt;Bad Request&lt;/h1&gt;
+    &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
+    &lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;
+  GetRequest, HTTPOptions: 
+    HTTP/1.1 400 Bad Request
+    Date: Thu, 25 Sep 2025 04:40:18 GMT
     Content-Length: 226
     Content-Type: text/html; charset=iso-8859-1
     Age: 0
