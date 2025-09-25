@@ -3,100 +3,33 @@
     "algorithmVersion": 4,
     "grade": "F",
     "error": null,
-    "score": 20,
+    "score": 0,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 23 Sep 2025 01:51:10 GMT",
+      "date": "Thu, 25 Sep 2025 04:59:25 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "cache-control": "max-age=10800, public",
-      "x-drupal-dynamic-cache": "UNCACHEABLE (poor cacheability)",
-      "content-language": "fr",
-      "x-content-type-options": "nosniff",
-      "x-frame-options": "SAMEORIGIN",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "vary": "Cookie,Accept-Encoding",
-      "content-security-policy": "default-src self; script-src 'unsafe-eval' 'unsafe-inline' blob: *; object-src *; style-src 'unsafe-inline' *; img-src 'unsafe-inline' data: *; media-src 'unsafe-inline' *; frame-src *; font-src 'unsafe-inline' data: *; connect-src 'unsafe-inline' *; report-uri /report-csp-violation",
-      "x-drupal-cache": "MISS",
-      "last-modified": "Tue, 23 Sep 2025 01:48:30 GMT",
-      "etag": "W/\"1758592110-gzip\"",
-      "cache-tags": "HIT",
-      "strict-transport-security": "max-age=300; includeSubDomains; preload;",
-      "x-request-id": "364189221",
-      "x-cdn-pop": "bhs",
-      "x-cdn-pop-ip": "137.74.122.0/26",
-      "x-cacheable": "Matched cache",
-      "accept-ranges": "bytes",
-      "content-length": "29038",
-      "connection": "close"
+      "content-length": "133875",
+      "connection": "close",
+      "cache-control": "max-age=240, public, s-maxage=240",
+      "x-content-digest": "en85e5d260bfb0efae8f1800136df653c1",
+      "age": "12588",
+      "strict-transport-security": "max-age=31536000; includeSubDomains"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "default-src": [
-          "self"
-        ],
-        "script-src": [
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "*",
-          "blob:"
-        ],
-        "object-src": [
-          "*"
-        ],
-        "style-src": [
-          "'unsafe-inline'",
-          "*"
-        ],
-        "img-src": [
-          "'unsafe-inline'",
-          "*",
-          "data:"
-        ],
-        "media-src": [
-          "'unsafe-inline'",
-          "*"
-        ],
-        "frame-src": [
-          "*"
-        ],
-        "font-src": [
-          "'unsafe-inline'",
-          "*",
-          "data:"
-        ],
-        "connect-src": [
-          "'unsafe-inline'",
-          "*"
-        ],
-        "report-uri": [
-          "/report-csp-violation"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": false,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -115,14 +48,14 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://devenir-aviateur.fr/",
+      "pass": false,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
+      "destination": "https://devenir-aviateur.gouv.fr/",
       "redirects": true,
       "route": [
         "http://devenir-aviateur.fr/",
-        "https://devenir-aviateur.fr/"
+        "https://devenir-aviateur.gouv.fr/"
       ],
       "statusCode": 200
     },
@@ -137,13 +70,13 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-implemented-max-age-less-than-six-months",
-      "scoreModifier": -10,
-      "data": "max-age=300; includeSubDomains; preload;",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains",
       "includeSubDomains": true,
-      "maxAge": 300,
-      "preload": true,
+      "maxAge": 31536000,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
@@ -152,11 +85,11 @@
       "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
       "scoreModifier": -50,
       "data": {
-        "//petjeb7f4u.kameleoon.io/engine.js": {
+        "//cdn.tagcommander.com/7549/tc_DevenirAviateur_20.js": {
           "crossorigin": null,
           "integrity": null
         },
-        "https://assets.juicer.io/embed.js": {
+        "//petjeb7f4u.kameleoon.io/engine.js": {
           "crossorigin": null,
           "integrity": null
         }
@@ -164,17 +97,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
