@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Sep 23 04:40:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bafa-bafd.jeunes.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep 25 04:43:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bafa-bafd.jeunes.gouv.fr
 Nmap scan report for bafa-bafd.jeunes.gouv.fr (37.235.93.88)
-Host is up (0.091s latency).
+Host is up (0.13s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE  VERSION
 80/tcp  open   http
@@ -28,7 +28,6 @@ PORT    STATE  SERVICE  VERSION
 |_    connection: close
 113/tcp closed ident
 443/tcp open   ssl/http Apache httpd 2.4.62
-|_http-server-header: Apache/2.4.62 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
 |     	CVE-2025-23048	9.1	https://vulners.com/cve/CVE-2025-23048
@@ -39,8 +38,9 @@ PORT    STATE  SERVICE  VERSION
 |     	CVE-2024-43204	7.5	https://vulners.com/cve/CVE-2024-43204
 |     	CVE-2024-42516	7.5	https://vulners.com/cve/CVE-2024-42516
 |_    	CVE-2025-49812	7.4	https://vulners.com/cve/CVE-2025-49812
+|_http-server-header: Apache/2.4.62 (Debian)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D224BC%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4C86C%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlo
 SF:cation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20cl
 SF:ose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-le
@@ -76,4 +76,4 @@ SF:valid\x20request\.\n</body></html>\n");
 Service Info: Host: administration.bafa-bafd.jeunes.gouv.fr
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Sep 23 04:40:40 2025 -- 1 IP address (1 host up) scanned in 25.49 seconds
+# Nmap done at Thu Sep 25 04:43:39 2025 -- 1 IP address (1 host up) scanned in 30.70 seconds
