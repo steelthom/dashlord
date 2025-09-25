@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Tue Sep 23 03:21:48 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln documentation-administrative.gouv.fr
+# Nmap 7.92 scan initiated Thu Sep 25 04:13:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln documentation-administrative.gouv.fr
 Nmap scan report for documentation-administrative.gouv.fr (193.48.96.97)
 Host is up (0.10s latency).
 rDNS record for 193.48.96.97: ccsdspmvip.in2p3.fr
@@ -41,7 +41,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Found
-|     date: Tue, 23 Sep 2025 03:22:10 GMT
+|     date: Thu, 25 Sep 2025 04:14:01 GMT
 |     server: Apache
 |     location: /docs/
 |     access-control-allow-origin: *
@@ -50,9 +50,20 @@ PORT    STATE SERVICE   VERSION
 |     content-type: text/html; charset=UTF-8
 |     strict-transport-security: max-age=63072000
 |     connection: close
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 302 Found
-|     date: Tue, 23 Sep 2025 03:22:09 GMT
+|     date: Thu, 25 Sep 2025 04:14:00 GMT
+|     server: Apache
+|     location: /docs
+|     access-control-allow-origin: *
+|     content-length: 0
+|     keep-alive: timeout=5, max=500
+|     content-type: text/html; charset=UTF-8
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     date: Thu, 25 Sep 2025 04:14:01 GMT
 |     server: Apache
 |     location: /docs
 |     access-control-allow-origin: *
@@ -63,7 +74,7 @@ PORT    STATE SERVICE   VERSION
 |_    connection: close
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D2125A%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4C182%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlo
 SF:cation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20cl
 SF:ose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-le
@@ -97,20 +108,20 @@ SF:e\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><b
 SF:ody><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20in
 SF:valid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/23%Time=68D21261%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,117,"HTTP/1\.1\x20302\x20Found\r\ndate:\x20Tue,\x202
-SF:3\x20Sep\x202025\x2003:22:09\x20GMT\r\nserver:\x20Apache\r\nlocation:\x
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/25%Time=68D4C189%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,117,"HTTP/1\.1\x20302\x20Found\r\ndate:\x20Thu,\x202
+SF:5\x20Sep\x202025\x2004:14:00\x20GMT\r\nserver:\x20Apache\r\nlocation:\x
 SF:20/docs\r\naccess-control-allow-origin:\x20\*\r\ncontent-length:\x200\r
 SF:\nkeep-alive:\x20timeout=5,\x20max=500\r\ncontent-type:\x20text/html;\x
 SF:20charset=UTF-8\r\nstrict-transport-security:\x20max-age=63072000\r\nco
 SF:nnection:\x20close\r\n\r\n")%r(HTTPOptions,117,"HTTP/1\.1\x20302\x20Fou
-SF:nd\r\ndate:\x20Tue,\x2023\x20Sep\x202025\x2003:22:09\x20GMT\r\nserver:\
+SF:nd\r\ndate:\x20Thu,\x2025\x20Sep\x202025\x2004:14:01\x20GMT\r\nserver:\
 SF:x20Apache\r\nlocation:\x20/docs\r\naccess-control-allow-origin:\x20\*\r
 SF:\ncontent-length:\x200\r\nkeep-alive:\x20timeout=5,\x20max=500\r\nconte
 SF:nt-type:\x20text/html;\x20charset=UTF-8\r\nstrict-transport-security:\x
 SF:20max-age=63072000\r\nconnection:\x20close\r\n\r\n")%r(FourOhFourReques
-SF:t,118,"HTTP/1\.1\x20302\x20Found\r\ndate:\x20Tue,\x2023\x20Sep\x202025\
-SF:x2003:22:10\x20GMT\r\nserver:\x20Apache\r\nlocation:\x20/docs/\r\nacces
+SF:t,118,"HTTP/1\.1\x20302\x20Found\r\ndate:\x20Thu,\x2025\x20Sep\x202025\
+SF:x2004:14:01\x20GMT\r\nserver:\x20Apache\r\nlocation:\x20/docs/\r\nacces
 SF:s-control-allow-origin:\x20\*\r\ncontent-length:\x200\r\nkeep-alive:\x2
 SF:0timeout=5,\x20max=500\r\ncontent-type:\x20text/html;\x20charset=UTF-8\
 SF:r\nstrict-transport-security:\x20max-age=63072000\r\nconnection:\x20clo
@@ -133,4 +144,4 @@ SF:>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x
 SF:20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Sep 23 03:22:30 2025 -- 1 IP address (1 host up) scanned in 41.75 seconds
+# Nmap done at Thu Sep 25 04:14:21 2025 -- 1 IP address (1 host up) scanned in 41.91 seconds
