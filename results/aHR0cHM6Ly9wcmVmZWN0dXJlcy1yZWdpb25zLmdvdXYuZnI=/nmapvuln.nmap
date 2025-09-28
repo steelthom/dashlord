@@ -1,10 +1,11 @@
-# Nmap 7.92 scan initiated Tue Sep 23 04:52:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln prefectures-regions.gouv.fr
+# Nmap 7.92 scan initiated Sun Sep 28 03:23:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln prefectures-regions.gouv.fr
 Nmap scan report for prefectures-regions.gouv.fr (5.22.145.247)
-Host is up (0.095s latency).
+Host is up (0.13s latency).
 Other addresses for prefectures-regions.gouv.fr (not scanned): 5.22.145.230 2a00:18e0:5:2:f015:6b46:7bb3:1c36 2a00:18e0:5:3:a356:6a4c:7d74:3f0b
 Not shown: 997 filtered tcp ports (no-response)
 PORT     STATE SERVICE    VERSION
 80/tcp   open  http       Apache
+|_http-server-header: Apache
 | fingerprint-strings: 
 |   DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad request
@@ -33,7 +34,6 @@ PORT     STATE SERVICE    VERSION
 |     <html><body><h1>408 Request Time-out</h1>
 |     Your browser didn't send a complete request in time.
 |_    </body></html>
-|_http-server-header: Apache
 443/tcp  open  ssl/https  Apache
 |_http-server-header: Apache
 | fingerprint-strings: 
@@ -67,7 +67,7 @@ PORT     STATE SERVICE    VERSION
 9080/tcp open  ssl/glrpc?
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/23%Time=68D22785%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=9/28%Time=68D8AA4C%P=x86_64-alpine-linux-musl%r
 SF:(HTTPOptions,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:\x2093
 SF:\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnect
 SF:ion:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x20
@@ -98,7 +98,7 @@ SF:x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r
 SF:\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x
 SF:20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/23%Time=68D2278B%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/28%Time=68D8AA52%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:
 SF:\x2093\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nc
 SF:onnection:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nReque
@@ -130,4 +130,4 @@ SF:><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x2
 SF:0invalid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Sep 23 04:55:37 2025 -- 1 IP address (1 host up) scanned in 210.01 seconds
+# Nmap done at Sun Sep 28 03:27:15 2025 -- 1 IP address (1 host up) scanned in 217.20 seconds
