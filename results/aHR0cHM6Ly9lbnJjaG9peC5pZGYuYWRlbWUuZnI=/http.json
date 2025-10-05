@@ -1,26 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D-",
+    "grade": "D",
     "error": null,
-    "score": 25,
-    "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Wed, 24 Sep 2025 03:46:15 GMT",
-      "content-type": "text/html",
+      "date": "Sun, 05 Oct 2025 04:01:02 GMT",
+      "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "strict-transport-security": "max-age=15768000",
-      "last-modified": "Tue, 04 Mar 2025 16:21:06 GMT",
-      "cf-cache-status": "DYNAMIC",
+      "x-frame-options": "SAMEORIGIN",
+      "referrer-policy": "same-origin",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
       "set-cookie": [
-        "__cf_bm=R.9b7qGPaLX3QTefSwXfxZegGULGmO85QZ8w3Li7D60-1758685575-1.0.1.1-0FlOTxZgs0IYbUa5hHfLTh8sMXDpi1iydnHpr7z5ILGQErKNZ417X8IcfublyRG3VpTNc.mhHKPUs18DJlFkMSLvXQt2I0IqG2jcvW1cBA8; path=/; expires=Wed, 24-Sep-25 04:16:15 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
+        "__cf_bm=EM78.IJEWV7z3f_i6lt420FnTCCP1LXqreltpjm5f.k-1759636862-1.0.1.1-B7pzUjLRRzjsTDQ2GgAk0.OMeYw5teXqPkOaJQ3m0iKFcPn1w7cEKp0qmpbgr9k4NG2hz_PK.RyoR7JN6kLVPEaA3m6YWW42XVTLxnYf9os; path=/; expires=Sun, 05-Oct-25 04:31:02 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
       ],
+      "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "983f4b2cba6a0558-ORD"
+      "cf-ray": "989a03f85ab32e1b-DFW"
     }
   },
   "tests": {
@@ -43,7 +45,7 @@
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-09-24T04:16:15.000Z",
+          "expires": "2025-10-05T04:31:02.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -70,39 +72,34 @@
       "route": [
         "http://enrchoix.idf.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=15768000",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 15768000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=www.enrchoix.idf.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
@@ -113,10 +110,10 @@
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
