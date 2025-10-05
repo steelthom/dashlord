@@ -1,20 +1,19 @@
-# Nmap 7.92 scan initiated Wed Sep 24 03:58:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.bison-fute.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct  5 03:55:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.bison-fute.gouv.fr
 Nmap scan report for www.bison-fute.gouv.fr (194.5.170.168)
-Host is up (0.11s latency).
-Not shown: 988 filtered tcp ports (no-response)
-PORT      STATE  SERVICE        VERSION
-26/tcp    closed rsftp
+Host is up (0.10s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT      STATE  SERVICE    VERSION
 80/tcp    open   http
 |_http-server-header: <empty>
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Wed, 24 Sep 2025 04:07:24 GMT
+|     Date: Sun, 05 Oct 2025 04:03:51 GMT
 |     Server: 
 |     Upgrade: h2,h2c
 |     Connection: Upgrade, close
 |     Last-Modified: Mon, 28 Aug 2023 11:51:52 GMT
-|     ETag: "3ec-603fa52032741"
+|     ETag: "3ec-603fa51f656ec"
 |     Accept-Ranges: bytes
 |     Content-Length: 1004
 |     Vary: Accept-Encoding
@@ -34,29 +33,24 @@ PORT      STATE  SERVICE        VERSION
 |     #contact {margin-top:50px; color:#aaa;
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Wed, 24 Sep 2025 04:07:24 GMT
+|     Date: Sun, 05 Oct 2025 04:03:51 GMT
 |     Server: 
 |     Upgrade: h2,h2c
 |     Connection: Upgrade, close
-|     Allow: OPTIONS,HEAD,GET,POST
+|     Allow: HEAD,GET,POST,OPTIONS
 |     Content-Length: 0
 |_    Content-Type: text/html
 113/tcp   closed ident
-443/tcp   open   ssl/https?
-1998/tcp  closed x25-svc-port
-2000/tcp  open   cisco-sccp?
-5901/tcp  closed vnc-1
-5987/tcp  closed wbem-rmi
-9968/tcp  closed unknown
-32770/tcp closed sometimes-rpc3
-32781/tcp closed unknown
-49400/tcp closed compaqdiag
+443/tcp   open   tcpwrapped
+1029/tcp  closed ms-lsa
+1092/tcp  closed obrpd
+56738/tcp closed unknown
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=9/24%Time=68D36E7C%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,501,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2024\x20Sep\x
-SF:202025\x2004:07:24\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nC
+SF-Port80-TCP:V=7.92%I=7%D=10/5%Time=68E1EE27%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,501,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2005\x20Oct\x
+SF:202025\x2004:03:51\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nC
 SF:onnection:\x20Upgrade,\x20close\r\nLast-Modified:\x20Mon,\x2028\x20Aug\
-SF:x202023\x2011:51:52\x20GMT\r\nETag:\x20\"3ec-603fa52032741\"\r\nAccept-
+SF:x202023\x2011:51:52\x20GMT\r\nETag:\x20\"3ec-603fa51f656ec\"\r\nAccept-
 SF:Ranges:\x20bytes\r\nContent-Length:\x201004\r\nVary:\x20Accept-Encoding
 SF:\r\nContent-Type:\x20text/html\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"
 SF:-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\">\n<html>\n<head>\n\x
@@ -71,10 +65,10 @@ SF:\x20{padding:120px\x20120px\x2010px;\x20color:#374;\x20font-size:250%;f
 SF:ont-weight:bold;background:url\('maintenance-marianne\.png'\)\x20no-rep
 SF:eat\x20top\x20center;}\n\x20\x20\x20\x20#more\x20{font-size:65%;}\n\x20
 SF:\x20\x20\x20#contact\x20{margin-top:50px;\x20color:#aaa;")%r(HTTPOption
-SF:s,BA,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2024\x20Sep\x202025\x200
-SF:4:07:24\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nConnection:\
-SF:x20Upgrade,\x20close\r\nAllow:\x20OPTIONS,HEAD,GET,POST\r\nContent-Leng
+SF:s,BA,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2005\x20Oct\x202025\x200
+SF:4:03:51\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nConnection:\
+SF:x20Upgrade,\x20close\r\nAllow:\x20HEAD,GET,POST,OPTIONS\r\nContent-Leng
 SF:th:\x200\r\nContent-Type:\x20text/html\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Sep 24 04:07:54 2025 -- 1 IP address (1 host up) scanned in 583.73 seconds
+# Nmap done at Sun Oct  5 04:04:11 2025 -- 1 IP address (1 host up) scanned in 492.31 seconds
