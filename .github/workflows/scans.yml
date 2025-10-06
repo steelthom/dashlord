@@ -32,7 +32,7 @@ on:
 
 # allow only one concurrent scan action
 concurrency:
-  cancel-in-progress: true
+  cancel-in-progress: ${{ inputs.url == '' || false }}
   group: scans
 
 jobs:
