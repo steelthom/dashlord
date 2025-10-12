@@ -416,7 +416,7 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -555,8 +555,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "68 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (50)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -569,7 +569,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 10:38"
           }
 ,         {
@@ -849,8 +849,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "68 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (50)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -863,7 +863,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 10:40"
           }
 ,         {
@@ -1039,7 +1039,7 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -1053,43 +1053,14 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758689244"
+              "finding"      : "1760238413"
           }
 ,         {
-              "id"           : "ipv4_in_header",
+              "id"           : "HSTS",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=74HXF_ep6ARjPJP0.4wtXxS0C3fpwFQ5TCSL3hnRZO8-1758689244-1.0.1.1-QuClguUWW7TP_hrg1T0a7WDKygIJr92dnRH1ze7IGlv9DbQwFWXg9ohgaPS3Nl9O33wBaZQoqdXznYD4SLupYoM1y8Iw1VG.jED02pv2KF4; path=/; expires=Wed, 24-Sep-25 05:17:24 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
-          }
-,         {
-              "id"           : "HSTS_multiple",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "Multiple HSTS headers. Using first header: max-age=31536000; includeSubDomains; preload"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "HPKP",
@@ -1117,21 +1088,7 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (2) at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (2) at '/' marked as HttpOnly"
+              "finding"      : "0 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -1141,46 +1098,18 @@
               "finding"      : "SAMEORIGIN"
           }
 ,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "default-src * data: 'unsafe-eval' 'unsafe-inline'"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
               "id"           : "Referrer-Policy",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no-referrer-when-downgrade"
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no-cache, no-store, must-revalidate"
-          }
-,         {
-              "id"           : "Pragma",
-              "ip"           : "bilans-ges.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no-cache"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -2092,14 +2021,14 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -2238,8 +2167,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "68 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (50)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2252,7 +2181,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 10:38"
           }
 ,         {
@@ -2532,8 +2461,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "68 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (50)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2546,7 +2475,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 10:40"
           }
 ,         {
@@ -2722,7 +2651,7 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -2736,43 +2665,14 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758689323"
+              "finding"      : "1760238490"
           }
 ,         {
-              "id"           : "ipv4_in_header",
+              "id"           : "HSTS",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=_VF_iF85YP4.6bruN7wk1K01mQnLdOKUP23xxTtxQU0-1758689323-1.0.1.1-3_gjEaN2ERtmpGLIS3yFiKik7ejMGsUMTmSWUUk_oOykVj.eYXGfyI5Lc9y66B1J5RoUV0fR4_zs8AufcIyczY5oYwNoPCQ756CVF4fol10; path=/; expires=Wed, 24-Sep-25 05:18:43 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
-          }
-,         {
-              "id"           : "HSTS_multiple",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "Multiple HSTS headers. Using first header: max-age=31536000; includeSubDomains; preload"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "HPKP",
@@ -2800,21 +2700,7 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (2) at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (2) at '/' marked as HttpOnly"
+              "finding"      : "0 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -2824,46 +2710,18 @@
               "finding"      : "SAMEORIGIN"
           }
 ,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "default-src * data: 'unsafe-eval' 'unsafe-inline'"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
               "id"           : "Referrer-Policy",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no-referrer-when-downgrade"
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no-cache, no-store, must-revalidate"
-          }
-,         {
-              "id"           : "Pragma",
-              "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no-cache"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -3370,6 +3228,6 @@
               "ip"           : "bilans-ges.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "158"
+              "finding"      : "156"
           }
 ]

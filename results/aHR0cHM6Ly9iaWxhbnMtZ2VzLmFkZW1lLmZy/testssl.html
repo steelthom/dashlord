@@ -19,11 +19,11 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on runnervmf4ws1:/home/testssl/bin/openssl.Linux.x86_64
+  on runnervmwhb2z:/home/testssl/bin/openssl.Linux.x86_64
 
 <span style="font-weight:bold;">Testing all IP addresses (port 443): </span>104.18.0.202 104.18.1.202
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-09-24 04:46:45        --&gt;&gt; 104.18.0.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-10-12 03:06:14        --&gt;&gt; 104.18.0.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
 
  Further IP addresses:   104.18.1.202 
  rDNS (104.18.0.202):    --
@@ -126,7 +126,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;renegotiation info/#65281&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: yes
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -144,7 +144,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
   <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
   <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
   <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">68 &gt;= 60 days</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:38)
+  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (50)</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:38)
   <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
   <span style="font-weight:bold;"> Certificate Revocation List  </span>http://c.pki.goog/wr1/4428C414444.crl
   <span style="font-weight:bold;"> OCSP URI                     </span>http://o.pki.goog/s/wr1/q2Q
@@ -171,7 +171,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
   <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
   <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
   <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">68 &gt;= 60 days</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:40)
+  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (50)</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:40)
   <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
   <span style="font-weight:bold;"> Certificate Revocation List  </span>http://c.pki.goog/we1/jJf4fCj886Y.crl
   <span style="font-weight:bold;"> OCSP URI                     </span>http://o.pki.goog/s/we1/e8I
@@ -188,25 +188,18 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
+<span style="font-weight:bold;"> HTTP Status Code           </span>  403 Forbidden
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=74HXF_ep6ARjPJP0.4wtXxS0C3fpwFQ5TCSL3hnRZO8-1758689244-1.0.1.1-QuClguUWW7TP_hrg1T0a7WDKygIJr92dnRH1ze7IGlv9DbQwFWXg9ohgaPS3Nl9O33wBaZQoqdXznYD4SLupYoM1y8Iw1VG.jED02pv2KF4; path=/; expires=Wed, 24-Sep-25 05:17:24 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None</span>
-                              (check if it&apos;s your IP address or e.g. a cluster IP)
-<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#c05600;">misconfiguration: </span><i>Strict-Transport-Security</i><span style="color:#c05600;"> 2x</span> -- checking first one only
-                              <span style="color:#008817;">365 days</span>=31536000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
+<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>cloudflare&apos;
 <span style="font-weight:bold;"> Application banner           </span>--
-<span style="font-weight:bold;"> Cookie(s)                    </span>2 issued: <span style="color:#008817;">2/2</span> secure, <span style="color:#008817;">2/2</span> HttpOnly
+<span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- HTTP status 403 signals you maybe missed the web application
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Frame-Options</span>: SAMEORIGIN
-                              <span style="color:#008817;">X-Content-Type-Options</span>: nosniff
-                              <span style="color:#008817;">Content-Security-Policy</span>: default-src * data:
-                                &apos;unsafe-eval&apos; &apos;unsafe-inline&apos;
-                              X-XSS-Protection: 1; mode=block
-                              Referrer-Policy: no-referrer-when-downgrade
-                              Cache-Control: no-cache, no-store,
-                                must-revalidate
-                              Pragma: no-cache
+                              Referrer-Policy: same-origin
+                              Cache-Control: private, max-age=0, no-store,
+                                no-cache, must-revalidate, post-check=0,
+                                pre-check=0
 <span style="font-weight:bold;"> Reverse Proxy banner         </span>--
 
 
@@ -286,10 +279,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-09-24 04:48:03 [  79s] --&gt;&gt; 104.18.0.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-10-12 03:07:32 [  79s] --&gt;&gt; 104.18.0.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-09-24 04:48:03        --&gt;&gt; 104.18.1.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-10-12 03:07:32        --&gt;&gt; 104.18.1.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
 
  Further IP addresses:   104.18.0.202 
  rDNS (104.18.1.202):    --
@@ -392,7 +385,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;renegotiation info/#65281&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: yes
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -410,7 +403,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
   <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
   <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
   <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">68 &gt;= 60 days</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:38)
+  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (50)</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:38)
   <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
   <span style="font-weight:bold;"> Certificate Revocation List  </span>http://c.pki.goog/wr1/4428C414444.crl
   <span style="font-weight:bold;"> OCSP URI                     </span>http://o.pki.goog/s/wr1/q2Q
@@ -437,7 +430,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
   <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
   <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
   <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">68 &gt;= 60 days</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:40)
+  <span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (50)</span> (2025-09-02 09:40 --&gt; 2025-12-01 10:40)
   <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
   <span style="font-weight:bold;"> Certificate Revocation List  </span>http://c.pki.goog/we1/jJf4fCj886Y.crl
   <span style="font-weight:bold;"> OCSP URI                     </span>http://o.pki.goog/s/we1/e8I
@@ -454,25 +447,18 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
+<span style="font-weight:bold;"> HTTP Status Code           </span>  403 Forbidden
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=_VF_iF85YP4.6bruN7wk1K01mQnLdOKUP23xxTtxQU0-1758689323-1.0.1.1-3_gjEaN2ERtmpGLIS3yFiKik7ejMGsUMTmSWUUk_oOykVj.eYXGfyI5Lc9y66B1J5RoUV0fR4_zs8AufcIyczY5oYwNoPCQ756CVF4fol10; path=/; expires=Wed, 24-Sep-25 05:18:43 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None</span>
-                              (check if it&apos;s your IP address or e.g. a cluster IP)
-<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#c05600;">misconfiguration: </span><i>Strict-Transport-Security</i><span style="color:#c05600;"> 2x</span> -- checking first one only
-                              <span style="color:#008817;">365 days</span>=31536000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
+<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>cloudflare&apos;
 <span style="font-weight:bold;"> Application banner           </span>--
-<span style="font-weight:bold;"> Cookie(s)                    </span>2 issued: <span style="color:#008817;">2/2</span> secure, <span style="color:#008817;">2/2</span> HttpOnly
+<span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- HTTP status 403 signals you maybe missed the web application
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Frame-Options</span>: SAMEORIGIN
-                              <span style="color:#008817;">X-Content-Type-Options</span>: nosniff
-                              <span style="color:#008817;">Content-Security-Policy</span>: default-src * data:
-                                &apos;unsafe-eval&apos; &apos;unsafe-inline&apos;
-                              X-XSS-Protection: 1; mode=block
-                              Referrer-Policy: no-referrer-when-downgrade
-                              Cache-Control: no-cache, no-store,
-                                must-revalidate
-                              Pragma: no-cache
+                              Referrer-Policy: same-origin
+                              Cache-Control: private, max-age=0, no-store,
+                                no-cache, must-revalidate, post-check=0,
+                                pre-check=0
 <span style="font-weight:bold;"> Reverse Proxy banner         </span>--
 
 
@@ -552,7 +538,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-09-24 04:49:22 [ 158s] --&gt;&gt; 104.18.1.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-10-12 03:08:49 [ 156s] --&gt;&gt; 104.18.1.202:443 (bilans-ges.ademe.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
 <span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>104.18.0.202 104.18.1.202

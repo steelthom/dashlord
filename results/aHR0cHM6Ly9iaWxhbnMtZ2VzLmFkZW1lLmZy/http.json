@@ -1,93 +1,45 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "D",
     "error": null,
-    "score": 50,
-    "statusCode": 200,
+    "score": 30,
+    "statusCode": 403,
     "testsFailed": 4,
     "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Wed, 24 Sep 2025 04:44:47 GMT",
+      "date": "Sun, 12 Oct 2025 03:04:38 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "strict-transport-security": "max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains; preload",
-      "cache-control": "no-cache, no-store, must-revalidate",
-      "content-security-policy": "default-src * data: 'unsafe-eval' 'unsafe-inline'",
-      "expires": "0",
-      "last-modified": "Wed, 20 Aug 2025 07:47:28 GMT",
-      "pragma": "no-cache",
-      "referrer-policy": "no-referrer-when-downgrade",
-      "vary": "Accept-Encoding",
-      "x-content-type-options": "nosniff",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "referrer-policy": "same-origin",
       "x-frame-options": "SAMEORIGIN",
-      "x-xss-protection": "1; mode=block",
-      "set-cookie": [
-        "_395a2=969662dd1dd123d; Path=/; HttpOnly; Secure",
-        "__cf_bm=1ivt8HinID86R0hPomjla0UvMfuYeaT2nfX8M38f8q0-1758689087-1.0.1.1-TtlqT4dy54Tm_7Q2WovWhByIyuSEzdCx2bgfpfkexW9gxqhLJ_TV4JOAdIqCXvx3K3J61RhblflQ8nDjkxrhKPMOoi2HUIq4VnNY_uygijM; path=/; expires=Wed, 24-Sep-25 05:14:47 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
-      ],
-      "content-language": "fr",
-      "cf-cache-status": "DYNAMIC",
+      "vary": "accept-encoding",
       "server": "cloudflare",
-      "cf-ray": "983fa0e2f920f96f-SJC"
+      "cf-ray": "98d35ef76f6eee17-SJC"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "default-src": [
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "*",
-          "data:"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": false,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-secure-with-httponly-sessions",
+      "result": "cookies-not-found",
       "scoreModifier": 0,
-      "data": {
-        "_395a2": {
-          "domain": "bilans-ges.ademe.fr",
-          "httponly": true,
-          "path": "/",
-          "port": null,
-          "secure": true
-        },
-        "__cf_bm": {
-          "domain": "ademe.fr",
-          "expires": "2025-09-24T05:14:47.000Z",
-          "httponly": true,
-          "path": "/",
-          "port": null,
-          "samesite": "none",
-          "secure": true
-        }
-      },
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -99,32 +51,31 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://bilans-ges.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://bilans-ges.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://bilans-ges.ademe.fr/",
-        "https://bilans-ges.ademe.fr/"
+        "http://bilans-ges.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
-      "pass": false,
-      "result": "referrer-policy-unsafe",
-      "scoreModifier": -5,
-      "data": "no-referrer-when-downgrade",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-header-invalid",
+      "result": "hsts-not-implemented",
       "scoreModifier": -20,
-      "data": "max-age=31536000; includeSubDomains; preload, max-age=31536000; includeSubDomains; preload",
+      "data": null,
       "includeSubDomains": false,
       "maxAge": null,
       "preload": false,
@@ -132,22 +83,17 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=bilans-ges.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
