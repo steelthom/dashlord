@@ -160,13 +160,6 @@
               "finding"      : "TLSv1.2   xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH 253   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_2_xc028",
-              "ip"           : "ira-lille.gouv.fr/109.234.160.164",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc028   ECDHE-RSA-AES256-SHA384           ECDH 253   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
-          }
-,         {
               "id"           : "cipher-tls1_2_xc014",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
@@ -178,7 +171,7 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 ECDHE-RSA-AES256-SHA"
           }
 ,         {
               "id"           : "prioritize_chacha_TLSv1_2",
@@ -191,8 +184,15 @@
               "id"           : "cipher_order-tls1_3",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "ira-lille.gouv.fr/109.234.160.164",
+              "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server"
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 253   AESGCM      256      TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "cipher-tls1_3_x1303",
@@ -209,25 +209,18 @@
               "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 253   AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1302",
-              "ip"           : "ira-lille.gouv.fr/109.234.160.164",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 253   AESGCM      256      TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "cipherorder_TLSv1_3",
+              "id"           : "supportedciphers_TLSv1_3",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server"
+              "finding"      : "server -- TLS 1.3 client determined"
           }
 ,         {
               "id"           : "FS",
@@ -241,28 +234,21 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "prime256v1 secp384r1 secp521r1 X25519 X448"
-          }
-,         {
-              "id"           : "DH_groups",
-              "ip"           : "ira-lille.gouv.fr/109.234.160.164",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ffdhe2048 ffdhe3072 ffdhe4096 ffdhe6144 ffdhe8192"
+              "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA224"
+              "severity"     : "LOW",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA+SHA256 RSA-PSS-RSAE+SHA384 RSA+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA512 RSA+SHA1"
           }
 ,         {
               "id"           : "FS_TLS13_sig_algs",
@@ -276,7 +262,7 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'max fragment length/#1' 'supported_groups/#10' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -444,7 +430,7 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "80 >= 30 days"
+              "finding"      : "63 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -605,7 +591,7 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758770335"
+              "finding"      : "1760240009"
           }
 ,         {
               "id"           : "HSTS",
@@ -853,63 +839,63 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -923,14 +909,14 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_win81",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_winphone81",
@@ -958,35 +944,35 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -1000,7 +986,7 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
@@ -1014,21 +1000,21 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
@@ -1049,21 +1035,21 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1077,7 +1063,7 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1154,6 +1140,6 @@
               "ip"           : "ira-lille.gouv.fr/109.234.160.164",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "167"
+              "finding"      : "150"
           }
 ]
