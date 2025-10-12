@@ -160,13 +160,6 @@
               "finding"      : "TLSv1.2   xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH 253   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_2_xc028",
-              "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc028   ECDHE-RSA-AES256-SHA384           ECDH 253   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
-          }
-,         {
               "id"           : "cipher-tls1_2_xc014",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
@@ -178,7 +171,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 ECDHE-RSA-AES256-SHA"
           }
 ,         {
               "id"           : "prioritize_chacha_TLSv1_2",
@@ -191,8 +184,15 @@
               "id"           : "cipher_order-tls1_3",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
+              "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server"
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 253   AESGCM      256      TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "cipher-tls1_3_x1303",
@@ -209,25 +209,18 @@
               "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 253   AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1302",
-              "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 253   AESGCM      256      TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "cipherorder_TLSv1_3",
+              "id"           : "supportedciphers_TLSv1_3",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server"
+              "finding"      : "server -- TLS 1.3 client determined"
           }
 ,         {
               "id"           : "FS",
@@ -241,28 +234,21 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "prime256v1 secp384r1 secp521r1 X25519 X448"
-          }
-,         {
-              "id"           : "DH_groups",
-              "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ffdhe2048 ffdhe3072 ffdhe4096 ffdhe6144 ffdhe8192"
+              "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA224"
+              "severity"     : "LOW",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA+SHA256 RSA-PSS-RSAE+SHA384 RSA+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA512 RSA+SHA1"
           }
 ,         {
               "id"           : "FS_TLS13_sig_algs",
@@ -276,7 +262,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'max fragment length/#1' 'supported_groups/#10' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'encrypt-then-mac/#22' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -367,7 +353,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "065DCF8724148EF15DB756A528C4D88186D3"
+              "finding"      : "06BFA4C6120B0DD0DABA8A60F3BA932E72DE"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -381,21 +367,21 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2036F5774B739D3A8FCFB520D71485229A1DB67D"
+              "finding"      : "1050806BC75DB0B7AF12866503371AB276424668"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "483DAF5AD5FA596B35BF518DB5E9DC5CEFE3BFE0016B7C71C97668728FC1BB47"
+              "finding"      : "3470B99A8C53710828C82BA03143A52BD7054B998A9278585C7F725B245765A3"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFATCCA+mgAwIBAgISBl3PhyQUjvFdt1alKMTYgYbTMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTEwHhcNMjUwODA2MDk0OTE1WhcNMjUxMTA0MDk0OTE0WjAdMRswGQYDVQQDExJpcmEtYmFzdGlhLmdvdXYuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+JV8WoDBCRR3/DSHUvapXhJBFRMt0z6u26LdRD+aj8XpbJG8FH57w5pblJ0ybKw2BqHZmXEPpmDUEo8SHpk65aGbpqOrZJbGL5Bze+s5Gp/VXrFjJL3X3LaAW4CQ8UVEwhlBFZ2ABfPjXBH/wctkDwb1rfQdgPXHHnuJapAfd/OGeKaoZPcp6UfvLhwYDERZGQRwPRWSSvPgawfKSB9myYwRQeO4B1vV9yGrv5OjIYva9pZjhxPZ5r7VSQPS3TNywsesuoO8gPFFhRJcMEbLSJDd/zKWweMZuxFniQQHVXTKLFWdPYT/fzvw+vcWjk5HlRR9OoJ2BYy2hdovDx4ofAgMBAAGjggIjMIICHzAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFE2o+LKv+l3nkWPNUvwImqtZahKdMB8GA1UdIwQYMBaAFMXPRqTq9MPAemyVxC2wXpIvJuO5MDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0cDovL3IxMS5pLmxlbmNyLm9yZy8wHQYDVR0RBBYwFIISaXJhLWJhc3RpYS5nb3V2LmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMC4GA1UdHwQnMCUwI6AhoB+GHWh0dHA6Ly9yMTEuYy5sZW5jci5vcmcvODQuY3JsMIIBBQYKKwYBBAHWeQIEAgSB9gSB8wDxAHYA3dzKNJXX4RYF55Uy+sef+D0cUN/bADoUEnYKLKy7yCoAAAGYfv6BvgAABAMARzBFAiBPhxhijNwWhoG4vNeRTZgp0bl+ku4ZEALApTWE78ya5gIhAP1S54Zp2UXI5tVYliUR8HsD+c0dLgzuRA1V8IBb2zkHAHcAzPsPaoVxCWX+lZtTzumyfCLphVwNl422qX5UwP5MDbAAAAGYfv6JUgAABAMASDBGAiEAhR2NtOYc2hLy0RNA9ff0HAJSyEalFasZCzcouea8HAYCIQC9DmD/NQzbazmh6Mf0KBitLE2DLmIc2GAmmfrwbXTfdzANBgkqhkiG9w0BAQsFAAOCAQEAdzNqyliVZ0yblillsvlw11uMjmRvGz6+XBaasYMubsWw/M2V0IHPmgssQaQ6MVR++Gm95oz7ano55T8CNr8BReHNUDGOd9PM3mNsDYO/0kAYndkD45nj8hZ6MCEkAlO0lEG/HXgPFQz4XY9Svv/odQyGQ3ElshjgOISdFy7m2FfpCE5RCn2r0MJWFfQ4kQAzSM9TS6WiNa0H8Pkxw6JU2S83SlvHROGtnJoRodBpqHwQigQJedabLASpnUbS2oQIRrf3bk2mwrgIg0sdQX2g2b22ytrq/Tm0Es2+TlzIRlFt181c1MVz/sRdCcb1K781m/mSV++NF44P7m/NVRQrVQ==\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFADCCA+igAwIBAgISBr+kxhILDdDauopg87qTLnLeMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTIwHhcNMjUxMDAzMDkxMDI0WhcNMjYwMTAxMDkxMDIzWjAdMRswGQYDVQQDExJpcmEtYmFzdGlhLmdvdXYuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+JV8WoDBCRR3/DSHUvapXhJBFRMt0z6u26LdRD+aj8XpbJG8FH57w5pblJ0ybKw2BqHZmXEPpmDUEo8SHpk65aGbpqOrZJbGL5Bze+s5Gp/VXrFjJL3X3LaAW4CQ8UVEwhlBFZ2ABfPjXBH/wctkDwb1rfQdgPXHHnuJapAfd/OGeKaoZPcp6UfvLhwYDERZGQRwPRWSSvPgawfKSB9myYwRQeO4B1vV9yGrv5OjIYva9pZjhxPZ5r7VSQPS3TNywsesuoO8gPFFhRJcMEbLSJDd/zKWweMZuxFniQQHVXTKLFWdPYT/fzvw+vcWjk5HlRR9OoJ2BYy2hdovDx4ofAgMBAAGjggIiMIICHjAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFE2o+LKv+l3nkWPNUvwImqtZahKdMB8GA1UdIwQYMBaAFAC1KfItjm8x6JtMrXg++tzpDNHSMDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0cDovL3IxMi5pLmxlbmNyLm9yZy8wHQYDVR0RBBYwFIISaXJhLWJhc3RpYS5nb3V2LmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMC4GA1UdHwQnMCUwI6AhoB+GHWh0dHA6Ly9yMTIuYy5sZW5jci5vcmcvOTUuY3JsMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHUApELFBklgYVSPD9TqnPt6LSZFTYepfy/fRVn2J086hFQAAAGZqYvHwAAABAMARjBEAiAgZ/J5R1JhrEAomPEwnBmoqm0L/M+F8muC+fppfgCUxwIgPuQPO3p1cEUpOv7vBubLBWVXAIr3bmcFMkzsxETqQokAdwAOV5S8866pPjMbLJkHs/eQ35vCPXEyJd0hqSWsYcVOIQAAAZmpi8fHAAAEAwBIMEYCIQCxMwxDJzwqiiNcbeqitpe/I2FOuuCG/CiQ9sbLYB/frwIhAJ5VUExajLRkgQrq6a9t9jszCFSe22S/9AQPUuaKwvvHMA0GCSqGSIb3DQEBCwUAA4IBAQAZwEXY2NPl7ZjOl/SbRLcbKp6wrJqmGo1moAKLGPYwoZiFvD3DTnMOTqz6p6yynxf1ezCsKjM/EbbB0IC9OIGh5XU23dH5S1tvcPHkjYduTv9XPd/J/EJfFwTHAY1FkVWF9+8H+Fa1PvyhOqqEmevtN8//ecTfw8TwXb1EVEQnyMeuDOIWBmL2yOhfMy7i/7cYN4ZosLG5FIjlhx491ki9mRphgdw/kisgDicTVLGkIISz7LiX+bQlLADZhUn7OF8ahGhIIygLSs78PXHL43kiVWKy+7mRuizLkjyYX01Ut3UFk7Sl89dxuNZU07YPpi4ZppYh86PRvkHeNDuv8dw+\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -444,21 +430,21 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "40 >= 30 days"
+              "finding"      : "81 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-08-06 09:49"
+              "finding"      : "2025-10-03 09:10"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-11-04 09:49"
+              "finding"      : "2026-01-01 09:10"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -479,7 +465,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://r11.c.lencr.org/84.crl"
+              "finding"      : "http://r12.c.lencr.org/95.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
@@ -535,21 +521,21 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R11 (Let's Encrypt from US)"
+              "finding"      : "R12 (Let's Encrypt from US)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBjCCAu6gAwIBAgIRAIp9PhPWLzDvI4a9KQdrNPgwDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAzMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDEMMAoGA1UEAxMDUjExMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuoe8XBsAOcvKCs3UZxD5ATylTqVhyybKUvsVAbe5KPUoHu0nsyQYOWcJDAjs4DqwO3cOvfPlOVRBDE6uQdaZdN5R2+97/1i9qLcT9t4x1fJyyXJqC4N0lZxGAGQUmfOx2SLZzaiSqhwmej/+71gFewiVgdtxD4774zEJuwm+UE1fj5F2PVqdnoPy6cRms+EGZkNIGIBloDcYmpuEMpexsr3E+BUAnSeI++JjF5ZsmydnS8TbKF5pwnnwSVzgJFDhxLyhBax7QG0AtMJBP6dYuC/FXJuluwme8f7rsIU5/agK70XEeOtlKsLPXzze41xNG/cLJyuqC0J3U095ah2H2QIDAQABo4H4MIH1MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUxc9GpOr0w8B6bJXELbBeki8m47kwHwYDVR0jBBgwFoAUebRZ5nu25eQBc4AIiMgaWPbpm24wMgYIKwYBBQUHAQEEJjAkMCIGCCsGAQUFBzAChhZodHRwOi8veDEuaS5sZW5jci5vcmcvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMCcGA1UdHwQgMB4wHKAaoBiGFmh0dHA6Ly94MS5jLmxlbmNyLm9yZy8wDQYJKoZIhvcNAQELBQADggIBAE7iiV0KAxyQOND1H/lxXPjDj7I3iHpvsCUf7b632IYGjukJhM1yv4Hz/MrPU0jtvfZpQtSlET41yBOykh0FX+ou1Nj4ScOt9ZmWnO8m2OG0JAtIIE3801S0qcYhyOE2G/93ZCkXufBL713qzXnQv5C/viOykNpKqUgxdKlEC+Hi9i2DcaR1e9KUwQUZRhy5j/PEdEglKg3l9dtD4tuTm7kZtB8v32oOjzHTYw+7KdzdZiw/sBtnUfhBPORNuay4pJxmY/WrhSMdzFO2q3Gu3MUBcdo27goYKjL9CTF8j/Zz55yctUoVaneCWs/ajUX+HypkBTA+c8LGDLnWO2NKq0YD/pnARkAnYGPfUDoHR9gVSp/qRx+ZWghiDLZsMwhN1zjtSC0uBWiugF3vTNzYIEFfaPG7Ws3jDrAMMYebQ95JQ+HIBD/RPBuHRTBpqKlyDnkSHDHYPiNX3adPoPAcgdF3H2/W0rmoswMWgTlLn1Wu0mrks7/qpdWfS6PJ1jty80r2VKsM/Dj3YIDfbjXKdaFU5C+8bhfJGqU3taKauuz0wHVGT3eo6FlWkWYtbt4pgdamlwVeZEW+LM7qZEJEsMNPrfC03APKmZsJgpWCDWOKZvkZcvjVuYkQ4omYCTX5ohy+knMjdOmdH9c7SpqEWBDC86fiNex+O0XOMEZSa8DA\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBjCCAu6gAwIBAgIRAMISMktwqbSRcdxA9+KFJjwwDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAzMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDEMMAoGA1UEAxMDUjEyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2pgodK2+lP474B7i5Ut1qywSf+2nAzJ+Npfs6DGPpRONC5kuHs0BUT1M5ShuCVUxqqUiXXL0LQfCTUA83wEjuXg39RplMjTmhnGdBO+ECFu9AhqZ66YBAJpzkG2Pogeg0JfT2kVhgTU9FPnEwF9q3AuWGrCf4yrqvSrWmMebcas7dA8827JgvlpLThjp2ypzXIlhZZ7+7Tymy05v5J75AEaz/xlNKmOzjmbGGIVwx1Blbzt05UiDDwhYXS0jnV6j/ujbAKHS9OMZTfLuevYnnuXNnC2i8n+cF63vEzc50bTILEHWhsDp7CH4WRt/uTp8n1wBnWIEwii9Cq08yhDsGwIDAQABo4H4MIH1MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUALUp8i2ObzHom0yteD763OkM0dIwHwYDVR0jBBgwFoAUebRZ5nu25eQBc4AIiMgaWPbpm24wMgYIKwYBBQUHAQEEJjAkMCIGCCsGAQUFBzAChhZodHRwOi8veDEuaS5sZW5jci5vcmcvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMCcGA1UdHwQgMB4wHKAaoBiGFmh0dHA6Ly94MS5jLmxlbmNyLm9yZy8wDQYJKoZIhvcNAQELBQADggIBAI910AnPanZIZTKS3rVEyIV29BWEjAK/duuz8eL5boSoVpHhkkv34eoAeEiPdZLj5EZ7G2ArIK+gzhTlRQ1q4FKGpPPaFBSpqV/xbUb5UlAXQOnkHn3mFVj+qYv87/WeY+Bm4sN3Ox8BhyaU7UAQ3LeZ7N1X01xxQe4wIAAE3JVLUCiHmZL+qoCUtgYIFPgcg350QMUIWgxPXNGEncT921ne7nluI02V8pLUmClqXOsCwULw+PVOZCB7qOMxxMBoCUeL2Ll4oMpOSr5pJCpLN3tRA2s6P1KLs9TSrVhOk+7LX28NMUlIusQ/nxLJID0RhAeFtPjyOCOscQBA53+NRjSCak7P4A5jX7ppmkcJECL+S0i3kXVUy5Me5BbrU8973jZNv/ax6+ZK6TM8jWmimL6of6OrX7ZU6E2WqazzsFrLG3o2kySbzlhSgJ81Cl4tv3SbYiYXnJExKQvzf83DYotox3f0fwv7xln1A2ZLplCb0O+l/AK0YE0DS2FPxSAHi0iwMfW2nNHJrXcY3LLHD77gRgje4Eveubi2xxa+Nmk/hmhLdIETiVDFanoCrMVIpQ59XWHkzdFmoHXHBV7oibVjGSO7ULSQ7MJ1Nz51phuDJSgAIU7A0zrLnOrAj/dfrlEWRhCvAgbuwLZX1A2sjNjXoPOHbsPiy+lO1KF8/XY7\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "591E9CE6C863D3A079E9FABE1478C7339A26B21269DDE795211361024AE31A44"
+              "finding"      : "131FCE7784016899A5A00203A9EFC80F18EBBD75580717EDC1553580930836EC"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
@@ -577,7 +563,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R11 <-- ISRG Root X1"
+              "finding"      : "R12 <-- ISRG Root X1"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -605,7 +591,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758771012"
+              "finding"      : "1760241539"
           }
 ,         {
               "id"           : "HSTS",
@@ -778,7 +764,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=483DAF5AD5FA596B35BF518DB5E9DC5CEFE3BFE0016B7C71C97668728FC1BB47"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=3470B99A8C53710828C82BA03143A52BD7054B998A9278585C7F725B245765A3"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -853,63 +839,63 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -923,14 +909,14 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_win81",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_winphone81",
@@ -958,35 +944,35 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -1000,7 +986,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
@@ -1014,21 +1000,21 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
@@ -1049,21 +1035,21 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1077,7 +1063,7 @@
               "ip"           : "ira-bastia.gouv.fr/109.234.160.111",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
