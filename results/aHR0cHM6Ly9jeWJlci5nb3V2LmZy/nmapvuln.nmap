@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Wed Sep 24 04:40:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cyber.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct 12 03:09:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cyber.gouv.fr
 Nmap scan report for cyber.gouv.fr (185.231.164.136)
-Host is up (0.093s latency).
+Host is up (0.14s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Wed, 24 Sep 2025 04:40:53 GMT
+|     Date: Sun, 12 Oct 2025 03:09:54 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -21,7 +21,7 @@ PORT    STATE SERVICE   VERSION
 |     </html>
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Wed, 24 Sep 2025 04:40:53 GMT
+|     Date: Sun, 12 Oct 2025 03:09:53 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -33,9 +33,22 @@ PORT    STATE SERVICE   VERSION
 |     <hr><center>openresty</center>
 |     </body>
 |     </html>
-|   RTSPRequest, X11Probe: 
+|   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 24 Sep 2025 04:40:53 GMT
+|     Date: Sun, 12 Oct 2025 03:09:53 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sun, 12 Oct 2025 03:09:54 GMT
 |     Content-Type: text/html
 |     Content-Length: 154
 |     Connection: close
@@ -50,9 +63,9 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Wed, 24 Sep 2025 04:41:00 GMT
+|     Date: Sun, 12 Oct 2025 03:10:01 GMT
 |     Content-Type: text/html
-|     Content-Length: 4003
+|     Content-Length: 3982
 |     Connection: close
 |     Referrer-Policy: no-referrer
 |     Cache-Control: no-cache
@@ -60,12 +73,12 @@ PORT    STATE SERVICE   VERSION
 |     X-Frame-Options: DENY
 |     X-Content-Type-Options: nosniff
 |     X-XSS-Protection: 1; mode=block
-|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"domain":".ssi.gouv.fr","cookie":{"value":"Pp9XJJLdUZlSju64eqL7TqMBjljbq37EdNsTbSMZyX982kIrEHCqN2mZanAJNPx10hGsvHAnE4Afi-edCryDsDxJB4oxTtvdgJmHSNufZqfw5BffnqYSx9sXujVdsQ1TZNiIfFfM31pcs4R3Y_lbTwS7Ao355X7rwIsmdvUWcd4","maxAge":900,"name":"bln_challengejs","secure":true,"sameSite":"None","path":"/"},"unregisterServiceWorker":false,"checkChallengeParams":{"tracking_id":"","request_fate":"challengejs","rule_id":"","bot_category":"unknown"}};(()=>{"use s
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"checkChallengeParams":{"request_fate":"challengejs","rule_id":"","bot_category":"unknown","tracking_id":""},"cookie":{"secure":true,"name":"bln_challengejs","maxAge":900,"value":"Pp9XJJLdUZlSju64eqL7TssxNz9RgJpqkQnrwyiHhn87Wi394x2S0v2JODBAX9WhmtprSAVqSTzE7-8GoqAwN4-nWUTo1Lvq8t3DGlMV3r9dxo3Q2lL_vQibyDbxqcLBSvZr-lIMMbzvIg2hoigv6A","path":"/","sameSite":"None"},"unregisterServiceWorker":false,"domain":".ssi.gouv.fr"};(()=>{"use strict";const e=functi
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Wed, 24 Sep 2025 04:40:59 GMT
+|     Date: Sun, 12 Oct 2025 03:09:59 GMT
 |     Content-Type: text/html
-|     Content-Length: 4003
+|     Content-Length: 3982
 |     Connection: close
 |     Referrer-Policy: no-referrer
 |     Cache-Control: no-cache
@@ -73,15 +86,15 @@ PORT    STATE SERVICE   VERSION
 |     X-Frame-Options: DENY
 |     X-Content-Type-Options: nosniff
 |     X-XSS-Protection: 1; mode=block
-|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"checkChallengeParams":{"tracking_id":"","rule_id":"","bot_category":"unknown","request_fate":"challengejs"},"cookie":{"maxAge":900,"sameSite":"None","value":"Pp9XJJLdUZlSju64eqL7TtxCUgY8h1Ob49vdgiR29AAPy49SJV6gg3FN_iyc11VQzBMO-1BwJAdhe98CTyGr9hrkx1CVEEH5fBn5LPIUJPwsJGonHLXNSMkx80rVber_tq2PSQ1Dd8jvY5KGnZjzppJSCWIzpQ2FiPkGgxtsaxI","path":"/","name":"bln_challengejs","secure":true},"domain":".ssi.gouv.fr"};(()=>{"use s
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"checkChallengeParams":{"tracking_id":"","bot_category":"unknown","rule_id":"","request_fate":"challengejs"},"domain":".ssi.gouv.fr","cookie":{"secure":true,"sameSite":"None","value":"i51GzSDNLssK_5wYdDbd3RJjmpq0AReI3DLp1yuFKuTS3wMLzinT_vxnkPRt72ZHgLStPY7moGW9AnLSsF-r1psA6eCaWc9ydd0hoO8VcNo37QOFVtpSWGXYjk5Bykmy4Xcqlc8zzemWapG6mLpbfw","name":"bln_challengejs","maxAge":900,"path":"/"}};(()=>{"use strict";const e=functi
 |   HTTPOptions: 
 |     HTTP/1.1 500 Proxy Error
-|     Date: Wed, 24 Sep 2025 04:40:59 GMT
+|     Date: Sun, 12 Oct 2025 03:10:00 GMT
 |     Content-Type: text/html; charset=iso-8859-1
 |     Content-Length: 273
 |     Connection: close
-|     X-Varnish: 6337724
-|     X-Varnish: 7905616
+|     X-Varnish: 10196369
+|     X-Varnish: 2513589
 |     Age: 0
 |     Strict-Transport-Security: max-age=63072000
 |     X-Frame-Options: DENY
@@ -97,82 +110,82 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/24%Time=68D37655%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,14E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20W
-SF:ed,\x2024\x20Sep\x202025\x2004:40:53\x20GMT\r\nContent-Type:\x20text/ht
-SF:ml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20ht
-SF:tps://ssi\.gouv\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Perm
-SF:anently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permane
-SF:ntly</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</ht
-SF:ml>\r\n")%r(HTTPOptions,14E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r
-SF:\nDate:\x20Wed,\x2024\x20Sep\x202025\x2004:40:53\x20GMT\r\nContent-Type
-SF::\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLoc
-SF:ation:\x20https://ssi\.gouv\.fr/\r\n\r\n<html>\r\n<head><title>301\x20M
-SF:oved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Move
-SF:d\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n</b
-SF:ody>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20Req
-SF:uest\r\nDate:\x20Wed,\x2024\x20Sep\x202025\x2004:40:53\x20GMT\r\nConten
-SF:t-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20close\
-SF:r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<
-SF:body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center
-SF:>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP/1\
-SF:.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2024\x20Sep\x202025\x2004
-SF::40:53\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154\r
-SF:\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Requ
-SF:est</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1><
-SF:/center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%
-SF:r(FourOhFourRequest,171,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDa
-SF:te:\x20Wed,\x2024\x20Sep\x202025\x2004:40:53\x20GMT\r\nContent-Type:\x2
-SF:0text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocatio
-SF:n:\x20https://ssi\.gouv\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\
-SF:n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<
-SF:body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><
-SF:center>openresty</center>\r\n</body>\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=10/12%Time=68EB1C01%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,14E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Sun,\x2012\x20Oct\x202025\x2003:09:53\x20GMT\r\nContent-Type:\x20text/h
+SF:tml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20h
+SF:ttps://ssi\.gouv\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Per
+SF:manently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Perman
+SF:ently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</h
+SF:tml>\r\n")%r(HTTPOptions,14E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\
+SF:r\nDate:\x20Sun,\x2012\x20Oct\x202025\x2003:09:53\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLo
+SF:cation:\x20https://ssi\.gouv\.fr/\r\n\r\n<html>\r\n<head><title>301\x20
+SF:Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Mov
+SF:ed\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n</
+SF:body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20Re
+SF:quest\r\nDate:\x20Sun,\x2012\x20Oct\x202025\x2003:09:53\x20GMT\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20close
+SF:\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n
+SF:<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cente
+SF:r>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2012\x20Oct\x202025\x200
+SF:3:09:54\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154\
+SF:r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Req
+SF:uest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1>
+SF:</center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")
+SF:%r(FourOhFourRequest,171,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nD
+SF:ate:\x20Sun,\x2012\x20Oct\x202025\x2003:09:54\x20GMT\r\nContent-Type:\x
+SF:20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocati
+SF:on:\x20https://ssi\.gouv\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r
+SF:\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n
+SF:<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr>
+SF:<center>openresty</center>\r\n</body>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/24%Time=68D3765B%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,10DA,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2024\
-SF:x20Sep\x202025\x2004:40:59\x20GMT\r\nContent-Type:\x20text/html\r\nCont
-SF:ent-Length:\x204003\r\nConnection:\x20close\r\nReferrer-Policy:\x20no-r
-SF:eferrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Security:\x20
-SF:max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-Options:
-SF:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!doctypeht
-SF:ml><meta\x20name=\"viewport\"content=\"width=device-width\"><meta\x20ch
-SF:arset=\"utf-8\"><script></script><script>var\x20__blnChallengeStore={\"
-SF:unregisterServiceWorker\":false,\"checkChallengeParams\":{\"tracking_id
-SF:\":\"\",\"rule_id\":\"\",\"bot_category\":\"unknown\",\"request_fate\":
-SF:\"challengejs\"},\"cookie\":{\"maxAge\":900,\"sameSite\":\"None\",\"val
-SF:ue\":\"Pp9XJJLdUZlSju64eqL7TtxCUgY8h1Ob49vdgiR29AAPy49SJV6gg3FN_iyc11VQ
-SF:zBMO-1BwJAdhe98CTyGr9hrkx1CVEEH5fBn5LPIUJPwsJGonHLXNSMkx80rVber_tq2PSQ1
-SF:Dd8jvY5KGnZjzppJSCWIzpQ2FiPkGgxtsaxI\",\"path\":\"\\/\",\"name\":\"bln_
-SF:challengejs\",\"secure\":true},\"domain\":\"\.ssi\.gouv\.fr\"};\(\(\)=>
-SF:{\"use\x20s")%r(HTTPOptions,288,"HTTP/1\.1\x20500\x20Proxy\x20Error\r\n
-SF:Date:\x20Wed,\x2024\x20Sep\x202025\x2004:40:59\x20GMT\r\nContent-Type:\
-SF:x20text/html;\x20charset=iso-8859-1\r\nContent-Length:\x20273\r\nConnec
-SF:tion:\x20close\r\nX-Varnish:\x206337724\r\nX-Varnish:\x207905616\r\nAge
-SF::\x200\r\nStrict-Transport-Security:\x20max-age=63072000\r\nX-Frame-Opt
-SF:ions:\x20DENY\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:
-SF:\x20origin-when-cross-origin\r\nX-XSS-Protection:\x201;\x20mode=block\r
-SF:\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN
-SF:\">\n<html><head>\n<title>500\x20Proxy\x20Error</title>\n</head><body>\
-SF:n<h1>Proxy\x20Error</h1>\nThe\x20proxy\x20server\x20could\x20not\x20han
-SF:dle\x20the\x20request<p>Reason:\x20<strong>Error\x20during\x20SSL\x20Ha
-SF:ndshake\x20with\x20remote\x20server</strong></p><p\x20/>\n</body></html
-SF:>\n")%r(FourOhFourRequest,1068,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,
-SF:\x2024\x20Sep\x202025\x2004:41:00\x20GMT\r\nContent-Type:\x20text/html\
-SF:r\nContent-Length:\x204003\r\nConnection:\x20close\r\nReferrer-Policy:\
-SF:x20no-referrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Securi
-SF:ty:\x20max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-O
-SF:ptions:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!do
-SF:ctypehtml><meta\x20name=\"viewport\"content=\"width=device-width\"><met
-SF:a\x20charset=\"utf-8\"><script></script><script>var\x20__blnChallengeSt
-SF:ore={\"domain\":\"\.ssi\.gouv\.fr\",\"cookie\":{\"value\":\"Pp9XJJLdUZl
-SF:Sju64eqL7TqMBjljbq37EdNsTbSMZyX982kIrEHCqN2mZanAJNPx10hGsvHAnE4Afi-edCr
-SF:yDsDxJB4oxTtvdgJmHSNufZqfw5BffnqYSx9sXujVdsQ1TZNiIfFfM31pcs4R3Y_lbTwS7A
-SF:o355X7rwIsmdvUWcd4\",\"maxAge\":900,\"name\":\"bln_challengejs\",\"secu
-SF:re\":true,\"sameSite\":\"None\",\"path\":\"\\/\"},\"unregisterServiceWo
-SF:rker\":false,\"checkChallengeParams\":{\"tracking_id\":\"\",\"request_f
-SF:ate\":\"challengejs\",\"rule_id\":\"\",\"bot_category\":\"unknown\"}};\
-SF:(\(\)=>{\"use\x20s");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/12%Time=68EB1C07%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,10C5,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2012
+SF:\x20Oct\x202025\x2003:09:59\x20GMT\r\nContent-Type:\x20text/html\r\nCon
+SF:tent-Length:\x203982\r\nConnection:\x20close\r\nReferrer-Policy:\x20no-
+SF:referrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Security:\x2
+SF:0max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-Options
+SF::\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!doctypeh
+SF:tml><meta\x20name=\"viewport\"content=\"width=device-width\"><meta\x20c
+SF:harset=\"utf-8\"><script></script><script>var\x20__blnChallengeStore={\
+SF:"unregisterServiceWorker\":false,\"checkChallengeParams\":{\"tracking_i
+SF:d\":\"\",\"bot_category\":\"unknown\",\"rule_id\":\"\",\"request_fate\"
+SF::\"challengejs\"},\"domain\":\"\.ssi\.gouv\.fr\",\"cookie\":{\"secure\"
+SF::true,\"sameSite\":\"None\",\"value\":\"i51GzSDNLssK_5wYdDbd3RJjmpq0ARe
+SF:I3DLp1yuFKuTS3wMLzinT_vxnkPRt72ZHgLStPY7moGW9AnLSsF-r1psA6eCaWc9ydd0hoO
+SF:8VcNo37QOFVtpSWGXYjk5Bykmy4Xcqlc8zzemWapG6mLpbfw\",\"name\":\"bln_chall
+SF:engejs\",\"maxAge\":900,\"path\":\"\\/\"}};\(\(\)=>{\"use\x20strict\";c
+SF:onst\x20e=functi")%r(HTTPOptions,289,"HTTP/1\.1\x20500\x20Proxy\x20Erro
+SF:r\r\nDate:\x20Sun,\x2012\x20Oct\x202025\x2003:10:00\x20GMT\r\nContent-T
+SF:ype:\x20text/html;\x20charset=iso-8859-1\r\nContent-Length:\x20273\r\nC
+SF:onnection:\x20close\r\nX-Varnish:\x2010196369\r\nX-Varnish:\x202513589\
+SF:r\nAge:\x200\r\nStrict-Transport-Security:\x20max-age=63072000\r\nX-Fra
+SF:me-Options:\x20DENY\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-P
+SF:olicy:\x20origin-when-cross-origin\r\nX-XSS-Protection:\x201;\x20mode=b
+SF:lock\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\
+SF:.0//EN\">\n<html><head>\n<title>500\x20Proxy\x20Error</title>\n</head><
+SF:body>\n<h1>Proxy\x20Error</h1>\nThe\x20proxy\x20server\x20could\x20not\
+SF:x20handle\x20the\x20request<p>Reason:\x20<strong>Error\x20during\x20SSL
+SF:\x20Handshake\x20with\x20remote\x20server</strong></p><p\x20/>\n</body>
+SF:</html>\n")%r(FourOhFourRequest,10C5,"HTTP/1\.1\x20200\x20OK\r\nDate:\x
+SF:20Sun,\x2012\x20Oct\x202025\x2003:10:01\x20GMT\r\nContent-Type:\x20text
+SF:/html\r\nContent-Length:\x203982\r\nConnection:\x20close\r\nReferrer-Po
+SF:licy:\x20no-referrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-
+SF:Security:\x20max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-
+SF:Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r
+SF:\n<!doctypehtml><meta\x20name=\"viewport\"content=\"width=device-width\
+SF:"><meta\x20charset=\"utf-8\"><script></script><script>var\x20__blnChall
+SF:engeStore={\"checkChallengeParams\":{\"request_fate\":\"challengejs\",\
+SF:"rule_id\":\"\",\"bot_category\":\"unknown\",\"tracking_id\":\"\"},\"co
+SF:okie\":{\"secure\":true,\"name\":\"bln_challengejs\",\"maxAge\":900,\"v
+SF:alue\":\"Pp9XJJLdUZlSju64eqL7TssxNz9RgJpqkQnrwyiHhn87Wi394x2S0v2JODBAX9
+SF:WhmtprSAVqSTzE7-8GoqAwN4-nWUTo1Lvq8t3DGlMV3r9dxo3Q2lL_vQibyDbxqcLBSvZr-
+SF:lIMMbzvIg2hoigv6A\",\"path\":\"\\/\",\"sameSite\":\"None\"},\"unregiste
+SF:rServiceWorker\":false,\"domain\":\"\.ssi\.gouv\.fr\"};\(\(\)=>{\"use\x
+SF:20strict\";const\x20e=functi");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Sep 24 04:41:16 2025 -- 1 IP address (1 host up) scanned in 37.79 seconds
+# Nmap done at Sun Oct 12 03:10:23 2025 -- 1 IP address (1 host up) scanned in 46.68 seconds
