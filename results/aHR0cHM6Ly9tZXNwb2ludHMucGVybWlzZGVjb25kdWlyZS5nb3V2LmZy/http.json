@@ -1,28 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "C-",
     "error": null,
-    "score": 50,
+    "score": 45,
     "statusCode": 403,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 25 Sep 2025 02:58:35 GMT",
-      "content-type": "text/html; charset=UTF-8",
+      "date": "Sun, 12 Oct 2025 03:49:50 GMT",
+      "content-type": "text/html",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "x-frame-options": "SAMEORIGIN",
-      "referrer-policy": "same-origin",
-      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
-      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
-      "set-cookie": [
-        "__cf_bm=bWDckyQX7IQ4UVTwnlJWWL41lRt0HxlqWj6jC5F0ZAU-1758769115-1.0.1.1-BATtGpM.n.LJnZYKLqjC.alDXooGXl.uKRfnL89m9litFbNUkj5bmhrDDZo67BBP15MIWoYtupE7lqluvX0e.aSz8lbblua7NAl9oJIflFo; path=/; expires=Thu, 25-Sep-25 03:28:35 GMT; domain=.mespoints.permisdeconduire.gouv.fr; HttpOnly; Secure; SameSite=None"
-      ],
-      "vary": "Accept-Encoding",
+      "cf-ray": "98d3a12bdf749c24-IAD",
+      "cf-cache-status": "DYNAMIC",
       "server": "cloudflare",
-      "cf-ray": "984742bcce790fd3-LAX"
+      "strict-transport-security": "max-age=31536000",
+      "vary": "accept-encoding",
+      "set-cookie": [
+        "bZA_=v1jdHOgw__YaS; Path=/; Expires=Sun, 12 Oct 2025 05:49:50 GMT",
+        "__cfwaitingroom_mes_points_permis=Chh0UkZMempSV29jTm9KRUNEMnJ1YnhBPT0SkAJXNDc2ZkZhaDVPc0NHeVhyMzc3U3V6S1U2bXg5cXllUHJ3bUxzTlFLelJKajExMzhLcXQ1V2E1aWJQYlhXSTd1L1UvR01zN3ZDNk5VdDNjNEZnTkU5SkYrZVIyTmJHb0ZtRVUvY20xTkZlYW95cVFacm5Nd3RJZHlTWHJuRDFRc0x3RVFZMUIzNlVwT0lkbjlBQjBHMC96emtHdjNSSHA5ajFvcWE3b2dmMmZ0a0RPSDFHQTB6ZUIwMnJqazVPK3lMN0JoM1puaHphUjlLUkxpc3Y0T0JDQ2ZMMzhoczYwQWdoVUI3K3UvMGdJMnNZeW1JeGdUZUtTbzhZUTlZandlK1c4aUVJNHI1cysvTFd5VA%3D%3D; HttpOnly; SameSite=None; Partitioned; Secure; Path=/; Domain=mespoints.permisdeconduire.gouv.fr; Expires=Sun, 12 Oct 2025 03:56:50 GMT",
+        "_cfuvid=jDKQ2wYGMx6DJ3NoNdzLlhSE4A7H3XiGu5JdZvJ8z4A-1760240990.056538-1.0.1.1-HzcO_p8CvJX0piD2nwGBjZnjhEEI9MlTbso9pfDdNU8; HttpOnly; SameSite=None; Secure; Path=/; Domain=mespoints.permisdeconduire.gouv.fr"
+      ]
     }
   },
   "tests": {
@@ -39,13 +39,27 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
-        "__cf_bm": {
+        "bZA_": {
           "domain": "mespoints.permisdeconduire.gouv.fr",
-          "expires": "2025-09-25T03:28:35.000Z",
+          "expires": "2025-10-12T05:49:50.000Z",
+          "path": "/",
+          "port": null
+        },
+        "__cfwaitingroom_mes_points_permis": {
+          "domain": "mespoints.permisdeconduire.gouv.fr",
+          "expires": "2025-10-12T03:56:50.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "_cfuvid": {
+          "domain": "mespoints.permisdeconduire.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -53,7 +67,7 @@
           "secure": true
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -78,27 +92,27 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "same-origin",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
       "includeSubDomains": false,
-      "maxAge": null,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "result": "sri-not-implemented-but-no-scripts-loaded",
       "scoreModifier": 0,
       "data": {}
     },
@@ -111,10 +125,10 @@
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
