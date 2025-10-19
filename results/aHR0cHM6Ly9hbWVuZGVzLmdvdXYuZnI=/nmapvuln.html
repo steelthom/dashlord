@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln amendes.gouv.fr</pre>
-<p class="lead">Thu Sep 25 03:53:11 2025 – Thu Sep 25 03:53:47 2025<br>1 hosts scanned.
+<p class="lead">Sun Oct 19 03:31:29 2025 – Sun Oct 19 03:32:12 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>185.8.53.118</td>
 <td>amendes.gouv.fr</td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -108,18 +108,86 @@
 </tr></thead>
 <tbody>
 <tr class="success">
-<td title="Port">443</td>
+<td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
+<td title="Service">http</td>
 <td title="Product"></td>
 <td title="Version"></td>
-<td title="Extra Info">bad gateway</td>
+<td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest, HTTPOptions: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
+    HTTP/1.1 400 Bad request
+    Content-length: 90
+    Cache-Control: no-cache
+    Connection: close
+    Content-Type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
+    Your browser sent an invalid request.
+    &lt;/body&gt;&lt;/html&gt;
+  FourOhFourRequest: 
+    HTTP/1.1 301 Moved Permanently
+    content-length: 0
+    location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    connection: close
+  GetRequest, HTTPOptions: 
+    HTTP/1.1 301 Moved Permanently
+    content-length: 0
+    location: https:///
+    connection: close
+  NULL: 
+    HTTP/1.1 408 Request Time-out
+    Content-length: 110
+    Cache-Control: no-cache
+    Connection: close
+    Content-Type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;408 Request Time-out&lt;/h1&gt;
+    Your browser didn't send a complete request in time.
+    &lt;/body&gt;&lt;/html&gt;</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.0 503 Service Unavailable
+    pragma: no-cache
+    cache-control: private, max-age=0, no-cache, no-store
+    content-type: text/html
+    strict-transport-security: max-age=16000000; includeSubDomains; preload;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;style type="text/css"&gt;
+    body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.66666667;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    margin: 2em 1em;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    .alert.alert-info {
+    background-color: #F0F0F0;
+    margin-top: 30px;
+    padding: 30px;
+    .alert p {
+    padding-left: 35px;
+    padding-left: 5
+  HTTPOptions: 
     HTTP/1.1 403 Forbidden
     x-frame-options: DENY
     x-xss-protection: 1; mode=block
@@ -148,16 +216,7 @@
     border:2px solid #DDDDDD;
     height: 250px;
     font-family:Tahoma;
-    color:white;
-  GetRequest: 
-    HTTP/1.1 502 Bad Gateway
-    content-length: 107
-    cache-control: no-cache
-    content-type: text/html
-    connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;
-    server returned an invalid or incomplete response.
-    &lt;/body&gt;&lt;/html&gt;</pre>
+    color:white;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -175,16 +234,28 @@
 <th>CPE</th>
 <th>Extra info</th>
 </tr></thead>
-<tbody><tr>
+<tbody>
+<tr>
+<td>185.8.53.118 - amendes.gouv.fr</td>
+<td>80</td>
+<td>tcp</td>
+<td>http</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>185.8.53.118 - amendes.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http-proxy</td>
+<td>https</td>
 <td></td>
 <td></td>
 <td></td>
-<td>bad gateway</td>
-</tr></tbody>
+<td></td>
+</tr>
+</tbody>
 </table></div>
 <script>
             $(document).ready(function() {
