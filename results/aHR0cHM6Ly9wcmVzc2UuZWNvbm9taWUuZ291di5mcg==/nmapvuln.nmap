@@ -1,12 +1,181 @@
-# Nmap 7.92 scan initiated Thu Sep 25 03:50:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln presse.economie.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct 19 03:37:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln presse.economie.gouv.fr
 Nmap scan report for presse.economie.gouv.fr (147.135.193.14)
 Host is up (0.10s latency).
 Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE  VERSION
-80/tcp  open  http     Apache httpd
-|_http-server-header: Apache
-443/tcp open  ssl/http Apache httpd
-|_http-server-header: Apache
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+|_http-server-header: <empty>
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sun, 19 Oct 2025 03:37:46 GMT
+|     Server: 
+|     Content-Length: 196
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on this server.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sun, 19 Oct 2025 03:37:40 GMT
+|     Server: 
+|     Content-Length: 196
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on this server.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Sun, 19 Oct 2025 03:37:41 GMT
+|     Server: 
+|     Content-Length: 196
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on this server.</p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sun, 19 Oct 2025 03:37:41 GMT
+|     Server: 
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+443/tcp open  ssl/https
+|_http-server-header: <empty>
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sun, 19 Oct 2025 03:37:48 GMT
+|     Server: 
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sun, 19 Oct 2025 03:37:47 GMT
+|     Server: 
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sun, 19 Oct 2025 03:37:58 GMT
+|     Server: 
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=10/19%Time=68F45D04%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,163,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sun,\x20
+SF:19\x20Oct\x202025\x2003:37:40\x20GMT\r\nServer:\x20\x20\r\nContent-Leng
+SF:th:\x20196\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x
+SF:20HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20Found</title>
+SF:\n</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20w
+SF:as\x20not\x20found\x20on\x20this\x20server\.</p>\n</body></html>\n")%r(
+SF:HTTPOptions,163,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Sun,\x201
+SF:9\x20Oct\x202025\x2003:37:41\x20GMT\r\nServer:\x20\x20\r\nContent-Lengt
+SF:h:\x20196\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x2
+SF:0HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20Found</title>\
+SF:n</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20wa
+SF:s\x20not\x20found\x20on\x20this\x20server\.</p>\n</body></html>\n")%r(R
+SF:TSPRequest,183,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x20
+SF:19\x20Oct\x202025\x2003:37:41\x20GMT\r\nServer:\x20\x20\r\nContent-Leng
+SF:th:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x
+SF:20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</titl
+SF:e>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\
+SF:x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20understand
+SF:\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,163,"HTTP/1\.
+SF:1\x20404\x20Not\x20Found\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:37
+SF::46\x20GMT\r\nServer:\x20\x20\r\nContent-Length:\x20196\r\nConnection:\
+SF:x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!
+SF:DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<ht
+SF:ml><head>\n<title>404\x20Not\x20Found</title>\n</head><body>\n<h1>Not\x
+SF:20Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\x20on\x
+SF:20this\x20server\.</p>\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/19%Time=68F45D0B%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,183,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
+SF:0Sun,\x2019\x20Oct\x202025\x2003:37:47\x20GMT\r\nServer:\x20\x20\r\nCon
+SF:tent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Requ
+SF:est</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser
+SF:\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20u
+SF:nderstand\.<br\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,183,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x20
+SF:03:37:47\x20GMT\r\nServer:\x20\x20\r\nContent-Length:\x20226\r\nConnect
+SF:ion:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\
+SF:r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">
+SF:\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h
+SF:1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20th
+SF:at\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</
+SF:body></html>\n")%r(FourOhFourRequest,183,"HTTP/1\.1\x20400\x20Bad\x20Re
+SF:quest\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:37:48\x20GMT\r\nServe
+SF:r:\x20\x20\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20
+SF:PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>4
+SF:00\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<
+SF:p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x20
+SF:could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(RTSPR
+SF:equest,183,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2019\x
+SF:20Oct\x202025\x2003:37:58\x20GMT\r\nServer:\x20\x20\r\nContent-Length:\
+SF:x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HT
+SF:ML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n
+SF:</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a
+SF:\x20request\x20that\x20this\x20server\x20could\x20not\x20understand\.<b
+SF:r\x20/>\n</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Sep 25 03:51:10 2025 -- 1 IP address (1 host up) scanned in 24.83 seconds
+# Nmap done at Sun Oct 19 03:39:27 2025 -- 1 IP address (1 host up) scanned in 121.78 seconds
