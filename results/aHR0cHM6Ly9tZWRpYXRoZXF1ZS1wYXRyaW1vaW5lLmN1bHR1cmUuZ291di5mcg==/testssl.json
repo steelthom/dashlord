@@ -139,11 +139,11 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "cipher_order-tls1_2",
+              "id"           : "cipher_order",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "severity"     : "WARN",
+              "finding"      : "Could not determine server cipher order, no matching cipher in list found (pls report this): DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA"
           }
 ,         {
               "id"           : "cipher-tls1_2_xc030",
@@ -188,13 +188,6 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "cipher_order-tls1_3",
-              "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
-          }
-,         {
               "id"           : "cipher-tls1_3_x1302",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
@@ -221,13 +214,6 @@
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "cipher_order",
-              "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
           }
 ,         {
               "id"           : "FS",
@@ -367,7 +353,7 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "05773652BC0391BECC54E0FE3F0A4FCD4729"
+              "finding"      : "06C55212580BA4B740125A61A7FE873F7E1D"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -381,21 +367,21 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "E88E13DD81237E68F51B68C3202812ED79328376"
+              "finding"      : "92D7FCEA142E680B419A66E72BAE7B267C110B1D"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "6AD7BDF4CBCA5C35E522240D0DDD6CF9081F1099772048365C5DB3168906415B"
+              "finding"      : "D465FA0469A651BC9640E49158C9D76F14B7ABC0C819D5DB8F44FDB421C9C542"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFJjCCBA6gAwIBAgISBXc2UrwDkb7MVOD+PwpPzUcpMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTEwHhcNMjUwODAxMDk0NDQ3WhcNMjUxMDMwMDk0NDQ2WjAxMS8wLQYDVQQDEyZtZWRpYXRoZXF1ZS1wYXRyaW1vaW5lLmN1bHR1cmUuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALqM/JLK4CJvRDDDXQLZTOlJURLFcs5v1ekrmGEfXHa5C5JlSh12O2zod6F7kdFTgwNiiY+GdLuAZqVoR25sI21qID0YFsV//J76D7FmFDOn+RHIPeg5HsE7MoDD7Xydz8+dY6YKQJcTLbU9/Af/MTK25HuYKiWNi8aO42obJdxYfp7ySVcG6oBEvG1JzJ7xLsc9UmjAEmrqmraOkV48YgAv2fVWgsyuZU/aF6UB9TSGvC9iZ+OGeY0HnW/SBDl6Bors37+kNCCTWXS589LRmdALnCmqWqbMn2r+LPsuYJ++GNyWtKJxsqgX8RzjqDmoE61Khz7G+VUwDnEoou35GNsCAwEAAaOCAjQwggIwMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUhljt5SJxjHCShCxzaXN5dVJfovMwHwYDVR0jBBgwFoAUxc9GpOr0w8B6bJXELbBeki8m47kwMwYIKwYBBQUHAQEEJzAlMCMGCCsGAQUFBzAChhdodHRwOi8vcjExLmkubGVuY3Iub3JnLzAxBgNVHREEKjAogiZtZWRpYXRoZXF1ZS1wYXRyaW1vaW5lLmN1bHR1cmUuZ291di5mcjATBgNVHSAEDDAKMAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjExLmMubGVuY3Iub3JnLzQyLmNybDCCAQIGCisGAQQB1nkCBAIEgfMEgfAA7gB1AA3h8jAr0w3BQGISCepVLvxHdHyx1+kw7w5CHrR+Tqo0AAABmGU6ogwAAAQDAEYwRAIgGTloJ2VGZwl6qyUU2YHI4f8wDxSv8Efmz34zMXowcuICIF8a6l3N3SGLtso6VRBoXADz0AYVeugeWQ9syn0Tko2bAHUAzPsPaoVxCWX+lZtTzumyfCLphVwNl422qX5UwP5MDbAAAAGYZTqiMgAABAMARjBEAiB7H6XZuuge6CwKQ8uC8EdVdKAcymcFYzzGKZ6jEwTLqQIgM8TndHwjjn0vQuJu+V8h/b7Z1oCfamQQ6YnI4M5/hkYwDQYJKoZIhvcNAQELBQADggEBAEUkiCaQBIFUKiYvszqtw6GeL4qbke1lYT900vXXKztik5lhjhTI28/+0uZDGDVsMFuCA5kJkeMEfLpNh/9m0bMchAASCThdghjtj96lOex50LwVGGT//KQpuOv+V6t2eIKHIR1l48EZUSt1N1uRch+4ukALEIZRRDPi2xBBaetpEI+6ihDJSW4gsFIZZfs4uoyySCJFo8gdJKni+xw+nC60vzjRD/JihR+joLSaIV+MPM6hcJjtrchfrEl8HhGuGqpgaGGBibY11LObbnECyw/qvFz89v4eMmGBOmisBnHAAos9aE/Pqdpp8iHBoY5OBxyPF0tG6dyY+g+Wlao8xR8=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFKDCCBBCgAwIBAgISBsVSElgLpLdAElphp/6HP34dMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTIwHhcNMjUwOTI2MDg0NDQ5WhcNMjUxMjI1MDg0NDQ4WjAxMS8wLQYDVQQDEyZtZWRpYXRoZXF1ZS1wYXRyaW1vaW5lLmN1bHR1cmUuZ291di5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALQFNWiL9qHgOy4Bx6ImrWQdi9F1HWmf6TQSHA9THTPAPcwHAVwwIASilVa6R5rqnPnVCVNrJOz0C7VCDWQu8cQz19FAz9MiuvS3mql3rseb3oXQ4T1dbuSMk0mwCDjnD55r8N6RCs2jrZoDZJGW2+jQ9ISi+yH4cYr0MDXyCBRi8WxmLi0Vfkwl7JSY3nUL9IsT0436B2qrUG9NyMwaV208NoIKfxEfoyfGGv+AEMF37mU9VljCGo9p4fuqC241DKRo++KCzSLzwDO5eybB6RD1soS0v0iB8Xuktfs8bdFmbQc0sm1qbPQbjDqEhyzMww3+N6ET/JJzi/DTNdXVmPMCAwEAAaOCAjYwggIyMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU1Rkwd9l7DMXwMF112B5DByl40/wwHwYDVR0jBBgwFoAUALUp8i2ObzHom0yteD763OkM0dIwMwYIKwYBBQUHAQEEJzAlMCMGCCsGAQUFBzAChhdodHRwOi8vcjEyLmkubGVuY3Iub3JnLzAxBgNVHREEKjAogiZtZWRpYXRoZXF1ZS1wYXRyaW1vaW5lLmN1bHR1cmUuZ291di5mcjATBgNVHSAEDDAKMAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjEyLmMubGVuY3Iub3JnLzMwLmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB2ABmG1Mcoqm/+ugNveCpNAZGqzi1yMQ+uzl1wQS0lTMfUAAABmYVn2VUAAAQDAEcwRQIhALWKtw+ThFLCwYIpZdCiYp/xRzr7Ck+6XuD7syN9C4ShAiBykNGMnaCsD9T7dkFRlgnetNOUb+buuvXDJFDd3Bt8VQB2AO08S9boBsKkogBX28sk4jgB31Ev7cSGxXAPIN23Pj/gAAABmYVn2W8AAAQDAEcwRQIgZaXLUED5wbWP81ONbOdMT3u0CHDcKGvAyj+hEYImMzsCIQCj5OOt3v+/vFbwAWV17SpfVb3WqlOXvqqk58lpG0i0BDANBgkqhkiG9w0BAQsFAAOCAQEApmK0rTI7u/0+9wMalEUr4Xr1szGg1ifkZqiVstOeIEGt0Vl/r405NujDup9R36XlwYP8sWwoHC9qq/X79EL6Rr3yFDo2rEBe5O9KlycKqdyN4ZjvOOypqcseSASVPxH+PF3q3EPAbPdt0zxsZ/gYAQ8LLI3SMlkzr/mUos7yH6taUv5dmT0wRJTYeRPAnizGTG85J6n8hAv/rUtA6LTBzSru/rC08Ot8CSESy50JJxpehWfBg0UhWRHwezA951WJAldepqXcrSZa6aVJi/yMdQ+Wz7UKXsGXWV8wquVjVb1jqb6tWI6EkGNtnuCLvs/xQ2BuxaHiTo2gUnShQSP6yA==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -444,21 +430,21 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "35 >= 30 days"
+              "finding"      : "67 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-08-01 09:44"
+              "finding"      : "2025-09-26 08:44"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-10-30 09:44"
+              "finding"      : "2025-12-25 08:44"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -479,7 +465,7 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://r11.c.lencr.org/42.crl"
+              "finding"      : "http://r12.c.lencr.org/30.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
@@ -535,21 +521,21 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R11 (Let's Encrypt from US)"
+              "finding"      : "R12 (Let's Encrypt from US)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBjCCAu6gAwIBAgIRAIp9PhPWLzDvI4a9KQdrNPgwDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAzMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDEMMAoGA1UEAxMDUjExMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuoe8XBsAOcvKCs3UZxD5ATylTqVhyybKUvsVAbe5KPUoHu0nsyQYOWcJDAjs4DqwO3cOvfPlOVRBDE6uQdaZdN5R2+97/1i9qLcT9t4x1fJyyXJqC4N0lZxGAGQUmfOx2SLZzaiSqhwmej/+71gFewiVgdtxD4774zEJuwm+UE1fj5F2PVqdnoPy6cRms+EGZkNIGIBloDcYmpuEMpexsr3E+BUAnSeI++JjF5ZsmydnS8TbKF5pwnnwSVzgJFDhxLyhBax7QG0AtMJBP6dYuC/FXJuluwme8f7rsIU5/agK70XEeOtlKsLPXzze41xNG/cLJyuqC0J3U095ah2H2QIDAQABo4H4MIH1MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUxc9GpOr0w8B6bJXELbBeki8m47kwHwYDVR0jBBgwFoAUebRZ5nu25eQBc4AIiMgaWPbpm24wMgYIKwYBBQUHAQEEJjAkMCIGCCsGAQUFBzAChhZodHRwOi8veDEuaS5sZW5jci5vcmcvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMCcGA1UdHwQgMB4wHKAaoBiGFmh0dHA6Ly94MS5jLmxlbmNyLm9yZy8wDQYJKoZIhvcNAQELBQADggIBAE7iiV0KAxyQOND1H/lxXPjDj7I3iHpvsCUf7b632IYGjukJhM1yv4Hz/MrPU0jtvfZpQtSlET41yBOykh0FX+ou1Nj4ScOt9ZmWnO8m2OG0JAtIIE3801S0qcYhyOE2G/93ZCkXufBL713qzXnQv5C/viOykNpKqUgxdKlEC+Hi9i2DcaR1e9KUwQUZRhy5j/PEdEglKg3l9dtD4tuTm7kZtB8v32oOjzHTYw+7KdzdZiw/sBtnUfhBPORNuay4pJxmY/WrhSMdzFO2q3Gu3MUBcdo27goYKjL9CTF8j/Zz55yctUoVaneCWs/ajUX+HypkBTA+c8LGDLnWO2NKq0YD/pnARkAnYGPfUDoHR9gVSp/qRx+ZWghiDLZsMwhN1zjtSC0uBWiugF3vTNzYIEFfaPG7Ws3jDrAMMYebQ95JQ+HIBD/RPBuHRTBpqKlyDnkSHDHYPiNX3adPoPAcgdF3H2/W0rmoswMWgTlLn1Wu0mrks7/qpdWfS6PJ1jty80r2VKsM/Dj3YIDfbjXKdaFU5C+8bhfJGqU3taKauuz0wHVGT3eo6FlWkWYtbt4pgdamlwVeZEW+LM7qZEJEsMNPrfC03APKmZsJgpWCDWOKZvkZcvjVuYkQ4omYCTX5ohy+knMjdOmdH9c7SpqEWBDC86fiNex+O0XOMEZSa8DA\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBjCCAu6gAwIBAgIRAMISMktwqbSRcdxA9+KFJjwwDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAzMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDEMMAoGA1UEAxMDUjEyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2pgodK2+lP474B7i5Ut1qywSf+2nAzJ+Npfs6DGPpRONC5kuHs0BUT1M5ShuCVUxqqUiXXL0LQfCTUA83wEjuXg39RplMjTmhnGdBO+ECFu9AhqZ66YBAJpzkG2Pogeg0JfT2kVhgTU9FPnEwF9q3AuWGrCf4yrqvSrWmMebcas7dA8827JgvlpLThjp2ypzXIlhZZ7+7Tymy05v5J75AEaz/xlNKmOzjmbGGIVwx1Blbzt05UiDDwhYXS0jnV6j/ujbAKHS9OMZTfLuevYnnuXNnC2i8n+cF63vEzc50bTILEHWhsDp7CH4WRt/uTp8n1wBnWIEwii9Cq08yhDsGwIDAQABo4H4MIH1MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUALUp8i2ObzHom0yteD763OkM0dIwHwYDVR0jBBgwFoAUebRZ5nu25eQBc4AIiMgaWPbpm24wMgYIKwYBBQUHAQEEJjAkMCIGCCsGAQUFBzAChhZodHRwOi8veDEuaS5sZW5jci5vcmcvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMCcGA1UdHwQgMB4wHKAaoBiGFmh0dHA6Ly94MS5jLmxlbmNyLm9yZy8wDQYJKoZIhvcNAQELBQADggIBAI910AnPanZIZTKS3rVEyIV29BWEjAK/duuz8eL5boSoVpHhkkv34eoAeEiPdZLj5EZ7G2ArIK+gzhTlRQ1q4FKGpPPaFBSpqV/xbUb5UlAXQOnkHn3mFVj+qYv87/WeY+Bm4sN3Ox8BhyaU7UAQ3LeZ7N1X01xxQe4wIAAE3JVLUCiHmZL+qoCUtgYIFPgcg350QMUIWgxPXNGEncT921ne7nluI02V8pLUmClqXOsCwULw+PVOZCB7qOMxxMBoCUeL2Ll4oMpOSr5pJCpLN3tRA2s6P1KLs9TSrVhOk+7LX28NMUlIusQ/nxLJID0RhAeFtPjyOCOscQBA53+NRjSCak7P4A5jX7ppmkcJECL+S0i3kXVUy5Me5BbrU8973jZNv/ax6+ZK6TM8jWmimL6of6OrX7ZU6E2WqazzsFrLG3o2kySbzlhSgJ81Cl4tv3SbYiYXnJExKQvzf83DYotox3f0fwv7xln1A2ZLplCb0O+l/AK0YE0DS2FPxSAHi0iwMfW2nNHJrXcY3LLHD77gRgje4Eveubi2xxa+Nmk/hmhLdIETiVDFanoCrMVIpQ59XWHkzdFmoHXHBV7oibVjGSO7ULSQ7MJ1Nz51phuDJSgAIU7A0zrLnOrAj/dfrlEWRhCvAgbuwLZX1A2sjNjXoPOHbsPiy+lO1KF8/XY7\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "591E9CE6C863D3A079E9FABE1478C7339A26B21269DDE795211361024AE31A44"
+              "finding"      : "131FCE7784016899A5A00203A9EFC80F18EBBD75580717EDC1553580930836EC"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
@@ -577,7 +563,7 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R11 <-- ISRG Root X1"
+              "finding"      : "R12 <-- ISRG Root X1"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -598,14 +584,14 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758773840"
+              "finding"      : "1760846457"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -813,7 +799,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=6AD7BDF4CBCA5C35E522240D0DDD6CF9081F1099772048365C5DB3168906415B"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=D465FA0469A651BC9640E49158C9D76F14B7ABC0C819D5DB8F44FDB421C9C542"
           }
 ,         {
               "id"           : "LOGJAM-common_primes",
@@ -1189,6 +1175,6 @@
               "ip"           : "mediatheque-patrimoine.culture.gouv.fr/87.252.7.122",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "72"
+              "finding"      : "223"
           }
 ]
