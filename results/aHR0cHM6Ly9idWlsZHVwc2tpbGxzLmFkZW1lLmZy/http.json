@@ -1,85 +1,58 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "D",
     "error": null,
-    "score": 75,
-    "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 25 Sep 2025 04:18:24 GMT",
+      "date": "Sun, 19 Oct 2025 04:08:39 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "cache-control": "max-age=10800, public",
-      "content-language": "fr",
-      "content-security-policy": "frame-ancestors 'self';",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Thu, 22 May 2025 15:43:34 GMT",
-      "permissions-policy": "geolocation=(self), microphone=(), camera=(), fullscreen=*",
-      "referrer-policy": "strict-origin",
-      "strict-transport-security": "max-age=16070400; includeSubDomains; preload",
-      "vary": "Cookie,Origin",
-      "x-content-type-options": "nosniff",
-      "x-drupal-cache": "HIT",
-      "x-drupal-dynamic-cache": "UNCACHEABLE",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "referrer-policy": "same-origin",
       "x-frame-options": "SAMEORIGIN",
-      "x-xss-protection": "1; mode=block",
-      "cf-cache-status": "DYNAMIC",
-      "set-cookie": [
-        "__cf_bm=W1wtwfw1Ty8KiOU7LJBqX8nNu11PqAtj3Pk8qILn4dI-1758773904-1.0.1.1-p_0VFK2BW21EE89z98qUVZDE5cmLwcO95QWz0zx9c.8DfzaPmI2uMh_G6862V5w2ASJtc1RMNzZ4rfWdhStoDN.nQYVBoHM87tDybT3f9Hs; path=/; expires=Thu, 25-Sep-25 04:48:24 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
-      ],
+      "vary": "accept-encoding",
       "server": "cloudflare",
-      "cf-ray": "9847b7a4ae59de83-IAD"
+      "set-cookie": [
+        "__cf_bm=.zK89jXcWF8imsFkMem7sDO.WgLt6Y7A6UoXZgDlJCI-1760846919.930267-1.0.1.1-dkCQbEsVj0jdjdHb1JaJzhWzBAU9.2TQydNWE3QPj9aSs8CxEA.zP22LZEuY4OdNADR1dlriNPLU5a6OQcCKX5gOG8W6q8Y50WBELyK9Kdpi1Vmcz.YT0HSGT1EpRAj_; HttpOnly; Secure; Path=/; Expires=Sun, 19 Oct 2025 04:38:39 GMT"
+      ],
+      "cf-ray": "990d6a618e9a67fe-SJC"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "frame-ancestors": [
-          "'self'"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": true,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": false,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
       "data": {
         "__cf_bm": {
-          "domain": "ademe.fr",
-          "expires": "2025-09-25T04:48:24.000Z",
+          "domain": "buildupskills.ademe.fr",
+          "expires": "2025-10-19T04:38:39.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
-          "samesite": "none",
           "secure": true
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -90,61 +63,55 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://buildupskills.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://buildupskills.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://buildupskills.ademe.fr/",
-        "https://buildupskills.ademe.fr/"
+        "http://buildupskills.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "strict-origin",
+      "data": "same-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=16070400; includeSubDomains; preload",
-      "includeSubDomains": true,
-      "maxAge": 16070400,
-      "preload": true,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=buildupskills.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-implemented-via-csp",
-      "scoreModifier": 5,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
       "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {

@@ -409,7 +409,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -555,8 +555,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "62 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (38)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -569,7 +569,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-26 17:54"
           }
 ,         {
@@ -849,8 +849,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "62 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (38)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -863,7 +863,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-26 17:56"
           }
 ,         {
@@ -1039,7 +1039,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -1053,7 +1053,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758774357"
+              "finding"      : "1760847041"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1061,28 +1061,14 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=4mxwg7OlJMGbevOCbztV71FTJKRXcBckEN0Z2ZerHOU-1758774357-1.0.1.1-rwwrtd1a6z1rzc6j8YvKJcYply_8cwGQNMC30Qw5iQEY8aVu0frfxEgCWAIsYN7RMi.xmbhWee1U8n9_IPGOqqKLFTljpNGI0RUXmbdsV9o; path=/; expires=Thu, 25-Sep-25 04:55:57 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=RHEcBK3zZUfqyrWHe8wiTeB8RJMqX_PGRLqt7vMyPTs-1760847041.18824-1.0.1.1-_OqDkNBPLDU5nrQbTWaWWPiYjHyFPp7aR1_hAF820gQ4l7cUs6snE6RTnFSvKNvY6m2bcQkFNKpZsHlYiS1d37dkhdiRIISnR19d3xafi35Ke3YqqLBWgm4MqrnrI_Ya; HttpOnly; Secure; Path=/; Expires=Sun, 19 Oct 2025 04:40:41 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
-              "id"           : "HSTS_time",
+              "id"           : "HSTS",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "186 days (=16070400 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "HPKP",
@@ -1110,7 +1096,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -1124,7 +1110,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (maybe missed the application)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -1134,53 +1120,18 @@
               "finding"      : "SAMEORIGIN"
           }
 ,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "frame-ancestors 'self';"
-          }
-,         {
-              "id"           : "Permissions-Policy",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "geolocation=(self), microphone=(), camera=(), fullscreen=*"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
-              "id"           : "Permissions-Policy",
-              "ip"           : "buildupskills.ademe.fr/104.18.1.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "geolocation=(self), microphone=(), camera=(), fullscreen=*"
-          }
-,         {
               "id"           : "Referrer-Policy",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "strict-origin"
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "buildupskills.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=10800, public"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -2238,8 +2189,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "62 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (38)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2252,7 +2203,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-26 17:54"
           }
 ,         {
@@ -2532,8 +2483,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "62 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (38)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2546,7 +2497,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-26 17:56"
           }
 ,         {
@@ -2722,7 +2673,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -2736,7 +2687,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758774438"
+              "finding"      : "1760847118"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2744,28 +2695,14 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=9VACob1FYZgPMDsvOrhbS.YY6QnLaS.JzIfEtEdG3b0-1758774438-1.0.1.1-jObemvpF47rESilbledSqChkptAngc42xJ4XKMlY.MhMgEQUMgh5jDLMYgRpN33yKhxS3EIRj0Fji0n0avjLWPaMXCYFbIk6WdsA02UvZP8; path=/; expires=Thu, 25-Sep-25 04:57:18 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=zNj_1SzYJ3t3iJGAb9mw5RXXS26F4ghwxnmOvbxeWIM-1760847118.9796793-1.0.1.1-VV8la1U5HO_7ji27Tvb6TZsCVoAxCon.2DJetK8pAiz5x1CVkl9clRgQnKo69zSxIIUkG4QbfiF19g.kiTpekYRiiYUNCyEYk6u6Zsrs9yM_lnlP54hFwppyJckJjgxd; HttpOnly; Secure; Path=/; Expires=Sun, 19 Oct 2025 04:41:58 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
-              "id"           : "HSTS_time",
+              "id"           : "HSTS",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "186 days (=16070400 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "HPKP",
@@ -2793,7 +2730,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -2807,7 +2744,7 @@
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (maybe missed the application)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -2817,53 +2754,18 @@
               "finding"      : "SAMEORIGIN"
           }
 ,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "frame-ancestors 'self';"
-          }
-,         {
-              "id"           : "Permissions-Policy",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "geolocation=(self), microphone=(), camera=(), fullscreen=*"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
-              "id"           : "Permissions-Policy",
-              "ip"           : "buildupskills.ademe.fr/104.18.0.202",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "geolocation=(self), microphone=(), camera=(), fullscreen=*"
-          }
-,         {
               "id"           : "Referrer-Policy",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "strict-origin"
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=10800, public"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -3370,6 +3272,6 @@
               "ip"           : "buildupskills.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "163"
+              "finding"      : "157"
           }
 ]
