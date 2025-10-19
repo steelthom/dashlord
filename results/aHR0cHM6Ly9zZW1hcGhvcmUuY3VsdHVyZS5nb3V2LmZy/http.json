@@ -1,21 +1,38 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "D-",
     "error": null,
-    "score": 10,
+    "score": 25,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 25 Sep 2025 03:54:56 GMT",
+      "date": "Sun, 19 Oct 2025 03:37:10 GMT",
+      "server": "nginx",
       "set-cookie": [
-        "bot_mitigation_cookie=DADV5GY4N27OSL4T4NLCO2AVW2TLDTUN2CFXA5BEGDI7R3PXYNJAHA64DY6XHLHEFNNXKA6HMGSMWU5PD2F2DVSBWDOHTQIRXGZUU7U76PYOL7W5RG6Q====; Path=/"
+        "SSESS5e2813f63434eb9ba437efb280ddcdf7=kcQz3M6lhaT-hpRMfCwXi3zQfbL3v6Mfrv90GO30cdgBAtyt; expires=Tue, 11-Nov-2025 07:10:30 GMT; Max-Age=2000000; path=/; domain=.semaphore.culture.gouv.fr; secure; HttpOnly"
       ],
-      "content-type": "text/html",
-      "content-length": "222",
-      "x-cp-via": "C3-8aabfc82-a239ed99",
+      "content-type": "text/html; charset=UTF-8",
+      "content-length": "3896",
+      "cache-control": "max-age=31536000, public",
+      "x-ua-compatible": "IE=edge",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "vary": "Cookie,Accept-Encoding",
+      "purge-cache-tags": "config:block_list config:block.block.semaphore_bootstrap_local_tasks config:block.block.semaphore_bootstrap_messages config:block.block.semaphore_bootstrap_content config:block.block.pagetitle config:block.block.views_block__interested_content_block_1 config:block.block.semaphore_bootstrap_main_menu config:block.block.mainnavigationmobile config:block.block.semaphore_bootstrap_breadcrumbs config:block.block.semaphore_bootstrap_branding config:block.block.leftfooter config:block.block.rightfooter config:block.block.leftfooter_2 config:block.block.semaphore_sub_bootstrap_main_menu config:block.block.block_derniers_mouvements config:block.block.block_front_magazines config:block.block.navigation_search_block config:block.block.my_actualities_block config:block.block.mcloginformblock config:block.block.site_map_block config:block.block.a_la_une_actualities_block config:block.block.dernieres_publications_block config:matomo.settings block_view rendered http_response config:user.role.anonymous",
+      "cache-tags": "config:block_list config:block.block.semaphore_bootstrap_local_tasks config:block.block.semaphore_bootstrap_messages config:block.block.semaphore_bootstrap_content config:block.block.pagetitle config:block.block.views_block__interested_content_block_1 config:block.block.semaphore_bootstrap_main_menu config:block.block.mainnavigationmobile config:block.block.semaphore_bootstrap_breadcrumbs config:block.block.semaphore_bootstrap_branding config:block.block.leftfooter config:block.block.rightfooter config:block.block.leftfooter_2 config:block.block.semaphore_sub_bootstrap_main_menu config:block.block.block_derniers_mouvements config:block.block.block_front_magazines config:block.block.navigation_search_block config:block.block.my_actualities_block config:block.block.mcloginformblock config:block.block.site_map_block config:block.block.a_la_une_actualities_block config:block.block.dernieres_publications_block config:matomo.settings block_view rendered http_response config:user.role.anonymous",
+      "last-modified": "Sun, 19 Oct 2025 03:37:10 GMT",
+      "etag": "\"1760845030-gzip\"",
+      "age": "0",
+      "x-cache": "MISS",
+      "x-cache-hits": "0",
+      "accept-ranges": "bytes",
+      "strict-transport-security": "max-age=63072000",
+      "x-cp-via": "C3-6fee7e25-68f55a88",
       "connection": "close"
     }
   },
@@ -33,14 +50,18 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
       "data": {
-        "bot_mitigation_cookie": {
+        "SSESS5e2813f63434eb9ba437efb280ddcdf7": {
           "domain": "semaphore.culture.gouv.fr",
+          "expires": "2025-11-11T07:10:30.000Z",
+          "httponly": true,
+          "max-age": 2000000,
           "path": "/",
-          "port": null
+          "port": null,
+          "secure": true
         }
       },
       "sameSite": false
@@ -76,35 +97,44 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000",
       "includeSubDomains": false,
-      "maxAge": null,
+      "maxAge": 63072000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "https://s3.fr-par.scw.cloud/sem-p0-bucket/s3fs-public-prod/languages/fr_2YJX-sCjOwZa0wjufj0gS1EbWKv6F7LLg9obH70P2TU.js?VersionId=1759313316447780?t3g6vk": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",

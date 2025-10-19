@@ -423,7 +423,7 @@
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "58 >= 30 days"
+              "finding"      : "34 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -584,14 +584,35 @@
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758772734"
+              "finding"      : "1760845224"
           }
 ,         {
-              "id"           : "HSTS",
+              "id"           : "HTTP_headerAge",
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "INFO",
+              "finding"      : "0 seconds"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
           }
 ,         {
               "id"           : "HPKP",
@@ -605,7 +626,7 @@
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No Server banner line in header, interesting!"
+              "finding"      : "nginx"
           }
 ,         {
               "id"           : "banner_application",
@@ -625,22 +646,43 @@
               "id"           : "cookie_secure",
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
+              "severity"     : "OK",
+              "finding"      : "All (1) at '/' marked as secure"
           }
 ,         {
               "id"           : "cookie_httponly",
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as HttpOnly"
+              "severity"     : "OK",
+              "finding"      : "All (1) at '/' marked as HttpOnly"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "X-Frame-Options",
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=31536000, public"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -648,7 +690,7 @@
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "finding"      : "x-cache: MISSx-cache-hits: 0"
           }
 ,         {
               "id"           : "heartbleed",
@@ -716,10 +758,10 @@
               "id"           : "BREACH",
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1147,6 +1189,6 @@
               "ip"           : "semaphore.culture.gouv.fr/87.98.187.73",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "149"
+              "finding"      : "109"
           }
 ]
