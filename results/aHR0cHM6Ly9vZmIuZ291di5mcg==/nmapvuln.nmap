@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Sep 25 04:15:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ofb.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct 19 03:48:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ofb.gouv.fr
 Nmap scan report for ofb.gouv.fr (147.135.143.41)
-Host is up (0.15s latency).
+Host is up (0.091s latency).
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE  VERSION
 80/tcp  open  http
@@ -25,6 +25,9 @@ PORT    STATE SERVICE  VERSION
 |     location: https:///
 |_    connection: close
 443/tcp open  ssl/http Apache httpd 2.4.62
+| http-server-header: 
+|   Apache/2.4.62 (Debian)
+|_  Apache/2.4.65 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
 |     	CVE-2025-23048	9.1	https://vulners.com/cve/CVE-2025-23048
@@ -34,44 +37,42 @@ PORT    STATE SERVICE  VERSION
 |     	CVE-2024-43394	7.5	https://vulners.com/cve/CVE-2024-43394
 |     	CVE-2024-43204	7.5	https://vulners.com/cve/CVE-2024-43204
 |     	CVE-2024-42516	7.5	https://vulners.com/cve/CVE-2024-42516
+|     	CNVD-2025-16614	7.5	https://vulners.com/cnvd/CNVD-2025-16614
 |_    	CVE-2025-49812	7.4	https://vulners.com/cve/CVE-2025-49812
-| http-server-header: 
-|   Apache/2.4.62 (Debian)
-|_  Apache/2.4.65 (Debian)
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4C1DF%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
-SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
+SF-Port80-TCP:V=7.92%I=7%D=10/19%Time=68F45FA7%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
 SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
-SF:r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:
-SF:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nc
-SF:onnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
-SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
-SF:")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:
-SF:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nc
-SF:onnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
-SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
-SF:")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
-SF:content-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity
-SF:\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\
-SF:x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20
-SF:no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<
-SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
-SF:n\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF
-SF:,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-
-SF:control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20cl
-SF:ose\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\
-SF:x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRe
-SF:questTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x209
-SF:0\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnec
-SF:tion:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\
-SF:x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(
-SF:Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\
-SF:ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection
-SF::\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
-SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+SF:r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-l
+SF:ength:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")
+SF:%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length
+SF::\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n
+SF:connection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\
+SF:nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\
+SF:n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length
+SF::\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n
+SF:connection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\
+SF:nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\
+SF:n")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\
+SF:ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eit
+SF:y\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1
+SF:\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x2
+SF:0no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n
+SF:<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20
+SF:an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,C
+SF:F,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache
+SF:-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20c
+SF:lose\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser
+SF:\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusR
+SF:equestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x20
+SF:90\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconne
+SF:ction:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour
+SF:\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r
+SF:(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r
+SF:\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnectio
+SF:n:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20
+SF:browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 Service Info: Host: OFB-P-MNTAP-G11-01.ofb.intra
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Sep 25 04:15:43 2025 -- 1 IP address (1 host up) scanned in 25.46 seconds
+# Nmap done at Sun Oct 19 03:49:06 2025 -- 1 IP address (1 host up) scanned in 19.72 seconds
