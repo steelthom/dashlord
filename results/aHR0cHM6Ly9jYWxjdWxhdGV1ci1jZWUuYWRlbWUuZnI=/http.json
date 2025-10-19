@@ -1,92 +1,58 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "D",
     "error": null,
-    "score": 70,
-    "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 25 Sep 2025 04:34:08 GMT",
+      "date": "Sun, 19 Oct 2025 03:35:40 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "cache-control": "max-age=0, must-revalidate, private",
-      "content-security-policy": "default-src * data: 'unsafe-eval' 'unsafe-inline'",
-      "expires": "Thu, 25 Sep 2025 04:34:08 GMT",
-      "referrer-policy": "no-referrer-when-downgrade",
-      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
-      "vary": "Accept-Encoding",
-      "x-content-type-options": "nosniff",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "referrer-policy": "same-origin",
       "x-frame-options": "SAMEORIGIN",
-      "x-xss-protection": "1; mode=block",
-      "set-cookie": [
-        "PHPSESSID=bde2b09c1863ad31ddb58295079e688b; path=/; secure; httponly; samesite=lax"
-      ],
-      "content-language": "fr",
-      "cf-cache-status": "DYNAMIC",
+      "vary": "accept-encoding",
       "server": "cloudflare",
-      "cf-ray": "9847cea95880f7bf-LAX"
+      "set-cookie": [
+        "__cf_bm=MCmhe390FLw0WX3bw_tlv9kS5GPDfa6.Qh0aAvs03hQ-1760844940.649226-1.0.1.1-PFm.o425wp__m8s3OQ9IUwCThM1N2oc4RHYPNuVgLKtTx2az8N6.nQKj3XAgbRROg2JNbOWNA4R.mcpW622Z6PxCCtw3bz6FFguTtEvOv0.exvVRV7XGEvQLAKDQd_mi; HttpOnly; Secure; Path=/; Expires=Sun, 19 Oct 2025 04:05:40 GMT"
+      ],
+      "cf-ray": "990d3a0f099116a6-SJC"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "default-src": [
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "*",
-          "data:"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": false,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
       "data": {
         "__cf_bm": {
-          "domain": "ademe.fr",
-          "expires": "2025-09-25T05:04:06.000Z",
-          "httponly": true,
-          "path": "/",
-          "port": null,
-          "samesite": "none",
-          "secure": true
-        },
-        "PHPSESSID": {
           "domain": "calculateur-cee.ademe.fr",
+          "expires": "2025-10-19T04:05:40.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
-          "samesite": "lax",
           "secure": true
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -97,68 +63,49 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://calculateur-cee.ademe.fr/user/login",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://calculateur-cee.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://calculateur-cee.ademe.fr/",
-        "https://calculateur-cee.ademe.fr/",
-        "https://calculateur-cee.ademe.fr/user/login"
+        "http://calculateur-cee.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
-      "pass": false,
-      "result": "referrer-policy-unsafe",
-      "scoreModifier": -5,
-      "data": "no-referrer-when-downgrade",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubDomains; preload",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
-      "preload": true,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=simulaides.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://www.google.com/recaptcha/api.js?hl=fr": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://unpkg.com/@popperjs/core@2": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://unpkg.com/tippy.js@6": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
