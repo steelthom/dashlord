@@ -19,9 +19,9 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on runnervm3ublj:/home/testssl/bin/openssl.Linux.x86_64
+  on runnervmzdgdc:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-09-25 04:16:41        --&gt;&gt; 87.252.7.122:443 (mediatheque-patrimoine.culture.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-10-19 03:57:47        --&gt;&gt; 87.252.7.122:443 (mediatheque-patrimoine.culture.gouv.fr) &lt;&lt;--</span>
 
  rDNS (87.252.7.122):    rmn-scn-01.ecritel.net.
  Service detected:       HTTP
@@ -51,6 +51,8 @@
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
+<span style="color:#cd00cd;"> Oops: openssl s_client connect problem</span>
+<span style="color:#cd00cd;">no matching cipher in this list found (pls report this): </span>DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA  . 
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
 -----------------------------------------------------------------------------------------------------------------------------
 <u>SSLv2</u>
@@ -61,19 +63,19 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  - 
 <u>TLSv1.1</u>
  - 
-<u>TLSv1.2</u> (no server order, thus listed by strength)
+<u>TLSv1.2</u> (listed by strength)
  xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH<span style="color:#008817;"> 521</span>   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
  x9f     DHE-RSA-AES256-GCM-SHA384         DH<span style="color:#008817;"> 2048</span>    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384                
  xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH<span style="color:#008817;"> 521</span>   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
  xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH<span style="color:#008817;"> 521</span>   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
  x9e     DHE-RSA-AES128-GCM-SHA256         DH<span style="color:#008817;"> 2048</span>    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256                
-<u>TLSv1.3</u> (no server order, thus listed by strength)
+<u>TLSv1.3</u> (listed by strength)
  x1302   TLS_AES_256_GCM_SHA384            ECDH<span style="color:#008817;"> 253</span>   AESGCM      256      TLS_AES_256_GCM_SHA384                             
  x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH<span style="color:#008817;"> 253</span>   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
  x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 253</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
 
-<span style="font-weight:bold;"> Has server cipher order?     </span>no
- (limited sense as client will pick)
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#cd00cd;">unable to determine</span>
+
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -109,17 +111,17 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>05773652BC0391BECC54E0FE3F0A4FCD4729 (OK: length 18)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 E88E13DD81237E68F51B68C3202812ED79328376
-                              SHA256 6AD7BDF4CBCA5C35E522240D0DDD6CF9081F1099772048365C5DB3168906415B
+<span style="font-weight:bold;"> Serial                       </span>06C55212580BA4B740125A61A7FE873F7E1D (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 92D7FCEA142E680B419A66E72BAE7B267C110B1D
+                              SHA256 D465FA0469A651BC9640E49158C9D76F14B7ABC0C819D5DB8F44FDB421C9C542
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>mediatheque-patrimoine.culture.gouv.fr </i> (CN in response to request w/o SNI: <i>rmn-scn-01.oxyd.net </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>mediatheque-patrimoine.culture.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">35 &gt;= 30 days</span> (2025-08-01 09:44 --&gt; 2025-10-30 09:44)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">67 &gt;= 30 days</span> (2025-09-26 08:44 --&gt; 2025-12-25 08:44)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>http://r11.c.lencr.org/42.crl
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://r12.c.lencr.org/30.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>--
 <span style="font-weight:bold;"> OCSP stapling                </span>not offered
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
@@ -127,15 +129,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               <i>issue=certigna.com, issue=letsencrypt.org</i>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
 <span style="font-weight:bold;"> Certificates provided</span>        2
-<span style="font-weight:bold;"> Issuer                       </span><i>R11</i> (<i>Let&apos;s Encrypt</i> from <i>US</i>)
-<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2027-03-12 23:59). <i>R11</i> &lt;-- <i>ISRG Root X1</i>
+<span style="font-weight:bold;"> Issuer                       </span><i>R12</i> (<i>Let&apos;s Encrypt</i> from <i>US</i>)
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2027-03-12 23:59). <i>R12</i> &lt;-- <i>ISRG Root X1</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">182 days</span>=15768000 s<span style="color:#008817;">, includeSubDomains</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>nginx&apos;
@@ -176,7 +178,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services, see
-                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=6AD7BDF4CBCA5C35E522240D0DDD6CF9081F1099772048365C5DB3168906415B" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=6AD7BDF4CBCA5C35E522240D0DDD6CF9081F1099772048365C5DB3168906415B</a>
+                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=D465FA0469A651BC9640E49158C9D76F14B7ABC0C819D5DB8F44FDB421C9C542" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=D465FA0469A651BC9640E49158C9D76F14B7ABC0C819D5DB8F44FDB421C9C542</a>
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      common prime with 2048 bits detected: <i>RFC7919/ffdhe2048</i> (<span style="color:#008817;">2048 bits</span>),
                                            but no DH EXPORT ciphers
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
@@ -236,7 +238,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-09-25 04:17:51 [  72s] --&gt;&gt; 87.252.7.122:443 (mediatheque-patrimoine.culture.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-10-19 04:01:27 [ 223s] --&gt;&gt; 87.252.7.122:443 (mediatheque-patrimoine.culture.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
