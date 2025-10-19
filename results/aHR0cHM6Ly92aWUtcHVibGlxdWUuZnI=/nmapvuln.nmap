@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Thu Sep 25 03:48:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln vie-publique.fr
+# Nmap 7.92 scan initiated Sun Oct 19 03:23:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln vie-publique.fr
 Nmap scan report for vie-publique.fr (185.231.164.21)
 Host is up (0.14s latency).
 Not shown: 998 filtered tcp ports (no-response)
@@ -7,7 +7,7 @@ PORT    STATE SERVICE  VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Thu, 25 Sep 2025 03:48:41 GMT
+|     Date: Sun, 19 Oct 2025 03:24:06 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -19,9 +19,9 @@ PORT    STATE SERVICE  VERSION
 |     <hr><center>openresty</center>
 |     </body>
 |     </html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Thu, 25 Sep 2025 03:48:40 GMT
+|     Date: Sun, 19 Oct 2025 03:24:04 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -33,22 +33,23 @@ PORT    STATE SERVICE  VERSION
 |     <hr><center>openresty</center>
 |     </body>
 |     </html>
-|   RTSPRequest: 
-|     HTTP/1.1 400 Bad Request
-|     Date: Thu, 25 Sep 2025 03:48:40 GMT
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sun, 19 Oct 2025 03:24:05 GMT
 |     Content-Type: text/html
-|     Content-Length: 154
+|     Content-Length: 166
 |     Connection: close
+|     Location: https://vie-publique.fr/
 |     <html>
-|     <head><title>400 Bad Request</title></head>
+|     <head><title>301 Moved Permanently</title></head>
 |     <body>
-|     <center><h1>400 Bad Request</h1></center>
+|     <center><h1>301 Moved Permanently</h1></center>
 |     <hr><center>openresty</center>
 |     </body>
 |     </html>
-|   X11Probe: 
+|   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Thu, 25 Sep 2025 03:48:41 GMT
+|     Date: Sun, 19 Oct 2025 03:24:05 GMT
 |     Content-Type: text/html
 |     Content-Length: 154
 |     Connection: close
@@ -59,40 +60,40 @@ PORT    STATE SERVICE  VERSION
 |     <hr><center>openresty</center>
 |     </body>
 |_    </html>
-443/tcp open  ssl/http nginx 1.29.1
+443/tcp open  ssl/http nginx 1.29.2
 |_http-trane-info: Problem with XML parsing of /evox/about
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4BB98%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,152,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20T
-SF:hu,\x2025\x20Sep\x202025\x2003:48:40\x20GMT\r\nContent-Type:\x20text/ht
-SF:ml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20ht
-SF:tps://vie-publique\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20P
-SF:ermanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Perm
-SF:anently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n<
-SF:/html>\r\n")%r(HTTPOptions,152,"HTTP/1\.1\x20301\x20Moved\x20Permanentl
-SF:y\r\nDate:\x20Thu,\x2025\x20Sep\x202025\x2003:48:40\x20GMT\r\nContent-T
+SF-Port80-TCP:V=7.92%I=7%D=10/19%Time=68F459D4%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,152,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Sun,\x2019\x20Oct\x202025\x2003:24:04\x20GMT\r\nContent-Type:\x20text/h
+SF:tml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20h
+SF:ttps://vie-publique\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20
+SF:Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Per
+SF:manently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n
+SF:</html>\r\n")%r(HTTPOptions,152,"HTTP/1\.1\x20301\x20Moved\x20Permanent
+SF:ly\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:24:05\x20GMT\r\nContent-
+SF:Type:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\
+SF:nLocation:\x20https://vie-publique\.fr/\r\n\r\n<html>\r\n<head><title>3
+SF:01\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\
+SF:x20Moved\x20Permanently</h1></center>\r\n<hr><center>openresty</center>
+SF:\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:24:05\x20GMT\r\
+SF:nContent-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x2
+SF:0close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></hea
+SF:d>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr>
+SF:<center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"
+SF:HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2019\x20Oct\x20202
+SF:5\x2003:24:05\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:20154\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\
+SF:x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Reques
+SF:t</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>
+SF:\r\n")%r(FourOhFourRequest,175,"HTTP/1\.1\x20301\x20Moved\x20Permanentl
+SF:y\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:24:06\x20GMT\r\nContent-T
 SF:ype:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\n
-SF:Location:\x20https://vie-publique\.fr/\r\n\r\n<html>\r\n<head><title>30
-SF:1\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x
-SF:20Moved\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\
-SF:r\n</body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\
-SF:x20Request\r\nDate:\x20Thu,\x2025\x20Sep\x202025\x2003:48:40\x20GMT\r\n
-SF:Content-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20
-SF:close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head
-SF:>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><
-SF:center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"H
-SF:TTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Thu,\x2025\x20Sep\x202025
-SF:\x2003:48:41\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x2
-SF:0154\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x
-SF:20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request
-SF:</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\
-SF:r\n")%r(FourOhFourRequest,175,"HTTP/1\.1\x20301\x20Moved\x20Permanently
-SF:\r\nDate:\x20Thu,\x2025\x20Sep\x202025\x2003:48:41\x20GMT\r\nContent-Ty
-SF:pe:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nL
-SF:ocation:\x20https://vie-publique\.fr/nice%20ports%2C/Tri%6Eity\.txt%2eb
-SF:ak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></h
-SF:ead>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>
-SF:\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n");
+SF:Location:\x20https://vie-publique\.fr/nice%20ports%2C/Tri%6Eity\.txt%2e
+SF:bak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></
+SF:head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center
+SF:>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Sep 25 03:48:56 2025 -- 1 IP address (1 host up) scanned in 32.69 seconds
+# Nmap done at Sun Oct 19 03:24:21 2025 -- 1 IP address (1 host up) scanned in 33.45 seconds
