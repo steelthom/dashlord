@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Thu Sep 25 04:27:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lelab.sante.fr
+# Nmap 7.92 scan initiated Sun Oct 19 03:49:03 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lelab.sante.fr
 Nmap scan report for lelab.sante.fr (185.231.164.109)
-Host is up (0.081s latency).
+Host is up (0.082s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Thu, 25 Sep 2025 04:27:17 GMT
+|     Date: Sun, 19 Oct 2025 03:49:17 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -21,7 +21,7 @@ PORT    STATE SERVICE   VERSION
 |     </html>
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Thu, 25 Sep 2025 04:27:17 GMT
+|     Date: Sun, 19 Oct 2025 03:49:17 GMT
 |     Content-Type: text/html
 |     Content-Length: 166
 |     Connection: close
@@ -35,7 +35,7 @@ PORT    STATE SERVICE   VERSION
 |     </html>
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Thu, 25 Sep 2025 04:27:17 GMT
+|     Date: Sun, 19 Oct 2025 03:49:17 GMT
 |     Content-Type: text/html
 |     Content-Length: 154
 |     Connection: close
@@ -49,38 +49,60 @@ PORT    STATE SERVICE   VERSION
 443/tcp open  ssl/https
 | fingerprint-strings: 
 |   FourOhFourRequest: 
-|     HTTP/1.1 200 OK
-|     Date: Thu, 25 Sep 2025 04:27:24 GMT
+|     HTTP/1.1 202 Accepted
+|     Date: Sun, 19 Oct 2025 03:49:24 GMT
 |     Content-Type: text/html
-|     Content-Length: 4000
+|     Content-Length: 3699
 |     Connection: close
-|     Referrer-Policy: no-referrer
 |     Cache-Control: no-cache
 |     Strict-Transport-Security: max-age=63072000
 |     X-Content-Type-Options: nosniff
+|     Referrer-Policy: origin-when-cross-origin
 |     X-XSS-Protection: 1; mode=block
-|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"checkChallengeParams":{"rule_id":"","request_fate":"challengejs","tracking_id":"","bot_category":"unknown"},"cookie":{"maxAge":900,"sameSite":"None","secure":true,"name":"bln_challengejs","path":"/","value":"S-80TxEhGj6JA6Xb8PIRoqHxRVhF-ovUcdbc96iNORpZpacHgQR5quDKKqeHQGDQJdsSW1KB0aGLTGNkiNsxWasSvEF5BwHOn_Senhx8tuBOb-ipZgvIhdmk2yWroBlpPvIvRjJVaRGp_Dh1XmZMcOH4QgF0UriAoN1MZK0B3lE"},"unregisterServiceWorker":false,"domain":".sante.fr"};(()=>{"use strict";const e=function*({
+|     <!DOCTYPE HTML>
+|     <html>
+|     <head>
+|     <title>Captcha</title>
+|     <meta name="viewport" content="width=device-width">
+|     <meta charset="utf-8">
+|     <script>function submitForm(captcha) {
+|     const http = new XMLHttpRequest();
+|     const url = '/.well-known/baleen/captcha/check';
+|     params = 'g-recaptcha-response=' + captcha + '&captcha_token=6RaZTa2YKbYOgp6U5HwlaEw0432P8l9m_zCrYaTykS667tgtG_gE7d4LoVOIxXLAqP58zD4hJ7eoBMFHGQwk1Fztb1GMnoFvL-WhLdJ9wJ_MF9P6sl-SYY9IexDOL1K6H5WziXp2pMwo0mS-mdqJ8x4_uAzJ_IiVCs0FtTIP8BhOuht0_-GU0bcXBUB6M5vD';
+|     http.onload = function () {
+|     (http.readyState ===
 |   GetRequest: 
-|     HTTP/1.1 200 OK
-|     Date: Thu, 25 Sep 2025 04:27:23 GMT
+|     HTTP/1.1 202 Accepted
+|     Date: Sun, 19 Oct 2025 03:49:23 GMT
 |     Content-Type: text/html
-|     Content-Length: 4000
+|     Content-Length: 3699
 |     Connection: close
-|     Referrer-Policy: no-referrer
 |     Cache-Control: no-cache
 |     Strict-Transport-Security: max-age=63072000
 |     X-Content-Type-Options: nosniff
+|     Referrer-Policy: origin-when-cross-origin
 |     X-XSS-Protection: 1; mode=block
-|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"cookie":{"path":"/","maxAge":900,"sameSite":"None","name":"bln_challengejs","value":"S-80TxEhGj6JA6Xb8PIRorIcKvudzQpaPD534Ds9yQVuopuJJ2Wa1z3Pp82NaSriQJs1oEw8BNJiS0wBD8aG7l2XwQRkXRkwePSsdc9IoYkM0VfpEOJTTv0VIRrYBkSYInf3jEozla1w8_5rE484k6ccNo19MSyp2Dhk1QGSKss","secure":true},"unregisterServiceWorker":false,"checkChallengeParams":{"tracking_id":"","request_fate":"challengejs","bot_category":"unknown","rule_id":""},"domain":".sante.fr"};(()=>{"use strict";const e=function*({
+|     <!DOCTYPE HTML>
+|     <html>
+|     <head>
+|     <title>Captcha</title>
+|     <meta name="viewport" content="width=device-width">
+|     <meta charset="utf-8">
+|     <script>function submitForm(captcha) {
+|     const http = new XMLHttpRequest();
+|     const url = '/.well-known/baleen/captcha/check';
+|     params = 'g-recaptcha-response=' + captcha + '&captcha_token=6RaZTa2YKbYOgp6U5HwlaEw0432P8l9m_zCrYaTykS667tgtG_gE7d4LoVOIxXLAqP58zD4hJ7eoBMFHGQwk1Fztb1GMnoFvL-WhLdJ9wJ_MF9P6sl-SYY9IexDOL1K6ZxZ1nNWCu19fFqFqzX_T58DqjzaqIpMG0qTymidwzgOFzUFA6CmQNXiKgsp08qM-';
+|     http.onload = function () {
+|     (http.readyState ===
 |   HTTPOptions: 
 |     HTTP/1.1 405 Not Allowed
-|     Date: Thu, 25 Sep 2025 04:27:23 GMT
+|     Date: Sun, 19 Oct 2025 03:49:23 GMT
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
 |     x-cache: MISS
 |     x-cache-hits: 0
-|     X-Varnish: 331168159
+|     X-Varnish: 272390426
 |     Age: 0
 |     Strict-Transport-Security: max-age=63072000
 |     X-Content-Type-Options: nosniff
@@ -95,79 +117,82 @@ PORT    STATE SERVICE   VERSION
 |_    </html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/25%Time=68D4C4A5%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20T
-SF:hu,\x2025\x20Sep\x202025\x2004:27:17\x20GMT\r\nContent-Type:\x20text/ht
-SF:ml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20ht
-SF:tps://www\.sante\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Per
-SF:manently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Perman
-SF:ently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</h
-SF:tml>\r\n")%r(HTTPOptions,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\
-SF:r\nDate:\x20Thu,\x2025\x20Sep\x202025\x2004:27:17\x20GMT\r\nContent-Typ
-SF:e:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLo
-SF:cation:\x20https://www\.sante\.fr/\r\n\r\n<html>\r\n<head><title>301\x2
-SF:0Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Mo
-SF:ved\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n<
-SF:/body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20R
-SF:equest\r\nDate:\x20Thu,\x2025\x20Sep\x202025\x2004:27:17\x20GMT\r\nCont
-SF:ent-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20clos
-SF:e\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\
-SF:n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cent
-SF:er>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP/
-SF:1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Thu,\x2025\x20Sep\x202025\x20
-SF:04:27:17\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154
-SF:\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Re
-SF:quest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1
-SF:></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n"
-SF:)%r(FourOhFourRequest,172,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
-SF:Date:\x20Thu,\x2025\x20Sep\x202025\x2004:27:17\x20GMT\r\nContent-Type:\
-SF:x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocat
-SF:ion:\x20https://www\.sante\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n
-SF:\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r
-SF:\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<h
-SF:r><center>openresty</center>\r\n</body>\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=10/19%Time=68F45FBD%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Sun,\x2019\x20Oct\x202025\x2003:49:17\x20GMT\r\nContent-Type:\x20text/h
+SF:tml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20h
+SF:ttps://www\.sante\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Pe
+SF:rmanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Perma
+SF:nently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</
+SF:html>\r\n")%r(HTTPOptions,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently
+SF:\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:49:17\x20GMT\r\nContent-Ty
+SF:pe:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nL
+SF:ocation:\x20https://www\.sante\.fr/\r\n\r\n<html>\r\n<head><title>301\x
+SF:20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20M
+SF:oved\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n
+SF:</body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:49:17\x20GMT\r\nCon
+SF:tent-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20clo
+SF:se\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r
+SF:\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cen
+SF:ter>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2019\x20Oct\x202025\x2
+SF:003:49:17\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x2015
+SF:4\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20R
+SF:equest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h
+SF:1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n
+SF:")%r(FourOhFourRequest,172,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\
+SF:nDate:\x20Sun,\x2019\x20Oct\x202025\x2003:49:17\x20GMT\r\nContent-Type:
+SF:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLoca
+SF:tion:\x20https://www\.sante\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\
+SF:n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\
+SF:r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<
+SF:hr><center>openresty</center>\r\n</body>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/25%Time=68D4C4AB%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,10C0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2025\
-SF:x20Sep\x202025\x2004:27:23\x20GMT\r\nContent-Type:\x20text/html\r\nCont
-SF:ent-Length:\x204000\r\nConnection:\x20close\r\nReferrer-Policy:\x20no-r
-SF:eferrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Security:\x20
-SF:max-age=63072000\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protect
-SF:ion:\x201;\x20mode=block\r\n\r\n<!doctypehtml><meta\x20name=\"viewport\
-SF:"content=\"width=device-width\"><meta\x20charset=\"utf-8\"><script></sc
-SF:ript><script>var\x20__blnChallengeStore={\"cookie\":{\"path\":\"\\/\",\
-SF:"maxAge\":900,\"sameSite\":\"None\",\"name\":\"bln_challengejs\",\"valu
-SF:e\":\"S-80TxEhGj6JA6Xb8PIRorIcKvudzQpaPD534Ds9yQVuopuJJ2Wa1z3Pp82NaSriQ
-SF:Js1oEw8BNJiS0wBD8aG7l2XwQRkXRkwePSsdc9IoYkM0VfpEOJTTv0VIRrYBkSYInf3jEoz
-SF:la1w8_5rE484k6ccNo19MSyp2Dhk1QGSKss\",\"secure\":true},\"unregisterServ
-SF:iceWorker\":false,\"checkChallengeParams\":{\"tracking_id\":\"\",\"requ
-SF:est_fate\":\"challengejs\",\"bot_category\":\"unknown\",\"rule_id\":\"\
-SF:"},\"domain\":\"\.sante\.fr\"};\(\(\)=>{\"use\x20strict\";const\x20e=fu
-SF:nction\*\({")%r(HTTPOptions,1F0,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\n
-SF:Date:\x20Thu,\x2025\x20Sep\x202025\x2004:27:23\x20GMT\r\nContent-Type:\
-SF:x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\nx-cac
-SF:he:\x20MISS\r\nx-cache-hits:\x200\r\nX-Varnish:\x20331168159\r\nAge:\x2
-SF:00\r\nStrict-Transport-Security:\x20max-age=63072000\r\nX-Content-Type-
-SF:Options:\x20nosniff\r\nReferrer-Policy:\x20origin-when-cross-origin\r\n
-SF:X-XSS-Protection:\x201;\x20mode=block\r\n\r\n<html>\r\n<head><title>405
-SF:\x20Not\x20Allowed</title></head>\r\n<body>\r\n<center><h1>405\x20Not\x
-SF:20Allowed</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</h
-SF:tml>\r\n")%r(FourOhFourRequest,10C0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x2
-SF:0Thu,\x2025\x20Sep\x202025\x2004:27:24\x20GMT\r\nContent-Type:\x20text/
-SF:html\r\nContent-Length:\x204000\r\nConnection:\x20close\r\nReferrer-Pol
-SF:icy:\x20no-referrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-S
-SF:ecurity:\x20max-age=63072000\r\nX-Content-Type-Options:\x20nosniff\r\nX
-SF:-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!doctypehtml><meta\x20name
-SF:=\"viewport\"content=\"width=device-width\"><meta\x20charset=\"utf-8\">
-SF:<script></script><script>var\x20__blnChallengeStore={\"checkChallengePa
-SF:rams\":{\"rule_id\":\"\",\"request_fate\":\"challengejs\",\"tracking_id
-SF:\":\"\",\"bot_category\":\"unknown\"},\"cookie\":{\"maxAge\":900,\"same
-SF:Site\":\"None\",\"secure\":true,\"name\":\"bln_challengejs\",\"path\":\
-SF:"\\/\",\"value\":\"S-80TxEhGj6JA6Xb8PIRoqHxRVhF-ovUcdbc96iNORpZpacHgQR5
-SF:quDKKqeHQGDQJdsSW1KB0aGLTGNkiNsxWasSvEF5BwHOn_Senhx8tuBOb-ipZgvIhdmk2yW
-SF:roBlpPvIvRjJVaRGp_Dh1XmZMcOH4QgF0UriAoN1MZK0B3lE\"},\"unregisterService
-SF:Worker\":false,\"domain\":\"\.sante\.fr\"};\(\(\)=>{\"use\x20strict\";c
-SF:onst\x20e=function\*\({");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/19%Time=68F45FC3%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,FA6,"HTTP/1\.1\x20202\x20Accepted\r\nDate:\x20Sun,\
+SF:x2019\x20Oct\x202025\x2003:49:23\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x203699\r\nConnection:\x20close\r\nCache-Control:\x20
+SF:no-cache\r\nStrict-Transport-Security:\x20max-age=63072000\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20origin-when-cross-orig
+SF:in\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!DOCTYPE\x20HTML>\n
+SF:<html>\n\n<head>\n\x20\x20\x20\x20<title>Captcha</title>\n\x20\x20\x20\
+SF:x20<meta\x20name=\"viewport\"\x20content=\"width=device-width\">\n\x20\
+SF:x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<script>functio
+SF:n\x20submitForm\(captcha\)\x20{\n\x20\x20const\x20http\x20=\x20new\x20X
+SF:MLHttpRequest\(\);\n\x20\x20const\x20url\x20=\x20'/\.well-known/baleen/
+SF:captcha/check';\n\x20\x20var\x20params\x20=\x20'g-recaptcha-response='\
+SF:x20\+\x20captcha\x20\+\x20'&captcha_token=6RaZTa2YKbYOgp6U5HwlaEw0432P8
+SF:l9m_zCrYaTykS667tgtG_gE7d4LoVOIxXLAqP58zD4hJ7eoBMFHGQwk1Fztb1GMnoFvL-Wh
+SF:LdJ9wJ_MF9P6sl-SYY9IexDOL1K6ZxZ1nNWCu19fFqFqzX_T58DqjzaqIpMG0qTymidwzgO
+SF:FzUFA6CmQNXiKgsp08qM-';\n\n\x20\x20http\.onload\x20=\x20function\x20\(\
+SF:)\x20{\n\x20\x20\x20\x20if\x20\(http\.readyState\x20===\x20")%r(HTTPOpt
+SF:ions,1F0,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nDate:\x20Sun,\x2019\x20
+SF:Oct\x202025\x2003:49:23\x20GMT\r\nContent-Type:\x20text/html\r\nContent
+SF:-Length:\x20150\r\nConnection:\x20close\r\nx-cache:\x20MISS\r\nx-cache-
+SF:hits:\x200\r\nX-Varnish:\x20272390426\r\nAge:\x200\r\nStrict-Transport-
+SF:Security:\x20max-age=63072000\r\nX-Content-Type-Options:\x20nosniff\r\n
+SF:Referrer-Policy:\x20origin-when-cross-origin\r\nX-XSS-Protection:\x201;
+SF:\x20mode=block\r\n\r\n<html>\r\n<head><title>405\x20Not\x20Allowed</tit
+SF:le></head>\r\n<body>\r\n<center><h1>405\x20Not\x20Allowed</h1></center>
+SF:\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r(FourOhFour
+SF:Request,FA6,"HTTP/1\.1\x20202\x20Accepted\r\nDate:\x20Sun,\x2019\x20Oct
+SF:\x202025\x2003:49:24\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Le
+SF:ngth:\x203699\r\nConnection:\x20close\r\nCache-Control:\x20no-cache\r\n
+SF:Strict-Transport-Security:\x20max-age=63072000\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nReferrer-Policy:\x20origin-when-cross-origin\r\nX-XSS-
+SF:Protection:\x201;\x20mode=block\r\n\r\n<!DOCTYPE\x20HTML>\n<html>\n\n<h
+SF:ead>\n\x20\x20\x20\x20<title>Captcha</title>\n\x20\x20\x20\x20<meta\x20
+SF:name=\"viewport\"\x20content=\"width=device-width\">\n\x20\x20\x20\x20<
+SF:meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<script>function\x20submitF
+SF:orm\(captcha\)\x20{\n\x20\x20const\x20http\x20=\x20new\x20XMLHttpReques
+SF:t\(\);\n\x20\x20const\x20url\x20=\x20'/\.well-known/baleen/captcha/chec
+SF:k';\n\x20\x20var\x20params\x20=\x20'g-recaptcha-response='\x20\+\x20cap
+SF:tcha\x20\+\x20'&captcha_token=6RaZTa2YKbYOgp6U5HwlaEw0432P8l9m_zCrYaTyk
+SF:S667tgtG_gE7d4LoVOIxXLAqP58zD4hJ7eoBMFHGQwk1Fztb1GMnoFvL-WhLdJ9wJ_MF9P6
+SF:sl-SYY9IexDOL1K6H5WziXp2pMwo0mS-mdqJ8x4_uAzJ_IiVCs0FtTIP8BhOuht0_-GU0bc
+SF:XBUB6M5vD';\n\n\x20\x20http\.onload\x20=\x20function\x20\(\)\x20{\n\x20
+SF:\x20\x20\x20if\x20\(http\.readyState\x20===\x20");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Sep 25 04:27:39 2025 -- 1 IP address (1 host up) scanned in 35.15 seconds
+# Nmap done at Sun Oct 19 03:49:39 2025 -- 1 IP address (1 host up) scanned in 35.69 seconds
