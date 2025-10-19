@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -318,7 +318,7 @@
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -457,8 +457,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (40)"
+              "severity"     : "HIGH",
+              "finding"      : "expires < 30 days (16)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -471,7 +471,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "HIGH",
               "finding"      : "2025-11-04 23:59"
           }
 ,         {
@@ -576,15 +576,15 @@
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-22 11:33"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ok > 40 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires <= 40 days"
           }
 ,         {
               "id"           : "intermediate_cert_chain <#1>",
@@ -599,6 +599,84 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1760845157"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=1"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "x-cache: Miss"
           }
 ,         {
               "id"           : "heartbleed",
@@ -622,10 +700,10 @@
               "id"           : "ticketbleed",
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "no session ticket extension"
           }
 ,         {
               "id"           : "ROBOT",
@@ -660,7 +738,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1088,6 +1175,6 @@
               "ip"           : "cotes-darmor.gouv.fr/77.159.252.140",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "161"
+              "finding"      : "166"
           }
 ]
