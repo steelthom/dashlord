@@ -1,34 +1,35 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "F",
     "error": null,
-    "score": 70,
+    "score": 20,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Thu, 25 Sep 2025 04:51:15 GMT",
+      "date": "Sun, 26 Oct 2025 03:28:32 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "content-length": "19555",
+      "content-length": "26844",
       "connection": "close",
       "cache-control": "max-age=86400, public",
-      "x-drupal-dynamic-cache": "MISS",
+      "x-drupal-dynamic-cache": "HIT",
       "x-ua-compatible": "IE=edge",
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Wed, 24 Sep 2025 14:46:25 GMT",
+      "last-modified": "Sat, 25 Oct 2025 16:34:32 GMT",
       "x-cacheable": "YES",
       "x-cache-ttl": "86400.000",
-      "etag": "W/\"1758725185\"",
+      "etag": "W/\"1761410072\"",
       "vary": "Accept-Encoding",
-      "cache-tags": "MISS",
-      "x-cache": "MISS",
-      "x-cache-hits": "0",
+      "cache-tags": "HIT",
+      "x-cache": "HIT",
+      "x-cache-age": "39202",
+      "x-cache-hits": "1784",
       "accept-ranges": "bytes",
       "strict-transport-security": "max-age=31536000; includeSubdomains"
     }
@@ -95,10 +96,15 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "//unpkg.com/swiper@11/swiper-bundle.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
