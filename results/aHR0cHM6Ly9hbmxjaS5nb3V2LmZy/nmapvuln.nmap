@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Sep 28 03:23:24 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln anlci.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct 26 04:05:56 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln anlci.gouv.fr
 Nmap scan report for anlci.gouv.fr (54.38.240.231)
-Host is up (0.15s latency).
+Host is up (0.100s latency).
 rDNS record for 54.38.240.231: vps-f93df518.vps.ovh.net
 Not shown: 939 filtered tcp ports (no-response), 56 closed tcp ports (reset)
 PORT     STATE SERVICE       VERSION
@@ -48,6 +48,7 @@ PORT     STATE SERVICE       VERSION
 |     	B1F444E0-F217-5FC0-B266-EBD48589940F	8.1	https://vulners.com/githubexploit/B1F444E0-F217-5FC0-B266-EBD48589940F	*EXPLOIT*
 |     	92254168-3B26-54C9-B9BE-B4B7563586B5	8.1	https://vulners.com/githubexploit/92254168-3B26-54C9-B9BE-B4B7563586B5	*EXPLOIT*
 |     	91752937-D1C1-5913-A96F-72F8B8AB4280	8.1	https://vulners.com/githubexploit/91752937-D1C1-5913-A96F-72F8B8AB4280	*EXPLOIT*
+|     	90104C60-A887-5437-8521-545277685F55	8.1	https://vulners.com/githubexploit/90104C60-A887-5437-8521-545277685F55	*EXPLOIT*
 |     	89F96BAB-1624-51B5-B09E-E771D918D1E6	8.1	https://vulners.com/githubexploit/89F96BAB-1624-51B5-B09E-E771D918D1E6	*EXPLOIT*
 |     	81F0C05A-8650-5DE8-97E9-0D89F1807E5D	8.1	https://vulners.com/githubexploit/81F0C05A-8650-5DE8-97E9-0D89F1807E5D	*EXPLOIT*
 |     	7C7167AF-E780-5506-BEFA-02E5362E8E48	8.1	https://vulners.com/githubexploit/7C7167AF-E780-5506-BEFA-02E5362E8E48	*EXPLOIT*
@@ -97,7 +98,11 @@ PORT     STATE SERVICE       VERSION
 |     	5325A9D6-132B-590C-BDEF-0CB105252732	6.5	https://vulners.com/gitee/5325A9D6-132B-590C-BDEF-0CB105252732	*EXPLOIT*
 |     	530326CF-6AB3-5643-AA16-73DC8CB44742	6.5	https://vulners.com/githubexploit/530326CF-6AB3-5643-AA16-73DC8CB44742	*EXPLOIT*
 |     	CVE-2023-48795	5.9	https://vulners.com/cve/CVE-2023-48795
+|     	CNVD-2021-25272	5.9	https://vulners.com/cnvd/CNVD-2021-25272
+|     	6D74A425-60A7-557A-B469-1DD96A2D8FF8	5.9	https://vulners.com/githubexploit/6D74A425-60A7-557A-B469-1DD96A2D8FF8	*EXPLOIT*
 |     	CVE-2023-51384	5.5	https://vulners.com/cve/CVE-2023-51384
+|     	B7EACB4F-A5CF-5C5A-809F-E03CCE2AB150	3.6	https://vulners.com/githubexploit/B7EACB4F-A5CF-5C5A-809F-E03CCE2AB150	*EXPLOIT*
+|     	4C6E2182-0E99-5626-83F6-1646DD648C57	3.6	https://vulners.com/githubexploit/4C6E2182-0E99-5626-83F6-1646DD648C57	*EXPLOIT*
 |_    	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
 80/tcp   open  http          nginx
 443/tcp  open  ssl/http      nginx
@@ -106,11 +111,11 @@ PORT     STATE SERVICE       VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
 |     Server: sw-cp-server
-|     Date: Sun, 28 Sep 2025 03:23:45 GMT
+|     Date: Sun, 26 Oct 2025 04:06:15 GMT
 |     Content-Type: text/html
 |     Content-Length: 910
 |     Connection: close
-|     ETag: "68c79de2-38e"
+|     ETag: "68e7f640-38e"
 |     <!DOCTYPE html>
 |     <!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. -->
 |     <html lang="en" dir="ltr">
@@ -123,17 +128,17 @@ PORT     STATE SERVICE       VERSION
 |     <script src="/ui-library/plesk-ui-library.min.js?3.40.10"></script>
 |     <script src="/cp/javascript/vendors.js"></script>
 |     <script src="/cp/javascript/main.js"></script>
-|     <script src="/error_docs/uat.js?v5"></script>
+|     <script src="/error_docs/uat.js?v6"></script>
 |     <link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"></head>
 |     <body>
 |   GetRequest: 
 |     HTTP/1.1 303 See Other
 |     Server: sw-cp-server
-|     Date: Sun, 28 Sep 2025 03:23:44 GMT
+|     Date: Sun, 26 Oct 2025 04:06:14 GMT
 |     Content-Type: text/html; charset=UTF-8
 |     Connection: close
 |     Expires: Fri, 28 May 1999 00:00:00 GMT
-|     Last-Modified: Sun, 28 Sep 2025 03:23:44 GMT
+|     Last-Modified: Sun, 26 Oct 2025 04:06:14 GMT
 |     Cache-Control: no-store, no-cache, must-revalidate
 |     Cache-Control: post-check=0, pre-check=0
 |     Pragma: no-cache
@@ -145,11 +150,11 @@ PORT     STATE SERVICE       VERSION
 |   HTTPOptions: 
 |     HTTP/1.1 405 Not Allowed
 |     Server: sw-cp-server
-|     Date: Sun, 28 Sep 2025 03:23:44 GMT
+|     Date: Sun, 26 Oct 2025 04:06:15 GMT
 |     Content-Type: text/html
 |     Content-Length: 918
 |     Connection: close
-|     ETag: "68c79de2-396"
+|     ETag: "68e7f640-396"
 |     <!DOCTYPE html>
 |     <!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. -->
 |     <html lang="en" dir="ltr">
@@ -162,59 +167,59 @@ PORT     STATE SERVICE       VERSION
 |     <script src="/ui-library/plesk-ui-library.min.js?3.40.10"></script>
 |     <script src="/cp/javascript/vendors.js"></script>
 |     <script src="/cp/javascript/main.js"></script>
-|     <script src="/error_docs/uat.js?v5"></script>
+|     <script src="/error_docs/uat.js?v6"></script>
 |     <link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"></head>
 |_    <bod
 |_http-server-header: sw-cp-server
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=9/28%Time=68D8AA40%P=x86_64-alpine-linu
-SF:x-musl%r(GetRequest,216,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x2
-SF:0sw-cp-server\r\nDate:\x20Sun,\x2028\x20Sep\x202025\x2003:23:44\x20GMT\
-SF:r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close
-SF:\r\nExpires:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Mo
-SF:dified:\x20Sun,\x2028\x20Sep\x202025\x2003:23:44\x20GMT\r\nCache-Contro
-SF:l:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20po
-SF:st-check=0,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x
-SF:20COR\x20CURa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\nX-
-SF:Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r
-SF:\nLocation:\x20https://localhost:8443/login\.php\r\nX-Content-Type-Opti
-SF:ons:\x20nosniff\r\n\r\n")%r(HTTPOptions,444,"HTTP/1\.1\x20405\x20Not\x2
-SF:0Allowed\r\nServer:\x20sw-cp-server\r\nDate:\x20Sun,\x2028\x20Sep\x2020
-SF:25\x2003:23:44\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
-SF:x20918\r\nConnection:\x20close\r\nETag:\x20\"68c79de2-396\"\r\n\r\n<!DO
-SF:CTYPE\x20html>\n<!--\x20Copyright\x201999-2025\.\x20WebPros\x20Internat
-SF:ional\x20GmbH\.\x20All\x20rights\x20reserved\.\x20-->\n<html\x20lang=\"
-SF:en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\
-SF:">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devic
-SF:e-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<t
-SF:itle>405\x20Method\x20Not\x20Allowed</title>\n\x20\x20\x20\x20<link\x20
-SF:rel=\"shortcut\x20icon\"\x20href=\"/favicon\.ico\">\n\x20\x20\x20\x20<l
-SF:ink\x20rel=\"stylesheet\"\x20href=\"/ui-library/plesk-ui-library\.css\?
-SF:3\.40\.10\">\n\x20\x20\x20\x20<script\x20src=\"/ui-library/plesk-ui-lib
-SF:rary\.min\.js\?3\.40\.10\"></script>\n\x20\x20\x20\x20<script\x20src=\"
-SF:/cp/javascript/vendors\.js\"></script>\n\x20\x20\x20\x20<script\x20src=
-SF:\"/cp/javascript/main\.js\"></script>\n\x20\x20\x20\x20<script\x20src=\
-SF:"/error_docs/uat\.js\?v5\"></script>\n<link\x20href=\"/error_docs/app\.
-SF:css\?3275a11af93002eb5427\"\x20rel=\"stylesheet\"></head>\n<bod")%r(Fou
-SF:rOhFourRequest,43A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20sw-c
-SF:p-server\r\nDate:\x20Sun,\x2028\x20Sep\x202025\x2003:23:45\x20GMT\r\nCo
-SF:ntent-Type:\x20text/html\r\nContent-Length:\x20910\r\nConnection:\x20cl
-SF:ose\r\nETag:\x20\"68c79de2-38e\"\r\n\r\n<!DOCTYPE\x20html>\n<!--\x20Cop
-SF:yright\x201999-2025\.\x20WebPros\x20International\x20GmbH\.\x20All\x20r
-SF:ights\x20reserved\.\x20-->\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head
-SF:>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x
-SF:20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1
-SF:,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<title>404\x20Page\x20Not\x20
-SF:Found</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20hre
-SF:f=\"/favicon\.ico\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20hr
-SF:ef=\"/ui-library/plesk-ui-library\.css\?3\.40\.10\">\n\x20\x20\x20\x20<
-SF:script\x20src=\"/ui-library/plesk-ui-library\.min\.js\?3\.40\.10\"></sc
-SF:ript>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/vendors\.js\"></
-SF:script>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/main\.js\"></s
-SF:cript>\n\x20\x20\x20\x20<script\x20src=\"/error_docs/uat\.js\?v5\"></sc
-SF:ript>\n<link\x20href=\"/error_docs/app\.css\?3275a11af93002eb5427\"\x20
-SF:rel=\"stylesheet\"></head>\n<body>\n<di");
+SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=10/26%Time=68FD9E36%P=x86_64-alpine-lin
+SF:ux-musl%r(GetRequest,216,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x
+SF:20sw-cp-server\r\nDate:\x20Sun,\x2026\x20Oct\x202025\x2004:06:14\x20GMT
+SF:\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20clos
+SF:e\r\nExpires:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-M
+SF:odified:\x20Sun,\x2026\x20Oct\x202025\x2004:06:14\x20GMT\r\nCache-Contr
+SF:ol:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20p
+SF:ost-check=0,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\
+SF:x20COR\x20CURa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\nX
+SF:-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\
+SF:r\nLocation:\x20https://localhost:8443/login\.php\r\nX-Content-Type-Opt
+SF:ions:\x20nosniff\r\n\r\n")%r(HTTPOptions,444,"HTTP/1\.1\x20405\x20Not\x
+SF:20Allowed\r\nServer:\x20sw-cp-server\r\nDate:\x20Sun,\x2026\x20Oct\x202
+SF:025\x2004:06:15\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:
+SF:\x20918\r\nConnection:\x20close\r\nETag:\x20\"68e7f640-396\"\r\n\r\n<!D
+SF:OCTYPE\x20html>\n<!--\x20Copyright\x201999-2025\.\x20WebPros\x20Interna
+SF:tional\x20GmbH\.\x20All\x20rights\x20reserved\.\x20-->\n<html\x20lang=\
+SF:"en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8
+SF:\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devi
+SF:ce-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<
+SF:title>405\x20Method\x20Not\x20Allowed</title>\n\x20\x20\x20\x20<link\x2
+SF:0rel=\"shortcut\x20icon\"\x20href=\"/favicon\.ico\">\n\x20\x20\x20\x20<
+SF:link\x20rel=\"stylesheet\"\x20href=\"/ui-library/plesk-ui-library\.css\
+SF:?3\.40\.10\">\n\x20\x20\x20\x20<script\x20src=\"/ui-library/plesk-ui-li
+SF:brary\.min\.js\?3\.40\.10\"></script>\n\x20\x20\x20\x20<script\x20src=\
+SF:"/cp/javascript/vendors\.js\"></script>\n\x20\x20\x20\x20<script\x20src
+SF:=\"/cp/javascript/main\.js\"></script>\n\x20\x20\x20\x20<script\x20src=
+SF:\"/error_docs/uat\.js\?v6\"></script>\n<link\x20href=\"/error_docs/app\
+SF:.css\?3275a11af93002eb5427\"\x20rel=\"stylesheet\"></head>\n<bod")%r(Fo
+SF:urOhFourRequest,43A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20sw-
+SF:cp-server\r\nDate:\x20Sun,\x2026\x20Oct\x202025\x2004:06:15\x20GMT\r\nC
+SF:ontent-Type:\x20text/html\r\nContent-Length:\x20910\r\nConnection:\x20c
+SF:lose\r\nETag:\x20\"68e7f640-38e\"\r\n\r\n<!DOCTYPE\x20html>\n<!--\x20Co
+SF:pyright\x201999-2025\.\x20WebPros\x20International\x20GmbH\.\x20All\x20
+SF:rights\x20reserved\.\x20-->\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<hea
+SF:d>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\
+SF:x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=
+SF:1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<title>404\x20Page\x20Not\x2
+SF:0Found</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20hr
+SF:ef=\"/favicon\.ico\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20h
+SF:ref=\"/ui-library/plesk-ui-library\.css\?3\.40\.10\">\n\x20\x20\x20\x20
+SF:<script\x20src=\"/ui-library/plesk-ui-library\.min\.js\?3\.40\.10\"></s
+SF:cript>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/vendors\.js\"><
+SF:/script>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/main\.js\"></
+SF:script>\n\x20\x20\x20\x20<script\x20src=\"/error_docs/uat\.js\?v6\"></s
+SF:cript>\n<link\x20href=\"/error_docs/app\.css\?3275a11af93002eb5427\"\x2
+SF:0rel=\"stylesheet\"></head>\n<body>\n<di");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 28 03:24:09 2025 -- 1 IP address (1 host up) scanned in 45.22 seconds
+# Nmap done at Sun Oct 26 04:06:34 2025 -- 1 IP address (1 host up) scanned in 37.40 seconds
