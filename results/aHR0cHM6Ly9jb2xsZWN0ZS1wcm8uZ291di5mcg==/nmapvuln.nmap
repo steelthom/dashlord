@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Sep 28 03:31:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln collecte-pro.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct 26 03:36:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln collecte-pro.gouv.fr
 Nmap scan report for collecte-pro.gouv.fr (185.194.82.232)
-Host is up (0.081s latency).
+Host is up (0.12s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -35,14 +35,14 @@ PORT    STATE  SERVICE   VERSION
 |     ERROR
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Sun, 28 Sep 2025 03:32:12 GMT
+|     Date: Sun, 26 Oct 2025 03:36:35 GMT
 |     Content-Type: text/html
 |     Content-Length: 615
 |     Last-Modified: Mon, 24 Jun 2024 17:37:24 GMT
 |     Connection: close
 |     ETag: "6679aed4-267"
 |     Accept-Ranges: bytes
-|     Set-Cookie: BIGipServerpool-ecollecte-prod.cegedim.cloud-http=!a6yaslh8I4spIqGGSajX/n7IEULO/EIlZirQyU9yTGDxJFN0qkTkBIm6cM0VIZwpHTXjSb+mJnKPrZjidemRKzoI+zPi; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-ecollecte-prod.cegedim.cloud-http=!mOXExsRnFLTg5q6GSajX/n7IEULO/LAeClNco3Azzi8SKigGMtn7JwiBFBN+aJz9J9Ri4tFytKIQ/pB1gt1w7TxBW7Ff; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html>
 |     <html>
@@ -72,29 +72,29 @@ PORT    STATE  SERVICE   VERSION
 |_    ERROR
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=9/28%Time=68D8AC36%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=10/26%Time=68FD9738%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=9/28%Time=68D8AC3C%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,431,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2028\x
-SF:20Sep\x202025\x2003:32:12\x20GMT\r\nContent-Type:\x20text/html\r\nConte
-SF:nt-Length:\x20615\r\nLast-Modified:\x20Mon,\x2024\x20Jun\x202024\x2017:
-SF:37:24\x20GMT\r\nConnection:\x20close\r\nETag:\x20\"6679aed4-267\"\r\nAc
-SF:cept-Ranges:\x20bytes\r\nSet-Cookie:\x20BIGipServerpool-ecollecte-prod\
-SF:.cegedim\.cloud-http=!a6yaslh8I4spIqGGSajX/n7IEULO/EIlZirQyU9yTGDxJFN0q
-SF:kTkBIm6cM0VIZwpHTXjSb\+mJnKPrZjidemRKzoI\+zPi;\x20path=/;\x20Httponly;\
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/26%Time=68FD9744%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,431,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sun,\x2026\
+SF:x20Oct\x202025\x2003:36:35\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x20615\r\nLast-Modified:\x20Mon,\x2024\x20Jun\x202024\x2017
+SF::37:24\x20GMT\r\nConnection:\x20close\r\nETag:\x20\"6679aed4-267\"\r\nA
+SF:ccept-Ranges:\x20bytes\r\nSet-Cookie:\x20BIGipServerpool-ecollecte-prod
+SF:\.cegedim\.cloud-http=!mOXExsRnFLTg5q6GSajX/n7IEULO/LAeClNco3Azzi8SKigG
+SF:Mtn7JwiBFBN\+aJz9J9Ri4tFytKIQ/pB1gt1w7TxBW7Ff;\x20path=/;\x20Httponly;\
 SF:x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20include
 SF:SubDomains\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<head>\n<title>Welcome\x2
 SF:0to\x20nginx!</title>\n<style>\nhtml\x20{\x20color-scheme:\x20light\x20
@@ -115,4 +115,4 @@ SF:t\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ER
 SF:ROR");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Sep 28 03:34:36 2025 -- 1 IP address (1 host up) scanned in 163.05 seconds
+# Nmap done at Sun Oct 26 03:39:03 2025 -- 1 IP address (1 host up) scanned in 174.30 seconds
