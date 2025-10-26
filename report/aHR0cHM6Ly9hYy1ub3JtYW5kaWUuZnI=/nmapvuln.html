@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ac-normandie.fr</pre>
-<p class="lead">Thu Sep 25 04:58:33 2025 – Thu Sep 25 04:58:55 2025<br>1 hosts scanned.
+<p class="lead">Sun Oct 26 03:16:53 2025 – Sun Oct 26 03:19:31 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -136,14 +136,40 @@
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
-<td title="Product">F5 BIG-IP load balancer http proxy</td>
+<td title="Service">https</td>
+<td title="Product">BigIP</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">BigIP</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://www./nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Server: BigIP
+    Connection: close
+    Content-Length: 0
+  GetRequest, RTSPRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://www./
+    Server: BigIP
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://www.sip:nm
+    Server: BigIP
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://www.mstshash=nmap
+    Server: BigIP
+    Connection: close
+    Content-Length: 0</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -176,8 +202,8 @@
 <td>193.50.120.91 - ac-normandie.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http-proxy</td>
-<td>F5 BIG-IP load balancer http proxy</td>
+<td>https</td>
+<td>BigIP</td>
 <td></td>
 <td></td>
 <td></td>
