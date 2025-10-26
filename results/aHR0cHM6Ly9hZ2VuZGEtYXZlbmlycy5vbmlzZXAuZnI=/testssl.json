@@ -443,8 +443,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "81 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (53)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -457,7 +457,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-18 23:59"
           }
 ,         {
@@ -682,7 +682,7 @@
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -696,28 +696,14 @@
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1759030178"
+              "finding"      : "1761450008"
           }
 ,         {
-              "id"           : "HSTS_time",
+              "id"           : "HSTS",
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "180 days (=15552001 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "only for this domain"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "domain is NOT marked for preloading"
+              "severity"     : "LOW",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "HPKP",
@@ -745,28 +731,7 @@
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options_multiple",
-              "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "Multiple X-Frame-Options headers. Using first header: SAMEORIGIN"
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -870,10 +835,10 @@
               "id"           : "BREACH",
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1301,6 +1266,6 @@
               "ip"           : "agenda-avenirs.onisep.fr/195.83.117.42",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "105"
+              "finding"      : "176"
           }
 ]
