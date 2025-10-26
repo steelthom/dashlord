@@ -388,7 +388,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -409,7 +409,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -555,8 +555,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "66 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -569,7 +569,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 23:28"
           }
 ,         {
@@ -604,8 +604,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "carlabelling.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -849,8 +856,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "66 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -863,7 +870,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 23:29"
           }
 ,         {
@@ -898,8 +905,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "carlabelling.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -1053,7 +1067,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758777562"
+              "finding"      : "1761451710"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1061,7 +1075,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=bqd1gmMjmgRszG.f6jWH0q7eFCnLh6y4zWJAJgZVIkw-1758777562-1.0.1.1-ldsq41EYT3EUF.AmDVtImrYkNI1yZJgGCFJdYNODGnvKV1Q8ipqKleY9ZX.ZCT9rZ.mmKliAjcV__f7VwFaiFLj37wdA56.3YBr_3CkYl1c; path=/; expires=Thu, 25-Sep-25 05:49:22 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=usG84ebt20SvnzMsVuI7qKxrvIlJzxVfct2aygnz3oM-1761451709.5751605-1.0.1.1-C6sV9GAp3iYK3bnuhbIPGcpfPsBPPo.xGeUk3GhQbimHwUx5t4pLmMGNi5Ih5PLKj23t3cZRIbDtnmDRMRXeS3x2We5i9WuR4JvwZdWVYFgi3R.I5qIVw4ZW2vXirm2Z; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:38:30 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -2008,7 +2022,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -2029,7 +2043,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -2175,8 +2189,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "66 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2189,7 +2203,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 23:28"
           }
 ,         {
@@ -2224,8 +2238,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "carlabelling.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -2469,8 +2490,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "66 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2483,7 +2504,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 23:29"
           }
 ,         {
@@ -2518,8 +2539,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "carlabelling.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -2673,7 +2701,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758777647"
+              "finding"      : "1761451798"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2681,7 +2709,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=.uEpz_7Zzduji_d_CYSl2XImumI5I21.tSlEql_DZ1I-1758777647-1.0.1.1-INBWuk_KnzflnsV48sdiwv_XqTFAUfZ9dWxr.YIgDIETaA5FEhS6goWDsl3KJ3zmfDi6KZzN5bWdGJobDEvdH8kNbh.cg8kJW1tDUqiV9r0; path=/; expires=Thu, 25-Sep-25 05:50:47 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=6PLQAAHsIucWy6iKTGhzT1hUtTyxMG_MbCkX.R1a1j4-1761451797.0625033-1.0.1.1-31ZPdCbyNoKa6t35QSnpjAOoHYc.XjxVSkBArfFINrAPOwKhEhclzz5v9svHJaR0gHRYqW.zXnEe3YCW8ZMnKNlVdfz8yJdYeCYfjZSxr_ONJLie913r0xVOB_xKv7qA; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:39:58 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -3244,6 +3272,6 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "171"
+              "finding"      : "177"
           }
 ]
