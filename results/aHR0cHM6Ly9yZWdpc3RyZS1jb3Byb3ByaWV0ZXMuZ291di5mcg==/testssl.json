@@ -293,11 +293,18 @@
               "finding"      : "TLSv1.2   x67     DHE-RSA-AES128-SHA256             DH 2048    AES         128      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256"
           }
 ,         {
+              "id"           : "cipher-tls1_2_x33",
+              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "TLSv1.2   x33     DHE-RSA-AES128-SHA                DH 2048    AES         128      TLS_DHE_RSA_WITH_AES_128_CBC_SHA"
+          }
+,         {
               "id"           : "cipherorder_TLSv1_2",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA DHE-RSA-AES128-SHA256"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA"
           }
 ,         {
               "id"           : "cipher_order",
@@ -577,7 +584,7 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "SHA256 with RSA"
+              "finding"      : "ECDSA with SHA256"
           }
 ,         {
               "id"           : "cert_keySize",
@@ -598,14 +605,14 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS Web Server Authentication"
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
           }
 ,         {
               "id"           : "cert_serialNumber",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1565337EE4CBF069ECB2C22F1946AFDD"
+              "finding"      : "0779661032F3DF27084E29FB34AB39A1"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -619,28 +626,28 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "F33B3130271F860DDF42BA2F04299013D32DB3D9"
+              "finding"      : "708A80EEF2CDB6F5443CE9496ADC3065CD0B27CC"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "69679AC79FDFC138EABFA1453C8934C7AFF2C1A31AEEE3D3BCBFBBE50684C12D"
+              "finding"      : "6D922D1233F5D55B939C3142110395E89AD785F9AE51C33E95DC78CE8A9CB20D"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFnjCCBUSgAwIBAgIQB3lmEDLz3ycITin7NKs5oTAKBggqhkjOPQQDAjBgMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMR8wHQYDVQQDExZSYXBpZFNTTCBUTFMgRUNDIENBIEcxMB4XDTI1MDkyNjAwMDAwMFoXDTI2MDkyNTIzNTk1OVowLDEqMCgGA1UEAxMhd3d3LnJlZ2lzdHJlLWNvcHJvcHJpZXRlcy5nb3V2LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv00lA0NOMJb1YbpA5n/KZePGEy8IpjxJQc2m2P2ZLvGPX5rIHHddR4QQ/JUuI3wXg0DIjgOSxZygABVZ/LUH/+SMKC6Utb7E0TTPLz73cB1/C2Jc/eR/l/uvsN2FNCUNJ7gQuMPdgNfcr3XWqmNPW9sy0qJYXvsY5ejXuWwrjpO+wNQ3xyxab6jRzOXq0+H5g11taShLbxtOddffb9nxGuYRUkdGM4N0kc0ZVrVrzKhUelEP0CJB6ya0wkgY4Jx1Y7KLFvUqe2yKBEsSYDbKhTSZOcUA+TaP5McK1qRVxIgiIrV3joSgTR4OiK+SDes9LBNqKM1f5rEIgRh54TCwMwIDAQABo4IDRzCCA0MwHwYDVR0jBBgwFoAUQd9N8GGTx/y1q818kgKdD3ycCpAwHQYDVR0OBBYEFDkI7Es5Wf0w83NFvhNjp8CfC87WMEsGA1UdEQREMEKCIXd3dy5yZWdpc3RyZS1jb3Byb3ByaWV0ZXMuZ291di5mcoIdcmVnaXN0cmUtY29wcm9wcmlldGVzLmdvdXYuZnIwPgYDVR0gBDcwNTAzBgZngQwBAgEwKTAnBggrBgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20vQ1BTMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwPwYDVR0fBDgwNjA0oDKgMIYuaHR0cDovL2NkcC5yYXBpZHNzbC5jb20vUmFwaWRTU0xUTFNFQ0NDQUcxLmNybDB2BggrBgEFBQcBAQRqMGgwJgYIKwYBBQUHMAGGGmh0dHA6Ly9zdGF0dXMucmFwaWRzc2wuY29tMD4GCCsGAQUFBzAChjJodHRwOi8vY2FjZXJ0cy5yYXBpZHNzbC5jb20vUmFwaWRTU0xUTFNFQ0NDQUcxLmNydDAMBgNVHRMBAf8EAjAAMIIBfAYKKwYBBAHWeQIEAgSCAWwEggFoAWYAdgDYCVU7lE96/8gWGW+UT4WrsPj8XodVJg8V0S5yu0VLFAAAAZmGA4fkAAAEAwBHMEUCICxxVLtBZU6II6HE1fk3flMQcan9OtGL3vzd8cfqc+zOAiEAiHxUPxDQlVCl4FE9ds9Rmei6whu7dA4smAZ3SG35LXcAdQDCMX5XRRmjRe5/ON6ykEHrx8IhWiK/f9W1rXaa2Q5SzQAAAZmGA4ftAAAEAwBGMEQCIEbwqhB8o52jHkbz0qp1GkGSbOdbiiKXFYz/kg+kkBRrAiBzzaKgQQFbzdGlH06hihgz5PHBKxu1KQuXMq/osSHg+gB1AJROQ4f67MHvgfMZJCaoGGUBx9NfOAIBP3JnfVU3LhnYAAABmYYDh/kAAAQDAEYwRAIgcHqxOze6siNoCjOCIO5IP6uaeC8gnzsWYTN45JEJCBkCIAGbWJ/v6Lr798oZNYfOfStPkdCuGAF77tWGAGTSTvrMMAoGCCqGSM49BAMCA0gAMEUCIBq5tRmGcIBfZwErPZ4MHRSonylndzAfj6+AY3YC4DsQAiEAxwdNi3K52neh7ObNW3GJ4A9u2qCz5qyJtNM++9oq0ec=\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "www.decisionnel.registre-coproprietes.gouv.fr"
+              "finding"      : "www.registre-coproprietes.gouv.fr"
           }
 ,         {
               "id"           : "cert_commonName_wo_SNI",
@@ -654,14 +661,14 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "www.decisionnel.registre-coproprietes.gouv.fr"
+              "finding"      : "www.registre-coproprietes.gouv.fr registre-coproprietes.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "certificate does not match supplied URI (same w/o SNI)"
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN (SNI mandatory)"
           }
 ,         {
               "id"           : "cert_chain_of_trust",
@@ -681,22 +688,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (56)"
+              "severity"     : "OK",
+              "finding"      : "334 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-08-18 00:00"
+              "finding"      : "2025-09-26 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "2025-11-20 23:59"
+              "severity"     : "OK",
+              "finding"      : "2026-09-25 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -717,14 +724,14 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
+              "finding"      : "http://cdp.rapidssl.com/RapidSSLTLSECCCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.certigna.fr http://servicesca.ocsp.dhimyotis.com"
+              "finding"      : "http://status.rapidssl.com"
           }
 ,         {
               "id"           : "OCSP_stapling",
@@ -773,35 +780,35 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "RapidSSL TLS ECC CA G1 (DigiCert Inc from US)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIDSDCCAs2gAwIBAgIQDe14llNJs2jUH37j4e7R6zAKBggqhkjOPQQDAjBhMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBHMzAeFw0xNzExMDIxMjU5NThaFw0yNzExMDIxMjU5NThaMGAxCzAJBgNVBAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20xHzAdBgNVBAMTFlJhcGlkU1NMIFRMUyBFQ0MgQ0EgRzEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAS0B8sKopaFyriqw/ENK/dsQeYY/oh7ipH6DHQRRLqSaBkWipKiOOnENXi33xB3Ps3w1T1Fmu0NNbv6X/8JIAxUo4IBZjCCAWIwHQYDVR0OBBYEFEHfTfBhk8f8tavNfJICnQ98nAqQMB8GA1UdIwQYMBaAFLPbSKT5ocXYrjZBzBFjaWIpvEvGMA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwEgYDVR0TAQH/BAgwBgEB/wIBADA0BggrBgEFBQcBAQQoMCYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBCBgNVHR8EOzA5MDegNaAzhjFodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vRGlnaUNlcnRHbG9iYWxSb290RzMuY3JsMGMGA1UdIARcMFowNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCwYJYIZIAYb9bAECMAgGBmeBDAECATAIBgZngQwBAgIwCgYIKoZIzj0EAwIDaQAwZgIxAPjDxesWLPJ8wRUPGkI2cnMNzbrosi1q8Lx+dQs+i1grD8fEYmPLcFBeBxbzE5iNvgIxAOO5enRE3NmOMhVWFxq1lRBB2fF+tDeHlkpyP6ylBmQQd8UUqzHVjGFdZUOd9Ufi+Q==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "FC16D53203BD9187D69CC99D2DA551076B4DCB298140D6751F7A012966C99FDD"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2017-11-02 12:59"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-11-22 11:33"
+              "finding"      : "2027-11-02 12:59"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
@@ -815,7 +822,7 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "RapidSSL TLS ECC CA G1 <-- DigiCert Global Root G3"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -1009,7 +1016,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=69679AC79FDFC138EABFA1453C8934C7AFF2C1A31AEEE3D3BCBFBBE50684C12D"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=6D922D1233F5D55B939C3142110395E89AD785F9AE51C33E95DC78CE8A9CB20D"
           }
 ,         {
               "id"           : "LOGJAM-common_primes",
@@ -1329,66 +1336,59 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "97"
           }
 ,         {
               "id"           : "protocol_support_score_weighted",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "29"
           }
 ,         {
               "id"           : "key_exchange_score",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "90"
           }
 ,         {
               "id"           : "key_exchange_score_weighted",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "27"
           }
 ,         {
               "id"           : "cipher_strength_score",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "90"
           }
 ,         {
               "id"           : "cipher_strength_score_weighted",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "36"
           }
 ,         {
               "id"           : "final_score",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0"
+              "finding"      : "92"
           }
 ,         {
               "id"           : "overall_grade",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
-              "severity"     : "CRITICAL",
-              "finding"      : "M"
+              "severity"     : "MEDIUM",
+              "finding"      : "B"
           }
 ,         {
               "id"           : "grade_cap_reason_1",
-              "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to M. Domain name mismatch"
-          }
-,         {
-              "id"           : "grade_cap_reason_2",
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1406,6 +1406,6 @@
               "ip"           : "registre-coproprietes.gouv.fr/178.237.111.255",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "175"
+              "finding"      : "176"
           }
 ]
