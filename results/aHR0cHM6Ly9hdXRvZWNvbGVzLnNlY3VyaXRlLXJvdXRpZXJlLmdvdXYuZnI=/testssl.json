@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -429,8 +429,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (45)"
+              "severity"     : "HIGH",
+              "finding"      : "expires < 30 days (17)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -443,7 +443,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "HIGH",
               "finding"      : "2025-11-12 22:59"
           }
 ,         {
@@ -548,15 +548,15 @@
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-22 11:33"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ok > 40 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires <= 40 days"
           }
 ,         {
               "id"           : "intermediate_cert_chain <#1>",
@@ -571,6 +571,119 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1761450821"
+          }
+,         {
+              "id"           : "HTTP_headerAge",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mucj.autoecoles.securite-routiere.gouv.fr https://cdnjs.cloudflare.com https://cdn.trustcommander.net https://cstatic.weborama.fr https://www.googletagmanager.com http://cdnjs.cloudflare.com https://cdn.tagcommander.com maps.google.com; script-src-elem 'self' 'unsafe-inline' https://mucj.autoecoles.securite-routiere.gouv.fr https://cdnjs.cloudflare.com https://cdn.trustcommander.net https://cstatic.weborama.fr https://www.googletagmanager.com https://cdn.tagcommander.com maps.google.com; style-src 'self' 'unsafe-inline' https://api.tiles.mapbox.com; worker-src 'self' blob:; frame-ancestors 'self'; report-uri http://autoecoles.securite-routiere.gouv.fr/report-uri/enforce"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "strict-origin"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "must-revalidate, no-cache, private"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "x-cache: Miss"
           }
 ,         {
               "id"           : "heartbleed",
@@ -594,10 +707,10 @@
               "id"           : "ticketbleed",
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "no session ticket extension"
           }
 ,         {
               "id"           : "ROBOT",
@@ -632,7 +745,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1060,6 +1182,6 @@
               "ip"           : "autoecoles.securite-routiere.gouv.fr/77.159.252.145",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "156"
+              "finding"      : "76"
           }
 ]
