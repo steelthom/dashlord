@@ -1,14 +1,54 @@
-# Nmap 7.92 scan initiated Thu Sep 25 04:58:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ac-normandie.fr
+# Nmap 7.92 scan initiated Sun Oct 26 03:16:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ac-normandie.fr
 Nmap scan report for ac-normandie.fr (193.50.120.91)
-Host is up (0.088s latency).
+Host is up (0.12s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE        VERSION
-80/tcp  open   http-proxy     F5 BIG-IP load balancer http proxy
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
-443/tcp open   ssl/http-proxy F5 BIG-IP load balancer http proxy
+443/tcp open   ssl/https  BigIP
 |_http-server-header: BigIP
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://www./nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Server: BigIP
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://www./
+|     Server: BigIP
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://www.sip:nm
+|     Server: BigIP
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://www.mstshash=nmap
+|     Server: BigIP
+|     Connection: close
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/26%Time=68FD92BA%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,70,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLoc
+SF:ation:\x20https://www\./\r\nServer:\x20BigIP\r\nConnection:\x20close\r\
+SF:nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,93,"HTTP/1\.0\x2030
+SF:2\x20Moved\x20Temporarily\r\nLocation:\x20https://www\./nice%20ports%2C
+SF:/Tri%6Eity\.txt%2ebak\r\nServer:\x20BigIP\r\nConnection:\x20close\r\nCo
+SF:ntent-Length:\x200\r\n\r\n")%r(RTSPRequest,70,"HTTP/1\.0\x20302\x20Move
+SF:d\x20Temporarily\r\nLocation:\x20https://www\./\r\nServer:\x20BigIP\r\n
+SF:Connection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServer
+SF:Cookie,7C,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20htt
+SF:ps://www\.mstshash=nmap\r\nServer:\x20BigIP\r\nConnection:\x20close\r\n
+SF:Content-Length:\x200\r\n\r\n")%r(SIPOptions,75,"HTTP/1\.0\x20302\x20Mov
+SF:ed\x20Temporarily\r\nLocation:\x20https://www\.sip:nm\r\nServer:\x20Big
+SF:IP\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Sep 25 04:58:55 2025 -- 1 IP address (1 host up) scanned in 22.32 seconds
+# Nmap done at Sun Oct 26 03:19:31 2025 -- 1 IP address (1 host up) scanned in 158.41 seconds
