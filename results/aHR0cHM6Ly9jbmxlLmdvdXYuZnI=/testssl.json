@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -167,6 +167,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "cnle.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "cnle.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "cnle.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "cnle.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
@@ -185,7 +213,7 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -195,18 +223,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "cnle.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "cnle.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -244,11 +286,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -297,7 +339,7 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "82ADCE017E8D09269057363AD364D22C"
+              "finding"      : "FA50678B5553C4F1821CB7423CEC5826"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -311,21 +353,21 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "67976EBE1DFC299E81F661B6A5D9F3859D94D4E9"
+              "finding"      : "254DCD3261A55BEA523523B007113AF08D2FF433"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "72F83E0EED6BEB37CA32A64031C2AB6C92E4524A479342582C7308601CE5FC57"
+              "finding"      : "726CFBC81D8633B2B1E624322081F8B46F3CF4369D1795D25B83826F8194E985"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIKnjCCCIagAwIBAgIRAIKtzgF+jQkmkFc2OtNk0iwwDQYJKoZIhvcNAQELBQAwfTELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURISU1ZT1RJUzEcMBoGA1UECwwTMDAwMiA0ODE0NjMwODEwMDAzNjEdMBsGA1UEYQwUTlRSRlItNDgxNDYzMDgxMDAwMzYxHTAbBgNVBAMMFENlcnRpZ25hIFNlcnZpY2VzIENBMB4XDTI0MTExODIzMDAwMFoXDTI1MTExODIyNTk1OVowgZsxCzAJBgNVBAYTAkZSMQ4wDAYDVQQHDAVQQVJJUzFJMEcGA1UECgxAU0VDUkVUQVJJQVQgR0VORVJBTCBERVMgTUlOSVNURVJFUyBDSEFSR0VTIERFUyBBRkZBSVJFUyBTT0NJQUxFUzEcMBoGA1UEAwwTc29saWRhcml0ZXMuZ291di5mcjETMBEGA1UEBRMKUzMyODI1MDgwODCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAKoD85Ts9WL0fYg1SYW6UKiyQk+xM2uHPWkNurqS2qRzJEWHyegHxZzsxcASqBSPyJbaZhPz+pjt7zoOUK2XkAX6aoxNmP6KcZn/GnYSym8eDLdKc3DU3l7UxAQujE9EUquvfI4QSSJyujot7vhdz6eqIBt8RZv2m1+pDpFBa0nsFfHK4XysPmj0X0GKV7STiTQNAgNZ4wqJjFWMLTEPN6Xz2cHFtOEfeEsdbcJqbRYW6Kalih4kVWvwsOmz9BO2uh7eHMElhZb7qQ3BNQSyFAkvddlfQ5A8k0HnWhrtnipZ/JlJnVlVbpt6STrA7ryCF277zMy31LN07aMkrB2aqAUFQs7llQoQuZs7XAdCp2le8RdWR59fqKe2AKfMHT3cnmlwbwBYyHtkl4NHcqbFa4LJaPgeMEmlwxRGYeTCTgeMwEG/b6DpIDxmatgDcMm8/jS5rVq8uC6m8ksBA1H//jR7a5bex2/kqj4ZzaZtFPFpn3wuYiKxjR/WlrRg/KQx4wIDAQABo4IFeDCCBXQwgeQGCCsGAQUFBwEBBIHXMIHUMDYGCCsGAQUFBzAChipodHRwOi8vYXV0b3JpdGUuY2VydGlnbmEuZnIvc2VydmljZXNjYS5kZXIwOAYIKwYBBQUHMAKGLGh0dHA6Ly9hdXRvcml0ZS5kaGlteW90aXMuY29tL3NlcnZpY2VzY2EuZGVyMDAGCCsGAQUFBzABhiRodHRwOi8vc2VydmljZXNjYS5vY3NwLmRoaW15b3Rpcy5jb20wLgYIKwYBBQUHMAGGImh0dHA6Ly9zZXJ2aWNlc2NhLm9jc3AuY2VydGlnbmEuZnIwHwYDVR0jBBgwFoAUrOyGj0s3HLh/FxsZ0K7oTuM0XBIwDAYDVR0TAQH/BAIwADBhBgNVHSAEWjBYMAgGBmeBDAECAjBMBgsqgXoBgTECBQEBAjA9MDsGCCsGAQUFBwIBFi9odHRwczovL3d3dy5jZXJ0aWduYS5jb20vYXV0b3JpdGUtY2VydGlmaWNhdGlvbjBlBgNVHR8EXjBcMCugKaAnhiVodHRwOi8vY3JsLmNlcnRpZ25hLmZyL3NlcnZpY2VzY2EuY3JsMC2gK6AphidodHRwOi8vY3JsLmRoaW15b3Rpcy5jb20vc2VydmljZXNjYS5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMIIBUQYDVR0RBIIBSDCCAUSCDmFpZGFudC5nb3V2LmZyghF3d3cub25wZXMuZ291di5mcoITc29saWRhcml0ZXMuZ291di5mcoILcnNhLmdvdXYuZnKCF3d3dy5zb2xpZGFyaXRlcy5nb3V2LmZyghBhZG9wdGlvbi5nb3V2LmZyghR3d3cuYWRvcHRpb24uZ291di5mcoIebWV0aWVycy1wZXRpdGUtZW5mYW5jZS5nb3V2LmZyghN3d3cuZmFtaWxsZS5nb3V2LmZygg1vbnBlcy5nb3V2LmZyghB3d3cuY25sZS5nb3V2LmZyghJ3d3cuYWlkYW50LmdvdXYuZnKCInd3dy5tZXRpZXJzLXBldGl0ZS1lbmZhbmNlLmdvdXYuZnKCD2ZhbWlsbGUuZ291di5mcoIPd3d3LnJzYS5nb3V2LmZyggxjbmxlLmdvdXYuZnIwHQYDVR0OBBYEFGpa5KgC/W/WCC0MeNi1Xnn9hnJ8MIIB9wYKKwYBBAHWeQIEAgSCAecEggHjAeEAdgAN4fIwK9MNwUBiEgnqVS78R3R8sdfpMO8OQh60fk6qNAAAAZNFM5bBAAAEAwBHMEUCICH4ki1e9zeMSOXB3osUjxDiOv0AyUVImL6kmI4b/tPlAiEAklEKmhhJudNrDneOo3+Rnca8d+47nLTlDtB8TWxtMXIAdwDd3Mo0ldfhFgXnlTL6x5/4PRxQ39sAOhQSdgosrLvIKgAAAZNFM5THAAAEAwBIMEYCIQCrkkRAtSTa55ZzojdLuypsAfN7xyhrYuzfhqkT3bhXMAIhAMVX0Vv1aEnnZFTUFvLYCnxxE4SAc24aH6A/PDv1cCzaAHYAKCyL3YEP+QkSCs4W1uDsIBvqgqOkrxnZ7/tZ6D/cQmgAAAGTRTOZQQAABAMARzBFAiEAv6VaRM6LyOmcUFf7+eVizhbaixCBJgY/WvmuB6wcX3kCIFqk6ilT3GTpecotzUsGxEiyC7MDGgCp1HEtXBAMKrDFAHYArxgaKNaMo+CpikycZ6sJ+Lu8IrquvLE4o6Gd0/m2Aw0AAAGTRTOVRgAABAMARzBFAiEA0FxmuKAsglNg2oJPiqKpanTWWq2LJITrgc6h1X3sWmkCIB9ut7V0qiw3SUpKD4HaoxKbi3UmmkB+cTjHju4XnX1rMA0GCSqGSIb3DQEBCwUAA4ICAQBLHrGFYfvEl9l1H53m9aUM4GHUR2QPp6T7WMHOdtiVVGSBmBkTdiEUqQ+PvLPzzC6t1gvlPd/UnqS057k4AAF5XKmfo7nydWtMq/BTX7az2QHCSGypLFGSofCGEmlwfe2m5DhGAppE0FUI9bqfglDYd+ZE/HmcVxs5E53PlsW9jnwtuLSOdgg0AeA0nhv5gem2vmxVOrkvkWQOcpLqV4GgJNuJ9xl+g2aeJLspNRfhrfcUA+iIp0nLTFu1lP1xKbQEAoxbvDjB2Jy+ptKfd40bOGRWQb0xnIz6wjtV7RcPKdSXjb1KyeePH3nVhv2MWu733INdTpb4PNiXH8imPa1Gv2ZY9vmjItcyHSvxc/SxKkeq3Gcc35cowj8Dthn2fpP5vy6ENfbTh3nx3EuqP2JsSYPfQ28vmiOZWTlW8nZjEWdIUvf84S1YHLS2EhMAgXp6mvLiGqVDyG3Ujzq+qbETGh8z6wc3ViSfbEMV10/PXct0croEr/7Ik3CNl4eJw4PGn2VveWDixtqrvXfwS7FXN3BGHgwlPMsiE/7Mu9b9RR/KmO0u3RKxcqAwfBGfwCu+05Idp1m1CmWcRJ1+svId00u8iXuY6FGdZ/1VCD76B6LjtWg7p9341btTD61IjeTurB7i8BW6ae3xxUpT8jKYQqh88LBHIeR+BN3zVXkrZw==\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -346,7 +388,7 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "aidant.gouv.fr www.onpes.gouv.fr solidarites.gouv.fr rsa.gouv.fr www.solidarites.gouv.fr adoption.gouv.fr www.adoption.gouv.fr metiers-petite-enfance.gouv.fr www.famille.gouv.fr onpes.gouv.fr www.cnle.gouv.fr www.aidant.gouv.fr www.metiers-petite-enfance.gouv.fr famille.gouv.fr www.rsa.gouv.fr cnle.gouv.fr"
+              "finding"      : "www.solidarites.gouv.fr adoption.gouv.fr www.metiers-petite-enfance.gouv.fr rsa.gouv.fr www.enfance.gouv.fr aidant.gouv.fr www.aidant.gouv.fr www.famille.gouv.fr onpes.gouv.fr cnle.gouv.fr www.cnle.gouv.fr www.adoption.gouv.fr www.rsa.gouv.fr www.onpes.gouv.fr solidarites.gouv.fr metiers-petite-enfance.gouv.fr famille.gouv.fr enfance.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
@@ -380,22 +422,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 60 days (51)"
+              "severity"     : "OK",
+              "finding"      : "62 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2024-11-18 23:00"
+              "finding"      : "2025-09-29 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "2025-11-18 22:59"
+              "severity"     : "OK",
+              "finding"      : "2025-12-27 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -416,20 +458,20 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
+              "finding"      : "http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "OCSP_stapling",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -472,35 +514,35 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 (Certigna from FR)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFhTCCBG2gAwIBAgIUZC/nHF2pouqOZECc9JYzehjW3kAwDQYJKoZIhvcNAQEMBQAwNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwHhcNMjUwMjI4MDk0OTA0WhcNMjcwNjI4MDk0OTAzWjB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANZ0kTuG6eFTF0KPbtvYBB5zIq+eR03FgyQAyRZE0lqCGRyx96ko+W/yyfxbCgPxMw5jlxdXteXBh8DLc5S4w0ICfOSc8vabFuXKhKa8BAB5/VtdzZosAF1AvFC1WLEVvPiUJRTsY0BkhnFI0UKdLN145hY4EL+CaSUENQ19006BR5P5HeWtmikYHgiq/TBlhTsnaYB6SL8mT40GfBxmp6PEjjrhKLurSQOMbF+6HiEnfZUr3OrKDncxN0GHxFYcIFBTL53JBNFA9qbPYsD6KubJmUqVoImyRKR+eXJHVNfPMhYzQv3EaYh2rpHRsjV96yZBIqBc3QSw82gj8bxh+rZRz8e+QISMlvljhHXqn+Qy4puuMt+3yQmnwFTYJQ13NFv1Uh3cJ5tEHP+yaLLCDqjy+cGCwNGMgsdWhS/67F4/AvRyI424psxuS/RbnKRrva0ZpDLTABgqfnONeU0LdkP817nGKNTKX2BDMD93BzOKzjDSBITJIRR8QICTKtQzmaKhd4UgbqPp+Bq1dMVhk5wW+x+bIHcB+wpqkO534SRMz93ijW2hSKrDWa2CB0Pl5tgcoGZThtjB3/Fm45XQLfW+vcTf+7nH8CRjMXO9swS6TovOXIpa5aG3jM+Dgewg6RbxtO/uIjv1zuIdS02d2h8Is2CvJ9/duOKucuYt1YnfAgMBAAGjggFLMIIBRzBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAKGJWh0dHA6Ly9jZXJ0LmNlcnRpZ25hLmNvbS9DZXJ0aWduYS5jZXIwHwYDVR0jBBgwFoAUGu3+QTmQtCRZvgHyUtVF9lo53BEwEgYDVR0TAQH/BAgwBgEB/wIBADBIBgNVHSAEQTA/MAgGBmeBDAECAjAzBgoqgXoBgTEBAAECMCUwIwYIKwYBBQUHAgEWF2h0dHA6Ly9jcHMuY2VydGlnbmEuY29tMDUGA1UdHwQuMCwwKqAooCaGJGh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSgcuZGxDBc5K3CHMLVYjiYgVpUpjANBgkqhkiG9w0BAQwFAAOCAQEAkYjFkMa/La7tXDId/3ltDS8PKsxhxmOBA6bRsLeDQWIU2E1M/1A1y0bRkw4Y6ZRGmkVLLdQRD9mJIvxnllTyoeOzJPk0BVW6xVgPncatyhNx0bKEFouetx7k+J7yKhu/k3jJP9XAxtbCWViQ4rZ3BvABYHA8rBmfccbVMr04a/+ILTpT/1QiGzhHcpo2fnlQ+okXq0cuikN5/WMlHNgsTJIG2b5yEFtYY84Hlx0ejJX3cOAd4pot9vHdjv8e2KvIq/jopdB5lyv/wbaQ4EHz9i5Z4dvmECjsx9oEHRDmUoeEoV1sb/I/2np3PHjtYTrzzoOTYUaebmdXkFasRpTx1w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "1A209DB499625B4EA29F597BE7744BA1E240B8C7629F75B41A3373339FD7EDDF"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2025-02-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-11-22 11:33"
+              "finding"      : "2027-06-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
@@ -514,7 +556,7 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 <-- Certigna"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -736,7 +778,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=72F83E0EED6BEB37CA32A64031C2AB6C92E4524A479342582C7308601CE5FC57"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=726CFBC81D8633B2B1E624322081F8B46F3CF4369D1795D25B83826F8194E985"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -811,63 +853,63 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -916,35 +958,35 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -958,42 +1000,42 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1007,21 +1049,21 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1035,7 +1077,7 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1105,20 +1147,13 @@
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "cnle.gouv.fr/185.194.82.206",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "cnle.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "107"
+              "finding"      : "125"
           }
 ]
