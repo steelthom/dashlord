@@ -388,7 +388,7 @@
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -555,8 +555,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "63 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -569,7 +569,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 16:26"
           }
 ,         {
@@ -604,8 +604,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -849,8 +856,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "63 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -863,7 +870,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 16:27"
           }
 ,         {
@@ -898,8 +905,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -1053,7 +1067,7 @@
               "ip"           : "base-empreinte.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1759030108"
+              "finding"      : "1761451156"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1061,7 +1075,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=k_BM91s.gIqQ3SWGSSj2jxNxnNF3hHlMNskFGRM4pj4-1759030108-1.0.1.1-_wz6XVNED3pnue0iDTKZSovkzpLkmZ_wDeSAIdUZ.y2aTIxeXNI0U3jveuRRCGzx2XQ7cC5.jDNyI6OTsUvF3lUdvDrdejEf0XziqkN_FYQ; path=/; expires=Sun, 28-Sep-25 03:58:28 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=Dwg4UK30A0C1.o61SSv6csjYMpzANxysc3LGldDYzDI-1761451155.7831638-1.0.1.1-7V1FYscgCEnFAXCJyMTcqDuuegplEzOeht5qUht2_APcCz1S7tS6QsTIh1MUALauHCJxEhhIId6_.lHW0P77wB0mfp289MlPrRS4G830LdNZt10J0PFjj9Kvgus5CFKH; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:29:16 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -2050,7 +2064,7 @@
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -2078,7 +2092,7 @@
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -2217,8 +2231,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "63 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2231,7 +2245,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 16:26"
           }
 ,         {
@@ -2266,8 +2280,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -2511,8 +2532,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "63 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (35)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2525,7 +2546,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-11-30 16:27"
           }
 ,         {
@@ -2560,8 +2581,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -2715,7 +2743,7 @@
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1759030186"
+              "finding"      : "1761451238"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2723,7 +2751,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=aKheOb_MqrHNbRMl4Ii73QE3C0i59jFe0BBJYg1WVxs-1759030186-1.0.1.1-EnuP3Eum29a7uHF.pHeedx9w571QsgHwwYDmRH9zjRn.PIaLoGSu39f9R.3CPEU6nhkOnNCfn2n39zyaIQNaUnY.Rv496fFF4HYjfx4w.G0; path=/; expires=Sun, 28-Sep-25 03:59:46 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=czLTOamBw.gK028mfiPLiNpL403qaUoH8jNZjoVxGUg-1761451238.502835-1.0.1.1-PV_4N4GEiALsXqDcIm9oqjiXGS5ovds00aC.t7EOV0IdEc8meoH4BAaJlUKdiWsFrSNx6LiB9p8DOoGbagEzYHybmiwbxdO3iLqwQ1mzANsQop11ocjlc8PPN5t.HJsT; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:30:38 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -3328,6 +3356,6 @@
               "ip"           : "base-empreinte.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "158"
+              "finding"      : "167"
           }
 ]
