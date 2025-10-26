@@ -388,7 +388,7 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -409,7 +409,7 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -555,8 +555,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -569,7 +569,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 08:29"
           }
 ,         {
@@ -604,8 +604,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -849,8 +856,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -863,7 +870,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 08:30"
           }
 ,         {
@@ -898,8 +905,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -1053,7 +1067,7 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758775835"
+              "finding"      : "1761450072"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1061,7 +1075,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=CRenE3jA8tZOZnEYDnHw.lW1cJt.K91J_ftQyrwOl.M-1758775835-1.0.1.1-SISfuWXppG11h.FT.MQlmgLoYgm8hLN2EmTvrjtu_THUDsxJbqv_nw698wYZILLE2J56HhsCvfHli7XnK7HQF3QVy4RPmHiSVsOF5ZXI80I; path=/; expires=Thu, 25-Sep-25 05:20:35 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=UV3REp60fm1U7ocnQ3DTcXsNxg5L0JhSjWW_2Pdq8OM-1761450071.61593-1.0.1.1-9DoKu41G.QYB8cmzS5bxZh66Os69847tp5USIM8s0plqLOJDZKCaMlmNtESOiL0_H_uLSdE1ZwOi_chsNBtddCYPjyfYbSGW7mQrhRYYZhAnHLo.flYEIwIVBz5TO1t9; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:11:12 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -2022,7 +2036,7 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -2050,7 +2064,7 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -2189,8 +2203,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2203,7 +2217,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 08:29"
           }
 ,         {
@@ -2238,8 +2252,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -2483,8 +2504,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (36)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2497,7 +2518,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-01 08:30"
           }
 ,         {
@@ -2532,8 +2553,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -2687,7 +2715,7 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1758775918"
+              "finding"      : "1761450149"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2695,7 +2723,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=ltOz5VNYqS98J0zeaCZ1UI4ykZjjg1IktnC5R46DVJ8-1758775918-1.0.1.1-EksEcIQc2jIB7XCYRps4BgM9CwxuaknYeAlg2LwBtSRabwX9Ugamhmk8b3fUFD_AMK_VKeMWh55Kew9Or.cMnrGT8gpH_N4z.hC3fG_WgBI; path=/; expires=Thu, 25-Sep-25 05:21:58 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=8dLFaz4if7FWruQtDV7i5.Hs9aaDqOvt9fD8XS3_nJI-1761450149.7650766-1.0.1.1-0ntVANJNq1zpUGLw3KZolaIKkLgsw0dpXvSGMVRnTMrMu3ICYYROu4dmSEMtaKOl1OEAgpapSA3CkneY435A6wtIIehI5m7u82pASr36ZNGBWQgaPbicAE1k6trRXr4J; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:12:29 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -3272,6 +3300,6 @@
               "ip"           : "fondschaleur.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "166"
+              "finding"      : "158"
           }
 ]
