@@ -388,7 +388,7 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -409,7 +409,7 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -555,8 +555,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -569,7 +569,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-05 02:50"
           }
 ,         {
@@ -604,8 +604,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -849,8 +856,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -863,7 +870,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-05 02:53"
           }
 ,         {
@@ -898,8 +905,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -1053,7 +1067,7 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1759029173"
+              "finding"      : "1761449486"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1061,7 +1075,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=7g3MmH6SVbFTCo2B0SFPhUxTTl_yDkEfMrLLorhBCNU-1759029173-1.0.1.1-0mR9DwyFe.OAOQ5dd3dVhRhdFH0.s9IkZ2etsmopdK86LXTSQaFBiyvpnAEcDh1tgFDWTYma7j08PvBk3LCSP1jipsf6QrjR3rVA6Ru5FJ8; path=/; expires=Sun, 28-Sep-25 03:42:53 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=PXGzjdvN44TptDQN.kmjbbPInsBelV9XSQi90xUCJbM-1761449486.05732-1.0.1.1-unnclicY8QzY5sQAOGkViEs2xii_XKbmINZoB2kiod8LbT9lmiwZ80MIO7gCV8lBBoYntVAoPQgP9TDcUy9nA9SGiFY1bSIyKCjmaMGBliQknGgIEijyMUx1_gX8I192; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:01:26 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -2022,7 +2036,7 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'status request/#5' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'compress_certificate/#27' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'next protocol/#13172' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -2043,7 +2057,7 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -2189,8 +2203,8 @@
               "id"           : "cert_expirationStatus <hostCert#1>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2203,7 +2217,7 @@
               "id"           : "cert_notAfter <hostCert#1>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-05 02:50"
           }
 ,         {
@@ -2238,8 +2252,15 @@
               "id"           : "OCSP_stapling <hostCert#1>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#1>",
+              "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#1>",
@@ -2483,8 +2504,8 @@
               "id"           : "cert_expirationStatus <hostCert#2>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (39)"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2497,7 +2518,7 @@
               "id"           : "cert_notAfter <hostCert#2>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2025-12-05 02:53"
           }
 ,         {
@@ -2532,8 +2553,15 @@
               "id"           : "OCSP_stapling <hostCert#2>",
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cert_ocspRevoked <hostCert#2>",
+              "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not revoked"
           }
 ,         {
               "id"           : "cert_mustStapleExtension <hostCert#2>",
@@ -2687,7 +2715,7 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1759029252"
+              "finding"      : "1761449569"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2695,7 +2723,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=f_eWHzwO89fgMgHNUq5.87CT7UJ76aTozjJuqTmuDew-1759029252-1.0.1.1-Mx5COa.v6uiNtrqupgcxh7oO4DqJPwCt0yCUoqll00w4610hgIWxbGCwwbENWWTpUwSEuXM3D4AhfJ0oCr7oC98Zu5snJHtZKpaze6L3PW0; path=/; expires=Sun, 28-Sep-25 03:44:12 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=El6a2.cxVOT9FVkDhjbteDybxAuF1DAp4VaMuq3xqLE-1761449569.8424647-1.0.1.1-DXwk5mH1hriiVLsv6oQWXN5zqjGXK3mToDhSw39rtPPHkFANzTIrHwwHSvzgAPY2xRJ5lVl2eDZecr6qmjjtgYFCUpryw8f1jkcfP4SGrg1E0FmBcaDdDKEIVhi0Y3Tu; HttpOnly; Secure; Path=/; Expires=Sun, 26 Oct 2025 04:02:49 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -3272,6 +3300,6 @@
               "ip"           : "observatoire-dpe-audit.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "158"
+              "finding"      : "169"
           }
 ]
