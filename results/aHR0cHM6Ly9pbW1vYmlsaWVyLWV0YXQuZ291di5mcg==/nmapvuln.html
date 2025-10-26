@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immobilier-etat.gouv.fr</pre>
-<p class="lead">Sun Sep 28 03:25:20 2025 – Sun Sep 28 03:28:19 2025<br>1 hosts scanned.
+<p class="lead">Sun Oct 26 03:53:21 2025 – Sun Oct 26 03:53:57 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>5.144.143.172</td>
+<td>109.232.236.90</td>
 <td>immobilier-etat.gouv.fr</td>
-<td>4</td>
+<td>2</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,10 +91,13 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#5-144-143-172"><h3 class="panel-title">5.144.143.172 - immobilier-etat.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="5-144-143-172">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#109-232-236-90"><h3 class="panel-title">109.232.236.90 - immobilier-etat.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="109-232-236-90">
 <h4>Hostnames</h4>
-<ul><li>immobilier-etat.gouv.fr (user)</li></ul>
+<ul>
+<li>immobilier-etat.gouv.fr (user)</li>
+<li>ows-109-232-236-90.eu-west-2.compute.outscale.com (PTR)</li>
+</ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -119,74 +122,98 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
-    HTTP/1.1 400 Bad request
-    content-length: 90
-    cache-control: no-cache
-    content-type: text/html
-    connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
-    Your browser sent an invalid request.
-    &lt;/body&gt;&lt;/html&gt;
-  FourOhFourRequest: 
-    HTTP/1.1 301 Moved Permanently
-    content-length: 0
-    location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
-    connection: close
-  GetRequest, HTTPOptions, RTSPRequest: 
-    HTTP/1.1 301 Moved Permanently
-    content-length: 0
-    location: https:///
-    connection: close</pre>
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 26 Oct 2025 03:53:40 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  Help: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 26 Oct 2025 03:53:41 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  RTSPRequest, X11Probe: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 26 Oct 2025 03:53:35 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
 </td></tr>
-<tr class="active">
-<td>113</td>
-<td>tcp</td>
-<td>closed<br>reset</td>
-<td>ident</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">nginx</td>
-<td title="Version">1.26.1</td>
+<td title="Service">https</td>
+<td title="Product"></td>
+<td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx:1.26.1">cpe:/a:igor_sysoev:nginx:1.26.1</a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nginx/1.26.1</pre>
-<h5>vulners</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  nginx 1.26.1: 
-    	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
-    	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
-    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419</pre>
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 26 Oct 2025 03:53:48 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  RPCCheck, RTSPRequest: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 26 Oct 2025 03:53:47 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  tor-versions: 
+    HTTP/1.1 400 Bad Request
+    Date: Sun, 26 Oct 2025 03:53:41 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: close
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
 </td></tr>
-<tr class="success">
-<td title="Port">2000</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">cisco-sccp</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">5060</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">sip</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -205,7 +232,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>5.144.143.172 - immobilier-etat.gouv.fr</td>
+<td>109.232.236.90 - immobilier-etat.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -215,30 +242,10 @@
 <td></td>
 </tr>
 <tr>
-<td>5.144.143.172 - immobilier-etat.gouv.fr</td>
+<td>109.232.236.90 - immobilier-etat.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http</td>
-<td>nginx</td>
-<td>1.26.1</td>
-<td>cpe:/a:igor_sysoev:nginx:1.26.1</td>
-<td></td>
-</tr>
-<tr>
-<td>5.144.143.172 - immobilier-etat.gouv.fr</td>
-<td>2000</td>
-<td>tcp</td>
-<td>cisco-sccp</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>5.144.143.172 - immobilier-etat.gouv.fr</td>
-<td>5060</td>
-<td>tcp</td>
-<td>sip</td>
+<td>https</td>
 <td></td>
 <td></td>
 <td></td>
