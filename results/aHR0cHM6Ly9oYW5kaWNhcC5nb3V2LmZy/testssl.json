@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -167,6 +167,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "handicap.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "handicap.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "handicap.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "handicap.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
@@ -185,7 +213,7 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -195,18 +223,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "handicap.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "handicap.gouv.fr/185.194.82.206",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -244,11 +286,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -297,7 +339,7 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "AD8C8D2F7262265BB1B099C197968DD3"
+              "finding"      : "B36795A478EC579B8C59A87FCDE60B1A"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -311,21 +353,21 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "560789891AD591214E726121A1AC1ECA04E24A76"
+              "finding"      : "1B7EABBCB6F7547E48131FEDDDCA1F6100E46DC2"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "4BFDF5DEAB3F06E894A49CAB97461598DAA3049DD053B0160AFFBF23F2C8638E"
+              "finding"      : "802FEC461F63E5CF4D08C7D410840CFC55BA98DBAF67C563400B254E244B7C1A"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIJ0DCCB7igAwIBAgIRAK2MjS9yYiZbsbCZwZeWjdMwDQYJKoZIhvcNAQELBQAwfTELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURISU1ZT1RJUzEcMBoGA1UECwwTMDAwMiA0ODE0NjMwODEwMDAzNjEdMBsGA1UEYQwUTlRSRlItNDgxNDYzMDgxMDAwMzYxHTAbBgNVBAMMFENlcnRpZ25hIFNlcnZpY2VzIENBMB4XDTI0MTAyMTIyMDAwMFoXDTI1MTAyMTIxNTk1OVowgZwxCzAJBgNVBAYTAkZSMQ4wDAYDVQQHDAVQQVJJUzFJMEcGA1UECgxAU0VDUkVUQVJJQVQgR0VORVJBTCBERVMgTUlOSVNURVJFUyBDSEFSR0VTIERFUyBBRkZBSVJFUyBTT0NJQUxFUzEdMBsGA1UEAwwUd3d3LmhhbmRpY2FwLmdvdXYuZnIxEzARBgNVBAUTClMzMjU0NDA4MDkwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQD45A8aufWc5Qzt518ytoE/VEktozV/KgT3lrTQEFaaCWegYsd1XxESuuH+wBHWTF1orSP96wZlE2EyIc4QLv8oTfrF0c3PwJ5aaM+shVspCinuvRZQSGD++onntUY5C+4j5ZWBGV2TIqHNULxuljQ9EJ33jYKIJov38CGB/LPaIS3p7Y8lIPjCLbLr4JK1uk7pS7d8OQbQ8qcz8qgu0aorCRADcY1l0XQ/y8JprIyxBfQZc9KTGtZ9H6WCWeqEsbQYUZxT4UrHF3DhLcaWbyk5+UC95mFiY+8mMJDVTPoVZbRP5n+d1oxVu2Uoz8x/VE7JRR+eBI4aoRL3RCkSjPIsHjke5zF9NRcjPYz/LP3UgLdlVEPk8rtuYfi+/3kZKw+Up1n+dDbv1Ptq1NMi/8EijmoqGiU6otDwnJh9cRN0FWjLE26Mf33/vUlZBN9bjP+Ht5VL6Vlypo2/tYqZycq5VjSWuruMnx17rp2f09Ib7QTq3N6XSxMRB+aPtTdfX7kCAwEAAaOCBKkwggSlMIHkBggrBgEFBQcBAQSB1zCB1DA4BggrBgEFBQcwAoYsaHR0cDovL2F1dG9yaXRlLmRoaW15b3Rpcy5jb20vc2VydmljZXNjYS5kZXIwNgYIKwYBBQUHMAKGKmh0dHA6Ly9hdXRvcml0ZS5jZXJ0aWduYS5mci9zZXJ2aWNlc2NhLmRlcjAuBggrBgEFBQcwAYYiaHR0cDovL3NlcnZpY2VzY2Eub2NzcC5jZXJ0aWduYS5mcjAwBggrBgEFBQcwAYYkaHR0cDovL3NlcnZpY2VzY2Eub2NzcC5kaGlteW90aXMuY29tMB8GA1UdIwQYMBaAFKzsho9LNxy4fxcbGdCu6E7jNFwSMAwGA1UdEwEB/wQCMAAwYQYDVR0gBFowWDAIBgZngQwBAgIwTAYLKoF6AYExAgUBAQIwPTA7BggrBgEFBQcCARYvaHR0cHM6Ly93d3cuY2VydGlnbmEuY29tL2F1dG9yaXRlLWNlcnRpZmljYXRpb24wZQYDVR0fBF4wXDAtoCugKYYnaHR0cDovL2NybC5kaGlteW90aXMuY29tL3NlcnZpY2VzY2EuY3JsMCugKaAnhiVodHRwOi8vY3JsLmNlcnRpZ25hLmZyL3NlcnZpY2VzY2EuY3JsMBMGA1UdJQQMMAoGCCsGAQUFBwMBMA4GA1UdDwEB/wQEAwIFoDCBhQYDVR0RBH4wfIIQaGFuZGljYXAuZ291di5mcoITYXV0aXNtZS10bmQuZ291di5mcoITd3d3LmF1dGlzbWUuZ291di5mcoIPYXV0aXNtZS5nb3V2LmZyghd3d3cuYXV0aXNtZS10bmQuZ291di5mcoIUd3d3LmhhbmRpY2FwLmdvdXYuZnIwHQYDVR0OBBYEFPI9zOBX/2RMcz/fHluTkhJRjHKAMIIB9QYKKwYBBAHWeQIEAgSCAeUEggHhAd8AdwAN4fIwK9MNwUBiEgnqVS78R3R8sdfpMO8OQh60fk6qNAAAAZKzcpIWAAAEAwBIMEYCIQCZEG9sK37wCvcuQumuVaCDwaLXKfmHBM8XsJPUVx5xMQIhALuYLzxwFAwpNX6dCzV+zMqUCM93fKc0tH3qd7JnqGeaAHUAEvFONL1TckyEBhnDjz96E/jntWKHiJxtMAWE6+WGJjoAAAGSs3KQoAAABAMARjBEAiBuGdm7Rr6PazSUVbjbEZ7SMuNhhb84r0CoE2EbrSjA2AIgQunrngwYnxS34Td4p9VFb0HDCUnrKUpngPBXqRaeYuEAdQDm0jFjQHeMwRBBBtdxuc7B0kD2loSG+7qHMh39HjeOUAAAAZKzcpOtAAAEAwBGMEQCIDTkBPNHxs9F7hjJgSTT+okafMUmRBb30BwZMKz3FqEeAiBTFZOGzDjs/UW6F60ipON1IGRPT8/lkuT888Y7Ma3s/wB2AK8YGijWjKPgqYpMnGerCfi7vCK6rryxOKOhndP5tgMNAAABkrNykwcAAAQDAEcwRQIhAI/24JqyC4GIR9V6gj6PJnRlXOvpDIPNy5skYVITVCuoAiB416H9h0UUFk+9jO7H4eJI8xQbxNy5e8WnMg7sqpIrYTANBgkqhkiG9w0BAQsFAAOCAgEAHzqYHqVAYmMdCFVYpS4ggZVgqq3dNmTA6fmyIMXmalcrTehYjKuSfYjev2OfypPHaFMdcXWCH8yxMHeK1ygL9WPCYklspsaVDAgihCTzU9odFwQjq1lBG7tNdV6qFuPgRR2NST2v4rRrwcv0Ul7UrHH2Yv3iue0LbzSGygIJqCOs2Tvi90ynTmMggMggt6+j/BEJiGGNoAhGOdX98eDp2v2oWA1ZEvnnDXPuXSEzq+r8Lbe3q5jXAK2/pu51WmTt5FzNBv8e4mbvzB85SlsK/+wXG8wPRnDQKTAEdXO0u0LYFwcEv7FtCuiR/ZFdzoWHSF142fvAcJNSIKt9gCKVV1r9hqXj2Zep8Y0e7/EKhy3p1QPfW8CzX/miDDQFI/km8tOHFLdH9S+rU3+eKC9im+bNtL5nvfs7SYKNCk7SJNOAkJzJHj8m6yU3QwDbZIVZWJAbNz1Ec1e+vXbopOTIMcczPvnYSnS+vKBoPkNtDG448o8zlz2UD3azX7naNcAh8Q6NArZrnb3sx40mwx1Ne9swYuUCmCMzCQBPsRX51iI0FCEEc2zkCcoaPODmAw1K6u0xFWEjqm8C1kUHsk6IUipeoTJOvvAqVeYdSnl1KXVtrWQxbXdB8z5hX3JCfDhb1dUfAN2e50ZlLoEVFYOdJxyF0GWRjbzV3kprqQD715g=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -346,7 +388,7 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "handicap.gouv.fr autisme-tnd.gouv.fr www.autisme.gouv.fr autisme.gouv.fr www.autisme-tnd.gouv.fr www.handicap.gouv.fr"
+              "finding"      : "www.handicap.gouv.fr autisme.gouv.fr www.autisme-tnd.gouv.fr autisme-tnd.gouv.fr www.autisme.gouv.fr handicap.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
@@ -380,22 +422,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (26)"
+              "severity"     : "OK",
+              "finding"      : "63 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2024-10-21 22:00"
+              "finding"      : "2025-09-30 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-10-21 21:59"
+              "severity"     : "OK",
+              "finding"      : "2025-12-28 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -416,20 +458,20 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.dhimyotis.com/servicesca.crl http://crl.certigna.fr/servicesca.crl"
+              "finding"      : "http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.certigna.fr http://servicesca.ocsp.dhimyotis.com"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "OCSP_stapling",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -472,35 +514,35 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 (Certigna from FR)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIGFjCCBP6gAwIBAgIQb4L6KKzW94S7WxILqHNnrTANBgkqhkiG9w0BAQsFADA0MQswCQYDVQQGEwJGUjESMBAGA1UECgwJRGhpbXlvdGlzMREwDwYDVQQDDAhDZXJ0aWduYTAeFw0xNTExMjUxMTMzNTJaFw0yNTExMjIxMTMzNTJaMH0xCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlESElNWU9USVMxHDAaBgNVBAsMEzAwMDIgNDgxNDYzMDgxMDAwMzYxHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MR0wGwYDVQQDDBRDZXJ0aWduYSBTZXJ2aWNlcyBDQTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALPM+7LpWBz9wFcPaTc3xnB+5g0XrnptB0EPPfrR04vO52Ykm4ky1d4ZLd10tbM1fa1RqNSOVWWg93O4pL7zCFKlz6JV74ZZVhHpEAwzBwv2oPnxvVbxtSN67xsSY66ahUYxjzs8+3FhmsiRxqwnTYvK2u70uglUvRisOKyTL/M6JnrC4y8tlmoz7OSa5BmBMVplJFQtvmON6N9aHLvYMz+EyJPCbXL6pELxeHjFT5QmIaRamsr2DOTaCjtBZKI1Wnh3X7lnbjM8MESJiV2t7E9tIQNG0Z/HI3tO4aaUMum3KysY5sC8v3vi7rryGidgzHQhrtP0ZXWW5UH/k7umLS/P/XXWnCFpc2Lxa1uDGfc2im7xibRoPP+JNZszN76euFlls6jyEXAiwnVr14tVVTewLK0OWs5SJHpEKp8PGMZRDj59EmMvokWwzL6QzNZ6vVAp00oOm05sbspNY9+MFqGKKUsKvhFGEa4XmRNxDe6KswLcjPZB+NKHZ0QWFd4ip5C5XmEK/8qIPjwVr9dah9+oiHGGO8Wx7gJAMF5DTmkvW7GhqCKj1LmHnabjzc8av6kxWVQZi/C7HCm9i/W4wio+JA2EAFLqNL3GPNbK9kau4yPhQt/c7zxzo0OHnlsV4THCG7oOCd3cfCiyfQcb3FBt6OSpaKRZxjCLBwP00r0fAgMBAAGjggHZMIIB1TASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUrOyGj0s3HLh/FxsZ0K7oTuM0XBIwZAYDVR0jBF0wW4AUGu3+QTmQtCRZvgHyUtVF9lo53BGhOKQ2MDQxCzAJBgNVBAYTAkZSMRIwEAYDVQQKDAlEaGlteW90aXMxETAPBgNVBAMMCENlcnRpZ25hggkA/tzjAQ/JSP8wSQYDVR0gBEIwQDA+BgoqgXoBgTEBAAECMDAwLgYIKwYBBQUHAgEWImh0dHBzOi8vd3d3LmNlcnRpZ25hLmZyL2F1dG9yaXRlcy8wfAYIKwYBBQUHAQEEcDBuMDQGCCsGAQUFBzAChihodHRwOi8vYXV0b3JpdGUuY2VydGlnbmEuZnIvY2VydGlnbmEuZGVyMDYGCCsGAQUFBzAChipodHRwOi8vYXV0b3JpdGUuZGhpbXlvdGlzLmNvbS9jZXJ0aWduYS5kZXIwYQYDVR0fBFowWDApoCegJYYjaHR0cDovL2NybC5jZXJ0aWduYS5mci9jZXJ0aWduYS5jcmwwK6ApoCeGJWh0dHA6Ly9jcmwuZGhpbXlvdGlzLmNvbS9jZXJ0aWduYS5jcmwwDQYJKoZIhvcNAQELBQADggEBAGLft7gIuGPZVfg0cTM+HT2xAZFPDb/2+siH06x+dH044zMKbBINbRzhKipwB1A3MW8FQjveE9tyrfyuqZE/X+o2SlGcdNV44ybYkxo4f6kcLEavV/IW+oFEnojZlhpksYcxrvQoEyqkAwshe8IS2KtZHKVACrt+XSs0lwvy7ALGmHaF7A4by6cZWItA7Lhj8XWp+8tBJDj7HocRbWtxzEODdBuyMgJzFrNjc+97J0vH/K0+3yjmkczpKshMA0tM+MF9XDMN/MuwrPmUWGO/fHiqHgUp8yqeWtl1n44ZxkkK1t9GRwhnDWLv73/xhTmdhWYQ/reo0GbgBoLiltKmIJQ=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFhTCCBG2gAwIBAgIUZC/nHF2pouqOZECc9JYzehjW3kAwDQYJKoZIhvcNAQEMBQAwNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwHhcNMjUwMjI4MDk0OTA0WhcNMjcwNjI4MDk0OTAzWjB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANZ0kTuG6eFTF0KPbtvYBB5zIq+eR03FgyQAyRZE0lqCGRyx96ko+W/yyfxbCgPxMw5jlxdXteXBh8DLc5S4w0ICfOSc8vabFuXKhKa8BAB5/VtdzZosAF1AvFC1WLEVvPiUJRTsY0BkhnFI0UKdLN145hY4EL+CaSUENQ19006BR5P5HeWtmikYHgiq/TBlhTsnaYB6SL8mT40GfBxmp6PEjjrhKLurSQOMbF+6HiEnfZUr3OrKDncxN0GHxFYcIFBTL53JBNFA9qbPYsD6KubJmUqVoImyRKR+eXJHVNfPMhYzQv3EaYh2rpHRsjV96yZBIqBc3QSw82gj8bxh+rZRz8e+QISMlvljhHXqn+Qy4puuMt+3yQmnwFTYJQ13NFv1Uh3cJ5tEHP+yaLLCDqjy+cGCwNGMgsdWhS/67F4/AvRyI424psxuS/RbnKRrva0ZpDLTABgqfnONeU0LdkP817nGKNTKX2BDMD93BzOKzjDSBITJIRR8QICTKtQzmaKhd4UgbqPp+Bq1dMVhk5wW+x+bIHcB+wpqkO534SRMz93ijW2hSKrDWa2CB0Pl5tgcoGZThtjB3/Fm45XQLfW+vcTf+7nH8CRjMXO9swS6TovOXIpa5aG3jM+Dgewg6RbxtO/uIjv1zuIdS02d2h8Is2CvJ9/duOKucuYt1YnfAgMBAAGjggFLMIIBRzBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAKGJWh0dHA6Ly9jZXJ0LmNlcnRpZ25hLmNvbS9DZXJ0aWduYS5jZXIwHwYDVR0jBBgwFoAUGu3+QTmQtCRZvgHyUtVF9lo53BEwEgYDVR0TAQH/BAgwBgEB/wIBADBIBgNVHSAEQTA/MAgGBmeBDAECAjAzBgoqgXoBgTEBAAECMCUwIwYIKwYBBQUHAgEWF2h0dHA6Ly9jcHMuY2VydGlnbmEuY29tMDUGA1UdHwQuMCwwKqAooCaGJGh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSgcuZGxDBc5K3CHMLVYjiYgVpUpjANBgkqhkiG9w0BAQwFAAOCAQEAkYjFkMa/La7tXDId/3ltDS8PKsxhxmOBA6bRsLeDQWIU2E1M/1A1y0bRkw4Y6ZRGmkVLLdQRD9mJIvxnllTyoeOzJPk0BVW6xVgPncatyhNx0bKEFouetx7k+J7yKhu/k3jJP9XAxtbCWViQ4rZ3BvABYHA8rBmfccbVMr04a/+ILTpT/1QiGzhHcpo2fnlQ+okXq0cuikN5/WMlHNgsTJIG2b5yEFtYY84Hlx0ejJX3cOAd4pot9vHdjv8e2KvIq/jopdB5lyv/wbaQ4EHz9i5Z4dvmECjsx9oEHRDmUoeEoV1sb/I/2np3PHjtYTrzzoOTYUaebmdXkFasRpTx1w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "1A209DB499625B4EA29F597BE7744BA1E240B8C7629F75B41A3373339FD7EDDF"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2025-02-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-11-22 11:33"
+              "finding"      : "2027-06-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
@@ -514,7 +556,7 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 <-- Certigna"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -736,7 +778,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=4BFDF5DEAB3F06E894A49CAB97461598DAA3049DD053B0160AFFBF23F2C8638E"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=802FEC461F63E5CF4D08C7D410840CFC55BA98DBAF67C563400B254E244B7C1A"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -811,63 +853,63 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -916,35 +958,35 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -958,42 +1000,42 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1007,21 +1049,21 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1035,7 +1077,7 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1105,20 +1147,13 @@
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "handicap.gouv.fr/185.194.82.206",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "handicap.gouv.fr/185.194.82.206",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "55"
+              "finding"      : "154"
           }
 ]
