@@ -1,0 +1,132 @@
+# Nmap 7.92 scan initiated Wed Oct 29 06:25:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln archives.ofpra.gouv.fr
+Nmap scan report for archives.ofpra.gouv.fr (91.223.76.144)
+Host is up (0.11s latency).
+rDNS record for 91.223.76.144: hr144.vtech.fr
+Not shown: 993 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|_    connection: close
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <title>Maintenance</title>
+|     <style>
+|     body{
+|     display: flex;
+|     align-items: center;
+|     justify-content: center;
+|     text-align: center;
+|     height: 100vh;
+|     margin: 0;
+|     padding: 0;
+|_    background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1440px' height='595px' viewBox='0 0 1440 595' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Ebackground%3C/title%3E%3Cdefs%3E%3Crect id='path-1' x='0' y='0' width='1440' height='595'
+898/tcp open  tcpwrapped
+901/tcp open  tcpwrapped
+903/tcp open  tcpwrapped
+911/tcp open  tcpwrapped
+912/tcp open  tcpwrapped
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=10/29%Time=6901B379%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
+SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
+SF:r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-l
+SF:ength:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")
+SF:%r(RTSPRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-
+SF:length:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n"
+SF:)%r(X11Probe,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x
+SF:20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20
+SF:Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20reques
+SF:t\.\n</body></html>\n\n")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20M
+SF:oved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///ni
+SF:ce%20ports%2C/Tri%6Eity\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(
+SF:RPCCheck,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no
+SF:-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\
+SF:x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\
+SF:n</body></html>\n\n")%r(DNSVersionBindReqTCP,A9,"HTTP/1\.0\x20400\x20Ba
+SF:d\x20request\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/htm
+SF:l\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x2
+SF:0sent\x20an\x20invalid\x20request\.\n</body></html>\n\n")%r(DNSStatusRe
+SF:questTCP,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no
+SF:-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\
+SF:x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\
+SF:n</body></html>\n\n")%r(Help,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\n
+SF:cache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><
+SF:body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20i
+SF:nvalid\x20request\.\n</body></html>\n\n")%r(SSLSessionReq,A9,"HTTP/1\.0
+SF:\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\ncontent-type
+SF::\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\
+SF:x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=6901B37F%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,2104,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\
+SF:ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n\n<!DO
+SF:CTYPE\x20html>\n<html\x20lang=\"en\">\n<head>\n\x20\x20\x20\x20<meta\x2
+SF:0charset=\"UTF-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA-Compati
+SF:ble\"\x20content=\"IE=edge\">\n\x20\x20\x20\x20<meta\x20name=\"viewport
+SF:\"\x20content=\"width=device-width,\x20initial-scale=1\.0\">\n\x20\x20\
+SF:x20\x20<title>Maintenance</title>\n\x20\x20\x20\x20<style>\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20body{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20display:\x20flex;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0align-items:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20justify-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20text-align:\x20\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20background:\x20url\(\"data:image/svg\+xml,%3C%3Fxml\x20versi
+SF:on='1\.0'\x20encoding='UTF-8'%3F%3E%3Csvg\x20width='1440px'\x20height='
+SF:595px'\x20viewBox='0\x200\x201440\x20595'\x20version='1\.1'\x20xmlns='h
+SF:ttp://www\.w3\.org/2000/svg'\x20xmlns:xlink='http://www\.w3\.org/1999/x
+SF:link'%3E%3Ctitle%3Ebackground%3C/title%3E%3Cdefs%3E%3Crect\x20id='path-
+SF:1'\x20x='0'\x20y='0'\x20width='1440'\x20height='595'")%r(HTTPOptions,21
+SF:04,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\ncache-control:\x20no-
+SF:cache\r\ncontent-type:\x20text/html\r\n\r\n\n<!DOCTYPE\x20html>\n<html\
+SF:x20lang=\"en\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"UTF-8\">\n\
+SF:x20\x20\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=
+SF:edge\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=
+SF:device-width,\x20initial-scale=1\.0\">\n\x20\x20\x20\x20<title>Maintena
+SF:nce</title>\n\x20\x20\x20\x20<style>\n\x20\x20\x20\x20\x20\x20\x20\x20b
+SF:ody{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20cente
+SF:r;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x2
+SF:0center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x
+SF:20\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\
+SF:x20100vh;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200
+SF:;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:
+SF:\x20url\(\"data:image/svg\+xml,%3C%3Fxml\x20version='1\.0'\x20encoding=
+SF:'UTF-8'%3F%3E%3Csvg\x20width='1440px'\x20height='595px'\x20viewBox='0\x
+SF:200\x201440\x20595'\x20version='1\.1'\x20xmlns='http://www\.w3\.org/200
+SF:0/svg'\x20xmlns:xlink='http://www\.w3\.org/1999/xlink'%3E%3Ctitle%3Ebac
+SF:kground%3C/title%3E%3Cdefs%3E%3Crect\x20id='path-1'\x20x='0'\x20y='0'\x
+SF:20width='1440'\x20height='595'");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 06:26:27 2025 -- 1 IP address (1 host up) scanned in 40.23 seconds
