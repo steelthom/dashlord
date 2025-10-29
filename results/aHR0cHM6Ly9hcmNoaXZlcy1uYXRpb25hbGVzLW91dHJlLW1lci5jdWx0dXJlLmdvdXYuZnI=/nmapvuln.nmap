@@ -1,0 +1,116 @@
+# Nmap 7.92 scan initiated Wed Oct 29 04:56:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln archives-nationales-outre-mer.culture.gouv.fr
+Nmap scan report for archives-nationales-outre-mer.culture.gouv.fr (87.98.187.73)
+Host is up (0.12s latency).
+rDNS record for 87.98.187.73: ip73.ip-87-98-187.eu
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE        VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:24 GMT
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:23 GMT
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:11 GMT
+|     connection: close
+|     Upgrade Required
+|   GetRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:02 GMT
+|     connection: close
+|     Upgrade Required
+|   HTTPOptions: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:04 GMT
+|     connection: close
+|     Upgrade Required
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:25 GMT
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:05 GMT
+|     connection: close
+|     Request
+|   SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:27 GMT
+|     connection: close
+|     Request
+|   TLSSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:29 GMT
+|     connection: close
+|     Request
+|   TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Wed, 29 Oct 2025 04:57:28 GMT
+|     connection: close
+|_    Request
+443/tcp open  ssl/tcpwrapped
+|_http-server-header: nginx
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=10/29%Time=69019EA0%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\ncontent-len
+SF:gth:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct
+SF:\x202025\x2004:57:02\x20GMT\r\nconnection:\x20close\r\n\r\nUpgrade\x20R
+SF:equired")%r(HTTPOptions,97,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\n
+SF:content-length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Wed,\x
+SF:2029\x20Oct\x202025\x2004:57:04\x20GMT\r\nconnection:\x20close\r\n\r\nU
+SF:pgrade\x20Required")%r(RTSPRequest,8D,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20
+SF:Wed,\x2029\x20Oct\x202025\x2004:57:05\x20GMT\r\nconnection:\x20close\r\
+SF:n\r\nBad\x20Request")%r(FourOhFourRequest,97,"HTTP/1\.1\x20426\x20Upgra
+SF:de\x20Required\r\ncontent-length:\x2016\r\ncontent-type:\x20text/plain\
+SF:r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2004:57:11\x20GMT\r\nconnection:
+SF:\x20close\r\n\r\nUpgrade\x20Required")%r(DNSVersionBindReqTCP,8D,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:
+SF:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2004:57:23\x20GMT
+SF:\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,
+SF:8D,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncont
+SF:ent-type:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2004:57:
+SF:24\x20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(Help,8D,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-ty
+SF:pe:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2004:57:25\x20
+SF:GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(SSLSessionReq,8D,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent
+SF:-type:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2004:57:27\
+SF:x20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(TerminalServer
+SF:Cookie,8D,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\
+SF:r\ncontent-type:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2
+SF:004:57:28\x20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(TLSS
+SF:essionReq,8D,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x20
+SF:11\r\ncontent-type:\x20text/plain\r\ndate:\x20Wed,\x2029\x20Oct\x202025
+SF:\x2004:57:29\x20GMT\r\nconnection:\x20close\r\n\r\nBad\x20Request");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 04:58:17 2025 -- 1 IP address (1 host up) scanned in 86.52 seconds
