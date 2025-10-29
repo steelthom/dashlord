@@ -1,0 +1,68 @@
+# Nmap 7.92 scan initiated Wed Oct 29 04:21:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln 777-bo1.developpement-durable.gouv.fr
+Nmap scan report for 777-bo1.developpement-durable.gouv.fr (85.90.52.45)
+Host is up (0.15s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+21/tcp  closed ftp
+443/tcp open   ssl/https Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 308 Permanent Redirect
+|     date: Wed, 29 Oct 2025 04:21:56 GMT
+|     server: Apache
+|     vary: User-Agent
+|     location: ./simplesaml/www/index.php?auth=default&account=50004
+|     expires: Thu, 30 Oct 2025 04:21:56 GMT
+|     referrer-policy: strict-origin-when-cross-origin
+|     content-security-policy: frame-ancestors 'self' sit-demo.easyvista.com 777-sbox.developpement-durable.gouv.fr 777.developpement-durable.gouv.fr 777-bo.developpement-durable.gouv.fr; default-src 'none'; object-src 'none'; img-src 'self' blob: data: https: http://localhost; media-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; frame-src 'self' https: blob:; connect-src 'self' https: wss:; base-uri 'self'; form-action 'self' https:; manifest-src 'self'
+|     hosting-release: U2FsdGVkX1/v63CV0cL3qnlqZILeW2Ov9Q2T0h9LDCs=
+|   HTTPOptions: 
+|     HTTP/1.1 308 Permanent Redirect
+|     date: Wed, 29 Oct 2025 04:21:57 GMT
+|     server: Apache
+|     vary: User-Agent
+|     location: ./simplesaml/www/index.php?auth=default&account=50004
+|     expires: Thu, 30 Oct 2025 04:21:57 GMT
+|     referrer-policy: strict-origin-when-cross-origin
+|     content-security-policy: frame-ancestors 'self' sit-demo.easyvista.com 777-sbox.developpement-durable.gouv.fr 777.developpement-durable.gouv.fr 777-bo.developpement-durable.gouv.fr; default-src 'none'; object-src 'none'; img-src 'self' blob: data: https: http://localhost; media-src 'self' data: https: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; frame-src 'self' https: blob:; connect-src 'self' https: wss:; base-uri 'self'; form-action 'self' https:; manifest-src 'self'
+|_    hosting-release: U2FsdGVkX1/v63CV0cL3qnlqZILeW2Ov9Q2T0h9LDCs=
+990/tcp open   ssl/ftp   vsftpd 2.0.8 or later
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=69019664%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,633,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\nd
+SF:ate:\x20Wed,\x2029\x20Oct\x202025\x2004:21:56\x20GMT\r\nserver:\x20Apac
+SF:he\r\nvary:\x20User-Agent\r\nlocation:\x20\./simplesaml/www/index\.php\
+SF:?auth=default&account=50004\r\nexpires:\x20Thu,\x2030\x20Oct\x202025\x2
+SF:004:21:56\x20GMT\r\nreferrer-policy:\x20strict-origin-when-cross-origin
+SF:\r\ncontent-security-policy:\x20frame-ancestors\x20'self'\x20sit-demo\.
+SF:easyvista\.com\x20777-sbox\.developpement-durable\.gouv\.fr\x20777\.dev
+SF:eloppement-durable\.gouv\.fr\x20777-bo\.developpement-durable\.gouv\.fr
+SF:;\x20default-src\x20'none';\x20object-src\x20'none';\x20img-src\x20'sel
+SF:f'\x20blob:\x20data:\x20https:\x20http://localhost;\x20media-src\x20'se
+SF:lf'\x20data:\x20https:\x20blob:;\x20script-src\x20'self'\x20'unsafe-inl
+SF:ine'\x20'unsafe-eval'\x20blob:\x20data:\x20https:;\x20style-src\x20'sel
+SF:f'\x20'unsafe-inline'\x20https:;\x20font-src\x20'self'\x20data:\x20http
+SF:s:;\x20frame-src\x20'self'\x20https:\x20blob:;\x20connect-src\x20'self'
+SF:\x20https:\x20wss:;\x20base-uri\x20'self';\x20form-action\x20'self'\x20
+SF:https:;\x20manifest-src\x20'self'\r\nhosting-release:\x20U2FsdGVkX1/v63
+SF:CV0cL3qnlqZILeW2Ov9Q2T0h9LDCs=\r\nx")%r(HTTPOptions,633,"HTTP/1\.1\x203
+SF:08\x20Permanent\x20Redirect\r\ndate:\x20Wed,\x2029\x20Oct\x202025\x2004
+SF::21:57\x20GMT\r\nserver:\x20Apache\r\nvary:\x20User-Agent\r\nlocation:\
+SF:x20\./simplesaml/www/index\.php\?auth=default&account=50004\r\nexpires:
+SF:\x20Thu,\x2030\x20Oct\x202025\x2004:21:57\x20GMT\r\nreferrer-policy:\x2
+SF:0strict-origin-when-cross-origin\r\ncontent-security-policy:\x20frame-a
+SF:ncestors\x20'self'\x20sit-demo\.easyvista\.com\x20777-sbox\.developpeme
+SF:nt-durable\.gouv\.fr\x20777\.developpement-durable\.gouv\.fr\x20777-bo\
+SF:.developpement-durable\.gouv\.fr;\x20default-src\x20'none';\x20object-s
+SF:rc\x20'none';\x20img-src\x20'self'\x20blob:\x20data:\x20https:\x20http:
+SF://localhost;\x20media-src\x20'self'\x20data:\x20https:\x20blob:;\x20scr
+SF:ipt-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\x20blob:\x20data:
+SF:\x20https:;\x20style-src\x20'self'\x20'unsafe-inline'\x20https:;\x20fon
+SF:t-src\x20'self'\x20data:\x20https:;\x20frame-src\x20'self'\x20https:\x2
+SF:0blob:;\x20connect-src\x20'self'\x20https:\x20wss:;\x20base-uri\x20'sel
+SF:f';\x20form-action\x20'self'\x20https:;\x20manifest-src\x20'self'\r\nho
+SF:sting-release:\x20U2FsdGVkX1/v63CV0cL3qnlqZILeW2Ov9Q2T0h9LDCs=\r\nx");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 04:22:21 2025 -- 1 IP address (1 host up) scanned in 48.90 seconds
