@@ -1,0 +1,79 @@
+# Nmap 7.92 scan initiated Wed Oct 29 04:15:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln apim-part.portailpro.gouv.fr
+Nmap scan report for apim-part.portailpro.gouv.fr (145.242.17.116)
+Host is up (0.15s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     activityid: 220e2e63-6c52-4b54-8be3-0e3d27996383
+|     Content-Type: application/json; charset=UTF-8
+|     Date: Wed, 29 Oct 2025 04:15:56 GMT
+|     Connection: Close
+|     {"code":"404","type":"Status report","message":"Not Found","description":"The requested resource is not available."}
+|   GenericLines, RTSPRequest: 
+|     HTTP/1.1 400 Bad request
+|     Connection: Close
+|     Date: Wed, 29 Oct 2025 04:16:02 GMT
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     activityid: b42ec71d-ca34-45a5-a138-f61dbb69f524
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Wed, 29 Oct 2025 04:15:54 GMT
+|     Connection: Close
+|     <html xmlns="http://ws.apache.org/ns/synapse"><body><H1>Welcome to APIM</H1><a href="/service" style="display: none">service</a></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     activityid: b4e74b56-4ff7-47b0-b880-6f50a91126a6
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Wed, 29 Oct 2025 04:15:55 GMT
+|     Connection: Close
+|     <html xmlns="http://ws.apache.org/ns/synapse"><body><H1>Welcome to APIM</H1><a href="/service" style="display: none">service</a></body></html>
+|   Help, SSLSessionReq: 
+|     HTTP/1.1 400 Bad request
+|     Connection: Close
+|     Date: Wed, 29 Oct 2025 04:16:19 GMT
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.1 400 Bad request
+|     Connection: Close
+|     Date: Wed, 29 Oct 2025 04:16:20 GMT
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=690194FA%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,133,"HTTP/1\.0\x20200\x20OK\r\nactivityid:\x20b42ec
+SF:71d-ca34-45a5-a138-f61dbb69f524\r\nContent-Type:\x20text/html;\x20chars
+SF:et=UTF-8\r\nDate:\x20Wed,\x2029\x20Oct\x202025\x2004:15:54\x20GMT\r\nCo
+SF:nnection:\x20Close\r\n\r\n<html\x20xmlns=\"http://ws\.apache\.org/ns/sy
+SF:napse\"><body><H1>Welcome\x20to\x20APIM</H1><a\x20href=\"/service\"\x20
+SF:style=\"display:\x20none\">service</a></body></html>")%r(HTTPOptions,13
+SF:3,"HTTP/1\.0\x20200\x20OK\r\nactivityid:\x20b4e74b56-4ff7-47b0-b880-6f5
+SF:0a91126a6\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20W
+SF:ed,\x2029\x20Oct\x202025\x2004:15:55\x20GMT\r\nConnection:\x20Close\r\n
+SF:\r\n<html\x20xmlns=\"http://ws\.apache\.org/ns/synapse\"><body><H1>Welc
+SF:ome\x20to\x20APIM</H1><a\x20href=\"/service\"\x20style=\"display:\x20no
+SF:ne\">service</a></body></html>")%r(FourOhFourRequest,127,"HTTP/1\.0\x20
+SF:404\x20Not\x20Found\r\nactivityid:\x20220e2e63-6c52-4b54-8be3-0e3d27996
+SF:383\r\nContent-Type:\x20application/json;\x20charset=UTF-8\r\nDate:\x20
+SF:Wed,\x2029\x20Oct\x202025\x2004:15:56\x20GMT\r\nConnection:\x20Close\r\
+SF:n\r\n{\"code\":\"404\",\"type\":\"Status\x20report\",\"message\":\"Not\
+SF:x20Found\",\"description\":\"The\x20requested\x20resource\x20is\x20not\
+SF:x20available\.\"}")%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20reque
+SF:st\r\nConnection:\x20Close\r\nDate:\x20Wed,\x2029\x20Oct\x202025\x2004:
+SF:16:02\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,67,"HTTP/1
+SF:\.1\x20400\x20Bad\x20request\r\nConnection:\x20Close\r\nDate:\x20Wed,\x
+SF:2029\x20Oct\x202025\x2004:16:02\x20GMT\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20request\r\nConnection:\x20Close
+SF:\r\nDate:\x20Wed,\x2029\x20Oct\x202025\x2004:16:19\x20GMT\r\nContent-Le
+SF:ngth:\x200\r\n\r\n")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20req
+SF:uest\r\nConnection:\x20Close\r\nDate:\x20Wed,\x2029\x20Oct\x202025\x200
+SF:4:16:19\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie
+SF:,67,"HTTP/1\.1\x20400\x20Bad\x20request\r\nConnection:\x20Close\r\nDate
+SF::\x20Wed,\x2029\x20Oct\x202025\x2004:16:20\x20GMT\r\nContent-Length:\x2
+SF:00\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 04:17:34 2025 -- 1 IP address (1 host up) scanned in 123.63 seconds
