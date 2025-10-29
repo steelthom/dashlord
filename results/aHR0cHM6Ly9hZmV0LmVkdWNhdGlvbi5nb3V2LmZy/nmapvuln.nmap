@@ -1,0 +1,35 @@
+# Nmap 7.92 scan initiated Wed Oct 29 04:50:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln afet.education.gouv.fr
+Nmap scan report for afet.education.gouv.fr (185.75.143.22)
+Host is up (0.16s latency).
+rDNS record for 185.75.143.22: MEN-MUTU-PROXY01.dedie.ate.info
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      nginx
+443/tcp open  ssl/https
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   OpenVPN: 
+|     HTTP/1.1 400 Bad Request
+|     Server: nginx
+|     Date: Wed, 29 Oct 2025 04:50:59 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%I=7%D=10/29%Time=69019D33%P=x86_64-alpine-linux-musl
+SF:%r(OpenVPN,127,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx\
+SF:r\nDate:\x20Wed,\x2029\x20Oct\x202025\x2004:50:59\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n\r
+SF:\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>
+SF:\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>ngin
+SF:x</center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 04:51:11 2025 -- 1 IP address (1 host up) scanned in 31.14 seconds
