@@ -1,0 +1,252 @@
+# Nmap 7.92 scan initiated Wed Oct 29 05:23:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln avisau.cohesion-territoires.gouv.fr
+Nmap scan report for avisau.cohesion-territoires.gouv.fr (178.32.128.145)
+Host is up (0.15s latency).
+rDNS record for 178.32.128.145: ip145.ip-178-32-128.eu
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  ssl/http      nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     pragma: no-cache
+|     cache-control: private, max-age=0, no-cache, no-store
+|     content-type: text/html
+|     <html>
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style type="text/css">
+|     body {
+|     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+|     line-height: 1.66666667;
+|     font-size: 16px;
+|     color: #333;
+|     background-color: #fff;
+|     margin: 2em 1em;
+|     font-size: 28px;
+|     font-weight: 400;
+|     margin: 0 0 10px;
+|     .alert.alert-info {
+|     background-color: #F0F0F0;
+|     margin-top: 30px;
+|     padding: 30px;
+|     .alert p {
+|     padding-left: 35px;
+|     padding-left: 51px;
+|     position: relative;
+|_    font-size:
+443/tcp  open  ssl/https     nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     pragma: no-cache
+|     cache-control: private, max-age=0, no-cache, no-store
+|     content-type: text/html
+|     <html>
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style type="text/css">
+|     body {
+|     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+|     line-height: 1.66666667;
+|     font-size: 16px;
+|     color: #333;
+|     background-color: #fff;
+|     margin: 2em 1em;
+|     font-size: 28px;
+|     font-weight: 400;
+|     margin: 0 0 10px;
+|     .alert.alert-info {
+|     background-color: #F0F0F0;
+|     margin-top: 30px;
+|     padding: 30px;
+|     .alert p {
+|     padding-left: 35px;
+|     padding-left: 51px;
+|     position: relative;
+|_    font-size:
+8443/tcp open  ssl/https-alt
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 403 Forbidden
+|     Audit-Id: a61f1a3d-e28b-405b-be6e-71e0e56cad89
+|     Cache-Control: no-cache, private
+|     Content-Type: application/json
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-Content-Type-Options: nosniff
+|     X-Kubernetes-Pf-Flowschema-Uid: 04f7e1eb-1fb8-4d74-9e7c-657081f3102d
+|     X-Kubernetes-Pf-Prioritylevel-Uid: 6acfd47c-5ded-407c-b531-6b21e22f7c0d
+|     Date: Wed, 29 Oct 2025 05:23:45 GMT
+|     Content-Length: 212
+|     {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"forbidden: User "system:anonymous" cannot get path "/nice ports,/Trinity.txt.bak"","reason":"Forbidden","details":{},"code":403}
+|   GetRequest: 
+|     HTTP/1.0 403 Forbidden
+|     Audit-Id: ffc3e43c-c054-4797-8090-9f476c2f4772
+|     Cache-Control: no-cache, private
+|     Content-Type: application/json
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-Content-Type-Options: nosniff
+|     X-Kubernetes-Pf-Flowschema-Uid: 04f7e1eb-1fb8-4d74-9e7c-657081f3102d
+|     X-Kubernetes-Pf-Prioritylevel-Uid: 6acfd47c-5ded-407c-b531-6b21e22f7c0d
+|     Date: Wed, 29 Oct 2025 05:23:43 GMT
+|     Content-Length: 185
+|     {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"forbidden: User "system:anonymous" cannot get path "/"","reason":"Forbidden","details":{},"code":403}
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Audit-Id: c51484a4-178d-41c6-a7c3-433d153bea46
+|     Cache-Control: no-cache, private
+|     Content-Type: application/json
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-Content-Type-Options: nosniff
+|     X-Kubernetes-Pf-Flowschema-Uid: 04f7e1eb-1fb8-4d74-9e7c-657081f3102d
+|     X-Kubernetes-Pf-Prioritylevel-Uid: 6acfd47c-5ded-407c-b531-6b21e22f7c0d
+|     Date: Wed, 29 Oct 2025 05:23:44 GMT
+|     Content-Length: 189
+|_    {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Failure","message":"forbidden: User "system:anonymous" cannot options path "/"","reason":"Forbidden","details":{},"code":403}
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=6901A4ED%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,A4D,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\np
+SF:ragma:\x20no-cache\r\ncache-control:\x20private,\x20max-age=0,\x20no-ca
+SF:che,\x20no-store\r\ncontent-type:\x20text/html\r\n\r\n<html>\r\n\x20\x2
+SF:0<head>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"widt
+SF:h=device-width,\x20initial-scale=1\">\r\n\r\n\x20\x20\x20\x20<style\x20
+SF:type=\"text/css\">\r\n\x20\x20\x20\x20\x20\x20body\x20{\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20font-family:\x20\"Helvetica\x20Neue\",\x20Helvetica
+SF:,\x20Arial,\x20sans-serif;\r\n\x20\x20\x20\x20\x20\x20\x20\x20line-heig
+SF:ht:\x201\.66666667;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016
+SF:px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#333;\r\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20background-color:\x20#fff;\r\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20margin:\x202em\x201em;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x
+SF:20\x20\x20\x20\x20h1\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-size:
+SF:\x2028px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20400;\r\n\x
+SF:20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20p\x20{\r\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20margin:\x200\x200\x2010px;\r\n\x20\x20\x20\x20\x2
+SF:0\x20}\r\n\x20\x20\x20\x20\x20\x20\.alert\.alert-info\x20{\r\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20background-color:\x20#F0F0F0;\r\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20margin-top:\x2030px;\r\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20padding:\x2030px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x2
+SF:0\x20\.alert\x20p\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20padding-left:
+SF:\x2035px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20ul\x2
+SF:0{\r\n\x20\x20\x20\x20\x20\x20\x20\x20padding-left:\x2051px;\r\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20position:\x20relative;\r\n\x20\x20\x20\x20\x20
+SF:\x20}\r\n\x20\x20\x20\x20\x20\x20li\x20{\r\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20font-size:")%r(HTTPOptions,A4D,"HTTP/1\.0\x20503\x20Service\x20Una
+SF:vailable\r\npragma:\x20no-cache\r\ncache-control:\x20private,\x20max-ag
+SF:e=0,\x20no-cache,\x20no-store\r\ncontent-type:\x20text/html\r\n\r\n<htm
+SF:l>\r\n\x20\x20<head>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20c
+SF:ontent=\"width=device-width,\x20initial-scale=1\">\r\n\r\n\x20\x20\x20\
+SF:x20<style\x20type=\"text/css\">\r\n\x20\x20\x20\x20\x20\x20body\x20{\r\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\"Helvetica\x20Neue\",
+SF:\x20Helvetica,\x20Arial,\x20sans-serif;\r\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20line-height:\x201\.66666667;\r\n\x20\x20\x20\x20\x20\x20\x20\x20fon
+SF:t-size:\x2016px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#333;\r\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fff;\r\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20margin:\x202em\x201em;\r\n\x20\x20\x20\x20\x20\x
+SF:20}\r\n\x20\x20\x20\x20\x20\x20h1\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20font-size:\x2028px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\
+SF:x20400;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20p\x20{\
+SF:r\n\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x200\x2010px;\r\n\x20\x
+SF:20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\.alert\.alert-info\x20{
+SF:\r\n\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#F0F0F0;\r\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2030px;\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20padding:\x2030px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x
+SF:20\x20\x20\x20\x20\.alert\x20p\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:padding-left:\x2035px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20
+SF:\x20\x20ul\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20padding-left:\x2051p
+SF:x;\r\n\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\r\n\x20\x2
+SF:0\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20li\x20{\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20font-size:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=6901A4E0%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,A4D,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\n
+SF:pragma:\x20no-cache\r\ncache-control:\x20private,\x20max-age=0,\x20no-c
+SF:ache,\x20no-store\r\ncontent-type:\x20text/html\r\n\r\n<html>\r\n\x20\x
+SF:20<head>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"wid
+SF:th=device-width,\x20initial-scale=1\">\r\n\r\n\x20\x20\x20\x20<style\x2
+SF:0type=\"text/css\">\r\n\x20\x20\x20\x20\x20\x20body\x20{\r\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20font-family:\x20\"Helvetica\x20Neue\",\x20Helvetic
+SF:a,\x20Arial,\x20sans-serif;\r\n\x20\x20\x20\x20\x20\x20\x20\x20line-hei
+SF:ght:\x201\.66666667;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x201
+SF:6px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#333;\r\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20background-color:\x20#fff;\r\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20margin:\x202em\x201em;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\
+SF:x20\x20\x20\x20\x20h1\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-size
+SF::\x2028px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20400;\r\n\
+SF:x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20p\x20{\r\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20margin:\x200\x200\x2010px;\r\n\x20\x20\x20\x20\x
+SF:20\x20}\r\n\x20\x20\x20\x20\x20\x20\.alert\.alert-info\x20{\r\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20background-color:\x20#F0F0F0;\r\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20margin-top:\x2030px;\r\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20padding:\x2030px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x
+SF:20\x20\.alert\x20p\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20padding-left
+SF::\x2035px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20ul\x
+SF:20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20padding-left:\x2051px;\r\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20position:\x20relative;\r\n\x20\x20\x20\x20\x2
+SF:0\x20}\r\n\x20\x20\x20\x20\x20\x20li\x20{\r\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20font-size:")%r(HTTPOptions,A4D,"HTTP/1\.0\x20503\x20Service\x20Un
+SF:available\r\npragma:\x20no-cache\r\ncache-control:\x20private,\x20max-a
+SF:ge=0,\x20no-cache,\x20no-store\r\ncontent-type:\x20text/html\r\n\r\n<ht
+SF:ml>\r\n\x20\x20<head>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20
+SF:content=\"width=device-width,\x20initial-scale=1\">\r\n\r\n\x20\x20\x20
+SF:\x20<style\x20type=\"text/css\">\r\n\x20\x20\x20\x20\x20\x20body\x20{\r
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\"Helvetica\x20Neue\"
+SF:,\x20Helvetica,\x20Arial,\x20sans-serif;\r\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20line-height:\x201\.66666667;\r\n\x20\x20\x20\x20\x20\x20\x20\x20fo
+SF:nt-size:\x2016px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#333;\r\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fff;\r\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20margin:\x202em\x201em;\r\n\x20\x20\x20\x20\x20\
+SF:x20}\r\n\x20\x20\x20\x20\x20\x20h1\x20{\r\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20font-size:\x2028px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-weight:
+SF:\x20400;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20p\x20{
+SF:\r\n\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x200\x2010px;\r\n\x20\
+SF:x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20\.alert\.alert-info\x20
+SF:{\r\n\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#F0F0F0;\r\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2030px;\r\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20padding:\x2030px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\
+SF:x20\x20\x20\x20\x20\.alert\x20p\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0padding-left:\x2035px;\r\n\x20\x20\x20\x20\x20\x20}\r\n\x20\x20\x20\x2
+SF:0\x20\x20ul\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20padding-left:\x2051
+SF:px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\r\n\x20\x
+SF:20\x20\x20\x20\x20}\r\n\x20\x20\x20\x20\x20\x20li\x20{\r\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20font-size:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=6901A4E0%P=x86_64-alpine-lin
+SF:ux-musl%r(GetRequest,278,"HTTP/1\.0\x20403\x20Forbidden\r\nAudit-Id:\x2
+SF:0ffc3e43c-c054-4797-8090-9f476c2f4772\r\nCache-Control:\x20no-cache,\x2
+SF:0private\r\nContent-Type:\x20application/json\r\nStrict-Transport-Secur
+SF:ity:\x20max-age=31536000;\x20includeSubDomains;\x20preload\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nX-Kubernetes-Pf-Flowschema-Uid:\x2004f7e1e
+SF:b-1fb8-4d74-9e7c-657081f3102d\r\nX-Kubernetes-Pf-Prioritylevel-Uid:\x20
+SF:6acfd47c-5ded-407c-b531-6b21e22f7c0d\r\nDate:\x20Wed,\x2029\x20Oct\x202
+SF:025\x2005:23:43\x20GMT\r\nContent-Length:\x20185\r\n\r\n{\"kind\":\"Sta
+SF:tus\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failure\",\"me
+SF:ssage\":\"forbidden:\x20User\x20\\\"system:anonymous\\\"\x20cannot\x20g
+SF:et\x20path\x20\\\"/\\\"\",\"reason\":\"Forbidden\",\"details\":{},\"cod
+SF:e\":403}\n")%r(HTTPOptions,27C,"HTTP/1\.0\x20403\x20Forbidden\r\nAudit-
+SF:Id:\x20c51484a4-178d-41c6-a7c3-433d153bea46\r\nCache-Control:\x20no-cac
+SF:he,\x20private\r\nContent-Type:\x20application/json\r\nStrict-Transport
+SF:-Security:\x20max-age=31536000;\x20includeSubDomains;\x20preload\r\nX-C
+SF:ontent-Type-Options:\x20nosniff\r\nX-Kubernetes-Pf-Flowschema-Uid:\x200
+SF:4f7e1eb-1fb8-4d74-9e7c-657081f3102d\r\nX-Kubernetes-Pf-Prioritylevel-Ui
+SF:d:\x206acfd47c-5ded-407c-b531-6b21e22f7c0d\r\nDate:\x20Wed,\x2029\x20Oc
+SF:t\x202025\x2005:23:44\x20GMT\r\nContent-Length:\x20189\r\n\r\n{\"kind\"
+SF::\"Status\",\"apiVersion\":\"v1\",\"metadata\":{},\"status\":\"Failure\
+SF:",\"message\":\"forbidden:\x20User\x20\\\"system:anonymous\\\"\x20canno
+SF:t\x20options\x20path\x20\\\"/\\\"\",\"reason\":\"Forbidden\",\"details\
+SF:":{},\"code\":403}\n")%r(FourOhFourRequest,293,"HTTP/1\.0\x20403\x20For
+SF:bidden\r\nAudit-Id:\x20a61f1a3d-e28b-405b-be6e-71e0e56cad89\r\nCache-Co
+SF:ntrol:\x20no-cache,\x20private\r\nContent-Type:\x20application/json\r\n
+SF:Strict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains;\x
+SF:20preload\r\nX-Content-Type-Options:\x20nosniff\r\nX-Kubernetes-Pf-Flow
+SF:schema-Uid:\x2004f7e1eb-1fb8-4d74-9e7c-657081f3102d\r\nX-Kubernetes-Pf-
+SF:Prioritylevel-Uid:\x206acfd47c-5ded-407c-b531-6b21e22f7c0d\r\nDate:\x20
+SF:Wed,\x2029\x20Oct\x202025\x2005:23:45\x20GMT\r\nContent-Length:\x20212\
+SF:r\n\r\n{\"kind\":\"Status\",\"apiVersion\":\"v1\",\"metadata\":{},\"sta
+SF:tus\":\"Failure\",\"message\":\"forbidden:\x20User\x20\\\"system:anonym
+SF:ous\\\"\x20cannot\x20get\x20path\x20\\\"/nice\x20ports,/Trinity\.txt\.b
+SF:ak\\\"\",\"reason\":\"Forbidden\",\"details\":{},\"code\":403}\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 05:25:23 2025 -- 1 IP address (1 host up) scanned in 123.53 seconds
