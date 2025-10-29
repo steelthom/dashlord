@@ -1,0 +1,111 @@
+# Nmap 7.92 scan initiated Wed Oct 29 05:02:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln anact.fr
+Nmap scan report for anact.fr (31.170.11.143)
+Host is up (0.082s latency).
+rDNS record for 31.170.11.143: lb-11-143.ebizproduction.evolix.fr
+Not shown: 983 closed tcp ports (reset)
+PORT      STATE    SERVICE         VERSION
+20/tcp    filtered ftp-data
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+25/tcp    filtered smtp
+80/tcp    open     http            nginx
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     content-length: 107
+|     cache-control: no-cache
+|     content-type: text/html
+|     x-request-id: 6fb113a1-bdf1-4e93-8d6b-bdeab87b1c78
+|     connection: close
+|     <html><body><h1>503 Service Unavailable</h1>
+|     server is available to handle this request.
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     content-length: 107
+|     cache-control: no-cache
+|     content-type: text/html
+|     x-request-id: c05d4eb4-dee6-452b-bcc3-a1fcb39ccf58
+|     connection: close
+|     <html><body><h1>503 Service Unavailable</h1>
+|     server is available to handle this request.
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 503 Service Unavailable
+|     content-length: 107
+|     cache-control: no-cache
+|     content-type: text/html
+|     x-request-id: 3e932c29-c7fb-4635-948e-918ef976134f
+|     connection: close
+|     <html><body><h1>503 Service Unavailable</h1>
+|     server is available to handle this request.
+|     </body></html>
+|   RPCCheck, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     x-request-id: 
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     content-length: 107
+|     cache-control: no-cache
+|     content-type: text/html
+|     x-request-id: eb3e1ff9-effb-4951-b9f4-51cf34761388
+|     connection: close
+|     <html><body><h1>503 Service Unavailable</h1>
+|     server is available to handle this request.
+|_    </body></html>
+|_http-server-header: nginx
+110/tcp   filtered pop3
+143/tcp   filtered imap
+443/tcp   open     ssl/nagios-nsca Nagios NSCA
+|_http-server-header: nginx
+465/tcp   filtered smtps
+587/tcp   filtered submission
+993/tcp   filtered imaps
+995/tcp   filtered pop3s
+2222/tcp  filtered EtherNetIP-1
+16992/tcp filtered amt-soap-http
+16993/tcp filtered amt-soap-https
+60020/tcp filtered unknown
+60443/tcp filtered unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=10/29%Time=69019FD9%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,11D,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\ncontent
+SF:-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/
+SF:html\r\nx-request-id:\x20c05d4eb4-dee6-452b-bcc3-a1fcb39ccf58\r\nconnec
+SF:tion:\x20close\r\n\r\n<html><body><h1>503\x20Service\x20Unavailable</h1
+SF:>\nNo\x20server\x20is\x20available\x20to\x20handle\x20this\x20request\.
+SF:\n</body></html>\n")%r(HTTPOptions,11D,"HTTP/1\.1\x20503\x20Service\x20
+SF:Unavailable\r\ncontent-length:\x20107\r\ncache-control:\x20no-cache\r\n
+SF:content-type:\x20text/html\r\nx-request-id:\x203e932c29-c7fb-4635-948e-
+SF:918ef976134f\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Serv
+SF:ice\x20Unavailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handl
+SF:e\x20this\x20request\.\n</body></html>\n")%r(RTSPRequest,11D,"HTTP/1\.1
+SF:\x20503\x20Service\x20Unavailable\r\ncontent-length:\x20107\r\ncache-co
+SF:ntrol:\x20no-cache\r\ncontent-type:\x20text/html\r\nx-request-id:\x20eb
+SF:3e1ff9-effb-4951-b9f4-51cf34761388\r\nconnection:\x20close\r\n\r\n<html
+SF:><body><h1>503\x20Service\x20Unavailable</h1>\nNo\x20server\x20is\x20av
+SF:ailable\x20to\x20handle\x20this\x20request\.\n</body></html>\n")%r(X11P
+SF:robe,DF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\
+SF:ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nx-request-
+SF:id:\x20\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20re
+SF:quest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</bo
+SF:dy></html>\n")%r(FourOhFourRequest,11D,"HTTP/1\.1\x20503\x20Service\x20
+SF:Unavailable\r\ncontent-length:\x20107\r\ncache-control:\x20no-cache\r\n
+SF:content-type:\x20text/html\r\nx-request-id:\x206fb113a1-bdf1-4e93-8d6b-
+SF:bdeab87b1c78\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Serv
+SF:ice\x20Unavailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handl
+SF:e\x20this\x20request\.\n</body></html>\n")%r(RPCCheck,DF,"HTTP/1\.1\x20
+SF:400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-
+SF:cache\r\ncontent-type:\x20text/html\r\nx-request-id:\x20\r\nconnection:
+SF:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20br
+SF:owser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 05:02:41 2025 -- 1 IP address (1 host up) scanned in 33.84 seconds
