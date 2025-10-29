@@ -1,0 +1,91 @@
+# Nmap 7.92 scan initiated Wed Oct 29 05:03:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln andes.valid.social.gouv.fr
+Nmap scan report for andes.valid.social.gouv.fr (164.131.214.112)
+Host is up (0.13s latency).
+Not shown: 920 filtered tcp ports (no-response), 78 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 247
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 16927320146308054829<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 29 Oct 2025 05:10:48 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Connection: close
+|     X-XSS-Protection: 1
+|     X-Frame-Options: SAMEORIGIN
+|     X-Content-Type-Options: nosniff
+|     Set-Cookie: Current_Session=!zHW5dRBqoZarNmh5y79Hz7flTuzmgi85PZInfQK7T1LGgqdymRYbimTJSUDf61izrLkaL/JVtAl0iA==; path=/; Httponly; Secure
+|     Set-Cookie: TS01298773=015b1cc8374b1bec80cb70b442b577c3e4a0d35af9672b7669ae46c49960e03eb809d073b44bdbd72f2f75c59b0625152361bf1ab68b972e590a0e9663af978dd5b3b81005; Path=/; 
+|     <!DOCTYPE html>
+|     <html lang="fr">
+|     <head>
+|     <meta charset="utf-8" />
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <title>Accueil - AnDEs</title>
+|     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+|     <link rel="stylesheet" href="/css/site.css" />
+|     <script src="https://kit.fontawesome.com/b20baa17c5.js" crossorigin="
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 247
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 16927320146308054825<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/29%Time=6901A1D8%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,FCB,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2029\
+SF:x20Oct\x202025\x2005:10:48\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=utf-8\r\nConnection:\x20close\r\nX-XSS-Protection:\x201\r\nX-Frame
+SF:-Options:\x20SAMEORIGIN\r\nX-Content-Type-Options:\x20nosniff\r\nSet-Co
+SF:okie:\x20Current_Session=!zHW5dRBqoZarNmh5y79Hz7flTuzmgi85PZInfQK7T1LGg
+SF:qdymRYbimTJSUDf61izrLkaL/JVtAl0iA==;\x20path=/;\x20Httponly;\x20Secure\
+SF:r\nSet-Cookie:\x20TS01298773=015b1cc8374b1bec80cb70b442b577c3e4a0d35af9
+SF:672b7669ae46c49960e03eb809d073b44bdbd72f2f75c59b0625152361bf1ab68b972e5
+SF:90a0e9663af978dd5b3b81005;\x20Path=/;\x20\r\n\r\n<!DOCTYPE\x20html>\r\n
+SF:<html\x20lang=\"fr\">\r\n<head>\r\n\x20\x20\x20\x20<meta\x20charset=\"u
+SF:tf-8\"\x20/>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\
+SF:"width=device-width,\x20initial-scale=1\.0\"\x20/>\r\n\x20\x20\x20\x20<
+SF:title>Accueil\x20-\x20AnDEs</title>\r\n\x20\x20\x20\x20<link\x20rel=\"s
+SF:tylesheet\"\x20href=\"/lib/bootstrap/dist/css/bootstrap\.min\.css\"\x20
+SF:/>\r\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/css/site\.
+SF:css\"\x20/>\r\n\x20\x20\x20\x20<script\x20src=\"https://kit\.fontawesom
+SF:e\.com/b20baa17c5\.js\"\x20crossorigin=\"")%r(HTTPOptions,1E4,"HTTP/1\.
+SF:1\x20200\x20OK\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x
+SF:201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Contr
+SF:ol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\
+SF:x20charset=utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x20247\r\n\r
+SF:\n<html><head><title>Request\x20Rejected</title></head><body>The\x20req
+SF:uested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20your
+SF:\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20169273201463
+SF:08054825<br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back
+SF:\]</a></body></html>")%r(FourOhFourRequest,1E4,"HTTP/1\.1\x20200\x20OK\
+SF:r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=bl
+SF:ock\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-
+SF:8\r\nPragma:\x20no-cache\r\nContent-Length:\x20247\r\n\r\n<html><head><
+SF:title>Request\x20Rejected</title></head><body>The\x20requested\x20URL\x
+SF:20was\x20rejected\.\x20Please\x20consult\x20with\x20your\x20administrat
+SF:or\.<br><br>Your\x20support\x20ID\x20is:\x2016927320146308054829<br><br
+SF:><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]</a></body></
+SF:html>");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 29 05:13:02 2025 -- 1 IP address (1 host up) scanned in 593.51 seconds
