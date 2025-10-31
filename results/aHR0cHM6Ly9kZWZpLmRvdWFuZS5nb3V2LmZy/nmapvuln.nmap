@@ -1,0 +1,93 @@
+# Nmap 7.92 scan initiated Fri Oct 31 05:49:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln defi.douane.gouv.fr
+Nmap scan report for defi.douane.gouv.fr (212.106.111.163)
+Host is up (0.10s latency).
+rDNS record for 212.106.111.163: 163.111.106.212.in-addr.arpa.celeste.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 31 Oct 2025 05:49:39 GMT
+|     Strict-Transport-Security: max-age=3600; includeSubDomains; preload
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 31 Oct 2025 05:49:38 GMT
+|     Strict-Transport-Security: max-age=3600; includeSubDomains; preload
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 31 Oct 2025 05:49:50 GMT
+|     Strict-Transport-Security: max-age=3600; includeSubDomains; preload
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69044DF3%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1BD,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
+SF:0Fri,\x2031\x20Oct\x202025\x2005:49:38\x20GMT\r\nStrict-Transport-Secur
+SF:ity:\x20max-age=3600;\x20includeSubDomains;\x20preload\r\nContent-Lengt
+SF:h:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x2
+SF:0HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title
+SF:>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x
+SF:20a\x20request\x20that\x20this\x20server\x20could\x20not\x20understand\
+SF:.<br\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,1BD,"HTTP/1\.1\x2040
+SF:0\x20Bad\x20Request\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:49:39\x
+SF:20GMT\r\nStrict-Transport-Security:\x20max-age=3600;\x20includeSubDomai
+SF:ns;\x20preload\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nCon
+SF:tent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML
+SF:\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<tit
+SF:le>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1
+SF:>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20server
+SF:\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(F
+SF:ourOhFourRequest,1BD,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fr
+SF:i,\x2031\x20Oct\x202025\x2005:49:39\x20GMT\r\nStrict-Transport-Security
+SF::\x20max-age=3600;\x20includeSubDomains;\x20preload\r\nContent-Length:\
+SF:x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charse
+SF:t=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HT
+SF:ML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n
+SF:</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a
+SF:\x20request\x20that\x20this\x20server\x20could\x20not\x20understand\.<b
+SF:r\x20/>\n</p>\n</body></html>\n")%r(RTSPRequest,1BD,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:49:50\x20G
+SF:MT\r\nStrict-Transport-Security:\x20max-age=3600;\x20includeSubDomains;
+SF:\x20preload\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nConten
+SF:t-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x2
+SF:0PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>
+SF:400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n
+SF:<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x2
+SF:0could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 05:51:19 2025 -- 1 IP address (1 host up) scanned in 121.52 seconds
