@@ -1,0 +1,138 @@
+# Nmap 7.92 scan initiated Fri Oct 31 06:02:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln depot-teleservices-cnaps.interieur.gouv.fr
+Nmap scan report for depot-teleservices-cnaps.interieur.gouv.fr (185.209.55.144)
+Host is up (0.15s latency).
+rDNS record for 185.209.55.144: vip-minist-cnaps.jaguar-network.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp open  ssl/https Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     date: Fri, 31 Oct 2025 06:03:10 GMT
+|     server: Apache
+|     x-frame-options: DENY
+|     content-length: 196
+|     content-type: text/html; charset=iso-8859-1
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on this server.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Fri, 31 Oct 2025 06:03:09 GMT
+|     server: Apache
+|     x-frame-options: DENY
+|     last-modified: Wed, 04 May 2016 14:59:40 GMT
+|     etag: "0-53205799d043c"
+|     accept-ranges: bytes
+|     content-length: 0
+|     content-type: text/html
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Fri, 31 Oct 2025 06:03:10 GMT
+|     server: Apache
+|     x-frame-options: DENY
+|     allow: GET,HEAD,POST,OPTIONS
+|     content-length: 0
+|     content-type: text/html
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|     </body></html>
+|   RTSPRequest, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=10/31%Time=69045116%P=x86_64-alpine-linux-musl%
+SF:r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x
+SF:20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-
+SF:Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h
+SF:1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in
+SF:\x20time\.\n</body></html>\n")%r(GetRequest,5D,"HTTP/1\.1\x20301\x20Mov
+SF:ed\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\n
+SF:connection:\x20close\r\n\r\n")%r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Mo
+SF:ved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\
+SF:nconnection:\x20close\r\n\r\n")%r(FourOhFourRequest,80,"HTTP/1\.1\x2030
+SF:1\x20Moved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https
+SF::///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nconnection:\x20close\r\n\r\
+SF:n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=6904511D%P=x86_64-alpine-linu
+SF:x-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-le
+SF:ngth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nC
+SF:ontent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time
+SF:-out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20reques
+SF:t\x20in\x20time\.\n</body></html>\n")%r(GetRequest,128,"HTTP/1\.1\x2020
+SF:0\x20OK\r\ndate:\x20Fri,\x2031\x20Oct\x202025\x2006:03:09\x20GMT\r\nser
+SF:ver:\x20Apache\r\nx-frame-options:\x20DENY\r\nlast-modified:\x20Wed,\x2
+SF:004\x20May\x202016\x2014:59:40\x20GMT\r\netag:\x20\"0-53205799d043c\"\r
+SF:\naccept-ranges:\x20bytes\r\ncontent-length:\x200\r\ncontent-type:\x20t
+SF:ext/html\r\nstrict-transport-security:\x20max-age=63072000\r\nconnectio
+SF:n:\x20close\r\n\r\n")%r(HTTPOptions,E9,"HTTP/1\.1\x20200\x20OK\r\ndate:
+SF:\x20Fri,\x2031\x20Oct\x202025\x2006:03:10\x20GMT\r\nserver:\x20Apache\r
+SF:\nx-frame-options:\x20DENY\r\nallow:\x20GET,HEAD,POST,OPTIONS\r\nconten
+SF:t-length:\x200\r\ncontent-type:\x20text/html\r\nstrict-transport-securi
+SF:ty:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n")%r(FourOhFourR
+SF:equest,1AC,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Fri,\x2031\x20
+SF:Oct\x202025\x2006:03:10\x20GMT\r\nserver:\x20Apache\r\nx-frame-options:
+SF:\x20DENY\r\ncontent-length:\x20196\r\ncontent-type:\x20text/html;\x20ch
+SF:arset=iso-8859-1\r\nstrict-transport-security:\x20max-age=63072000\r\nc
+SF:onnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DT
+SF:D\x20HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20Found</tit
+SF:le>\n</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x
+SF:20was\x20not\x20found\x20on\x20this\x20server\.</p>\n</body></html>\n")
+SF:%r(tor-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-lengt
+SF:h:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nConte
+SF:nt-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>
+SF:\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>
+SF:\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-le
+SF:ngth:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</
+SF:h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></ht
+SF:ml>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 06:03:35 2025 -- 1 IP address (1 host up) scanned in 49.64 seconds
