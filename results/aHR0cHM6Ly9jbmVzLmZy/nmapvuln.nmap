@@ -1,0 +1,176 @@
+# Nmap 7.92 scan initiated Fri Oct 31 05:43:37 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cnes.fr
+Nmap scan report for cnes.fr (34.110.177.243)
+Host is up (0.0029s latency).
+rDNS record for 34.110.177.243: 243.177.110.34.bc.googleusercontent.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 54
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Fri, 31 Oct 2025 05:44:04 GMT
+|     <html><title>Error 400 (Bad Request)!!1</title></html>
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 54
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Fri, 31 Oct 2025 05:44:03 GMT
+|     <html><title>Error 400 (Bad Request)!!1</title></html>
+|   FourOhFourRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Cache-Control: private
+|     Location: https://34.110.177.243:443/nice%20ports%2C/Trinity.txt.bak
+|     Content-Length: 0
+|     Date: Fri, 31 Oct 2025 05:43:53 GMT
+|     Content-Type: text/html; charset=UTF-8
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Cache-Control: private
+|     Location: https://34.110.177.243:443/
+|     Content-Length: 0
+|     Date: Fri, 31 Oct 2025 05:43:48 GMT
+|     Content-Type: text/html; charset=UTF-8
+|   Help: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 273
+|     Date: Fri, 31 Oct 2025 05:44:04 GMT
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body text=#000000 bgcolor=#ffffff>
+|     <h1>Error: Bad Request</h1>
+|     <h2>Your client has issued a malformed or illegal request.</h2>
+|     <h2></h2>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 273
+|     Date: Fri, 31 Oct 2025 05:43:48 GMT
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body text=#000000 bgcolor=#ffffff>
+|     <h1>Error: Bad Request</h1>
+|     <h2>Your client has issued a malformed or illegal request.</h2>
+|     <h2></h2>
+|_    </body></html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Date: Fri, 31 Oct 2025 05:43:55 GMT
+|     Content-Length: 74
+|     Content-Type: text/plain; charset=utf-8
+|     Via: 1.1 google
+|     Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+|     response 404 (backend NotFound), service rules for the path non-existent
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     Date: Fri, 31 Oct 2025 05:43:54 GMT
+|     Content-Length: 74
+|     Content-Type: text/plain; charset=utf-8
+|     Via: 1.1 google
+|     Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+|     response 404 (backend NotFound), service rules for the path non-existent
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 273
+|     Date: Fri, 31 Oct 2025 05:44:00 GMT
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body text=#000000 bgcolor=#ffffff>
+|     <h1>Error: Bad Request</h1>
+|     <h2>Your client has issued a malformed or illegal request.</h2>
+|     <h2></h2>
+|     </body></html>
+|   tor-versions: 
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 54
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Fri, 31 Oct 2025 05:43:55 GMT
+|_    <html><title>Error 400 (Bad Request)!!1</title></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=10/31%Time=69044C94%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,C1,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Cont
+SF:rol:\x20private\r\nLocation:\x20https://34\.110\.177\.243:443/\r\nConte
+SF:nt-Length:\x200\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:43:48\x20GM
+SF:T\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(HTTPOptio
+SF:ns,C1,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Control:\x20pr
+SF:ivate\r\nLocation:\x20https://34\.110\.177\.243:443/\r\nContent-Length:
+SF:\x200\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:43:48\x20GMT\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\n\r\n")%r(RTSPRequest,1AD,"HT
+SF:TP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20char
+SF:set=UTF-8\r\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\
+SF:r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:43:48\x20GMT\r\n\r\n\n<html
+SF:><head>\n<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;ch
+SF:arset=utf-8\">\n<title>400\x20Bad\x20Request</title>\n</head>\n<body\x2
+SF:0text=#000000\x20bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<
+SF:h2>Your\x20client\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x
+SF:20request\.</h2>\n<h2></h2>\n</body></html>\n")%r(FourOhFourRequest,E0,
+SF:"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCache-Control:\x20private\
+SF:r\nLocation:\x20https://34\.110\.177\.243:443/nice%20ports%2C/Trinity\.
+SF:txt\.bak\r\nContent-Length:\x200\r\nDate:\x20Fri,\x2031\x20Oct\x202025\
+SF:x2005:43:53\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\
+SF:r\n")%r(DNSVersionBindReqTCP,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\n
+SF:Content-Length:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r
+SF:\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:44:03\x20GMT\r\n\r\n<html><t
+SF:itle>Error\x20400\x20\(Bad\x20Request\)!!1</title></html>")%r(DNSStatus
+SF:RequestTCP,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2
+SF:054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2
+SF:031\x20Oct\x202025\x2005:44:04\x20GMT\r\n\r\n<html><title>Error\x20400\
+SF:x20\(Bad\x20Request\)!!1</title></html>")%r(Help,1AD,"HTTP/1\.0\x20400\
+SF:x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nRe
+SF:ferrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\r\nDate:\x20Fri
+SF:,\x2031\x20Oct\x202025\x2005:44:04\x20GMT\r\n\r\n\n<html><head>\n<meta\
+SF:x20http-equiv=\"content-type\"\x20content=\"text/html;charset=utf-8\">\
+SF:n<title>400\x20Bad\x20Request</title>\n</head>\n<body\x20text=#000000\x
+SF:20bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<h2>Your\x20clie
+SF:nt\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x20request\.</h2
+SF:>\n<h2></h2>\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69044C9A%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,110,"HTTP/1\.0\x20404\x20Not\x20Found\r\nDate:\x20F
+SF:ri,\x2031\x20Oct\x202025\x2005:43:54\x20GMT\r\nContent-Length:\x2074\r\
+SF:nContent-Type:\x20text/plain;\x20charset=utf-8\r\nVia:\x201\.1\x20googl
+SF:e\r\nAlt-Svc:\x20h3=\":443\";\x20ma=2592000,h3-29=\":443\";\x20ma=25920
+SF:00\r\n\r\nresponse\x20404\x20\(backend\x20NotFound\),\x20service\x20rul
+SF:es\x20for\x20the\x20path\x20non-existent\x20\n")%r(HTTPOptions,110,"HTT
+SF:P/1\.0\x20404\x20Not\x20Found\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x20
+SF:05:43:54\x20GMT\r\nContent-Length:\x2074\r\nContent-Type:\x20text/plain
+SF:;\x20charset=utf-8\r\nVia:\x201\.1\x20google\r\nAlt-Svc:\x20h3=\":443\"
+SF:;\x20ma=2592000,h3-29=\":443\";\x20ma=2592000\r\n\r\nresponse\x20404\x2
+SF:0\(backend\x20NotFound\),\x20service\x20rules\x20for\x20the\x20path\x20
+SF:non-existent\x20\n")%r(FourOhFourRequest,110,"HTTP/1\.0\x20404\x20Not\x
+SF:20Found\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2005:43:55\x20GMT\r\nCon
+SF:tent-Length:\x2074\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:Via:\x201\.1\x20google\r\nAlt-Svc:\x20h3=\":443\";\x20ma=2592000,h3-29=
+SF:\":443\";\x20ma=2592000\r\n\r\nresponse\x20404\x20\(backend\x20NotFound
+SF:\),\x20service\x20rules\x20for\x20the\x20path\x20non-existent\x20\n")%r
+SF:(tor-versions,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:
+SF:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,
+SF:\x2031\x20Oct\x202025\x2005:43:55\x20GMT\r\n\r\n<html><title>Error\x204
+SF:00\x20\(Bad\x20Request\)!!1</title></html>")%r(RTSPRequest,1AD,"HTTP/1\
+SF:.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=U
+SF:TF-8\r\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\r\nDa
+SF:te:\x20Fri,\x2031\x20Oct\x202025\x2005:44:00\x20GMT\r\n\r\n\n<html><hea
+SF:d>\n<meta\x20http-equiv=\"content-type\"\x20content=\"text/html;charset
+SF:=utf-8\">\n<title>400\x20Bad\x20Request</title>\n</head>\n<body\x20text
+SF:=#000000\x20bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<h2>Yo
+SF:ur\x20client\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x20req
+SF:uest\.</h2>\n<h2></h2>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 05:44:49 2025 -- 1 IP address (1 host up) scanned in 71.95 seconds
