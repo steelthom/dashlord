@@ -1,0 +1,177 @@
+# Nmap 7.92 scan initiated Fri Oct 31 05:38:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cvec.etudiant.gouv.fr
+Nmap scan report for cvec.etudiant.gouv.fr (195.220.9.126)
+Host is up (0.11s latency).
+rDNS record for 195.220.9.126: cve-pxy.nuonet.fr
+Not shown: 992 filtered tcp ports (no-response)
+PORT     STATE  SERVICE       VERSION
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     cache-control: max-age=0, must-revalidate, private
+|     content-type: text/html; charset=UTF-8
+|     date: Fri, 31 Oct 2025 05:39:18 GMT
+|     expires: Fri, 31 Oct 2025 05:39:18 GMT
+|     set-cookie: qpid=d424n1hiqtpep9q730k0; Path=/; HttpOnly; Secure
+|     set-cookie: PHPSESSID=7ffkratdrkugkfn7ge1j293cvu; path=/; HttpOnly; Secure
+|     vary: Accept-Encoding
+|     x-frame-options: SAMEORIGIN
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     x-xss-protection: 1;mode=block
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: HAPROXYID=app1; path=/
+|     <!DOCTYPE html><html lang=FR><head>
+|     <meta charset="UTF-8">
+|     <title>Page non trouv
+|     erreur 404 - CVEC, Contribution de vie 
+|     tudiante et de campus</title>
+|     <meta name="description" content="">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <link rel="app
+|   HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     cache-control: max-age=0, must-revalidate, private
+|     content-type: text/html; charset=UTF-8
+|     date: Fri, 31 Oct 2025 05:39:18 GMT
+|     expires: Fri, 31 Oct 2025 05:39:18 GMT
+|     set-cookie: qpid=d424n1hiqtpep9q730kg; Path=/; HttpOnly; Secure
+|     set-cookie: PHPSESSID=98mv7spr7erut2q2olan0lj6f7; path=/; HttpOnly; Secure
+|     vary: Accept-Encoding
+|     x-frame-options: SAMEORIGIN
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     x-xss-protection: 1;mode=block
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: HAPROXYID=app1; path=/
+|     <!DOCTYPE html><html lang=FR><head>
+|     <meta charset="UTF-8">
+|     <title>Page non trouv
+|     erreur 404 - CVEC, Contribution de vie 
+|     tudiante et de campus</title>
+|     <meta name="description" content="">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     <link rel="app
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5432/tcp closed postgresql
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=10/31%Time=69044B7F%P=x86_64-alpine-linux-musl%
+SF:r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x
+SF:20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-
+SF:Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h
+SF:1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in
+SF:\x20time\.\n</body></html>\n")%r(GetRequest,5D,"HTTP/1\.1\x20301\x20Mov
+SF:ed\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\n
+SF:connection:\x20close\r\n\r\n")%r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Mo
+SF:ved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\
+SF:nconnection:\x20close\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20B
+SF:ad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\
+SF:nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body>
+SF:<h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invali
+SF:d\x20request\.\n</body></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20B
+SF:ad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\
+SF:nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body>
+SF:<h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invali
+SF:d\x20request\.\n</body></html>\n")%r(FourOhFourRequest,80,"HTTP/1\.1\x2
+SF:0301\x20Moved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20ht
+SF:tps:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nconnection:\x20close\r\n
+SF:\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-len
+SF:gth:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCon
+SF:tent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h
+SF:1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></htm
+SF:l>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\
+SF:nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20
+SF:close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x
+SF:20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n
+SF:</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x2
+SF:0request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConn
+SF:ection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>4
+SF:00\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20
+SF:request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69044B85%P=x86_64-alpine-linu
+SF:x-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-le
+SF:ngth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nC
+SF:ontent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time
+SF:-out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20reques
+SF:t\x20in\x20time\.\n</body></html>\n")%r(GetRequest,2382,"HTTP/1\.0\x204
+SF:04\x20Not\x20Found\r\ncache-control:\x20max-age=0,\x20must-revalidate,\
+SF:x20private\r\ncontent-type:\x20text/html;\x20charset=UTF-8\r\ndate:\x20
+SF:Fri,\x2031\x20Oct\x202025\x2005:39:18\x20GMT\r\nexpires:\x20Fri,\x2031\
+SF:x20Oct\x202025\x2005:39:18\x20GMT\r\nset-cookie:\x20qpid=d424n1hiqtpep9
+SF:q730k0;\x20Path=/;\x20HttpOnly;\x20Secure\r\nset-cookie:\x20PHPSESSID=7
+SF:ffkratdrkugkfn7ge1j293cvu;\x20path=/;\x20HttpOnly;\x20Secure\r\nvary:\x
+SF:20Accept-Encoding\r\nx-frame-options:\x20SAMEORIGIN\r\nstrict-transport
+SF:-security:\x20max-age=16000000;\x20includeSubDomains;\x20preload;\r\nx-
+SF:xss-protection:\x201;mode=block\r\nx-content-type-options:\x20nosniff\r
+SF:\nreferrer-policy:\x20no-referrer-when-downgrade\r\nset-cookie:\x20HAPR
+SF:OXYID=app1;\x20path=/\r\n\r\n<!DOCTYPE\x20html><html\x20lang=FR><head>\
+SF:n\t<meta\x20charset=\"UTF-8\">\n\t\t\t<title>Page\x20non\x20trouv\xc3\x
+SF:a9e\x20-\x20erreur\x20404\x20-\x20CVEC,\x20Contribution\x20de\x20vie\x2
+SF:0\xc3\xa9tudiante\x20et\x20de\x20campus</title>\n\n\t\t<meta\x20name=\"
+SF:description\"\x20content=\"\">\n\t<meta\x20name=\"viewport\"\x20content
+SF:=\"width=device-width,\x20initial-scale=1\.0\">\n\t\n\t\t\t<link\x20rel
+SF:=\"app")%r(HTTPOptions,314B,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncache-
+SF:control:\x20max-age=0,\x20must-revalidate,\x20private\r\ncontent-type:\
+SF:x20text/html;\x20charset=UTF-8\r\ndate:\x20Fri,\x2031\x20Oct\x202025\x2
+SF:005:39:18\x20GMT\r\nexpires:\x20Fri,\x2031\x20Oct\x202025\x2005:39:18\x
+SF:20GMT\r\nset-cookie:\x20qpid=d424n1hiqtpep9q730kg;\x20Path=/;\x20HttpOn
+SF:ly;\x20Secure\r\nset-cookie:\x20PHPSESSID=98mv7spr7erut2q2olan0lj6f7;\x
+SF:20path=/;\x20HttpOnly;\x20Secure\r\nvary:\x20Accept-Encoding\r\nx-frame
+SF:-options:\x20SAMEORIGIN\r\nstrict-transport-security:\x20max-age=160000
+SF:00;\x20includeSubDomains;\x20preload;\r\nx-xss-protection:\x201;mode=bl
+SF:ock\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x20no-ref
+SF:errer-when-downgrade\r\nset-cookie:\x20HAPROXYID=app1;\x20path=/\r\n\r\
+SF:n<!DOCTYPE\x20html><html\x20lang=FR><head>\n\t<meta\x20charset=\"UTF-8\
+SF:">\n\t\t\t<title>Page\x20non\x20trouv\xc3\xa9e\x20-\x20erreur\x20404\x2
+SF:0-\x20CVEC,\x20Contribution\x20de\x20vie\x20\xc3\xa9tudiante\x20et\x20d
+SF:e\x20campus</title>\n\n\t\t<meta\x20name=\"description\"\x20content=\"\
+SF:">\n\t<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20in
+SF:itial-scale=1\.0\">\n\t\n\t\t\t<link\x20rel=\"app");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 05:39:38 2025 -- 1 IP address (1 host up) scanned in 38.75 seconds
