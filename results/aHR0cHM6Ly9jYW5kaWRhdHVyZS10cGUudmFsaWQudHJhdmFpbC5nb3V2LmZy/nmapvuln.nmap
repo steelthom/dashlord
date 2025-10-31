@@ -1,0 +1,77 @@
+# Nmap 7.92 scan initiated Fri Oct 31 04:02:11 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln candidature-tpe.valid.travail.gouv.fr
+Nmap scan report for candidature-tpe.valid.travail.gouv.fr (164.131.214.125)
+Host is up (0.17s latency).
+Not shown: 963 filtered tcp ports (no-response), 36 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 302 Found
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 0
+|     Content-Type: text/html; charset=utf-8
+|     Location: https://candidature-tpe.valid.travail.gouv.fr/api/tpe/public/antivirus/error
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Fri, 31 Oct 2025 04:09:39 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=600
+|     Last-Modified: Fri, 08 Nov 2024 10:20:09 GMT
+|     ETag: "ea15-6266418726840"
+|     Accept-Ranges: bytes
+|     Content-Length: 59925
+|     X-XSS-Protection: 1; mode=block
+|     Strict-Transport-Security: max-age=63072000; includeSubDomains
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html><html lang="fr"><head>
+|     <meta charset="utf-8">
+|     <title>FrontOffice</title>
+|     <base href="/">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+|     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+|     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+|     <link rel="manifest" href="/favicon/manifest.webmanifest" crossorigin="use-credentials">
+|_    <style>:roo
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69043683%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1FF0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2031
+SF:\x20Oct\x202025\x2004:09:39\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nStrict-Transport-Security:\x20max-age=600\r\nLast-Modified:\x20Fri,\x2
+SF:008\x20Nov\x202024\x2010:20:09\x20GMT\r\nETag:\x20\"ea15-6266418726840\
+SF:"\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x2059925\r\nX-XSS-Prote
+SF:ction:\x201;\x20mode=block\r\nStrict-Transport-Security:\x20max-age=630
+SF:72000;\x20includeSubDomains\r\nConnection:\x20close\r\nContent-Type:\x2
+SF:0text/html;\x20charset=UTF-8\r\n\r\n<!DOCTYPE\x20html><html\x20lang=\"f
+SF:r\"><head>\n\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>FrontOf
+SF:fice</title>\n\x20\x20<base\x20href=\"/\">\n\n\x20\x20<meta\x20name=\"v
+SF:iewport\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\n\x2
+SF:0\x20<link\x20rel=\"apple-touch-icon\"\x20href=\"/favicon/apple-touch-i
+SF:con\.png\">\n\x20\x20<link\x20rel=\"icon\"\x20href=\"/favicon/favicon\.
+SF:svg\"\x20type=\"image/svg\+xml\">\n\x20\x20<link\x20rel=\"shortcut\x20i
+SF:con\"\x20href=\"/favicon/favicon\.ico\"\x20type=\"image/x-icon\">\n\x20
+SF:\x20<link\x20rel=\"manifest\"\x20href=\"/favicon/manifest\.webmanifest\
+SF:"\x20crossorigin=\"use-credentials\">\n<style>:roo")%r(HTTPOptions,11B,
+SF:"HTTP/1\.1\x20302\x20Found\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-P
+SF:rotection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\
+SF:nConnection:\x20close\r\nContent-Length:\x200\r\nContent-Type:\x20text/
+SF:html;\x20charset=utf-8\r\nLocation:\x20https://candidature-tpe\.valid\.
+SF:travail\.gouv\.fr/api/tpe/public/antivirus/error\r\n\r\n")%r(FourOhFour
+SF:Request,11B,"HTTP/1\.1\x20302\x20Found\r\nX-Frame-Options:\x20SAMEORIGI
+SF:N\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x
+SF:20nosniff\r\nConnection:\x20close\r\nContent-Length:\x200\r\nContent-Ty
+SF:pe:\x20text/html;\x20charset=utf-8\r\nLocation:\x20https://candidature-
+SF:tpe\.valid\.travail\.gouv\.fr/api/tpe/public/antivirus/error\r\n\r\n")%
+SF:r(RTSPRequest,11B,"HTTP/1\.1\x20302\x20Found\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Opti
+SF:ons:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x200\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nLocation:\x20https://candid
+SF:ature-tpe\.valid\.travail\.gouv\.fr/api/tpe/public/antivirus/error\r\n\
+SF:r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 04:11:56 2025 -- 1 IP address (1 host up) scanned in 585.64 seconds
