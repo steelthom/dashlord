@@ -1,0 +1,92 @@
+# Nmap 7.92 scan initiated Fri Oct 31 04:27:16 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln contrats-de-generation.gouv.fr
+Nmap scan report for contrats-de-generation.gouv.fr (185.194.82.27)
+Host is up (0.080s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+113/tcp closed ident
+443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Fri, 31 Oct 2025 04:27:35 GMT
+|     X-Spip-Cache: 21600
+|     X-Frame-Options: SAMEORIGIN
+|     Last-Modified: Fri, 31 Oct 2025 04:27:35 GMT
+|     Vary: Accept-Encoding
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!bUcBJVhpv86pMucXIkI7F7SI9ajmiqz7lm/4GnBZaPnxyMlpbFhVGIfByh53L7DLY29d3IYPmaUBlc9G+TFGJniJ7x6D; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000
+|     <!DOCTYPE HTML>
+|     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
+|     <head>
+|     <script>/*<![CDATA[*/(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement);/*]]>*/</script>
+|     <title>Accueil - Minist
+|     sant
+|     l&#039;acc
+|     soins</title>
+|     <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Fri, 31 Oct 2025 04:27:36 GMT
+|     X-Spip-Cache: 21600
+|     X-Frame-Options: SAMEORIGIN
+|     Last-Modified: Fri, 31 Oct 2025 04:27:36 GMT
+|     Vary: Accept-Encoding
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!/uun9Qh4PHULvt4XIkI7F7SI9ajmig36lH5zujgcRDBwftzvm/3pso5z4RCPwi0vOCsPWStLLlLX1WlK5cjxX8DjhTjo; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000
+|     <!DOCTYPE HTML>
+|     <html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr">
+|     <head>
+|     <script>/*<![CDATA[*/(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement);/*]]>*/</script>
+|     <title>Accueil - Minist
+|     sant
+|     l&#039;acc
+|     soins</title>
+|_    <style type='text/css'>img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69043AB8%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2031
+SF:\x20Oct\x202025\x2004:27:35\x20GMT\r\nX-Spip-Cache:\x2021600\r\nX-Frame
+SF:-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Fri,\x2031\x20Oct\x202025\
+SF:x2004:27:35\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x2
+SF:0charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-dares\.c
+SF:egedim\.cloud-http=!bUcBJVhpv86pMucXIkI7F7SI9ajmiqz7lm/4GnBZaPnxyMlpbFh
+SF:VGIfByh53L7DLY29d3IYPmaUBlc9G\+TFGJniJ7x6D;\x20path=/;\x20Httponly;\x20
+SF:Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<!DOCTY
+SF:PE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-js\"\x20
+SF:lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\[\*/\(f
+SF:unction\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'js'\)}\
+SF:)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>Accueil
+SF:\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20de\x20l&
+SF:#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/css'>im
+SF:g\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20{displa
+SF:y:inline-bl")%r(HTTPOptions,3894,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fr
+SF:i,\x2031\x20Oct\x202025\x2004:27:36\x20GMT\r\nX-Spip-Cache:\x2021600\r\
+SF:nX-Frame-Options:\x20SAMEORIGIN\r\nLast-Modified:\x20Fri,\x2031\x20Oct\
+SF:x202025\x2004:27:36\x20GMT\r\nVary:\x20Accept-Encoding\r\nX-Content-Typ
+SF:e-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Type:\x20text/
+SF:html;\x20charset=utf-8\r\nSet-Cookie:\x20BIGipServerpool-dicom-portail-
+SF:dares\.cegedim\.cloud-http=!/uun9Qh4PHULvt4XIkI7F7SI9ajmig36lH5zujgcRDB
+SF:wftzvm/3pso5z4RCPwi0vOCsPWStLLlLX1WlK5cjxX8DjhTjo;\x20path=/;\x20Httpon
+SF:ly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n
+SF:<!DOCTYPE\x20HTML>\n<html\x20class=\"page_sommaire\x20ltr\x20fr\x20no-j
+SF:s\"\x20lang=\"fr\"\x20dir=\"ltr\">\n\t<head>\n\t\t<script>/\*<!\[CDATA\
+SF:[\*/\(function\(H\){H\.className=H\.className\.replace\(/\\bno-js\\b/,'
+SF:js'\)}\)\(document\.documentElement\);/\*\]\]>\*/</script>\n\t\t<title>
+SF:Accueil\x20-\x20Minist\xc3\xa8re\x20de\x20la\x20sant\xc3\xa9\x20et\x20d
+SF:e\x20l&#039;acc\xc3\xa8s\x20aux\x20soins</title>\n<style\x20type='text/
+SF:css'>img\.adapt-img{max-width:100%;height:auto;}\.adapt-img-wrapper\x20
+SF:{display:inline-bl");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 04:29:46 2025 -- 1 IP address (1 host up) scanned in 149.12 seconds
