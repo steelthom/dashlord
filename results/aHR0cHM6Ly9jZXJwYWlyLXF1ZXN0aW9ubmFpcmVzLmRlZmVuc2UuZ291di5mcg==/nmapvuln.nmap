@@ -1,0 +1,93 @@
+# Nmap 7.92 scan initiated Fri Oct 31 04:08:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cerpair-questionnaires.defense.gouv.fr
+Nmap scan report for cerpair-questionnaires.defense.gouv.fr (185.24.185.2)
+Host is up (0.097s latency).
+Not shown: 948 filtered tcp ports (no-response), 50 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Date: Fri, 31 Oct 2025 04:13:14 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Set-Cookie: BIGipServer~Tenant-Externe~application~pool-ubika=218263562.20480.0000; path=/; Httponly; Secure
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.0 403 Forbidden
+|     Date: Fri, 31 Oct 2025 04:13:13 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Set-Cookie: BIGipServer~Tenant-Externe~application~pool-ubika=218263562.20480.0000; path=/; Httponly; Secure
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 31 Oct 2025 04:13:25 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Set-Cookie: BIGipServer~Tenant-Externe~application~pool-ubika=218263562.20480.0000; path=/; Httponly; Secure
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69043759%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Fri,
+SF:\x2031\x20Oct\x202025\x2004:13:13\x20GMT\r\nContent-Length:\x20199\r\nC
+SF:onnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-
+SF:1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~application~pool-ubika=2
+SF:18263562\.20480\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
+SF:ead>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1
+SF:>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20res
+SF:ource\.</p>\n</body></html>\n")%r(HTTPOptions,1C9,"HTTP/1\.0\x20403\x20
+SF:Forbidden\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2004:13:14\x20GMT\r\nC
+SF:ontent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\x20text/
+SF:html;\x20charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Extern
+SF:e~application~pool-ubika=218263562\.20480\.0000;\x20path=/;\x20Httponly
+SF:;\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTM
+SF:L\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head
+SF:><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20t
+SF:o\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(FourOhFourR
+SF:equest,1C9,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Fri,\x2031\x20Oct
+SF:\x202025\x2004:13:14\x20GMT\r\nContent-Length:\x20199\r\nConnection:\x2
+SF:0close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nSet-Cook
+SF:ie:\x20BIGipServer~Tenant-Externe~application~pool-ubika=218263562\.204
+SF:80\.0000;\x20path=/;\x20Httponly;\x20Secure\r\n\r\n<!DOCTYPE\x20HTML\x2
+SF:0PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>
+SF:403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20
+SF:don't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n
+SF:</body></html>\n")%r(RTSPRequest,1E6,"HTTP/1\.1\x20400\x20Bad\x20Reques
+SF:t\r\nDate:\x20Fri,\x2031\x20Oct\x202025\x2004:13:25\x20GMT\r\nContent-L
+SF:ength:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x2
+SF:0charset=iso-8859-1\r\nSet-Cookie:\x20BIGipServer~Tenant-Externe~applic
+SF:ation~pool-ubika=218263562\.20480\.0000;\x20path=/;\x20Httponly;\x20Sec
+SF:ure\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.
+SF:0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><b
+SF:ody>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20reque
+SF:st\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n
+SF:</p>\n</body></html>\n");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 04:15:24 2025 -- 1 IP address (1 host up) scanned in 439.43 seconds
