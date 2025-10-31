@@ -1,0 +1,126 @@
+# Nmap 7.92 scan initiated Fri Oct 31 04:04:58 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln candidature-formation.insp.gouv.fr
+Nmap scan report for candidature-formation.insp.gouv.fr (188.231.4.190)
+Host is up (0.13s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, GetRequest, HTTPOptions, Help, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: no-cache
+|     Content-length: 0
+|     Location: https:///
+|     Connection: keep-alive
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     Cache-Control: no-cache
+|     Content-length: 0
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|_    Connection: keep-alive
+113/tcp closed ident
+443/tcp open   ssl/https gunicorn
+|_http-server-header: gunicorn
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 303
+|     <!DOCTYPE html>
+|     <html> 
+|     <head>
+|     </head>
+|     <body>
+|     <iframe src="/fortiadc_insp/503.html" frameborder="0" width="100%" scrolling="no" onload="function resizeIframe(obj) {
+|     obj.style.height = obj.contentWindow.document.body.scrollHeight + 10 + 'px';
+|     };resizeIframe(this)"></iframe>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.0 400 Bad Request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 303
+|     <!DOCTYPE html>
+|     <html> 
+|     <head>
+|     </head>
+|     <body>
+|     <iframe src="/fortiadc_insp/400.html" frameborder="0" width="100%" scrolling="no" onload="function resizeIframe(obj) {
+|     obj.style.height = obj.contentWindow.document.body.scrollHeight + 10 + 'px';
+|     };resizeIframe(this)"></iframe>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=10/31%Time=6904357F%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,6F,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20no-cach
+SF:e\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nConnection:\x20k
+SF:eep-alive\r\n\r\n")%r(HTTPOptions,6F,"HTTP/1\.1\x20302\x20Found\r\nCach
+SF:e-Control:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20https://
+SF:/\r\nConnection:\x20keep-alive\r\n\r\n")%r(RTSPRequest,6F,"HTTP/1\.1\x2
+SF:0302\x20Found\r\nCache-Control:\x20no-cache\r\nContent-length:\x200\r\n
+SF:Location:\x20https:///\r\nConnection:\x20keep-alive\r\n\r\n")%r(X11Prob
+SF:e,6F,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20no-cache\r\nConten
+SF:t-length:\x200\r\nLocation:\x20https:///\r\nConnection:\x20keep-alive\r
+SF:\n\r\n")%r(FourOhFourRequest,92,"HTTP/1\.1\x20302\x20Found\r\nCache-Con
+SF:trol:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20https:///nice
+SF:%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\x20keep-alive\r\n\r\n")
+SF:%r(GenericLines,6F,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20no-c
+SF:ache\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nConnection:\x
+SF:20keep-alive\r\n\r\n")%r(RPCCheck,6F,"HTTP/1\.1\x20302\x20Found\r\nCach
+SF:e-Control:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20https://
+SF:/\r\nConnection:\x20keep-alive\r\n\r\n")%r(DNSVersionBindReqTCP,6F,"HTT
+SF:P/1\.1\x20302\x20Found\r\nCache-Control:\x20no-cache\r\nContent-length:
+SF:\x200\r\nLocation:\x20https:///\r\nConnection:\x20keep-alive\r\n\r\n")%
+SF:r(DNSStatusRequestTCP,6F,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x
+SF:20no-cache\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nConnect
+SF:ion:\x20keep-alive\r\n\r\n")%r(Help,6F,"HTTP/1\.1\x20302\x20Found\r\nCa
+SF:che-Control:\x20no-cache\r\nContent-length:\x200\r\nLocation:\x20https:
+SF:///\r\nConnection:\x20keep-alive\r\n\r\n")%r(SSLSessionReq,6F,"HTTP/1\.
+SF:1\x20302\x20Found\r\nCache-Control:\x20no-cache\r\nContent-length:\x200
+SF:\r\nLocation:\x20https:///\r\nConnection:\x20keep-alive\r\n\r\n")%r(Ter
+SF:minalServerCookie,6F,"HTTP/1\.1\x20302\x20Found\r\nCache-Control:\x20no
+SF:-cache\r\nContent-length:\x200\r\nLocation:\x20https:///\r\nConnection:
+SF:\x20keep-alive\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=10/31%Time=69043580%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1AD,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\n
+SF:Cache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20
+SF:text/html\r\nContent-Length:\x20303\r\n\r\n<!DOCTYPE\x20html>\n<html>\t
+SF:\n\t<head>\n\t</head>\n\t<body>\n\t\t<iframe\x20src=\"/fortiadc_insp/50
+SF:3\.html\"\x20frameborder=\"0\"\x20width=\"100%\"\x20scrolling=\"no\"\x2
+SF:0onload=\"function\x20resizeIframe\(obj\)\x20{\n\t\x20\x20\x20\x20obj\.
+SF:style\.height\x20=\x20obj\.contentWindow\.document\.body\.scrollHeight\
+SF:x20\+\x2010\x20\+\x20'px';\n\t\x20\x20};resizeIframe\(this\)\"></iframe
+SF:>\n\t</body>\n</html>")%r(HTTPOptions,1AD,"HTTP/1\.0\x20503\x20Service\
+SF:x20Unavailable\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\
+SF:nContent-Type:\x20text/html\r\nContent-Length:\x20303\r\n\r\n<!DOCTYPE\
+SF:x20html>\n<html>\t\n\t<head>\n\t</head>\n\t<body>\n\t\t<iframe\x20src=\
+SF:"/fortiadc_insp/503\.html\"\x20frameborder=\"0\"\x20width=\"100%\"\x20s
+SF:crolling=\"no\"\x20onload=\"function\x20resizeIframe\(obj\)\x20{\n\t\x2
+SF:0\x20\x20\x20obj\.style\.height\x20=\x20obj\.contentWindow\.document\.b
+SF:ody\.scrollHeight\x20\+\x2010\x20\+\x20'px';\n\t\x20\x20};resizeIframe\
+SF:(this\)\"></iframe>\n\t</body>\n</html>")%r(FourOhFourRequest,1AD,"HTTP
+SF:/1\.0\x20503\x20Service\x20Unavailable\r\nCache-Control:\x20no-cache\r\
+SF:nConnection:\x20close\r\nContent-Type:\x20text/html\r\nContent-Length:\
+SF:x20303\r\n\r\n<!DOCTYPE\x20html>\n<html>\t\n\t<head>\n\t</head>\n\t<bod
+SF:y>\n\t\t<iframe\x20src=\"/fortiadc_insp/503\.html\"\x20frameborder=\"0\
+SF:"\x20width=\"100%\"\x20scrolling=\"no\"\x20onload=\"function\x20resizeI
+SF:frame\(obj\)\x20{\n\t\x20\x20\x20\x20obj\.style\.height\x20=\x20obj\.co
+SF:ntentWindow\.document\.body\.scrollHeight\x20\+\x2010\x20\+\x20'px';\n\
+SF:t\x20\x20};resizeIframe\(this\)\"></iframe>\n\t</body>\n</html>")%r(tor
+SF:-versions,1A5,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCache-Control:\x20
+SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\nConte
+SF:nt-Length:\x20303\r\n\r\n<!DOCTYPE\x20html>\n<html>\t\n\t<head>\n\t</he
+SF:ad>\n\t<body>\n\t\t<iframe\x20src=\"/fortiadc_insp/400\.html\"\x20frame
+SF:border=\"0\"\x20width=\"100%\"\x20scrolling=\"no\"\x20onload=\"function
+SF:\x20resizeIframe\(obj\)\x20{\n\t\x20\x20\x20\x20obj\.style\.height\x20=
+SF:\x20obj\.contentWindow\.document\.body\.scrollHeight\x20\+\x2010\x20\+\
+SF:x20'px';\n\t\x20\x20};resizeIframe\(this\)\"></iframe>\n\t</body>\n</ht
+SF:ml>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 31 04:07:50 2025 -- 1 IP address (1 host up) scanned in 172.78 seconds
