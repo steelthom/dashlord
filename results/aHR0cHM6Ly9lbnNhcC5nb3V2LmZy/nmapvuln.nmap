@@ -1,0 +1,101 @@
+# Nmap 7.92 scan initiated Sat Nov  1 05:59:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ensap.gouv.fr
+Nmap scan report for ensap.gouv.fr (145.242.11.209)
+Host is up (0.11s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://145.242.11.209/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://145.242.11.209/
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 01 Nov 2025 06:00:08 GMT
+|     Content-Type: text/html
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     Content-Length: 94711
+|     Connection: close
+|     <!DOCTYPE html>
+|     <!--Ensap page de maintenance v1.3.0-1-->
+|     <!--Copyright DGFiP 2020-->
+|     <!--
+|     logiciel est r
+|     licence CeCILL-2.1 soumise au droit fran
+|     ais. Vous pouvez utiliser, modifier et/ou redistribuer
+|     programme sous les conditions de la licence CeCILL-2.1 telle que diffus
+|     CEA, le CNRS et l'INRIA sur le site :
+|     http://www.cecill.info/licences/Licence_CeCILL_V2.1-fr.txt
+|     <style>
+|     background-repeat: no-repeat;
+|     outline-offset: 0.5rem;
+|     *::before,
+|     *::after {
+|     background-repeat: inherit;
+|     @media (min-width: 1280px) {
+|     :root {
+|     scroll-padding-bottom: 10rem;
+|     @media (prefers-reduced-motion: no-preference) {
+|_    :root {
+|_http-trane-info: Problem with XML parsing of /evox/about
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/1%Time=6905A1E2%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https://145\.242\.11\.209/\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOp
+SF:tions,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
+SF:s://145\.242\.11\.209/\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRe
+SF:quest,7B,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
+SF:s://145\.242\.11\.209/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-L
+SF:ength:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/1%Time=6905A1E8%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2001\
+SF:x20Nov\x202025\x2006:00:08\x20GMT\r\nContent-Type:\x20text/html\r\nCach
+SF:e-Control:\x20no-cache,\x20no-store,\x20must-revalidate\r\nPragma:\x20n
+SF:o-cache\r\nExpires:\x200\r\nContent-Length:\x2094711\r\nConnection:\x20
+SF:close\r\n\r\n<!DOCTYPE\x20html>\r\n<!--Ensap\x20page\x20de\x20maintenan
+SF:ce\x20v1\.3\.0-1-->\r\n<!--Copyright\x20DGFiP\x202020-->\r\n<!--\r\nCe\
+SF:x20logiciel\x20est\x20r\xc3\xa9gi\x20par\x20la\x20licence\x20CeCILL-2\.
+SF:1\x20soumise\x20au\x20droit\x20fran\xc3\xa7ais\.\x20Vous\x20pouvez\x20u
+SF:tiliser,\x20modifier\x20et/ou\x20redistribuer\r\nce\x20programme\x20sou
+SF:s\x20les\x20conditions\x20de\x20la\x20licence\x20CeCILL-2\.1\x20telle\x
+SF:20que\x20diffus\xc3\xa9e\x20par\x20le\x20CEA,\x20le\x20CNRS\x20et\x20l'
+SF:INRIA\x20sur\x20le\x20site\x20:\r\nhttp://www\.cecill\.info/licences/Li
+SF:cence_CeCILL_V2\.1-fr\.txt\r\n-->\r\n<style>\r\n\*\x20{\r\n\x20\x20back
+SF:ground-repeat:\x20no-repeat;\r\n\x20\x20outline-offset:\x200\.5rem;\r\n
+SF:}\r\n\r\n\*::before,\r\n\*::after\x20{\r\n\x20\x20background-repeat:\x2
+SF:0inherit;\r\n}\r\n\r\n@media\x20\(min-width:\x201280px\)\x20{\r\n\x20\x
+SF:20:root\x20{\r\n\x20\x20\x20\x20scroll-padding-bottom:\x2010rem;\r\n\x2
+SF:0\x20}\r\n}\r\n@media\x20\(prefers-reduced-motion:\x20no-preference\)\x
+SF:20{\r\n\x20\x20:root\x20{\r\n")%r(HTTPOptions,8000,"HTTP/1\.1\x20200\x2
+SF:0OK\r\nDate:\x20Sat,\x2001\x20Nov\x202025\x2006:00:08\x20GMT\r\nContent
+SF:-Type:\x20text/html\r\nCache-Control:\x20no-cache,\x20no-store,\x20must
+SF:-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nContent-Length:\
+SF:x2094711\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<!--Ensap
+SF:\x20page\x20de\x20maintenance\x20v1\.3\.0-1-->\r\n<!--Copyright\x20DGFi
+SF:P\x202020-->\r\n<!--\r\nCe\x20logiciel\x20est\x20r\xc3\xa9gi\x20par\x20
+SF:la\x20licence\x20CeCILL-2\.1\x20soumise\x20au\x20droit\x20fran\xc3\xa7a
+SF:is\.\x20Vous\x20pouvez\x20utiliser,\x20modifier\x20et/ou\x20redistribue
+SF:r\r\nce\x20programme\x20sous\x20les\x20conditions\x20de\x20la\x20licenc
+SF:e\x20CeCILL-2\.1\x20telle\x20que\x20diffus\xc3\xa9e\x20par\x20le\x20CEA
+SF:,\x20le\x20CNRS\x20et\x20l'INRIA\x20sur\x20le\x20site\x20:\r\nhttp://ww
+SF:w\.cecill\.info/licences/Licence_CeCILL_V2\.1-fr\.txt\r\n-->\r\n<style>
+SF:\r\n\*\x20{\r\n\x20\x20background-repeat:\x20no-repeat;\r\n\x20\x20outl
+SF:ine-offset:\x200\.5rem;\r\n}\r\n\r\n\*::before,\r\n\*::after\x20{\r\n\x
+SF:20\x20background-repeat:\x20inherit;\r\n}\r\n\r\n@media\x20\(min-width:
+SF:\x201280px\)\x20{\r\n\x20\x20:root\x20{\r\n\x20\x20\x20\x20scroll-paddi
+SF:ng-bottom:\x2010rem;\r\n\x20\x20}\r\n}\r\n@media\x20\(prefers-reduced-m
+SF:otion:\x20no-preference\)\x20{\r\n\x20\x20:root\x20{\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov  1 06:02:14 2025 -- 1 IP address (1 host up) scanned in 147.52 seconds
