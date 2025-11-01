@@ -1,0 +1,86 @@
+# Nmap 7.92 scan initiated Sat Nov  1 06:09:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln draaf.paca.agriculture.gouv.fr
+Nmap scan report for draaf.paca.agriculture.gouv.fr (185.24.186.182)
+Host is up (0.11s latency).
+Not shown: 912 filtered tcp ports (no-response), 87 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+|_http-server-header: <empty>
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Nov 2025 06:18:49 GMT
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=63072000;includeSubDomains; preload
+|     Content-Length: 345
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     <p>Additionally, a 403 Forbidden
+|     error was encountered while trying to use an ErrorDocument to handle the request.</p>
+|     </body></html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 01 Nov 2025 06:18:48 GMT
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=63072000;includeSubDomains; preload
+|     Content-Length: 345
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     <p>Additionally, a 403 Forbidden
+|     error was encountered while trying to use an ErrorDocument to handle the request.</p>
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/1%Time=6905A648%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,25F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Sat,\x2001\x20Nov\x202025\x2006:18:48\x20GMT\r\nServer:\x20\x20\r\nX-Fr
+SF:ame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=630
+SF:72000;includeSubDomains;\x20preload\r\nContent-Length:\x20345\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n
+SF:\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\"
+SF:>\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<
+SF:h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20t
+SF:hat\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n<
+SF:p>Additionally,\x20a\x20403\x20Forbidden\nerror\x20was\x20encountered\x
+SF:20while\x20trying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x
+SF:20the\x20request\.</p>\n</body></html>\n")%r(HTTPOptions,25F,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2001\x20Nov\x202025\x2006:1
+SF:8:48\x20GMT\r\nServer:\x20\x20\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStr
+SF:ict-Transport-Security:\x20max-age=63072000;includeSubDomains;\x20prelo
+SF:ad\r\nContent-Length:\x20345\r\nConnection:\x20close\r\nContent-Type:\x
+SF:20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x
+SF:20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Ba
+SF:d\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x
+SF:20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x2
+SF:0not\x20understand\.<br\x20/>\n</p>\n<p>Additionally,\x20a\x20403\x20Fo
+SF:rbidden\nerror\x20was\x20encountered\x20while\x20trying\x20to\x20use\x2
+SF:0an\x20ErrorDocument\x20to\x20handle\x20the\x20request\.</p>\n</body></
+SF:html>\n")%r(FourOhFourRequest,25F,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nDate:\x20Sat,\x2001\x20Nov\x202025\x2006:18:49\x20GMT\r\nServer:\x20\
+SF:x20\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20
+SF:max-age=63072000;includeSubDomains;\x20preload\r\nContent-Length:\x2034
+SF:5\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso
+SF:-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x2
+SF:02\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</hea
+SF:d><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20r
+SF:equest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20
+SF:/>\n</p>\n<p>Additionally,\x20a\x20403\x20Forbidden\nerror\x20was\x20en
+SF:countered\x20while\x20trying\x20to\x20use\x20an\x20ErrorDocument\x20to\
+SF:x20handle\x20the\x20request\.</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov  1 06:19:16 2025 -- 1 IP address (1 host up) scanned in 557.44 seconds
