@@ -1,0 +1,118 @@
+# Nmap 7.92 scan initiated Sat Nov  1 04:33:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln e-collecte.igas.gouv.fr
+Nmap scan report for e-collecte.igas.gouv.fr (185.194.82.232)
+Host is up (0.11s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Sat, 01 Nov 2025 04:33:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 615
+|     Last-Modified: Mon, 24 Jun 2024 17:37:24 GMT
+|     Connection: close
+|     ETag: "6679aed4-267"
+|     Accept-Ranges: bytes
+|     Set-Cookie: BIGipServerpool-ecollecte-prod.cegedim.cloud-http=!+ksCB3Z6Jf/2acUXIkI7F7SI9ajmiml+oOQ/2Nr4Wb+AVJCBjUDNuPRVwSYhMfNgKYQKfJTiz6rjmzONHgkulfBxHwLi; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>Welcome to nginx!</title>
+|     <style>
+|     html { color-scheme: light dark; }
+|     body { width: 35em; margin: 0 auto;
+|     font-family: Tahoma, Verdana, Arial, sans-serif; }
+|     </style>
+|     </head>
+|     <body>
+|     <h1>Welcome to nginx!</h1>
+|     <p>If you see this page, the nginx web server is successfully installed and
+|     working. Further configuration is required.</p>
+|     <p>For online documentation and support please refer to
+|     href="http://n
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   RTSPRequest, SIPOptions: 
+|     HTTP/1.0 400 Bad Request
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|_    ERROR
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/1%Time=69058DA1%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/1%Time=69058DA8%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,431,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2001\x
+SF:20Nov\x202025\x2004:33:43\x20GMT\r\nContent-Type:\x20text/html\r\nConte
+SF:nt-Length:\x20615\r\nLast-Modified:\x20Mon,\x2024\x20Jun\x202024\x2017:
+SF:37:24\x20GMT\r\nConnection:\x20close\r\nETag:\x20\"6679aed4-267\"\r\nAc
+SF:cept-Ranges:\x20bytes\r\nSet-Cookie:\x20BIGipServerpool-ecollecte-prod\
+SF:.cegedim\.cloud-http=!\+ksCB3Z6Jf/2acUXIkI7F7SI9ajmiml\+oOQ/2Nr4Wb\+AVJ
+SF:CBjUDNuPRVwSYhMfNgKYQKfJTiz6rjmzONHgkulfBxHwLi;\x20path=/;\x20Httponly;
+SF:\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
+SF:eSubDomains\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<head>\n<title>Welcome\x
+SF:20to\x20nginx!</title>\n<style>\nhtml\x20{\x20color-scheme:\x20light\x2
+SF:0dark;\x20}\nbody\x20{\x20width:\x2035em;\x20margin:\x200\x20auto;\nfon
+SF:t-family:\x20Tahoma,\x20Verdana,\x20Arial,\x20sans-serif;\x20}\n</style
+SF:>\n</head>\n<body>\n<h1>Welcome\x20to\x20nginx!</h1>\n<p>If\x20you\x20s
+SF:ee\x20this\x20page,\x20the\x20nginx\x20web\x20server\x20is\x20successfu
+SF:lly\x20installed\x20and\nworking\.\x20Further\x20configuration\x20is\x2
+SF:0required\.</p>\n\n<p>For\x20online\x20documentation\x20and\x20support\
+SF:x20please\x20refer\x20to\n<a\x20href=\"http://n")%r(HTTPOptions,57,"HTT
+SF:P/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x20Keep-Alive\
+SF:r\nContent-Length:\x209\r\n\r\n405\x20ERROR")%r(FourOhFourRequest,4E,"H
+SF:TTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Alive\r\nContent
+SF:-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\
+SF:x20Bad\x20Request\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\
+SF:r\n\r\n400\x20ERROR")%r(SIPOptions,50,"HTTP/1\.0\x20400\x20Bad\x20Reque
+SF:st\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20E
+SF:RROR");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov  1 04:36:10 2025 -- 1 IP address (1 host up) scanned in 167.25 seconds
