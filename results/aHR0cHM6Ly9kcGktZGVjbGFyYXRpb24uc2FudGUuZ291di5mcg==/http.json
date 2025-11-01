@@ -1,0 +1,179 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B-",
+    "error": null,
+    "score": 65,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Sat, 01 Nov 2025 04:14:27 GMT",
+      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+      "strict-transport-security": "max-age=63072000; includeSubDomains",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "content-security-policy": "img-src 'self' data:; default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'",
+      "content-type": "text/html;charset=UTF-8",
+      "content-length": "662",
+      "set-cookie": [
+        "CSRF-TOKEN=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOGRiM2Q5MmIyOGI0OTU1YmI2MjY5ZmI2ZDlkYmE5NyJ9.SHPPldIWbPQKyoxQXZpyIuhHAIeBaRv_2Gkj-1yKtnE;Path=/dpi-webapp;Max-Age=14400;Expires=sam., 01-nov.-2025 05:14:41 CET;Secure;SameSite=Strict",
+        "JSESSIONID=ACB7BD72107BB2BEC9A8A7607419AB26; Path=/dpi-webapp; Secure; HttpOnly",
+        "TS014f54a1=012337f68dffe5248e35727e5595896bcc52e939172bff3dddb6ff9bebf89e659474d4d5418693e10663450636317093be77c81c850f667ef3df64aba657df03e3d8217a6a; Path=/;",
+        "TS017ec504=012337f68d639ca54c4fbf52bcc48e6e69fd15cb712bff3dddb6ff9bebf89e659474d4d5418693e10663450636317093be77c81c85fb13829289d83a8adfb0b9e3b93baa179d87a9c30e9789b4e8f70b07b3ae8226dc632b778d76d6da79e304702a1a8d1c; path=/dpi-webapp"
+      ],
+      "connection": "close"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-eval",
+      "scoreModifier": -10,
+      "data": {
+        "img-src": [
+          "'self'",
+          "data:"
+        ],
+        "default-src": [
+          "'self'"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-eval'"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": false,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "Current_Session": {
+          "domain": "dpi-declaration.sante.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS014f54a1": {
+          "domain": "dpi-declaration.sante.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "CSRF-TOKEN": {
+          "domain": "dpi-declaration.sante.gouv.fr",
+          "expires": "2025-11-01T05:14:41.000Z",
+          "max-age": 14400,
+          "path": "/dpi-webapp",
+          "port": null,
+          "samesite": "strict",
+          "secure": true
+        },
+        "JSESSIONID": {
+          "domain": "dpi-declaration.sante.gouv.fr",
+          "httponly": true,
+          "path": "/dpi-webapp",
+          "port": null,
+          "secure": true
+        },
+        "TS017ec504": {
+          "domain": "dpi-declaration.sante.gouv.fr",
+          "path": "/dpi-webapp",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-not-needed-no-http",
+      "scoreModifier": 0,
+      "destination": null,
+      "redirects": true,
+      "route": [],
+      "statusCode": null
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 63072000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-header-invalid",
+      "scoreModifier": -20,
+      "data": "SAMEORIGIN, SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
