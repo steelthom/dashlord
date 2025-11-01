@@ -1,0 +1,97 @@
+# Nmap 7.92 scan initiated Sat Nov  1 04:31:11 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln elections-professionnelles.valid.travail.gouv.fr
+Nmap scan report for elections-professionnelles.valid.travail.gouv.fr (176.31.133.218)
+Host is up (0.13s latency).
+rDNS record for 176.31.133.218: ip218.ip-176-31-133.eu
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 22 Jan 2025 08:41:46 GMT
+|     Cache-Control: must-revalidate, no-cache, private
+|     X-Drupal-Dynamic-Cache: UNCACHEABLE
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN, SAMEORIGIN
+|     expires: -1
+|     Content-Security-Policy: object-src 'none'; script-src 'self' 'unsafe-inline' https://matomo.fabrique.social.gouv.fr/ https://cdnjs.cloudflare.com; script-src-attr 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://static.piste.gouv.fr fonts.googleapis.com https://cdnjs.cloudflare.com; style-src-attr 'self' 'unsafe-inline'; frame-ancestors 'self'
+|     X-Drupal-Cache: HIT
+|     pragma: no-cache
+|     Strict-Transport-Security: max-age=600; includeSubDomains; preload
+|     Upgrade: h2
+|     Connection: Upgrade, close
+|     Content-Length: 386991
+|     X-XSS-Protection: 1; mode=block
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html>
+|     <html lang="fr" dir=
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Sat, 01 Nov 2025 04:31:34 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=600; includeSubDomains; preload
+|     Upgrade: h2
+|     Connection: Upgrade, close
+|     Last-Modified: Wed, 27 Jul 2022 18:04:30 GMT
+|     ETag: "1dc4-5e4cd3f996780"
+|     Accept-Ranges: bytes
+|     Content-Length: 7620
+|     X-XSS-Protection: 1; mode=block
+|     Content-Type: text/html; charset=UTF-8
+|     <!doctype html>
+|     <html>
+|     <head>
+|     <meta charset='utf-8'>
+|     <meta name='viewport' content='width=device-width, initial-scale=1'>
+|     <title>HTTP Server Test Page powered by: Rocky Linux</title>
+|     <style type="text/css">
+|     /*<![CDATA[*/
+|     html {
+|     height: 100%;
+|     width: 100%;
+|     body {
+|     background: rgb(20,72,50);
+|     background: -moz-linear-gradient(180deg, rgba(20,72,50,1) 30%, rgba(0,0,0,1) 90%) ;
+|_    background: -webkit-linear-gradient(180deg, rgba(20,72,50
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/1%Time=69058D26%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1035E,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2022
+SF:\x20Jan\x202025\x2008:41:46\x20GMT\r\nCache-Control:\x20must-revalidate
+SF:,\x20no-cache,\x20private\r\nX-Drupal-Dynamic-Cache:\x20UNCACHEABLE\r\n
+SF:Content-language:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Fram
+SF:e-Options:\x20SAMEORIGIN,\x20SAMEORIGIN\r\nexpires:\x20-1\r\nContent-Se
+SF:curity-Policy:\x20object-src\x20'none';\x20script-src\x20'self'\x20'uns
+SF:afe-inline'\x20https://matomo\.fabrique\.social\.gouv\.fr/\x20https://c
+SF:dnjs\.cloudflare\.com;\x20script-src-attr\x20'self'\x20'unsafe-inline';
+SF:\x20style-src\x20'self'\x20'unsafe-inline'\x20https://static\.piste\.go
+SF:uv\.fr\x20fonts\.googleapis\.com\x20https://cdnjs\.cloudflare\.com;\x20
+SF:style-src-attr\x20'self'\x20'unsafe-inline';\x20frame-ancestors\x20'sel
+SF:f'\r\nX-Drupal-Cache:\x20HIT\r\npragma:\x20no-cache\r\nStrict-Transport
+SF:-Security:\x20max-age=600;\x20includeSubDomains;\x20preload\r\nUpgrade:
+SF:\x20h2\r\nConnection:\x20Upgrade,\x20close\r\nContent-Length:\x20386991
+SF:\r\nX-XSS-Protection:\x201;\x20mode=block\r\nContent-Type:\x20text/html
+SF:;\x20charset=UTF-8\r\n\r\n\n\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\
+SF:x20dir=")%r(HTTPOptions,1F4C,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x2
+SF:0Sat,\x2001\x20Nov\x202025\x2004:31:34\x20GMT\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nStrict-Transport-Security:\x20max-age=600;\x20includeSubDom
+SF:ains;\x20preload\r\nUpgrade:\x20h2\r\nConnection:\x20Upgrade,\x20close\
+SF:r\nLast-Modified:\x20Wed,\x2027\x20Jul\x202022\x2018:04:30\x20GMT\r\nET
+SF:ag:\x20\"1dc4-5e4cd3f996780\"\r\nAccept-Ranges:\x20bytes\r\nContent-Len
+SF:gth:\x207620\r\nX-XSS-Protection:\x201;\x20mode=block\r\nContent-Type:\
+SF:x20text/html;\x20charset=UTF-8\r\n\r\n<!doctype\x20html>\n<html>\n\x20\
+SF:x20<head>\n\x20\x20\x20\x20<meta\x20charset='utf-8'>\n\x20\x20\x20\x20<
+SF:meta\x20name='viewport'\x20content='width=device-width,\x20initial-scal
+SF:e=1'>\n\x20\x20\x20\x20<title>HTTP\x20Server\x20Test\x20Page\x20powered
+SF:\x20by:\x20Rocky\x20Linux</title>\n\x20\x20\x20\x20<style\x20type=\"tex
+SF:t/css\">\n\x20\x20\x20\x20\x20\x20/\*<!\[CDATA\[\*/\n\x20\x20\x20\x20\x
+SF:20\x20\n\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20height:\x20100%;\n\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\n
+SF:\x20\x20\x20\x20\x20\x20}\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20body
+SF:\x20{\n\x20\x20background:\x20rgb\(20,72,50\);\n\x20\x20background:\x20
+SF:-moz-linear-gradient\(180deg,\x20rgba\(20,72,50,1\)\x2030%,\x20rgba\(0,
+SF:0,0,1\)\x2090%\)\x20\x20;\n\x20\x20background:\x20-webkit-linear-gradie
+SF:nt\(180deg,\x20rgba\(20,72,50");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov  1 04:33:47 2025 -- 1 IP address (1 host up) scanned in 156.38 seconds
