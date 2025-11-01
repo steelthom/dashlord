@@ -1,0 +1,227 @@
+# Nmap 7.92 scan initiated Sat Nov  1 03:53:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln directus.incubateur.anct.gouv.fr
+Nmap scan report for directus.incubateur.anct.gouv.fr (195.154.73.190)
+Host is up (0.090s latency).
+Other addresses for directus.incubateur.anct.gouv.fr (not scanned): 2001:bc8:710:23c4::
+rDNS record for 195.154.73.190: 195-154-73-190.rev.poneytelecom.eu
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      envoy
+|_http-server-header: envoy
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:56 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:55 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:43 GMT
+|     server: envoy
+|     connection: close
+|     Upgrade Required
+|   GetRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:35 GMT
+|     server: envoy
+|     connection: close
+|     Upgrade Required
+|   HTTPOptions: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:36 GMT
+|     server: envoy
+|     connection: close
+|     Upgrade Required
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:57 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:37 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:58 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:54:00 GMT
+|     server: envoy
+|     connection: close
+|_    Request
+443/tcp open  ssl/https envoy
+|_http-server-header: envoy
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:54:00 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:58 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   FourOhFourRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:44 GMT
+|     server: envoy
+|     connection: close
+|     Upgrade Required
+|   GetRequest: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:41 GMT
+|     server: envoy
+|     connection: close
+|     Upgrade Required
+|   HTTPOptions: 
+|     HTTP/1.1 426 Upgrade Required
+|     content-length: 16
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:42 GMT
+|     server: envoy
+|     connection: close
+|     Upgrade Required
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:54:01 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:52 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   SSLSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:54:02 GMT
+|     server: envoy
+|     connection: close
+|     Request
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 11
+|     content-type: text/plain
+|     date: Sat, 01 Nov 2025 03:53:45 GMT
+|     server: envoy
+|     connection: close
+|_    Request
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/1%Time=69058440%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,A6,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\ncontent-leng
+SF:th:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x20Nov\
+SF:x202025\x2003:53:35\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\
+SF:r\n\r\nUpgrade\x20Required")%r(HTTPOptions,A6,"HTTP/1\.1\x20426\x20Upgr
+SF:ade\x20Required\r\ncontent-length:\x2016\r\ncontent-type:\x20text/plain
+SF:\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:53:36\x20GMT\r\nserver:\x2
+SF:0envoy\r\nconnection:\x20close\r\n\r\nUpgrade\x20Required")%r(RTSPReque
+SF:st,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\nc
+SF:ontent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:
+SF:53:37\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20
+SF:Request")%r(FourOhFourRequest,A6,"HTTP/1\.1\x20426\x20Upgrade\x20Requir
+SF:ed\r\ncontent-length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20
+SF:Sat,\x2001\x20Nov\x202025\x2003:53:43\x20GMT\r\nserver:\x20envoy\r\ncon
+SF:nection:\x20close\r\n\r\nUpgrade\x20Required")%r(DNSVersionBindReqTCP,9
+SF:C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\nconte
+SF:nt-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:53:5
+SF:5\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Requ
+SF:est")%r(DNSStatusRequestTCP,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nc
+SF:ontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2
+SF:001\x20Nov\x202025\x2003:53:56\x20GMT\r\nserver:\x20envoy\r\nconnection
+SF::\x20close\r\n\r\nBad\x20Request")%r(Help,9C,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain\r\nda
+SF:te:\x20Sat,\x2001\x20Nov\x202025\x2003:53:57\x20GMT\r\nserver:\x20envoy
+SF:\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(SSLSessionReq,9C,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-ty
+SF:pe:\x20text/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:53:58\x20
+SF:GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")
+SF:%r(TerminalServerCookie,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nconte
+SF:nt-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\
+SF:x20Nov\x202025\x2003:54:00\x20GMT\r\nserver:\x20envoy\r\nconnection:\x2
+SF:0close\r\n\r\nBad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/1%Time=69058446%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,A6,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\nconte
+SF:nt-length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\
+SF:x20Nov\x202025\x2003:53:41\x20GMT\r\nserver:\x20envoy\r\nconnection:\x2
+SF:0close\r\n\r\nUpgrade\x20Required")%r(HTTPOptions,A6,"HTTP/1\.1\x20426\
+SF:x20Upgrade\x20Required\r\ncontent-length:\x2016\r\ncontent-type:\x20tex
+SF:t/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:53:42\x20GMT\r\nser
+SF:ver:\x20envoy\r\nconnection:\x20close\r\n\r\nUpgrade\x20Required")%r(Fo
+SF:urOhFourRequest,A6,"HTTP/1\.1\x20426\x20Upgrade\x20Required\r\ncontent-
+SF:length:\x2016\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x20
+SF:Nov\x202025\x2003:53:44\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20cl
+SF:ose\r\n\r\nUpgrade\x20Required")%r(tor-versions,9C,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20text/plain
+SF:\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:53:45\x20GMT\r\nserver:\x2
+SF:0envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(RTSPRequest,9C
+SF:,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\nconten
+SF:t-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:53:52
+SF:\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Reque
+SF:st")%r(DNSVersionBindReqTCP,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nc
+SF:ontent-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2
+SF:001\x20Nov\x202025\x2003:53:58\x20GMT\r\nserver:\x20envoy\r\nconnection
+SF::\x20close\r\n\r\nBad\x20Request")%r(DNSStatusRequestTCP,9C,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncontent-type:\x20t
+SF:ext/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:54:00\x20GMT\r\ns
+SF:erver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Request")%r(Help,
+SF:9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x2011\r\ncont
+SF:ent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x20Nov\x202025\x2003:54:
+SF:01\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20close\r\n\r\nBad\x20Req
+SF:uest")%r(SSLSessionReq,9C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nconten
+SF:t-length:\x2011\r\ncontent-type:\x20text/plain\r\ndate:\x20Sat,\x2001\x
+SF:20Nov\x202025\x2003:54:02\x20GMT\r\nserver:\x20envoy\r\nconnection:\x20
+SF:close\r\n\r\nBad\x20Request");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov  1 03:54:59 2025 -- 1 IP address (1 host up) scanned in 92.09 seconds
