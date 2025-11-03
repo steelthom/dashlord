@@ -1,0 +1,28 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:11:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln energie-mediateur.fr
+Nmap scan report for energie-mediateur.fr (46.18.193.117)
+Host is up (0.088s latency).
+rDNS record for 46.18.193.117: mail2.job41.fr
+Not shown: 992 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      ProFTPD or KnFTPD
+25/tcp  open  smtp     Sendmail 8.14.7/8.14.7
+| vulners: 
+|   cpe:/a:sendmail:sendmail:8.14.7%2F8.14.7: 
+|     	CVE-2021-3618	7.4	https://vulners.com/cve/CVE-2021-3618
+|     	CVE-2023-51765	5.3	https://vulners.com/cve/CVE-2023-51765
+|_    	32090D10-FC99-5944-BC29-1F630D06F766	5.3	https://vulners.com/githubexploit/32090D10-FC99-5944-BC29-1F630D06F766	*EXPLOIT*
+80/tcp  open  http     nginx
+110/tcp open  pop3     Dovecot pop3d
+143/tcp open  imap     Dovecot imapd
+443/tcp open  ssl/http nginx
+587/tcp open  smtp     Sendmail 8.14.7/8.14.7
+| vulners: 
+|   cpe:/a:sendmail:sendmail:8.14.7%2F8.14.7: 
+|     	CVE-2021-3618	7.4	https://vulners.com/cve/CVE-2021-3618
+|     	CVE-2023-51765	5.3	https://vulners.com/cve/CVE-2023-51765
+|_    	32090D10-FC99-5944-BC29-1F630D06F766	5.3	https://vulners.com/githubexploit/32090D10-FC99-5944-BC29-1F630D06F766	*EXPLOIT*
+993/tcp open  ssl/imap Dovecot imapd
+Service Info: Host: dvs65675.produhost.net; OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:11:39 2025 -- 1 IP address (1 host up) scanned in 18.28 seconds
