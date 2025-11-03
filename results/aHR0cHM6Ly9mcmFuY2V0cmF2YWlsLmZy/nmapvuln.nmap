@@ -1,0 +1,77 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:19:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln francetravail.fr
+Nmap scan report for francetravail.fr (185.215.64.79)
+Host is up (0.14s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, RTSPRequest: 
+|     HTTP/1.1 409 Conflict
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 41076
+|     <!DOCTYPE html>
+|     <html lang="fr" xml:lang="fr">
+|     <head>
+|     <title>Erreur contr
+|     s</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <!-- Favicon -->
+|     <link rel="icon" type="image/png" sizes="32x32" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6MiURejIlEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://www.francetravail.fr/accueil/
+|     Connection: close
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=69090E7F%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,79,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLoca
+SF:tion:\x20https://www\.francetravail\.fr/accueil/\r\nConnection:\x20clos
+SF:e\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,79,"HTTP/1\.0\x20301\
+SF:x20Moved\x20Permanently\r\nLocation:\x20https://www\.francetravail\.fr/
+SF:accueil/\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(Fo
+SF:urOhFourRequest,2237,"HTTP/1\.1\x20409\x20Conflict\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Typ
+SF:e-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-c
+SF:ache\r\nContent-Length:\x2041076\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20
+SF:lang=\"fr\"\x20xml:lang=\"fr\">\r\n\t<head>\r\n\t\t<title>Erreur\x20con
+SF:tr\xc3\xb4le\x20acc\xc3\xa8s</title>\r\n\t\t<meta\x20http-equiv=\"Conte
+SF:nt-Type\"\x20content=\"text/html;\x20charset=utf-8\">\r\n\t\t<meta\x20h
+SF:ttp-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\r\n\t\t<meta\x20n
+SF:ame=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\">
+SF:\r\n\t\t<!--\x20Favicon\x20-->\r\n\t\t<link\x20rel=\"icon\"\x20type=\"i
+SF:mage/png\"\x20sizes=\"32x32\"\x20href=\"data:image/x-icon;base64,AAABAA
+SF:EAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAA
+SF:AAAAAD///8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAB6MiURejIlEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAD///8A////AP")%r(RTSPRequest,2237,"HTTP/1\.1\x20
+SF:409\x20Conflict\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\
+SF:x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Cont
+SF:rol:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;
+SF:\x20charset=utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x2041076\r\
+SF:n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"fr\"\x20xml:lang=\"fr\">\r\n
+SF:\t<head>\r\n\t\t<title>Erreur\x20contr\xc3\xb4le\x20acc\xc3\xa8s</title
+SF:>\r\n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x
+SF:20charset=utf-8\">\r\n\t\t<meta\x20http-equiv=\"X-UA-Compatible\"\x20co
+SF:ntent=\"IE=edge\">\r\n\t\t<meta\x20name=\"viewport\"\x20content=\"width
+SF:=device-width,\x20initial-scale=1\">\r\n\t\t<!--\x20Favicon\x20-->\r\n\
+SF:t\t<link\x20rel=\"icon\"\x20type=\"image/png\"\x20sizes=\"32x32\"\x20hr
+SF:ef=\"data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQ
+SF:AAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6MiURejIlEQAAAAAAAAA
+SF:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP
+SF:");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:22:29 2025 -- 1 IP address (1 host up) scanned in 157.80 seconds

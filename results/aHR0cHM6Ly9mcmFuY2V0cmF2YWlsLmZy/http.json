@@ -1,0 +1,142 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 0,
+    "statusCode": 200,
+    "testsFailed": 6,
+    "testsPassed": 4,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "accept-ranges": "bytes",
+      "cache-control": "max-age=900",
+      "content-length": "5249",
+      "content-type": "text/html",
+      "date": "Mon, 03 Nov 2025 20:15:00 GMT",
+      "expires": "Mon, 03 Nov 2025 20:30:00 GMT",
+      "last-modified": "Thu, 16 Oct 2025 17:10:45 GMT",
+      "server-timing": "dtSInfo;desc=\"0\", dtRpid;desc=\"-1896053624\"",
+      "vary": "Accept-Encoding,User-Agent",
+      "x-oneagent-js-injection": "true",
+      "x-ruxit-js-agent": "true",
+      "x-content-type-options": "nosniff'",
+      "connection": "close",
+      "set-cookie": [
+        "BIGipServerPOOL_Z5_PROD_MOP_HTTP=!5B73EAgFakrDyeh51iIR7dIYVU4QbEY8Vp5z5g+V1RCy4LaNlo2YfDdsPnM4Gx1BhO7se+SHgl52oqk=; path=/; Httponly; Secure;",
+        "TS01f56c24=01b3abf0a23f2e44f4a2c1f1194b76d89f33bcb42f7e12aaf67881b4b8a3c68688e915d0a3a965e6d4ceba7eb551b53ff25bac7c61; Path=/; Domain=.www.francetravail.fr; Secure; HttpOnly"
+      ]
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
+      "data": {
+        "BIGipServerPOOL_Z5_PROD_MOP_HTTP": {
+          "domain": "www.francetravail.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS01f56c24": {
+          "domain": "www.francetravail.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
+      "destination": "https://www.francetravail.fr/accueil/",
+      "redirects": true,
+      "route": [
+        "http://francetravail.fr/",
+        "https://www.francetravail.fr/accueil/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "//cdn.tagcommander.com/4340/tc_PoleEmploi_24.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-header-invalid",
+      "scoreModifier": -5,
+      "data": "nosniff'"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
