@@ -1,0 +1,45 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:16:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln aamtdm.net
+Nmap scan report for aamtdm.net (46.182.4.115)
+Host is up (0.098s latency).
+Not shown: 986 filtered tcp ports (no-response)
+PORT      STATE  SERVICE    VERSION
+20/tcp    closed ftp-data
+21/tcp    open   ftp        Pure-FTPd
+25/tcp    open   smtp       Postfix smtpd
+80/tcp    open   http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Mon, 03 Nov 2025 19:17:07 GMT
+|     Content-Type: text/html
+|     Content-Length: 146
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+110/tcp   open   pop3       Dovecot pop3d
+143/tcp   open   imap       Dovecot imapd
+443/tcp   open   tcpwrapped
+587/tcp   open   smtp       Postfix smtpd
+990/tcp   closed ftps
+993/tcp   open   ssl/imaps?
+995/tcp   open   ssl/pop3s?
+40193/tcp closed unknown
+40911/tcp closed unknown
+41511/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=6908FF96%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,112,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Mon,\x200
+SF:3\x20Nov\x202025\x2019:17:07\x20GMT\r\nContent-Type:\x20text/html\r\nCo
+SF:ntent-Length:\x20146\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><ti
+SF:tle>404\x20Not\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20
+SF:Not\x20Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n
+SF:</html>\r\n");
+Service Info: Host:  emailnode01.hosteur.net
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:16:49 2025 -- 1 IP address (1 host up) scanned in 23.21 seconds
