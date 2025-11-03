@@ -1,5 +1,7 @@
 # DashLord
 
+![GitHub repo size](https://img.shields.io/github/repo-size/steelthom/dashlord)
+
 Tableau de bord des bonnes pratiques techniques
 
 Exemples :
