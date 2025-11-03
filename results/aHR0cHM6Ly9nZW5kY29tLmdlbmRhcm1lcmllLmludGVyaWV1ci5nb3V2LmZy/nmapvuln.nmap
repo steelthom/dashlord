@@ -1,0 +1,93 @@
+# Nmap 7.92 scan initiated Mon Nov  3 04:20:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln gendcom.gendarmerie.interieur.gouv.fr
+Nmap scan report for gendcom.gendarmerie.interieur.gouv.fr (185.114.102.110)
+Host is up (0.088s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http?
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Mon, 03 Nov 2025 04:21:08 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     Location: https://gendcom.gendarmerie.interieur.gouv.fr/nice%20ports,/Trinity.txt.bak
+|     Strict-Transport-Security: max-age=31536000
+|     Set-Cookie: SESSION-RP=46949386.47873.0000; path=/; Httponly; Secure
+|     Set-Cookie: TS011ed4f3=0161bc97181958ebcd8a61644ed9db5207723cafdf796d5a42072ac7e2c8f3be894d20789de8d6218ba5a925760029149d9b7369ba0ca19e1ba63aadac803e9ca87f0a23df; Path=/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Mon, 03 Nov 2025 04:21:07 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     Location: https://gendcom.gendarmerie.interieur.gouv.fr/
+|     Strict-Transport-Security: max-age=31536000
+|     Set-Cookie: SESSION-RP=30172170.47873.0000; path=/; Httponly; Secure
+|     Set-Cookie: TS011ed4f3=0161bc9718b6e906d38ebcf931d4423e79e7d748a8485b0321f6d9744086e009f14ef36aaf06b605f302710e065cfbff0e3e2dd26a90a2b28fc08c8b687615427ff4b3014c; Path=/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 246
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains
+|     X-XSS-Protection: 0; mode=block
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 3501790010345245800<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=69082DB3%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,282,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDat
+SF:e:\x20Mon,\x2003\x20Nov\x202025\x2004:21:07\x20GMT\r\nContent-Type:\x20
+SF:text/html\r\nContent-Length:\x20162\r\nConnection:\x20close\r\nLocation
+SF::\x20https://gendcom\.gendarmerie\.interieur\.gouv\.fr/\r\nStrict-Trans
+SF:port-Security:\x20max-age=31536000\r\nSet-Cookie:\x20SESSION-RP=3017217
+SF:0\.47873\.0000;\x20path=/;\x20Httponly;\x20Secure\r\nSet-Cookie:\x20TS0
+SF:11ed4f3=0161bc9718b6e906d38ebcf931d4423e79e7d748a8485b0321f6d9744086e00
+SF:9f14ef36aaf06b605f302710e065cfbff0e3e2dd26a90a2b28fc08c8b687615427ff4b3
+SF:014c;\x20Path=/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanent
+SF:ly</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently<
+SF:/h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")
+SF:%r(HTTPOptions,24B,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-ca
+SF:che\r\nContent-Length:\x20246\r\nStrict-Transport-Security:\x20max-age=
+SF:63072000;\x20includeSubdomains\r\nX-XSS-Protection:\x200;\x20mode=block
+SF:\r\n\r\n<html><head><title>Request\x20Rejected</title></head><body>The\
+SF:x20requested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x
+SF:20your\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20350179
+SF:0010345245800<br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x2
+SF:0Back\]</a></body></html>")%r(FourOhFourRequest,29F,"HTTP/1\.1\x20301\x
+SF:20Moved\x20Permanently\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2004:21:0
+SF:8\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20162\r\nCon
+SF:nection:\x20close\r\nLocation:\x20https://gendcom\.gendarmerie\.interie
+SF:ur\.gouv\.fr/nice%20ports,/Trinity\.txt\.bak\r\nStrict-Transport-Securi
+SF:ty:\x20max-age=31536000\r\nSet-Cookie:\x20SESSION-RP=46949386\.47873\.0
+SF:000;\x20path=/;\x20Httponly;\x20Secure\r\nSet-Cookie:\x20TS011ed4f3=016
+SF:1bc97181958ebcd8a61644ed9db5207723cafdf796d5a42072ac7e2c8f3be894d20789d
+SF:e8d6218ba5a925760029149d9b7369ba0ca19e1ba63aadac803e9ca87f0a23df;\x20Pa
+SF:th=/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title><
+SF:/head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></cente
+SF:r>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 04:23:18 2025 -- 1 IP address (1 host up) scanned in 151.66 seconds
