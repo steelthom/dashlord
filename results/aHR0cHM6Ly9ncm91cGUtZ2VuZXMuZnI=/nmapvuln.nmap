@@ -1,0 +1,92 @@
+# Nmap 7.92 scan initiated Mon Nov  3 05:27:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln groupe-genes.fr
+Nmap scan report for groupe-genes.fr (195.221.82.21)
+Host is up (0.15s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE  SERVICE   VERSION
+80/tcp   open   http?
+113/tcp  closed ident
+443/tcp  open   ssl/http  Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-server-header: 
+|   Microsoft-HTTPAPI/2.0
+|_  Microsoft-IIS/8.0
+8010/tcp open   ssl/xmpp?
+| fingerprint-strings: 
+|   GenericLines, GetRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 4492
+|     Connection: close
+|     Cache-Control: no-cache
+|     Content-Type: text/html; charset=utf-8
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: frame-ancestors 'self'
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=8; IE=EDGE">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style type="text/css">
+|     body {
+|     height: 100%;
+|     font-family: Helvetica, Arial, sans-serif;
+|     color: #6a6a6a;
+|     margin: 0;
+|     display: flex;
+|     align-items: center;
+|     justify-content: center;
+|_    input[type=date], input[type=email], input[type=number], input[type=password]
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8010-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=69083D6E%P=x86_64-alpine-linu
+SF:x-musl%r(GenericLines,1299,"HTTP/1\.1\x20200\x20OK\r\nContent-Length:\x
+SF:204492\r\nConnection:\x20close\r\nCache-Control:\x20no-cache\r\nContent
+SF:-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20SAMEORIGIN
+SF:\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x2
+SF:0nosniff\r\nContent-Security-Policy:\x20frame-ancestors\x20'self'\r\n\r
+SF:\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20\x20\x20<head>\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"UTF-8\">\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=
+SF:\"IE=8;\x20IE=EDGE\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"
+SF:viewport\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Helve
+SF:tica,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20color:\x20#6a6a6a;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\
+SF:x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20justify-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20input\[ty
+SF:pe=date\],\x20input\[type=email\],\x20input\[type=number\],\x20input\[t
+SF:ype=password\]")%r(GetRequest,1299,"HTTP/1\.1\x20200\x20OK\r\nContent-L
+SF:ength:\x204492\r\nConnection:\x20close\r\nCache-Control:\x20no-cache\r\
+SF:nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Opt
+SF:ions:\x20nosniff\r\nContent-Security-Policy:\x20frame-ancestors\x20'sel
+SF:f'\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20\x20\x20<h
+SF:ead>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"UTF-8\">\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20
+SF:content=\"IE=8;\x20IE=EDGE\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x2
+SF:0name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\
+SF:">\n\x20\x20\x20\x20\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\
+SF:x20Helvetica,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#6a6a6a;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align
+SF:-items:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20justify-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20i
+SF:nput\[type=date\],\x20input\[type=email\],\x20input\[type=number\],\x20
+SF:input\[type=password\]");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 05:30:52 2025 -- 1 IP address (1 host up) scanned in 192.33 seconds
