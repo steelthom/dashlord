@@ -1,0 +1,128 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:40:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ecpad.fr
+Nmap scan report for ecpad.fr (46.18.194.65)
+Host is up (0.083s latency).
+rDNS record for 46.18.194.65: dvs61139.produhost.net
+Not shown: 994 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+25/tcp  open  smtp      Postfix smtpd
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 308 Permanent Redirect
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 308 Permanent Redirect
+|     content-length: 0
+|     location: https:///
+|_    connection: close
+143/tcp open  imap      Dovecot imapd
+443/tcp open  ssl/https Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 503 Not Found
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr">
+|     <head>
+|     <meta http-equiv="Refresh" content="0; url=https://www.dri.fr/hosted-by" />
+|     <title>Redirection</title>
+|     <meta name="robots" content="noindex" />
+|     </head>
+|     <body>
+|     <p><a href="https://www.dri.fr/hosted-by">Redirection</a></p>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+587/tcp open  smtp      Postfix smtpd
+993/tcp open  ssl/imap  Dovecot imapd
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=69091337%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\ncontent-le
+SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
+SF:r(HTTPOptions,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\ncontent-
+SF:length:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n"
+SF:)%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-lengt
+SF:h:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nConte
+SF:nt-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>
+SF:\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>
+SF:\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-lengt
+SF:h:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nConte
+SF:nt-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>
+SF:\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>
+SF:\n")%r(FourOhFourRequest,81,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\
+SF:r\ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6E
+SF:ity\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\
+SF:.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\
+SF:x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r
+SF:\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x
+SF:20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP
+SF:,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCac
+SF:he-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20tex
+SF:t/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brows
+SF:er\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatu
+SF:sRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x
+SF:2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYo
+SF:ur\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")
+SF:%r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=6909133D%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,18C,"HTTP/1\.1\x20503\x20Not\x20Found\r\ncache-contr
+SF:ol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r
+SF:\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\">\n\x20\x20<head>\n\x20\x
+SF:20\x20\x20<meta\x20http-equiv=\"Refresh\"\x20content=\"0;\x20url=https:
+SF://www\.dri\.fr/hosted-by\"\x20/>\n\x20\x20\x20\x20<title>Redirection</t
+SF:itle>\n\x20\x20\x20\x20<meta\x20name=\"robots\"\x20content=\"noindex\"\
+SF:x20/>\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<p><a\x20href=\
+SF:"https://www\.dri\.fr/hosted-by\">Redirection</a></p>\n\x20\x20</body>\
+SF:n</html>\n")%r(HTTPOptions,18C,"HTTP/1\.1\x20503\x20Not\x20Found\r\ncac
+SF:he-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x2
+SF:0close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\">\n\x20\x20<head>
+SF:\n\x20\x20\x20\x20<meta\x20http-equiv=\"Refresh\"\x20content=\"0;\x20ur
+SF:l=https://www\.dri\.fr/hosted-by\"\x20/>\n\x20\x20\x20\x20<title>Redire
+SF:ction</title>\n\x20\x20\x20\x20<meta\x20name=\"robots\"\x20content=\"no
+SF:index\"\x20/>\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\x20\x20<p><a\x
+SF:20href=\"https://www\.dri\.fr/hosted-by\">Redirection</a></p>\n\x20\x20
+SF:</body>\n</html>\n")%r(FourOhFourRequest,18C,"HTTP/1\.1\x20503\x20Not\x
+SF:20Found\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n
+SF:connection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\">\n
+SF:\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Refresh\"\x20cont
+SF:ent=\"0;\x20url=https://www\.dri\.fr/hosted-by\"\x20/>\n\x20\x20\x20\x2
+SF:0<title>Redirection</title>\n\x20\x20\x20\x20<meta\x20name=\"robots\"\x
+SF:20content=\"noindex\"\x20/>\n\x20\x20</head>\n\x20\x20<body>\n\x20\x20\
+SF:x20\x20<p><a\x20href=\"https://www\.dri\.fr/hosted-by\">Redirection</a>
+SF:</p>\n\x20\x20</body>\n</html>\n")%r(tor-versions,CF,"HTTP/1\.1\x20400\
+SF:x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cach
+SF:e\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><b
+SF:ody><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20in
+SF:valid\x20request\.\n</body></html>\n");
+Service Info: Host:  dvs61139.produhost.net
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:40:47 2025 -- 1 IP address (1 host up) scanned in 33.27 seconds
