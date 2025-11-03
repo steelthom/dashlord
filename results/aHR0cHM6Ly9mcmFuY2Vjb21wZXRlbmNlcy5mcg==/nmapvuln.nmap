@@ -1,0 +1,100 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:29:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln francecompetences.fr
+Nmap scan report for francecompetences.fr (185.194.81.68)
+Host is up (0.081s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 03 Nov 2025 20:29:21 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Link: <https://www.francecompetences.fr/wp-json/>; rel="https://api.w.org/"
+|     Link: <https://www.francecompetences.fr/wp-json/wp/v2/pages/270>; rel="alternate"; title="JSON"; type="application/json"
+|     Link: <https://www.francecompetences.fr/>; rel=shortlink
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!doctype html>
+|     <html lang="fr-FR">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+|     <link rel="alternate" hreflang="fr" href="https://www.francecompetences.fr" />
+|     <link rel="alternate" hreflang="x-default" href="https://www.francecompetences.fr" />
+|     <!-- This site is op
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|_    ERROR
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=6909109A%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=690910A1%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2B39,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2003\
+SF:x20Nov\x202025\x2020:29:21\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nConnection:\x20close\r\nLink:\x20<https://www\.francecomp
+SF:etences\.fr/wp-json/>;\x20rel=\"https://api\.w\.org/\"\r\nLink:\x20<htt
+SF:ps://www\.francecompetences\.fr/wp-json/wp/v2/pages/270>;\x20rel=\"alte
+SF:rnate\";\x20title=\"JSON\";\x20type=\"application/json\"\r\nLink:\x20<h
+SF:ttps://www\.francecompetences\.fr/>;\x20rel=shortlink\r\nStrict-Transpo
+SF:rt-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!doctype
+SF:\x20html>\n<html\x20lang=\"fr-FR\">\n\x20\x20<head>\n\x20\x20\x20\x20<m
+SF:eta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x
+SF:20content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no
+SF:\">\n\x20\x20\x20\x20<meta\x20name='robots'\x20content='index,\x20follo
+SF:w,\x20max-image-preview:large,\x20max-snippet:-1,\x20max-video-preview:
+SF:-1'\x20/>\n<link\x20rel=\"alternate\"\x20hreflang=\"fr\"\x20href=\"http
+SF:s://www\.francecompetences\.fr\"\x20/>\n<link\x20rel=\"alternate\"\x20h
+SF:reflang=\"x-default\"\x20href=\"https://www\.francecompetences\.fr\"\x2
+SF:0/>\n\n\t<!--\x20This\x20site\x20is\x20op")%r(HTTPOptions,57,"HTTP/1\.0
+SF:\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x20Keep-Alive\r\nCon
+SF:tent-Length:\x209\r\n\r\n405\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\
+SF:.0\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Alive\r\nContent-Lengt
+SF:h:\x209\r\n\r\n404\x20ERROR");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:31:31 2025 -- 1 IP address (1 host up) scanned in 149.34 seconds
