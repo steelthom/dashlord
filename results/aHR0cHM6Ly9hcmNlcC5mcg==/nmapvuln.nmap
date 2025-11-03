@@ -1,0 +1,140 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:14:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln arcep.fr
+Nmap scan report for arcep.fr (217.115.174.15)
+Host is up (0.080s latency).
+Other addresses for arcep.fr (not scanned): 2a03:b00:2100:0:23::2
+rDNS record for 217.115.174.15: prod03-lb-gaya-proxy.integra.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|_    connection: close
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     date: Mon, 03 Nov 2025 19:15:14 GMT
+|     content-length: 199
+|     content-type: text/html; charset=iso-8859-1
+|     strict-transport-security: max-age=63072000; includeSubDomains; preload;
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     date: Mon, 03 Nov 2025 19:15:20 GMT
+|     content-length: 226
+|     content-type: text/html; charset=iso-8859-1
+|     strict-transport-security: max-age=63072000; includeSubDomains; preload;
+|     connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=6908FF3B%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
+SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
+SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-l
+SF:ength:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")
+SF:%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x
+SF:2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\ncon
+SF:nection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYo
+SF:ur\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nco
+SF:ntent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity\.
+SF:txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no
+SF:-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<ht
+SF:ml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\
+SF:x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"
+SF:HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-co
+SF:ntrol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20clos
+SF:e\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x2
+SF:0sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRequ
+SF:estTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\
+SF:r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnecti
+SF:on:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x2
+SF:0browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(He
+SF:lp,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\nc
+SF:ache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\
+SF:x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20bro
+SF:wser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=6908FF42%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,192,"HTTP/1\.0\x20403\x20Forbidden\r\ndate:\x20Mon,\
+SF:x2003\x20Nov\x202025\x2019:15:14\x20GMT\r\ncontent-length:\x20199\r\nco
+SF:ntent-type:\x20text/html;\x20charset=iso-8859-1\r\nstrict-transport-sec
+SF:urity:\x20max-age=63072000;\x20includeSubDomains;\x20preload;\r\n\r\n<!
+SF:DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<ht
+SF:ml><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidde
+SF:n</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x
+SF:20resource\.</p>\n</body></html>\n")%r(HTTPOptions,192,"HTTP/1\.0\x2040
+SF:3\x20Forbidden\r\ndate:\x20Mon,\x2003\x20Nov\x202025\x2019:15:14\x20GMT
+SF:\r\ncontent-length:\x20199\r\ncontent-type:\x20text/html;\x20charset=is
+SF:o-8859-1\r\nstrict-transport-security:\x20max-age=63072000;\x20includeS
+SF:ubDomains;\x20preload;\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF/
+SF:/DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</tit
+SF:le>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20perm
+SF:ission\x20to\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(
+SF:FourOhFourRequest,192,"HTTP/1\.0\x20403\x20Forbidden\r\ndate:\x20Mon,\x
+SF:2003\x20Nov\x202025\x2019:15:14\x20GMT\r\ncontent-length:\x20199\r\ncon
+SF:tent-type:\x20text/html;\x20charset=iso-8859-1\r\nstrict-transport-secu
+SF:rity:\x20max-age=63072000;\x20includeSubDomains;\x20preload;\r\n\r\n<!D
+SF:OCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<htm
+SF:l><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden
+SF:</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x2
+SF:0resource\.</p>\n</body></html>\n")%r(tor-versions,CF,"HTTP/1\.1\x20400
+SF:\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cac
+SF:he\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><
+SF:body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20i
+SF:nvalid\x20request\.\n</body></html>\n")%r(RTSPRequest,1C2,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\ndate:\x20Mon,\x2003\x20Nov\x202025\x2019:15:2
+SF:0\x20GMT\r\ncontent-length:\x20226\r\ncontent-type:\x20text/html;\x20ch
+SF:arset=iso-8859-1\r\nstrict-transport-security:\x20max-age=63072000;\x20
+SF:includeSubDomains;\x20preload;\r\nconnection:\x20close\r\n\r\n<!DOCTYPE
+SF:\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><hea
+SF:d>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Req
+SF:uest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x
+SF:20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>
+SF:\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:15:29 2025 -- 1 IP address (1 host up) scanned in 34.78 seconds
