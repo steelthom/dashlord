@@ -1,0 +1,51 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:50:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cglpl.fr
+Nmap scan report for cglpl.fr (51.38.179.156)
+Host is up (0.085s latency).
+rDNS record for 51.38.179.156: vps-da7c0012.vps.ovh.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Mon, 03 Nov 2025 19:50:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Mon, 03 Nov 2025 19:50:44 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=69090793%P=x86_64-alpine-linux-musl%r
+SF:(RTSPRequest,118,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Mon,\x
+SF:2003\x20Nov\x202025\x2019:50:43\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20150\r\nConnection:\x20close\r\n\r\n<html>\r\n<head>
+SF:<title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>40
+SF:0\x20Bad\x20Request</h1></center>\r\n<hr><center>nginx</center>\r\n</bo
+SF:dy>\r\n</html>\r\n")%r(X11Probe,118,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2019:50:44\x20GMT\r\nContent-Ty
+SF:pe:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n\
+SF:r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body
+SF:>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>ngi
+SF:nx</center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:51:06 2025 -- 1 IP address (1 host up) scanned in 36.14 seconds
