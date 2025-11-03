@@ -1,0 +1,102 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:02:28 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln brgm.fr
+Nmap scan report for brgm.fr (193.56.4.91)
+Host is up (0.092s latency).
+rDNS record for 193.56.4.91: brgm.eu
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  closed http
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 246
+|     Vary: Accept-Encoding
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 2184409410596932089<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Mon, 03 Nov 2025 18:41:51 GMT
+|     X-Drupal-Route-Normalizer: 1
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Cache-Control: max-age=300, public
+|     Vary: Cookie, Accept-Encoding
+|     X-Drupal-Cache: HIT
+|     Location: https://www.brgm.fr/fr
+|     Last-Modified: Mon, 03 Nov 2025 18:41:51 GMT
+|     ETag: "1762195311"
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: BIGipServerpool_www_https=2333612204.47873.0000; path=/; Httponly; Secure
+|     Set-Cookie: TS01f9c551=01ce77d60031e12cc46f8a071755d6a8ec786b6238f127a845b9096611d92c0363e100cb792ff1149357e7abc1a613e27519a75414; Path=/
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="UTF-8" />
+|     <meta http-equiv="refresh" content="0;url='https://www.brgm.fr/fr'" />
+|     <title>Redirecting to https://www.brgm.fr/fr</t
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 03 Nov 2025 20:02:49 GMT
+|     Allow: GET, POST
+|     Cache-Control: must-revalidate, no-cache, private
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     expires: -1
+|     pragma: no-cache
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: BIGipServerpool_www_https=2333612204.47873.0000; path=/; Httponly; Secure
+|_    Set-Cookie: TS01f9c551=01ce77d6006ac755c261c40541c6220d7c00a81e4306c364ff2ff07d2e81db7861d50a33308a2da8865b3993d0d1521911b5b237cb; Path=/
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=69090A68%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,408,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDat
+SF:e:\x20Mon,\x2003\x20Nov\x202025\x2018:41:51\x20GMT\r\nX-Drupal-Route-No
+SF:rmalizer:\x201\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x2
+SF:0nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x2
+SF:0Nov\x201978\x2005:00:00\x20GMT\r\nCache-Control:\x20max-age=300,\x20pu
+SF:blic\r\nVary:\x20Cookie,\x20Accept-Encoding\r\nX-Drupal-Cache:\x20HIT\r
+SF:\nLocation:\x20https://www\.brgm\.fr/fr\r\nLast-Modified:\x20Mon,\x2003
+SF:\x20Nov\x202025\x2018:41:51\x20GMT\r\nETag:\x20\"1762195311\"\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nSet-C
+SF:ookie:\x20BIGipServerpool_www_https=2333612204\.47873\.0000;\x20path=/;
+SF:\x20Httponly;\x20Secure\r\nSet-Cookie:\x20TS01f9c551=01ce77d60031e12cc4
+SF:6f8a071755d6a8ec786b6238f127a845b9096611d92c0363e100cb792ff1149357e7abc
+SF:1a613e27519a75414;\x20Path=/\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x2
+SF:0\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"UTF
+SF:-8\"\x20/>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"refre
+SF:sh\"\x20content=\"0;url='https://www\.brgm\.fr/fr'\"\x20/>\n\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20<title>Redirecting\x20to\x20https://www\.brgm\.f
+SF:r/fr</t")%r(HTTPOptions,220,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2
+SF:003\x20Nov\x202025\x2020:02:49\x20GMT\r\nAllow:\x20GET,\x20POST\r\nCach
+SF:e-Control:\x20must-revalidate,\x20no-cache,\x20private\r\nContent-langu
+SF:age:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x2
+SF:0SAMEORIGIN\r\nexpires:\x20-1\r\npragma:\x20no-cache\r\nContent-Length:
+SF:\x200\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=UTF-8\r\nSet-Cookie:\x20BIGipServerpool_www_https=2333612204\.47873\.0
+SF:000;\x20path=/;\x20Httponly;\x20Secure\r\nSet-Cookie:\x20TS01f9c551=01c
+SF:e77d6006ac755c261c40541c6220d7c00a81e4306c364ff2ff07d2e81db7861d50a3330
+SF:8a2da8865b3993d0d1521911b5b237cb;\x20Path=/\r\n\r\n")%r(FourOhFourReque
+SF:st,1FA,"HTTP/1\.1\x20200\x20OK\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-X
+SF:SS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosnif
+SF:f\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type
+SF::\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-cache\r\nContent-Leng
+SF:th:\x20246\r\nVary:\x20Accept-Encoding\r\n\r\n<html><head><title>Reques
+SF:t\x20Rejected</title></head><body>The\x20requested\x20URL\x20was\x20rej
+SF:ected\.\x20Please\x20consult\x20with\x20your\x20administrator\.<br><br>
+SF:Your\x20support\x20ID\x20is:\x202184409410596932089<br><br><a\x20href='
+SF:javascript:history\.back\(\);'>\[Go\x20Back\]</a></body></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:04:59 2025 -- 1 IP address (1 host up) scanned in 150.61 seconds
