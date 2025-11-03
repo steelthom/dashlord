@@ -1,0 +1,195 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:10:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cned.fr
+Nmap scan report for cned.fr (51.11.239.227)
+Host is up (0.15s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Microsoft-Azure-Application-Gateway/v2
+|_http-server-header: Microsoft-Azure-Application-Gateway/v2
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:23 GMT
+|     Content-Type: text/html
+|     Content-Length: 179
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:21 GMT
+|     Content-Type: text/html
+|     Content-Length: 179
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:22 GMT
+|     Content-Type: text/html
+|     Content-Length: 179
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:22 GMT
+|     Content-Type: text/html
+|     Content-Length: 183
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https Microsoft-Azure-Application-Gateway/v2
+| http-server-header: 
+|   Microsoft-Azure-Application-Gateway/v2
+|_  nginx
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:29 GMT
+|     Content-Type: text/html
+|     Content-Length: 179
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:28 GMT
+|     Content-Type: text/html
+|     Content-Length: 179
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Microsoft-Azure-Application-Gateway/v2
+|     Date: Mon, 03 Nov 2025 20:10:30 GMT
+|     Content-Type: text/html
+|     Content-Length: 183
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=69090C2D%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,163,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20Microso
+SF:ft-Azure-Application-Gateway/v2\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x
+SF:2020:10:21\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x201
+SF:79\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>404\x20Not\x20
+SF:Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20Found</h1><
+SF:/center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</center>
+SF:\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,163,"HTTP/1\.1\x20404\x20Not
+SF:\x20Found\r\nServer:\x20Microsoft-Azure-Application-Gateway/v2\r\nDate:
+SF:\x20Mon,\x2003\x20Nov\x202025\x2020:10:22\x20GMT\r\nContent-Type:\x20te
+SF:xt/html\r\nContent-Length:\x20179\r\nConnection:\x20close\r\n\r\n<html>
+SF:\r\n<head><title>404\x20Not\x20Found</title></head>\r\n<body>\r\n<cente
+SF:r><h1>404\x20Not\x20Found</h1></center>\r\n<hr><center>Microsoft-Azure-
+SF:Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n")%r(RTSPReque
+SF:st,B7,"<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<
+SF:body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center
+SF:>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\
+SF:r\n")%r(X11Probe,169,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20
+SF:Microsoft-Azure-Application-Gateway/v2\r\nDate:\x20Mon,\x2003\x20Nov\x2
+SF:02025\x2020:10:22\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Lengt
+SF:h:\x20183\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20
+SF:Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Re
+SF:quest</h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/
+SF:v2</center>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,163,"HTTP/1
+SF:\.1\x20404\x20Not\x20Found\r\nServer:\x20Microsoft-Azure-Application-Ga
+SF:teway/v2\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2020:10:23\x20GMT\r\nCo
+SF:ntent-Type:\x20text/html\r\nContent-Length:\x20179\r\nConnection:\x20cl
+SF:ose\r\n\r\n<html>\r\n<head><title>404\x20Not\x20Found</title></head>\r\
+SF:n<body>\r\n<center><h1>404\x20Not\x20Found</h1></center>\r\n<hr><center
+SF:>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\
+SF:r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=69090C34%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,163,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20
+SF:Microsoft-Azure-Application-Gateway/v2\r\nDate:\x20Mon,\x2003\x20Nov\x2
+SF:02025\x2020:10:28\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Lengt
+SF:h:\x20179\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>404\x20
+SF:Not\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20Foun
+SF:d</h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</
+SF:center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,163,"HTTP/1\.1\x20404
+SF:\x20Not\x20Found\r\nServer:\x20Microsoft-Azure-Application-Gateway/v2\r
+SF:\nDate:\x20Mon,\x2003\x20Nov\x202025\x2020:10:28\x20GMT\r\nContent-Type
+SF::\x20text/html\r\nContent-Length:\x20179\r\nConnection:\x20close\r\n\r\
+SF:n<html>\r\n<head><title>404\x20Not\x20Found</title></head>\r\n<body>\r\
+SF:n<center><h1>404\x20Not\x20Found</h1></center>\r\n<hr><center>Microsoft
+SF:-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n")%r(Fo
+SF:urOhFourRequest,163,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20Mic
+SF:rosoft-Azure-Application-Gateway/v2\r\nDate:\x20Mon,\x2003\x20Nov\x2020
+SF:25\x2020:10:29\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
+SF:x20179\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>404\x20Not
+SF:\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20Found</
+SF:h1></center>\r\n<hr><center>Microsoft-Azure-Application-Gateway/v2</cen
+SF:ter>\r\n</body>\r\n</html>\r\n")%r(tor-versions,169,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nServer:\x20Microsoft-Azure-Application-Gateway/v2\r
+SF:\nDate:\x20Mon,\x2003\x20Nov\x202025\x2020:10:30\x20GMT\r\nContent-Type
+SF::\x20text/html\r\nContent-Length:\x20183\r\nConnection:\x20close\r\n\r\
+SF:n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\
+SF:r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>Micro
+SF:soft-Azure-Application-Gateway/v2</center>\r\n</body>\r\n</html>\r\n")%
+SF:r(RTSPRequest,B7,"<html>\r\n<head><title>400\x20Bad\x20Request</title><
+SF:/head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n
+SF:<hr><center>Microsoft-Azure-Application-Gateway/v2</center>\r\n</body>\
+SF:r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:10:52 2025 -- 1 IP address (1 host up) scanned in 48.29 seconds
