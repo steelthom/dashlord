@@ -1,0 +1,179 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:49:42 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cnc.fr
+Nmap scan report for cnc.fr (94.199.154.168)
+Host is up (0.15s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Mon, 03 Nov 2025 19:50:00 GMT
+|     server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|     x-content-type-options: nosniff
+|     x-frame-options: SAMEORIGIN
+|     x-xss-protection: 1
+|     content-type: text/html;charset=UTF-8
+|     age: 0
+|     accept-ranges: bytes
+|     set-cookie: JSESSIONID=6C4F6BF5A7D703DB3B4E06FC00670C9D; Path=/; HttpOnly
+|     set-cookie: COOKIE_SUPPORT=true; Expires=Tue, 03-Nov-2026 19:49:59 GMT; Path=/; HttpOnly
+|     vary: Accept-Encoding
+|     cache-control: max-age=0, no-store
+|     connection: close
+|     <!DOCTYPE html>
+|     <html prefix="og: https://ogp.me/ns#" class="ltr" dir="ltr" lang="fr-FR">
+|     <head>
+|     <meta name="tdm-reservation" content="1">
+|     <!-- Twitter card -->
+|     <meta name="twitter:card" content="summary_large_image" />
+|     <meta name="twitter:creator" content="@lecnc"
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Mon, 03 Nov 2025 19:50:00 GMT
+|     server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|     x-content-type-options: nosniff
+|     x-frame-options: SAMEORIGIN
+|     x-xss-protection: 1
+|     content-type: text/html;charset=UTF-8
+|     age: 0
+|     accept-ranges: bytes
+|     set-cookie: JSESSIONID=765E76C47F0737569B2C10A2214B8B7E; Path=/; HttpOnly
+|     set-cookie: COOKIE_SUPPORT=true; Expires=Tue, 03-Nov-2026 19:50:00 GMT; Path=/; HttpOnly
+|     vary: Accept-Encoding
+|     cache-control: max-age=0, no-store
+|     connection: close
+|     <!DOCTYPE html>
+|     <html prefix="og: https://ogp.me/ns#" class="ltr" dir="ltr" lang="fr-FR">
+|     <head>
+|     <meta name="tdm-reservation" content="1">
+|     <!-- Twitter card -->
+|     <meta name="twitter:card" content="summary_large_image" />
+|_    <meta name="twitter:creator" content="@lecnc"
+443/tcp open  ssl/https Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Mon, 03 Nov 2025 19:50:05 GMT
+|     server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|     x-content-type-options: nosniff
+|     x-frame-options: SAMEORIGIN
+|     x-xss-protection: 1
+|     content-type: text/html;charset=UTF-8
+|     age: 0
+|     accept-ranges: bytes
+|     set-cookie: JSESSIONID=E72583D86AE047AE57D65661512DF781; Path=/; HttpOnly
+|     set-cookie: COOKIE_SUPPORT=true; Expires=Tue, 03-Nov-2026 19:50:06 GMT; Path=/; HttpOnly
+|     vary: Accept-Encoding
+|     cache-control: max-age=0, no-store
+|     connection: close
+|     <!DOCTYPE html>
+|     <html prefix="og: https://ogp.me/ns#" class="ltr" dir="ltr" lang="fr-FR">
+|     <head>
+|     <meta name="tdm-reservation" content="1">
+|     <!-- Twitter card -->
+|     <meta name="twitter:card" content="summary_large_image" />
+|     <meta name="twitter:creator" content="@lecnc"
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Mon, 03 Nov 2025 19:50:08 GMT
+|     server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+|     x-content-type-options: nosniff
+|     x-frame-options: SAMEORIGIN
+|     x-xss-protection: 1
+|     content-type: text/html;charset=UTF-8
+|     age: 0
+|     accept-ranges: bytes
+|     set-cookie: JSESSIONID=8E21B2901E0BD30750F7654BB0D202B7; Path=/; HttpOnly
+|     set-cookie: COOKIE_SUPPORT=true; Expires=Tue, 03-Nov-2026 19:50:08 GMT; Path=/; HttpOnly
+|     vary: Accept-Encoding
+|     cache-control: max-age=0, no-store
+|     connection: close
+|     <!DOCTYPE html>
+|     <html prefix="og: https://ogp.me/ns#" class="ltr" dir="ltr" lang="fr-FR">
+|     <head>
+|     <meta name="tdm-reservation" content="1">
+|     <!-- Twitter card -->
+|     <meta name="twitter:card" content="summary_large_image" />
+|_    <meta name="twitter:creator" content="@lecnc"
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=69090768%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,2760,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2003\x20Nov\
+SF:x202025\x2019:50:00\x20GMT\r\nserver:\x20Apache/2\.4\.6\x20\(CentOS\)\x
+SF:20OpenSSL/1\.0\.2k-fips\r\nx-content-type-options:\x20nosniff\r\nx-fram
+SF:e-options:\x20SAMEORIGIN\r\nx-xss-protection:\x201\r\ncontent-type:\x20
+SF:text/html;charset=UTF-8\r\nage:\x200\r\naccept-ranges:\x20bytes\r\nset-
+SF:cookie:\x20JSESSIONID=6C4F6BF5A7D703DB3B4E06FC00670C9D;\x20Path=/;\x20H
+SF:ttpOnly\r\nset-cookie:\x20COOKIE_SUPPORT=true;\x20Expires=Tue,\x2003-No
+SF:v-2026\x2019:49:59\x20GMT;\x20Path=/;\x20HttpOnly\r\nvary:\x20Accept-En
+SF:coding\r\ncache-control:\x20max-age=0,\x20no-store\r\nconnection:\x20cl
+SF:ose\r\n\r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+SF:\n\n\n\n\n\n\n\n\n\n\n\n\t\t\r\n<!DOCTYPE\x20html>\r\n\r\n\n\n\n\n\n\n\
+SF:n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+SF:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<html\x20prefix=\"og:\x
+SF:20https://ogp\.me/ns#\"\x20class=\"ltr\"\x20dir=\"ltr\"\x20lang=\"fr-FR
+SF:\">\r\n\r\n<head>\r\n\r\n\r\n\t<meta\x20name=\"tdm-reservation\"\x20con
+SF:tent=\"1\">\r\n\r\n\t<!--\x20Twitter\x20card\x20-->\r\n\t<meta\x20name=
+SF:\"twitter:card\"\x20content=\"summary_large_image\"\x20/>\r\n\t<meta\x2
+SF:0name=\"twitter:creator\"\x20content=\"@lecnc\"\x20")%r(HTTPOptions,276
+SF:0,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2003\x20Nov\x202025\x2019:5
+SF:0:00\x20GMT\r\nserver:\x20Apache/2\.4\.6\x20\(CentOS\)\x20OpenSSL/1\.0\
+SF:.2k-fips\r\nx-content-type-options:\x20nosniff\r\nx-frame-options:\x20S
+SF:AMEORIGIN\r\nx-xss-protection:\x201\r\ncontent-type:\x20text/html;chars
+SF:et=UTF-8\r\nage:\x200\r\naccept-ranges:\x20bytes\r\nset-cookie:\x20JSES
+SF:SIONID=765E76C47F0737569B2C10A2214B8B7E;\x20Path=/;\x20HttpOnly\r\nset-
+SF:cookie:\x20COOKIE_SUPPORT=true;\x20Expires=Tue,\x2003-Nov-2026\x2019:50
+SF::00\x20GMT;\x20Path=/;\x20HttpOnly\r\nvary:\x20Accept-Encoding\r\ncache
+SF:-control:\x20max-age=0,\x20no-store\r\nconnection:\x20close\r\n\r\n\n\n
+SF:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+SF:n\n\n\n\n\t\t\r\n<!DOCTYPE\x20html>\r\n\r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+SF:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+SF:n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<html\x20prefix=\"og:\x20https://ogp\.
+SF:me/ns#\"\x20class=\"ltr\"\x20dir=\"ltr\"\x20lang=\"fr-FR\">\r\n\r\n<hea
+SF:d>\r\n\r\n\r\n\t<meta\x20name=\"tdm-reservation\"\x20content=\"1\">\r\n
+SF:\r\n\t<!--\x20Twitter\x20card\x20-->\r\n\t<meta\x20name=\"twitter:card\
+SF:"\x20content=\"summary_large_image\"\x20/>\r\n\t<meta\x20name=\"twitter
+SF::creator\"\x20content=\"@lecnc\"\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=6909076E%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1C84,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2003\
+SF:x20Nov\x202025\x2019:50:05\x20GMT\r\nserver:\x20Apache/2\.4\.6\x20\(Cen
+SF:tOS\)\x20OpenSSL/1\.0\.2k-fips\r\nx-content-type-options:\x20nosniff\r\
+SF:nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protection:\x201\r\ncontent-ty
+SF:pe:\x20text/html;charset=UTF-8\r\nage:\x200\r\naccept-ranges:\x20bytes\
+SF:r\nset-cookie:\x20JSESSIONID=E72583D86AE047AE57D65661512DF781;\x20Path=
+SF:/;\x20HttpOnly\r\nset-cookie:\x20COOKIE_SUPPORT=true;\x20Expires=Tue,\x
+SF:2003-Nov-2026\x2019:50:06\x20GMT;\x20Path=/;\x20HttpOnly\r\nvary:\x20Ac
+SF:cept-Encoding\r\ncache-control:\x20max-age=0,\x20no-store\r\nconnection
+SF::\x20close\r\n\r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+SF:n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\r\n<!DOCTYPE\x20html>\r\n\r\n\n\n\n
+SF:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+SF:n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<html\x20prefix=
+SF:\"og:\x20https://ogp\.me/ns#\"\x20class=\"ltr\"\x20dir=\"ltr\"\x20lang=
+SF:\"fr-FR\">\r\n\r\n<head>\r\n\r\n\r\n\t<meta\x20name=\"tdm-reservation\"
+SF:\x20content=\"1\">\r\n\r\n\t<!--\x20Twitter\x20card\x20-->\r\n\t<meta\x
+SF:20name=\"twitter:card\"\x20content=\"summary_large_image\"\x20/>\r\n\t<
+SF:meta\x20name=\"twitter:creator\"\x20content=\"@lecnc\"\x20")%r(HTTPOpti
+SF:ons,38C6,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2003\x20Nov\x202025\
+SF:x2019:50:08\x20GMT\r\nserver:\x20Apache/2\.4\.6\x20\(CentOS\)\x20OpenSS
+SF:L/1\.0\.2k-fips\r\nx-content-type-options:\x20nosniff\r\nx-frame-option
+SF:s:\x20SAMEORIGIN\r\nx-xss-protection:\x201\r\ncontent-type:\x20text/htm
+SF:l;charset=UTF-8\r\nage:\x200\r\naccept-ranges:\x20bytes\r\nset-cookie:\
+SF:x20JSESSIONID=8E21B2901E0BD30750F7654BB0D202B7;\x20Path=/;\x20HttpOnly\
+SF:r\nset-cookie:\x20COOKIE_SUPPORT=true;\x20Expires=Tue,\x2003-Nov-2026\x
+SF:2019:50:08\x20GMT;\x20Path=/;\x20HttpOnly\r\nvary:\x20Accept-Encoding\r
+SF:\ncache-control:\x20max-age=0,\x20no-store\r\nconnection:\x20close\r\n\
+SF:r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+SF:\n\n\n\n\n\n\n\n\t\t\r\n<!DOCTYPE\x20html>\r\n\r\n\n\n\n\n\n\n\n\n\n\n\
+SF:n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+SF:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<html\x20prefix=\"og:\x20https:
+SF://ogp\.me/ns#\"\x20class=\"ltr\"\x20dir=\"ltr\"\x20lang=\"fr-FR\">\r\n\
+SF:r\n<head>\r\n\r\n\r\n\t<meta\x20name=\"tdm-reservation\"\x20content=\"1
+SF:\">\r\n\r\n\t<!--\x20Twitter\x20card\x20-->\r\n\t<meta\x20name=\"twitte
+SF:r:card\"\x20content=\"summary_large_image\"\x20/>\r\n\t<meta\x20name=\"
+SF:twitter:creator\"\x20content=\"@lecnc\"\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:50:29 2025 -- 1 IP address (1 host up) scanned in 47.08 seconds
