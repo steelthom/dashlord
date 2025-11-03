@@ -1,0 +1,167 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:22:56 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cirad.fr
+Nmap scan report for cirad.fr (178.33.133.48)
+Host is up (0.088s latency).
+rDNS record for 178.33.133.48: cirad-instit-prod-web2.codein.fr
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|_    connection: close
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Mon, 03 Nov 2025 18:02:17 GMT
+|     content-type: text/html; charset=UTF-8
+|     x-backend: web
+|     x-ttl: 86400.000
+|     age: 4853
+|     vary: Origin, Accept-Encoding
+|     cache-control: public, s-maxage=600, stale-while-revalidate=300, stale-if-error=300
+|     accept-ranges: bytes
+|     x-frame-options: SAMEORIGIN
+|     strict-transport-security: max-age=31536000; includeSubDomains
+|     connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta name="viewport" content="width=device-width">
+|     <title>Cirad, la recherche agronomique pour le d
+|     veloppement durable des r
+|     gions tropicales et m
+|     diterran
+|     ennes. | Cirad</title>
+|     <meta name="description" content="Le Cirad est l&#039;organisme fran
+|     recherche agronomique et de coop
+|     ration internationale pour le d
+|     veloppement durable des r
+|     gions tropicales et m
+|     diterran
+|     ennes.">
+|     <meta property="og:site_name" con
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Mon, 03 Nov 2025 19:23:12 GMT
+|     cache-control: max-age=0, must-revalidate, private, s-maxage=86400
+|     expires: Mon, 03 Nov 2025 19:23:12 GMT
+|     content-type: text/html; charset=UTF-8
+|     x-backend: web
+|     x-ttl: 0.000
+|     vary: Origin,cookie,authorization, Accept-Encoding
+|     age: 0
+|     accept-ranges: bytes
+|     x-frame-options: SAMEORIGIN
+|     strict-transport-security: max-age=31536000; includeSubDomains
+|     connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta name="viewport" content="width=device-width">
+|     <title>Cirad, la recherche agronomique pour le d
+|     veloppement durable des r
+|     gions tropicales et m
+|     diterran
+|     ennes. | Cirad</title>
+|     <meta name="description" content="Le Cirad est l&#039;organisme fran
+|     recherche agronomique et de coop
+|     ration internationale pour le d
+|     veloppement durable des r
+|     gions tropicales et m
+|     diterran
+|_    ennes.">
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=69090119%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
+SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
+SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
+SF:r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
+SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
+SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
+SF:")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
+SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
+SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
+SF:")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
+SF:content-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity
+SF:\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\
+SF:x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20
+SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<
+SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
+SF:n\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF
+SF:,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-
+SF:Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/h
+SF:tml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\
+SF:x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRe
+SF:questTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x209
+SF:0\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type
+SF::\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\
+SF:x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(
+SF:Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\
+SF:nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x2
+SF:0text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
+SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=6909011F%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,346F,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2003\
+SF:x20Nov\x202025\x2018:02:17\x20GMT\r\ncontent-type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nx-backend:\x20web\r\nx-ttl:\x2086400\.000\r\nage:\x204853
+SF:\r\nvary:\x20Origin,\x20Accept-Encoding\r\ncache-control:\x20public,\x2
+SF:0s-maxage=600,\x20stale-while-revalidate=300,\x20stale-if-error=300\r\n
+SF:accept-ranges:\x20bytes\r\nx-frame-options:\x20SAMEORIGIN\r\nstrict-tra
+SF:nsport-security:\x20max-age=31536000;\x20includeSubDomains\r\nconnectio
+SF:n:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\">\n<head>\n\
+SF:x20\x20<meta\x20charset=\"UTF-8\">\n\x20\x20<meta\x20name=\"viewport\"\
+SF:x20content=\"width=device-width\">\n\n\x20\x20<title>Cirad,\x20la\x20re
+SF:cherche\x20agronomique\x20pour\x20le\x20d\xc3\xa9veloppement\x20durable
+SF:\x20des\x20r\xc3\xa9gions\x20tropicales\x20et\x20m\xc3\xa9diterran\xc3\
+SF:xa9ennes\.\x20\|\x20Cirad</title>\n\x20\x20<meta\x20name=\"description\
+SF:"\x20content=\"Le\x20Cirad\x20est\x20l&#039;organisme\x20fran\xc3\xa7ai
+SF:s\x20de\x20recherche\x20agronomique\x20et\x20de\x20coop\xc3\xa9ration\x
+SF:20internationale\x20pour\x20le\x20d\xc3\xa9veloppement\x20durable\x20de
+SF:s\x20r\xc3\xa9gions\x20tropicales\x20et\x20m\xc3\xa9diterran\xc3\xa9enn
+SF:es\.\">\n\x20\x20\x20\x20\x20\x20<meta\x20property=\"og:site_name\"\x20
+SF:con")%r(HTTPOptions,3494,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Mon,\x2003
+SF:\x20Nov\x202025\x2019:23:12\x20GMT\r\ncache-control:\x20max-age=0,\x20m
+SF:ust-revalidate,\x20private,\x20s-maxage=86400\r\nexpires:\x20Mon,\x2003
+SF:\x20Nov\x202025\x2019:23:12\x20GMT\r\ncontent-type:\x20text/html;\x20ch
+SF:arset=UTF-8\r\nx-backend:\x20web\r\nx-ttl:\x200\.000\r\nvary:\x20Origin
+SF:,cookie,authorization,\x20Accept-Encoding\r\nage:\x200\r\naccept-ranges
+SF::\x20bytes\r\nx-frame-options:\x20SAMEORIGIN\r\nstrict-transport-securi
+SF:ty:\x20max-age=31536000;\x20includeSubDomains\r\nconnection:\x20close\r
+SF:\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\">\n<head>\n\x20\x20<meta\
+SF:x20charset=\"UTF-8\">\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"
+SF:width=device-width\">\n\n\x20\x20<title>Cirad,\x20la\x20recherche\x20ag
+SF:ronomique\x20pour\x20le\x20d\xc3\xa9veloppement\x20durable\x20des\x20r\
+SF:xc3\xa9gions\x20tropicales\x20et\x20m\xc3\xa9diterran\xc3\xa9ennes\.\x2
+SF:0\|\x20Cirad</title>\n\x20\x20<meta\x20name=\"description\"\x20content=
+SF:\"Le\x20Cirad\x20est\x20l&#039;organisme\x20fran\xc3\xa7ais\x20de\x20re
+SF:cherche\x20agronomique\x20et\x20de\x20coop\xc3\xa9ration\x20internation
+SF:ale\x20pour\x20le\x20d\xc3\xa9veloppement\x20durable\x20des\x20r\xc3\xa
+SF:9gions\x20tropicales\x20et\x20m\xc3\xa9diterran\xc3\xa9ennes\.\">\n\x20
+SF:\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:23:37 2025 -- 1 IP address (1 host up) scanned in 40.39 seconds
