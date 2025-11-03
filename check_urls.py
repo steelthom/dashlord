@@ -1,29 +1,33 @@
 import requests
 
-with open("urls.txt", encoding="utf-8") as file:
+filename = "urls.txt"
+
+with open(filename, encoding="utf-8") as file:
     urls = file.readlines()
 
 for url in urls:
     url = url.strip()
     try:
-        response = requests.get(url, timeout=15)
+        requests.get(url, timeout=15)
     except requests.RequestException as e:
         if "NameResolutionError" in str(e):
-            print(f"Delete URL: {url}")
+            print(f"DNS failed: {url}")
             try:
-                response = requests.get(url.replace("://", "://www."), timeout=15)
-                with open("urls.txt", encoding="utf-8") as file:
+                # Test with www prefix
+                requests.get(url.replace("://", "://www."), timeout=15)
+                print(f"Rename URL: {url}\n")
+                with open(filename, encoding="utf-8") as file:
                     lines = file.readlines()
-                with open("urls.txt", "w", encoding="utf-8") as file:
+                with open(filename, "w", encoding="utf-8") as file:
                     for line in lines:
                         if line.strip() == url:
                             line = line.replace(url, url.replace("://", "://www."))
                         file.write(line)
             except requests.RequestException:
-                print(f"Also failed with www: {url}")
-                with open("urls.txt", encoding="utf-8") as file:
+                print(f"Delete URL: {url}\n")
+                with open(filename, encoding="utf-8") as file:
                     lines = file.readlines()
-                with open("urls.txt", "w", encoding="utf-8") as file:
+                with open(filename, "w", encoding="utf-8") as file:
                     for line in lines:
                         if line.strip() != url:
                             file.write(line)
