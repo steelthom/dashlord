@@ -1,0 +1,247 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:38:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cades.fr
+Nmap scan report for cades.fr (51.68.99.179)
+Host is up (0.13s latency).
+rDNS record for 51.68.99.179: vm-049.seitosei.io
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+53/tcp  closed domain
+79/tcp  closed finger
+80/tcp  open   http      n/a
+|_http-server-header: n/a
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 03 Nov 2025 19:38:51 GMT
+|     Content-Type: text/html
+|     Content-Length: 752
+|     Last-Modified: Wed, 07 Apr 2021 15:17:03 GMT
+|     Connection: close
+|     Vary: Accept-Encoding
+|     ETag: "606dccef-2f0"
+|     Server: n/a
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-Frame-Options: SAMEORIGIN
+|     Referrer-Policy: no-referrer
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Accept-Ranges: bytes
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Domain not found</title>
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style>
+|     /*reset*/
+|     body, head, html, div, p, h1 {
+|     margin: 0;
+|     padding: 0;
+|     body {
+|     display: flex;
+|     height: 100vh;
+|     width: 100vw;
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Date: Mon, 03 Nov 2025 19:38:51 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Server: n/a
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error 405</title>
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style>
+|     /*reset*/
+|     body, head, html, div, p, h1 {
+|     margin: 0;
+|     padding: 0;
+|     body {
+|     display: flex;
+|     height: 100vh;
+|     width: 100vw;
+|     justify-content: center;
+|     align-items: center;
+|     font-family: Tahoma, Verdana, Arial, sans-serif;
+|     background: #f3f3f3;
+|     color: #2c3e50;
+|     text-align: center;
+|     margin: 10px;
+|     </style>
+|     </head>
+|     <body>
+|     <div id="page">
+|     <h1>405 Something goes wrong</h1>
+|     </div>
+|     </body>
+|_    </html>
+443/tcp open   ssl/https n/a
+|_http-server-header: n/a
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 03 Nov 2025 19:38:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 752
+|     Last-Modified: Wed, 07 Apr 2021 15:17:03 GMT
+|     Connection: close
+|     Vary: Accept-Encoding
+|     ETag: "606dccef-2f0"
+|     Server: n/a
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-Frame-Options: SAMEORIGIN
+|     Referrer-Policy: no-referrer
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Accept-Ranges: bytes
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Domain not found</title>
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style>
+|     /*reset*/
+|     body, head, html, div, p, h1 {
+|     margin: 0;
+|     padding: 0;
+|     body {
+|     display: flex;
+|     height: 100vh;
+|     width: 100vw;
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Date: Mon, 03 Nov 2025 19:38:58 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Server: n/a
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Error 405</title>
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <style>
+|     /*reset*/
+|     body, head, html, div, p, h1 {
+|     margin: 0;
+|     padding: 0;
+|     body {
+|     display: flex;
+|     height: 100vh;
+|     width: 100vw;
+|     justify-content: center;
+|     align-items: center;
+|     font-family: Tahoma, Verdana, Arial, sans-serif;
+|     background: #f3f3f3;
+|     color: #2c3e50;
+|     text-align: center;
+|     margin: 10px;
+|     </style>
+|     </head>
+|     <body>
+|     <div id="page">
+|     <h1>405 Something goes wrong</h1>
+|     </div>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=690904CB%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,4FE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2003\x20Nov\x
+SF:202025\x2019:38:51\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
+SF:th:\x20752\r\nLast-Modified:\x20Wed,\x2007\x20Apr\x202021\x2015:17:03\x
+SF:20GMT\r\nConnection:\x20close\r\nVary:\x20Accept-Encoding\r\nETag:\x20\
+SF:"606dccef-2f0\"\r\nServer:\x20n/a\r\nStrict-Transport-Security:\x20max-
+SF:age=31536000;\x20includeSubDomains;\x20preload\r\nX-Frame-Options:\x20S
+SF:AMEORIGIN\r\nReferrer-Policy:\x20no-referrer\r\nX-Content-Type-Options:
+SF:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nCache-Control:\
+SF:x20max-age=0,\x20no-cache,\x20no-store,\x20must-revalidate\r\nPragma:\x
+SF:20no-cache\r\nAccept-Ranges:\x20bytes\r\n\r\n<!DOCTYPE\x20html>\n<html>
+SF:\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20
+SF:\x20\x20<title>Domain\x20not\x20found</title>\n\x20\x20\x20\x20<meta\x2
+SF:0name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\
+SF:">\n\x20\x20\x20\x20<style>\n\n\x20\x20\x20\x20\x20\x20/\*reset\*/\n\x2
+SF:0\x20\x20\x20\x20\x20body,\x20head,\x20html,\x20div,\x20p,\x20h1\x20{\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20}\n\n\x20\x20\x20\x20\x
+SF:20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\n\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20width:\x20100vw;\n\x20\x20\x20\x20\x20\x20\x20\x20jus")%r(HTTP
+SF:Options,35B,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nDate:\x20Mon,\x2003\
+SF:x20Nov\x202025\x2019:38:51\x20GMT\r\nContent-Type:\x20text/html\r\nConn
+SF:ection:\x20close\r\nServer:\x20n/a\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\
+SF:x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x2
+SF:0\x20<title>Error\x20405</title>\n\x20\x20\x20\x20<meta\x20name=\"viewp
+SF:ort\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\x20\x20\
+SF:x20\x20\n\x20\x20\x20\x20<style>\n\n\x20\x20\x20\x20\x20\x20/\*reset\*/
+SF:\n\x20\x20\x20\x20\x20\x20body,\x20head,\x20html,\x20div,\x20p,\x20h1\x
+SF:20{\n\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20}\n\n\x20\x20\x20\
+SF:x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20width:\x20100vw;\n\x20\x20\x20\x20\x20\x20\x20\x20justify
+SF:-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20c
+SF:enter;\n\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Tahoma,\x20Verd
+SF:ana,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20backgrou
+SF:nd:\x20#f3f3f3;\n\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2c3e50;\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\n\x20\x20\x20\x20\
+SF:x20\x20}\n\n\x20\x20\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20margin:\x2010px;\n\x20\x20\x20\x20\x20\x20}\n\n\x20\x20\x20\x20</
+SF:style>\n\x20\x20</head>\n<body>\n\n\x20\x20<div\x20id=\"page\">\n\x20\x
+SF:20\x20\x20\n\x20\x20\x20\x20\x20\x20<h1>405\x20Something\x20goes\x20wro
+SF:ng</h1>\n\x20\x20\x20\x20\n\x20\x20</div>\n\n</body>\n</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=690904D2%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4FE,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2003\x
+SF:20Nov\x202025\x2019:38:58\x20GMT\r\nContent-Type:\x20text/html\r\nConte
+SF:nt-Length:\x20752\r\nLast-Modified:\x20Wed,\x2007\x20Apr\x202021\x2015:
+SF:17:03\x20GMT\r\nConnection:\x20close\r\nVary:\x20Accept-Encoding\r\nETa
+SF:g:\x20\"606dccef-2f0\"\r\nServer:\x20n/a\r\nStrict-Transport-Security:\
+SF:x20max-age=31536000;\x20includeSubDomains;\x20preload\r\nX-Frame-Option
+SF:s:\x20SAMEORIGIN\r\nReferrer-Policy:\x20no-referrer\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nCache-Co
+SF:ntrol:\x20max-age=0,\x20no-cache,\x20no-store,\x20must-revalidate\r\nPr
+SF:agma:\x20no-cache\r\nAccept-Ranges:\x20bytes\r\n\r\n<!DOCTYPE\x20html>\
+SF:n<html>\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\
+SF:x20\x20\x20\x20<title>Domain\x20not\x20found</title>\n\x20\x20\x20\x20<
+SF:meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-s
+SF:cale=1\">\n\x20\x20\x20\x20<style>\n\n\x20\x20\x20\x20\x20\x20/\*reset\
+SF:*/\n\x20\x20\x20\x20\x20\x20body,\x20head,\x20html,\x20div,\x20p,\x20h1
+SF:\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20}\n\n\x20\x20\x2
+SF:0\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20display:\x20fle
+SF:x;\n\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20width:\x20100vw;\n\x20\x20\x20\x20\x20\x20\x20\x20jus")
+SF:%r(HTTPOptions,35B,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nDate:\x20Mon,
+SF:\x2003\x20Nov\x202025\x2019:38:58\x20GMT\r\nContent-Type:\x20text/html\
+SF:r\nConnection:\x20close\r\nServer:\x20n/a\r\n\r\n<!DOCTYPE\x20html>\n<h
+SF:tml>\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20
+SF:\x20\x20\x20<title>Error\x20405</title>\n\x20\x20\x20\x20<meta\x20name=
+SF:\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\x
+SF:20\x20\x20\x20\n\x20\x20\x20\x20<style>\n\n\x20\x20\x20\x20\x20\x20/\*r
+SF:eset\*/\n\x20\x20\x20\x20\x20\x20body,\x20head,\x20html,\x20div,\x20p,\
+SF:x20h1\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20}\n\n\x20\x
+SF:20\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20display:\x
+SF:20flex;\n\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20width:\x20100vw;\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:justify-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20align-item
+SF:s:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Tahoma,\
+SF:x20Verdana,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20b
+SF:ackground:\x20#f3f3f3;\n\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#2c3e
+SF:50;\n\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\n\x20\x20\x
+SF:20\x20\x20\x20}\n\n\x20\x20\x20\x20\x20\x20h1\x20{\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20margin:\x2010px;\n\x20\x20\x20\x20\x20\x20}\n\n\x20\x20\x2
+SF:0\x20</style>\n\x20\x20</head>\n<body>\n\n\x20\x20<div\x20id=\"page\">\
+SF:n\x20\x20\x20\x20\n\x20\x20\x20\x20\x20\x20<h1>405\x20Something\x20goes
+SF:\x20wrong</h1>\n\x20\x20\x20\x20\n\x20\x20</div>\n\n</body>\n</html>\n"
+SF:);
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:39:23 2025 -- 1 IP address (1 host up) scanned in 47.32 seconds
