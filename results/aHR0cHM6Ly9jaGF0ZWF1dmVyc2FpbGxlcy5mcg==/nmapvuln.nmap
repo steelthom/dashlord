@@ -1,0 +1,221 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:29:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln chateauversailles.fr
+Nmap scan report for chateauversailles.fr (178.237.109.77)
+Host is up (0.11s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     server: nginx
+|     date: Mon, 03 Nov 2025 19:30:07 GMT
+|     content-type: text/html
+|     content-length: 146
+|     vary: Accept-Encoding
+|     x-frame-options:: SAMEORIGIN
+|     x-content-type-options:: nosniff
+|     x-xss-protection:: 1;mode=block
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: SERVERID=front2; path=/
+|     connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     server: nginx
+|     date: Mon, 03 Nov 2025 19:30:06 GMT
+|     content-type: text/html
+|     content-length: 146
+|     vary: Accept-Encoding
+|     x-frame-options:: SAMEORIGIN
+|     x-content-type-options:: nosniff
+|     x-xss-protection:: 1;mode=block
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: SERVERID=front2; path=/
+|     connection: close
+|     <html>
+|     <head><title>403 Forbidden</title></head>
+|     <body>
+|     <center><h1>403 Forbidden</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     server: nginx
+|     date: Mon, 03 Nov 2025 19:30:06 GMT
+|     content-type: text/html
+|     content-length: 150
+|     x-frame-options:: SAMEORIGIN
+|     x-content-type-options:: nosniff
+|     x-xss-protection:: 1;mode=block
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: SERVERID=front1; path=/
+|     connection: close
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body>
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+443/tcp open  ssl/https nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     server: nginx
+|     date: Mon, 03 Nov 2025 19:30:13 GMT
+|     content-type: text/html
+|     content-length: 146
+|     vary: Accept-Encoding
+|     x-frame-options:: SAMEORIGIN
+|     x-content-type-options:: nosniff
+|     x-xss-protection:: 1;mode=block
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: SERVERID=front1; path=/
+|     connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     server: nginx
+|     date: Mon, 03 Nov 2025 19:30:12 GMT
+|     content-type: text/html
+|     content-length: 146
+|     vary: Accept-Encoding
+|     x-frame-options:: SAMEORIGIN
+|     x-content-type-options:: nosniff
+|     x-xss-protection:: 1;mode=block
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: SERVERID=front2; path=/
+|     connection: close
+|     <html>
+|     <head><title>403 Forbidden</title></head>
+|     <body>
+|     <center><h1>403 Forbidden</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     server: nginx
+|     date: Mon, 03 Nov 2025 19:30:13 GMT
+|     content-type: text/html
+|     content-length: 150
+|     x-frame-options:: SAMEORIGIN
+|     x-content-type-options:: nosniff
+|     x-xss-protection:: 1;mode=block
+|     referrer-policy: no-referrer-when-downgrade
+|     set-cookie: SERVERID=front1; path=/
+|     connection: close
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body>
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=690902BE%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1EB,"HTTP/1\.1\x20403\x20Forbidden\r\nserver:\x20nginx\r\nd
+SF:ate:\x20Mon,\x2003\x20Nov\x202025\x2019:30:06\x20GMT\r\ncontent-type:\x
+SF:20text/html\r\ncontent-length:\x20146\r\nvary:\x20Accept-Encoding\r\nx-
+SF:frame-options::\x20SAMEORIGIN\r\nx-content-type-options::\x20nosniff\r\
+SF:nx-xss-protection::\x201;mode=block\r\nreferrer-policy:\x20no-referrer-
+SF:when-downgrade\r\nset-cookie:\x20SERVERID=front2;\x20path=/\r\nconnecti
+SF:on:\x20close\r\n\r\n<html>\r\n<head><title>403\x20Forbidden</title></he
+SF:ad>\r\n<body>\r\n<center><h1>403\x20Forbidden</h1></center>\r\n<hr><cen
+SF:ter>nginx</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1DA,"HTTP/
+SF:1\.1\x20405\x20Not\x20Allowed\r\nserver:\x20nginx\r\ndate:\x20Mon,\x200
+SF:3\x20Nov\x202025\x2019:30:06\x20GMT\r\ncontent-type:\x20text/html\r\nco
+SF:ntent-length:\x20150\r\nx-frame-options::\x20SAMEORIGIN\r\nx-content-ty
+SF:pe-options::\x20nosniff\r\nx-xss-protection::\x201;mode=block\r\nreferr
+SF:er-policy:\x20no-referrer-when-downgrade\r\nset-cookie:\x20SERVERID=fro
+SF:nt1;\x20path=/\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><title>40
+SF:5\x20Not\x20Allowed</title></head>\r\n<body>\r\n<center><h1>405\x20Not\
+SF:x20Allowed</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</
+SF:html>\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nCon
+SF:tent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20clos
+SF:e\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20re
+SF:quest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</bo
+SF:dy></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nCon
+SF:tent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20clos
+SF:e\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20re
+SF:quest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</bo
+SF:dy></html>\n")%r(FourOhFourRequest,1EB,"HTTP/1\.1\x20404\x20Not\x20Foun
+SF:d\r\nserver:\x20nginx\r\ndate:\x20Mon,\x2003\x20Nov\x202025\x2019:30:07
+SF:\x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length:\x20146\r\nvary
+SF::\x20Accept-Encoding\r\nx-frame-options::\x20SAMEORIGIN\r\nx-content-ty
+SF:pe-options::\x20nosniff\r\nx-xss-protection::\x201;mode=block\r\nreferr
+SF:er-policy:\x20no-referrer-when-downgrade\r\nset-cookie:\x20SERVERID=fro
+SF:nt2;\x20path=/\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><title>40
+SF:4\x20Not\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x2
+SF:0Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html
+SF:>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=690902C4%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1EB,"HTTP/1\.1\x20403\x20Forbidden\r\nserver:\x20ngi
+SF:nx\r\ndate:\x20Mon,\x2003\x20Nov\x202025\x2019:30:12\x20GMT\r\ncontent-
+SF:type:\x20text/html\r\ncontent-length:\x20146\r\nvary:\x20Accept-Encodin
+SF:g\r\nx-frame-options::\x20SAMEORIGIN\r\nx-content-type-options::\x20nos
+SF:niff\r\nx-xss-protection::\x201;mode=block\r\nreferrer-policy:\x20no-re
+SF:ferrer-when-downgrade\r\nset-cookie:\x20SERVERID=front2;\x20path=/\r\nc
+SF:onnection:\x20close\r\n\r\n<html>\r\n<head><title>403\x20Forbidden</tit
+SF:le></head>\r\n<body>\r\n<center><h1>403\x20Forbidden</h1></center>\r\n<
+SF:hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1DA
+SF:,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nserver:\x20nginx\r\ndate:\x20Mo
+SF:n,\x2003\x20Nov\x202025\x2019:30:13\x20GMT\r\ncontent-type:\x20text/htm
+SF:l\r\ncontent-length:\x20150\r\nx-frame-options::\x20SAMEORIGIN\r\nx-con
+SF:tent-type-options::\x20nosniff\r\nx-xss-protection::\x201;mode=block\r\
+SF:nreferrer-policy:\x20no-referrer-when-downgrade\r\nset-cookie:\x20SERVE
+SF:RID=front1;\x20path=/\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><t
+SF:itle>405\x20Not\x20Allowed</title></head>\r\n<body>\r\n<center><h1>405\
+SF:x20Not\x20Allowed</h1></center>\r\n<hr><center>nginx</center>\r\n</body
+SF:>\r\n</html>\r\n")%r(FourOhFourRequest,1EB,"HTTP/1\.1\x20404\x20Not\x20
+SF:Found\r\nserver:\x20nginx\r\ndate:\x20Mon,\x2003\x20Nov\x202025\x2019:3
+SF:0:13\x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length:\x20146\r\n
+SF:vary:\x20Accept-Encoding\r\nx-frame-options::\x20SAMEORIGIN\r\nx-conten
+SF:t-type-options::\x20nosniff\r\nx-xss-protection::\x201;mode=block\r\nre
+SF:ferrer-policy:\x20no-referrer-when-downgrade\r\nset-cookie:\x20SERVERID
+SF:=front1;\x20path=/\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><titl
+SF:e>404\x20Not\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20No
+SF:t\x20Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</
+SF:html>\r\n")%r(tor-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nCo
+SF:ntent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20clo
+SF:se\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20r
+SF:equest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</b
+SF:ody></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:30:21 2025 -- 1 IP address (1 host up) scanned in 40.44 seconds
