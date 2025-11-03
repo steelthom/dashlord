@@ -28,7 +28,7 @@ on:
           - tracking
           - wappalyzer
   schedule:
-    - cron: "0 2 */2 * *" # every 2 days at 2AM, see https://crontab.guru
+    - cron: "0 */6 * * *" # "0 2 */2 * *" # every 2 days at 2AM, see https://crontab.guru
 
 # allow only one concurrent scan action
 concurrency:
@@ -62,7 +62,7 @@ jobs:
         uses: Quentium-Forks/dashlord-actions/init-from-txt@main
         id: init
         with:
-          count: 240
+          count: 250
           txtPath: /tmp/urls.txt
   scans:
     runs-on: ubuntu-latest
