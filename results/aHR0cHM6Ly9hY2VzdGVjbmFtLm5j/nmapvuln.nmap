@@ -1,0 +1,290 @@
+# Nmap 7.92 scan initiated Mon Nov  3 19:11:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln acestecnam.nc
+Nmap scan report for acestecnam.nc (149.28.187.55)
+Host is up (0.14s latency).
+rDNS record for 149.28.187.55: web01.syd.vultr.oneshot.nc
+Not shown: 982 closed tcp ports (reset)
+PORT     STATE    SERVICE       VERSION
+17/tcp   filtered qotd
+19/tcp   filtered chargen
+21/tcp   open     ftp           ProFTPD
+25/tcp   open     smtp          Postfix smtpd
+53/tcp   open     domain        (unknown banner: none)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    none
+80/tcp   open     http          nginx
+106/tcp  open     tcpwrapped
+110/tcp  open     pop3          Dovecot pop3d
+139/tcp  open     netbios-ssn   Samba smbd
+143/tcp  open     imap          Dovecot imapd
+443/tcp  open     ssl/http      nginx
+445/tcp  open     netbios-ssn   Samba smbd
+465/tcp  open     ssl/smtp      Postfix smtpd
+587/tcp  open     smtp          Postfix smtpd
+993/tcp  open     imaps?
+995/tcp  open     pop3s?
+3306/tcp open     mysql         MySQL 5.5.5-10.3.35-MariaDB-1:10.3.35+maria~stretch
+| vulners: 
+|   cpe:/a:mariadb:mariadb:5.5.5-10.3.35-mariadb-1%3A10.3.35%2Bmaria~stretch: 
+|     	SSV:92513	10.0	https://vulners.com/seebug/SSV:92513	*EXPLOIT*
+|     	SSV:92510	10.0	https://vulners.com/seebug/SSV:92510	*EXPLOIT*
+|     	SSV:92405	10.0	https://vulners.com/seebug/SSV:92405	*EXPLOIT*
+|     	PACKETSTORM:139491	10.0	https://vulners.com/packetstorm/PACKETSTORM:139491	*EXPLOIT*
+|     	PACKETSTORM:139476	10.0	https://vulners.com/packetstorm/PACKETSTORM:139476	*EXPLOIT*
+|     	PACKETSTORM:138678	10.0	https://vulners.com/packetstorm/PACKETSTORM:138678	*EXPLOIT*
+|     	EXPLOITPACK:BD83B747C6C6A417D97824A1D81FAA5D	10.0	https://vulners.com/exploitpack/EXPLOITPACK:BD83B747C6C6A417D97824A1D81FAA5D	*EXPLOIT*
+|     	EXPLOITPACK:55F22FE44A0D6F3F9005C334804B2317	10.0	https://vulners.com/exploitpack/EXPLOITPACK:55F22FE44A0D6F3F9005C334804B2317	*EXPLOIT*
+|     	EXPLOITPACK:3D8D46697DAADEA8249E37B2A2F09AE3	10.0	https://vulners.com/exploitpack/EXPLOITPACK:3D8D46697DAADEA8249E37B2A2F09AE3	*EXPLOIT*
+|     	EDB-ID:40679	10.0	https://vulners.com/exploitdb/EDB-ID:40679	*EXPLOIT*
+|     	EDB-ID:40678	10.0	https://vulners.com/exploitdb/EDB-ID:40678	*EXPLOIT*
+|     	EDB-ID:40360	10.0	https://vulners.com/exploitdb/EDB-ID:40360	*EXPLOIT*
+|     	CVE-2012-2750	10.0	https://vulners.com/cve/CVE-2012-2750
+|     	1337DAY-ID-24786	10.0	https://vulners.com/zdt/1337DAY-ID-24786	*EXPLOIT*
+|     	CVE-2016-9843	9.8	https://vulners.com/cve/CVE-2016-9843
+|     	CVE-2012-3163	9.0	https://vulners.com/cve/CVE-2012-3163
+|     	CVE-2017-15365	8.8	https://vulners.com/cve/CVE-2017-15365
+|     	CNVD-2018-04523	8.8	https://vulners.com/cnvd/CNVD-2018-04523
+|     	CVE-2022-24052	7.8	https://vulners.com/cve/CVE-2022-24052
+|     	CVE-2022-24051	7.8	https://vulners.com/cve/CVE-2022-24051
+|     	CVE-2022-24050	7.8	https://vulners.com/cve/CVE-2022-24050
+|     	CVE-2022-24048	7.8	https://vulners.com/cve/CVE-2022-24048
+|     	CVE-2015-2325	7.8	https://vulners.com/cve/CVE-2015-2325
+|     	CVE-2018-2755	7.7	https://vulners.com/cve/CVE-2018-2755
+|     	CVE-2017-3309	7.7	https://vulners.com/cve/CVE-2017-3309
+|     	CVE-2017-3308	7.7	https://vulners.com/cve/CVE-2017-3308
+|     	CVE-2023-5157	7.5	https://vulners.com/cve/CVE-2023-5157
+|     	CVE-2022-27449	7.5	https://vulners.com/cve/CVE-2022-27449
+|     	CVE-2022-27385	7.5	https://vulners.com/cve/CVE-2022-27385
+|     	CVE-2021-46669	7.5	https://vulners.com/cve/CVE-2021-46669
+|     	CVE-2018-2562	7.5	https://vulners.com/cve/CVE-2018-2562
+|     	CVE-2017-3302	7.5	https://vulners.com/cve/CVE-2017-3302
+|     	CVE-2016-3471	7.5	https://vulners.com/cve/CVE-2016-3471
+|     	CVE-2015-0411	7.5	https://vulners.com/cve/CVE-2015-0411
+|     	CVE-2014-6500	7.5	https://vulners.com/cve/CVE-2014-6500
+|     	CVE-2014-6491	7.5	https://vulners.com/cve/CVE-2014-6491
+|     	CVE-2014-0001	7.5	https://vulners.com/cve/CVE-2014-0001
+|     	CVE-2012-3158	7.5	https://vulners.com/cve/CVE-2012-3158
+|     	CVE-2021-2144	7.2	https://vulners.com/cve/CVE-2021-2144
+|     	CVE-2015-4819	7.2	https://vulners.com/cve/CVE-2015-4819
+|     	CVE-2021-2011	7.1	https://vulners.com/cve/CVE-2021-2011
+|     	CVE-2020-28912	7.0	https://vulners.com/cve/CVE-2020-28912
+|     	CVE-2016-6664	7.0	https://vulners.com/cve/CVE-2016-6664
+|     	CNVD-2016-07549	7.0	https://vulners.com/cnvd/CNVD-2016-07549
+|     	2FBAC8D5-61BD-5149-8322-1B84C003EC41	7.0	https://vulners.com/githubexploit/2FBAC8D5-61BD-5149-8322-1B84C003EC41	*EXPLOIT*
+|     	1337DAY-ID-26205	6.9	https://vulners.com/zdt/1337DAY-ID-26205	*EXPLOIT*
+|     	CVE-2018-2668	6.8	https://vulners.com/cve/CVE-2018-2668
+|     	CVE-2018-2665	6.8	https://vulners.com/cve/CVE-2018-2665
+|     	CVE-2018-2640	6.8	https://vulners.com/cve/CVE-2018-2640
+|     	CVE-2018-2622	6.8	https://vulners.com/cve/CVE-2018-2622
+|     	CVE-2016-3492	6.8	https://vulners.com/cve/CVE-2016-3492
+|     	CVE-2014-6469	6.8	https://vulners.com/cve/CVE-2014-6469
+|     	CVE-2013-0389	6.8	https://vulners.com/cve/CVE-2013-0389
+|     	CVE-2013-0386	6.8	https://vulners.com/cve/CVE-2013-0386
+|     	CVE-2013-0384	6.8	https://vulners.com/cve/CVE-2013-0384
+|     	CVE-2012-5060	6.8	https://vulners.com/cve/CVE-2012-5060
+|     	CVE-2012-3177	6.8	https://vulners.com/cve/CVE-2012-3177
+|     	CVE-2012-1735	6.8	https://vulners.com/cve/CVE-2012-1735
+|     	CVE-2012-1703	6.8	https://vulners.com/cve/CVE-2012-1703
+|     	CVE-2017-3312	6.7	https://vulners.com/cve/CVE-2017-3312
+|     	CVE-2017-3600	6.6	https://vulners.com/cve/CVE-2017-3600
+|     	CVE-2013-0385	6.6	https://vulners.com/cve/CVE-2013-0385
+|     	PACKETSTORM:118551	6.5	https://vulners.com/packetstorm/PACKETSTORM:118551	*EXPLOIT*
+|     	CVE-2020-2780	6.5	https://vulners.com/cve/CVE-2020-2780
+|     	CVE-2019-2974	6.5	https://vulners.com/cve/CVE-2019-2974
+|     	CVE-2019-2805	6.5	https://vulners.com/cve/CVE-2019-2805
+|     	CVE-2019-2740	6.5	https://vulners.com/cve/CVE-2019-2740
+|     	CVE-2019-2529	6.5	https://vulners.com/cve/CVE-2019-2529
+|     	CVE-2019-2455	6.5	https://vulners.com/cve/CVE-2019-2455
+|     	CVE-2018-3133	6.5	https://vulners.com/cve/CVE-2018-3133
+|     	CVE-2018-2819	6.5	https://vulners.com/cve/CVE-2018-2819
+|     	CVE-2018-2817	6.5	https://vulners.com/cve/CVE-2018-2817
+|     	CVE-2017-3453	6.5	https://vulners.com/cve/CVE-2017-3453
+|     	CVE-2017-3258	6.5	https://vulners.com/cve/CVE-2017-3258
+|     	CVE-2017-3244	6.5	https://vulners.com/cve/CVE-2017-3244
+|     	CVE-2017-3238	6.5	https://vulners.com/cve/CVE-2017-3238
+|     	CVE-2017-10384	6.5	https://vulners.com/cve/CVE-2017-10384
+|     	CVE-2017-10379	6.5	https://vulners.com/cve/CVE-2017-10379
+|     	CVE-2017-10378	6.5	https://vulners.com/cve/CVE-2017-10378
+|     	CVE-2016-5626	6.5	https://vulners.com/cve/CVE-2016-5626
+|     	CVE-2016-5624	6.5	https://vulners.com/cve/CVE-2016-5624
+|     	CVE-2016-5612	6.5	https://vulners.com/cve/CVE-2016-5612
+|     	CVE-2016-0502	6.5	https://vulners.com/cve/CVE-2016-0502
+|     	CVE-2014-6555	6.5	https://vulners.com/cve/CVE-2014-6555
+|     	CVE-2014-6530	6.5	https://vulners.com/cve/CVE-2014-6530
+|     	CVE-2014-4258	6.5	https://vulners.com/cve/CVE-2014-4258
+|     	CVE-2014-2436	6.5	https://vulners.com/cve/CVE-2014-2436
+|     	CVE-2013-2378	6.5	https://vulners.com/cve/CVE-2013-2378
+|     	CVE-2013-2375	6.5	https://vulners.com/cve/CVE-2013-2375
+|     	CVE-2013-1552	6.5	https://vulners.com/cve/CVE-2013-1552
+|     	CVE-2013-1531	6.5	https://vulners.com/cve/CVE-2013-1531
+|     	CVE-2013-1521	6.5	https://vulners.com/cve/CVE-2013-1521
+|     	CVE-2012-5612	6.5	https://vulners.com/cve/CVE-2012-5612
+|     	CVE-2019-2503	6.4	https://vulners.com/cve/CVE-2019-2503
+|     	CVE-2017-3291	6.3	https://vulners.com/cve/CVE-2017-3291
+|     	CVE-2020-2574	5.9	https://vulners.com/cve/CVE-2020-2574
+|     	CVE-2018-2761	5.9	https://vulners.com/cve/CVE-2018-2761
+|     	CVE-2015-7744	5.9	https://vulners.com/cve/CVE-2015-7744
+|     	CVE-2015-3152	5.9	https://vulners.com/cve/CVE-2015-3152
+|     	CVE-2015-0501	5.7	https://vulners.com/cve/CVE-2015-0501
+|     	CVE-2017-3265	5.6	https://vulners.com/cve/CVE-2017-3265
+|     	CVE-2022-31624	5.5	https://vulners.com/cve/CVE-2022-31624
+|     	CVE-2022-31623	5.5	https://vulners.com/cve/CVE-2022-31623
+|     	CVE-2022-31622	5.5	https://vulners.com/cve/CVE-2022-31622
+|     	CVE-2022-31621	5.5	https://vulners.com/cve/CVE-2022-31621
+|     	CVE-2021-46667	5.5	https://vulners.com/cve/CVE-2021-46667
+|     	CVE-2021-46666	5.5	https://vulners.com/cve/CVE-2021-46666
+|     	CVE-2021-46659	5.5	https://vulners.com/cve/CVE-2021-46659
+|     	CVE-2016-7440	5.5	https://vulners.com/cve/CVE-2016-7440
+|     	CVE-2016-0651	5.5	https://vulners.com/cve/CVE-2016-0651
+|     	CVE-2014-4260	5.5	https://vulners.com/cve/CVE-2014-4260
+|     	CNVD-2022-65012	5.5	https://vulners.com/cnvd/CNVD-2022-65012
+|     	CVE-2020-2752	5.3	https://vulners.com/cve/CVE-2020-2752
+|     	CVE-2020-14550	5.3	https://vulners.com/cve/CVE-2020-14550
+|     	CVE-2018-3174	5.3	https://vulners.com/cve/CVE-2018-3174
+|     	CVE-2017-3636	5.3	https://vulners.com/cve/CVE-2017-3636
+|     	CVE-2019-2739	5.1	https://vulners.com/cve/CVE-2019-2739
+|     	CVE-2014-2440	5.1	https://vulners.com/cve/CVE-2014-2440
+|     	SSV:60679	5.0	https://vulners.com/seebug/SSV:60679	*EXPLOIT*
+|     	CVE-2018-3081	5.0	https://vulners.com/cve/CVE-2018-3081
+|     	CVE-2015-2568	5.0	https://vulners.com/cve/CVE-2015-2568
+|     	CVE-2013-3801	5.0	https://vulners.com/cve/CVE-2013-3801
+|     	CVE-2013-1861	5.0	https://vulners.com/cve/CVE-2013-1861
+|     	CVE-2012-1702	5.0	https://vulners.com/cve/CVE-2012-1702
+|     	1337DAY-ID-26204	4.4	https://vulners.com/zdt/1337DAY-ID-26204	*EXPLOIT*
+|     	SSV:60908	4.0	https://vulners.com/seebug/SSV:60908	*EXPLOIT*
+|     	SSV:60600	4.0	https://vulners.com/seebug/SSV:60600	*EXPLOIT*
+|     	SSV:60599	4.0	https://vulners.com/seebug/SSV:60599	*EXPLOIT*
+|     	SSV:60598	4.0	https://vulners.com/seebug/SSV:60598	*EXPLOIT*
+|     	SSV:60597	4.0	https://vulners.com/seebug/SSV:60597	*EXPLOIT*
+|     	SSV:60501	4.0	https://vulners.com/seebug/SSV:60501	*EXPLOIT*
+|     	PACKETSTORM:137232	4.0	https://vulners.com/packetstorm/PACKETSTORM:137232	*EXPLOIT*
+|     	PACKETSTORM:118553	4.0	https://vulners.com/packetstorm/PACKETSTORM:118553	*EXPLOIT*
+|     	EXPLOITPACK:4856CE5DA621AD64273C51D5420971CA	4.0	https://vulners.com/exploitpack/EXPLOITPACK:4856CE5DA621AD64273C51D5420971CA	*EXPLOIT*
+|     	EDB-ID:39867	4.0	https://vulners.com/exploitdb/EDB-ID:39867	*EXPLOIT*
+|     	C882EFEA-AFE2-5F2D-96B0-1D3887517B47	4.0	https://vulners.com/githubexploit/C882EFEA-AFE2-5F2D-96B0-1D3887517B47	*EXPLOIT*
+|_    	1337DAY-ID-26031	4.0	https://vulners.com/zdt/1337DAY-ID-26031	*EXPLOIT*
+8443/tcp open     ssl/https-alt sw-cp-server
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sw-cp-server
+|     Date: Mon, 03 Nov 2025 19:11:39 GMT
+|     Content-Type: text/html
+|     Content-Length: 906
+|     Connection: close
+|     ETag: "62a86b66-38a"
+|     <!DOCTYPE html>
+|     <!-- Copyright 1999-2022. Plesk International GmbH. All rights reserved. -->
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>404 Page Not Found</title>
+|     <link rel="shortcut icon" href="/favicon.ico">
+|     <link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.28.0">
+|     <script src="/ui-library/plesk-ui-library.min.js?3.28.0"></script>
+|     <script src="/cp/javascript/vendors.js"></script>
+|     <script src="/cp/javascript/main.js"></script>
+|     <script src="/error_docs/uat.js?v3"></script>
+|     <link href="/error_docs/app.css?a4626f09af34123d4dfb" rel="stylesheet"></head>
+|     <body>
+|     <div id
+|   GetRequest: 
+|     HTTP/1.1 303 See Other
+|     Server: sw-cp-server
+|     Date: Mon, 03 Nov 2025 19:11:38 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Mon, 03 Nov 2025 19:11:38 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     Location: https://localhost:8443/login.php?success_redirect_url=%2F
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sw-cp-server
+|     Date: Mon, 03 Nov 2025 19:11:39 GMT
+|     Content-Type: text/html
+|     Content-Length: 914
+|     Connection: close
+|     ETag: "62a86b66-392"
+|     <!DOCTYPE html>
+|     <!-- Copyright 1999-2022. Plesk International GmbH. All rights reserved. -->
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>405 Method Not Allowed</title>
+|     <link rel="shortcut icon" href="/favicon.ico">
+|     <link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.28.0">
+|     <script src="/ui-library/plesk-ui-library.min.js?3.28.0"></script>
+|     <script src="/cp/javascript/vendors.js"></script>
+|     <script src="/cp/javascript/main.js"></script>
+|     <script src="/error_docs/uat.js?v3"></script>
+|     <link href="/error_docs/app.css?a4626f09af34123d4dfb" rel="stylesheet"></head>
+|_    <body>
+|_http-server-header: sw-cp-server
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.92%I=7%D=11/3%Time=6908FE68%P=x86_64-alpine-linux-musl%r
+SF:(DNSVersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04none\xc0
+SF:\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=6908FE6A%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,20E,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x2
+SF:0sw-cp-server\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2019:11:38\x20GMT\
+SF:r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close
+SF:\r\nExpires:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Mo
+SF:dified:\x20Mon,\x2003\x20Nov\x202025\x2019:11:38\x20GMT\r\nCache-Contro
+SF:l:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20po
+SF:st-check=0,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x
+SF:20COR\x20CURa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\nX-
+SF:Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r
+SF:\nLocation:\x20https://localhost:8443/login\.php\?success_redirect_url=
+SF:%2F\r\n\r\n")%r(HTTPOptions,440,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\n
+SF:Server:\x20sw-cp-server\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2019:11:
+SF:39\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20914\r\nCo
+SF:nnection:\x20close\r\nETag:\x20\"62a86b66-392\"\r\n\r\n<!DOCTYPE\x20htm
+SF:l>\n<!--\x20Copyright\x201999-2022\.\x20Plesk\x20International\x20GmbH\
+SF:.\x20All\x20rights\x20reserved\.\x20-->\n<html\x20lang=\"en\"\x20dir=\"
+SF:ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x
+SF:20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20in
+SF:itial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<title>405\x20Me
+SF:thod\x20Not\x20Allowed</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut
+SF:\x20icon\"\x20href=\"/favicon\.ico\">\n\x20\x20\x20\x20<link\x20rel=\"s
+SF:tylesheet\"\x20href=\"/ui-library/plesk-ui-library\.css\?3\.28\.0\">\n\
+SF:x20\x20\x20\x20<script\x20src=\"/ui-library/plesk-ui-library\.min\.js\?
+SF:3\.28\.0\"></script>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/v
+SF:endors\.js\"></script>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript
+SF:/main\.js\"></script>\n\x20\x20\x20\x20<script\x20src=\"/error_docs/uat
+SF:\.js\?v3\"></script>\n<link\x20href=\"/error_docs/app\.css\?a4626f09af3
+SF:4123d4dfb\"\x20rel=\"stylesheet\"></head>\n<body>\n<")%r(FourOhFourRequ
+SF:est,436,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20sw-cp-server\r\
+SF:nDate:\x20Mon,\x2003\x20Nov\x202025\x2019:11:39\x20GMT\r\nContent-Type:
+SF:\x20text/html\r\nContent-Length:\x20906\r\nConnection:\x20close\r\nETag
+SF::\x20\"62a86b66-38a\"\r\n\r\n<!DOCTYPE\x20html>\n<!--\x20Copyright\x201
+SF:999-2022\.\x20Plesk\x20International\x20GmbH\.\x20All\x20rights\x20rese
+SF:rved\.\x20-->\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x
+SF:20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"view
+SF:port\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink-t
+SF:o-fit=no\">\n\x20\x20\x20\x20<title>404\x20Page\x20Not\x20Found</title>
+SF:\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"/favicon\
+SF:.ico\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"/ui-libr
+SF:ary/plesk-ui-library\.css\?3\.28\.0\">\n\x20\x20\x20\x20<script\x20src=
+SF:\"/ui-library/plesk-ui-library\.min\.js\?3\.28\.0\"></script>\n\x20\x20
+SF:\x20\x20<script\x20src=\"/cp/javascript/vendors\.js\"></script>\n\x20\x
+SF:20\x20\x20<script\x20src=\"/cp/javascript/main\.js\"></script>\n\x20\x2
+SF:0\x20\x20<script\x20src=\"/error_docs/uat\.js\?v3\"></script>\n<link\x2
+SF:0href=\"/error_docs/app\.css\?a4626f09af34123d4dfb\"\x20rel=\"styleshee
+SF:t\"></head>\n<body>\n<div\x20id");
+Service Info: Host:  web01.syd.vultr.oneshot.nc
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 19:12:05 2025 -- 1 IP address (1 host up) scanned in 42.11 seconds
