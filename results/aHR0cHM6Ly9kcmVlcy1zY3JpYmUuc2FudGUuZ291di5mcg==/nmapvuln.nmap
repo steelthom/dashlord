@@ -1,0 +1,102 @@
+# Nmap 7.92 scan initiated Mon Nov  3 20:16:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln drees-scribe.sante.gouv.fr
+Nmap scan report for drees-scribe.sante.gouv.fr (185.194.82.170)
+Host is up (0.13s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   GetRequest: 
+|     HTTP/1.0 403 Forbidden
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 03 Nov 2025 20:17:16 GMT
+|     Allow: GET,HEAD,POST,OPTIONS,TRACE
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: httpd/unix-directory
+|     Set-Cookie: BIGipServerpool-drees-chronos.cegedim.cloud-http=!OJN/yyTmgUn+EF4XIkI7F7SI9ajmiij4695WgQFgkmq8Q0OKgpqt3YyCvUMbfevc/DfCoNnzdKhKntHURI25xjXKL10=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|   RTSPRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Mon, 03 Nov 2025 20:17:27 GMT
+|     Allow: GET,HEAD,POST,OPTIONS,TRACE
+|     Content-Length: 0
+|     Connection: close
+|     Content-Type: httpd/unix-directory
+|     Set-Cookie: BIGipServerpool-drees-chronos.cegedim.cloud-http=!omj0cTB/IRR4FUwXIkI7F7SI9ajmionZMv+lgFy4rP7CzhGMq9vDRX1DB7Ed3xcVa506v+ZRRQUwS0ohqe5kesM+YFM=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|   SIPOptions: 
+|     HTTP/1.0 400 Bad Request
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|_    ERROR
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=69090DC5%P=x86_64-alpine-linux-musl%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/3%Time=69090DCB%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4E,"HTTP/1\.0\x20403\x20Forbidden\r\nConnection:\x20
+SF:Keep-Alive\r\nContent-Length:\x209\r\n\r\n403\x20ERROR")%r(HTTPOptions,
+SF:19C,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2020
+SF::17:16\x20GMT\r\nAllow:\x20GET,HEAD,POST,OPTIONS,TRACE\r\nContent-Lengt
+SF:h:\x200\r\nConnection:\x20close\r\nContent-Type:\x20httpd/unix-director
+SF:y\r\nSet-Cookie:\x20BIGipServerpool-drees-chronos\.cegedim\.cloud-http=
+SF:!OJN/yyTmgUn\+EF4XIkI7F7SI9ajmiij4695WgQFgkmq8Q0OKgpqt3YyCvUMbfevc/DfCo
+SF:NnzdKhKntHURI25xjXKL10=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n")%r
+SF:(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\
+SF:x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPReque
+SF:st,19C,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Mon,\x2003\x20Nov\x202025\x2
+SF:020:17:27\x20GMT\r\nAllow:\x20GET,HEAD,POST,OPTIONS,TRACE\r\nContent-Le
+SF:ngth:\x200\r\nConnection:\x20close\r\nContent-Type:\x20httpd/unix-direc
+SF:tory\r\nSet-Cookie:\x20BIGipServerpool-drees-chronos\.cegedim\.cloud-ht
+SF:tp=!omj0cTB/IRR4FUwXIkI7F7SI9ajmionZMv\+lgFy4rP7CzhGMq9vDRX1DB7Ed3xcVa5
+SF:06v\+ZRRQUwS0ohqe5kesM\+YFM=;\x20path=/;\x20Httponly;\x20Secure\r\nStri
+SF:ct-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\
+SF:n")%r(SIPOptions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\
+SF:x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  3 20:19:43 2025 -- 1 IP address (1 host up) scanned in 174.58 seconds
