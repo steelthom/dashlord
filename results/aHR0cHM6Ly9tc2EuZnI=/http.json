@@ -1,0 +1,192 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 15,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 07:54:32 GMT",
+      "server": "MSAWS",
+      "set-cookie": [
+        "JSESSIONID_LFP=D5D21C2AF2017E7C9768FAF16444B32E.c59slfp22; Path=/; HttpOnly",
+        "ORIGINE=71; path=/",
+        "SITE_COURANT=021; path=/",
+        "PERSONNALISATION=\"MDA=\"; Version=1; Path=/; Secure; HttpOnly",
+        "ANONYME=Y29kZURlcHQ9MDB8dXJsT3JpZ2luZT1odHRwOi8vbXNhLmZy; Path=/; Secure; HttpOnly",
+        "JetonCA=90dfd57d1151f8404786edcaa019356a5e5c5eb6c190d7b066761da5ce130cfa730d1932eca4dbb6f98451665d7b20aa1835bf28490216aa45468d824d60b323421555268e8056809e275d17b4e2be90585a11c3bb928b37d6c8363873f3aa0ac7948c040287a5d6ac0c40c3cd389969b8705ba674c4422d574f35ce07ecea24b0794b219f6b1448_15af214c8cd8cff3709e1273d977579c; Path=/; Secure; HttpOnly",
+        "GUEST_LANGUAGE_ID=fr_FR; Expires=Wed, 04-Nov-2026 07:54:32 GMT; Path=/; HttpOnly",
+        "dtCookierurs2jxu=v_4_srv_2_sn_FACB4C43F1FE775D91A8028ADC120CEB_perc_100000_ol_0_mul_1_app-3A2e677f2c52184b62_0; Path=/; Domain=.msa.fr"
+      ],
+      "x-oneagent-js-injection": "true",
+      "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+      "cache-control": "private, no-cache, no-store, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "server-timing": "dtSInfo;desc=\"1\"",
+      "content-type": "text/html;charset=UTF-8",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "same-origin",
+      "strict-transport-security": "max-age=31536000;",
+      "connection": "close",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -10,
+      "data": {
+        "JSESSIONID_LFP": {
+          "domain": "www.msa.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "ORIGINE": {
+          "domain": "www.msa.fr",
+          "path": "/",
+          "port": null
+        },
+        "SITE_COURANT": {
+          "domain": "www.msa.fr",
+          "path": "/",
+          "port": null
+        },
+        "PERSONNALISATION": {
+          "domain": "www.msa.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "ANONYME": {
+          "domain": "www.msa.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "JetonCA": {
+          "domain": "www.msa.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "GUEST_LANGUAGE_ID": {
+          "domain": "www.msa.fr",
+          "expires": "2026-11-04T07:54:32.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "dtCookierurs2jxu": {
+          "domain": "msa.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.msa.fr/lfp",
+      "redirects": true,
+      "route": [
+        "http://msa.fr/",
+        "https://msa.fr/",
+        "https://www.msa.fr/",
+        "https://www.msa.fr/lfp"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000;",
+      "includeSubDomains": false,
+      "maxAge": 31536000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "https://cdn.doyoudreamup.com/dydubox/configurations/prod/e9a8419d-0410-4929-bed5-34982edaca6d/0af40028-8b3e-125c-818b-660c47f00003/loader.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "//cdn1.readspeaker.com/script/4871/webReader/webReader.js?pids=wr": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
