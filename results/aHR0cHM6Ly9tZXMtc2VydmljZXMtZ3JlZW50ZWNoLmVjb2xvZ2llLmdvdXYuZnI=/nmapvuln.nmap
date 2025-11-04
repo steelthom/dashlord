@@ -1,0 +1,90 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:54:15 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mes-services-greentech.ecologie.gouv.fr
+Nmap scan report for mes-services-greentech.ecologie.gouv.fr (51.159.84.207)
+Host is up (0.091s latency).
+rDNS record for 51.159.84.207: 207-84-159-51.instances.scw.cloud
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      nginx 1.23.2
+|_http-server-header: nginx/1.23.2
+| vulners: 
+|   nginx 1.23.2: 
+|     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+|     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
+|_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+443/tcp open  ssl/https nginx/1.23.2
+|_http-server-header: nginx/1.23.2
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     server: nginx/1.23.2
+|     date: Tue, 04 Nov 2025 07:54:29 GMT
+|     content-type: text/html
+|     content-length: 1803
+|     etag: "3e9fb3eb382ce3418259485832617a4f"
+|     last-modified: Mon, 20 Oct 2025 14:02:19 GMT
+|     x-amz-id-2: txgf3220fa2389d46a2b6db-006909b135
+|     x-amz-request-id: txgf3220fa2389d46a2b6db-006909b135
+|     connection: close
+|     <!doctype html><html lang="fr" data-fr-scheme="system"><head><meta charset="utf-8"/><link rel="icon" href="/msg-icon.svg"/><link rel="apple-touch-icon" href="/msg-icon.svg"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Site propos
+|     minist
+|     transition 
+|     cologique et de la coh
+|     sion des territoires pour booster les startups greentech"/><link rel="manifest" href="/manifest.json"/><script>!function(t,h,e,j,s,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q|
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     server: nginx/1.23.2
+|     date: Tue, 04 Nov 2025 07:54:30 GMT
+|     content-type: text/html; charset=utf-8
+|     content-length: 401
+|     x-amz-id-2: txgc86d320156dc4a9f992e-006909b136
+|     x-amz-request-id: txgc86d320156dc4a9f992e-006909b136
+|     connection: close
+|     <html>
+|     <head><title>405 Method Not Allowed</title></head>
+|     <body>
+|     <h1>405 Method Not Allowed</h1>
+|     <ul>
+|     <li>Code: MethodNotAllowed</li>
+|     <li>Message: The specified method is not allowed against this resource.</li>
+|     <li>Method: OPTIONS</li>
+|     <li>ResourceType: OBJECT</li>
+|     <li>RequestId: txgc86d320156dc4a9f992e-006909b136</li>
+|     <li>HostId: txgc86d320156dc4a9f992e-006909b136</li>
+|     </ul>
+|     <hr/>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909B135%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,859,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20nginx/1\.2
+SF:3\.2\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2007:54:29\x20GMT\r\nconten
+SF:t-type:\x20text/html\r\ncontent-length:\x201803\r\netag:\x20\"3e9fb3eb3
+SF:82ce3418259485832617a4f\"\r\nlast-modified:\x20Mon,\x2020\x20Oct\x20202
+SF:5\x2014:02:19\x20GMT\r\nx-amz-id-2:\x20txgf3220fa2389d46a2b6db-006909b1
+SF:35\r\nx-amz-request-id:\x20txgf3220fa2389d46a2b6db-006909b135\r\nconnec
+SF:tion:\x20close\r\n\r\n<!doctype\x20html><html\x20lang=\"fr\"\x20data-fr
+SF:-scheme=\"system\"><head><meta\x20charset=\"utf-8\"/><link\x20rel=\"ico
+SF:n\"\x20href=\"/msg-icon\.svg\"/><link\x20rel=\"apple-touch-icon\"\x20hr
+SF:ef=\"/msg-icon\.svg\"/><meta\x20name=\"viewport\"\x20content=\"width=de
+SF:vice-width,initial-scale=1\"/><meta\x20name=\"theme-color\"\x20content=
+SF:\"#000000\"/><meta\x20name=\"description\"\x20content=\"Site\x20propos\
+SF:xc3\xa9\x20par\x20le\x20minist\xc3\xa8re\x20de\x20la\x20transition\x20\
+SF:xc3\xa9cologique\x20et\x20de\x20la\x20coh\xc3\xa9sion\x20des\x20territo
+SF:ires\x20pour\x20booster\x20les\x20startups\x20greentech\"/><link\x20rel
+SF:=\"manifest\"\x20href=\"/manifest\.json\"/><script>!function\(t,h,e,j,s
+SF:,n\){t\.hj=t\.hj\|\|function\(\){\(t\.hj\.q=t\.hj\.q\|")%r(HTTPOptions,
+SF:2A5,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nserver:\x20nginx/1
+SF:\.23\.2\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2007:54:30\x20GMT\r\ncon
+SF:tent-type:\x20text/html;\x20charset=utf-8\r\ncontent-length:\x20401\r\n
+SF:x-amz-id-2:\x20txgc86d320156dc4a9f992e-006909b136\r\nx-amz-request-id:\
+SF:x20txgc86d320156dc4a9f992e-006909b136\r\nconnection:\x20close\r\n\r\n<h
+SF:tml>\n<head><title>405\x20Method\x20Not\x20Allowed</title></head>\n<bod
+SF:y>\n<h1>405\x20Method\x20Not\x20Allowed</h1>\n<ul>\n<li>Code:\x20Method
+SF:NotAllowed</li>\n<li>Message:\x20The\x20specified\x20method\x20is\x20no
+SF:t\x20allowed\x20against\x20this\x20resource\.</li>\n<li>Method:\x20OPTI
+SF:ONS</li>\n<li>ResourceType:\x20OBJECT</li>\n<li>RequestId:\x20txgc86d32
+SF:0156dc4a9f992e-006909b136</li>\n<li>HostId:\x20txgc86d320156dc4a9f992e-
+SF:006909b136</li>\n</ul>\n<hr/>\n</body>\n</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:54:46 2025 -- 1 IP address (1 host up) scanned in 31.58 seconds
