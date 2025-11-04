@@ -1,0 +1,183 @@
+# Nmap 7.92 scan initiated Tue Nov  4 20:49:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln tableau.portail-immo.gouv.fr
+Nmap scan report for tableau.portail-immo.gouv.fr (128.204.210.243)
+Host is up (0.091s latency).
+rDNS record for 128.204.210.243: DIESID-PRDTABL-01.ecritel.net
+Not shown: 995 filtered tcp ports (no-response)
+PORT     STATE  SERVICE     VERSION
+80/tcp   open   http        Tableau
+|_http-server-header: Tableau
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Tue, 04 Nov 2025 20:50:04 GMT
+|     Server: Tableau
+|     Content-Length: 318
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     <p>Additionally, a 403 Forbidden
+|     error was encountered while trying to use an ErrorDocument to handle the request.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Tue, 04 Nov 2025 20:49:58 GMT
+|     Server: Tableau
+|     Content-Length: 318
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     <p>Additionally, a 403 Forbidden
+|     error was encountered while trying to use an ErrorDocument to handle the request.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Tue, 04 Nov 2025 20:49:59 GMT
+|     Server: Tableau
+|     Content-Length: 318
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     <p>Additionally, a 403 Forbidden
+|     error was encountered while trying to use an ErrorDocument to handle the request.</p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 04 Nov 2025 20:49:59 GMT
+|     Server: Tableau
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+113/tcp  closed ident
+443/tcp  open   ssl/https   Tableau
+|_http-server-header: Tableau
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 04 Nov 2025 20:50:05 GMT
+|     Server: Tableau
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 04 Nov 2025 20:50:16 GMT
+|     Server: Tableau
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+2000/tcp open   cisco-sccp?
+5060/tcp open   sip?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A66F6%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1E3,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Tue,\x2004\x
+SF:20Nov\x202025\x2020:49:58\x20GMT\r\nServer:\x20Tableau\r\nContent-Lengt
+SF:h:\x20318\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x2
+SF:0HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</
+SF:head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\
+SF:x20to\x20access\x20this\x20resource\.</p>\n<p>Additionally,\x20a\x20403
+SF:\x20Forbidden\nerror\x20was\x20encountered\x20while\x20trying\x20to\x20
+SF:use\x20an\x20ErrorDocument\x20to\x20handle\x20the\x20request\.</p>\n</b
+SF:ody></html>\n")%r(HTTPOptions,1E3,"HTTP/1\.1\x20403\x20Forbidden\r\nDat
+SF:e:\x20Tue,\x2004\x20Nov\x202025\x2020:49:59\x20GMT\r\nServer:\x20Tablea
+SF:u\r\nContent-Length:\x20318\r\nConnection:\x20close\r\nContent-Type:\x2
+SF:0text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x2
+SF:0\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20For
+SF:bidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20h
+SF:ave\x20permission\x20to\x20access\x20this\x20resource\.</p>\n<p>Additio
+SF:nally,\x20a\x20403\x20Forbidden\nerror\x20was\x20encountered\x20while\x
+SF:20trying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x20the\x20
+SF:request\.</p>\n</body></html>\n")%r(RTSPRequest,189,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2020:49:59\x20G
+SF:MT\r\nServer:\x20Tableau\r\nContent-Length:\x20226\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
+SF:ead>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20R
+SF:equest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this
+SF:\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></htm
+SF:l>\n")%r(FourOhFourRequest,1E3,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\
+SF:x20Tue,\x2004\x20Nov\x202025\x2020:50:04\x20GMT\r\nServer:\x20Tableau\r
+SF:\nContent-Length:\x20318\r\nConnection:\x20close\r\nContent-Type:\x20te
+SF:xt/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"
+SF:-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbid
+SF:den</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have
+SF:\x20permission\x20to\x20access\x20this\x20resource\.</p>\n<p>Additional
+SF:ly,\x20a\x20403\x20Forbidden\nerror\x20was\x20encountered\x20while\x20t
+SF:rying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x20the\x20req
+SF:uest\.</p>\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A66FD%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,189,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Tue,\x2004\x20Nov\x202025\x2020:50:05\x20GMT\r\nServer:\x20Tableau\r\nC
+SF:ontent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/
+SF:html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
+SF:IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Re
+SF:quest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brows
+SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
+SF:0understand\.<br\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,189,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x
+SF:2020:50:05\x20GMT\r\nServer:\x20Tableau\r\nContent-Length:\x20226\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
+SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
+SF:EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body
+SF:>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\
+SF:x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p
+SF:>\n</body></html>\n")%r(FourOhFourRequest,189,"HTTP/1\.1\x20400\x20Bad\
+SF:x20Request\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2020:50:05\x20GMT\r\n
+SF:Server:\x20Tableau\r\nContent-Length:\x20226\r\nConnection:\x20close\r\
+SF:nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20
+SF:HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n
+SF:<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request
+SF:</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\x20se
+SF:rver\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")
+SF:%r(RTSPRequest,189,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,
+SF:\x2004\x20Nov\x202025\x2020:50:16\x20GMT\r\nServer:\x20Tableau\r\nConte
+SF:nt-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html
+SF:;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF
+SF://DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Reques
+SF:t</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x
+SF:20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20und
+SF:erstand\.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 20:52:38 2025 -- 1 IP address (1 host up) scanned in 173.31 seconds
