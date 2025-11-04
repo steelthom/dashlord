@@ -1,0 +1,51 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:12:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln museehelico-alat.com
+Nmap scan report for museehelico-alat.com (145.14.156.211)
+Host is up (0.16s latency).
+Other addresses for museehelico-alat.com (not scanned): 2a02:4780:8:1026:0:2e8b:22de:2
+Not shown: 962 filtered tcp ports (no-response), 34 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+21/tcp   open  ftp      ProFTPD or KnFTPD
+80/tcp   open  http     LiteSpeed httpd
+|_http-server-header: LiteSpeed
+443/tcp  open  ssl/http LiteSpeed httpd
+|_http-server-header: LiteSpeed
+3306/tcp open  mysql?
+| fingerprint-strings: 
+|   GenericLines: 
+|     11.8.3-MariaDB-log
+|     ">NQ*{Rd
+|     $##'7"A`AbL3
+|     mysql_native_password
+|     #HY000Proxy header is not accepted from 68.220.62.106
+|   LDAPBindReq: 
+|     11.8.3-MariaDB-log
+|     2%^0ob~q
+|     ?#2nU@"':1&i
+|     mysql_native_password
+|   NULL: 
+|     11.8.3-MariaDB-log
+|     ">NQ*{Rd
+|     $##'7"A`AbL3
+|     mysql_native_password
+|   afp: 
+|     11.8.3-MariaDB-log
+|     ?*UMa#(=
+|     <ToV@}tOkM"_
+|_    mysql_native_password
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.92%I=7%D=11/4%Time=6909B584%P=x86_64-alpine-linux-musl
+SF:%r(NULL,5A,"V\0\0\0\n11\.8\.3-MariaDB-log\0Ra_\x02\">NQ\*{Rd\0\xfe\xff\
+SF:xe0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\0\$##'7\"A`AbL3\0mysql_native_pa
+SF:ssword\0")%r(GenericLines,96,"V\0\0\0\n11\.8\.3-MariaDB-log\0Ra_\x02\">
+SF:NQ\*{Rd\0\xfe\xff\xe0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\0\$##'7\"A`AbL
+SF:3\0mysql_native_password\x008\0\0\x01\xffj\x04#HY000Proxy\x20header\x20
+SF:is\x20not\x20accepted\x20from\x2068\.220\.62\.106")%r(LDAPBindReq,5A,"V
+SF:\0\0\0\n11\.8\.3-MariaDB-log\0\x0bd_\x022%\^0ob~q\0\xfe\xff\xe0\x02\0\x
+SF:ff\x81\x15\0\0\0\0\0\0=\0\0\0\?#2nU@\"':1&i\0mysql_native_password\0")%
+SF:r(afp,5A,"V\0\0\0\n11\.8\.3-MariaDB-log\0Cf_\x02\?\*UMa#\(=\0\xfe\xff\x
+SF:e0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\0<ToV@}tOkM\"_\0mysql_native_pass
+SF:word\0");
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:13:13 2025 -- 1 IP address (1 host up) scanned in 34.85 seconds
