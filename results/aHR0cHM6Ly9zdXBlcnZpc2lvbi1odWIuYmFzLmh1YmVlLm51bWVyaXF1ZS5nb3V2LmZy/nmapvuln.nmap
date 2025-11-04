@@ -1,0 +1,146 @@
+# Nmap 7.92 scan initiated Tue Nov  4 20:46:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln supervision-hub.bas.hubee.numerique.gouv.fr
+Nmap scan report for supervision-hub.bas.hubee.numerique.gouv.fr (148.253.96.243)
+Host is up (0.086s latency).
+rDNS record for 148.253.96.243: ows-148-253-96-243.cloudgouv-eu-west-1.compute.outscale.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     location: /login?next=%2F
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     content-security-policy: script-src 'unsafe-eval' 'self'; worker-src blob: 'self'; style-src 'unsafe-inline' 'self'
+|     kbn-name: kibana1
+|     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     date: Tue, 04 Nov 2025 20:46:53 GMT
+|     keep-alive: timeout=120
+|     connection: close
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 404 Not Found
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     content-security-policy: script-src 'unsafe-eval' 'self'; worker-src blob: 'self'; style-src 'unsafe-inline' 'self'
+|     kbn-name: kibana1
+|     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     date: Tue, 04 Nov 2025 20:46:53 GMT
+|     keep-alive: timeout=120
+|     connection: close
+|_    {"statusCode":404,"error":"Not Found","message":"Not Found"}
+443/tcp open  ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     location: /login?next=%2Fnice%2520ports%2C%2FTrinity.txt.bak
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     content-security-policy: script-src 'unsafe-eval' 'self'; worker-src blob: 'self'; style-src 'unsafe-inline' 'self'
+|     kbn-name: kibana1
+|     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     Date: Tue, 04 Nov 2025 20:47:00 GMT
+|     Connection: close
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     location: /login?next=%2F
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     content-security-policy: script-src 'unsafe-eval' 'self'; worker-src blob: 'self'; style-src 'unsafe-inline' 'self'
+|     kbn-name: kibana1
+|     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     Date: Tue, 04 Nov 2025 20:46:59 GMT
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer-when-downgrade
+|     Content-Security-Policy: script-src 'unsafe-eval' 'self'; worker-src blob: 'self'; style-src 'unsafe-inline' 'self'
+|     kbn-name: kibana1
+|     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     Date: Tue, 04 Nov 2025 20:46:59 GMT
+|     Connection: close
+|     {"statusCode":404,"error":"Not Found","message":"Not Found"}
+|   tor-versions: 
+|_    HTTP/1.1 400 Bad Request
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A663D%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1FB,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login\?next
+SF:=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x20no-re
+SF:ferrer-when-downgrade\r\ncontent-security-policy:\x20script-src\x20'uns
+SF:afe-eval'\x20'self';\x20worker-src\x20blob:\x20'self';\x20style-src\x20
+SF:'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\nkbn-license-sig:\x
+SF:2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4\r\nc
+SF:ache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\
+SF:r\ncontent-length:\x200\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2020:46:
+SF:53\x20GMT\r\nkeep-alive:\x20timeout=120\r\nconnection:\x20close\r\n\r\n
+SF:")%r(HTTPOptions,250,"HTTP/1\.1\x20404\x20Not\x20Found\r\nx-content-typ
+SF:e-options:\x20nosniff\r\nreferrer-policy:\x20no-referrer-when-downgrade
+SF:\r\ncontent-security-policy:\x20script-src\x20'unsafe-eval'\x20'self';\
+SF:x20worker-src\x20blob:\x20'self';\x20style-src\x20'unsafe-inline'\x20's
+SF:elf'\r\nkbn-name:\x20kibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c7
+SF:2c3a633614b5a923ff467036b0df84122b170db3bddd4\r\ncontent-type:\x20appli
+SF:cation/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache
+SF:,\x20no-store,\x20must-revalidate\r\ncontent-length:\x2060\r\ndate:\x20
+SF:Tue,\x2004\x20Nov\x202025\x2020:46:53\x20GMT\r\nkeep-alive:\x20timeout=
+SF:120\r\nconnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\":\"Not\
+SF:x20Found\",\"message\":\"Not\x20Found\"}")%r(RTSPRequest,250,"HTTP/1\.1
+SF:\x20404\x20Not\x20Found\r\nx-content-type-options:\x20nosniff\r\nreferr
+SF:er-policy:\x20no-referrer-when-downgrade\r\ncontent-security-policy:\x2
+SF:0script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\x20'self
+SF:';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\
+SF:nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df841
+SF:22b170db3bddd4\r\ncontent-type:\x20application/json;\x20charset=utf-8\r
+SF:\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalida
+SF:te\r\ncontent-length:\x2060\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2020
+SF::46:53\x20GMT\r\nkeep-alive:\x20timeout=120\r\nconnection:\x20close\r\n
+SF:\r\n{\"statusCode\":404,\"error\":\"Not\x20Found\",\"message\":\"Not\x2
+SF:0Found\"}");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A6643%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1E2,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/logi
+SF:n\?next=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x
+SF:20no-referrer-when-downgrade\r\ncontent-security-policy:\x20script-src\
+SF:x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\x20'self';\x20style-
+SF:src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\nkbn-license
+SF:-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bdd
+SF:d4\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-reva
+SF:lidate\r\ncontent-length:\x200\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2
+SF:020:46:59\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,237,"H
+SF:TTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-Options:\x20nosniff\r
+SF:\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nContent-Security-Po
+SF:licy:\x20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\
+SF:x20'self';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20ki
+SF:bana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff46703
+SF:6b0df84122b170db3bddd4\r\ncontent-type:\x20application/json;\x20charset
+SF:=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-
+SF:revalidate\r\ncontent-length:\x2060\r\nDate:\x20Tue,\x2004\x20Nov\x2020
+SF:25\x2020:46:59\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statusCode\":40
+SF:4,\"error\":\"Not\x20Found\",\"message\":\"Not\x20Found\"}")%r(FourOhFo
+SF:urRequest,205,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login\?next=%
+SF:2Fnice%2520ports%2C%2FTrinity\.txt\.bak\r\nx-content-type-options:\x20n
+SF:osniff\r\nreferrer-policy:\x20no-referrer-when-downgrade\r\ncontent-sec
+SF:urity-policy:\x20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x
+SF:20blob:\x20'self';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-nam
+SF:e:\x20kibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a92
+SF:3ff467036b0df84122b170db3bddd4\r\ncache-control:\x20private,\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\r\nDate:\x20
+SF:Tue,\x2004\x20Nov\x202025\x2020:47:00\x20GMT\r\nConnection:\x20close\r\
+SF:n\r\n")%r(tor-versions,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 20:47:17 2025 -- 1 IP address (1 host up) scanned in 38.35 seconds
