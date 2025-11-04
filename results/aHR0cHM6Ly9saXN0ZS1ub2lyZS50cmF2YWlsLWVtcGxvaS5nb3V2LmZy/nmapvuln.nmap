@@ -1,0 +1,122 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:03:28 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln liste-noire.travail-emploi.gouv.fr
+Nmap scan report for liste-noire.travail-emploi.gouv.fr (185.194.82.16)
+Host is up (0.095s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|     ERROR
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 07:03:48 GMT
+|     Last-Modified: Mon, 02 Jun 2025 15:19:16 GMT
+|     Accept-Ranges: bytes
+|     Content-Length: 9187
+|     Vary: Accept-Encoding
+|     Keep-Alive: timeout=5, max=100
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Language: fr-FR
+|     Set-Cookie: BIGipServerpool-dicom-portail-liste-noire-prod.cegedim.cloud-tcp80=!N0KDXLx78soEdQQXIkI7F7SI9ajmitAE+ZwgcgNZYViBkVhuoPVDFSw8NvsfCP2h5IBhXKM9rgRCPAz+GEOWH0ma03Q=; path=/; Httponly; Secure; SameSite=Strict
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html>
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <title>Liste des personnes physiques condamn
+|     es</title>
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <link rel=
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 07:03:49 GMT
+|     Allow: OPTIONS,HEAD,GET,POST
+|     Content-Length: 0
+|     Keep-Alive: timeout=5, max=100
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Language: fr-FR
+|     Set-Cookie: BIGipServerpool-dicom-portail-liste-noire-prod.cegedim.cloud-tcp80=!T/NfNn+iZ/VUC5MXIkI7F7SI9ajmistzJuYGvQ8PVBUuiXLQBkC5PT+Y2sQXjv67iEabvrAHOWmI6JT+1ZZxMYnmTE8=; path=/; Httponly; Secure; SameSite=Strict
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Connection: Keep-Alive
+|     Content-Length: 9
+|_    ERROR
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909A54E%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909A554%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2619,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2004\
+SF:x20Nov\x202025\x2007:03:48\x20GMT\r\nLast-Modified:\x20Mon,\x2002\x20Ju
+SF:n\x202025\x2015:19:16\x20GMT\r\nAccept-Ranges:\x20bytes\r\nContent-Leng
+SF:th:\x209187\r\nVary:\x20Accept-Encoding\r\nKeep-Alive:\x20timeout=5,\x2
+SF:0max=100\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20char
+SF:set=UTF-8\r\nContent-Language:\x20fr-FR\r\nSet-Cookie:\x20BIGipServerpo
+SF:ol-dicom-portail-liste-noire-prod\.cegedim\.cloud-tcp80=!N0KDXLx78soEdQ
+SF:QXIkI7F7SI9ajmitAE\+ZwgcgNZYViBkVhuoPVDFSw8NvsfCP2h5IBhXKM9rgRCPAz\+GEO
+SF:WH0ma03Q=;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nStr
+SF:ict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r
+SF:\n\r\n<!DOCTYPE\x20html>\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/x
+SF:html\"\x20xml:lang=\"fr\"\x20dir=\"ltr\"\x20lang=\"fr\">\r\n\t<head>\r\
+SF:n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20ch
+SF:arset=utf-8\"\x20/>\r\n\t\t<title>Liste\x20des\x20personnes\x20physique
+SF:s\x20condamn\xc3\xa9es</title>\r\n\t\t\r\n\t\t<meta\x20name=\"viewport\
+SF:"\x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\r\n\r\
+SF:n\t\t<link\x20rel=")%r(HTTPOptions,1F6,"HTTP/1\.1\x20200\x20OK\r\nDate:
+SF:\x20Tue,\x2004\x20Nov\x202025\x2007:03:49\x20GMT\r\nAllow:\x20OPTIONS,H
+SF:EAD,GET,POST\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20ma
+SF:x=100\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=UTF-8\r\nContent-Language:\x20fr-FR\r\nSet-Cookie:\x20BIGipServerpool-
+SF:dicom-portail-liste-noire-prod\.cegedim\.cloud-tcp80=!T/NfNn\+iZ/VUC5MX
+SF:IkI7F7SI9ajmistzJuYGvQ8PVBUuiXLQBkC5PT\+Y2sQXjv67iEabvrAHOWmI6JT\+1ZZxM
+SF:YnmTE8=;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nStric
+SF:t-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n
+SF:")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnecti
+SF:on:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPR
+SF:equest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Al
+SF:ive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:06:13 2025 -- 1 IP address (1 host up) scanned in 164.92 seconds
