@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" type="text/css" integrity="sha384-VEpVDzPR2x8NbTDZ8NFW4AWbtT2g/ollEzX/daZdW/YvUBlbgVtsxMftnJ84k0Cn" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script><script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" integrity="sha384-rgWRqC0OFPisxlUvl332tiM/qmaNxnlY46eksSZD84t+s2vZlqGeHrncwIRX7CGp" crossorigin="anonymous"></script><script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js" integrity="sha384-7PXRkl4YJnEpP8uU4ev9652TTZSxrqC8uOpcV1ftVEC7LVyLZqqDUAaq+Y+lGgr9" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><style>
+          .target:before {
+            content: "";
+            display: block;
+            height: 50px;
+            margin: -20px 0 0;
+          }
+          @media only screen and (min-width:1900px) {
+            .container {
+              width: 1800px;
+              }
+          }
+          .footer {
+            margin-top:60px;
+            padding-top:60px;
+            width: 100%;
+            height: 180px;
+            background-color: #f5f5f5;
+          }
+          .clickable {
+            cursor: pointer;
+          }
+          .panel-heading > h3:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e114"; /* glyphicon-chevron-down */
+            padding-right: 1em;
+          }
+          .panel-heading.collapsed > h3:before {
+            content: "\e080"; /* glyphicon-chevron-right */
+          }
+        </style>
+<title>Scan Report Nmap 7.92</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav">
+<li><a href="#scannedhosts">Scanned Hosts</a></li>
+<li><a href="#onlinehosts">Online Hosts</a></li>
+<li><a href="#openservices">Open Services</a></li>
+</ul></div>
+</div></nav><div class="container">
+<div class="jumbotron">
+<h1>Scan Report<br><small>Nmap 7.92</small>
+</h1>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrancais-djibouti.com</pre>
+<p class="lead">Tue Nov  4 03:47:03 2025 – Tue Nov  4 03:48:26 2025<br>1 hosts scanned.
+              1 hosts up.
+              0 hosts down.
+            </p>
+<div class="progress">
+<div class="progress-bar progress-bar-success" style="width:100%;">1<span class="sr-only"></span>
+</div>
+<div class="progress-bar progress-bar-danger" style="width:0%;">0<span class="sr-only"></span>
+</div>
+</div>
+</div>
+<h2 id="scannedhosts" class="target">Scanned Hosts</h2>
+<div class="table-responsive"><table id="table-overview" class="table table-striped dataTable" role="grid">
+<thead><tr>
+<th>State</th>
+<th>Address</th>
+<th>Hostname</th>
+<th>TCP (open)</th>
+<th>UDP (open)</th>
+</tr></thead>
+<tbody><tr>
+<td><span class="label label-success">up</span></td>
+<td>188.165.240.186</td>
+<td>institutfrancais-djibouti.com</td>
+<td>16</td>
+<td>0</td>
+</tr></tbody>
+</table></div>
+<script>
+            $(document).ready(function() {
+              $('#table-overview').DataTable();
+            });
+            $('#table-overview').DataTable( {
+              "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
+            });
+          </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
+<div class="panel panel-default">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#188-165-240-186"><h3 class="panel-title">188.165.240.186 - institutfrancais-djibouti.com</h3></div>
+<div class="panel-body collapse in" id="188-165-240-186">
+<h4>Hostnames</h4>
+<ul>
+<li>institutfrancais-djibouti.com (user)</li>
+<li>drakkar1.tilvalhall.fr (PTR)</li>
+</ul>
+<h4>Ports</h4>
+<div class="table-responsive"><table class="table table-bordered">
+<thead><tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>State<br>Reason</th>
+<th>Service</th>
+<th>Product</th>
+<th>Version</th>
+<th>Extra Info</th>
+</tr></thead>
+<tbody>
+<tr class="success">
+<td title="Port">21</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ftp</td>
+<td title="Product">ProFTPD</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:proftpd:proftpd">cpe:/a:proftpd:proftpd</a></td></tr>
+<tr class="success">
+<td title="Port">22</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ssh</td>
+<td title="Product">OpenSSH</td>
+<td title="Version">7.9p1 Debian 10+deb10u4</td>
+<td title="Extra Info">protocol 2.0</td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openbsd:openssh:7.9p1">cpe:/a:openbsd:openssh:7.9p1</a><h5>vulners</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  cpe:/a:openbsd:openssh:7.9p1: 
+    	PACKETSTORM:173661	9.8	https://vulners.com/packetstorm/PACKETSTORM:173661	*EXPLOIT*
+    	F0979183-AE88-53B4-86CF-3AF0523F3807	9.8	https://vulners.com/githubexploit/F0979183-AE88-53B4-86CF-3AF0523F3807	*EXPLOIT*
+    	CVE-2023-38408	9.8	https://vulners.com/cve/CVE-2023-38408
+    	B8190CDB-3EB9-5631-9828-8064A1575B23	9.8	https://vulners.com/githubexploit/B8190CDB-3EB9-5631-9828-8064A1575B23	*EXPLOIT*
+    	8FC9C5AB-3968-5F3C-825E-E8DB5379A623	9.8	https://vulners.com/githubexploit/8FC9C5AB-3968-5F3C-825E-E8DB5379A623	*EXPLOIT*
+    	8AD01159-548E-546E-AA87-2DE89F3927EC	9.8	https://vulners.com/githubexploit/8AD01159-548E-546E-AA87-2DE89F3927EC	*EXPLOIT*
+    	2227729D-6700-5C8F-8930-1EEAFD4B9FF0	9.8	https://vulners.com/githubexploit/2227729D-6700-5C8F-8930-1EEAFD4B9FF0	*EXPLOIT*
+    	0221525F-07F5-5790-912D-F4B9E2D1B587	9.8	https://vulners.com/githubexploit/0221525F-07F5-5790-912D-F4B9E2D1B587	*EXPLOIT*
+    	BA3887BD-F579-53B1-A4A4-FF49E953E1C0	8.1	https://vulners.com/githubexploit/BA3887BD-F579-53B1-A4A4-FF49E953E1C0	*EXPLOIT*
+    	4FB01B00-F993-5CAF-BD57-D7E290D10C1F	8.1	https://vulners.com/githubexploit/4FB01B00-F993-5CAF-BD57-D7E290D10C1F	*EXPLOIT*
+    	CVE-2020-15778	7.8	https://vulners.com/cve/CVE-2020-15778
+    	CVE-2019-16905	7.8	https://vulners.com/cve/CVE-2019-16905
+    	C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	7.8	https://vulners.com/githubexploit/C94132FD-1FA5-5342-B6EE-0DAF45EEFFE3	*EXPLOIT*
+    	2E719186-2FED-58A8-A150-762EFBAAA523	7.8	https://vulners.com/gitee/2E719186-2FED-58A8-A150-762EFBAAA523	*EXPLOIT*
+    	23CC97BE-7C95-513B-9E73-298C48D74432	7.8	https://vulners.com/githubexploit/23CC97BE-7C95-513B-9E73-298C48D74432	*EXPLOIT*
+    	10213DBE-F683-58BB-B6D3-353173626207	7.8	https://vulners.com/githubexploit/10213DBE-F683-58BB-B6D3-353173626207	*EXPLOIT*
+    	SSV:92579	7.5	https://vulners.com/seebug/SSV:92579	*EXPLOIT*
+    	1337DAY-ID-26576	7.5	https://vulners.com/zdt/1337DAY-ID-26576	*EXPLOIT*
+    	CVE-2021-41617	7.0	https://vulners.com/cve/CVE-2021-41617
+    	284B94FC-FD5D-5C47-90EA-47900DAD1D1E	7.0	https://vulners.com/githubexploit/284B94FC-FD5D-5C47-90EA-47900DAD1D1E	*EXPLOIT*
+    	PACKETSTORM:189283	6.8	https://vulners.com/packetstorm/PACKETSTORM:189283	*EXPLOIT*
+    	EDB-ID:46516	6.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
+    	EDB-ID:46193	6.8	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
+    	CVE-2025-26465	6.8	https://vulners.com/cve/CVE-2025-26465
+    	CVE-2019-6110	6.8	https://vulners.com/cve/CVE-2019-6110
+    	CVE-2019-6109	6.8	https://vulners.com/cve/CVE-2019-6109
+    	9D8432B9-49EC-5F45-BB96-329B1F2B2254	6.8	https://vulners.com/githubexploit/9D8432B9-49EC-5F45-BB96-329B1F2B2254	*EXPLOIT*
+    	85FCDCC6-9A03-597E-AB4F-FA4DAC04F8D0	6.8	https://vulners.com/githubexploit/85FCDCC6-9A03-597E-AB4F-FA4DAC04F8D0	*EXPLOIT*
+    	1337DAY-ID-39918	6.8	https://vulners.com/zdt/1337DAY-ID-39918	*EXPLOIT*
+    	1337DAY-ID-32328	6.8	https://vulners.com/zdt/1337DAY-ID-32328	*EXPLOIT*
+    	1337DAY-ID-32009	6.8	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*
+    	D104D2BF-ED22-588B-A9B2-3CCC562FE8C0	6.5	https://vulners.com/githubexploit/D104D2BF-ED22-588B-A9B2-3CCC562FE8C0	*EXPLOIT*
+    	CVE-2023-51385	6.5	https://vulners.com/cve/CVE-2023-51385
+    	C07ADB46-24B8-57B7-B375-9C761F4750A2	6.5	https://vulners.com/githubexploit/C07ADB46-24B8-57B7-B375-9C761F4750A2	*EXPLOIT*
+    	A88CDD3E-67CC-51CC-97FB-AB0CACB6B08C	6.5	https://vulners.com/githubexploit/A88CDD3E-67CC-51CC-97FB-AB0CACB6B08C	*EXPLOIT*
+    	65B15AA1-2A8D-53C1-9499-69EBA3619F1C	6.5	https://vulners.com/githubexploit/65B15AA1-2A8D-53C1-9499-69EBA3619F1C	*EXPLOIT*
+    	5325A9D6-132B-590C-BDEF-0CB105252732	6.5	https://vulners.com/gitee/5325A9D6-132B-590C-BDEF-0CB105252732	*EXPLOIT*
+    	530326CF-6AB3-5643-AA16-73DC8CB44742	6.5	https://vulners.com/githubexploit/530326CF-6AB3-5643-AA16-73DC8CB44742	*EXPLOIT*
+    	CVE-2023-48795	5.9	https://vulners.com/cve/CVE-2023-48795
+    	CVE-2020-14145	5.9	https://vulners.com/cve/CVE-2020-14145
+    	CVE-2019-6111	5.9	https://vulners.com/cve/CVE-2019-6111
+    	CNVD-2021-25272	5.9	https://vulners.com/cnvd/CNVD-2021-25272
+    	6D74A425-60A7-557A-B469-1DD96A2D8FF8	5.9	https://vulners.com/githubexploit/6D74A425-60A7-557A-B469-1DD96A2D8FF8	*EXPLOIT*
+    	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
+    	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
+    	CVE-2018-20685	5.3	https://vulners.com/cve/CVE-2018-20685
+    	CVE-2016-20012	5.3	https://vulners.com/cve/CVE-2016-20012
+    	CNVD-2019-01296	5.3	https://vulners.com/cnvd/CNVD-2019-01296
+    	B7EACB4F-A5CF-5C5A-809F-E03CCE2AB150	3.6	https://vulners.com/githubexploit/B7EACB4F-A5CF-5C5A-809F-E03CCE2AB150	*EXPLOIT*
+    	4C6E2182-0E99-5626-83F6-1646DD648C57	3.6	https://vulners.com/githubexploit/4C6E2182-0E99-5626-83F6-1646DD648C57	*EXPLOIT*
+    	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
+    	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">25</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">smtp</td>
+<td title="Product">Postfix smtpd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:postfix:postfix">cpe:/a:postfix:postfix</a></td></tr>
+<tr class="success">
+<td title="Port">53</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">domain</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info">unknown banner: none</td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSVersionBindReqTCP: 
+    version
+    bind
+    none</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">80</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product">nginx</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
+<tr class="success">
+<td title="Port">106</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">110</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">pop3</td>
+<td title="Product">Dovecot pop3d</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:dovecot:dovecot">cpe:/a:dovecot:dovecot</a></td></tr>
+<tr class="active">
+<td>139</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>netbios-ssn</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="success">
+<td title="Port">143</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">imap</td>
+<td title="Product">Dovecot imapd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:dovecot:dovecot">cpe:/a:dovecot:dovecot</a></td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product">nginx</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
+<tr class="active">
+<td>445</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>microsoft-ds</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="success">
+<td title="Port">465</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">smtp</td>
+<td title="Product">Postfix smtpd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:postfix:postfix">cpe:/a:postfix:postfix</a></td></tr>
+<tr class="success">
+<td title="Port">587</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">smtp</td>
+<td title="Product">Postfix smtpd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:postfix:postfix">cpe:/a:postfix:postfix</a></td></tr>
+<tr class="success">
+<td title="Port">993</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">imap</td>
+<td title="Product">Dovecot imapd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:dovecot:dovecot">cpe:/a:dovecot:dovecot</a></td></tr>
+<tr class="success">
+<td title="Port">995</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">pop3</td>
+<td title="Product">Dovecot pop3d</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:dovecot:dovecot">cpe:/a:dovecot:dovecot</a></td></tr>
+<tr class="success">
+<td title="Port">3306</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">mysql</td>
+<td title="Product">MySQL</td>
+<td title="Version">5.5.5-10.3.39-MariaDB-0+deb10u2</td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:mariadb:mariadb:5.5.5-10.3.39-mariadb-0%2Bdeb10u2">cpe:/a:mariadb:mariadb:5.5.5-10.3.39-mariadb-0%2Bdeb10u2</a><h5>vulners</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  cpe:/a:mariadb:mariadb:5.5.5-10.3.39-mariadb-0%2Bdeb10u2: 
+    	SSV:92513	10.0	https://vulners.com/seebug/SSV:92513	*EXPLOIT*
+    	SSV:92510	10.0	https://vulners.com/seebug/SSV:92510	*EXPLOIT*
+    	SSV:92405	10.0	https://vulners.com/seebug/SSV:92405	*EXPLOIT*
+    	PACKETSTORM:139491	10.0	https://vulners.com/packetstorm/PACKETSTORM:139491	*EXPLOIT*
+    	PACKETSTORM:139476	10.0	https://vulners.com/packetstorm/PACKETSTORM:139476	*EXPLOIT*
+    	PACKETSTORM:138678	10.0	https://vulners.com/packetstorm/PACKETSTORM:138678	*EXPLOIT*
+    	EXPLOITPACK:BD83B747C6C6A417D97824A1D81FAA5D	10.0	https://vulners.com/exploitpack/EXPLOITPACK:BD83B747C6C6A417D97824A1D81FAA5D	*EXPLOIT*
+    	EXPLOITPACK:55F22FE44A0D6F3F9005C334804B2317	10.0	https://vulners.com/exploitpack/EXPLOITPACK:55F22FE44A0D6F3F9005C334804B2317	*EXPLOIT*
+    	EXPLOITPACK:3D8D46697DAADEA8249E37B2A2F09AE3	10.0	https://vulners.com/exploitpack/EXPLOITPACK:3D8D46697DAADEA8249E37B2A2F09AE3	*EXPLOIT*
+    	EDB-ID:40679	10.0	https://vulners.com/exploitdb/EDB-ID:40679	*EXPLOIT*
+    	EDB-ID:40678	10.0	https://vulners.com/exploitdb/EDB-ID:40678	*EXPLOIT*
+    	EDB-ID:40360	10.0	https://vulners.com/exploitdb/EDB-ID:40360	*EXPLOIT*
+    	CVE-2012-2750	10.0	https://vulners.com/cve/CVE-2012-2750
+    	1337DAY-ID-24786	10.0	https://vulners.com/zdt/1337DAY-ID-24786	*EXPLOIT*
+    	CVE-2016-9843	9.8	https://vulners.com/cve/CVE-2016-9843
+    	CVE-2012-3163	9.0	https://vulners.com/cve/CVE-2012-3163
+    	CVE-2017-15365	8.8	https://vulners.com/cve/CVE-2017-15365
+    	CNVD-2018-04523	8.8	https://vulners.com/cnvd/CNVD-2018-04523
+    	CVE-2022-24052	7.8	https://vulners.com/cve/CVE-2022-24052
+    	CVE-2022-24051	7.8	https://vulners.com/cve/CVE-2022-24051
+    	CVE-2022-24050	7.8	https://vulners.com/cve/CVE-2022-24050
+    	CVE-2022-24048	7.8	https://vulners.com/cve/CVE-2022-24048
+    	CVE-2017-15945	7.8	https://vulners.com/cve/CVE-2017-15945
+    	CVE-2015-2325	7.8	https://vulners.com/cve/CVE-2015-2325
+    	CVE-2018-2755	7.7	https://vulners.com/cve/CVE-2018-2755
+    	CVE-2017-3309	7.7	https://vulners.com/cve/CVE-2017-3309
+    	CVE-2017-3308	7.7	https://vulners.com/cve/CVE-2017-3308
+    	CVE-2023-5157	7.5	https://vulners.com/cve/CVE-2023-5157
+    	CVE-2022-27449	7.5	https://vulners.com/cve/CVE-2022-27449
+    	CVE-2022-27385	7.5	https://vulners.com/cve/CVE-2022-27385
+    	CVE-2021-46669	7.5	https://vulners.com/cve/CVE-2021-46669
+    	CVE-2018-2562	7.5	https://vulners.com/cve/CVE-2018-2562
+    	CVE-2017-3302	7.5	https://vulners.com/cve/CVE-2017-3302
+    	CVE-2016-3471	7.5	https://vulners.com/cve/CVE-2016-3471
+    	CVE-2015-0411	7.5	https://vulners.com/cve/CVE-2015-0411
+    	CVE-2014-6500	7.5	https://vulners.com/cve/CVE-2014-6500
+    	CVE-2014-6491	7.5	https://vulners.com/cve/CVE-2014-6491
+    	CVE-2014-0001	7.5	https://vulners.com/cve/CVE-2014-0001
+    	CVE-2012-3158	7.5	https://vulners.com/cve/CVE-2012-3158
+    	CVE-2021-2144	7.2	https://vulners.com/cve/CVE-2021-2144
+    	CVE-2015-4819	7.2	https://vulners.com/cve/CVE-2015-4819
+    	CVE-2021-2011	7.1	https://vulners.com/cve/CVE-2021-2011
+    	CVE-2020-28912	7.0	https://vulners.com/cve/CVE-2020-28912
+    	CVE-2016-6664	7.0	https://vulners.com/cve/CVE-2016-6664
+    	CNVD-2016-07549	7.0	https://vulners.com/cnvd/CNVD-2016-07549
+    	2FBAC8D5-61BD-5149-8322-1B84C003EC41	7.0	https://vulners.com/githubexploit/2FBAC8D5-61BD-5149-8322-1B84C003EC41	*EXPLOIT*
+    	1337DAY-ID-26205	6.9	https://vulners.com/zdt/1337DAY-ID-26205	*EXPLOIT*
+    	CVE-2018-2668	6.8	https://vulners.com/cve/CVE-2018-2668
+    	CVE-2018-2665	6.8	https://vulners.com/cve/CVE-2018-2665
+    	CVE-2018-2640	6.8	https://vulners.com/cve/CVE-2018-2640
+    	CVE-2018-2622	6.8	https://vulners.com/cve/CVE-2018-2622
+    	CVE-2016-3492	6.8	https://vulners.com/cve/CVE-2016-3492
+    	CVE-2014-6469	6.8	https://vulners.com/cve/CVE-2014-6469
+    	CVE-2013-0389	6.8	https://vulners.com/cve/CVE-2013-0389
+    	CVE-2013-0386	6.8	https://vulners.com/cve/CVE-2013-0386
+    	CVE-2013-0384	6.8	https://vulners.com/cve/CVE-2013-0384
+    	CVE-2012-5060	6.8	https://vulners.com/cve/CVE-2012-5060
+    	CVE-2012-3177	6.8	https://vulners.com/cve/CVE-2012-3177
+    	CVE-2012-1735	6.8	https://vulners.com/cve/CVE-2012-1735
+    	CVE-2012-1703	6.8	https://vulners.com/cve/CVE-2012-1703
+    	CVE-2017-3312	6.7	https://vulners.com/cve/CVE-2017-3312
+    	CVE-2017-3600	6.6	https://vulners.com/cve/CVE-2017-3600
+    	CVE-2013-0385	6.6	https://vulners.com/cve/CVE-2013-0385
+    	PACKETSTORM:118551	6.5	https://vulners.com/packetstorm/PACKETSTORM:118551	*EXPLOIT*
+    	CVE-2020-2780	6.5	https://vulners.com/cve/CVE-2020-2780
+    	CVE-2019-2974	6.5	https://vulners.com/cve/CVE-2019-2974
+    	CVE-2019-2805	6.5	https://vulners.com/cve/CVE-2019-2805
+    	CVE-2019-2740	6.5	https://vulners.com/cve/CVE-2019-2740
+    	CVE-2019-2529	6.5	https://vulners.com/cve/CVE-2019-2529
+    	CVE-2019-2455	6.5	https://vulners.com/cve/CVE-2019-2455
+    	CVE-2018-3133	6.5	https://vulners.com/cve/CVE-2018-3133
+    	CVE-2018-2819	6.5	https://vulners.com/cve/CVE-2018-2819
+    	CVE-2018-2817	6.5	https://vulners.com/cve/CVE-2018-2817
+    	CVE-2017-3453	6.5	https://vulners.com/cve/CVE-2017-3453
+    	CVE-2017-3258	6.5	https://vulners.com/cve/CVE-2017-3258
+    	CVE-2017-3244	6.5	https://vulners.com/cve/CVE-2017-3244
+    	CVE-2017-3238	6.5	https://vulners.com/cve/CVE-2017-3238
+    	CVE-2017-10384	6.5	https://vulners.com/cve/CVE-2017-10384
+    	CVE-2017-10379	6.5	https://vulners.com/cve/CVE-2017-10379
+    	CVE-2017-10378	6.5	https://vulners.com/cve/CVE-2017-10378
+    	CVE-2016-5626	6.5	https://vulners.com/cve/CVE-2016-5626
+    	CVE-2016-5624	6.5	https://vulners.com/cve/CVE-2016-5624
+    	CVE-2016-5612	6.5	https://vulners.com/cve/CVE-2016-5612
+    	CVE-2016-0502	6.5	https://vulners.com/cve/CVE-2016-0502
+    	CVE-2014-6555	6.5	https://vulners.com/cve/CVE-2014-6555
+    	CVE-2014-6530	6.5	https://vulners.com/cve/CVE-2014-6530
+    	CVE-2014-4258	6.5	https://vulners.com/cve/CVE-2014-4258
+    	CVE-2014-2436	6.5	https://vulners.com/cve/CVE-2014-2436
+    	CVE-2013-2378	6.5	https://vulners.com/cve/CVE-2013-2378
+    	CVE-2013-2375	6.5	https://vulners.com/cve/CVE-2013-2375
+    	CVE-2013-1552	6.5	https://vulners.com/cve/CVE-2013-1552
+    	CVE-2013-1531	6.5	https://vulners.com/cve/CVE-2013-1531
+    	CVE-2013-1521	6.5	https://vulners.com/cve/CVE-2013-1521
+    	CVE-2012-5612	6.5	https://vulners.com/cve/CVE-2012-5612
+    	CVE-2019-2503	6.4	https://vulners.com/cve/CVE-2019-2503
+    	CVE-2017-3291	6.3	https://vulners.com/cve/CVE-2017-3291
+    	CVE-2020-2574	5.9	https://vulners.com/cve/CVE-2020-2574
+    	CVE-2018-2761	5.9	https://vulners.com/cve/CVE-2018-2761
+    	CVE-2015-7744	5.9	https://vulners.com/cve/CVE-2015-7744
+    	CVE-2015-3152	5.9	https://vulners.com/cve/CVE-2015-3152
+    	CVE-2015-0501	5.7	https://vulners.com/cve/CVE-2015-0501
+    	CVE-2017-3265	5.6	https://vulners.com/cve/CVE-2017-3265
+    	CVE-2022-31624	5.5	https://vulners.com/cve/CVE-2022-31624
+    	CVE-2022-31623	5.5	https://vulners.com/cve/CVE-2022-31623
+    	CVE-2022-31622	5.5	https://vulners.com/cve/CVE-2022-31622
+    	CVE-2022-31621	5.5	https://vulners.com/cve/CVE-2022-31621
+    	CVE-2021-46667	5.5	https://vulners.com/cve/CVE-2021-46667
+    	CVE-2021-46666	5.5	https://vulners.com/cve/CVE-2021-46666
+    	CVE-2021-46659	5.5	https://vulners.com/cve/CVE-2021-46659
+    	CVE-2016-7440	5.5	https://vulners.com/cve/CVE-2016-7440
+    	CVE-2016-0651	5.5	https://vulners.com/cve/CVE-2016-0651
+    	CVE-2014-4260	5.5	https://vulners.com/cve/CVE-2014-4260
+    	CNVD-2022-65012	5.5	https://vulners.com/cnvd/CNVD-2022-65012
+    	CVE-2020-2752	5.3	https://vulners.com/cve/CVE-2020-2752
+    	CVE-2020-14550	5.3	https://vulners.com/cve/CVE-2020-14550
+    	CVE-2018-3174	5.3	https://vulners.com/cve/CVE-2018-3174
+    	CVE-2017-3636	5.3	https://vulners.com/cve/CVE-2017-3636
+    	CVE-2019-2739	5.1	https://vulners.com/cve/CVE-2019-2739
+    	CVE-2014-2440	5.1	https://vulners.com/cve/CVE-2014-2440
+    	SSV:60679	5.0	https://vulners.com/seebug/SSV:60679	*EXPLOIT*
+    	CVE-2018-3081	5.0	https://vulners.com/cve/CVE-2018-3081
+    	CVE-2015-2568	5.0	https://vulners.com/cve/CVE-2015-2568
+    	CVE-2013-3801	5.0	https://vulners.com/cve/CVE-2013-3801
+    	CVE-2013-1861	5.0	https://vulners.com/cve/CVE-2013-1861
+    	CVE-2012-1702	5.0	https://vulners.com/cve/CVE-2012-1702
+    	1337DAY-ID-26204	4.4	https://vulners.com/zdt/1337DAY-ID-26204	*EXPLOIT*
+    	SSV:60908	4.0	https://vulners.com/seebug/SSV:60908	*EXPLOIT*
+    	SSV:60600	4.0	https://vulners.com/seebug/SSV:60600	*EXPLOIT*
+    	SSV:60599	4.0	https://vulners.com/seebug/SSV:60599	*EXPLOIT*
+    	SSV:60598	4.0	https://vulners.com/seebug/SSV:60598	*EXPLOIT*
+    	SSV:60597	4.0	https://vulners.com/seebug/SSV:60597	*EXPLOIT*
+    	SSV:60501	4.0	https://vulners.com/seebug/SSV:60501	*EXPLOIT*
+    	PACKETSTORM:137232	4.0	https://vulners.com/packetstorm/PACKETSTORM:137232	*EXPLOIT*
+    	PACKETSTORM:118553	4.0	https://vulners.com/packetstorm/PACKETSTORM:118553	*EXPLOIT*
+    	EXPLOITPACK:4856CE5DA621AD64273C51D5420971CA	4.0	https://vulners.com/exploitpack/EXPLOITPACK:4856CE5DA621AD64273C51D5420971CA	*EXPLOIT*
+    	EDB-ID:39867	4.0	https://vulners.com/exploitdb/EDB-ID:39867	*EXPLOIT*
+    	C882EFEA-AFE2-5F2D-96B0-1D3887517B47	4.0	https://vulners.com/githubexploit/C882EFEA-AFE2-5F2D-96B0-1D3887517B47	*EXPLOIT*
+    	1337DAY-ID-26031	4.0	https://vulners.com/zdt/1337DAY-ID-26031	*EXPLOIT*</pre>
+</td></tr>
+<tr class="active">
+<td>5432</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>postgresql</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="success">
+<td title="Port">8443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https-alt</td>
+<td title="Product">sw-cp-server</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">sw-cp-server</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 404 Not Found
+    Server: sw-cp-server
+    Date: Tue, 04 Nov 2025 03:47:22 GMT
+    Content-Type: text/html
+    Content-Length: 910
+    Connection: close
+    ETag: "67b2f6d3-38e"
+    &lt;!DOCTYPE html&gt;
+    &lt;!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. --&gt;
+    &lt;html lang="en" dir="ltr"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    &lt;title&gt;404 Page Not Found&lt;/title&gt;
+    &lt;link rel="shortcut icon" href="/favicon.ico"&gt;
+    &lt;link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.40.10"&gt;
+    &lt;script src="/ui-library/plesk-ui-library.min.js?3.40.10"&gt;&lt;/script&gt;
+    &lt;script src="/cp/javascript/vendors.js"&gt;&lt;/script&gt;
+    &lt;script src="/cp/javascript/main.js"&gt;&lt;/script&gt;
+    &lt;script src="/error_docs/uat.js?v4"&gt;&lt;/script&gt;
+    &lt;link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"&gt;&lt;/head&gt;
+    &lt;body&gt;
+  GetRequest: 
+    HTTP/1.1 303 See Other
+    Server: sw-cp-server
+    Date: Tue, 04 Nov 2025 03:47:21 GMT
+    Content-Type: text/html; charset=UTF-8
+    Connection: close
+    Expires: Fri, 28 May 1999 00:00:00 GMT
+    Last-Modified: Tue, 04 Nov 2025 03:47:21 GMT
+    Cache-Control: no-store, no-cache, must-revalidate
+    Cache-Control: post-check=0, pre-check=0
+    Pragma: no-cache
+    P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+    X-Frame-Options: SAMEORIGIN
+    X-XSS-Protection: 1; mode=block
+    Location: https://localhost:8443/login.php
+    X-Content-Type-Options: nosniff
+  HTTPOptions: 
+    HTTP/1.1 405 Not Allowed
+    Server: sw-cp-server
+    Date: Tue, 04 Nov 2025 03:47:21 GMT
+    Content-Type: text/html
+    Content-Length: 918
+    Connection: close
+    ETag: "67b2f6d3-396"
+    &lt;!DOCTYPE html&gt;
+    &lt;!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. --&gt;
+    &lt;html lang="en" dir="ltr"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    &lt;title&gt;405 Method Not Allowed&lt;/title&gt;
+    &lt;link rel="shortcut icon" href="/favicon.ico"&gt;
+    &lt;link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.40.10"&gt;
+    &lt;script src="/ui-library/plesk-ui-library.min.js?3.40.10"&gt;&lt;/script&gt;
+    &lt;script src="/cp/javascript/vendors.js"&gt;&lt;/script&gt;
+    &lt;script src="/cp/javascript/main.js"&gt;&lt;/script&gt;
+    &lt;script src="/error_docs/uat.js?v4"&gt;&lt;/script&gt;
+    &lt;link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"&gt;&lt;/head&gt;
+    &lt;bod</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">49152</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">rpcbind</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="active">
+<td>49153</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49154</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49155</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49156</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49157</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49158</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49159</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49160</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49161</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49163</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49165</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49167</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49175</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49176</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>unknown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="active">
+<td>49400</td>
+<td>tcp</td>
+<td>closed<br>reset</td>
+<td>compaqdiag</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h2 id="openservices" class="target">Open Services</h2>
+<div class="table-responsive"><table id="table-services" class="table table-striped dataTable" role="grid">
+<thead><tr>
+<th>Address</th>
+<th>Port</th>
+<th>Protocol</th>
+<th>Service</th>
+<th>Product</th>
+<th>Version</th>
+<th>CPE</th>
+<th>Extra info</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>21</td>
+<td>tcp</td>
+<td>ftp</td>
+<td>ProFTPD</td>
+<td></td>
+<td>cpe:/a:proftpd:proftpd</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>22</td>
+<td>tcp</td>
+<td>ssh</td>
+<td>OpenSSH</td>
+<td>7.9p1 Debian 10+deb10u4</td>
+<td>cpe:/a:openbsd:openssh:7.9p1</td>
+<td>protocol 2.0</td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>25</td>
+<td>tcp</td>
+<td>smtp</td>
+<td>Postfix smtpd</td>
+<td></td>
+<td>cpe:/a:postfix:postfix</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>53</td>
+<td>tcp</td>
+<td>domain</td>
+<td></td>
+<td></td>
+<td></td>
+<td>unknown banner: none</td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>80</td>
+<td>tcp</td>
+<td>http</td>
+<td>nginx</td>
+<td></td>
+<td>cpe:/a:igor_sysoev:nginx</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>106</td>
+<td>tcp</td>
+<td>tcpwrapped</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>110</td>
+<td>tcp</td>
+<td>pop3</td>
+<td>Dovecot pop3d</td>
+<td></td>
+<td>cpe:/a:dovecot:dovecot</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>143</td>
+<td>tcp</td>
+<td>imap</td>
+<td>Dovecot imapd</td>
+<td></td>
+<td>cpe:/a:dovecot:dovecot</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>443</td>
+<td>tcp</td>
+<td>http</td>
+<td>nginx</td>
+<td></td>
+<td>cpe:/a:igor_sysoev:nginx</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>465</td>
+<td>tcp</td>
+<td>smtp</td>
+<td>Postfix smtpd</td>
+<td></td>
+<td>cpe:/a:postfix:postfix</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>587</td>
+<td>tcp</td>
+<td>smtp</td>
+<td>Postfix smtpd</td>
+<td></td>
+<td>cpe:/a:postfix:postfix</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>993</td>
+<td>tcp</td>
+<td>imap</td>
+<td>Dovecot imapd</td>
+<td></td>
+<td>cpe:/a:dovecot:dovecot</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>995</td>
+<td>tcp</td>
+<td>pop3</td>
+<td>Dovecot pop3d</td>
+<td></td>
+<td>cpe:/a:dovecot:dovecot</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>3306</td>
+<td>tcp</td>
+<td>mysql</td>
+<td>MySQL</td>
+<td>5.5.5-10.3.39-MariaDB-0+deb10u2</td>
+<td>cpe:/a:mariadb:mariadb:5.5.5-10.3.39-mariadb-0%2Bdeb10u2</td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>8443</td>
+<td>tcp</td>
+<td>https-alt</td>
+<td>sw-cp-server</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>188.165.240.186 - institutfrancais-djibouti.com</td>
+<td>49152</td>
+<td>tcp</td>
+<td>rpcbind</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<script>
+            $(document).ready(function() {
+              $('#table-services').DataTable();
+            });
+            $('#table-services').DataTable( {
+              "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
+            });
+          </script>
+</div>
+<footer class="footer"><div class="container"><p class="text-muted">
+              This report was generated with <a href="https://github.com/honze-net/nmap-bootstrap-xsl">Nmap Bootstrap XSL</a>.<br>
+              Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA</a>.<br>
+              Designed and built by Andreas Hontzia (<a href="https://www.twitter.com/honze_net">@honze_net</a>).<br></p></div></footer>
+</body>
+</html>
