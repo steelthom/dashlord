@@ -1,0 +1,85 @@
+# Nmap 7.92 scan initiated Tue Nov  4 20:33:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln teleport.int.covoiturage.beta.gouv.fr
+Nmap scan report for teleport.int.covoiturage.beta.gouv.fr (195.154.196.62)
+Host is up (0.094s latency).
+rDNS record for 195.154.196.62: 62-196-154-195.instances.scw.cloud
+Not shown: 999 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: application/json
+|     Referrer-Policy: strict-origin
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     X-Xss-Protection: 1; mode=block
+|     Date: Tue, 04 Nov 2025 20:33:46 GMT
+|     Content-Length: 131
+|     {"error":{"message":"path not found"},"fields":{"proxyVersion":{"major":17,"minor":7,"patch":8,"preRelease":"","string":"17.7.8"}}}
+|   GetRequest: 
+|     HTTP/1.0 302 Found
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Content-Security-Policy: base-uri 'self'; default-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'none'; style-src 'self' 'unsafe-inline';
+|     Content-Type: text/html; charset=utf-8
+|     Expires: 0
+|     Location: /web
+|     Pragma: no-cache
+|     Referrer-Policy: strict-origin
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     X-Xss-Protection: 1; mode=block
+|     Date: Tue, 04 Nov 2025 20:33:45 GMT
+|     Content-Length: 27
+|     href="/web">Found</a>.
+|   HTTPOptions: 
+|     HTTP/1.0 302 Found
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Content-Security-Policy: base-uri 'self'; default-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: blob:; object-src 'none'; script-src 'self' 'none'; style-src 'self' 'unsafe-inline';
+|     Expires: 0
+|     Location: /web
+|     Pragma: no-cache
+|     Referrer-Policy: strict-origin
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     X-Xss-Protection: 1; mode=block
+|     Date: Tue, 04 Nov 2025 20:33:45 GMT
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A6329%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,289,"HTTP/1\.0\x20302\x20Found\r\nCache-Control:\x20
+SF:no-cache,\x20no-store,\x20must-revalidate\r\nContent-Security-Policy:\x
+SF:20base-uri\x20'self';\x20default-src\x20'self';\x20form-action\x20'self
+SF:';\x20frame-ancestors\x20'none';\x20img-src\x20'self'\x20data:\x20blob:
+SF:;\x20object-src\x20'none';\x20script-src\x20'self'\x20'none';\x20style-
+SF:src\x20'self'\x20'unsafe-inline';\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=utf-8\r\nExpires:\x200\r\nLocation:\x20/web\r\nPragma:\x20no-cache
+SF:\r\nReferrer-Policy:\x20strict-origin\r\nStrict-Transport-Security:\x20
+SF:max-age=31536000;\x20includeSubDomains\r\nX-Content-Type-Options:\x20no
+SF:sniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Xss-Protection:\x201;\x20m
+SF:ode=block\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2020:33:45\x20GMT\r\nC
+SF:ontent-Length:\x2027\r\n\r\n<a\x20href=\"/web\">Found</a>\.\n\n")%r(HTT
+SF:POptions,245,"HTTP/1\.0\x20302\x20Found\r\nCache-Control:\x20no-cache,\
+SF:x20no-store,\x20must-revalidate\r\nContent-Security-Policy:\x20base-uri
+SF:\x20'self';\x20default-src\x20'self';\x20form-action\x20'self';\x20fram
+SF:e-ancestors\x20'none';\x20img-src\x20'self'\x20data:\x20blob:;\x20objec
+SF:t-src\x20'none';\x20script-src\x20'self'\x20'none';\x20style-src\x20'se
+SF:lf'\x20'unsafe-inline';\r\nExpires:\x200\r\nLocation:\x20/web\r\nPragma
+SF::\x20no-cache\r\nReferrer-Policy:\x20strict-origin\r\nStrict-Transport-
+SF:Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Content-Type-O
+SF:ptions:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Xss-Protectio
+SF:n:\x201;\x20mode=block\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2020:33:4
+SF:5\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,1B6,"HTT
+SF:P/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20application/json\r\nR
+SF:eferrer-Policy:\x20strict-origin\r\nStrict-Transport-Security:\x20max-a
+SF:ge=31536000;\x20includeSubDomains\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Xss-Protection:\x201;\x20mode=b
+SF:lock\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2020:33:46\x20GMT\r\nConten
+SF:t-Length:\x20131\r\n\r\n{\"error\":{\"message\":\"path\x20not\x20found\
+SF:"},\"fields\":{\"proxyVersion\":{\"major\":17,\"minor\":7,\"patch\":8,\
+SF:"preRelease\":\"\",\"string\":\"17\.7\.8\"}}}");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 20:35:19 2025 -- 1 IP address (1 host up) scanned in 109.39 seconds
