@@ -1,0 +1,115 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:57:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln nouvelle-aquitaine.dreets.gouv.fr
+Nmap scan report for nouvelle-aquitaine.dreets.gouv.fr (185.194.83.84)
+Host is up (0.082s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Cache-Control: no-store, must-revalidate, no-cache
+|     Pragma: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 244
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <1938290215143007385><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|   GetRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     Date: Tue, 04 Nov 2025 07:58:00 GMT
+|     Expires: 0
+|     Cache-Control: no-cache, must-revalidate
+|     Pragma: no-cache
+|     X-Frame-Options: DENY
+|     Last-Modified: Tue, 04 Nov 2025 07:58:00 GMT
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!l5K6GMHDx4+mSf8XIkI7F7SI9ajminCzur48O+uab2lkCjBJ6I5lv176muUCC/oUbJJRIllb0y8/he3cMvqMiTEeH1I=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html>
+|     <html class='ltr fr no-js' xmlns='http://www.w3.org/1999/xhtml' lang='fr' dir='ltr'>
+|     <head>
+|     <title>Site en travaux</title>
+|     <meta name="viewport" content="width=device-width" />
+|     <style type='text/css'>:root {--minipage-color-theme--h: 0;--minipage-color-theme--s: 0%;--minipage-color-theme--l: 60%;}
+|     :root {
+|     finie par d
+|     faut par m
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Tue, 04 Nov 2025 07:58:01 GMT
+|     X-Frame-Options: DENY
+|     Content-Length: 199
+|     Keep-Alive: timeout=5, max=100
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!74qv2mn5d3xsPPIXIkI7F7SI9ajmiliYJAOtFP3neUF6eTX+up02OgWNQFHLBTUfcFurgGXjPUGdE0uROIonWFGJVbQ=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909B202%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909B208%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1255,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\n
+SF:Date:\x20Tue,\x2004\x20Nov\x202025\x2007:58:00\x20GMT\r\nExpires:\x200\
+SF:r\nCache-Control:\x20no-cache,\x20must-revalidate\r\nPragma:\x20no-cach
+SF:e\r\nX-Frame-Options:\x20DENY\r\nLast-Modified:\x20Tue,\x2004\x20Nov\x2
+SF:02025\x2007:58:00\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nSet-
+SF:Cookie:\x20BIGipServerpool-dreets2\.cegedim\.cloud-http=!l5K6GMHDx4\+mS
+SF:f8XIkI7F7SI9ajminCzur48O\+uab2lkCjBJ6I5lv176muUCC/oUbJJRIllb0y8/he3cMvq
+SF:MiTEeH1I=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Securi
+SF:ty:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20html>
+SF:\n<html\x20class='ltr\x20fr\x20no-js'\x20xmlns='http://www\.w3\.org/199
+SF:9/xhtml'\x20lang='fr'\x20dir='ltr'>\n<head>\n<title>Site\x20en\x20trava
+SF:ux</title>\n<meta\x20name=\"viewport\"\x20content=\"width=device-width\
+SF:"\x20/>\n<style\x20type='text/css'>:root\x20{--minipage-color-theme--h:
+SF:\x200;--minipage-color-theme--s:\x200%;--minipage-color-theme--l:\x2060
+SF:%;}\n:root\x20{\n\t/\*\n\tD\xc3\xa9finie\x20par\x20d\xc3\xa9faut\x20par
+SF:\x20m")%r(HTTPOptions,282,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Tu
+SF:e,\x2004\x20Nov\x202025\x2007:58:01\x20GMT\r\nX-Frame-Options:\x20DENY\
+SF:r\nContent-Length:\x20199\r\nKeep-Alive:\x20timeout=5,\x20max=100\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
+SF:\r\nSet-Cookie:\x20BIGipServerpool-dreets2\.cegedim\.cloud-http=!74qv2m
+SF:n5d3xsPPIXIkI7F7SI9ajmiliYJAOtFP3neUF6eTX\+up02OgWNQFHLBTUfcFurgGXjPUGd
+SF:E0uROIonWFGJVbQ=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport
+SF:-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x
+SF:20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>
+SF:\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<
+SF:p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20resourc
+SF:e\.</p>\n</body></html>\n")%r(FourOhFourRequest,1ED,"HTTP/1\.1\x20200\x
+SF:20OK\r\nCache-Control:\x20no-store,\x20must-revalidate,\x20no-cache\r\n
+SF:Pragma:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20244\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS
+SF:-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\
+SF:r\n\r\n<html><head><title>Request\x20Rejected</title></head><body>The\x
+SF:20requested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x2
+SF:0your\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20<193829
+SF:0215143007385><br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x
+SF:20Back\]</body></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:00:24 2025 -- 1 IP address (1 host up) scanned in 165.53 seconds
