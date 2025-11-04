@@ -1,0 +1,75 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:06:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln olympe.ira-lyon.gouv.fr
+Nmap scan report for olympe.ira-lyon.gouv.fr (94.228.187.215)
+Host is up (0.087s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+113/tcp closed ident
+443/tcp open   ssl/https SMA/12.4
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 04 Nov 2025 08:06:43 GMT
+|     Server: SMA/12.4
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Tue, 04 Nov 2025 08:06:54 GMT
+|     Server: SMA/12.4
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+|_http-server-header: SMA/12.4
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909B413%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,18A,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Tue,\x2004\x20Nov\x202025\x2008:06:43\x20GMT\r\nServer:\x20SMA/12\.4\r\
+SF:nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-
+SF://IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20
+SF:Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20bro
+SF:wser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\
+SF:x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(HTTPOptions,18A,"H
+SF:TTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2004\x20Nov\x202025
+SF:\x2008:06:43\x20GMT\r\nServer:\x20SMA/12\.4\r\nContent-Length:\x20226\r
+SF:\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-88
+SF:59-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\
+SF:.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><
+SF:body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20requ
+SF:est\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\
+SF:n</p>\n</body></html>\n")%r(FourOhFourRequest,18A,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2008:06:43\x20GMT
+SF:\r\nServer:\x20SMA/12\.4\r\nContent-Length:\x20226\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
+SF:ead>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20R
+SF:equest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this
+SF:\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></htm
+SF:l>\n")%r(RTSPRequest,18A,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x
+SF:20Tue,\x2004\x20Nov\x202025\x2008:06:54\x20GMT\r\nServer:\x20SMA/12\.4\
+SF:r\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\
+SF:"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x
+SF:20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20b
+SF:rowser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20no
+SF:t\x20understand\.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:08:24 2025 -- 1 IP address (1 host up) scanned in 121.24 seconds
