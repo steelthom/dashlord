@@ -1,0 +1,54 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:39:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln nantes.archi.fr
+Nmap scan report for nantes.archi.fr (194.199.216.61)
+Host is up (0.11s latency).
+Not shown: 992 filtered tcp ports (no-response)
+PORT     STATE  SERVICE        VERSION
+21/tcp   open   ftp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220 ProFTPD Server (Debian) [10.100.100.200]
+|     Syntax error, command unrecognized
+|   Help: 
+|     220 ProFTPD Server (Debian) [10.100.100.200]
+|     sequence of commands
+|   NULL, SSLSessionReq: 
+|_    220 ProFTPD Server (Debian) [10.100.100.200]
+22/tcp   closed ssh
+80/tcp   open   http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html
+|     Content-length: 0
+|     Connection: Close
+|_    Location: https://www.nantes.archi.fr/
+443/tcp  open   ssl/http       Apache httpd
+|_http-server-header: Apache
+3527/tcp closed beserver-msg-q
+3546/tcp closed unknown
+3551/tcp closed apcupsd
+3580/tcp closed nati-svrloc
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port21-TCP:V=7.92%I=7%D=11/4%Time=6909BBCC%P=x86_64-alpine-linux-musl%r
+SF:(NULL,2E,"220\x20ProFTPD\x20Server\x20\(Debian\)\x20\[10\.100\.100\.200
+SF:\]\r\n")%r(GenericLines,56,"220\x20ProFTPD\x20Server\x20\(Debian\)\x20\
+SF:[10\.100\.100\.200\]\r\n500\x20Syntax\x20error,\x20command\x20unrecogni
+SF:zed\r\n")%r(Help,4C,"220\x20ProFTPD\x20Server\x20\(Debian\)\x20\[10\.10
+SF:0\.100\.200\]\r\n503\x20Bad\x20sequence\x20of\x20commands\r\n")%r(SSLSe
+SF:ssionReq,2E,"220\x20ProFTPD\x20Server\x20\(Debian\)\x20\[10\.100\.100\.
+SF:200\]\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909BBCC%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,89,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-length:\x200\r\nConnection:\x20Close\r\nLoca
+SF:tion:\x20https://www\.nantes\.archi\.fr/\r\n\r\n")%r(HTTPOptions,89,"HT
+SF:TP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-Type:\x20text/html\r\
+SF:nContent-length:\x200\r\nConnection:\x20Close\r\nLocation:\x20https://w
+SF:ww\.nantes\.archi\.fr/\r\n\r\n")%r(RTSPRequest,89,"HTTP/1\.1\x20301\x20
+SF:Moved\x20Permanently\r\nContent-Type:\x20text/html\r\nContent-length:\x
+SF:200\r\nConnection:\x20Close\r\nLocation:\x20https://www\.nantes\.archi\
+SF:.fr/\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:40:24 2025 -- 1 IP address (1 host up) scanned in 61.76 seconds
