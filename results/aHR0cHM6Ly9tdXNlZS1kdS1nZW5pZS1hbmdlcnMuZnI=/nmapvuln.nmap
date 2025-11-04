@@ -1,0 +1,35 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:12:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln musee-du-genie-angers.fr
+Nmap scan report for musee-du-genie-angers.fr (149.255.137.186)
+Host is up (0.11s latency).
+rDNS record for 149.255.137.186: h149-137-186.cienum.fr
+Not shown: 995 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+21/tcp  open   ftp       Microsoft ftpd
+80/tcp  open   http      nginx 1.20.1
+| vulners: 
+|   nginx 1.20.1: 
+|     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
+|     	NGINX:CVE-2022-41741	7.8	https://vulners.com/nginx/NGINX:CVE-2022-41741
+|     	DF041B2B-2DA7-5262-AABE-9EBD2D535041	7.8	https://vulners.com/githubexploit/DF041B2B-2DA7-5262-AABE-9EBD2D535041	*EXPLOIT*
+|     	NGINX:CVE-2022-41742	7.1	https://vulners.com/nginx/NGINX:CVE-2022-41742
+|     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+|     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
+|_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: nginx/1.20.1
+81/tcp  closed hosts2-ns
+113/tcp closed ident
+443/tcp open   ssl/http  nginx 1.20.1
+| vulners: 
+|   nginx 1.20.1: 
+|     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
+|     	NGINX:CVE-2022-41741	7.8	https://vulners.com/nginx/NGINX:CVE-2022-41741
+|     	DF041B2B-2DA7-5262-AABE-9EBD2D535041	7.8	https://vulners.com/githubexploit/DF041B2B-2DA7-5262-AABE-9EBD2D535041	*EXPLOIT*
+|     	NGINX:CVE-2022-41742	7.1	https://vulners.com/nginx/NGINX:CVE-2022-41742
+|     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+|     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
+|_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: nginx/1.20.1
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:13:15 2025 -- 1 IP address (1 host up) scanned in 22.28 seconds
