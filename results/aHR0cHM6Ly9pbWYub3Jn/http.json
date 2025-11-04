@@ -1,0 +1,180 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "D-",
+    "error": null,
+    "score": 25,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "pragma": "no-cache",
+      "content-type": "text/html; charset=utf-8",
+      "link": "<https://www.imf.org/en/Home>; rel=\"canonical\"",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-permitted-cross-domain-policies": "none",
+      "x-xss-protection": "1; mode=block",
+      "content-security-policy": "upgrade-insecure-requests",
+      "vary": "Accept-Encoding",
+      "content-length": "16614",
+      "cache-control": "no-cache, no-store",
+      "expires": "Tue, 04 Nov 2025 03:52:05 GMT",
+      "date": "Tue, 04 Nov 2025 03:52:05 GMT",
+      "connection": "close",
+      "alt-svc": "h3=\":443\"; ma=93600",
+      "strict-transport-security": "max-age=31536000",
+      "set-cookie": [
+        "ak_bmsc=EDB1658BA54F4FE09F195461ECF69C71~000000000000000000000000000000~YAAQBcgwF/mQMx6aAQAACUz+TB3Oyz4FANHuWAO2VzcqBERbqK0USV5oTvNgWvA6jvGAqXs1859TUbX+G8F0VwC4nVV2v+BcYipmP4G/JUnCePpFf45GEKrWbboOAJlXhmR80Hd9h/jmD7BZC2YEoeJjRtYkxLTxdFo2EmnHqMX7W9WJfO7DILF8lS7DLvKaMrpNfA5LpSGKv5x1hzNm0kHMZ8C7d4AhBo65yF7f3A9Ew6q53hQo7fcpVsCXQerIGmPl7S0JPP5RMUnKxx7gqbjCY+aswtvlnM7/FxlasvhNq3GKGrb547vVIEL73lnMCAAjTD3oOgwkd00gEU31p9+R/EpplTvz; Domain=.imf.org; Path=/; Expires=Tue, 04 Nov 2025 05:52:05 GMT; Max-Age=7200; HttpOnly"
+      ]
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "upgrade-insecure-requests": [
+          "'none'"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "ak_bmsc": {
+          "domain": "imf.org",
+          "expires": "2025-11-04T05:52:05.000Z",
+          "httponly": true,
+          "max-age": 7200,
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.imf.org/en/Home",
+      "redirects": true,
+      "route": [
+        "http://imf.org/",
+        "https://imf.org/",
+        "https://www.imf.org/",
+        "https://www.imf.org/en/Home"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
+      "includeSubDomains": false,
+      "maxAge": 31536000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "//assets.adobedtm.com/c7b988f076dc93cc20c734bc51e87dde0b81f134/satelliteLib-834e3fe4ac4ea890c36d061e19fc6cfc1b5dc5d0.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.googletagmanager.com/gtag/js?id=G-CPJPTDPL31": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://static.cloud.coveo.com/searchui/v2.10116/js/CoveoJsSearch.Lazy.min.js?v=1225": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://static.cloud.coveo.com/coveoforsitecore/ui/v0.64.7/js/CoveoForSitecore.Lazy.min.js?v=1225": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://platform-api.sharethis.com/js/sharethis.js#property=6477954640353a0019caf147&product=inline-share-buttons&source=platform": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "//cdn.parsely.com/keys/imf.org/p.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
