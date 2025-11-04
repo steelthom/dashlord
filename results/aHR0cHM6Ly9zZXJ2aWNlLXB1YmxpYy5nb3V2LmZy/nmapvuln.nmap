@@ -1,0 +1,89 @@
+# Nmap 7.92 scan initiated Tue Nov  4 20:14:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln service-public.gouv.fr
+Nmap scan report for service-public.gouv.fr (160.92.168.33)
+Host is up (0.089s latency).
+rDNS record for 160.92.168.33: secure-www-sp-dila-prod.as8677.net
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 499 Unknown Code
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 36141
+|     <!DOCTYPE html>
+|     <html lang="fr" data-fr-js="false" dir="ltr" data-fr-scheme="light">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>Service-public.fr renforce temporairement son dispositif d
+|     pour mieux vous servir ! |Service-Public.fr
+|     </title>
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no"> <style>@charset "UTF-8";
+|     DSFR Mini */
+|     a{text-decoration:var(--text-decoration);color:inherit}:root{--underline-max-width:100%;--underline-hover-width:0;--unde
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Tue, 04 Nov 2025 20:14:47 GMT
+|     Content-Type: text/html
+|     Content-Length: 162
+|     Connection: close
+|     Location: https://www.service-public.fr/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A5EB7%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,154,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDat
+SF:e:\x20Tue,\x2004\x20Nov\x202025\x2020:14:47\x20GMT\r\nContent-Type:\x20
+SF:text/html\r\nContent-Length:\x20162\r\nConnection:\x20close\r\nLocation
+SF::\x20https://www\.service-public\.fr/\r\n\r\n<html>\r\n<head><title>301
+SF:\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x2
+SF:0Moved\x20Permanently</h1></center>\r\n<hr><center>nginx</center>\r\n</
+SF:body>\r\n</html>\r\n")%r(HTTPOptions,8E26,"HTTP/1\.1\x20499\x20Unknown\
+SF:x20Code\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x2
+SF:0mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20
+SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20char
+SF:set=utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x2036141\r\n\r\n<!D
+SF:OCTYPE\x20html>\n<html\x20lang=\"fr\"\x20data-fr-js=\"false\"\x20dir=\"
+SF:ltr\"\x20data-fr-scheme=\"light\">\n\n<head>\n\x20\x20<meta\x20charset=
+SF:\"utf-8\">\n\x20\x20<title>Service-public\.fr\x20renforce\x20temporaire
+SF:ment\x20son\x20dispositif\x20d\xe2\x80\x99acc\xc3\xa8s\x20pour\x20mieux
+SF:\x20vous\x20servir\x20!\x20\|Service-Public\.fr\n\x20\x20</title>\n\n\x
+SF:20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n
+SF:\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20
+SF:initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20<meta\x20name=\"format
+SF:-detection\"\x20content=\"telephone=no,date=no,address=no,email=no,url=
+SF:no\">\x20\x20<style>@charset\x20\"UTF-8\";\n/\*!\x20DSFR\x20Mini\x20\*/
+SF:\n\x20a{text-decoration:var\(--text-decoration\);color:inherit}:root{--
+SF:underline-max-width:100%;--underline-hover-width:0;--unde")%r(FourOhFou
+SF:rRequest,8E26,"HTTP/1\.1\x20499\x20Unknown\x20Code\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Typ
+SF:e-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-c
+SF:ache\r\nContent-Length:\x2036141\r\n\r\n<!DOCTYPE\x20html>\n<html\x20la
+SF:ng=\"fr\"\x20data-fr-js=\"false\"\x20dir=\"ltr\"\x20data-fr-scheme=\"li
+SF:ght\">\n\n<head>\n\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>S
+SF:ervice-public\.fr\x20renforce\x20temporairement\x20son\x20dispositif\x2
+SF:0d\xe2\x80\x99acc\xc3\xa8s\x20pour\x20mieux\x20vous\x20servir\x20!\x20\
+SF:|Service-Public\.fr\n\x20\x20</title>\n\n\x20\x20<meta\x20http-equiv=\"
+SF:X-UA-Compatible\"\x20content=\"IE=edge\">\n\x20\x20<meta\x20name=\"view
+SF:port\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrink-t
+SF:o-fit=no\">\n\x20\x20<meta\x20name=\"format-detection\"\x20content=\"te
+SF:lephone=no,date=no,address=no,email=no,url=no\">\x20\x20<style>@charset
+SF:\x20\"UTF-8\";\n/\*!\x20DSFR\x20Mini\x20\*/\n\x20a{text-decoration:var\
+SF:(--text-decoration\);color:inherit}:root{--underline-max-width:100%;--u
+SF:nderline-hover-width:0;--unde");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 20:16:58 2025 -- 1 IP address (1 host up) scanned in 151.37 seconds
