@@ -1,0 +1,124 @@
+# Nmap 7.92 scan initiated Tue Nov  4 03:24:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln intefp.travail-emploi.gouv.fr
+Nmap scan report for intefp.travail-emploi.gouv.fr (185.194.82.157)
+Host is up (0.080s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 410
+|     Connection: close
+|     Date: Tue, 04 Nov 2025 03:24:49 GMT
+|     Location: http://intefp-production.cegedim.cloud/fr
+|     X-Drupal-Route-Normalizer: 1
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Cache-Control: max-age=600, public
+|     Last-Modified: Tue, 04 Nov 2025 03:24:49 GMT
+|     Vary: Cookie
+|     X-Drupal-Cache: MISS
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 0
+|     Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+|     Set-Cookie: BIGipServerpool-intefp-production.cegedim.cloud-tcp80=!0/WkwgErBdvXzOsXIkI7F7SI9ajmiq1TUsQOBk2IiDtKUwRzPoaUyAy+eBgjfKNiCVCOv/1WrmFc97Y6uGF8gVPNCO4=; path=/; Httponly; Secure
+|     Strict-Transport-Securit
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 0
+|     Connection: close
+|     Allow: GET, POST
+|     Cache-Control: must-revalidate, no-cache, private
+|     Date: Tue, 04 Nov 2025 03:24:49 GMT
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     expires: -1
+|     pragma: no-cache
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 0
+|     Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+|     Set-Cookie: BIGipServerpool-intefp-production.cegedim.cloud-tcp80=!YVLdYYMFHMieJRUXIkI7F7SI9ajmiiPWLIeiv5KBs3VKsUt52vPEiRdIju44mkcDg41+Wx5eExrU9YdrW67cknRYwzU=; path=/; Httponly; Secure
+|_    Strict-Transport-Security: max-age=31536000; includeSubDomains
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690971FB%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=69097201%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,548,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nCon
+SF:tent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20410\r\n
+SF:Connection:\x20close\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2003:24:49\
+SF:x20GMT\r\nLocation:\x20http://intefp-production\.cegedim\.cloud/fr\r\nX
+SF:-Drupal-Route-Normalizer:\x201\r\nContent-language:\x20fr\r\nX-Content-
+SF:Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\
+SF:x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nCache-Control:\x20ma
+SF:x-age=600,\x20public\r\nLast-Modified:\x20Tue,\x2004\x20Nov\x202025\x20
+SF:03:24:49\x20GMT\r\nVary:\x20Cookie\r\nX-Drupal-Cache:\x20MISS\r\nX-Cont
+SF:ent-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-
+SF:cross-origin\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x20
+SF:0\r\nPermissions-Policy:\x20geolocation=\(\),\x20microphone=\(\),\x20ca
+SF:mera=\(\),\x20payment=\(\),\x20usb=\(\)\r\nSet-Cookie:\x20BIGipServerpo
+SF:ol-intefp-production\.cegedim\.cloud-tcp80=!0/WkwgErBdvXzOsXIkI7F7SI9aj
+SF:miq1TUsQOBk2IiDtKUwRzPoaUyAy\+eBgjfKNiCVCOv/1WrmFc97Y6uGF8gVPNCO4=;\x20
+SF:path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Securit")%r(HTTPOpti
+SF:ons,310,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/html;\x20chars
+SF:et=UTF-8\r\nContent-Length:\x200\r\nConnection:\x20close\r\nAllow:\x20G
+SF:ET,\x20POST\r\nCache-Control:\x20must-revalidate,\x20no-cache,\x20priva
+SF:te\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2003:24:49\x20GMT\r\nContent-
+SF:language:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Option
+SF:s:\x20SAMEORIGIN\r\nexpires:\x20-1\r\npragma:\x20no-cache\r\nX-Content-
+SF:Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-cros
+SF:s-origin\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x200\r\
+SF:nPermissions-Policy:\x20geolocation=\(\),\x20microphone=\(\),\x20camera
+SF:=\(\),\x20payment=\(\),\x20usb=\(\)\r\nSet-Cookie:\x20BIGipServerpool-i
+SF:ntefp-production\.cegedim\.cloud-tcp80=!YVLdYYMFHMieJRUXIkI7F7SI9ajmiiP
+SF:WLIeiv5KBs3VKsUt52vPEiRdIju44mkcDg41\+Wx5eExrU9YdrW67cknRYwzU=;\x20path
+SF:=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=315
+SF:36000;\x20includeSubDomains\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 03:27:13 2025 -- 1 IP address (1 host up) scanned in 163.61 seconds
