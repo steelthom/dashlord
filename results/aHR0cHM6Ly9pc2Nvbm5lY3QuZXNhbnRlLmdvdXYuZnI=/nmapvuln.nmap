@@ -1,0 +1,171 @@
+# Nmap 7.92 scan initiated Tue Nov  4 03:11:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln isconnect.esante.gouv.fr
+Nmap scan report for isconnect.esante.gouv.fr (54.38.167.85)
+Host is up (0.14s latency).
+rDNS record for 54.38.167.85: ip85.ip-54-38-167.eu
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+|     <title>Error 503: server unavailable</title>
+|     <style type="text/css">
+|     font-family: "Trebuchet MS", "Arial", "Lucida grande", "Bitstream Charter", "Liberation sans", "FreeSans", sans-serif;
+|     font-size: 16px;
+|     line-height: 20px;
+|     color: #494949;
+|     padding: 0;
+|     margin: 0;
+|     font-size: normal;
+|     font-weight: 200;
+|     body { background-color: #F1F1F1; padding-top: 95px; }
+|     .container { padding: 0; margin: 0 auto; max-width: 737px; text-align: center; }
+|     .block { display: block; }
+|     .blue { color: #3267BF; }
+|     .regular { font-weight: 400; }
+|     .fs30 { font-size: 30px; line-height: 30px; }
+|     .fs40 { font-size: 40px; line-height: 40px; }
+|_    .fs50 { font-size: 50px; line-height: 50px;
+443/tcp open  ssl/https nginx/1.28.0
+|_http-server-header: nginx/1.28.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     server: nginx/1.28.0
+|     date: Tue, 04 Nov 2025 03:11:34 GMT
+|     content-type: text/html; charset=utf-8
+|     content-length: 5372
+|     x-frame-options: DENY
+|     x-content-type-options: nosniff
+|     referrer-policy: same-origin
+|     cross-origin-opener-policy: same-origin
+|     vary: origin
+|     x-iplb-request-id: 14A320E6:985A_3626A755:01BB_69096EE5_E8E49:0567
+|     x-iplb-instance: 57857
+|     connection: close
+|     <!DOCTYPE html lang="fr">
+|     <head>
+|     <meta charset="utf-8">
+|     <title>ANS iSC | Page non trouv
+|     e</title>
+|     <!-- Bootstrap CSS -->
+|     <link rel="stylesheet" type="text/css" href="/static/packages/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+|     <!-- Fontawesome CSS -->
+|     <link rel="stylesheet" type="text/css" href="/static/packages/fontawesome-free-5.15.4-web/css/all.css">
+|     <link rel="shortcut icon" type="image/vnd.microsoft.icon" hr
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     server: nginx/1.28.0
+|     date: Tue, 04 Nov 2025 03:11:32 GMT
+|     content-type: text/html; charset=utf-8
+|     content-length: 0
+|     location: /enrollement/account/loggedin
+|     x-frame-options: DENY
+|     vary: Cookie, origin
+|     x-content-type-options: nosniff
+|     referrer-policy: same-origin
+|     cross-origin-opener-policy: same-origin
+|     x-iplb-request-id: 14A320E6:984F_3626A755:01BB_69096EDE_13A3B7:54B8
+|     x-iplb-instance: 57780
+|     connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     server: nginx/1.28.0
+|     date: Tue, 04 Nov 2025 03:11:33 GMT
+|     content-type: text/html; charset=utf-8
+|     content-length: 0
+|     location: /enrollement/account/loggedin
+|     x-frame-options: DENY
+|     vary: Cookie, origin
+|     x-content-type-options: nosniff
+|     referrer-policy: same-origin
+|     cross-origin-opener-policy: same-origin
+|     x-iplb-request-id: 14A320E6:9858_3626A755:01BB_69096EE5_E8E45:0567
+|     x-iplb-instance: 57857
+|_    connection: close
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=69096EDE%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,3371,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\ncache-c
+SF:ontrol:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>\n\t<hea
+SF:d>\n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x2
+SF:0charset=utf-8\"/>\n\t\t<title>Error\x20503:\x20server\x20unavailable</
+SF:title>\n\t\t<style\x20type=\"text/css\">\n\t\t\t\*\x20{\n\t\t\t\tfont-f
+SF:amily:\x20\"Trebuchet\x20MS\",\x20\"Arial\",\x20\"Lucida\x20grande\",\x
+SF:20\"Bitstream\x20Charter\",\x20\"Liberation\x20sans\",\x20\"FreeSans\",
+SF:\x20sans-serif;\n\t\t\t\tfont-size:\x2016px;\n\t\t\t\tline-height:\x202
+SF:0px;\n\t\t\t\tcolor:\x20#494949;\n\t\t\t\tpadding:\x200;\n\t\t\t\tmargi
+SF:n:\x200;\n\t\t\t\tfont-size:\x20normal;\n\t\t\t\tfont-weight:\x20200;\n
+SF:\t\t\t}\n\t\t\tbody\x20{\x20background-color:\x20#F1F1F1;\x20padding-to
+SF:p:\x2095px;\x20}\n\t\t\t\.container\x20{\x20padding:\x200;\x20margin:\x
+SF:200\x20auto;\x20max-width:\x20737px;\x20text-align:\x20center;\x20}\n\t
+SF:\t\t\.block\x20{\x20display:\x20block;\x20}\n\t\t\t\.blue\x20{\x20color
+SF::\x20#3267BF;\x20}\n\t\t\t\.regular\x20{\x20font-weight:\x20400;\x20}\n
+SF:\t\t\t\.fs30\x20{\x20font-size:\x2030px;\x20line-height:\x2030px;\x20}\
+SF:n\t\t\t\.fs40\x20{\x20font-size:\x2040px;\x20line-height:\x2040px;\x20}
+SF:\n\t\t\t\.fs50\x20{\x20font-size:\x2050px;\x20line-height:\x2050px;\x20
+SF:")%r(HTTPOptions,3371,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\nca
+SF:che-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>\n\
+SF:t<head>\n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/htm
+SF:l;\x20charset=utf-8\"/>\n\t\t<title>Error\x20503:\x20server\x20unavaila
+SF:ble</title>\n\t\t<style\x20type=\"text/css\">\n\t\t\t\*\x20{\n\t\t\t\tf
+SF:ont-family:\x20\"Trebuchet\x20MS\",\x20\"Arial\",\x20\"Lucida\x20grande
+SF:\",\x20\"Bitstream\x20Charter\",\x20\"Liberation\x20sans\",\x20\"FreeSa
+SF:ns\",\x20sans-serif;\n\t\t\t\tfont-size:\x2016px;\n\t\t\t\tline-height:
+SF:\x2020px;\n\t\t\t\tcolor:\x20#494949;\n\t\t\t\tpadding:\x200;\n\t\t\t\t
+SF:margin:\x200;\n\t\t\t\tfont-size:\x20normal;\n\t\t\t\tfont-weight:\x202
+SF:00;\n\t\t\t}\n\t\t\tbody\x20{\x20background-color:\x20#F1F1F1;\x20paddi
+SF:ng-top:\x2095px;\x20}\n\t\t\t\.container\x20{\x20padding:\x200;\x20marg
+SF:in:\x200\x20auto;\x20max-width:\x20737px;\x20text-align:\x20center;\x20
+SF:}\n\t\t\t\.block\x20{\x20display:\x20block;\x20}\n\t\t\t\.blue\x20{\x20
+SF:color:\x20#3267BF;\x20}\n\t\t\t\.regular\x20{\x20font-weight:\x20400;\x
+SF:20}\n\t\t\t\.fs30\x20{\x20font-size:\x2030px;\x20line-height:\x2030px;\
+SF:x20}\n\t\t\t\.fs40\x20{\x20font-size:\x2040px;\x20line-height:\x2040px;
+SF:\x20}\n\t\t\t\.fs50\x20{\x20font-size:\x2050px;\x20line-height:\x2050px
+SF:;\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=69096EE4%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1BA,"HTTP/1\.1\x20302\x20Found\r\nserver:\x20nginx/1
+SF:\.28\.0\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2003:11:32\x20GMT\r\ncon
+SF:tent-type:\x20text/html;\x20charset=utf-8\r\ncontent-length:\x200\r\nlo
+SF:cation:\x20/enrollement/account/loggedin\r\nx-frame-options:\x20DENY\r\
+SF:nvary:\x20Cookie,\x20origin\r\nx-content-type-options:\x20nosniff\r\nre
+SF:ferrer-policy:\x20same-origin\r\ncross-origin-opener-policy:\x20same-or
+SF:igin\r\nx-iplb-request-id:\x2014A320E6:984F_3626A755:01BB_69096EDE_13A3
+SF:B7:54B8\r\nx-iplb-instance:\x2057780\r\nconnection:\x20close\r\n\r\n")%
+SF:r(HTTPOptions,1B9,"HTTP/1\.1\x20302\x20Found\r\nserver:\x20nginx/1\.28\
+SF:.0\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2003:11:33\x20GMT\r\ncontent-
+SF:type:\x20text/html;\x20charset=utf-8\r\ncontent-length:\x200\r\nlocatio
+SF:n:\x20/enrollement/account/loggedin\r\nx-frame-options:\x20DENY\r\nvary
+SF::\x20Cookie,\x20origin\r\nx-content-type-options:\x20nosniff\r\nreferre
+SF:r-policy:\x20same-origin\r\ncross-origin-opener-policy:\x20same-origin\
+SF:r\nx-iplb-request-id:\x2014A320E6:9858_3626A755:01BB_69096EE5_E8E45:056
+SF:7\r\nx-iplb-instance:\x2057857\r\nconnection:\x20close\r\n\r\n")%r(Four
+SF:OhFourRequest,168B,"HTTP/1\.1\x20404\x20Not\x20Found\r\nserver:\x20ngin
+SF:x/1\.28\.0\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2003:11:34\x20GMT\r\n
+SF:content-type:\x20text/html;\x20charset=utf-8\r\ncontent-length:\x205372
+SF:\r\nx-frame-options:\x20DENY\r\nx-content-type-options:\x20nosniff\r\nr
+SF:eferrer-policy:\x20same-origin\r\ncross-origin-opener-policy:\x20same-o
+SF:rigin\r\nvary:\x20origin\r\nx-iplb-request-id:\x2014A320E6:985A_3626A75
+SF:5:01BB_69096EE5_E8E49:0567\r\nx-iplb-instance:\x2057857\r\nconnection:\
+SF:x20close\r\n\r\n\n<!DOCTYPE\x20html\x20lang=\"fr\">\n\x20\x20\x20\x20<h
+SF:ead>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<title>ANS\x20iSC\x20\|\x20Page\x20non\x20t
+SF:rouv\xc3\xa9e</title>\n\n\n\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Boot
+SF:strap\x20CSS\x20-->\n\x20\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\"sty
+SF:lesheet\"\x20type=\"text/css\"\x20\x20href=\"/static/packages/bootstrap
+SF:-4\.6\.0-dist/css/bootstrap\.min\.css\">\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\n\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Fontawesome\x20CSS\x20-->\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20type=\"
+SF:text/css\"\x20\x20href=\"/static/packages/fontawesome-free-5\.15\.4-web
+SF:/css/all\.css\">\n\x20\x20\x20\x20\x20\x20\x20\x20\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20type=\"image/vnd\.mic
+SF:rosoft\.icon\"\x20hr");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 03:11:56 2025 -- 1 IP address (1 host up) scanned in 39.30 seconds
