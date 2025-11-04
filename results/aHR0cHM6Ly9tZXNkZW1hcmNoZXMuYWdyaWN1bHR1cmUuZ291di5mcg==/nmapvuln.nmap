@@ -1,0 +1,49 @@
+# Nmap 7.92 scan initiated Tue Nov  4 09:07:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mesdemarches.agriculture.gouv.fr
+Nmap scan report for mesdemarches.agriculture.gouv.fr (185.24.186.133)
+Host is up (0.17s latency).
+Not shown: 972 filtered tcp ports (no-response), 26 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+|_http-server-header: <empty>
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Tue, 04 Nov 2025 09:16:34 GMT
+|     Server: 
+|     X-Frame-Options: SAMEORIGIN
+|     Location: https://mesdemarches.agriculture.gouv.fr/
+|     Content-Length: 249
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://mesdemarches.agriculture.gouv.fr/">here</a>.</p>
+|_    </body></html>
+443/tcp open  ssl/https?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909C472%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1F2,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20T
+SF:ue,\x2004\x20Nov\x202025\x2009:16:34\x20GMT\r\nServer:\x20\x20\r\nX-Fra
+SF:me-Options:\x20SAMEORIGIN\r\nLocation:\x20https://mesdemarches\.agricul
+SF:ture\.gouv\.fr/\r\nContent-Length:\x20249\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTM
+SF:L\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<ti
+SF:tle>301\x20Moved\x20Permanently</title>\n</head><body>\n<h1>Moved\x20Pe
+SF:rmanently</h1>\n<p>The\x20document\x20has\x20moved\x20<a\x20href=\"http
+SF:s://mesdemarches\.agriculture\.gouv\.fr/\">here</a>\.</p>\n</body></htm
+SF:l>\n")%r(HTTPOptions,1F2,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nD
+SF:ate:\x20Tue,\x2004\x20Nov\x202025\x2009:16:34\x20GMT\r\nServer:\x20\x20
+SF:\r\nX-Frame-Options:\x20SAMEORIGIN\r\nLocation:\x20https://mesdemarches
+SF:\.agriculture\.gouv\.fr/\r\nContent-Length:\x20249\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
+SF:ead>\n<title>301\x20Moved\x20Permanently</title>\n</head><body>\n<h1>Mo
+SF:ved\x20Permanently</h1>\n<p>The\x20document\x20has\x20moved\x20<a\x20hr
+SF:ef=\"https://mesdemarches\.agriculture\.gouv\.fr/\">here</a>\.</p>\n</b
+SF:ody></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 09:17:03 2025 -- 1 IP address (1 host up) scanned in 544.46 seconds
