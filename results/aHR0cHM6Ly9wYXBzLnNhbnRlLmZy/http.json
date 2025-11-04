@@ -1,0 +1,139 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 15,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 13:25:21 GMT",
+      "server": "Apache",
+      "last-modified": "Tue, 22 Nov 2016 14:39:04 GMT",
+      "etag": "\"54-541e4bbe3b829\"",
+      "accept-ranges": "bytes",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "connection": "close",
+      "content-type": "text/html; charset=ISO-8859-1",
+      "set-cookie": [
+        "BIGipServerpool-ars.cegedim.cloud-http=851728650.49431.0000; path=/; Httponly; Secure",
+        "TS86bc51b0029=087dc22938ab28007fbc1981e5fb260a18193386dc733e781a15317b8b2d26465a8e0c0437e9e95a462718ad74f9e918; Max-Age=30; Path=/",
+        "TS0814ac91027=087dc22938ab2000ef6ffd616961c7420bb22c0d277ed645561e4bc8abf55c6feb928dd77b4aae1d08677c13181130008129096bc94d88a2563487c3e35231009296bec097e9a3cf80c59f254ed101afedc3e9468b7162982a043653f55615d1; Path=/"
+      ],
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "BIGipServerpool-ars.cegedim.cloud-http": {
+          "domain": "paps.sante.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS86bc51b0029": {
+          "domain": "paps.sante.fr",
+          "max-age": 30,
+          "path": "/",
+          "port": null
+        },
+        "TS0814ac91027": {
+          "domain": "paps.sante.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://paps.sante.fr/",
+      "redirects": true,
+      "route": [
+        "http://paps.sante.fr/",
+        "https://paps.sante.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-no-scripts-loaded",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
