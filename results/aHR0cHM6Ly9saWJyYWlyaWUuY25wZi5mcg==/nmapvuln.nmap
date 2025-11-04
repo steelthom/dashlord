@@ -1,0 +1,198 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:19:12 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln librairie.cnpf.fr
+Nmap scan report for librairie.cnpf.fr (163.172.244.101)
+Host is up (0.12s latency).
+rDNS record for 163.172.244.101: undefined.hostname.localhost
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE  SERVICE      VERSION
+80/tcp   open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/html
+|     content-length: 341
+|     date: Tue, 04 Nov 2025 07:33:55 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>404 Not Found</title>
+|     </head>
+|     <body>
+|     <h1>404 Not Found</h1>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     content-type: text/html
+|     accept-ranges: bytes
+|     etag: "487819193"
+|     last-modified: Thu, 09 Jul 2020 15:22:19 GMT
+|     content-length: 0
+|     date: Tue, 04 Nov 2025 07:33:55 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     allow: OPTIONS, GET, HEAD, POST
+|     content-length: 0
+|     date: Tue, 04 Nov 2025 07:33:55 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     content-type: text/html
+|     content-length: 345
+|     date: Tue, 04 Nov 2025 07:33:55 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body>
+|     <h1>400 Bad Request</h1>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/html
+|     content-length: 341
+|     date: Tue, 04 Nov 2025 07:34:01 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>404 Not Found</title>
+|     </head>
+|     <body>
+|     <h1>404 Not Found</h1>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     content-type: text/html
+|     accept-ranges: bytes
+|     etag: "487819193"
+|     last-modified: Thu, 09 Jul 2020 15:22:19 GMT
+|     content-length: 0
+|     date: Tue, 04 Nov 2025 07:34:00 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     allow: OPTIONS, GET, HEAD, POST
+|     content-length: 0
+|     date: Tue, 04 Nov 2025 07:34:01 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|   RTSPRequest: 
+|     HTTP/1.0 400 Bad Request
+|     content-type: text/html
+|     content-length: 345
+|     date: Tue, 04 Nov 2025 07:34:07 GMT
+|     strict-transport-security: max-age=16000000; includeSubDomains; preload;
+|     <?xml version="1.0" encoding="iso-8859-1"?>
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+|     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+|     <head>
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body>
+|     <h1>400 Bad Request</h1>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+7100/tcp closed font-service
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909A900%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,105,"HTTP/1\.0\x20200\x20OK\r\ncontent-type:\x20text/html\r
+SF:\naccept-ranges:\x20bytes\r\netag:\x20\"487819193\"\r\nlast-modified:\x
+SF:20Thu,\x2009\x20Jul\x202020\x2015:22:19\x20GMT\r\ncontent-length:\x200\
+SF:r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2007:33:55\x20GMT\r\nstrict-tran
+SF:sport-security:\x20max-age=16000000;\x20includeSubDomains;\x20preload;\
+SF:r\n\r\n")%r(HTTPOptions,B6,"HTTP/1\.0\x20200\x20OK\r\nallow:\x20OPTIONS
+SF:,\x20GET,\x20HEAD,\x20POST\r\ncontent-length:\x200\r\ndate:\x20Tue,\x20
+SF:04\x20Nov\x202025\x2007:33:55\x20GMT\r\nstrict-transport-security:\x20m
+SF:ax-age=16000000;\x20includeSubDomains;\x20preload;\r\n\r\n")%r(RTSPRequ
+SF:est,212,"HTTP/1\.0\x20400\x20Bad\x20Request\r\ncontent-type:\x20text/ht
+SF:ml\r\ncontent-length:\x20345\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x200
+SF:7:33:55\x20GMT\r\nstrict-transport-security:\x20max-age=16000000;\x20in
+SF:cludeSubDomains;\x20preload;\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encod
+SF:ing=\"iso-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20
+SF:XHTML\x201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<htm
+SF:l\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lan
+SF:g=\"en\">\n\x20<head>\n\x20\x20<title>400\x20Bad\x20Request</title>\n\x
+SF:20</head>\n\x20<body>\n\x20\x20<h1>400\x20Bad\x20Request</h1>\n\x20</bo
+SF:dy>\n</html>\n")%r(X11Probe,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\nc
+SF:ache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><b
+SF:ody><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20in
+SF:valid\x20request\.\n</body></html>\n\n")%r(FourOhFourRequest,20C,"HTTP/
+SF:1\.0\x20404\x20Not\x20Found\r\ncontent-type:\x20text/html\r\ncontent-le
+SF:ngth:\x20341\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2007:33:55\x20GMT\r
+SF:\nstrict-transport-security:\x20max-age=16000000;\x20includeSubDomains;
+SF:\x20preload;\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"iso-8859-1
+SF:\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x2
+SF:0Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.
+SF:w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xmlns=\"htt
+SF:p://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\">\n\x20<
+SF:head>\n\x20\x20<title>404\x20Not\x20Found</title>\n\x20</head>\n\x20<bo
+SF:dy>\n\x20\x20<h1>404\x20Not\x20Found</h1>\n\x20</body>\n</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909A906%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,105,"HTTP/1\.0\x20200\x20OK\r\ncontent-type:\x20text
+SF:/html\r\naccept-ranges:\x20bytes\r\netag:\x20\"487819193\"\r\nlast-modi
+SF:fied:\x20Thu,\x2009\x20Jul\x202020\x2015:22:19\x20GMT\r\ncontent-length
+SF::\x200\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2007:34:00\x20GMT\r\nstri
+SF:ct-transport-security:\x20max-age=16000000;\x20includeSubDomains;\x20pr
+SF:eload;\r\n\r\n")%r(HTTPOptions,B6,"HTTP/1\.0\x20200\x20OK\r\nallow:\x20
+SF:OPTIONS,\x20GET,\x20HEAD,\x20POST\r\ncontent-length:\x200\r\ndate:\x20T
+SF:ue,\x2004\x20Nov\x202025\x2007:34:01\x20GMT\r\nstrict-transport-securit
+SF:y:\x20max-age=16000000;\x20includeSubDomains;\x20preload;\r\n\r\n")%r(F
+SF:ourOhFourRequest,20C,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-type:
+SF:\x20text/html\r\ncontent-length:\x20341\r\ndate:\x20Tue,\x2004\x20Nov\x
+SF:202025\x2007:34:01\x20GMT\r\nstrict-transport-security:\x20max-age=1600
+SF:0000;\x20includeSubDomains;\x20preload;\r\n\r\n<\?xml\x20version=\"1\.0
+SF:\"\x20encoding=\"iso-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W
+SF:3C//DTD\x20XHTML\x201\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.d
+SF:td\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"
+SF:en\"\x20lang=\"en\">\n\x20<head>\n\x20\x20<title>404\x20Not\x20Found</t
+SF:itle>\n\x20</head>\n\x20<body>\n\x20\x20<h1>404\x20Not\x20Found</h1>\n\
+SF:x20</body>\n</html>\n")%r(tor-versions,A9,"HTTP/1\.0\x20400\x20Bad\x20r
+SF:equest\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\
+SF:r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\
+SF:x20an\x20invalid\x20request\.\n</body></html>\n\n")%r(RTSPRequest,212,"
+SF:HTTP/1\.0\x20400\x20Bad\x20Request\r\ncontent-type:\x20text/html\r\ncon
+SF:tent-length:\x20345\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2007:34:07\x
+SF:20GMT\r\nstrict-transport-security:\x20max-age=16000000;\x20includeSubD
+SF:omains;\x20preload;\r\n\r\n<\?xml\x20version=\"1\.0\"\x20encoding=\"iso
+SF:-8859-1\"\?>\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x20
+SF:1\.0\x20Transitional//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\"http:
+SF://www\.w3\.org/TR/xhtml1/DTD/xhtml1-transitional\.dtd\">\n<html\x20xmln
+SF:s=\"http://www\.w3\.org/1999/xhtml\"\x20xml:lang=\"en\"\x20lang=\"en\">
+SF:\n\x20<head>\n\x20\x20<title>400\x20Bad\x20Request</title>\n\x20</head>
+SF:\n\x20<body>\n\x20\x20<h1>400\x20Bad\x20Request</h1>\n\x20</body>\n</ht
+SF:ml>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:19:56 2025 -- 1 IP address (1 host up) scanned in 43.93 seconds
