@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" type="text/css" integrity="sha384-VEpVDzPR2x8NbTDZ8NFW4AWbtT2g/ollEzX/daZdW/YvUBlbgVtsxMftnJ84k0Cn" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script><script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" integrity="sha384-rgWRqC0OFPisxlUvl332tiM/qmaNxnlY46eksSZD84t+s2vZlqGeHrncwIRX7CGp" crossorigin="anonymous"></script><script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js" integrity="sha384-7PXRkl4YJnEpP8uU4ev9652TTZSxrqC8uOpcV1ftVEC7LVyLZqqDUAaq+Y+lGgr9" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><style>
+          .target:before {
+            content: "";
+            display: block;
+            height: 50px;
+            margin: -20px 0 0;
+          }
+          @media only screen and (min-width:1900px) {
+            .container {
+              width: 1800px;
+              }
+          }
+          .footer {
+            margin-top:60px;
+            padding-top:60px;
+            width: 100%;
+            height: 180px;
+            background-color: #f5f5f5;
+          }
+          .clickable {
+            cursor: pointer;
+          }
+          .panel-heading > h3:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e114"; /* glyphicon-chevron-down */
+            padding-right: 1em;
+          }
+          .panel-heading.collapsed > h3:before {
+            content: "\e080"; /* glyphicon-chevron-right */
+          }
+        </style>
+<title>Scan Report Nmap 7.92</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav">
+<li><a href="#scannedhosts">Scanned Hosts</a></li>
+<li><a href="#onlinehosts">Online Hosts</a></li>
+<li><a href="#openservices">Open Services</a></li>
+</ul></div>
+</div></nav><div class="container">
+<div class="jumbotron">
+<h1>Scan Report<br><small>Nmap 7.92</small>
+</h1>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln i.ville.gouv.fr</pre>
+<p class="lead">Tue Nov  4 02:31:24 2025 – Tue Nov  4 02:33:12 2025<br>1 hosts scanned.
+              1 hosts up.
+              0 hosts down.
+            </p>
+<div class="progress">
+<div class="progress-bar progress-bar-success" style="width:100%;">1<span class="sr-only"></span>
+</div>
+<div class="progress-bar progress-bar-danger" style="width:0%;">0<span class="sr-only"></span>
+</div>
+</div>
+</div>
+<h2 id="scannedhosts" class="target">Scanned Hosts</h2>
+<div class="table-responsive"><table id="table-overview" class="table table-striped dataTable" role="grid">
+<thead><tr>
+<th>State</th>
+<th>Address</th>
+<th>Hostname</th>
+<th>TCP (open)</th>
+<th>UDP (open)</th>
+</tr></thead>
+<tbody><tr>
+<td><span class="label label-success">up</span></td>
+<td>164.132.166.70</td>
+<td>i.ville.gouv.fr</td>
+<td>7</td>
+<td>0</td>
+</tr></tbody>
+</table></div>
+<script>
+            $(document).ready(function() {
+              $('#table-overview').DataTable();
+            });
+            $('#table-overview').DataTable( {
+              "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
+            });
+          </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
+<div class="panel panel-default">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#164-132-166-70"><h3 class="panel-title">164.132.166.70 - i.ville.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="164-132-166-70">
+<h4>Hostnames</h4>
+<ul>
+<li>i.ville.gouv.fr (user)</li>
+<li>ns3041426.ovh.net (PTR)</li>
+</ul>
+<h4>Ports</h4>
+<div class="table-responsive"><table class="table table-bordered">
+<thead><tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>State<br>Reason</th>
+<th>Service</th>
+<th>Product</th>
+<th>Version</th>
+<th>Extra Info</th>
+</tr></thead>
+<tbody>
+<tr class="success">
+<td title="Port">21</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ftp</td>
+<td title="Product">ProFTPD</td>
+<td title="Version"></td>
+<td title="Extra Info">requires SSL</td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:proftpd:proftpd">cpe:/a:proftpd:proftpd</a></td></tr>
+<tr class="success">
+<td title="Port">22</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ssh</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">53</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">domain</td>
+<td title="Product">ISC BIND</td>
+<td title="Version">9.11.5-P4-5.1+deb10u11</td>
+<td title="Extra Info">Debian Linux</td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:isc:bind:9.11.5-p4-5.1%2Bdeb10u11">cpe:/a:isc:bind:9.11.5-p4-5.1%2Bdeb10u11</a><h5>vulners</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  cpe:/a:isc:bind:9.11.5-p4-5.1%2Bdeb10u11: 
+    	CVE-2021-25216	9.8	https://vulners.com/cve/CVE-2021-25216
+    	CVE-2020-8616	8.6	https://vulners.com/cve/CVE-2020-8616
+    	CVE-2020-8625	8.1	https://vulners.com/cve/CVE-2020-8625
+    	PACKETSTORM:180550	7.5	https://vulners.com/packetstorm/PACKETSTORM:180550	*EXPLOIT*
+    	MSF:AUXILIARY-DOS-DNS-BIND_TSIG_BADTIME-	7.5	https://vulners.com/metasploit/MSF:AUXILIARY-DOS-DNS-BIND_TSIG_BADTIME-	*EXPLOIT*
+    	FBC03933-7A65-52F3-83F4-4B2253A490B6	7.5	https://vulners.com/githubexploit/FBC03933-7A65-52F3-83F4-4B2253A490B6	*EXPLOIT*
+    	CVE-2023-50387	7.5	https://vulners.com/cve/CVE-2023-50387
+    	CVE-2023-4408	7.5	https://vulners.com/cve/CVE-2023-4408
+    	CVE-2023-3341	7.5	https://vulners.com/cve/CVE-2023-3341
+    	CVE-2023-2828	7.5	https://vulners.com/cve/CVE-2023-2828
+    	CVE-2022-38178	7.5	https://vulners.com/cve/CVE-2022-38178
+    	CVE-2022-38177	7.5	https://vulners.com/cve/CVE-2022-38177
+    	CVE-2021-25215	7.5	https://vulners.com/cve/CVE-2021-25215
+    	CVE-2020-8623	7.5	https://vulners.com/cve/CVE-2020-8623
+    	CVE-2020-8617	7.5	https://vulners.com/cve/CVE-2020-8617
+    	CVE-2019-6477	7.5	https://vulners.com/cve/CVE-2019-6477
+    	CVE-2019-6468	7.5	https://vulners.com/cve/CVE-2019-6468
+    	CVE-2018-5744	7.5	https://vulners.com/cve/CVE-2018-5744
+    	CVE-2018-5743	7.5	https://vulners.com/cve/CVE-2018-5743
+    	CNVD-2017-12537	7.5	https://vulners.com/cnvd/CNVD-2017-12537
+    	9ED8A03D-FE34-5F77-8C66-C03C9615AF07	7.5	https://vulners.com/gitee/9ED8A03D-FE34-5F77-8C66-C03C9615AF07	*EXPLOIT*
+    	1337DAY-ID-34485	7.5	https://vulners.com/zdt/1337DAY-ID-34485	*EXPLOIT*
+    	CVE-2021-25220	6.8	https://vulners.com/cve/CVE-2021-25220
+    	CVE-2021-25214	6.5	https://vulners.com/cve/CVE-2021-25214
+    	CVE-2020-8622	6.5	https://vulners.com/cve/CVE-2020-8622
+    	CVE-2019-6471	5.9	https://vulners.com/cve/CVE-2019-6471
+    	CVE-2023-5680	5.3	https://vulners.com/cve/CVE-2023-5680
+    	CVE-2022-2795	5.3	https://vulners.com/cve/CVE-2022-2795
+    	CVE-2021-25219	5.3	https://vulners.com/cve/CVE-2021-25219
+    	CVE-2019-6465	5.3	https://vulners.com/cve/CVE-2019-6465
+    	PACKETSTORM:157836	5.0	https://vulners.com/packetstorm/PACKETSTORM:157836	*EXPLOIT*</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">80</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product">Apache httpd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:apache:http_server">cpe:/a:apache:http_server</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product">Apache httpd</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:apache:http_server">cpe:/a:apache:http_server</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">3306</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">mysql</td>
+<td title="Product">MySQL</td>
+<td title="Version">5.7.42</td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:mysql:mysql:5.7.42">cpe:/a:mysql:mysql:5.7.42</a></td></tr>
+<tr class="success">
+<td title="Port">8443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https-alt</td>
+<td title="Product">MiniServ</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GetRequest: 
+    HTTP/1.0 200 Document follows
+    Date: Tue, 4 Nov 2025 02:31:33 GMT
+    Server: MiniServ
+    Connection: close
+    Strict-Transport-Security: max-age=31536000;
+    pragma: no-cache
+    Expires: Thu, 1 Jan 1970 00:00:00 GMT
+    Cache-Control: no-store, no-cache, must-revalidate
+    Cache-Control: post-check=0, pre-check=0
+    Auth-type: auth-required=1
+    Set-Cookie: redirect=1; path=/; secure; httpOnly
+    Set-Cookie: testing=1; path=/; secure; httpOnly
+    X-Frame-Options: SAMEORIGIN
+    Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self'; child-src 'self'
+    X-Content-Type-Options: nosniff
+    X-no-links: 1
+    Content-type: text/html; Charset=UTF-8
+    &lt;!DOCTYPE html&gt;
+    &lt;html data-bgs="gainsboro" class="ui--html session_login"&gt;
+    &lt;head&gt;
+    &lt;meta name="color-scheme" content="only light"&gt;
+    &lt;noscript&gt; &lt;style&gt; html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { back
+  HTTPOptions: 
+    HTTP/1.0 200 Document follows
+    Date: Tue, 4 Nov 2025 02:31:39 GMT
+    Server: MiniServ
+    Connection: close
+    Strict-Transport-Security: max-age=31536000;
+    pragma: no-cache
+    Expires: Thu, 1 Jan 1970 00:00:00 GMT
+    Cache-Control: no-store, no-cache, must-revalidate
+    Cache-Control: post-check=0, pre-check=0
+    Auth-type: auth-required=1
+    Set-Cookie: redirect=1; path=/; secure; httpOnly
+    Set-Cookie: testing=1; path=/; secure; httpOnly
+    X-Frame-Options: SAMEORIGIN
+    Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self'; child-src 'self'
+    X-Content-Type-Options: nosniff
+    X-no-links: 1
+    Content-type: text/html; Charset=UTF-8
+    &lt;!DOCTYPE html&gt;
+    &lt;html data-bgs="gainsboro" class="ui--html session_login"&gt;
+    &lt;head&gt;
+    &lt;meta name="color-scheme" content="only light"&gt;
+    &lt;noscript&gt; &lt;style&gt; html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { back</pre>
+<h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">MiniServ</pre>
+</td></tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h2 id="openservices" class="target">Open Services</h2>
+<div class="table-responsive"><table id="table-services" class="table table-striped dataTable" role="grid">
+<thead><tr>
+<th>Address</th>
+<th>Port</th>
+<th>Protocol</th>
+<th>Service</th>
+<th>Product</th>
+<th>Version</th>
+<th>CPE</th>
+<th>Extra info</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>21</td>
+<td>tcp</td>
+<td>ftp</td>
+<td>ProFTPD</td>
+<td></td>
+<td>cpe:/a:proftpd:proftpd</td>
+<td>requires SSL</td>
+</tr>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>22</td>
+<td>tcp</td>
+<td>ssh</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>53</td>
+<td>tcp</td>
+<td>domain</td>
+<td>ISC BIND</td>
+<td>9.11.5-P4-5.1+deb10u11</td>
+<td>cpe:/a:isc:bind:9.11.5-p4-5.1%2Bdeb10u11</td>
+<td>Debian Linux</td>
+</tr>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>80</td>
+<td>tcp</td>
+<td>http</td>
+<td>Apache httpd</td>
+<td></td>
+<td>cpe:/a:apache:http_server</td>
+<td></td>
+</tr>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>443</td>
+<td>tcp</td>
+<td>http</td>
+<td>Apache httpd</td>
+<td></td>
+<td>cpe:/a:apache:http_server</td>
+<td></td>
+</tr>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>3306</td>
+<td>tcp</td>
+<td>mysql</td>
+<td>MySQL</td>
+<td>5.7.42</td>
+<td>cpe:/a:mysql:mysql:5.7.42</td>
+<td></td>
+</tr>
+<tr>
+<td>164.132.166.70 - i.ville.gouv.fr</td>
+<td>8443</td>
+<td>tcp</td>
+<td>https-alt</td>
+<td>MiniServ</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<script>
+            $(document).ready(function() {
+              $('#table-services').DataTable();
+            });
+            $('#table-services').DataTable( {
+              "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ]
+            });
+          </script>
+</div>
+<footer class="footer"><div class="container"><p class="text-muted">
+              This report was generated with <a href="https://github.com/honze-net/nmap-bootstrap-xsl">Nmap Bootstrap XSL</a>.<br>
+              Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA</a>.<br>
+              Designed and built by Andreas Hontzia (<a href="https://www.twitter.com/honze_net">@honze_net</a>).<br></p></div></footer>
+</body>
+</html>
