@@ -1,0 +1,148 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 10,
+    "statusCode": 200,
+    "testsFailed": 5,
+    "testsPassed": 5,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 20:39:57 GMT",
+      "vary": "Cookie,Accept-Encoding",
+      "last-modified": "Tue, 04 Nov 2025 20:39:57 GMT",
+      "content-length": "25703",
+      "connection": "close",
+      "content-type": "text/html; charset=utf-8",
+      "set-cookie": [
+        "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO=756095404.20480.0000; path=/; Httponly; Secure",
+        "TS017a74ff=011854090880e22d26a179977a3635fb70a79a9be05bfd897b496136c1c2a65e6b4050ce9edfae37aafaa36800e561c3e19e5b6855a0cc65ea01e2aedb01249476558d4907; Path=/; Domain=.www.diplomatie.gouv.fr"
+      ],
+      "x-xss-protection": "1",
+      "x-content-type-options": "nosniff"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "BIGipServerPOOL_DMZ01_80_FRANCE_DIPLO": {
+          "domain": "www.diplomatie.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS017a74ff": {
+          "domain": "www.diplomatie.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.diplomatie.gouv.fr/fr/dossiers-pays/syrie/",
+      "redirects": true,
+      "route": [
+        "http://sy.ambafrance.org/",
+        "https://sy.ambafrance.org/",
+        "https://www.diplomatie.gouv.fr/fr/dossiers-pays/syrie/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://www.diplomatie.gouv.fr/local/cache-js/1f1c1ef105a5eb8dd4b9f905f7f2b08c.js?1761744301": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.diplomatie.gouv.fr/plugins/tarteaucitron_mae/lib/tarteaucitron/tarteaucitron.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.diplomatie.gouv.fr/local/cache-js/jsdyn-services_tac_services_mae_activation_js-6eb871ca.js?1723531754": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.diplomatie.gouv.fr/local/cache-js/jsdyn-javascript_fd_application_js-3ee027b7.js?1617282789": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
