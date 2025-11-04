@@ -1,0 +1,144 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "C-",
+    "error": null,
+    "score": 45,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 13:15:29 GMT",
+      "x-drupal-cache": "MISS",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "x-xss-protection": "1; mode=block",
+      "x-frame-options": "SAMEORIGIN",
+      "strict-transport-security": "max-age=1000",
+      "expect-ct": "max-age=1000",
+      "from-origin": "same",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-ua-compatible": "IE=edge",
+      "vary": "Accept-Encoding",
+      "content-length": "6630",
+      "content-type": "text/html; charset=utf-8",
+      "set-cookie": [
+        "ROUTEID=.route2; path=/; Domain=.justice.gouv.fr; max-age=3600",
+        "BIGipServerHyj6aQISczaQP21ZTztlDg=!N8JMy9wDQfrQJuRedLNKq/VAg+8cxJfDi6MXja/KSeHQKq7F7MD76uzyPH2MaAKyuhDs79AXqAOSMA==; path=/; Httponly",
+        "TS01adc431=01a6efdead676b7e6d02cc80041a2a7650ebf601e2003a2b06e12ebfa878cbd8dc8d8ae3fe40a53a3735a594cb263dfe148e4a6b0accd72da2e4ff56875c2c502744d961fff49f0fe3ad59599416c395e56758bec0; Path=/; Domain=.opm.justice.gouv.fr"
+      ],
+      "connection": "close"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "ROUTEID": {
+          "domain": "justice.gouv.fr",
+          "max-age": 3600,
+          "path": "/",
+          "port": null
+        },
+        "BIGipServerHyj6aQISczaQP21ZTztlDg": {
+          "domain": "opm.justice.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "TS01adc431": {
+          "domain": "opm.justice.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://opm.justice.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://opm.justice.gouv.fr/",
+        "https://opm.justice.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-implemented-max-age-less-than-six-months",
+      "scoreModifier": -10,
+      "data": "max-age=1000",
+      "includeSubDomains": false,
+      "maxAge": 1000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
