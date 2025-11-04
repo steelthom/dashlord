@@ -1,0 +1,30 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:16:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln listes.recherche.gouv.fr
+Nmap scan report for listes.recherche.gouv.fr (194.57.3.12)
+Host is up (0.088s latency).
+rDNS record for 194.57.3.12: ix1-pv-lbl-vip-194-57-3-12.renater.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, SIPOptions, TerminalServerCookie: 
+|     HTTP/1.0 403 Forbidden
+|     Connection: close
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909A85A%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,40,"HTTP/1\.0\x20403\x20Forbidden\r\nConnection:\x20
+SF:close\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,40,"HTTP/1\.0\x20
+SF:403\x20Forbidden\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\
+SF:n")%r(FourOhFourRequest,40,"HTTP/1\.0\x20403\x20Forbidden\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,40,"HTTP/1\.
+SF:0\x20403\x20Forbidden\r\nConnection:\x20close\r\nContent-Length:\x200\r
+SF:\n\r\n")%r(TerminalServerCookie,40,"HTTP/1\.0\x20403\x20Forbidden\r\nCo
+SF:nnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,40,"H
+SF:TTP/1\.0\x20403\x20Forbidden\r\nConnection:\x20close\r\nContent-Length:
+SF:\x200\r\n\r\n");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:18:59 2025 -- 1 IP address (1 host up) scanned in 157.58 seconds
