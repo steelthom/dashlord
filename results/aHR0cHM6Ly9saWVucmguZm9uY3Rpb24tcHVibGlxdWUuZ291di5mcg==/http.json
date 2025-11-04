@@ -1,0 +1,178 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "C+",
+    "error": null,
+    "score": 60,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 07:01:19 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "set-cookie": [
+        "PHPSESSID=91f21a1075f1b09639f90a10e8da3ad4; expires=Thu, 12-Feb-2026 07:01:19 GMT; Max-Age=8640000; path=/; domain=.lienrh.fonction-publique.gouv.fr; HttpOnly",
+        "PHPSESSID=91f21a1075f1b09639f90a10e8da3ad4; expires=Thu, 12 Feb 2026 07:01:19 GMT; Max-Age=8640000; path=/; domain=.lienrh.fonction-publique.gouv.fr; httponly"
+      ],
+      "pragma": "no-cache, no-cache",
+      "x-frame-options": "SAMEORIGIN;, SAMEORIGIN;",
+      "content-security-policy": "frame-ancestors 'self';, frame-ancestors 'self';",
+      "cache-control": "no-cache, no-store, no-cache, no-store, private",
+      "expires": "2025-11-04 08:01:19",
+      "x-robots-tag": "noindex",
+      "strict-transport-security": "max-age=15724800; includeSubDomains"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "'self'"
+        ],
+        ",": [
+          "'self'",
+          "frame-ancestors"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -10,
+      "data": {
+        "PHPSESSID": {
+          "domain": "lienrh.fonction-publique.gouv.fr",
+          "expires": "2026-02-12T07:01:19.000Z",
+          "httponly": true,
+          "max-age": 8640000,
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://lienrh.fonction-publique.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://lienrh.fonction-publique.gouv.fr/",
+        "https://lienrh.fonction-publique.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=15724800; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 15724800,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/js/all-libs.js?_=en-dde116cc601ea8471e88ad7ca9133654": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/js/all-angular-libs.js?_=en-5f2c73f12b4ba75e97ac7580ac79edc3": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/js/all-jamespot-angular.js?_=en-495561a7ffa4809688f08cdb3aa4dcba": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/?action=cachedResources&lang=en&resourcesTime=1645134743&_=en-7d5cfdb06b5fedc9ef628da7e7361ad910a195ea": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/?action=cachedEmojis&_=en-7d5cfdb06b5fedc9ef628da7e7361ad910a195ea": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/js/fullcalendar-3.9/fullcalendar-locale/fr.js?_=en-7d5cfdb06b5fedc9ef628da7e7361ad910a195ea": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jamespot.pro/p/lienrh.fonction-publique.gouv.fr/?action=cachedClosure&lang=en&_=en-7d5cfdb06b5fedc9ef628da7e7361ad910a195ea": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "SAMEORIGIN;, SAMEORIGIN;"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
