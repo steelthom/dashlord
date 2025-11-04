@@ -1,0 +1,40 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:07:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln nacre.emploi.gouv.fr
+Nmap scan report for nacre.emploi.gouv.fr (217.109.233.44)
+Host is up (0.14s latency).
+rDNS record for 217.109.233.44: d96de92c.fsp.oleane.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+443/tcp open  ssl/https?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909B438%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(TerminalServerCookie,69,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\
+SF:nLocation:\x20https://mstshash=nmap\r\nConnection:\x20close\r\nContent-
+SF:Length:\x200\r\n\r\n")%r(SIPOptions,62,"HTTP/1\.0\x20301\x20Moved\x20Pe
+SF:rmanently\r\nLocation:\x20https://sip:nm\r\nConnection:\x20close\r\nCon
+SF:tent-Length:\x200\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:10:40 2025 -- 1 IP address (1 host up) scanned in 216.54 seconds
