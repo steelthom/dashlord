@@ -1,0 +1,81 @@
+# Nmap 7.92 scan initiated Tue Nov  4 19:40:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sirano.sante.gouv.fr
+Nmap scan report for sirano.sante.gouv.fr (185.194.83.130)
+Host is up (0.096s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 19:40:57 GMT
+|     Content-Type: application/octet-stream
+|     Content-Length: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!CaQMImkwn7tHzHUXIkI7F7SI9ajmivz3qAX4c3AM99HghwjG2fr3ofUDTet3jo3g2n/7+PoSwdkryjrBjWjvrHYUmUHO; path=/; Httponly; Secure; SameSite=Strict
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Set-Cookie: TS01ac8ac8=01352d3811bbaed18ce0f68697c0505b295be1393ce7f0026c05fb9cfe3145fd0b229a2d941dad466f8e1fe79fb24b2fa7c7404fb3; Path=/; Secure; HttpOnly
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 19:40:56 GMT
+|     Content-Type: application/octet-stream
+|     Content-Length: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!ySfpLIhRAjKCcIAXIkI7F7SI9ajmiuajR7euAsO93HqEyLmI9wG/EXNAFrGvzrJKE6ZM4N+bqE801UVovu1YuLRRgMSD; path=/; Httponly; Secure; SameSite=Strict
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Set-Cookie: TS01ac8ac8=01352d3811a2169cd64568663a6d88bbf8c98bb3f5f7ff4e62e2845ce55cd60a9ee9585997c9bd4cab4513b7f11fbea6bab5ddec5f; Path=/; Secure; HttpOnly
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 19:40:56 GMT
+|     Content-Type: application/octet-stream
+|     Content-Length: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!0rWtlBSTZx57HHgXIkI7F7SI9ajmivhq49PA9fb3cGF4PJbasa4gFCPghTTz2l2nfZjxqqn4R02rIjKBik3tjKwCDrQc; path=/; Httponly; Secure; SameSite=Strict
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|_    Set-Cookie: TS01ac8ac8=01352d3811c9e8219028b71af8584358d0dd0d22e84fdbf6618e88e2cf5b680377217367e1dc976fd8399ee3639c820dc9f672a57c; Path=/; Secure; HttpOnly
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A56C2%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A56C8%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,231,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2004\x
+SF:20Nov\x202025\x2019:40:56\x20GMT\r\nContent-Type:\x20application/octet-
+SF:stream\r\nContent-Length:\x200\r\nConnection:\x20close\r\nSet-Cookie:\x
+SF:20BIGipServerpool-sirano-production\.cegedim\.cloud-tcp3000=!ySfpLIhRAj
+SF:KCcIAXIkI7F7SI9ajmiuajR7euAsO93HqEyLmI9wG/EXNAFrGvzrJKE6ZM4N\+bqE801UVo
+SF:vu1YuLRRgMSD;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\n
+SF:Strict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\
+SF:nSet-Cookie:\x20TS01ac8ac8=01352d3811a2169cd64568663a6d88bbf8c98bb3f5f7
+SF:ff4e62e2845ce55cd60a9ee9585997c9bd4cab4513b7f11fbea6bab5ddec5f;\x20Path
+SF:=/;\x20Secure;\x20HttpOnly\r\n\r\n")%r(HTTPOptions,231,"HTTP/1\.1\x2020
+SF:0\x20OK\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2019:40:56\x20GMT\r\nCon
+SF:tent-Type:\x20application/octet-stream\r\nContent-Length:\x200\r\nConne
+SF:ction:\x20close\r\nSet-Cookie:\x20BIGipServerpool-sirano-production\.ce
+SF:gedim\.cloud-tcp3000=!0rWtlBSTZx57HHgXIkI7F7SI9ajmivhq49PA9fb3cGF4PJbas
+SF:a4gFCPghTTz2l2nfZjxqqn4R02rIjKBik3tjKwCDrQc;\x20path=/;\x20Httponly;\x2
+SF:0Secure;\x20SameSite=Strict\r\nStrict-Transport-Security:\x20max-age=31
+SF:536000;\x20includeSubDomains\r\nSet-Cookie:\x20TS01ac8ac8=01352d3811c9e
+SF:8219028b71af8584358d0dd0d22e84fdbf6618e88e2cf5b680377217367e1dc976fd839
+SF:9ee3639c820dc9f672a57c;\x20Path=/;\x20Secure;\x20HttpOnly\r\n\r\n")%r(F
+SF:ourOhFourRequest,231,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2004\x20
+SF:Nov\x202025\x2019:40:57\x20GMT\r\nContent-Type:\x20application/octet-st
+SF:ream\r\nContent-Length:\x200\r\nConnection:\x20close\r\nSet-Cookie:\x20
+SF:BIGipServerpool-sirano-production\.cegedim\.cloud-tcp3000=!CaQMImkwn7tH
+SF:zHUXIkI7F7SI9ajmivz3qAX4c3AM99HghwjG2fr3ofUDTet3jo3g2n/7\+PoSwdkryjrBjW
+SF:jvrHYUmUHO;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nSt
+SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nS
+SF:et-Cookie:\x20TS01ac8ac8=01352d3811bbaed18ce0f68697c0505b295be1393ce7f0
+SF:026c05fb9cfe3145fd0b229a2d941dad466f8e1fe79fb24b2fa7c7404fb3;\x20Path=/
+SF:;\x20Secure;\x20HttpOnly\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 19:43:21 2025 -- 1 IP address (1 host up) scanned in 165.13 seconds
