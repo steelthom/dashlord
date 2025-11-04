@@ -1,0 +1,101 @@
+# Nmap 7.92 scan initiated Tue Nov  4 18:52:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln renfortrh.solidarites-sante.gouv.fr
+Nmap scan report for renfortrh.solidarites-sante.gouv.fr (185.194.82.20)
+Host is up (0.081s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   tcpwrapped
+|_http-server-header: BigIP
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Tue, 04 Nov 2025 18:53:05 GMT
+|     Expires: 0
+|     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+|     X-XSS-Protection: 1; mode=block
+|     Pragma: no-cache
+|     X-Frame-Options: sameorigin
+|     Referrer-Policy: strict-origin
+|     Content-Security-Policy: default-src 'self'; frame-src 'self' https://2953234.fls.doubleclick.net/ data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' https://*.basemaps.cartocdn.com data:; font-src 'self' https://fonts.gstatic.com https://netdna.bootstrapcdn.com data:
+|     Vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+|     X-Content-Type-Options: nosniff
+|     Feature-Policy: geolocation 'none'; midi 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; fulls
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 18:53:04 GMT
+|     Expires: 0
+|     Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+|     X-XSS-Protection: 1; mode=block
+|     Pragma: no-cache
+|     Referrer-Policy: strict-origin
+|     Accept-Ranges: bytes
+|     Content-Security-Policy: default-src 'self'; frame-src 'self' https://2953234.fls.doubleclick.net/ data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' https://*.basemaps.cartocdn.com data:; font-src 'self' https://fonts.gstatic.com https://netdna.bootstrapcdn.com data:
+|     Content-Language: en-US
+|     X-Frame-Options: sameorigin
+|     Vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+|     Last-Modified: Thu, 20 Jul 2023 10:01:13 GMT
+|     X-Content-Type-Options: nosniff
+|     Feature-Policy: geolocation 'none'; midi 'none'; sync-xhr 'none'; micropho
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 04 Nov 2025 18:53:05 GMT
+|     Allow: GET,HEAD,OPTIONS
+|     Vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+|     Content-Length: 0
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Referrer-Policy: strict-origin
+|     X-Frame-Options: sameorigin
+|     Keep-Alive: timeout=5, max=100
+|     Connection: close
+|_    Set-Cookie: BIGipServerpool-dgs-rrh.cegedim.cloud-http=!LsFlkYoUW0NyrzoXIkI7F7SI9ajmin3oVgO1qzH0qbxfd89gWJfJqa1CiCjW9u3tsba9Lq66FjdKR/mGEBSCHKJsSdI=; path=/; Httponly; Secure
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A4B90%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1193,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2004\
+SF:x20Nov\x202025\x2018:53:04\x20GMT\r\nExpires:\x200\r\nCache-Control:\x2
+SF:0no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nX-XSS-Prote
+SF:ction:\x201;\x20mode=block\r\nPragma:\x20no-cache\r\nReferrer-Policy:\x
+SF:20strict-origin\r\nAccept-Ranges:\x20bytes\r\nContent-Security-Policy:\
+SF:x20default-src\x20'self';\x20frame-src\x20'self'\x20https://2953234\.fl
+SF:s\.doubleclick\.net/\x20data:;\x20script-src\x20'self'\x20'unsafe-inlin
+SF:e'\x20'unsafe-eval'\x20https://storage\.googleapis\.com;\x20style-src\x
+SF:20'self'\x20https://fonts\.googleapis\.com\x20'unsafe-inline';\x20img-s
+SF:rc\x20'self'\x20https://\*\.basemaps\.cartocdn\.com\x20data:;\x20font-s
+SF:rc\x20'self'\x20https://fonts\.gstatic\.com\x20https://netdna\.bootstra
+SF:pcdn\.com\x20data:\r\nContent-Language:\x20en-US\r\nX-Frame-Options:\x2
+SF:0sameorigin\r\nVary:\x20Origin,Access-Control-Request-Method,Access-Con
+SF:trol-Request-Headers\r\nLast-Modified:\x20Thu,\x2020\x20Jul\x202023\x20
+SF:10:01:13\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nFeature-Policy
+SF::\x20geolocation\x20'none';\x20midi\x20'none';\x20sync-xhr\x20'none';\x
+SF:20micropho")%r(HTTPOptions,251,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,
+SF:\x2004\x20Nov\x202025\x2018:53:05\x20GMT\r\nAllow:\x20GET,HEAD,OPTIONS\
+SF:r\nVary:\x20Origin,Access-Control-Request-Method,Access-Control-Request
+SF:-Headers\r\nContent-Length:\x200\r\nStrict-Transport-Security:\x20max-a
+SF:ge=31536000;\x20includeSubDomains\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict
+SF:-origin\r\nX-Frame-Options:\x20sameorigin\r\nKeep-Alive:\x20timeout=5,\
+SF:x20max=100\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-dg
+SF:s-rrh\.cegedim\.cloud-http=!LsFlkYoUW0NyrzoXIkI7F7SI9ajmin3oVgO1qzH0qbx
+SF:fd89gWJfJqa1CiCjW9u3tsba9Lq66FjdKR/mGEBSCHKJsSdI=;\x20path=/;\x20Httpon
+SF:ly;\x20Secure\r\n\r\n")%r(FourOhFourRequest,552,"HTTP/1\.1\x20404\x20No
+SF:t\x20Found\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2018:53:05\x20GMT\r\n
+SF:Expires:\x200\r\nCache-Control:\x20no-cache,\x20no-store,\x20max-age=0,
+SF:\x20must-revalidate\r\nX-XSS-Protection:\x201;\x20mode=block\r\nPragma:
+SF:\x20no-cache\r\nX-Frame-Options:\x20sameorigin\r\nReferrer-Policy:\x20s
+SF:trict-origin\r\nContent-Security-Policy:\x20default-src\x20'self';\x20f
+SF:rame-src\x20'self'\x20https://2953234\.fls\.doubleclick\.net/\x20data:;
+SF:\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\x20https:/
+SF:/storage\.googleapis\.com;\x20style-src\x20'self'\x20https://fonts\.goo
+SF:gleapis\.com\x20'unsafe-inline';\x20img-src\x20'self'\x20https://\*\.ba
+SF:semaps\.cartocdn\.com\x20data:;\x20font-src\x20'self'\x20https://fonts\
+SF:.gstatic\.com\x20https://netdna\.bootstrapcdn\.com\x20data:\r\nVary:\x2
+SF:0Origin,Access-Control-Request-Method,Access-Control-Request-Headers\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nFeature-Policy:\x20geolocation\x
+SF:20'none';\x20midi\x20'none';\x20sync-xhr\x20'none';\x20microphone\x20'n
+SF:one';\x20camera\x20'none';\x20magnetometer\x20'none';\x20gyroscope\x20'
+SF:none';\x20speaker\x20'none';\x20fulls");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 18:55:20 2025 -- 1 IP address (1 host up) scanned in 154.97 seconds
