@@ -1,0 +1,134 @@
+# Nmap 7.92 scan initiated Tue Nov  4 19:55:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sgdsn.gouv.fr
+Nmap scan report for sgdsn.gouv.fr (148.253.98.171)
+Host is up (0.13s latency).
+rDNS record for 148.253.98.171: ows-148-253-98-171.cloudgouv-eu-west-1.compute.outscale.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/plain; charset=utf-8
+|     x-content-type-options: nosniff
+|     date: Tue, 04 Nov 2025 19:56:04 GMT
+|     content-length: 19
+|     page not found
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/plain; charset=utf-8
+|     x-content-type-options: nosniff
+|     date: Tue, 04 Nov 2025 19:56:03 GMT
+|     content-length: 19
+|     page not found
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-type: text/plain; charset=utf-8
+|     connection: close
+|_    Request
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/plain; charset=utf-8
+|     x-content-type-options: nosniff
+|     date: Tue, 04 Nov 2025 19:56:10 GMT
+|     content-length: 19
+|     page not found
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/plain; charset=utf-8
+|     x-content-type-options: nosniff
+|     date: Tue, 04 Nov 2025 19:56:09 GMT
+|     content-length: 19
+|     page not found
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-type: text/plain; charset=utf-8
+|     connection: close
+|_    Request
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A5A53%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-type:\x20te
+SF:xt/plain;\x20charset=utf-8\r\nx-content-type-options:\x20nosniff\r\ndat
+SF:e:\x20Tue,\x2004\x20Nov\x202025\x2019:56:03\x20GMT\r\ncontent-length:\x
+SF:2019\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HTTP/1\.0
+SF:\x20404\x20Not\x20Found\r\ncontent-type:\x20text/plain;\x20charset=utf-
+SF:8\r\nx-content-type-options:\x20nosniff\r\ndate:\x20Tue,\x2004\x20Nov\x
+SF:202025\x2019:56:03\x20GMT\r\ncontent-length:\x2019\r\n\r\n404\x20page\x
+SF:20not\x20found\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nconnection:\x20clo
+SF:se\r\n\r\n400\x20Bad\x20Request")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n")%r(FourOhFourRequest,B0,"HTTP/1\.0\x20
+SF:404\x20Not\x20Found\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\
+SF:nx-content-type-options:\x20nosniff\r\ndate:\x20Tue,\x2004\x20Nov\x2020
+SF:25\x2019:56:04\x20GMT\r\ncontent-length:\x2019\r\n\r\n404\x20page\x20no
+SF:t\x20found\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nCon
+SF:tent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20clos
+SF:e\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20re
+SF:quest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</bo
+SF:dy></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20re
+SF:quest\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnect
+SF:ion:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\
+SF:x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20req
+SF:uest\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x
+SF:20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
+SF:alid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A5A59%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,B0,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-type
+SF::\x20text/plain;\x20charset=utf-8\r\nx-content-type-options:\x20nosniff
+SF:\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2019:56:09\x20GMT\r\ncontent-le
+SF:ngth:\x2019\r\n\r\n404\x20page\x20not\x20found\n")%r(HTTPOptions,B0,"HT
+SF:TP/1\.0\x20404\x20Not\x20Found\r\ncontent-type:\x20text/plain;\x20chars
+SF:et=utf-8\r\nx-content-type-options:\x20nosniff\r\ndate:\x20Tue,\x2004\x
+SF:20Nov\x202025\x2019:56:10\x20GMT\r\ncontent-length:\x2019\r\n\r\n404\x2
+SF:0page\x20not\x20found\n")%r(FourOhFourRequest,B0,"HTTP/1\.0\x20404\x20N
+SF:ot\x20Found\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-conte
+SF:nt-type-options:\x20nosniff\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2019
+SF::56:10\x20GMT\r\ncontent-length:\x2019\r\n\r\n404\x20page\x20not\x20fou
+SF:nd\n")%r(tor-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent
+SF:-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\
+SF:nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20reques
+SF:t</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body><
+SF:/html>\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncont
+SF:ent-type:\x20text/plain;\x20charset=utf-8\r\nconnection:\x20close\r\n\r
+SF:\n400\x20Bad\x20Request")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20req
+SF:uest\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnecti
+SF:on:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x
+SF:20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20requ
+SF:est\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x
+SF:20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
+SF:alid\x20request\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\
+SF:.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\
+SF:x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r
+SF:\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x
+SF:20an\x20invalid\x20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 19:56:32 2025 -- 1 IP address (1 host up) scanned in 45.63 seconds
