@@ -1,0 +1,168 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 0,
+    "statusCode": 200,
+    "testsFailed": 6,
+    "testsPassed": 4,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "server": "nginx",
+      "date": "Tue, 04 Nov 2025 15:08:26 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "transfer-encoding": "chunked",
+      "vary": "Accept-Encoding",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "set-cookie": [
+        "sessver=0; path=/; secure; HttpOnly",
+        "AFLang=fr; expires=Wed, 04-Nov-2026 15:08:26 GMT; Max-Age=31536000; path=/; secure"
+      ],
+      "strict-transport-security": "max-age=63072000; includeSubdomains; preload",
+      "connection": "close"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "AFSESSID": {
+          "domain": "pipa.diplomatie.gouv.fr",
+          "expires": "2025-11-25T15:08:25.000Z",
+          "httponly": true,
+          "max-age": 1814400,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "sessver": {
+          "domain": "pipa.diplomatie.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "sdid": {
+          "domain": "pipa.diplomatie.gouv.fr",
+          "expires": "2035-11-02T15:08:25.000Z",
+          "httponly": true,
+          "max-age": 315360000,
+          "path": "/",
+          "port": null
+        },
+        "AFLang": {
+          "domain": "pipa.diplomatie.gouv.fr",
+          "expires": "2026-11-04T15:08:26.000Z",
+          "max-age": 31536000,
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://pipa.diplomatie.gouv.fr/",
+      "redirects": false,
+      "route": [
+        "http://pipa.diplomatie.gouv.fr/"
+      ],
+      "statusCode": 503
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000; includeSubdomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 63072000,
+      "preload": true,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "//cdn.polyfill.io/v2/polyfill.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://www.gstatic.com/charts/loader.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyDm9AjQcg4wO_NutcMz79EYcuYuGLmvnOc&libraries=places&callback=initAutocomplete&loading=async": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.embedly.com/widgets/platform.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}

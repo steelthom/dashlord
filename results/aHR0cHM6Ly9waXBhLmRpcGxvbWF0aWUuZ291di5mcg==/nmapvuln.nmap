@@ -1,0 +1,157 @@
+# Nmap 7.92 scan initiated Tue Nov  4 15:16:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pipa.diplomatie.gouv.fr
+Nmap scan report for pipa.diplomatie.gouv.fr (80.247.12.239)
+Host is up (0.12s latency).
+rDNS record for 80.247.12.239: mx5.alumnforce.org
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html>
+|     <head>
+|     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+|     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     </head>
+|     <body>
+|     <div class="maintenance-wrapper">
+|     <div class="maintenance-container">
+|     <div class="maintenance-content">
+|     class="title">We are down for maintenance.</h1>
+|     class="subtitle">We will be back shortly.</p>
+|     <img src="https://www.alumnforce.com/wp-content/uploads/2017/10/illu-maintenance.jpg" alt="AlumnForce Maintenance">
+|     </div>
+|     </div>
+|     </div>
+|     </body>
+|     <style>
+|     html{
+|     height: 100vh;
+|     body{
+|     height: 100%;
+|_    display: -webkit-box;
+443/tcp open  ssl/https nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html>
+|     <head>
+|     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+|     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|     </head>
+|     <body>
+|     <div class="maintenance-wrapper">
+|     <div class="maintenance-container">
+|     <div class="maintenance-content">
+|     class="title">We are down for maintenance.</h1>
+|     class="subtitle">We will be back shortly.</p>
+|     <img src="https://www.alumnforce.com/wp-content/uploads/2017/10/illu-maintenance.jpg" alt="AlumnForce Maintenance">
+|     </div>
+|     </div>
+|     </div>
+|     </body>
+|     <style>
+|     html{
+|     height: 100vh;
+|     body{
+|     height: 100%;
+|_    display: -webkit-box;
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A18D5%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,A27,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\ncache-co
+SF:ntrol:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>\n\x20\x2
+SF:0<head>\n\x20\x20\x20\x20<link\x20href=\"https://fonts\.googleapis\.com
+SF:/css\?family=Lato\"\x20rel=\"stylesheet\">\n\x20\x20\x20\x20<link\x20hr
+SF:ef=\"https://fonts\.googleapis\.com/css\?family=Montserrat\"\x20rel=\"s
+SF:tylesheet\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"w
+SF:idth=device-width,\x20initial-scale=1\.0\">\n\x20\x20</head>\n\x20\x20<
+SF:body>\n\x20\x20\x20\x20<div\x20class=\"maintenance-wrapper\">\n\x20\x20
+SF:\x20\x20\x20\x20<div\x20class=\"maintenance-container\">\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<div\x20class=\"maintenance-content\">\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20class=\"title\">We\x
+SF:20are\x20down\x20for\x20maintenance\.</h1>\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20<p\x20class=\"subtitle\">We\x20will\x20be\x20back\
+SF:x20shortly\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\
+SF:x20src=\"https://www\.alumnforce\.com/wp-content/uploads/2017/10/illu-m
+SF:aintenance\.jpg\"\x20alt=\"AlumnForce\x20Maintenance\">\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20</div>\n\x20\x20\x20\x20\x20\x20</div>\n\x20\x20\x20\
+SF:x20</div>\n\x20\x20</body>\n\x20\x20\n\x20\x20<style>\n\x20\x20\x20\x20
+SF:html{\n\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20}\n\n
+SF:\x20\x20\x20\x20body{\n\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x
+SF:20\x20\x20\x20\x20display:\x20-webkit-box;\n\x20\x20\x20")%r(HTTPOption
+SF:s,A27,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\ncache-control:\x20
+SF:no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>\n\x20\x20<head>\n\
+SF:x20\x20\x20\x20<link\x20href=\"https://fonts\.googleapis\.com/css\?fami
+SF:ly=Lato\"\x20rel=\"stylesheet\">\n\x20\x20\x20\x20<link\x20href=\"https
+SF:://fonts\.googleapis\.com/css\?family=Montserrat\"\x20rel=\"stylesheet\
+SF:">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devic
+SF:e-width,\x20initial-scale=1\.0\">\n\x20\x20</head>\n\x20\x20<body>\n\x2
+SF:0\x20\x20\x20<div\x20class=\"maintenance-wrapper\">\n\x20\x20\x20\x20\x
+SF:20\x20<div\x20class=\"maintenance-container\">\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20<div\x20class=\"maintenance-content\">\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20class=\"title\">We\x20are\x20d
+SF:own\x20for\x20maintenance\.</h1>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20<p\x20class=\"subtitle\">We\x20will\x20be\x20back\x20shortly
+SF:\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\"h
+SF:ttps://www\.alumnforce\.com/wp-content/uploads/2017/10/illu-maintenance
+SF:\.jpg\"\x20alt=\"AlumnForce\x20Maintenance\">\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20</div>\n\x20\x20\x20\x20\x20\x20</div>\n\x20\x20\x20\x20</div>\
+SF:n\x20\x20</body>\n\x20\x20\n\x20\x20<style>\n\x20\x20\x20\x20html{\n\x2
+SF:0\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20}\n\n\x20\x20\x
+SF:20\x20body{\n\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x20
+SF:\x20\x20display:\x20-webkit-box;\n\x20\x20\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A18DB%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,A27,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\nc
+SF:ache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>\n
+SF:\x20\x20<head>\n\x20\x20\x20\x20<link\x20href=\"https://fonts\.googleap
+SF:is\.com/css\?family=Lato\"\x20rel=\"stylesheet\">\n\x20\x20\x20\x20<lin
+SF:k\x20href=\"https://fonts\.googleapis\.com/css\?family=Montserrat\"\x20
+SF:rel=\"stylesheet\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20cont
+SF:ent=\"width=device-width,\x20initial-scale=1\.0\">\n\x20\x20</head>\n\x
+SF:20\x20<body>\n\x20\x20\x20\x20<div\x20class=\"maintenance-wrapper\">\n\
+SF:x20\x20\x20\x20\x20\x20<div\x20class=\"maintenance-container\">\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\"maintenance-content\"
+SF:>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20class=\"title
+SF:\">We\x20are\x20down\x20for\x20maintenance\.</h1>\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<p\x20class=\"subtitle\">We\x20will\x20be\x
+SF:20back\x20shortly\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20<img\x20src=\"https://www\.alumnforce\.com/wp-content/uploads/2017/10
+SF:/illu-maintenance\.jpg\"\x20alt=\"AlumnForce\x20Maintenance\">\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20</div>\n\x20\x20\x20\x20\x20\x20</div>\n\x20\x
+SF:20\x20\x20</div>\n\x20\x20</body>\n\x20\x20\n\x20\x20<style>\n\x20\x20\
+SF:x20\x20html{\n\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x
+SF:20}\n\n\x20\x20\x20\x20body{\n\x20\x20\x20\x20\x20\x20height:\x20100%;\
+SF:n\x20\x20\x20\x20\x20\x20display:\x20-webkit-box;\n\x20\x20\x20")%r(HTT
+SF:POptions,A27,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\ncache-contr
+SF:ol:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>\n\x20\x20<h
+SF:ead>\n\x20\x20\x20\x20<link\x20href=\"https://fonts\.googleapis\.com/cs
+SF:s\?family=Lato\"\x20rel=\"stylesheet\">\n\x20\x20\x20\x20<link\x20href=
+SF:\"https://fonts\.googleapis\.com/css\?family=Montserrat\"\x20rel=\"styl
+SF:esheet\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"widt
+SF:h=device-width,\x20initial-scale=1\.0\">\n\x20\x20</head>\n\x20\x20<bod
+SF:y>\n\x20\x20\x20\x20<div\x20class=\"maintenance-wrapper\">\n\x20\x20\x2
+SF:0\x20\x20\x20<div\x20class=\"maintenance-container\">\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20<div\x20class=\"maintenance-content\">\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20class=\"title\">We\x20a
+SF:re\x20down\x20for\x20maintenance\.</h1>\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20<p\x20class=\"subtitle\">We\x20will\x20be\x20back\x20
+SF:shortly\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20
+SF:src=\"https://www\.alumnforce\.com/wp-content/uploads/2017/10/illu-main
+SF:tenance\.jpg\"\x20alt=\"AlumnForce\x20Maintenance\">\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20</div>\n\x20\x20\x20\x20\x20\x20</div>\n\x20\x20\x20\x20
+SF:</div>\n\x20\x20</body>\n\x20\x20\n\x20\x20<style>\n\x20\x20\x20\x20htm
+SF:l{\n\x20\x20\x20\x20\x20\x20height:\x20100vh;\n\x20\x20\x20\x20}\n\n\x2
+SF:0\x20\x20\x20body{\n\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\
+SF:x20\x20\x20\x20display:\x20-webkit-box;\n\x20\x20\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 15:17:05 2025 -- 1 IP address (1 host up) scanned in 43.51 seconds
