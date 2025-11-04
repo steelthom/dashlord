@@ -1,0 +1,161 @@
+# Nmap 7.92 scan initiated Tue Nov  4 14:27:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln rct-pva-certificat.ca.gouv.fr
+Nmap scan report for rct-pva-certificat.ca.gouv.fr (213.232.97.150)
+Host is up (0.12s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     x-frame-options: DENY
+|     x-xss-protection: 1; mode=block
+|     x-content-type-options: nosniff
+|     cache-control: no-cache
+|     content-security-policy: default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';
+|     content-type: text/html; charset=utf-8
+|     pragma: no-cache
+|     x-blocked: yes
+|     content-length: 4065
+|     strict-transport-security: max-age=31536000; includeSubDomains; preload;
+|     connection: close
+|     <!DOCTYPE html>
+|     <html><head>
+|     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+|     <title>
+|     Security Error
+|     </title>
+|     <style type="text/css">
+|     .content {
+|     background-color:#0066a1;
+|     width:900px;
+|     margin:0px auto;
+|     margin-top:40px;
+|     margin-bottom:10px;
+|     border:2px solid #DDDDDD;
+|     height: 250px;
+|     font-family:Tahoma;
+|     color:white;
+|   GetRequest: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     strict-transport-security: max-age=31536000; includeSubDomains; preload;
+|     <html><body><h1>503 Service Unavailable</h1>
+|     server is available to handle this request.
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A0D4A%P=x86_64-alpine-linux-musl%r
+SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
+SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
+SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
+SF:x20time\.\n</body></html>\n")%r(GetRequest,5D,"HTTP/1\.1\x20301\x20Move
+SF:d\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\nc
+SF:onnection:\x20close\r\n\r\n")%r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Mov
+SF:ed\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\n
+SF:connection:\x20close\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n")%r(FourOhFourRequest,80,"HTTP/1\.1\x20
+SF:301\x20Moved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20htt
+SF:ps:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nconnection:\x20close\r\n\
+SF:r\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-leng
+SF:th:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCont
+SF:ent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1
+SF:>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html
+SF:>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\n
+SF:Content-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20c
+SF:lose\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x2
+SF:0request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n<
+SF:/body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20
+SF:request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>40
+SF:0\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20r
+SF:equest\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A0D50%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,10B,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\nc
+SF:ache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nstrict-trans
+SF:port-security:\x20max-age=31536000;\x20includeSubDomains;\x20preload;\r
+SF:\n\r\n<html><body><h1>503\x20Service\x20Unavailable</h1>\nNo\x20server\
+SF:x20is\x20available\x20to\x20handle\x20this\x20request\.\n</body></html>
+SF:\n")%r(HTTPOptions,118A,"HTTP/1\.1\x20403\x20Forbidden\r\nx-frame-optio
+SF:ns:\x20DENY\r\nx-xss-protection:\x201;\x20mode=block\r\nx-content-type-
+SF:options:\x20nosniff\r\ncache-control:\x20no-cache\r\ncontent-security-p
+SF:olicy:\x20default-src\x20'self'\x20'unsafe-inline';\x20style-src\x20'se
+SF:lf'\x20'unsafe-inline';\r\ncontent-type:\x20text/html;\x20charset=utf-8
+SF:\r\npragma:\x20no-cache\r\nx-blocked:\x20yes\r\ncontent-length:\x204065
+SF:\r\nstrict-transport-security:\x20max-age=31536000;\x20includeSubDomain
+SF:s;\x20preload;\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\r\n<ht
+SF:ml><head>\r\n<meta\x20http-equiv=\"content-type\"\x20content=\"text/htm
+SF:l;\x20charset=ISO-8859-1\">\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20<title>\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20Security\x20Error\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20</title>\r\n\x20\x20\x20\x20<style\x20type=\"text/css\">\
+SF:r\n\t\x20\x20\.content\x20{\r\n\x20\x20\x20\x20\x20\x20\x20\x20backgrou
+SF:nd-color:#0066a1;\r\n\x20\x20\x20\x20\x20\x20\x20\x20width:900px;\r\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20margin:0px\x20auto;\r\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20margin-top:40px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20margi
+SF:n-bottom:10px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20border:2px\x20solid\x
+SF:20#DDDDDD;\r\n\x20\x20\x20\x20\x20\x20\x20\x20height:\x20250px;\r\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20font-family:Tahoma;\r\n\t\tcolor:white;\r\n
+SF:\x20\x20\x20\x20\x20\x20}\x20")%r(FourOhFourRequest,118A,"HTTP/1\.1\x20
+SF:403\x20Forbidden\r\nx-frame-options:\x20DENY\r\nx-xss-protection:\x201;
+SF:\x20mode=block\r\nx-content-type-options:\x20nosniff\r\ncache-control:\
+SF:x20no-cache\r\ncontent-security-policy:\x20default-src\x20'self'\x20'un
+SF:safe-inline';\x20style-src\x20'self'\x20'unsafe-inline';\r\ncontent-typ
+SF:e:\x20text/html;\x20charset=utf-8\r\npragma:\x20no-cache\r\nx-blocked:\
+SF:x20yes\r\ncontent-length:\x204065\r\nstrict-transport-security:\x20max-
+SF:age=31536000;\x20includeSubDomains;\x20preload;\r\nconnection:\x20close
+SF:\r\n\r\n<!DOCTYPE\x20html>\r\n<html><head>\r\n<meta\x20http-equiv=\"con
+SF:tent-type\"\x20content=\"text/html;\x20charset=ISO-8859-1\">\r\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20<title>\r\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Security\x20Error\r\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</title>\r\n\x20\x20\x20
+SF:\x20<style\x20type=\"text/css\">\r\n\t\x20\x20\.content\x20{\r\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20background-color:#0066a1;\r\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20width:900px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20margin:0
+SF:px\x20auto;\r\n\x20\x20\x20\x20\x20\x20\x20\x20margin-top:40px;\r\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20margin-bottom:10px;\r\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20border:2px\x20solid\x20#DDDDDD;\r\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20height:\x20250px;\r\n\x20\x20\x20\x20\x20\x20\x20\x20font-famil
+SF:y:Tahoma;\r\n\t\tcolor:white;\r\n\x20\x20\x20\x20\x20\x20}\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 14:27:52 2025 -- 1 IP address (1 host up) scanned in 45.50 seconds
