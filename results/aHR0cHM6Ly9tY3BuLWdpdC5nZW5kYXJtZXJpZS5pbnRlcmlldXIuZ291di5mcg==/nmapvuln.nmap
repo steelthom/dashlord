@@ -1,0 +1,109 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:57:34 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mcpn-git.gendarmerie.interieur.gouv.fr
+Nmap scan report for mcpn-git.gendarmerie.interieur.gouv.fr (185.209.55.216)
+Host is up (0.11s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     server: nginx
+|     date: Tue, 04 Nov 2025 07:57:57 GMT
+|     content-type: text/html; charset=utf-8
+|     content-length: 126
+|     cache-control: no-cache
+|     content-security-policy: 
+|     location: https://mcpn-git.gendarmerie.interieur.gouv.fr/users/sign_in
+|     nel: {"max_age": 0}
+|     permissions-policy: interest-cohort=()
+|     x-content-type-options: nosniff
+|     x-download-options: noopen
+|     x-frame-options: SAMEORIGIN
+|     x-gitlab-meta: {"correlation_id":"01K96XYSNP4MQTTCERZRQVHMND","version":"1"}
+|     x-permitted-cross-domain-policies: none
+|     x-request-id: 01K96XYSNP4MQTTCERZRQVHMND
+|     x-runtime: 0.018244
+|     x-ua-compatible: IE=edge
+|     x-xss-protection: 1; mode=block
+|     strict-transport-security: max-age=63072000
+|     referrer-policy: strict-origin-when-cross-origin
+|     connection: close
+|     <html><body>You are being <a href="https://mcpn-git.gendarmerie.interieur.gouv.fr/users/sign_in">redirected</a>.</body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     server: nginx
+|     date: Tue, 04 Nov 2025 07:57:58 GMT
+|     content-type: text/html; charset=utf-8
+|     content-length: 1591
+|     vary: Accept-Encoding
+|     cache-control: no-cache, no-store, max-age=0, must-revalidate
+|     expires: Fri, 01 Jan 1990 00:00:00 GMT
+|     pragma: no-cache
+|     x-gitlab-meta: {"correlation_id":"01K96XYT2VDMP48S4X6BQ89PTZ","version":"1"}
+|     x-request-id: 01K96XYT2VDMP48S4X6BQ89PTZ
+|     x-runtime: 0.005971
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta content="width=device-width, initial-scale=1" name="viewport">
+|     <title>The page you're looking for could not be found (404)</title>
+|     <style>
+|     body {
+|     color: #333238;
+|     text-align: center;
+|     font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909B205%P=x86_64-alpine-linux
+SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
+SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
+SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
+SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,37B,"HTTP/1\.1\x20302
+SF:\x20Found\r\nserver:\x20nginx\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x20
+SF:07:57:57\x20GMT\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\ncont
+SF:ent-length:\x20126\r\ncache-control:\x20no-cache\r\ncontent-security-po
+SF:licy:\x20\r\nlocation:\x20https://mcpn-git\.gendarmerie\.interieur\.gou
+SF:v\.fr/users/sign_in\r\nnel:\x20{\"max_age\":\x200}\r\npermissions-polic
+SF:y:\x20interest-cohort=\(\)\r\nx-content-type-options:\x20nosniff\r\nx-d
+SF:ownload-options:\x20noopen\r\nx-frame-options:\x20SAMEORIGIN\r\nx-gitla
+SF:b-meta:\x20{\"correlation_id\":\"01K96XYSNP4MQTTCERZRQVHMND\",\"version
+SF:\":\"1\"}\r\nx-permitted-cross-domain-policies:\x20none\r\nx-request-id
+SF::\x2001K96XYSNP4MQTTCERZRQVHMND\r\nx-runtime:\x200\.018244\r\nx-ua-comp
+SF:atible:\x20IE=edge\r\nx-xss-protection:\x201;\x20mode=block\r\nstrict-t
+SF:ransport-security:\x20max-age=63072000\r\nreferrer-policy:\x20strict-or
+SF:igin-when-cross-origin\r\nconnection:\x20close\r\n\r\n<html><body>You\x
+SF:20are\x20being\x20<a\x20href=\"https://mcpn-git\.gendarmerie\.interieur
+SF:\.gouv\.fr/users/sign_in\">redirected</a>\.</body></html>")%r(HTTPOptio
+SF:ns,820,"HTTP/1\.1\x20404\x20Not\x20Found\r\nserver:\x20nginx\r\ndate:\x
+SF:20Tue,\x2004\x20Nov\x202025\x2007:57:58\x20GMT\r\ncontent-type:\x20text
+SF:/html;\x20charset=utf-8\r\ncontent-length:\x201591\r\nvary:\x20Accept-E
+SF:ncoding\r\ncache-control:\x20no-cache,\x20no-store,\x20max-age=0,\x20mu
+SF:st-revalidate\r\nexpires:\x20Fri,\x2001\x20Jan\x201990\x2000:00:00\x20G
+SF:MT\r\npragma:\x20no-cache\r\nx-gitlab-meta:\x20{\"correlation_id\":\"01
+SF:K96XYT2VDMP48S4X6BQ89PTZ\",\"version\":\"1\"}\r\nx-request-id:\x2001K96
+SF:XYT2VDMP48S4X6BQ89PTZ\r\nx-runtime:\x200\.005971\r\nstrict-transport-se
+SF:curity:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x2
+SF:0html>\n<html>\n<head>\n\x20\x20<meta\x20content=\"width=device-width,\
+SF:x20initial-scale=1\"\x20name=\"viewport\">\n\x20\x20<title>The\x20page\
+SF:x20you're\x20looking\x20for\x20could\x20not\x20be\x20found\x20\(404\)</
+SF:title>\n\x20\x20<style>\n\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x2
+SF:0\x20color:\x20#333238;\n\x20\x20\x20\x20\x20\x20text-align:\x20center;
+SF:\n\x20\x20\x20\x20\x20\x20font-family:\x20\"Nunito\x20Sans\",\x20-apple
+SF:-system,\x20\"\.SFNSText-Regular\",\x20\"San\x20Francisco\",\x20BlinkMa
+SF:cSystemFont,\x20\"Segoe\x20UI\",\x20\"Helvetica\x20Neue\",\x20Helvetica
+SF:,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:58:21 2025 -- 1 IP address (1 host up) scanned in 47.03 seconds
