@@ -1,0 +1,123 @@
+# Nmap 7.92 scan initiated Tue Nov  4 03:16:11 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln iufrance.fr
+Nmap scan report for iufrance.fr (51.91.165.35)
+Host is up (0.15s latency).
+rDNS record for 51.91.165.35: ip35.ip-51-91-165.eu
+Not shown: 996 filtered tcp ports (no-response)
+PORT      STATE  SERVICE   VERSION
+80/tcp    open   http      Apache/2.4.65 (Debian)
+|_http-server-header: Apache/2.4.65 (Debian)
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+443/tcp   open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     date: Tue, 04 Nov 2025 03:16:38 GMT
+|     location: https://www.avel.com/nice%20ports,/Trinity.txt.bak
+|     cache-control: max-age=0
+|     expires: Tue, 04 Nov 2025 03:16:38 GMT
+|     content-length: 258
+|     keep-alive: timeout=5, max=100
+|     content-type: text/html; charset=iso-8859-1
+|     connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://www.avel.com/nice%20ports,/Trinity.txt.bak">here</a>.</p>
+|     </body></html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     date: Tue, 04 Nov 2025 03:16:37 GMT
+|     location: https://www.avel.com/
+|     cache-control: max-age=0
+|     expires: Tue, 04 Nov 2025 03:16:37 GMT
+|     content-length: 229
+|     keep-alive: timeout=5, max=100
+|     content-type: text/html; charset=iso-8859-1
+|     connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://www.avel.com/">here</a>.</p>
+|_    </body></html>
+60020/tcp closed unknown
+60443/tcp closed unknown
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909701E%P=x86_64-alpine-linux-musl%r
+SF:(X11Probe,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20n
+SF:o-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad
+SF:\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.
+SF:\n</body></html>\n\n")%r(RPCCheck,A9,"HTTP/1\.0\x20400\x20Bad\x20reques
+SF:t\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<h
+SF:tml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an
+SF:\x20invalid\x20request\.\n</body></html>\n\n")%r(DNSVersionBindReqTCP,A
+SF:9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\n
+SF:content-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request
+SF:</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></
+SF:html>\n\n")%r(DNSStatusRequestTCP,A9,"HTTP/1\.0\x20400\x20Bad\x20reques
+SF:t\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<h
+SF:tml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an
+SF:\x20invalid\x20request\.\n</body></html>\n\n")%r(Help,A9,"HTTP/1\.0\x20
+SF:400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\ncontent-type:\x2
+SF:0text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
+SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n\n")%r(SS
+SF:LSessionReq,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x2
+SF:0no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20B
+SF:ad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request
+SF:\.\n</body></html>\n\n")%r(TerminalServerCookie,A9,"HTTP/1\.0\x20400\x2
+SF:0Bad\x20request\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/
+SF:html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser
+SF:\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n\n")%r(TLSSessi
+SF:onReq,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-ca
+SF:che\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20
+SF:request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</
+SF:body></html>\n\n")%r(Kerberos,A9,"HTTP/1\.0\x20400\x20Bad\x20request\r\
+SF:ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html>
+SF:<body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20
+SF:invalid\x20request\.\n</body></html>\n\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=69097015%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,204,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ndat
+SF:e:\x20Tue,\x2004\x20Nov\x202025\x2003:16:37\x20GMT\r\nlocation:\x20http
+SF:s://www\.avel\.com/\r\ncache-control:\x20max-age=0\r\nexpires:\x20Tue,\
+SF:x2004\x20Nov\x202025\x2003:16:37\x20GMT\r\ncontent-length:\x20229\r\nke
+SF:ep-alive:\x20timeout=5,\x20max=100\r\ncontent-type:\x20text/html;\x20ch
+SF:arset=iso-8859-1\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PU
+SF:BLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301
+SF:\x20Moved\x20Permanently</title>\n</head><body>\n<h1>Moved\x20Permanent
+SF:ly</h1>\n<p>The\x20document\x20has\x20moved\x20<a\x20href=\"https://www
+SF:\.avel\.com/\">here</a>\.</p>\n</body></html>\n")%r(HTTPOptions,204,"HT
+SF:TP/1\.1\x20301\x20Moved\x20Permanently\r\ndate:\x20Tue,\x2004\x20Nov\x2
+SF:02025\x2003:16:37\x20GMT\r\nlocation:\x20https://www\.avel\.com/\r\ncac
+SF:he-control:\x20max-age=0\r\nexpires:\x20Tue,\x2004\x20Nov\x202025\x2003
+SF::16:37\x20GMT\r\ncontent-length:\x20229\r\nkeep-alive:\x20timeout=5,\x2
+SF:0max=100\r\ncontent-type:\x20text/html;\x20charset=iso-8859-1\r\nconnec
+SF:tion:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20
+SF:HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently</
+SF:title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20documen
+SF:t\x20has\x20moved\x20<a\x20href=\"https://www\.avel\.com/\">here</a>\.<
+SF:/p>\n</body></html>\n")%r(FourOhFourRequest,23E,"HTTP/1\.1\x20301\x20Mo
+SF:ved\x20Permanently\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2003:16:38\x2
+SF:0GMT\r\nlocation:\x20https://www\.avel\.com/nice%20ports,/Trinity\.txt\
+SF:.bak\r\ncache-control:\x20max-age=0\r\nexpires:\x20Tue,\x2004\x20Nov\x2
+SF:02025\x2003:16:38\x20GMT\r\ncontent-length:\x20258\r\nkeep-alive:\x20ti
+SF:meout=5,\x20max=100\r\ncontent-type:\x20text/html;\x20charset=iso-8859-
+SF:1\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Pe
+SF:rmanently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The
+SF:\x20document\x20has\x20moved\x20<a\x20href=\"https://www\.avel\.com/nic
+SF:e%20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 03:17:11 2025 -- 1 IP address (1 host up) scanned in 59.81 seconds
