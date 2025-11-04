@@ -1,0 +1,135 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 70,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "etag": "\"3b3357a5\"",
+      "content-type": "text/html; charset=UTF-8",
+      "cache-control": "max-age=1537, public",
+      "expires": "Tue, 04 Nov 2025 14:35:16 GMT",
+      "date": "Tue, 04 Nov 2025 14:09:39 GMT",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload;",
+      "x-xss-protection": "1; mode=block",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "vary": "Accept-Encoding",
+      "set-cookie": [
+        "visid_incap_3172060=huH7oGyQQeKf4q6TZ23zxSQJCmkAAAAAQUIPAAAAAAAwSOUTYpf/316nzHcN1C6R; expires=Wed, 04 Nov 2026 10:29:13 GMT; HttpOnly; path=/; Domain=.cybermalveillance.gouv.fr",
+        "incap_ses_888_3172060=UCMgEs5WDSeeLFP5xs9SDCQJCmkAAAAA7jAGcvBMq1+fFv/Xu8e9cw==; path=/; Domain=.cybermalveillance.gouv.fr"
+      ],
+      "x-cdn": "Imperva",
+      "transfer-encoding": "chunked",
+      "x-iinfo": "2-5013635-5011622 2CNN RT(1762265380447 10) q(0 0 0 0) r(0 0)"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "visid_incap_3172060": {
+          "domain": "cybermalveillance.gouv.fr",
+          "expires": "2026-11-04T10:29:13.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "incap_ses_888_3172060": {
+          "domain": "cybermalveillance.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://pprd.cybermalveillance.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://pprd.cybermalveillance.gouv.fr/",
+        "https://pprd.cybermalveillance.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains; preload;",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
