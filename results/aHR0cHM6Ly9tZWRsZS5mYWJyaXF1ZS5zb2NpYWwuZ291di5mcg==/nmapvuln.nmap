@@ -1,0 +1,62 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:23:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln medle.fabrique.social.gouv.fr
+Nmap scan report for medle.fabrique.social.gouv.fr (185.194.82.223)
+Host is up (0.080s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-Powered-By: Next.js
+|     ETag: "ahnoukf5sa7pb"
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 10012
+|     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+|     Vary: Accept-Encoding
+|     Date: Tue, 04 Nov 2025 07:23:58 GMT
+|     Connection: close
+|     Keep-Alive: timeout=5
+|     <!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title class="jsx-547835882">Connexion - Medl
+|_    </title><meta name="next-head-count" content="3"/><link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/_next/static/css/5ef1bef37945d623.css" as="style"/><link rel="stylesheet" href="/_next/static/css/5ef1bef37945d623.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/stat
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909AA0E%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,10F3,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20Nex
+SF:t\.js\r\nETag:\x20\"ahnoukf5sa7pb\"\r\nContent-Type:\x20text/html;\x20c
+SF:harset=utf-8\r\nContent-Length:\x2010012\r\nCache-Control:\x20private,\
+SF:x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nVary:\x20
+SF:Accept-Encoding\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2007:23:58\x20GM
+SF:T\r\nConnection:\x20close\r\nKeep-Alive:\x20timeout=5\r\n\r\n<!DOCTYPE\
+SF:x20html><html\x20lang=\"fr\"><head><meta\x20charSet=\"utf-8\"/><meta\x2
+SF:0name=\"viewport\"\x20content=\"width=device-width\"/><title\x20class=\
+SF:"jsx-547835882\">Connexion\x20-\x20Medl\xc3\xa9</title><meta\x20name=\"
+SF:next-head-count\"\x20content=\"3\"/><link\x20data-next-font=\"\"\x20rel
+SF:=\"preconnect\"\x20href=\"/\"\x20crossorigin=\"anonymous\"/><link\x20re
+SF:l=\"preload\"\x20href=\"/_next/static/css/5ef1bef37945d623\.css\"\x20as
+SF:=\"style\"/><link\x20rel=\"stylesheet\"\x20href=\"/_next/static/css/5ef
+SF:1bef37945d623\.css\"\x20data-n-g=\"\"/><noscript\x20data-n-css=\"\"></n
+SF:oscript><script\x20defer=\"\"\x20nomodule=\"\"\x20src=\"/_next/static/c
+SF:hunks/polyfills-c67a75d1b6f99dc8\.js\"></script><script\x20src=\"/_next
+SF:/stat")%r(HTTPOptions,10F3,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20
+SF:Next\.js\r\nETag:\x20\"ahnoukf5sa7pb\"\r\nContent-Type:\x20text/html;\x
+SF:20charset=utf-8\r\nContent-Length:\x2010012\r\nCache-Control:\x20privat
+SF:e,\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nVary:\
+SF:x20Accept-Encoding\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2007:23:58\x2
+SF:0GMT\r\nConnection:\x20close\r\nKeep-Alive:\x20timeout=5\r\n\r\n<!DOCTY
+SF:PE\x20html><html\x20lang=\"fr\"><head><meta\x20charSet=\"utf-8\"/><meta
+SF:\x20name=\"viewport\"\x20content=\"width=device-width\"/><title\x20clas
+SF:s=\"jsx-547835882\">Connexion\x20-\x20Medl\xc3\xa9</title><meta\x20name
+SF:=\"next-head-count\"\x20content=\"3\"/><link\x20data-next-font=\"\"\x20
+SF:rel=\"preconnect\"\x20href=\"/\"\x20crossorigin=\"anonymous\"/><link\x2
+SF:0rel=\"preload\"\x20href=\"/_next/static/css/5ef1bef37945d623\.css\"\x2
+SF:0as=\"style\"/><link\x20rel=\"stylesheet\"\x20href=\"/_next/static/css/
+SF:5ef1bef37945d623\.css\"\x20data-n-g=\"\"/><noscript\x20data-n-css=\"\">
+SF:</noscript><script\x20defer=\"\"\x20nomodule=\"\"\x20src=\"/_next/stati
+SF:c/chunks/polyfills-c67a75d1b6f99dc8\.js\"></script><script\x20src=\"/_n
+SF:ext/stat");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:26:07 2025 -- 1 IP address (1 host up) scanned in 148.44 seconds
