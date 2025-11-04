@@ -1,0 +1,51 @@
+# Nmap 7.92 scan initiated Tue Nov  4 19:19:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln rseagro.com
+Nmap scan report for rseagro.com (149.202.71.145)
+Host is up (0.11s latency).
+rDNS record for 149.202.71.145: hub.ceca-dev.fr
+Not shown: 987 filtered tcp ports (no-response)
+PORT     STATE  SERVICE  VERSION
+20/tcp   closed ftp-data
+21/tcp   open   ftp      Pure-FTPd
+25/tcp   open   smtp     Postfix smtpd
+53/tcp   open   domain   (unknown banner: unknown)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    unknown
+80/tcp   open   http     Apache httpd
+|_http-server-header: Apache
+110/tcp  open   pop3
+| fingerprint-strings: 
+|   GenericLines, NULL: 
+|     +OK Dovecot (Debian) ready.
+|   HTTPOptions: 
+|     +OK Dovecot (Debian) ready.
+|     -ERR Unknown command.
+|_    -ERR Unknown command.
+143/tcp  open   imap     Dovecot imapd
+443/tcp  open   ssl/http Apache httpd
+|_http-server-header: Apache
+|_http-trane-info: Problem with XML parsing of /evox/about
+587/tcp  open   smtp     Postfix smtpd
+993/tcp  open   imaps?
+995/tcp  open   pop3s?
+8080/tcp open   http     Apache httpd
+|_http-server-header: Apache
+8086/tcp closed d-s-n
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.92%I=7%D=11/4%Time=690A51F4%P=x86_64-alpine-linux-musl%r
+SF:(DNSVersionBindReqTCP,34,"\x002\0\x06\x85\0\0\x01\0\x01\0\0\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x08\x07unknown"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port110-TCP:V=7.92%I=7%D=11/4%Time=690A51EF%P=x86_64-alpine-linux-musl%
+SF:r(NULL,1D,"\+OK\x20Dovecot\x20\(Debian\)\x20ready\.\r\n")%r(GenericLine
+SF:s,1D,"\+OK\x20Dovecot\x20\(Debian\)\x20ready\.\r\n")%r(HTTPOptions,4B,"
+SF:\+OK\x20Dovecot\x20\(Debian\)\x20ready\.\r\n-ERR\x20Unknown\x20command\
+SF:.\r\n-ERR\x20Unknown\x20command\.\r\n");
+Service Info: Host:  mail.ceca-dev.fr
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 19:20:37 2025 -- 1 IP address (1 host up) scanned in 45.07 seconds
