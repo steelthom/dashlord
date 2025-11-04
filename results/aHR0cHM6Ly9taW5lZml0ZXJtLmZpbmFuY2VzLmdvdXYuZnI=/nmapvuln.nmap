@@ -1,0 +1,36 @@
+# Nmap 7.92 scan initiated Tue Nov  4 07:19:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln minefiterm.finances.gouv.fr
+Nmap scan report for minefiterm.finances.gouv.fr (193.17.19.197)
+Host is up (0.11s latency).
+Not shown: 954 filtered tcp ports (no-response), 44 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+|_http-server-header: <empty>
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 302 Redirect
+|     Content-Type: text/html; charset=UTF-8
+|     Location: https:///
+|     Server: 
+|     Date: Tue, 04 Nov 2025 07:25:44 GMT
+|     Connection: close
+|     Content-Length: 132
+|     <head><title>Document Moved</title></head>
+|_    <body><h1>Object Moved</h1>This document may be found <a HREF="https:///">here</a></body>
+443/tcp open  ssl/https?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=6909AA7C%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,131,"HTTP/1\.1\x20302\x20Redirect\r\nContent-Type:\x20text/
+SF:html;\x20charset=UTF-8\r\nLocation:\x20https:///\r\nServer:\x20\r\nDate
+SF::\x20Tue,\x2004\x20Nov\x202025\x2007:25:44\x20GMT\r\nConnection:\x20clo
+SF:se\r\nContent-Length:\x20132\r\n\r\n<head><title>Document\x20Moved</tit
+SF:le></head>\n<body><h1>Object\x20Moved</h1>This\x20document\x20may\x20be
+SF:\x20found\x20<a\x20HREF=\"https:///\">here</a></body>")%r(HTTPOptions,1
+SF:31,"HTTP/1\.1\x20302\x20Redirect\r\nContent-Type:\x20text/html;\x20char
+SF:set=UTF-8\r\nLocation:\x20https:///\r\nServer:\x20\r\nDate:\x20Tue,\x20
+SF:04\x20Nov\x202025\x2007:25:44\x20GMT\r\nConnection:\x20close\r\nContent
+SF:-Length:\x20132\r\n\r\n<head><title>Document\x20Moved</title></head>\n<
+SF:body><h1>Object\x20Moved</h1>This\x20document\x20may\x20be\x20found\x20
+SF:<a\x20HREF=\"https:///\">here</a></body>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 07:26:15 2025 -- 1 IP address (1 host up) scanned in 422.26 seconds
