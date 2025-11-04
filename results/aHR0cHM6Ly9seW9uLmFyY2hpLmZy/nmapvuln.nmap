@@ -1,0 +1,28 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:33:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lyon.archi.fr
+Nmap scan report for lyon.archi.fr (193.52.197.108)
+Host is up (0.15s latency).
+rDNS record for 193.52.197.108: matootoo.lyon.archi.fr
+Not shown: 992 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    VERSION
+20/tcp   closed ftp-data
+21/tcp   closed ftp
+37/tcp   closed time
+53/tcp   open   domain     ISC BIND 9.18.18-0ubuntu2.1 (Ubuntu Linux)
+| vulners: 
+|   cpe:/a:isc:bind:9.18.18-0ubuntu2.1: 
+|     	CVE-2023-5679	7.5	https://vulners.com/cve/CVE-2023-5679
+|     	CVE-2023-5517	7.5	https://vulners.com/cve/CVE-2023-5517
+|     	CVE-2023-50387	7.5	https://vulners.com/cve/CVE-2023-50387
+|     	CVE-2023-4408	7.5	https://vulners.com/cve/CVE-2023-4408
+|     	CVE-2023-4236	7.5	https://vulners.com/cve/CVE-2023-4236
+|     	CVE-2023-3341	7.5	https://vulners.com/cve/CVE-2023-3341
+|     	CNVD-2017-12537	7.5	https://vulners.com/cnvd/CNVD-2017-12537
+|_    	9ED8A03D-FE34-5F77-8C66-C03C9615AF07	7.5	https://vulners.com/gitee/9ED8A03D-FE34-5F77-8C66-C03C9615AF07	*EXPLOIT*
+80/tcp   open   http       nginx
+443/tcp  open   ssl/http   nginx
+3000/tcp closed ppp
+8080/tcp closed http-proxy
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:33:47 2025 -- 1 IP address (1 host up) scanned in 26.30 seconds
