@@ -1,0 +1,110 @@
+# Nmap 7.92 scan initiated Tue Nov  4 02:54:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institut.ina.fr
+Nmap scan report for institut.ina.fr (194.127.250.67)
+Host is up (0.15s latency).
+rDNS record for 194.127.250.67: www.ina.fr
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     content-type: text/html; charset=UTF-8
+|     cache-control: max-age=31536000, must-revalidate, no-store, private
+|     date: Mon, 03 Nov 2025 19:30:53 GMT
+|     content-language: fr
+|     x-content-type-options: nosniff
+|     x-frame-options: DENY
+|     expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     last-modified: Mon, 03 Nov 2025 19:30:53 GMT
+|     etag: W/"1762198253"
+|     content-security-policy: default-src 'self'; connect-src 'self' https://stats.g.doubleclick.net https://api.privacy-center.org https://player-hub.ina.fr https://apipartner.ina.fr https://ssl.p.jwpcdn.com https://entitlements.jwplayer.com https://*.fwmrm.net https://api.webspellchecker.sas.ina https://cdn.linkedin.oribi.io https://www.facebook.com https://logs1412.xiti.com https://applets.ebxcdn.com https://maps.googleapis.com https://px.ads.linkedin.com https://jrnplgm.pa-cd.com https://www.google.com https://adservice.google.com https://www.goo
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     content-type: text/html; charset=UTF-8
+|     content-length: 0
+|     allow: GET, POST
+|     cache-control: must-revalidate, no-cache, private
+|     date: Tue, 04 Nov 2025 02:54:33 GMT
+|     content-language: fr
+|     x-content-type-options: nosniff
+|     x-frame-options: DENY
+|     expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     x-pass-varnish: YES
+|_    content-security-policy: default-src 'self'; connect-src 'self' https://stats.g.doubleclick.net https://api.privacy-center.org https://player-hub.ina.fr https://apipartner.ina.fr https://ssl.p.jwpcdn.com https://entitlements.jwplayer.com https://*.fwmrm.net https://api.webspellchecker.sas.ina https://cdn.linkedin.oribi.io https://www.facebook.com https://logs1412.xiti.com https://applets.ebxcdn.com https://maps.googleapis.com https://px.ads.linkedin.com https://jrnplgm.pa-cd.com https://www.google.com https://adservice.google.com https://www.googleadservices.com https://go
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=69096AE2%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=69096AE8%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,3A15,"HTTP/1\.1\x20200\x20OK\r\ncontent-type:\x20tex
+SF:t/html;\x20charset=UTF-8\r\ncache-control:\x20max-age=31536000,\x20must
+SF:-revalidate,\x20no-store,\x20private\r\ndate:\x20Mon,\x2003\x20Nov\x202
+SF:025\x2019:30:53\x20GMT\r\ncontent-language:\x20fr\r\nx-content-type-opt
+SF:ions:\x20nosniff\r\nx-frame-options:\x20DENY\r\nexpires:\x20Sun,\x2019\
+SF:x20Nov\x201978\x2005:00:00\x20GMT\r\nlast-modified:\x20Mon,\x2003\x20No
+SF:v\x202025\x2019:30:53\x20GMT\r\netag:\x20W/\"1762198253\"\r\ncontent-se
+SF:curity-policy:\x20default-src\x20'self';\x20connect-src\x20'self'\x20ht
+SF:tps://stats\.g\.doubleclick\.net\x20https://api\.privacy-center\.org\x2
+SF:0https://player-hub\.ina\.fr\x20https://apipartner\.ina\.fr\x20https://
+SF:ssl\.p\.jwpcdn\.com\x20https://entitlements\.jwplayer\.com\x20https://\
+SF:*\.fwmrm\.net\x20https://api\.webspellchecker\.sas\.ina\x20https://cdn\
+SF:.linkedin\.oribi\.io\x20https://www\.facebook\.com\x20https://logs1412\
+SF:.xiti\.com\x20https://applets\.ebxcdn\.com\x20https://maps\.googleapis\
+SF:.com\x20https://px\.ads\.linkedin\.com\x20https://jrnplgm\.pa-cd\.com\x
+SF:20https://www\.google\.com\x20https://adservice\.google\.com\x20https:/
+SF:/www\.goo")%r(HTTPOptions,D32,"HTTP/1\.1\x20200\x20OK\r\ncontent-type:\
+SF:x20text/html;\x20charset=UTF-8\r\ncontent-length:\x200\r\nallow:\x20GET
+SF:,\x20POST\r\ncache-control:\x20must-revalidate,\x20no-cache,\x20private
+SF:\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2002:54:33\x20GMT\r\ncontent-la
+SF:nguage:\x20fr\r\nx-content-type-options:\x20nosniff\r\nx-frame-options:
+SF:\x20DENY\r\nexpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\
+SF:nx-pass-varnish:\x20YES\r\ncontent-security-policy:\x20default-src\x20'
+SF:self';\x20connect-src\x20'self'\x20https://stats\.g\.doubleclick\.net\x
+SF:20https://api\.privacy-center\.org\x20https://player-hub\.ina\.fr\x20ht
+SF:tps://apipartner\.ina\.fr\x20https://ssl\.p\.jwpcdn\.com\x20https://ent
+SF:itlements\.jwplayer\.com\x20https://\*\.fwmrm\.net\x20https://api\.webs
+SF:pellchecker\.sas\.ina\x20https://cdn\.linkedin\.oribi\.io\x20https://ww
+SF:w\.facebook\.com\x20https://logs1412\.xiti\.com\x20https://applets\.ebx
+SF:cdn\.com\x20https://maps\.googleapis\.com\x20https://px\.ads\.linkedin\
+SF:.com\x20https://jrnplgm\.pa-cd\.com\x20https://www\.google\.com\x20http
+SF:s://adservice\.google\.com\x20https://www\.googleadservices\.com\x20htt
+SF:ps://go");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 02:56:45 2025 -- 1 IP address (1 host up) scanned in 156.92 seconds
