@@ -1,0 +1,137 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 0,
+    "statusCode": 200,
+    "testsFailed": 6,
+    "testsPassed": 4,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 08:44:15 GMT",
+      "set-cookie": [
+        "JSESSIONID=8A0E3BD615304EBBC48E5C0561C0BD8F.mx-medicprixc2; Path=/medicprix/; HttpOnly",
+        "TS01298773=012337f68d1e315dcd8539e7a1a849611533d048518dd5441fb36f7805e08ba7ecdbda3b37819135f5c9bff027669ec002c21c4380905c9f321643f78dcb10078e53dfdb11; Path=/;",
+        "TS01d8c7bc=012337f68dbc34e8d9974081d64b0913ba744daa1d8dd5441fb36f7805e08ba7ecdbda3b37819135f5c9bff027669ec002c21c43805875e08c8f491a4dd50a9f04e56d7946716daf9377b24143dfcfa25b50eae2a5; path=/medicprix/"
+      ],
+      "content-type": "text/html;charset=ISO-8859-1",
+      "connection": "close",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag",
+      "scoreModifier": -40,
+      "data": {
+        "Current_Session": {
+          "domain": "medicprix.sante.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "TS01298773": {
+          "domain": "medicprix.sante.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "JSESSIONID": {
+          "domain": "medicprix.sante.gouv.fr",
+          "httponly": true,
+          "path": "/medicprix/",
+          "port": null
+        },
+        "TS01d8c7bc": {
+          "domain": "medicprix.sante.gouv.fr",
+          "path": "/medicprix/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-not-to-https",
+      "scoreModifier": -20,
+      "destination": "http://medicprix.sante.gouv.fr/medicprix/",
+      "redirects": true,
+      "route": [
+        "http://medicprix.sante.gouv.fr/",
+        "http://medicprix.sante.gouv.fr/medicprix/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
