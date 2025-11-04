@@ -1,0 +1,105 @@
+# Nmap 7.92 scan initiated Tue Nov  4 19:49:02 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sengager.fr
+Nmap scan report for sengager.fr (51.255.123.129)
+Host is up (0.15s latency).
+rDNS record for 51.255.123.129: ip129.ip-51-255-123.eu
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Waf: yes
+|     Content-Length: 247
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 15138544861189793544<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Tue, 04 Nov 2025 19:49:25 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 21
+|     Connection: close
+|     Strict-Transport-Security: max-age=16070400; includeSubDomains
+|     default backend - 404
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Tue, 04 Nov 2025 19:49:26 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 21
+|     Connection: close
+|     Strict-Transport-Security: max-age=16070400; includeSubDomains
+|     default backend - 404
+|   RTSPRequest: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Waf: yes
+|     Content-Length: 246
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 2427090344011186711<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   TerminalServerCookie: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Waf: yes
+|     Content-Length: 247
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 15388825795322514758<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A58C6%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,E4,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Tue
+SF:,\x2004\x20Nov\x202025\x2019:49:25\x20GMT\r\nContent-Type:\x20text/plai
+SF:n;\x20charset=utf-8\r\nContent-Length:\x2021\r\nConnection:\x20close\r\
+SF:nStrict-Transport-Security:\x20max-age=16070400;\x20includeSubDomains\r
+SF:\n\r\ndefault\x20backend\x20-\x20404")%r(HTTPOptions,E4,"HTTP/1\.1\x204
+SF:04\x20Not\x20Found\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2019:49:26\x2
+SF:0GMT\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nContent-Length
+SF::\x2021\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-ag
+SF:e=16070400;\x20includeSubDomains\r\n\r\ndefault\x20backend\x20-\x20404"
+SF:)%r(FourOhFourRequest,1F5,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection
+SF::\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x
+SF:20no-cache\r\nWaf:\x20yes\r\nContent-Length:\x20247\r\n\r\n<html><head>
+SF:<title>Request\x20Rejected</title></head><body>The\x20requested\x20URL\
+SF:x20was\x20rejected\.\x20Please\x20consult\x20with\x20your\x20administra
+SF:tor\.<br><br>Your\x20support\x20ID\x20is:\x2015138544861189793544<br><b
+SF:r><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]</a></body><
+SF:/html>")%r(RTSPRequest,1F4,"HTTP/1\.1\x20403\x20Forbidden\r\nX-Frame-Op
+SF:tions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Cont
+SF:ent-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnectio
+SF:n:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\
+SF:x20no-cache\r\nWaf:\x20yes\r\nContent-Length:\x20246\r\n\r\n<html><head
+SF:><title>Request\x20Rejected</title></head><body>The\x20requested\x20URL
+SF:\x20was\x20rejected\.\x20Please\x20consult\x20with\x20your\x20administr
+SF:ator\.<br><br>Your\x20support\x20ID\x20is:\x202427090344011186711<br><b
+SF:r><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]</a></body><
+SF:/html>")%r(TerminalServerCookie,1F5,"HTTP/1\.1\x20403\x20Forbidden\r\nX
+SF:-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\
+SF:r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\
+SF:nPragma:\x20no-cache\r\nWaf:\x20yes\r\nContent-Length:\x20247\r\n\r\n<h
+SF:tml><head><title>Request\x20Rejected</title></head><body>The\x20request
+SF:ed\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20your\x20
+SF:administrator\.<br><br>Your\x20support\x20ID\x20is:\x201538882579532251
+SF:4758<br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]</
+SF:a></body></html>");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 19:51:41 2025 -- 1 IP address (1 host up) scanned in 159.08 seconds
