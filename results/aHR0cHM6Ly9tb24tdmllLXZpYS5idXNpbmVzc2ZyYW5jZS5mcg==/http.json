@@ -1,0 +1,152 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 5,
+    "statusCode": 200,
+    "testsFailed": 6,
+    "testsPassed": 4,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 07:31:48 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "etag": "\"2d3f4-Le9WtnQxvQ15hngZ3M3g56Y9/5s\"",
+      "set-cookie": [
+        "i18n_redirected=fr; Path=/; Expires=Wed, 04 Nov 2026 07:31:47 GMT; SameSite=Lax",
+        "auth.undefined.code_verifier=ZnJAdvgDgGwtMtySsxS1dlk660QC_l5Xe0MrAwjJZsk; Path=/",
+        "auth.strategy=local; Path=/",
+        "ARRAffinity=02615441c7263051df881493a5bba8674c2aace0d6ef6724b2f24b637ee13086;Path=/;HttpOnly;Secure;Domain=civiweb-fo-prd.azurewebsites.net",
+        "ARRAffinitySameSite=02615441c7263051df881493a5bba8674c2aace0d6ef6724b2f24b637ee13086;Path=/;HttpOnly;SameSite=None;Secure;Domain=civiweb-fo-prd.azurewebsites.net"
+      ],
+      "vary": "Accept-Encoding",
+      "x-powered-by": "Express, ASP.NET",
+      "x-azure-ref": "20251104T073147Z-r1c58854c4f9gnm2hC1BN1zk980000000bbg00000000cdmb",
+      "x-cache": "CONFIG_NOCACHE"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "i18n_redirected": {
+          "domain": "mon-vie-via.businessfrance.fr",
+          "expires": "2026-11-04T07:31:47.000Z",
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
+        },
+        "auth.undefined.code_verifier": {
+          "domain": "mon-vie-via.businessfrance.fr",
+          "path": "/",
+          "port": null
+        },
+        "auth.strategy": {
+          "domain": "mon-vie-via.businessfrance.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://mon-vie-via.businessfrance.fr/",
+      "redirects": true,
+      "route": [
+        "http://mon-vie-via.businessfrance.fr/",
+        "https://mon-vie-via.businessfrance.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://www.googletagmanager.com/gtag/js?id=DC-9010125": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://kit.fontawesome.com/e589c8292d.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://platform.twitter.com/widgets.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
