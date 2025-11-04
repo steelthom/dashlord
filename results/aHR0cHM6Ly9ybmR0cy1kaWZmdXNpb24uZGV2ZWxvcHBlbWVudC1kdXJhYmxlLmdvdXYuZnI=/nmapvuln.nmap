@@ -1,0 +1,99 @@
+# Nmap 7.92 scan initiated Tue Nov  4 20:05:03 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln rndts-diffusion.developpement-durable.gouv.fr
+Nmap scan report for rndts-diffusion.developpement-durable.gouv.fr (193.56.5.15)
+Host is up (0.092s latency).
+rDNS record for 193.56.5.15: vs-rndts-diffusion.brgm.fr
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 247
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 15593841988171140625<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Wed, 30 Apr 2025 22:00:46 GMT
+|     X-Drupal-Route-Normalizer: 1
+|     X-UA-Compatible: IE=edge
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Cache-Control: must-revalidate, no-cache, private
+|     expires: -1
+|     X-Drupal-Cache: HIT
+|     pragma: no-cache
+|     Location: https://rndts-diffusion.developpement-durable.gouv.fr/fr
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="UTF-8" />
+|     <meta http-equiv="refresh" content="0;url='https://rndts-diffusion.developpement-durable.gouv.fr/fr'" />
+|     <title>Redirecting to https://rndts-diffusion.developpement-durable.gouv.fr/fr</title>
+|     </head>
+|     <body>
+|     Redirecting to <a href="https://rndts-diffusion.developpement-durable.gouv.fr/fr">https://rndts-diffusion.developpement-durable.gouv.fr/fr</a>.
+|     </bo
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 247
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 15593841988179079364<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A5C83%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,38F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDat
+SF:e:\x20Wed,\x2030\x20Apr\x202025\x2022:00:46\x20GMT\r\nX-Drupal-Route-No
+SF:rmalizer:\x201\r\nX-UA-Compatible:\x20IE=edge\r\nContent-language:\x20f
+SF:r\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nCache-Control:\x20must-revalidate,\x20no-cache,\x20private\r\nexp
+SF:ires:\x20-1\r\nX-Drupal-Cache:\x20HIT\r\npragma:\x20no-cache\r\nLocatio
+SF:n:\x20https://rndts-diffusion\.developpement-durable\.gouv\.fr/fr\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\
+SF:r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20<meta\x20charset=\"UTF-8\"\x20/>\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20<meta\x20http-equiv=\"refresh\"\x20content=\"0;url='https://
+SF:rndts-diffusion\.developpement-durable\.gouv\.fr/fr'\"\x20/>\n\n\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20<title>Redirecting\x20to\x20https://rndts-diff
+SF:usion\.developpement-durable\.gouv\.fr/fr</title>\n\x20\x20\x20\x20</he
+SF:ad>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20Redirectin
+SF:g\x20to\x20<a\x20href=\"https://rndts-diffusion\.developpement-durable\
+SF:.gouv\.fr/fr\">https://rndts-diffusion\.developpement-durable\.gouv\.fr
+SF:/fr</a>\.\n\x20\x20\x20\x20</bo")%r(HTTPOptions,1E4,"HTTP/1\.1\x20200\x
+SF:20OK\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mo
+SF:de=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20no-
+SF:cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x20247\r\n\r\n<html><h
+SF:ead><title>Request\x20Rejected</title></head><body>The\x20requested\x20
+SF:URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20your\x20admini
+SF:strator\.<br><br>Your\x20support\x20ID\x20is:\x2015593841988179079364<b
+SF:r><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20Back\]</a></bo
+SF:dy></html>")%r(FourOhFourRequest,1E4,"HTTP/1\.1\x20200\x20OK\r\nX-Frame
+SF:-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-C
+SF:ontent-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragm
+SF:a:\x20no-cache\r\nContent-Length:\x20247\r\n\r\n<html><head><title>Requ
+SF:est\x20Rejected</title></head><body>The\x20requested\x20URL\x20was\x20r
+SF:ejected\.\x20Please\x20consult\x20with\x20your\x20administrator\.<br><b
+SF:r>Your\x20support\x20ID\x20is:\x2015593841988171140625<br><br><a\x20hre
+SF:f='javascript:history\.back\(\);'>\[Go\x20Back\]</a></body></html>");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 20:07:34 2025 -- 1 IP address (1 host up) scanned in 151.18 seconds
