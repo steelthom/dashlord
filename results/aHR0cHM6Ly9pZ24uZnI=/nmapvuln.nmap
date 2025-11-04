@@ -1,0 +1,196 @@
+# Nmap 7.92 scan initiated Tue Nov  4 02:48:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ign.fr
+Nmap scan report for ign.fr (151.101.2.216)
+Host is up (0.0024s latency).
+Other addresses for ign.fr (not scanned): 151.101.130.216 151.101.66.216 151.101.194.216
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      Varnish
+|_http-server-header: Varnish
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 500 Domain Not Found
+|     Connection: close
+|     Content-Length: 244
+|     Server: Varnish
+|     Retry-After: 0
+|     content-type: text/html
+|     Cache-Control: private, no-cache
+|     X-Served-By: cache-chi-kigq8000111-CHI
+|     Accept-Ranges: bytes
+|     Date: Tue, 04 Nov 2025 02:49:05 GMT
+|     Via: 1.1 varnish
+|     <html>
+|     <head>
+|     <title>Fastly error: unknown domain </title>
+|     </head>
+|     <body>
+|     <p>Fastly error: unknown domain: . Please check that this domain has been added to a service.</p>
+|     <p>Details: cache-chi-kigq8000111-CHI (151.101.2.216)</p></body></html>
+|   GetRequest: 
+|     HTTP/1.1 500 Domain Not Found
+|     Connection: close
+|     Content-Length: 244
+|     Server: Varnish
+|     Retry-After: 0
+|     content-type: text/html
+|     Cache-Control: private, no-cache
+|     X-Served-By: cache-chi-kigq8000126-CHI
+|     Accept-Ranges: bytes
+|     Date: Tue, 04 Nov 2025 02:49:05 GMT
+|     Via: 1.1 varnish
+|     <html>
+|     <head>
+|     <title>Fastly error: unknown domain </title>
+|     </head>
+|     <body>
+|     <p>Fastly error: unknown domain: . Please check that this domain has been added to a service.</p>
+|     <p>Details: cache-chi-kigq8000126-CHI (151.101.2.216)</p></body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 500 Domain Not Found
+|     Connection: close
+|     Content-Length: 244
+|     Server: Varnish
+|     Retry-After: 0
+|     content-type: text/html
+|     Cache-Control: private, no-cache
+|     X-Served-By: cache-chi-kigq8000128-CHI
+|     Accept-Ranges: bytes
+|     Date: Tue, 04 Nov 2025 02:49:05 GMT
+|     Via: 1.1 varnish
+|     <html>
+|     <head>
+|     <title>Fastly error: unknown domain </title>
+|     </head>
+|     <body>
+|     <p>Fastly error: unknown domain: . Please check that this domain has been added to a service.</p>
+|     <p>Details: cache-chi-kigq8000128-CHI (151.101.2.216)</p></body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 11
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000179
+|     Request
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 11
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000152
+|_    Request
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 421 Misdirected Request
+|     Connection: close
+|     Content-Length: 291
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000038
+|     Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [de30f23d29a427f802d6dc8a40b983889ffbba78415e764547e07045763f2521] in use with this connection.
+|     Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.
+|   GetRequest: 
+|     HTTP/1.1 421 Misdirected Request
+|     Connection: close
+|     Content-Length: 291
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000149
+|     Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [de30f23d29a427f802d6dc8a40b983889ffbba78415e764547e07045763f2521] in use with this connection.
+|     Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.
+|   HTTPOptions: 
+|     HTTP/1.1 421 Misdirected Request
+|     Connection: close
+|     Content-Length: 291
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000064
+|     Requested host does not match any Subject Alternative Names (SANs) on TLS certificate [de30f23d29a427f802d6dc8a40b983889ffbba78415e764547e07045763f2521] in use with this connection.
+|     Visit https://www.fastly.com/documentation/guides/concepts/errors/#routing-errors for more information.
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 11
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000125
+|     Request
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Length: 11
+|     content-type: text/plain; charset=utf-8
+|     x-served-by: cache-chi-kigq8000064
+|_    Request
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690969A1%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,20E,"HTTP/1\.1\x20500\x20Domain\x20Not\x20Found\r\nConnecti
+SF:on:\x20close\r\nContent-Length:\x20244\r\nServer:\x20Varnish\r\nRetry-A
+SF:fter:\x200\r\ncontent-type:\x20text/html\r\nCache-Control:\x20private,\
+SF:x20no-cache\r\nX-Served-By:\x20cache-chi-kigq8000126-CHI\r\nAccept-Rang
+SF:es:\x20bytes\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2002:49:05\x20GMT\r
+SF:\nVia:\x201\.1\x20varnish\r\n\r\n\n<html>\n<head>\n<title>Fastly\x20err
+SF:or:\x20unknown\x20domain\x20</title>\n</head>\n<body>\n<p>Fastly\x20err
+SF:or:\x20unknown\x20domain:\x20\.\x20Please\x20check\x20that\x20this\x20d
+SF:omain\x20has\x20been\x20added\x20to\x20a\x20service\.</p>\n<p>Details:\
+SF:x20cache-chi-kigq8000126-CHI\x20\(151\.101\.2\.216\)</p></body></html>"
+SF:)%r(HTTPOptions,20E,"HTTP/1\.1\x20500\x20Domain\x20Not\x20Found\r\nConn
+SF:ection:\x20close\r\nContent-Length:\x20244\r\nServer:\x20Varnish\r\nRet
+SF:ry-After:\x200\r\ncontent-type:\x20text/html\r\nCache-Control:\x20priva
+SF:te,\x20no-cache\r\nX-Served-By:\x20cache-chi-kigq8000128-CHI\r\nAccept-
+SF:Ranges:\x20bytes\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2002:49:05\x20G
+SF:MT\r\nVia:\x201\.1\x20varnish\r\n\r\n\n<html>\n<head>\n<title>Fastly\x2
+SF:0error:\x20unknown\x20domain\x20</title>\n</head>\n<body>\n<p>Fastly\x2
+SF:0error:\x20unknown\x20domain:\x20\.\x20Please\x20check\x20that\x20this\
+SF:x20domain\x20has\x20been\x20added\x20to\x20a\x20service\.</p>\n<p>Detai
+SF:ls:\x20cache-chi-kigq8000128-CHI\x20\(151\.101\.2\.216\)</p></body></ht
+SF:ml>")%r(RTSPRequest,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnectio
+SF:n:\x20close\r\nContent-Length:\x2011\r\ncontent-type:\x20text/plain;\x2
+SF:0charset=utf-8\r\nx-served-by:\x20cache-chi-kigq8000179\r\n\r\nBad\x20R
+SF:equest")%r(X11Probe,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnectio
+SF:n:\x20close\r\nContent-Length:\x2011\r\ncontent-type:\x20text/plain;\x2
+SF:0charset=utf-8\r\nx-served-by:\x20cache-chi-kigq8000152\r\n\r\nBad\x20R
+SF:equest")%r(FourOhFourRequest,20E,"HTTP/1\.1\x20500\x20Domain\x20Not\x20
+SF:Found\r\nConnection:\x20close\r\nContent-Length:\x20244\r\nServer:\x20V
+SF:arnish\r\nRetry-After:\x200\r\ncontent-type:\x20text/html\r\nCache-Cont
+SF:rol:\x20private,\x20no-cache\r\nX-Served-By:\x20cache-chi-kigq8000111-C
+SF:HI\r\nAccept-Ranges:\x20bytes\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x20
+SF:02:49:05\x20GMT\r\nVia:\x201\.1\x20varnish\r\n\r\n\n<html>\n<head>\n<ti
+SF:tle>Fastly\x20error:\x20unknown\x20domain\x20</title>\n</head>\n<body>\
+SF:n<p>Fastly\x20error:\x20unknown\x20domain:\x20\.\x20Please\x20check\x20
+SF:that\x20this\x20domain\x20has\x20been\x20added\x20to\x20a\x20service\.<
+SF:/p>\n<p>Details:\x20cache-chi-kigq8000111-CHI\x20\(151\.101\.2\.216\)</
+SF:p></body></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690969A7%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1BC,"HTTP/1\.1\x20421\x20Misdirected\x20Request\r\nC
+SF:onnection:\x20close\r\nContent-Length:\x20291\r\ncontent-type:\x20text/
+SF:plain;\x20charset=utf-8\r\nx-served-by:\x20cache-chi-kigq8000149\r\n\r\
+SF:nRequested\x20host\x20does\x20not\x20match\x20any\x20Subject\x20Alterna
+SF:tive\x20Names\x20\(SANs\)\x20on\x20TLS\x20certificate\x20\[de30f23d29a4
+SF:27f802d6dc8a40b983889ffbba78415e764547e07045763f2521\]\x20in\x20use\x20
+SF:with\x20this\x20connection\.\r\n\r\nVisit\x20https://www\.fastly\.com/d
+SF:ocumentation/guides/concepts/errors/#routing-errors\x20for\x20more\x20i
+SF:nformation\.\r\n\r")%r(HTTPOptions,1BC,"HTTP/1\.1\x20421\x20Misdirected
+SF:\x20Request\r\nConnection:\x20close\r\nContent-Length:\x20291\r\nconten
+SF:t-type:\x20text/plain;\x20charset=utf-8\r\nx-served-by:\x20cache-chi-ki
+SF:gq8000064\r\n\r\nRequested\x20host\x20does\x20not\x20match\x20any\x20Su
+SF:bject\x20Alternative\x20Names\x20\(SANs\)\x20on\x20TLS\x20certificate\x
+SF:20\[de30f23d29a427f802d6dc8a40b983889ffbba78415e764547e07045763f2521\]\
+SF:x20in\x20use\x20with\x20this\x20connection\.\r\n\r\nVisit\x20https://ww
+SF:w\.fastly\.com/documentation/guides/concepts/errors/#routing-errors\x20
+SF:for\x20more\x20information\.\r\n\r")%r(FourOhFourRequest,1BC,"HTTP/1\.1
+SF:\x20421\x20Misdirected\x20Request\r\nConnection:\x20close\r\nContent-Le
+SF:ngth:\x20291\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\nx-serv
+SF:ed-by:\x20cache-chi-kigq8000038\r\n\r\nRequested\x20host\x20does\x20not
+SF:\x20match\x20any\x20Subject\x20Alternative\x20Names\x20\(SANs\)\x20on\x
+SF:20TLS\x20certificate\x20\[de30f23d29a427f802d6dc8a40b983889ffbba78415e7
+SF:64547e07045763f2521\]\x20in\x20use\x20with\x20this\x20connection\.\r\n\
+SF:r\nVisit\x20https://www\.fastly\.com/documentation/guides/concepts/erro
+SF:rs/#routing-errors\x20for\x20more\x20information\.\r\n\r")%r(tor-versio
+SF:ns,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nCo
+SF:ntent-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\
+SF:nx-served-by:\x20cache-chi-kigq8000064\r\n\r\nBad\x20Request")%r(RTSPRe
+SF:quest,9B,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\
+SF:nContent-Length:\x2011\r\ncontent-type:\x20text/plain;\x20charset=utf-8
+SF:\r\nx-served-by:\x20cache-chi-kigq8000125\r\n\r\nBad\x20Request");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 02:49:12 2025 -- 1 IP address (1 host up) scanned in 17.87 seconds
