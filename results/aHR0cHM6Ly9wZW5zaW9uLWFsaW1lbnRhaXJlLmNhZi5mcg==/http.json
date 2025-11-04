@@ -1,0 +1,140 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 15,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Tue, 04 Nov 2025 13:55:53 GMT",
+      "x-oneagent-js-injection": "true",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1",
+      "set-cookie": [
+        "JSESSIONID=404869420E1E79A1E1C74EBE6F3B2231; Path=/; HttpOnly",
+        "GUEST_LANGUAGE_ID=fr_FR; Domain=.caf.fr; Expires=Wed, 04-Nov-2026 13:55:53 GMT; Path=/; HttpOnly",
+        "dtCookie=v_4_srv_2_sn_6B811A545A6603CD64A7D312B58C8CC2_perc_100000_ol_0_mul_1_app-3A3f8f7016b9b1835e_1; Path=/; Domain=.caf.fr"
+      ],
+      "liferay-portal": "Liferay Community Edition Portal 7.0.6 GA7 (Wilberforce / Build 7006 / April 17, 2018)",
+      "etag": "\"fd859b5f:dtagent10323250822043923Wpqq:dtagent10323250822043923Wpqq\"",
+      "content-type": "text/html; charset=UTF-8",
+      "server-timing": "dtSInfo;desc=\"1\"",
+      "connection": "close",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag",
+      "scoreModifier": -40,
+      "data": {
+        "JSESSIONID": {
+          "domain": "pension-alimentaire.caf.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "GUEST_LANGUAGE_ID": {
+          "domain": "caf.fr",
+          "expires": "2026-11-04T13:55:53.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "dtCookie": {
+          "domain": "caf.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://pension-alimentaire.caf.fr/",
+      "redirects": true,
+      "route": [
+        "http://pension-alimentaire.caf.fr/",
+        "https://pension-alimentaire.caf.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
