@@ -1,0 +1,39 @@
+# Nmap 7.92 scan initiated Tue Nov  4 02:32:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ifturquie.org
+Nmap scan report for ifturquie.org (94.138.199.100)
+Host is up (0.13s latency).
+rDNS record for 94.138.199.100: ns1.ihsdnsx44.com
+Not shown: 983 filtered tcp ports (no-response)
+PORT      STATE  SERVICE  VERSION
+21/tcp    open   ftp      ProFTPD
+25/tcp    open   smtp     Postfix smtpd
+53/tcp    open   domain   (unknown banner: none)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    none
+80/tcp    open   http     LiteSpeed httpd
+|_http-server-header: LiteSpeed
+110/tcp   open   pop3     Dovecot pop3d
+113/tcp   closed ident
+143/tcp   open   imap     Dovecot imapd
+443/tcp   open   ssl/http LiteSpeed httpd
+|_http-server-header: LiteSpeed
+465/tcp   open   ssl/smtp Postfix smtpd
+587/tcp   open   smtp     Postfix smtpd
+993/tcp   open   ssl/imap Dovecot imapd
+995/tcp   open   ssl/pop3 Dovecot pop3d
+30000/tcp closed ndmps
+30718/tcp closed unknown
+30951/tcp closed unknown
+31038/tcp closed unknown
+31337/tcp closed Elite
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.92%I=7%D=11/4%Time=690965E7%P=x86_64-alpine-linux-musl%r
+SF:(DNSVersionBindReqTCP,3F,"\0=\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04none\xc0
+SF:\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+Service Info: Hosts: 94.138.199.100,  ns1.ihsdnsx44.com; OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 02:33:20 2025 -- 1 IP address (1 host up) scanned in 27.27 seconds
