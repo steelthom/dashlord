@@ -1,0 +1,177 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 75,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "server": "nginx/1.25.2",
+      "date": "Tue, 04 Nov 2025 13:15:10 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "content-length": "24768",
+      "content-security-policy": "connect-src 'self' https://apicarto.ign.fr/ https://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-FR.json https://orfel.immobilier-etat.gouv.fr https://sso.portail-die.fr https://www.pprod.portail-die.fr/piwik/ https://matomo.portail-immo.gouv.fr/; default-src 'self'; img-src 'self' data: *.openstreetmap.fr/ *.openstreetmap.org/ *.ign.fr/ *.geopf.fr/ *.cartocdn.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline' https://www.pprod.portail-die.fr/piwik/ https://matomo.portail-immo.gouv.fr/",
+      "x-frame-options": "DENY",
+      "vary": "Cookie",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "same-origin",
+      "cross-origin-opener-policy": "same-origin",
+      "set-cookie": [
+        "csrftoken=biPHdt1pFW2iRrALvtzPA3y3IXhbFtRc; expires=Tue, 03 Nov 2026 13:15:10 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+      ],
+      "x-ecritel-lb": "cpg-haproxyprod-02",
+      "strict-transport-security": "max-age=63072000",
+      "connection": "close"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "connect-src": [
+          "'self'",
+          "https://apicarto.ign.fr/",
+          "https://cdn.datatables.net/plug-ins/1.13.1/i18n/fr-fr.json",
+          "https://matomo.portail-immo.gouv.fr/",
+          "https://orfel.immobilier-etat.gouv.fr",
+          "https://sso.portail-die.fr",
+          "https://www.pprod.portail-die.fr/piwik/"
+        ],
+        "default-src": [
+          "'self'"
+        ],
+        "img-src": [
+          "'self'",
+          "*.cartocdn.com",
+          "*.geopf.fr/",
+          "*.ign.fr/",
+          "*.openstreetmap.fr/",
+          "*.openstreetmap.org/",
+          "data:"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'"
+        ],
+        "font-src": [
+          "'self'"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-inline'",
+          "https://matomo.portail-immo.gouv.fr/",
+          "https://www.pprod.portail-die.fr/piwik/"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "csrftoken": {
+          "domain": "orfel.immobilier-etat.gouv.fr",
+          "expires": "2026-11-03T13:15:10.000Z",
+          "max-age": 31449600,
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://orfel.immobilier-etat.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://orfel.immobilier-etat.gouv.fr/",
+        "https://orfel.immobilier-etat.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000",
+      "includeSubDomains": false,
+      "maxAge": 63072000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "DENY"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
