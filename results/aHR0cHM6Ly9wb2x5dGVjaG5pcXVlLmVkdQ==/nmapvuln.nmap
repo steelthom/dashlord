@@ -1,0 +1,197 @@
+# Nmap 7.92 scan initiated Tue Nov  4 14:34:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln polytechnique.edu
+Nmap scan report for polytechnique.edu (129.104.30.29)
+Host is up (0.13s latency).
+rDNS record for 129.104.30.29: drupal.polytechnique.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      sysdsi/6.6.6
+|_http-server-header: sysdsi/6.6.6
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: sysdsi/6.6.6
+|     Date: Tue, 04 Nov 2025 14:34:36 GMT
+|     Content-Type: text/html
+|     Content-Length: 169
+|     Connection: close
+|     Location: https://www.polytechnique.edu/
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: sysdsi/6.6.6
+|     Date: Tue, 04 Nov 2025 14:34:37 GMT
+|     Content-Type: text/html
+|     Content-Length: 157
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https sysdsi/6.6.6
+|_http-server-header: sysdsi/6.6.6
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sysdsi/6.6.6
+|     Date: Tue, 04 Nov 2025 14:34:44 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 208237
+|     Connection: close
+|     Cache-Control: max-age=10800, public
+|     X-Drupal-Dynamic-Cache: UNCACHEABLE (poor cacheability)
+|     X-Frame-Options: SAMEORIGIN
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Last-Modified: Tue, 04 Nov 2025 14:34:44 GMT
+|     ETag: "1762266884"
+|     Vary: Cookie
+|     X-Generator: Drupal 10 (https://www.drupal.org)
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-Xss-Protection: 1; mode=block
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
+|     <head>
+|     <meta charset="utf-8" />
+|     <link rel="canonical" href="https://www.polytechnique.edu/" />
+|     <link rel="shortlink" href="https://www.polytechnique.edu/" />
+|     <meta property=
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sysdsi/6.6.6
+|     Date: Tue, 04 Nov 2025 14:34:43 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 243833
+|     Connection: close
+|     Cache-Control: max-age=10800, public
+|     X-Drupal-Dynamic-Cache: HIT
+|     Content-language: fr
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     Expires: Sun, 19 Nov 1978 05:00:00 GMT
+|     Last-Modified: Tue, 04 Nov 2025 14:34:42 GMT
+|     ETag: "1762266882"
+|     Vary: Cookie
+|     X-Generator: Drupal 10 (https://www.drupal.org)
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Frame-Options: sameorigin
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer-when-downgrade
+|     X-Xss-Protection: 1; mode=block
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
+|     <head>
+|     <meta charset="utf-8" />
+|     <meta name="description" content="L&#039;
+|     cole polytechnique est une 
+|     cole d&#039;ing
+|     nieur qui ass
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sysdsi/6.6.6
+|     Date: Tue, 04 Nov 2025 14:34:43 GMT
+|     Content-Type: text/html
+|     Content-Length: 157
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     X-Xss-Protection: 1; mode=block
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body>
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A0EFC%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1B1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
+SF:0sysdsi/6\.6\.6\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2014:34:36\x20GM
+SF:T\r\nContent-Type:\x20text/html\r\nContent-Length:\x20169\r\nConnection
+SF::\x20close\r\nLocation:\x20https://www\.polytechnique\.edu/\r\nStrict-T
+SF:ransport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<ht
+SF:ml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body
+SF:>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cent
+SF:er>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1B
+SF:1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20sysdsi/6\.6\.
+SF:6\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2014:34:36\x20GMT\r\nContent-T
+SF:ype:\x20text/html\r\nContent-Length:\x20169\r\nConnection:\x20close\r\n
+SF:Location:\x20https://www\.polytechnique\.edu/\r\nStrict-Transport-Secur
+SF:ity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><
+SF:title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><
+SF:h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>sysdsi/6\.6
+SF:\.6</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,175,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Tue,\x
+SF:2004\x20Nov\x202025\x2014:34:37\x20GMT\r\nContent-Type:\x20text/html\r\
+SF:nContent-Length:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Sec
+SF:urity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>4
+SF:00\x20Bad\x20Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</cente
+SF:r>\r\n</body>\r\n</html>\r\n")%r(X11Probe,175,"HTTP/1\.1\x20400\x20Bad\
+SF:x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Tue,\x2004\x20Nov\x
+SF:202025\x2014:34:37\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
+SF:th:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max
+SF:-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>400\x
+SF:20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20
+SF:Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>
+SF:\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A0F03%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sysdsi/6\
+SF:.6\.6\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2014:34:43\x20GMT\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x20243833\r\
+SF:nConnection:\x20close\r\nCache-Control:\x20max-age=10800,\x20public\r\n
+SF:X-Drupal-Dynamic-Cache:\x20HIT\r\nContent-language:\x20fr\r\nX-Content-
+SF:Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\
+SF:x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nLast-Modified:\x20Tu
+SF:e,\x2004\x20Nov\x202025\x2014:34:42\x20GMT\r\nETag:\x20\"1762266882\"\r
+SF:\nVary:\x20Cookie\r\nX-Generator:\x20Drupal\x2010\x20\(https://www\.dru
+SF:pal\.org\)\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
+SF:eSubDomains\r\nX-Frame-Options:\x20sameorigin\r\nX-Content-Type-Options
+SF::\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nX-Xss
+SF:-Protection:\x201;\x20mode=block\r\n\r\n<!DOCTYPE\x20html>\n<html\x20la
+SF:ng=\"fr\"\x20dir=\"ltr\"\x20prefix=\"og:\x20https://ogp\.me/ns#\">\n\x2
+SF:0\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\"\x20/>\n<meta\x2
+SF:0name=\"description\"\x20content=\"L&#039;\xc3\x89cole\x20polytechnique
+SF:\x20est\x20une\x20\xc3\xa9cole\x20d&#039;ing\xc3\xa9nieur\x20qui\x20ass
+SF:")%r(HTTPOptions,1B7,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nServer:\x20
+SF:sysdsi/6\.6\.6\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2014:34:43\x20GMT
+SF:\r\nContent-Type:\x20text/html\r\nContent-Length:\x20157\r\nConnection:
+SF:\x20close\r\nStrict-Transport-Security:\x20max-age=31536000;\x20include
+SF:SubDomains\r\nX-Content-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x
+SF:201;\x20mode=block\r\n\r\n<html>\r\n<head><title>405\x20Not\x20Allowed<
+SF:/title></head>\r\n<body>\r\n<center><h1>405\x20Not\x20Allowed</h1></cen
+SF:ter>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n")
+SF:%r(FourOhFourRequest,4000,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\
+SF:x20sysdsi/6\.6\.6\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2014:34:44\x20
+SF:GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\
+SF:x20208237\r\nConnection:\x20close\r\nCache-Control:\x20max-age=10800,\x
+SF:20public\r\nX-Drupal-Dynamic-Cache:\x20UNCACHEABLE\x20\(poor\x20cacheab
+SF:ility\)\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-language:\x20fr\r\
+SF:nX-Content-Type-Options:\x20nosniff\r\nExpires:\x20Sun,\x2019\x20Nov\x2
+SF:01978\x2005:00:00\x20GMT\r\nLast-Modified:\x20Tue,\x2004\x20Nov\x202025
+SF:\x2014:34:44\x20GMT\r\nETag:\x20\"1762266884\"\r\nVary:\x20Cookie\r\nX-
+SF:Generator:\x20Drupal\x2010\x20\(https://www\.drupal\.org\)\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Conten
+SF:t-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;\x20mode=block\r\n
+SF:\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=\
+SF:"og:\x20https://ogp\.me/ns#\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x
+SF:20charset=\"utf-8\"\x20/>\n<link\x20rel=\"canonical\"\x20href=\"https:/
+SF:/www\.polytechnique\.edu/\"\x20/>\n<link\x20rel=\"shortlink\"\x20href=\
+SF:"https://www\.polytechnique\.edu/\"\x20/>\n<meta\x20property=");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 14:35:05 2025 -- 1 IP address (1 host up) scanned in 45.75 seconds
