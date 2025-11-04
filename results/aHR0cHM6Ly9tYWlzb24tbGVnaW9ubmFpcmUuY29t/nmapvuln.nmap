@@ -1,0 +1,146 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:55:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln maison-legionnaire.com
+Nmap scan report for maison-legionnaire.com (91.212.26.195)
+Host is up (0.091s latency).
+rDNS record for 91.212.26.195: ds595.haisoft.net
+Not shown: 930 filtered tcp ports (no-response), 58 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           ProFTPD
+25/tcp   open  smtp          Postfix smtpd
+53/tcp   open  domain        (unknown banner: none)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    none
+80/tcp   open  http          Apache httpd (PleskLin)
+|_http-server-header: Apache
+110/tcp  open  pop3          Dovecot pop3d
+143/tcp  open  imap          Dovecot imapd
+443/tcp  open  ssl/http      Apache httpd
+|_http-server-header: Apache
+465/tcp  open  ssl/smtp      Postfix smtpd
+587/tcp  open  smtp          Postfix smtpd
+993/tcp  open  ssl/imap      Dovecot imapd
+995/tcp  open  ssl/pop3      Dovecot pop3d
+8443/tcp open  ssl/https-alt sw-cp-server
+|_http-server-header: sw-cp-server
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sw-cp-server
+|     Date: Tue, 04 Nov 2025 08:56:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 910
+|     Connection: close
+|     ETag: "688899d6-38e"
+|     <!DOCTYPE html>
+|     <!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. -->
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>404 Page Not Found</title>
+|     <link rel="shortcut icon" href="/favicon.ico">
+|     <link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.40.10">
+|     <script src="/ui-library/plesk-ui-library.min.js?3.40.10"></script>
+|     <script src="/cp/javascript/vendors.js"></script>
+|     <script src="/cp/javascript/main.js"></script>
+|     <script src="/error_docs/uat.js?v4"></script>
+|     <link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"></head>
+|     <body>
+|   GetRequest: 
+|     HTTP/1.1 303 See Other
+|     Server: sw-cp-server
+|     Date: Tue, 04 Nov 2025 08:56:04 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     Expires: Fri, 28 May 1999 00:00:00 GMT
+|     Last-Modified: Tue, 04 Nov 2025 08:56:04 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Cache-Control: post-check=0, pre-check=0
+|     Pragma: no-cache
+|     P3P: CP="NON COR CURa ADMa OUR NOR UNI COM NAV STA"
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     Location: https://localhost:8443/login.php
+|     X-Content-Type-Options: nosniff
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sw-cp-server
+|     Date: Tue, 04 Nov 2025 08:56:05 GMT
+|     Content-Type: text/html
+|     Content-Length: 918
+|     Connection: close
+|     ETag: "688899d6-396"
+|     <!DOCTYPE html>
+|     <!-- Copyright 1999-2025. WebPros International GmbH. All rights reserved. -->
+|     <html lang="en" dir="ltr">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title>405 Method Not Allowed</title>
+|     <link rel="shortcut icon" href="/favicon.ico">
+|     <link rel="stylesheet" href="/ui-library/plesk-ui-library.css?3.40.10">
+|     <script src="/ui-library/plesk-ui-library.min.js?3.40.10"></script>
+|     <script src="/cp/javascript/vendors.js"></script>
+|     <script src="/cp/javascript/main.js"></script>
+|     <script src="/error_docs/uat.js?v4"></script>
+|     <link href="/error_docs/app.css?3275a11af93002eb5427" rel="stylesheet"></head>
+|_    <bod
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.92%I=7%D=11/4%Time=6909BFA3%P=x86_64-alpine-linux-musl%r
+SF:(DNSVersionBindReqTCP,31,"\0/\0\x06\x85\0\0\x01\0\x01\0\0\0\0\x07versio
+SF:n\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x05\x04none");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909BFA4%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,216,"HTTP/1\.1\x20303\x20See\x20Other\r\nServer:\x2
+SF:0sw-cp-server\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2008:56:04\x20GMT\
+SF:r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConnection:\x20close
+SF:\r\nExpires:\x20Fri,\x2028\x20May\x201999\x2000:00:00\x20GMT\r\nLast-Mo
+SF:dified:\x20Tue,\x2004\x20Nov\x202025\x2008:56:04\x20GMT\r\nCache-Contro
+SF:l:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20po
+SF:st-check=0,\x20pre-check=0\r\nPragma:\x20no-cache\r\nP3P:\x20CP=\"NON\x
+SF:20COR\x20CURa\x20ADMa\x20OUR\x20NOR\x20UNI\x20COM\x20NAV\x20STA\"\r\nX-
+SF:Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r
+SF:\nLocation:\x20https://localhost:8443/login\.php\r\nX-Content-Type-Opti
+SF:ons:\x20nosniff\r\n\r\n")%r(HTTPOptions,444,"HTTP/1\.1\x20405\x20Not\x2
+SF:0Allowed\r\nServer:\x20sw-cp-server\r\nDate:\x20Tue,\x2004\x20Nov\x2020
+SF:25\x2008:56:05\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\
+SF:x20918\r\nConnection:\x20close\r\nETag:\x20\"688899d6-396\"\r\n\r\n<!DO
+SF:CTYPE\x20html>\n<!--\x20Copyright\x201999-2025\.\x20WebPros\x20Internat
+SF:ional\x20GmbH\.\x20All\x20rights\x20reserved\.\x20-->\n<html\x20lang=\"
+SF:en\"\x20dir=\"ltr\">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\
+SF:">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devic
+SF:e-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<t
+SF:itle>405\x20Method\x20Not\x20Allowed</title>\n\x20\x20\x20\x20<link\x20
+SF:rel=\"shortcut\x20icon\"\x20href=\"/favicon\.ico\">\n\x20\x20\x20\x20<l
+SF:ink\x20rel=\"stylesheet\"\x20href=\"/ui-library/plesk-ui-library\.css\?
+SF:3\.40\.10\">\n\x20\x20\x20\x20<script\x20src=\"/ui-library/plesk-ui-lib
+SF:rary\.min\.js\?3\.40\.10\"></script>\n\x20\x20\x20\x20<script\x20src=\"
+SF:/cp/javascript/vendors\.js\"></script>\n\x20\x20\x20\x20<script\x20src=
+SF:\"/cp/javascript/main\.js\"></script>\n\x20\x20\x20\x20<script\x20src=\
+SF:"/error_docs/uat\.js\?v4\"></script>\n<link\x20href=\"/error_docs/app\.
+SF:css\?3275a11af93002eb5427\"\x20rel=\"stylesheet\"></head>\n<bod")%r(Fou
+SF:rOhFourRequest,43A,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\x20sw-c
+SF:p-server\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2008:56:05\x20GMT\r\nCo
+SF:ntent-Type:\x20text/html\r\nContent-Length:\x20910\r\nConnection:\x20cl
+SF:ose\r\nETag:\x20\"688899d6-38e\"\r\n\r\n<!DOCTYPE\x20html>\n<!--\x20Cop
+SF:yright\x201999-2025\.\x20WebPros\x20International\x20GmbH\.\x20All\x20r
+SF:ights\x20reserved\.\x20-->\n<html\x20lang=\"en\"\x20dir=\"ltr\">\n<head
+SF:>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x
+SF:20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1
+SF:,\x20shrink-to-fit=no\">\n\x20\x20\x20\x20<title>404\x20Page\x20Not\x20
+SF:Found</title>\n\x20\x20\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20hre
+SF:f=\"/favicon\.ico\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20hr
+SF:ef=\"/ui-library/plesk-ui-library\.css\?3\.40\.10\">\n\x20\x20\x20\x20<
+SF:script\x20src=\"/ui-library/plesk-ui-library\.min\.js\?3\.40\.10\"></sc
+SF:ript>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/vendors\.js\"></
+SF:script>\n\x20\x20\x20\x20<script\x20src=\"/cp/javascript/main\.js\"></s
+SF:cript>\n\x20\x20\x20\x20<script\x20src=\"/error_docs/uat\.js\?v4\"></sc
+SF:ript>\n<link\x20href=\"/error_docs/app\.css\?3275a11af93002eb5427\"\x20
+SF:rel=\"stylesheet\"></head>\n<body>\n<di");
+Service Info: Hosts:  legion-etrangere.com, legion-etrangere.com, default-91_212_26_195
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:56:21 2025 -- 1 IP address (1 host up) scanned in 34.17 seconds
