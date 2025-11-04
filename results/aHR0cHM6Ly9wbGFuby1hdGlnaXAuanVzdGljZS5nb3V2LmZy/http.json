@@ -1,0 +1,153 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 70,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "server": "nginx/1.18.0",
+      "date": "Tue, 04 Nov 2025 13:45:31 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "access-control-allow-headers": "X-Requested-With,Authorization,X-Wimi-Name,X-API-Version,X-Request-ID,Content-Type,X-Wimi-WApi,X-Wimi-DeviceToken",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://plano-atigip.justice.gouv.fr/login/",
+      "redirects": true,
+      "route": [
+        "http://plano-atigip.justice.gouv.fr/",
+        "https://plano-atigip.justice.gouv.fr/",
+        "https://plano-atigip.justice.gouv.fr/login/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://cdn.wimi.pro/dist/versions/v8/_common/lib/libs/guest.libs.3ebb3a72c5417098bc8f493472f6f920.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/_common/lang/wimi/lang.en-us.0cd281ce0b45959c5e51.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/runtime.bundle.59aeb1a6614266c808bb.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/vendor.bundle.623f746f4b9433c63c2d.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/main.bundle.38d8fd6d61fd4097add2.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/init.bundle.36444f8d38b55bdf8696.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/common.bundle.00b1d3eae0e5eabe20d2.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/login.app.bundle.cf4402d572aaca346999.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.wimi.pro/dist/versions/v8/login/ptnb.custom.app.bundle.c232285286fa7c07cd1e.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
