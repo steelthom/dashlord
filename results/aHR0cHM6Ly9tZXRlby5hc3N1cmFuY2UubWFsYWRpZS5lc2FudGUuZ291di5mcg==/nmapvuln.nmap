@@ -1,0 +1,17 @@
+# Nmap 7.92 scan initiated Tue Nov  4 08:27:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln meteo.assurance.maladie.esante.gouv.fr
+Nmap scan report for meteo.assurance.maladie.esante.gouv.fr (167.235.220.62)
+Host is up (0.11s latency).
+rDNS record for 167.235.220.62: statuspage-1.betteruptime.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     Caddy httpd
+|_http-server-header: Caddy
+443/tcp open  ssl/http nginx 1.27.4
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: Caddy
+| vulners: 
+|   nginx 1.27.4: 
+|_    	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 08:27:35 2025 -- 1 IP address (1 host up) scanned in 24.51 seconds
