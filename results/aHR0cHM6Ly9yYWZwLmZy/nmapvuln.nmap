@@ -1,0 +1,189 @@
+# Nmap 7.92 scan initiated Tue Nov  4 15:17:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln rafp.fr
+Nmap scan report for rafp.fr (142.44.60.234)
+Host is up (0.081s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     server: nginx
+|     date: Tue, 04 Nov 2025 15:17:45 GMT
+|     content-type: text/html
+|     content-length: 162
+|     location: https://www.rafp.fr/
+|     strict-transport-security: max-age=63072000
+|     x-frame-options: SAMEORIGIN
+|     x-xss-protection: 1; mode=block
+|     x-content-type-options: nosniff
+|     x-permitted-cross-domain-policies: master-only
+|     connection: close
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     server: nginx
+|     date: Tue, 04 Nov 2025 15:17:46 GMT
+|     content-type: text/html
+|     content-length: 150
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+443/tcp open  ssl/https nginx
+|_http-server-header: nginx
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     server: nginx
+|     date: Tue, 04 Nov 2025 15:17:53 GMT
+|     content-type: text/html; charset=UTF-8
+|     content-length: 58328
+|     cache-control: must-revalidate, no-cache, private
+|     x-frame-options: SAMEORIGIN
+|     content-language: fr
+|     x-content-type-options: nosniff
+|     expires: -1
+|     pragma: no-cache
+|     strict-transport-security: max-age=63072000
+|     referrer-policy: strict-origin-when-cross-origin
+|     connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema# ">
+|     <head>
+|     <meta charset="utf-8" />
+|     <noscript><style>form.ant
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     server: nginx
+|     date: Tue, 04 Nov 2025 15:17:52 GMT
+|     content-type: text/html; charset=UTF-8
+|     content-length: 77144
+|     cache-control: must-revalidate, no-cache, private
+|     content-language: fr
+|     x-content-type-options: nosniff
+|     x-frame-options: SAMEORIGIN
+|     expires: -1
+|     pragma: no-cache
+|     strict-transport-security: max-age=63072000
+|     x-xss-protection: 1; mode=block
+|     x-permitted-cross-domain-policies: master-only
+|     referrer-policy: strict-origin-when-cross-origin
+|     connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XML
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     server: nginx
+|     date: Tue, 04 Nov 2025 15:17:52 GMT
+|     content-type: text/html
+|     content-length: 150
+|     strict-transport-security: max-age=63072000
+|     referrer-policy: strict-origin-when-cross-origin
+|     connection: close
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body>
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A1919%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,215,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nserver:\x2
+SF:0nginx\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2015:17:45\x20GMT\r\ncont
+SF:ent-type:\x20text/html\r\ncontent-length:\x20162\r\nlocation:\x20https:
+SF://www\.rafp\.fr/\r\nstrict-transport-security:\x20max-age=63072000\r\nx
+SF:-frame-options:\x20SAMEORIGIN\r\nx-xss-protection:\x201;\x20mode=block\
+SF:r\nx-content-type-options:\x20nosniff\r\nx-permitted-cross-domain-polic
+SF:ies:\x20master-only\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><tit
+SF:le>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>
+SF:301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>nginx</center>
+SF:\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,215,"HTTP/1\.1\x20301\x20Mov
+SF:ed\x20Permanently\r\nserver:\x20nginx\r\ndate:\x20Tue,\x2004\x20Nov\x20
+SF:2025\x2015:17:45\x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length
+SF::\x20162\r\nlocation:\x20https://www\.rafp\.fr/\r\nstrict-transport-sec
+SF:urity:\x20max-age=63072000\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-p
+SF:rotection:\x201;\x20mode=block\r\nx-content-type-options:\x20nosniff\r\
+SF:nx-permitted-cross-domain-policies:\x20master-only\r\nconnection:\x20cl
+SF:ose\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></
+SF:head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center
+SF:>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r(RTSPReque
+SF:st,154,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nserver:\x20nginx\r\ndate:
+SF:\x20Tue,\x2004\x20Nov\x202025\x2015:17:46\x20GMT\r\ncontent-type:\x20te
+SF:xt/html\r\ncontent-length:\x20150\r\nstrict-transport-security:\x20max-
+SF:age=63072000\r\nconnection:\x20close\r\n\r\n<html>\r\n<head><title>400\
+SF:x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x2
+SF:0Request</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</ht
+SF:ml>\r\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-
+SF:length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request
+SF:</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></
+SF:html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A1920%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,7B44,"HTTP/1\.1\x20200\x20OK\r\nserver:\x20nginx\r\n
+SF:date:\x20Tue,\x2004\x20Nov\x202025\x2015:17:52\x20GMT\r\ncontent-type:\
+SF:x20text/html;\x20charset=UTF-8\r\ncontent-length:\x2077144\r\ncache-con
+SF:trol:\x20must-revalidate,\x20no-cache,\x20private\r\ncontent-language:\
+SF:x20fr\r\nx-content-type-options:\x20nosniff\r\nx-frame-options:\x20SAME
+SF:ORIGIN\r\nexpires:\x20-1\r\npragma:\x20no-cache\r\nstrict-transport-sec
+SF:urity:\x20max-age=63072000\r\nx-xss-protection:\x201;\x20mode=block\r\n
+SF:x-permitted-cross-domain-policies:\x20master-only\r\nreferrer-policy:\x
+SF:20strict-origin-when-cross-origin\r\nconnection:\x20close\r\n\r\n<!DOCT
+SF:YPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=\"content:\
+SF:x20http://purl\.org/rss/1\.0/modules/content/\x20\x20dc:\x20http://purl
+SF:\.org/dc/terms/\x20\x20foaf:\x20http://xmlns\.com/foaf/0\.1/\x20\x20og:
+SF:\x20http://ogp\.me/ns#\x20\x20rdfs:\x20http://www\.w3\.org/2000/01/rdf-
+SF:schema#\x20\x20schema:\x20http://schema\.org/\x20\x20sioc:\x20http://rd
+SF:fs\.org/sioc/ns#\x20\x20sioct:\x20http://rdfs\.org/sioc/types#\x20\x20s
+SF:kos:\x20http://www\.w3\.org/2004/02/skos/core#\x20\x20xsd:\x20http://ww
+SF:w\.w3\.org/2001/XML")%r(HTTPOptions,186,"HTTP/1\.1\x20405\x20Not\x20All
+SF:owed\r\nserver:\x20nginx\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2015:17
+SF::52\x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length:\x20150\r\ns
+SF:trict-transport-security:\x20max-age=63072000\r\nreferrer-policy:\x20st
+SF:rict-origin-when-cross-origin\r\nconnection:\x20close\r\n\r\n<html>\r\n
+SF:<head><title>405\x20Not\x20Allowed</title></head>\r\n<body>\r\n<center>
+SF:<h1>405\x20Not\x20Allowed</h1></center>\r\n<hr><center>nginx</center>\r
+SF:\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,7FBB,"HTTP/1\.1\x20404\x
+SF:20Not\x20Found\r\nserver:\x20nginx\r\ndate:\x20Tue,\x2004\x20Nov\x20202
+SF:5\x2015:17:53\x20GMT\r\ncontent-type:\x20text/html;\x20charset=UTF-8\r\
+SF:ncontent-length:\x2058328\r\ncache-control:\x20must-revalidate,\x20no-c
+SF:ache,\x20private\r\nx-frame-options:\x20SAMEORIGIN\r\ncontent-language:
+SF:\x20fr\r\nx-content-type-options:\x20nosniff\r\nexpires:\x20-1\r\npragm
+SF:a:\x20no-cache\r\nstrict-transport-security:\x20max-age=63072000\r\nref
+SF:errer-policy:\x20strict-origin-when-cross-origin\r\nconnection:\x20clos
+SF:e\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20pre
+SF:fix=\"content:\x20http://purl\.org/rss/1\.0/modules/content/\x20\x20dc:
+SF:\x20http://purl\.org/dc/terms/\x20\x20foaf:\x20http://xmlns\.com/foaf/0
+SF:\.1/\x20\x20og:\x20http://ogp\.me/ns#\x20\x20rdfs:\x20http://www\.w3\.o
+SF:rg/2000/01/rdf-schema#\x20\x20schema:\x20http://schema\.org/\x20\x20sio
+SF:c:\x20http://rdfs\.org/sioc/ns#\x20\x20sioct:\x20http://rdfs\.org/sioc/
+SF:types#\x20\x20skos:\x20http://www\.w3\.org/2004/02/skos/core#\x20\x20xs
+SF:d:\x20http://www\.w3\.org/2001/XMLSchema#\x20\">\n\x20\x20<head>\n\x20\
+SF:x20\x20\x20<meta\x20charset=\"utf-8\"\x20/>\n<noscript><style>form\.ant
+SF:");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  4 15:18:09 2025 -- 1 IP address (1 host up) scanned in 36.96 seconds
