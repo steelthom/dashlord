@@ -1,0 +1,171 @@
+# Nmap 7.92 scan initiated Wed Nov  5 13:26:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln anct.gouv.fr
+Nmap scan report for anct.gouv.fr (185.231.164.168)
+Host is up (0.14s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Wed, 05 Nov 2025 13:26:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 166
+|     Connection: close
+|     Location: https://anct.gouv.fr/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Wed, 05 Nov 2025 13:26:31 GMT
+|     Content-Type: text/html
+|     Content-Length: 166
+|     Connection: close
+|     Location: https://anct.gouv.fr/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 05 Nov 2025 13:26:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 05 Nov 2025 13:26:39 GMT
+|     Content-Type: text/html
+|     Content-Length: 4004
+|     Connection: close
+|     Referrer-Policy: no-referrer
+|     Cache-Control: no-cache
+|     Strict-Transport-Security: max-age=63072000
+|     X-Frame-Options: DENY
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"cookie":{"name":"bln_challengejs","path":"/","maxAge":900,"value":"uJE97RXZdkj62sKm_OilFSZkK-ns01Fl-qmSxvU_D4Hvi7YpsjQtp8Iwi5nCpJ37_1KoDf_6UlO1MOMb-UpodyEC-UHccFf001yERNLy4Q4WHfXxM89zT0Aky8ZNmuGNV5RdHw-dVxROOrtWeRW9x-37Zp2y9SUa2glMWAkYHb0","sameSite":"None","secure":true},"domain":".anct.gouv.fr","checkChallengeParams":{"bot_category":"unknown","tracking_id":"","rule_id":"","request_fate":"challengejs"}};(()=>{"use
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 05 Nov 2025 13:26:38 GMT
+|     Content-Type: text/html
+|     Content-Length: 4004
+|     Connection: close
+|     Referrer-Policy: no-referrer
+|     Cache-Control: no-cache
+|     Strict-Transport-Security: max-age=63072000
+|     X-Frame-Options: DENY
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"checkChallengeParams":{"bot_category":"unknown","rule_id":"","tracking_id":"","request_fate":"challengejs"},"domain":".anct.gouv.fr","cookie":{"secure":true,"path":"/","sameSite":"None","maxAge":900,"value":"uJE97RXZdkj62sKm_OilFZ7wYj9Ab6rbgC5foQyLCuNGpnuvYK5qsoVI8B9LATAJlYHkPH338h6kAP-cLT4bkkMFRMo3WMSG3c6Mv7Psa4e6nyUqte8Vg8FG5YR3Qxe8PeRRA_hcs8LY5Llq8aUAYZqsgrvSiu40EqeID8Aqd7U","name":"bln_challengejs"}};(()=>{"use
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 05 Nov 2025 13:26:38 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     Strict-Transport-Security: max-age=63072000
+|     X-Frame-Options: DENY
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: origin-when-cross-origin
+|     X-XSS-Protection: 1; mode=block
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690B5087%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20W
+SF:ed,\x2005\x20Nov\x202025\x2013:26:31\x20GMT\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20ht
+SF:tps://anct\.gouv\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Per
+SF:manently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Perman
+SF:ently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</h
+SF:tml>\r\n")%r(HTTPOptions,14F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\
+SF:r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:26:31\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLo
+SF:cation:\x20https://anct\.gouv\.fr/\r\n\r\n<html>\r\n<head><title>301\x2
+SF:0Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Mo
+SF:ved\x20Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n<
+SF:/body>\r\n</html>\r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20R
+SF:equest\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:26:32\x20GMT\r\nCont
+SF:ent-Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20clos
+SF:e\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\
+SF:n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cent
+SF:er>openresty</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x20
+SF:13:26:32\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20154
+SF:\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Re
+SF:quest</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1
+SF:></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n"
+SF:)%r(FourOhFourRequest,172,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
+SF:Date:\x20Wed,\x2005\x20Nov\x202025\x2013:26:32\x20GMT\r\nContent-Type:\
+SF:x20text/html\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocat
+SF:ion:\x20https://anct\.gouv\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n
+SF:\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r
+SF:\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<h
+SF:r><center>openresty</center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690B508E%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,10DB,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2005\
+SF:x20Nov\x202025\x2013:26:38\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x204004\r\nConnection:\x20close\r\nReferrer-Policy:\x20no-r
+SF:eferrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Security:\x20
+SF:max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-Options:
+SF:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!doctypeht
+SF:ml><meta\x20name=\"viewport\"content=\"width=device-width\"><meta\x20ch
+SF:arset=\"utf-8\"><script></script><script>var\x20__blnChallengeStore={\"
+SF:unregisterServiceWorker\":false,\"checkChallengeParams\":{\"bot_categor
+SF:y\":\"unknown\",\"rule_id\":\"\",\"tracking_id\":\"\",\"request_fate\":
+SF:\"challengejs\"},\"domain\":\"\.anct\.gouv\.fr\",\"cookie\":{\"secure\"
+SF::true,\"path\":\"\\/\",\"sameSite\":\"None\",\"maxAge\":900,\"value\":\
+SF:"uJE97RXZdkj62sKm_OilFZ7wYj9Ab6rbgC5foQyLCuNGpnuvYK5qsoVI8B9LATAJlYHkPH
+SF:338h6kAP-cLT4bkkMFRMo3WMSG3c6Mv7Psa4e6nyUqte8Vg8FG5YR3Qxe8PeRRA_hcs8LY5
+SF:Llq8aUAYZqsgrvSiu40EqeID8Aqd7U\",\"name\":\"bln_challengejs\"}};\(\(\)=
+SF:>{\"use\x20")%r(HTTPOptions,1CD,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n
+SF:Date:\x20Wed,\x2005\x20Nov\x202025\x2013:26:38\x20GMT\r\nContent-Type:\
+SF:x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20close\r\nStric
+SF:t-Transport-Security:\x20max-age=63072000\r\nX-Frame-Options:\x20DENY\r
+SF:\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20origin-when
+SF:-cross-origin\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<html>\r\
+SF:n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center
+SF:><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>openresty</cent
+SF:er>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,10DB,"HTTP/1\.1\x20
+SF:200\x20OK\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:26:39\x20GMT\r\nC
+SF:ontent-Type:\x20text/html\r\nContent-Length:\x204004\r\nConnection:\x20
+SF:close\r\nReferrer-Policy:\x20no-referrer\r\nCache-Control:\x20no-cache\
+SF:r\nStrict-Transport-Security:\x20max-age=63072000\r\nX-Frame-Options:\x
+SF:20DENY\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;
+SF:\x20mode=block\r\n\r\n<!doctypehtml><meta\x20name=\"viewport\"content=\
+SF:"width=device-width\"><meta\x20charset=\"utf-8\"><script></script><scri
+SF:pt>var\x20__blnChallengeStore={\"unregisterServiceWorker\":false,\"cook
+SF:ie\":{\"name\":\"bln_challengejs\",\"path\":\"\\/\",\"maxAge\":900,\"va
+SF:lue\":\"uJE97RXZdkj62sKm_OilFSZkK-ns01Fl-qmSxvU_D4Hvi7YpsjQtp8Iwi5nCpJ3
+SF:7_1KoDf_6UlO1MOMb-UpodyEC-UHccFf001yERNLy4Q4WHfXxM89zT0Aky8ZNmuGNV5RdHw
+SF:-dVxROOrtWeRW9x-37Zp2y9SUa2glMWAkYHb0\",\"sameSite\":\"None\",\"secure\
+SF:":true},\"domain\":\"\.anct\.gouv\.fr\",\"checkChallengeParams\":{\"bot
+SF:_category\":\"unknown\",\"tracking_id\":\"\",\"rule_id\":\"\",\"request
+SF:_fate\":\"challengejs\"}};\(\(\)=>{\"use\x20");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 13:27:01 2025 -- 1 IP address (1 host up) scanned in 46.65 seconds
