@@ -1,0 +1,20 @@
+# Nmap 7.92 scan initiated Wed Nov  5 19:37:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cbn-alpin.fr
+Nmap scan report for cbn-alpin.fr (149.202.162.89)
+Host is up (0.11s latency).
+Other addresses for cbn-alpin.fr (not scanned): 2001:41d0:302:1000::128
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE  VERSION
+80/tcp   open  http     nginx
+|_http-server-header: nginx/1.24.0
+443/tcp  open  ssl/http nginx
+|_http-server-header: nginx/1.24.0
+9000/tcp open  http     nginx 1.23.4
+| vulners: 
+|   nginx 1.23.4: 
+|     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
+|     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
+|_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: nginx/1.23.4
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 19:37:45 2025 -- 1 IP address (1 host up) scanned in 26.56 seconds
