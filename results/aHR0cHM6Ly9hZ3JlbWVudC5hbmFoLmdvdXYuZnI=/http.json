@@ -1,0 +1,136 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B-",
+    "error": null,
+    "score": 65,
+    "statusCode": 200,
+    "testsFailed": 3,
+    "testsPassed": 7,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "server": "nginx/1.27.3",
+      "date": "Wed, 05 Nov 2025 13:47:11 GMT",
+      "content-type": "text/html",
+      "content-length": "8792",
+      "last-modified": "Wed, 22 Oct 2025 05:53:41 GMT",
+      "etag": "\"e734-641b8f061e7c0-gzip:dtagent10325251017120750lNGX:dtagent10325251017120750lNGX\"",
+      "accept-ranges": "bytes",
+      "cache-control": "no-cache, no-store, must-revalidate",
+      "expires": "Wed, 05 Nov 2025 13:47:11 GMT",
+      "traceresponse": "00-dc1052f12ae8a1da78ef4b64594ae3a3-2790d659e3ef41c6-01",
+      "x-dt-tracestate": "f91d7514-c11c5b27@dt",
+      "x-oneagent-js-injection": "true",
+      "x-ruxit-js-agent": "true",
+      "vary": "Accept-Encoding",
+      "server-timing": "dtSInfo;desc=\"0\", dtRpid;desc=\"1013755294\"",
+      "set-cookie": [
+        "dtCookie=v_4_srv_2_sn_DBCC4DDF76B32798B297C9C1465C09A1_perc_100000_ol_0_mul_1_app-3A8bfdf626c6372e01_1_rcs-3Acss_0; Path=/; Domain=.anah.gouv.fr"
+      ],
+      "remoteip": "20.169.72.27",
+      "strict-transport-security": "max-age=16000000;includeSubDomains;",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "x-xss-protection": "1 ;mode=block",
+      "connection": "close"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "dtCookie": {
+          "domain": "anah.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://agrement.anah.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://agrement.anah.gouv.fr/",
+        "https://agrement.anah.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": false,
+      "result": "referrer-policy-unsafe",
+      "scoreModifier": -5,
+      "data": "no-referrer-when-downgrade",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=16000000;includeSubDomains;",
+      "includeSubDomains": true,
+      "maxAge": 16000000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
