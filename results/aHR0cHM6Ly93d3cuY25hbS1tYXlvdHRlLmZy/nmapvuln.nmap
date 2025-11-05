@@ -1,0 +1,84 @@
+# Nmap 7.92 scan initiated Wed Nov  5 09:06:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.cnam-mayotte.fr
+Nmap scan report for www.cnam-mayotte.fr (163.173.128.40)
+Host is up (0.12s latency).
+rDNS record for 163.173.128.40: kaurip.cnam.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Content-length: 0
+|     Location: https:///
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 6691
+|     Connection: close
+|     P3P: CP="CAO PSA OUR"
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Pragma: no-cache
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <base href="/login/">
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=.85">
+|     <meta http-equiv="pragma" content="no-cache">
+|     <title>Application Blocked</title>
+|     <link rel="stylesheet" href="css/latofonts.css">
+|     <style>
+|     body {
+|     background-color: #e8ebeb;
+|     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+|     font-size: 16px;
+|     margin: 0;
+|     color: #070808;
+|     a:link {
+|   X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+443/tcp open  ssl/http Apache httpd
+|_http-server-header: Apache
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690B13A3%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-len
+SF:gth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-le
+SF:ngth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%
+SF:r(RTSPRequest,1B38,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x206691\r\nC
+SF:onnection:\x20close\r\nP3P:\x20CP=\"CAO\x20PSA\x20OUR\"\r\nExpires:\x20
+SF:Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nCache-Control:\x20no-st
+SF:ore,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r
+SF:\nPragma:\x20no-cache\r\n\r\n<!DOCTYPE\x20html>\n\n<html\x20lang=\"en\"
+SF:>\n<head>\n\x20\x20\x20\x20<base\x20href=\"/login/\">\n\x20\x20\x20\x20
+SF:<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA
+SF:-Compatible\"\x20content=\"IE=edge\">\n\x20\x20\x20\x20<meta\x20name=\"
+SF:viewport\"\x20content=\"width=device-width,\x20initial-scale=\.85\">\n\
+SF:x20\x20\x20\x20<meta\x20http-equiv=\"pragma\"\x20content=\"no-cache\">\
+SF:n\x20\x20\x20\x20<title>Application\x20Blocked</title>\n\x20\x20\x20\x2
+SF:0<link\x20rel=\"stylesheet\"\x20href=\"css/latofonts\.css\">\n\x20\x20\
+SF:x20\x20<style>\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#e8ebeb;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Lato,\x20'H
+SF:elvetica\x20Neue',\x20Helvetica,\x20Arial,\x20sans-serif;\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px;\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20color:\x20#070808;\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20}\n\n\x20\x20\x20\x20\x20\x20\x20\x20a:link\x20{\n\x20")%r(X11Pr
+SF:obe,BB,"HTTP/1\.0\x20400\x20Bad\x20request\r\nCache-Control:\x20no-cach
+SF:e\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><b
+SF:ody><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20in
+SF:valid\x20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 09:07:03 2025 -- 1 IP address (1 host up) scanned in 36.86 seconds
