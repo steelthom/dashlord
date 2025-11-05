@@ -1,0 +1,161 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 0,
+    "statusCode": 200,
+    "testsFailed": 7,
+    "testsPassed": 3,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Wed, 05 Nov 2025 03:05:55 GMT",
+      "last-modified": "Tue, 04 Nov 2025 14:48:11 GMT",
+      "vary": "Accept-Encoding",
+      "connection": "close",
+      "content-type": "text/html; charset=UTF-8",
+      "set-cookie": [
+        "Persist=!Q/G7yxAWY/yWj8KS9mRardTL2IX9tdOfdp9BTDO7DTjwj1hMak1ZqFXLizbYVpULJBqGkgjBBvind58=; path=/; Httponly; Secure",
+        "f5avraaaaaaaaaaaaaaaa_session_=DACHOEAOHDJMCGGEPPHJBGFEGHKHNILOKDINNLLNOCIDOEJDLBGNDENKHJBFPGILCMADCBDJIOMONMBFPOEABLOHMLPJCGNKADJNPEKNHDAFHJPIMEKPIIKABMGBCONO; HttpOnly; secure;",
+        "TS017fc20b=01b14d1a064b7546c45d54fe74c9284f3d4a4795ef4f04bd20e3d3485a5f47758722e140d42ec27aed9a56c3390e434504d30ea08fdb587904b393fe2d86754a3482d0a79ecab82a0219fa1244983c72be713d2197; Path=/"
+      ],
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "SERVERID77446": {
+          "domain": "vnf.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "Persist": {
+          "domain": "www.vnf.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "f5avraaaaaaaaaaaaaaaa_session_": {
+          "domain": "www.vnf.fr",
+          "httponly": true,
+          "path": "/vnf",
+          "port": null,
+          "secure": true
+        },
+        "TS017fc20b": {
+          "domain": "www.vnf.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-not-to-https-on-initial-redirection",
+      "scoreModifier": -10,
+      "destination": "https://www.vnf.fr/vnf/",
+      "redirects": true,
+      "route": [
+        "http://vnf.fr/",
+        "http://www.vnf.fr/",
+        "https://www.vnf.fr/",
+        "https://www.vnf.fr/vnf/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-and-external-scripts-not-loaded-securely",
+      "scoreModifier": -50,
+      "data": {
+        "https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.19.0/tarteaucitron.min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://unpkg.com/aos@2.3.1/dist/aos.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "//www.juicer.io/embed/vnf-fr/wp-plugin-1-12.js?nojquery=true&per=9&pages=1": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
