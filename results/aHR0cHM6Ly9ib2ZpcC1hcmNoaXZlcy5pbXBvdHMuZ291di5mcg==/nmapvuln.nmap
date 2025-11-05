@@ -1,0 +1,100 @@
+# Nmap 7.92 scan initiated Wed Nov  5 20:18:09 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bofip-archives.impots.gouv.fr
+Nmap scan report for bofip-archives.impots.gouv.fr (145.242.11.15)
+Host is up (0.11s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://192.168.186.10/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://192.168.186.10/
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Strict-Transport-Security: max-age=34560000; includeSubDomains
+|     date: Wed, 05 Nov 2025 20:18:31 GMT
+|     x-content-type-options: nosniff
+|     content-type: text/plain; charset=UTF-8
+|     x-varnish: 82530382
+|     x-cache: MISS
+|     age: 0
+|     cache-control: no-store, max-age=0
+|     content-length: 52
+|     connection: close
+|     provided host name is not valid for this server.
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Strict-Transport-Security: max-age=34560000; includeSubDomains
+|     date: Thu, 16 Oct 2025 23:07:56 GMT
+|     x-content-type-options: nosniff
+|     content-type: text/plain; charset=UTF-8
+|     x-bofip-cache: 1
+|     x-bofip-cache-pit: 
+|     x-bofip-cache-jour: 
+|     x-now: 
+|     x-pit: 
+|     x-varnish: 82530380 72304931
+|     x-cache: HIT
+|     age: 0
+|     cache-control: no-store, max-age=0
+|     content-length: 52
+|     connection: close
+|     provided host name is not valid for this server.
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Strict-Transport-Security: max-age=34560000; includeSubDomains
+|     date: Wed, 05 Nov 2025 20:18:31 GMT
+|     x-content-type-options: nosniff
+|     content-type: text/plain; charset=UTF-8
+|     x-varnish: 82773001
+|     x-cache: MISS
+|     age: 0
+|     cache-control: no-store, max-age=0
+|     connection: close
+|_    provided host name is not valid for this server.
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690BB110%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https://192\.168\.186\.10/\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOp
+SF:tions,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
+SF:s://192\.168\.186\.10/\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRe
+SF:quest,7B,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
+SF:s://192\.168\.186\.10/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-L
+SF:ength:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690BB117%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1CD,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=34560000;\x20includeSubDomains\r\ndate:\x2
+SF:0Thu,\x2016\x20Oct\x202025\x2023:07:56\x20GMT\r\nx-content-type-options
+SF::\x20nosniff\r\ncontent-type:\x20text/plain;\x20charset=UTF-8\r\nx-bofi
+SF:p-cache:\x201\r\nx-bofip-cache-pit:\x20\r\nx-bofip-cache-jour:\x20\r\nx
+SF:-now:\x20\r\nx-pit:\x20\r\nx-varnish:\x2082530380\x2072304931\r\nx-cach
+SF:e:\x20HIT\r\nage:\x200\r\ncache-control:\x20no-store,\x20max-age=0\r\nc
+SF:ontent-length:\x2052\r\nconnection:\x20close\r\n\r\nThe\x20provided\x20
+SF:host\x20name\x20is\x20not\x20valid\x20for\x20this\x20server\.")%r(HTTPO
+SF:ptions,162,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nStrict-Transport-Secu
+SF:rity:\x20max-age=34560000;\x20includeSubDomains\r\ndate:\x20Wed,\x2005\
+SF:x20Nov\x202025\x2020:18:31\x20GMT\r\nx-content-type-options:\x20nosniff
+SF:\r\ncontent-type:\x20text/plain;\x20charset=UTF-8\r\nx-varnish:\x208277
+SF:3001\r\nx-cache:\x20MISS\r\nage:\x200\r\ncache-control:\x20no-store,\x2
+SF:0max-age=0\r\nconnection:\x20close\r\n\r\nThe\x20provided\x20host\x20na
+SF:me\x20is\x20not\x20valid\x20for\x20this\x20server\.")%r(FourOhFourReque
+SF:st,176,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nStrict-Transport-Security
+SF::\x20max-age=34560000;\x20includeSubDomains\r\ndate:\x20Wed,\x2005\x20N
+SF:ov\x202025\x2020:18:31\x20GMT\r\nx-content-type-options:\x20nosniff\r\n
+SF:content-type:\x20text/plain;\x20charset=UTF-8\r\nx-varnish:\x2082530382
+SF:\r\nx-cache:\x20MISS\r\nage:\x200\r\ncache-control:\x20no-store,\x20max
+SF:-age=0\r\ncontent-length:\x2052\r\nconnection:\x20close\r\n\r\nThe\x20p
+SF:rovided\x20host\x20name\x20is\x20not\x20valid\x20for\x20this\x20server\
+SF:.");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 20:18:56 2025 -- 1 IP address (1 host up) scanned in 46.93 seconds
