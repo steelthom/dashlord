@@ -1,0 +1,50 @@
+# Nmap 7.92 scan initiated Wed Nov  5 08:17:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.francenormalisation.fr
+Nmap scan report for www.francenormalisation.fr (193.203.171.44)
+Host is up (0.085s latency).
+Not shown: 962 filtered tcp ports (no-response), 34 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+21/tcp   open  ftp      ProFTPD or KnFTPD
+80/tcp   open  http     LiteSpeed httpd
+|_http-server-header: LiteSpeed
+443/tcp  open  ssl/http LiteSpeed httpd
+|_http-server-header: LiteSpeed
+3306/tcp open  mysql?
+| fingerprint-strings: 
+|   GenericLines: 
+|     11.8.3-MariaDB-log
+|     =!+UKVNe
+|     4nQ(t2:m8j2X
+|     mysql_native_password
+|     #HY000Proxy header is not accepted from 68.154.37.68
+|   LDAPBindReq: 
+|     11.8.3-MariaDB-log
+|     nDGv=l**
+|     5k;%Fo~K<+a(
+|     mysql_native_password
+|   NULL: 
+|     11.8.3-MariaDB-log
+|     =!+UKVNe
+|     4nQ(t2:m8j2X
+|     mysql_native_password
+|   afp: 
+|     11.8.3-MariaDB-log
+|     (j]sLb&7
+|     }50-0Jd90#^2
+|_    mysql_native_password
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.92%I=7%D=11/5%Time=690B0828%P=x86_64-alpine-linux-musl
+SF:%r(NULL,5A,"V\0\0\0\n11\.8\.3-MariaDB-log\0&2\x89\x11=!\+UKVNe\0\xfe\xf
+SF:f\xe0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\x004nQ\(t2:m8j2X\0mysql_native
+SF:_password\0")%r(GenericLines,95,"V\0\0\0\n11\.8\.3-MariaDB-log\0&2\x89\
+SF:x11=!\+UKVNe\0\xfe\xff\xe0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\x004nQ\(t
+SF:2:m8j2X\0mysql_native_password\x007\0\0\x01\xffj\x04#HY000Proxy\x20head
+SF:er\x20is\x20not\x20accepted\x20from\x2068\.154\.37\.68")%r(LDAPBindReq,
+SF:5A,"V\0\0\0\n11\.8\.3-MariaDB-log\0\x8b4\x89\x11nDGv=l\*\*\0\xfe\xff\xe
+SF:0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\x005k;%Fo~K<\+a\(\0mysql_native_pa
+SF:ssword\0")%r(afp,5A,"V\0\0\0\n11\.8\.3-MariaDB-log\0w6\x89\x11\(j\]sLb&
+SF:7\0\xfe\xff\xe0\x02\0\xff\x81\x15\0\0\0\0\0\0=\0\0\0}50-0Jd90#\^2\0mysq
+SF:l_native_password\0");
+Service Info: OS: Unix
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 08:18:00 2025 -- 1 IP address (1 host up) scanned in 27.79 seconds
