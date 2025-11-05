@@ -1,0 +1,90 @@
+# Nmap 7.92 scan initiated Wed Nov  5 09:14:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.rdv-permisdeconduire-ppol.interieur.gouv.fr
+Nmap scan report for www.rdv-permisdeconduire-ppol.interieur.gouv.fr (143.196.253.106)
+Host is up (0.13s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Wed, 05 Nov 2025 09:14:41 GMT
+|     Location: https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/nice ports,/Trinity.txt.bak
+|     Content-Length: 291
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/nice ports,/Trinity.txt.bak">here</a>.</p>
+|     </body></html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Wed, 05 Nov 2025 09:14:31 GMT
+|     Location: https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/
+|     Content-Length: 264
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/">here</a>.</p>
+|     </body></html>
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 05 Nov 2025 09:15:02 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+443/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690B1577%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1E8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20W
+SF:ed,\x2005\x20Nov\x202025\x2009:14:31\x20GMT\r\nLocation:\x20https://www
+SF:\.rdv-permisdeconduire-ppol\.interieur\.gouv\.fr/\r\nContent-Length:\x2
+SF:0264\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=
+SF:iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
+SF:\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently</titl
+SF:e>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x2
+SF:0has\x20moved\x20<a\x20href=\"https://www\.rdv-permisdeconduire-ppol\.i
+SF:nterieur\.gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(HTTPOptions,
+SF:1E8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Wed,\x2005\x2
+SF:0Nov\x202025\x2009:14:31\x20GMT\r\nLocation:\x20https://www\.rdv-permis
+SF:deconduire-ppol\.interieur\.gouv\.fr/\r\nContent-Length:\x20264\r\nConn
+SF:ection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r
+SF:\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN
+SF:\">\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head><
+SF:body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20move
+SF:d\x20<a\x20href=\"https://www\.rdv-permisdeconduire-ppol\.interieur\.go
+SF:uv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(FourOhFourRequest,21E,"H
+SF:TTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Wed,\x2005\x20Nov\x
+SF:202025\x2009:14:41\x20GMT\r\nLocation:\x20https://www\.rdv-permisdecond
+SF:uire-ppol\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nCont
+SF:ent-Length:\x20291\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IET
+SF:F//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Per
+SF:manently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\
+SF:x20document\x20has\x20moved\x20<a\x20href=\"https://www\.rdv-permisdeco
+SF:nduire-ppol\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\">her
+SF:e</a>\.</p>\n</body></html>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2009:15:02\x20GMT\r\nCon
+SF:tent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Requ
+SF:est</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser
+SF:\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20u
+SF:nderstand\.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 09:16:22 2025 -- 1 IP address (1 host up) scanned in 127.99 seconds
