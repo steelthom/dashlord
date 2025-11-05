@@ -1,0 +1,127 @@
+# Nmap 7.92 scan initiated Wed Nov  5 06:55:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.retraite-sup-collecte.sante.gouv.fr
+Nmap scan report for www.retraite-sup-collecte.sante.gouv.fr (185.194.83.112)
+Host is up (0.11s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html
+|     Date: Wed, 05 Nov 2025 06:56:03 GMT
+|     Connection: close
+|     Content-Length: 1245
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+|     <title>404 - File or directory not found.</title>
+|     <style type="text/css">
+|     <!--
+|     body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+|     fieldset{padding:0 15px 10px 15px;} 
+|     h1{font-size:2.4em;margin:0;color:#FFF;}
+|     h2{font-size:1.7em;margin:0;color:#CC0000;} 
+|     h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+|     #header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuch
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Allow: OPTIONS, TRACE, GET, HEAD, POST
+|     Public: OPTIONS, TRACE, GET, HEAD, POST
+|     Date: Wed, 05 Nov 2025 06:56:03 GMT
+|     Connection: close
+|     Content-Length: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html; charset=us-ascii
+|     Date: Wed, 05 Nov 2025 06:56:15 GMT
+|     Connection: close
+|     Content-Length: 311
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Bad Request</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Bad Request</h2>
+|     <hr><p>HTTP Error 400. The request is badly formed.</p>
+|_    </BODY></HTML>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690AF4F8%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AF504%P=x86_64-alpine-linux
+SF:-musl%r(HTTPOptions,10C,"HTTP/1\.1\x20200\x20OK\r\nAllow:\x20OPTIONS,\x
+SF:20TRACE,\x20GET,\x20HEAD,\x20POST\r\nPublic:\x20OPTIONS,\x20TRACE,\x20G
+SF:ET,\x20HEAD,\x20POST\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2006:56:03\
+SF:x20GMT\r\nConnection:\x20close\r\nContent-Length:\x200\r\nX-Frame-Optio
+SF:ns:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=31536000;\x2
+SF:0includeSubDomains\r\n\r\n")%r(FourOhFourRequest,5BB,"HTTP/1\.1\x20404\
+SF:x20Not\x20Found\r\nContent-Type:\x20text/html\r\nDate:\x20Wed,\x2005\x2
+SF:0Nov\x202025\x2006:56:03\x20GMT\r\nConnection:\x20close\r\nContent-Leng
+SF:th:\x201245\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Secur
+SF:ity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20html
+SF:\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http:
+SF://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\r\n<html\x20xmlns=\"
+SF:http://www\.w3\.org/1999/xhtml\">\r\n<head>\r\n<meta\x20http-equiv=\"Co
+SF:ntent-Type\"\x20content=\"text/html;\x20charset=iso-8859-1\"/>\r\n<titl
+SF:e>404\x20-\x20File\x20or\x20directory\x20not\x20found\.</title>\r\n<sty
+SF:le\x20type=\"text/css\">\r\n<!--\r\nbody{margin:0;font-size:\.7em;font-
+SF:family:Verdana,\x20Arial,\x20Helvetica,\x20sans-serif;background:#EEEEE
+SF:E;}\r\nfieldset{padding:0\x2015px\x2010px\x2015px;}\x20\r\nh1{font-size
+SF::2\.4em;margin:0;color:#FFF;}\r\nh2{font-size:1\.7em;margin:0;color:#CC
+SF:0000;}\x20\r\nh3{font-size:1\.2em;margin:10px\x200\x200\x200;color:#000
+SF:000;}\x20\r\n#header{width:96%;margin:0\x200\x200\x200;padding:6px\x202
+SF:%\x206px\x202%;font-family:\"trebuch")%r(RTSPRequest,228,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=us-asci
+SF:i\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2006:56:15\x20GMT\r\nConnectio
+SF:n:\x20close\r\nContent-Length:\x20311\r\nX-Frame-Options:\x20SAMEORIGIN
+SF:\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomain
+SF:s\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01/
+SF:/EN\"\"http://www\.w3\.org/TR/html4/strict\.dtd\">\r\n<HTML><HEAD><TITL
+SF:E>Bad\x20Request</TITLE>\r\n<META\x20HTTP-EQUIV=\"Content-Type\"\x20Con
+SF:tent=\"text/html;\x20charset=us-ascii\"></HEAD>\r\n<BODY><h2>Bad\x20Req
+SF:uest</h2>\r\n<hr><p>HTTP\x20Error\x20400\.\x20The\x20request\x20is\x20b
+SF:adly\x20formed\.</p>\r\n</BODY></HTML>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 06:58:29 2025 -- 1 IP address (1 host up) scanned in 172.96 seconds
