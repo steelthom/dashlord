@@ -1,0 +1,44 @@
+# Nmap 7.92 scan initiated Wed Nov  5 14:31:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln avis.chorus-pro.gouv.fr
+Nmap scan report for avis.chorus-pro.gouv.fr (146.59.137.221)
+Host is up (0.12s latency).
+rDNS record for 146.59.137.221: ip221.ip-146-59-137.eu
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https Web Server
+|_http-server-header: Web Server
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/plain; charset=utf-8
+|     X-Content-Type-Options: nosniff
+|     Date: Wed, 05 Nov 2025 14:31:46 GMT
+|     Content-Length: 19
+|     Connection: close
+|     page not found
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/plain; charset=utf-8
+|     X-Content-Type-Options: nosniff
+|     Date: Wed, 05 Nov 2025 14:31:45 GMT
+|     Content-Length: 19
+|     Connection: close
+|_    page not found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690B5FD1%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,C3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff
+SF:\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2014:31:45\x20GMT\r\nContent-Le
+SF:ngth:\x2019\r\nConnection:\x20close\r\n\r\n404\x20page\x20not\x20found\
+SF:n")%r(HTTPOptions,C3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:
+SF:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nosniff\
+SF:r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2014:31:46\x20GMT\r\nContent-Len
+SF:gth:\x2019\r\nConnection:\x20close\r\n\r\n404\x20page\x20not\x20found\n
+SF:")%r(FourOhFourRequest,C3,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-
+SF:Type:\x20text/plain;\x20charset=utf-8\r\nX-Content-Type-Options:\x20nos
+SF:niff\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2014:31:46\x20GMT\r\nConten
+SF:t-Length:\x2019\r\nConnection:\x20close\r\n\r\n404\x20page\x20not\x20fo
+SF:und\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 14:33:51 2025 -- 1 IP address (1 host up) scanned in 149.15 seconds
