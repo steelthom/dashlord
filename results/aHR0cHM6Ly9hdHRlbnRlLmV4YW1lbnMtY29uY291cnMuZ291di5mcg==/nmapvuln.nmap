@@ -1,0 +1,90 @@
+# Nmap 7.92 scan initiated Wed Nov  5 14:35:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln attente.examens-concours.gouv.fr
+Nmap scan report for attente.examens-concours.gouv.fr (194.167.72.34)
+Host is up (0.084s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  closed http
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Wed, 05 Nov 2025 14:35:47 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 21
+|     Connection: close
+|     Set-Cookie: BIGipServerhhQZ3ruZVBz0hirLomDREA=!2g2fu4xldBz9t/AAT/8HpZrfTDr1Aflii8jqZtiV55NLM9/Tw9DUaSXGdsvtmFPX6BkSh2dZY8xbcmp+Y7HX1dwgQUZpsOK2/L1Eanu2; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=63072000
+|     default backend - 404
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Wed, 05 Nov 2025 14:35:47 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 21
+|     Connection: close
+|     Set-Cookie: BIGipServerhhQZ3ruZVBz0hirLomDREA=!8GkWqp6xN85bGEoAT/8HpZrfTDr1AWHtuMJP72KRGOSZ1k4QyVfA7pyB8VdMiWh5DQA73uznTr3d6iPrx2LG+dVYpCuaC4pJ/VNTA38X; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=63072000
+|     default backend - 404
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 05 Nov 2025 14:35:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     Set-Cookie: BIGipServerhhQZ3ruZVBz0hirLomDREA=!VNpmOvwwylo+BsMAT/8HpZrfTDr1AejBkPFxffOjCvkxK71n85oOjA0A+Ledva4BpfJJDi/0bXFpQe+cBo4158q+8VaOM7U8mp6xstWM; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=63072000
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|     </html>
+|   TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 05 Nov 2025 14:36:27 GMT
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     Strict-Transport-Security: max-age=63072000
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690B60C3%P=x86_64-alpine-linux
+SF:-musl%r(HTTPOptions,184,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20W
+SF:ed,\x2005\x20Nov\x202025\x2014:35:47\x20GMT\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nContent-Length:\x2021\r\nConnection:\x20close\
+SF:r\nSet-Cookie:\x20BIGipServerhhQZ3ruZVBz0hirLomDREA=!8GkWqp6xN85bGEoAT/
+SF:8HpZrfTDr1AWHtuMJP72KRGOSZ1k4QyVfA7pyB8VdMiWh5DQA73uznTr3d6iPrx2LG\+dVY
+SF:pCuaC4pJ/VNTA38X;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport
+SF:-Security:\x20max-age=63072000\r\n\r\ndefault\x20backend\x20-\x20404")%
+SF:r(FourOhFourRequest,184,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20W
+SF:ed,\x2005\x20Nov\x202025\x2014:35:47\x20GMT\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nContent-Length:\x2021\r\nConnection:\x20close\
+SF:r\nSet-Cookie:\x20BIGipServerhhQZ3ruZVBz0hirLomDREA=!2g2fu4xldBz9t/AAT/
+SF:8HpZrfTDr1Aflii8jqZtiV55NLM9/Tw9DUaSXGdsvtmFPX6BkSh2dZY8xbcmp\+Y7HX1dwg
+SF:QUZpsOK2/L1Eanu2;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport
+SF:-Security:\x20max-age=63072000\r\n\r\ndefault\x20backend\x20-\x20404")%
+SF:r(RTSPRequest,1F8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\
+SF:x2005\x20Nov\x202025\x2014:35:58\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20150\r\nConnection:\x20close\r\nSet-Cookie:\x20BIGi
+SF:pServerhhQZ3ruZVBz0hirLomDREA=!VNpmOvwwylo\+BsMAT/8HpZrfTDr1AejBkPFxffO
+SF:jCvkxK71n85oOjA0A\+Ledva4BpfJJDi/0bXFpQe\+cBo4158q\+8VaOM7U8mp6xstWM;\x
+SF:20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20max-a
+SF:ge=63072000\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title>
+SF:</head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n")%r(TerminalServe
+SF:rCookie,145,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2005\
+SF:x20Nov\x202025\x2014:36:27\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x20150\r\nConnection:\x20close\r\nStrict-Transport-Security
+SF::\x20max-age=63072000\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Reque
+SF:st</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></
+SF:center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 14:38:18 2025 -- 1 IP address (1 host up) scanned in 175.88 seconds
