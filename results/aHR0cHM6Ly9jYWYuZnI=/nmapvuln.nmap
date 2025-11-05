@@ -1,0 +1,171 @@
+# Nmap 7.92 scan initiated Wed Nov  5 19:41:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln caf.fr
+Nmap scan report for caf.fr (66.22.41.120)
+Host is up (0.084s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT    STATE    SERVICE   VERSION
+20/tcp  filtered ftp-data
+21/tcp  filtered ftp
+22/tcp  filtered ssh
+80/tcp  open     http      rdwr
+|_http-server-header: rdwr
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: rdwr
+|     Date: Wed, 05 Nov 2025 19:41:55 GMT
+|     Content-Type: text/html
+|     Content-Length: 161
+|     Connection: close
+|     Location: https://www.caf.fr:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: rdwr
+|     Date: Wed, 05 Nov 2025 19:41:54 GMT
+|     Content-Type: text/html
+|     Content-Length: 161
+|     Connection: close
+|     Location: https://www.caf.fr:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: rdwr
+|     Date: Wed, 05 Nov 2025 19:41:55 GMT
+|     Content-Type: text/html
+|     Content-Length: 161
+|     Connection: close
+|     Location: https://www.caf.fr:443/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: rdwr
+|     Date: Wed, 05 Nov 2025 19:41:55 GMT
+|     Content-Type: text/html
+|     Content-Length: 149
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|_    </html>
+161/tcp filtered snmp
+179/tcp filtered bgp
+443/tcp open     ssl/https rdwr
+|_http-server-header: rdwr
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 302 Moved Temporarily
+|     Server: rdwr
+|     Date: Wed, 05 Nov 2025 19:42:01 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Set-Cookie: __uzma=ea94f2e7-50f0-4dd8-92bd-9312208acfab; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmb=1762371721; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzme=0079; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmc=845731028603; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmd=1762371721; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmf=7f9000ea94f2e7-50f0-4dd8-92bd-9312208acfab1-17623717211370-001738710fce17e1c5210; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-A
+|   HTTPOptions: 
+|     HTTP/1.1 302 Moved Temporarily
+|     Server: rdwr
+|     Date: Wed, 05 Nov 2025 19:42:01 GMT
+|     Content-Type: text/html
+|     Connection: close
+|     Set-Cookie: __uzma=8bb00629-2fd2-4aa5-a184-a8bde89ace1c; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmb=1762371721; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzme=0285; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmc=614951031428; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmd=1762371721; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-Age=15724800; SameSite=Lax
+|_    Set-Cookie: __uzmf=7f90008bb00629-2fd2-4aa5-a184-a8bde89ace1c1-17623717214990-001b363f1f1b0390f1510; HttpOnly; path=/; Expires=Wed, 06-May-26 19:42:01 GMT; Max-A
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690BA882%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,15A,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
+SF:0rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2019:41:54\x20GMT\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close
+SF:\r\nLocation:\x20https://www\.caf\.fr:443/\r\n\r\n<html>\r\n<head><titl
+SF:e>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>3
+SF:01\x20Moved\x20Permanently</h1></center>\r\n<hr><center>rdwr</center>\r
+SF:\n</body>\r\n</html>\r\n")%r(HTTPOptions,15A,"HTTP/1\.1\x20301\x20Moved
+SF:\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x20202
+SF:5\x2019:41:55\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:20161\r\nConnection:\x20close\r\nLocation:\x20https://www\.caf\.fr:443/
+SF:\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></hea
+SF:d>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r
+SF:\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,1
+SF:25,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20W
+SF:ed,\x2005\x20Nov\x202025\x2019:41:55\x20GMT\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<
+SF:head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><
+SF:h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n
+SF:</body>\r\n</html>\r\n")%r(X11Probe,125,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\nServer:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2019:41:
+SF:55\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nCo
+SF:nnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request<
+SF:/title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></cen
+SF:ter>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(FourOhF
+SF:ourRequest,17D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20
+SF:rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2019:41:55\x20GMT\r\nConten
+SF:t-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close\
+SF:r\nLocation:\x20https://www\.caf\.fr:443/nice%20ports%2C/Tri%6Eity\.txt
+SF:%2ebak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title
+SF:></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></cen
+SF:ter>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690BA889%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,DAA,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nSer
+SF:ver:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2019:42:01\x20GMT\r
+SF:\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nSet-Cookie:\x20
+SF:__uzma=ea94f2e7-50f0-4dd8-92bd-9312208acfab;\x20HttpOnly;\x20path=/;\x2
+SF:0Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=15724800;\x20
+SF:SameSite=Lax\r\nSet-Cookie:\x20__uzmb=1762371721;\x20HttpOnly;\x20path=
+SF:/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=15724800
+SF:;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzme=0079;\x20HttpOnly;\x20path=/
+SF:;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=15724800;
+SF:\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmc=845731028603;\x20HttpOnly;\x2
+SF:0path=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=15
+SF:724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762371721;\x20HttpOnl
+SF:y;\x20path=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-A
+SF:ge=15724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmf=7f9000ea94f2e7-50
+SF:f0-4dd8-92bd-9312208acfab1-17623717211370-001738710fce17e1c5210;\x20Htt
+SF:pOnly;\x20path=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20M
+SF:ax-A")%r(HTTPOptions,DAA,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nS
+SF:erver:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2019:42:01\x20GMT
+SF:\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nSet-Cookie:\x
+SF:20__uzma=8bb00629-2fd2-4aa5-a184-a8bde89ace1c;\x20HttpOnly;\x20path=/;\
+SF:x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=15724800;\x
+SF:20SameSite=Lax\r\nSet-Cookie:\x20__uzmb=1762371721;\x20HttpOnly;\x20pat
+SF:h=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=157248
+SF:00;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzme=0285;\x20HttpOnly;\x20path
+SF:=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=1572480
+SF:0;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmc=614951031428;\x20HttpOnly;\
+SF:x20path=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max-Age=
+SF:15724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762371721;\x20HttpO
+SF:nly;\x20path=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x20Max
+SF:-Age=15724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmf=7f90008bb00629-
+SF:2fd2-4aa5-a184-a8bde89ace1c1-17623717214990-001b363f1f1b0390f1510;\x20H
+SF:ttpOnly;\x20path=/;\x20Expires=Wed,\x2006-May-26\x2019:42:01\x20GMT;\x2
+SF:0Max-A");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 19:42:17 2025 -- 1 IP address (1 host up) scanned in 31.20 seconds
