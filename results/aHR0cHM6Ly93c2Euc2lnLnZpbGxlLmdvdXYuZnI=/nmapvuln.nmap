@@ -1,0 +1,237 @@
+# Nmap 7.92 scan initiated Wed Nov  5 03:44:43 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln wsa.sig.ville.gouv.fr
+Nmap scan report for wsa.sig.ville.gouv.fr (147.135.236.225)
+Host is up (0.085s latency).
+rDNS record for 147.135.236.225: vs101.anct.cognix-systems.net
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE   VERSION
+80/tcp   open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     cache-control: no-cache
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///
+|     cache-control: no-cache
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp  open  ssl/https Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 03:45:02 GMT
+|     server: Apache
+|     content-security-policy: frame-ancestors 'self';
+|     last-modified: Wed, 04 Oct 2023 14:25:50 GMT
+|     etag: "3c3-606e4c8c1fdd7"
+|     accept-ranges: bytes
+|     content-length: 963
+|     vary: Accept-Encoding
+|     x-xss-protection: 0
+|     content-type: text/html
+|     set-cookie: BACKENDID=vs103.anct; path=/
+|     cache-control: private
+|     connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr">
+|     <head>
+|     <title>vs103.anct.cognix-systems.net</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1" />
+|     <style>
+|     body { background-color:#171a1f; }
+|     div.shadow {
+|     position:absolute;
+|     max-width:45%;
+|     max-height:45%;
+|     top:50%;
+|     left:50%;
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 03:45:02 GMT
+|     server: Apache
+|     content-security-policy: frame-ancestors 'self';
+|     allow: HEAD,GET,POST,OPTIONS
+|     x-xss-protection: 0
+|     content-length: 0
+|     content-type: text/html
+|     set-cookie: BACKENDID=vs102.anct; path=/
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+8000/tcp open  http-alt
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>Site en maintenance</title>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1" />
+|     <meta http-equiv="refresh" content="10">
+|     <style type="text/css">
+|     body { text-align: center; padding: 10%; font: 20px Helvetica, sans-serif; color: #333; }
+|     font-size: 50px; margin: 0; }
+|     article { display: block; text-align: left; max-width: 900px; margin: 0 auto; }
+|     color: #dc8100; text-decoration: none; }
+|     a:hover { color: #333; text-decoration: none; }
+|     @media only screen and (max-width : 480px) {
+|     font-size: 40px; }
+|     .center{ display: bl
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|     </body></html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690AC837%P=x86_64-alpine-linux-musl%r
+SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
+SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
+SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
+SF:x20time\.\n</body></html>\n")%r(GetRequest,6A,"HTTP/1\.1\x20302\x20Foun
+SF:d\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\ncache-control:\x
+SF:20no-cache\r\nconnection:\x20close\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.
+SF:1\x20302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\n
+SF:cache-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(RTSPRequ
+SF:est,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\n
+SF:Cache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20
+SF:text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20br
+SF:owser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(X11Pr
+SF:obe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\n
+SF:Cache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20
+SF:text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20br
+SF:owser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(FourO
+SF:hFourRequest,8D,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nl
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\ncache-cont
+SF:rol:\x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/
+SF:1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control
+SF::\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n
+SF:\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent
+SF:\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqT
+SF:CP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nC
+SF:ache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20t
+SF:ext/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20bro
+SF:wser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSSta
+SF:tusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
+SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
+SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
+SF:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AC83E%P=x86_64-alpine-linux
+SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
+SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
+SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
+SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,54B,"HTTP/1\.1\x20200
+SF:\x20OK\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2003:45:02\x20GMT\r\nserv
+SF:er:\x20Apache\r\ncontent-security-policy:\x20frame-ancestors\x20'self';
+SF:\r\nlast-modified:\x20Wed,\x2004\x20Oct\x202023\x2014:25:50\x20GMT\r\ne
+SF:tag:\x20\"3c3-606e4c8c1fdd7\"\r\naccept-ranges:\x20bytes\r\ncontent-len
+SF:gth:\x20963\r\nvary:\x20Accept-Encoding\r\nx-xss-protection:\x200\r\nco
+SF:ntent-type:\x20text/html\r\nset-cookie:\x20BACKENDID=vs103\.anct;\x20pa
+SF:th=/\r\ncache-control:\x20private\r\nconnection:\x20close\r\n\r\n<!DOCT
+SF:YPE\x20html>\n<html\x20lang=\"fr\">\n\x20\x20\x20\x20<head>\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20<title>vs103\.anct\.cognix-systems\.net</title>\n
+SF:\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x2
+SF:0content=\"text/html;\x20charset=UTF-8\">\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20init
+SF:ial-scale=1\"\x20/>\n\x20\x20\x20\x20\x20\x20\x20\x20<style>\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\x20background-color:#1
+SF:71a1f;\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20div\.shado
+SF:w\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0position:absolute;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20max-width:45%;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20max-height:45%;\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20top:50%;\n\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20left:50%;\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ove")%r(HTTPOptions,116,"HTTP/1
+SF:\.1\x20200\x20OK\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2003:45:02\x20G
+SF:MT\r\nserver:\x20Apache\r\ncontent-security-policy:\x20frame-ancestors\
+SF:x20'self';\r\nallow:\x20HEAD,GET,POST,OPTIONS\r\nx-xss-protection:\x200
+SF:\r\ncontent-length:\x200\r\ncontent-type:\x20text/html\r\nset-cookie:\x
+SF:20BACKENDID=vs102\.anct;\x20path=/\r\nconnection:\x20close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8000-TCP:V=7.92%I=7%D=11/5%Time=690AC837%P=x86_64-alpine-linux-musl
+SF:%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\
+SF:x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</
+SF:h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20i
+SF:n\x20time\.\n</body></html>\n")%r(GetRequest,4C7,"HTTP/1\.0\x20503\x20S
+SF:ervice\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-type:\x2
+SF:0text/html\r\n\r\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x20\x20<head>\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20<title>Site\x20en\x20maintenance</title>
+SF:\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\
+SF:x20content=\"text/html;\x20charset=UTF-8\">\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20in
+SF:itial-scale=1\"\x20/>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-eq
+SF:uiv=\"refresh\"\x20content=\"10\">\n\x20\x20\x20\x20\x20\x20\x20\x20<st
+SF:yle\x20type=\"text/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20body\x20{\x20text-align:\x20center;\x20padding:\x2010%;\x20font:\x2
+SF:020px\x20Helvetica,\x20sans-serif;\x20color:\x20#333;\x20}\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20h1\x20{\x20font-size:\x2050px;\x20
+SF:margin:\x200;\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20art
+SF:icle\x20{\x20display:\x20block;\x20text-align:\x20left;\x20max-width:\x
+SF:20900px;\x20margin:\x200\x20auto;\x20}\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20a\x20{\x20color:\x20#dc8100;\x20text-decoration:\x20no
+SF:ne;\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20a:hover\x20{\
+SF:x20color:\x20#333;\x20text-decoration:\x20none;\x20}\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20@media\x20only\x20screen\x20and\x20\(max
+SF:-width\x20:\x20480px\)\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20h1\x20{\x20font-size:\x2040px;\x20}\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\.center{\x20display:\x20bl")%r(X11Probe,CF,"HTTP/1\.1\
+SF:x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20
+SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<
+SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
+SF:n\x20invalid\x20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 03:45:18 2025 -- 1 IP address (1 host up) scanned in 35.21 seconds
