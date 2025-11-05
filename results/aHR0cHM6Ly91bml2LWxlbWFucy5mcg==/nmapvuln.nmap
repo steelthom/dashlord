@@ -1,0 +1,61 @@
+# Nmap 7.92 scan initiated Wed Nov  5 03:19:15 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln univ-lemans.fr
+Nmap scan report for univ-lemans.fr (195.221.245.72)
+Host is up (0.085s latency).
+rDNS record for 195.221.245.72: http-front.univ-lemans.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE     VERSION
+80/tcp  open  nagios-nsca Nagios NSCA
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     alt-svc: h3=":443"; ma=60
+|     <html><body><h1>400 Bad request</h1>
+|     Requete invalide.<br>
+|     probleme, contacter l'assistance sur <a href="https://csu.univ-lemans.fr">https://csu.univ-lemans.fr</a>.
+|     </body></html>
+|   RTSPRequest, tor-versions: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     connection: close
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Requete invalide.<br>
+|     probleme, contacter l'assistance sur <a href="https://csu.univ-lemans.fr">https://csu.univ-lemans.fr</a>.
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AC247%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,12D,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-con
+SF:trol:\x20no-cache\r\ncontent-type:\x20text/html\r\nalt-svc:\x20h3=\":44
+SF:3\";\x20ma=60\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\r\nRequ
+SF:ete\x20invalide\.<br>\r\nEn\x20cas\x20de\x20probleme,\x20contacter\x20l
+SF:'assistance\x20sur\x20<a\x20href=\"https://csu\.univ-lemans\.fr\">https
+SF:://csu\.univ-lemans\.fr</a>\.\r\n</body></html>\r\n\r\n")%r(HTTPOptions
+SF:,12D,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\
+SF:r\ncontent-type:\x20text/html\r\nalt-svc:\x20h3=\":443\";\x20ma=60\r\n\
+SF:r\n<html><body><h1>400\x20Bad\x20request</h1>\r\nRequete\x20invalide\.<
+SF:br>\r\nEn\x20cas\x20de\x20probleme,\x20contacter\x20l'assistance\x20sur
+SF:\x20<a\x20href=\"https://csu\.univ-lemans\.fr\">https://csu\.univ-leman
+SF:s\.fr</a>\.\r\n</body></html>\r\n\r\n")%r(FourOhFourRequest,12D,"HTTP/1
+SF:\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\ncontent-t
+SF:ype:\x20text/html\r\nalt-svc:\x20h3=\":443\";\x20ma=60\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\r\nRequete\x20invalide\.<br>\r\nEn\x2
+SF:0cas\x20de\x20probleme,\x20contacter\x20l'assistance\x20sur\x20<a\x20hr
+SF:ef=\"https://csu\.univ-lemans\.fr\">https://csu\.univ-lemans\.fr</a>\.\
+SF:r\n</body></html>\r\n\r\n")%r(tor-versions,125,"HTTP/1\.0\x20400\x20Bad
+SF:\x20request\r\ncache-control:\x20no-cache\r\nconnection:\x20close\r\nco
+SF:ntent-type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</
+SF:h1>\r\nRequete\x20invalide\.<br>\r\nEn\x20cas\x20de\x20probleme,\x20con
+SF:tacter\x20l'assistance\x20sur\x20<a\x20href=\"https://csu\.univ-lemans\
+SF:.fr\">https://csu\.univ-lemans\.fr</a>\.\r\n</body></html>\r\n\r\n")%r(
+SF:RTSPRequest,125,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x
+SF:20no-cache\r\nconnection:\x20close\r\ncontent-type:\x20text/html\r\n\r\
+SF:n<html><body><h1>400\x20Bad\x20request</h1>\r\nRequete\x20invalide\.<br
+SF:>\r\nEn\x20cas\x20de\x20probleme,\x20contacter\x20l'assistance\x20sur\x
+SF:20<a\x20href=\"https://csu\.univ-lemans\.fr\">https://csu\.univ-lemans\
+SF:.fr</a>\.\r\n</body></html>\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 03:19:51 2025 -- 1 IP address (1 host up) scanned in 35.90 seconds
