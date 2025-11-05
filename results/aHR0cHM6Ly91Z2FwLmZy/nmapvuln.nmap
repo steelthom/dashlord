@@ -1,0 +1,158 @@
+# Nmap 7.92 scan initiated Wed Nov  5 02:35:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ugap.fr
+Nmap scan report for ugap.fr (82.210.54.207)
+Host is up (0.17s latency).
+Other addresses for ugap.fr (not scanned): 82.210.54.138
+rDNS record for 82.210.54.207: 207.54.210.82.in-addr.arpa.celeste.fr
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently 
+|     Connection: close
+|     Content-Type: text/html
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Location: https://192.168.220.246/
+|     Content-Length: 181
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+|     <HTML><HEAD>
+|     <TITLE>301 Moved Permanently </TITLE>
+|     </HEAD><BODY>
+|     <H1>The Document has moved</H1></BODY></HTML>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Wed, 05 Nov 2025 02:35:50 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|     <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+|   SIPOptions: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Wed, 05 Nov 2025 02:37:06 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|_    <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 05 Nov 2025 02:35:56 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 561055
+|     Connection: close
+|     Etag: "88f9f-On73fyHPGneAV8AFG+xLUEHwF9s"
+|     cache-control: private, max-age=3600
+|     vary: Cookie
+|     Accept-Ranges: bytes
+|     X-Cache: MISS
+|     age: 0
+|     Strict-Transport-Security: max-age=15724800; includeSubDomains
+|     <!doctype html>
+|     <html data-n-head-ssr lang="fr" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22fr%22%7D%7D">
+|     <head >
+|     <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" data-hid="viewport" name="viewport" content="width=device-width, initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="L&#x27;UGAP met 
+|     votre disposition une large gamme de produits et de services s
+|     lectionn
+|     dans le respect du Code des march
+|     publics."><title>Centrale d&#x27;achat public | Le choix de l&#x27;achat juste
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 05 Nov 2025 02:35:57 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 561055
+|     Connection: close
+|     Vary: Accept-Encoding, Accept-Encoding
+|     Cache-Control: public,max-age=5,must-revalidate,proxy-revalidate
+|     Etag: "88f9f-On73fyHPGneAV8AFG+xLUEHwF9s"
+|     Accept-Ranges: bytes
+|     X-Cache: MISS
+|     age: 0
+|     Strict-Transport-Security: max-age=15724800; includeSubDomains
+|     <!doctype html>
+|     <html data-n-head-ssr lang="fr" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22fr%22%7D%7D">
+|     <head >
+|     <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" data-hid="viewport" name="viewport" content="width=device-width, initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="L&#x27;UGAP met 
+|     votre disposition une large gamme de produits et de services s
+|     lectionn
+|     dans le respect du Code des march
+|_    publics."><title>Centrale d&#x2
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690AB806%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,19C,"HTTP/1\.1\x20301\x20Moved\x20Permanently\x20\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAM
+SF:EORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Opti
+SF:ons:\x20nosniff\r\nLocation:\x20https://192\.168\.220\.246/\r\nContent-
+SF:Length:\x20181\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20H
+SF:TML\x204\.0\x20Transitional//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Mov
+SF:ed\x20Permanently\x20</TITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\x
+SF:20has\x20moved</H1></BODY></HTML>\r\n\r\n")%r(HTTPOptions,19C,"HTTP/1\.
+SF:1\x20301\x20Moved\x20Permanently\x20\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protecti
+SF:on:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nLocati
+SF:on:\x20https://192\.168\.220\.246/\r\nContent-Length:\x20181\r\n\r\n<!D
+SF:OCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.0\x20Transition
+SF:al//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Moved\x20Permanently\x20</TI
+SF:TLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\x20has\x20moved</H1></BODY
+SF:></HTML>\r\n\r\n")%r(RTSPRequest,13B,"HTTP/1\.1\x20400\x20Invalid\x20Re
+SF:quest\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2002:35:50\x20GMT\r\nX-Fra
+SF:me-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX
+SF:-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Le
+SF:ngth:\x2087\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400
+SF:\x20Invalid\x20Request</title></head><body>Invalid\x20Request:\x20\?\?<
+SF:/body>\r\n")%r(SIPOptions,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r
+SF:\nDate:\x20Wed,\x2005\x20Nov\x202025\x2002:37:06\x20GMT\r\nX-Frame-Opti
+SF:ons:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conten
+SF:t-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x
+SF:2087\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Inv
+SF:alid\x20Request</title></head><body>Invalid\x20Request:\x20\?\?</body>\
+SF:r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AB80C%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2005\
+SF:x20Nov\x202025\x2002:35:56\x20GMT\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=utf-8\r\nContent-Length:\x20561055\r\nConnection:\x20close\r\nEtag
+SF::\x20\"88f9f-On73fyHPGneAV8AFG\+xLUEHwF9s\"\r\ncache-control:\x20privat
+SF:e,\x20max-age=3600\r\nvary:\x20Cookie\r\nAccept-Ranges:\x20bytes\r\nX-C
+SF:ache:\x20MISS\r\nage:\x200\r\nStrict-Transport-Security:\x20max-age=157
+SF:24800;\x20includeSubDomains\r\n\r\n<!doctype\x20html>\n<html\x20data-n-
+SF:head-ssr\x20lang=\"fr\"\x20data-n-head=\"%7B%22lang%22:%7B%22ssr%22:%22
+SF:fr%22%7D%7D\">\n\x20\x20<head\x20>\n\x20\x20\x20\x20<meta\x20data-n-hea
+SF:d=\"ssr\"\x20charset=\"utf-8\"><meta\x20data-n-head=\"ssr\"\x20data-hid
+SF:=\"viewport\"\x20name=\"viewport\"\x20content=\"width=device-width,\x20
+SF:initial-scale=1\"><meta\x20data-n-head=\"ssr\"\x20data-hid=\"descriptio
+SF:n\"\x20name=\"description\"\x20content=\"L&#x27;UGAP\x20met\x20\xc3\xa0
+SF:\x20votre\x20disposition\x20une\x20large\x20gamme\x20de\x20produits\x20
+SF:et\x20de\x20services\x20s\xc3\xa9lectionn\xc3\xa9s\x20dans\x20le\x20res
+SF:pect\x20du\x20Code\x20des\x20march\xc3\xa9s\x20publics\.\"><title>Centr
+SF:ale\x20d&#x27;achat\x20public\x20\|\x20Le\x20choix\x20de\x20l&#x27;acha
+SF:t\x20juste\x20\xe2\x80\x93\x20UG")%r(HTTPOptions,2000,"HTTP/1\.1\x20200
+SF:\x20OK\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2002:35:57\x20GMT\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20561055\r
+SF:\nConnection:\x20close\r\nVary:\x20Accept-Encoding,\x20Accept-Encoding\
+SF:r\nCache-Control:\x20public,max-age=5,must-revalidate,proxy-revalidate\
+SF:r\nEtag:\x20\"88f9f-On73fyHPGneAV8AFG\+xLUEHwF9s\"\r\nAccept-Ranges:\x2
+SF:0bytes\r\nX-Cache:\x20MISS\r\nage:\x200\r\nStrict-Transport-Security:\x
+SF:20max-age=15724800;\x20includeSubDomains\r\n\r\n<!doctype\x20html>\n<ht
+SF:ml\x20data-n-head-ssr\x20lang=\"fr\"\x20data-n-head=\"%7B%22lang%22:%7B
+SF:%22ssr%22:%22fr%22%7D%7D\">\n\x20\x20<head\x20>\n\x20\x20\x20\x20<meta\
+SF:x20data-n-head=\"ssr\"\x20charset=\"utf-8\"><meta\x20data-n-head=\"ssr\
+SF:"\x20data-hid=\"viewport\"\x20name=\"viewport\"\x20content=\"width=devi
+SF:ce-width,\x20initial-scale=1\"><meta\x20data-n-head=\"ssr\"\x20data-hid
+SF:=\"description\"\x20name=\"description\"\x20content=\"L&#x27;UGAP\x20me
+SF:t\x20\xc3\xa0\x20votre\x20disposition\x20une\x20large\x20gamme\x20de\x2
+SF:0produits\x20et\x20de\x20services\x20s\xc3\xa9lectionn\xc3\xa9s\x20dans
+SF:\x20le\x20respect\x20du\x20Code\x20des\x20march\xc3\xa9s\x20publics\.\"
+SF:><title>Centrale\x20d&#x2");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 02:38:39 2025 -- 1 IP address (1 host up) scanned in 178.36 seconds
