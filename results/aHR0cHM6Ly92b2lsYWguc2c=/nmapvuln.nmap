@@ -1,0 +1,268 @@
+# Nmap 7.92 scan initiated Wed Nov  5 03:31:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln voilah.sg
+Nmap scan report for voilah.sg (35.213.130.168)
+Host is up (0.17s latency).
+rDNS record for 35.213.130.168: 168.130.213.35.bc.googleusercontent.com
+Not shown: 984 filtered tcp ports (no-response)
+PORT      STATE  SERVICE    VERSION
+21/tcp    open   ftp        Pure-FTPd
+25/tcp    open   smtp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:18 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   GetRequest: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:23 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:03 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     550-You can not sent a blank HELO/EHLO request. 68.220.59.227 sent [] EHLO/HELO
+|     greeting. Please see RFC 2821 section 4.1.1.1
+|   Help: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:10 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     214-Commands supported:
+|     AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP VRFY
+|   NULL: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:03 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+80/tcp    open   http       nginx
+110/tcp   open   pop3       Dovecot pop3d
+143/tcp   open   imap       Dovecot imapd
+443/tcp   open   ssl/http   nginx
+465/tcp   open   ssl/smtp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:25 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   GetRequest: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:30 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:10 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     550-You can not sent a blank HELO/EHLO request. 68.220.59.227 sent [] EHLO/HELO
+|     greeting. Please see RFC 2821 section 4.1.1.1
+|   Help: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:17 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     214-Commands supported:
+|     AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP VRFY
+|   NULL: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:10 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+587/tcp   open   smtp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:03 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   GetRequest: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:23 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:15 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     550-You can not sent a blank HELO/EHLO request. 68.220.59.227 sent [] EHLO/HELO
+|     greeting. Please see RFC 2821 section 4.1.1.1
+|   Help: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:15 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     214-Commands supported:
+|     AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP VRFY
+|   NULL: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:03 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+993/tcp   open   ssl/imap   Dovecot imapd
+995/tcp   open   ssl/pop3   Dovecot pop3d
+2525/tcp  open   smtp
+| fingerprint-strings: 
+|   GenericLines: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:15 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   GetRequest: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:03 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:20 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     550-You can not sent a blank HELO/EHLO request. 68.220.59.227 sent [] EHLO/HELO
+|     greeting. Please see RFC 2821 section 4.1.1.1
+|   Help: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:20 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|     and/or bulk e-mail.
+|     214-Commands supported:
+|     AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP VRFY
+|   NULL: 
+|     220-sgp65.siteground.asia ESMTP #2 Wed, 05 Nov 2025 03:32:03 +0000 
+|     220-We do not authorize the use of this system to transport unsolicited, 
+|_    and/or bulk e-mail.
+3306/tcp  open   mysql      MySQL (unauthorized)
+5432/tcp  open   postgresql PostgreSQL DB 9.6.0 or later
+| fingerprint-strings: 
+|   SMBProgNeg: 
+|     SFATAL
+|     VFATAL
+|     C0A000
+|     Munsupported frontend protocol 65363.19778: server supports 3.0 to 3.0
+|     Fpostmaster.c
+|     L2147
+|_    RProcessStartupPacket
+34571/tcp closed unknown
+34572/tcp closed unknown
+34573/tcp closed unknown
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.92%I=7%D=11/5%Time=690AC539%P=x86_64-alpine-linux-musl%r
+SF:(NULL,A9,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20N
+SF:ov\x202025\x2003:32:03\x20\+0000\x20\r\n220-We\x20do\x20not\x20authoriz
+SF:e\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicit
+SF:ed,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(Hello,12D,"220-sgp
+SF:65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025\x2003:
+SF:32:03\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x
+SF:20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x2
+SF:0and/or\x20bulk\x20e-mail\.\r\n550-You\x20can\x20not\x20sent\x20a\x20bl
+SF:ank\x20HELO/EHLO\x20request\.\x2068\.220\.59\.227\x20sent\x20\[\]\x20EH
+SF:LO/HELO\r\n550\x20greeting\.\x20Please\x20see\x20RFC\x202821\x20section
+SF:\x204\.1\.1\.1\r\n")%r(Help,10C,"220-sgp65\.siteground\.asia\x20ESMTP\x
+SF:20#2\x20Wed,\x2005\x20Nov\x202025\x2003:32:10\x20\+0000\x20\r\n220-We\x
+SF:20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x2
+SF:0transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n
+SF:214-Commands\x20supported:\r\n214\x20AUTH\x20STARTTLS\x20HELO\x20EHLO\x
+SF:20MAIL\x20RCPT\x20DATA\x20BDAT\x20NOOP\x20QUIT\x20RSET\x20HELP\x20VRFY\
+SF:r\n")%r(GenericLines,DD,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20
+SF:Wed,\x2005\x20Nov\x202025\x2003:32:18\x20\+0000\x20\r\n220-We\x20do\x20
+SF:not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transpo
+SF:rt\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20u
+SF:nrecognized\x20command\r\n500\x20unrecognized\x20command\r\n")%r(GetReq
+SF:uest,DD,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20No
+SF:v\x202025\x2003:32:23\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize
+SF:\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicite
+SF:d,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20c
+SF:ommand\r\n500\x20unrecognized\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AC540%P=x86_64-alpine-linux
+SF:-musl%r(NULL,A9,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x20
+SF:05\x20Nov\x202025\x2003:32:10\x20\+0000\x20\r\n220-We\x20do\x20not\x20a
+SF:uthorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20un
+SF:solicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(Hello,12D,"
+SF:220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025
+SF:\x2003:32:10\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x
+SF:20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\
+SF:n220\x20and/or\x20bulk\x20e-mail\.\r\n550-You\x20can\x20not\x20sent\x20
+SF:a\x20blank\x20HELO/EHLO\x20request\.\x2068\.220\.59\.227\x20sent\x20\[\
+SF:]\x20EHLO/HELO\r\n550\x20greeting\.\x20Please\x20see\x20RFC\x202821\x20
+SF:section\x204\.1\.1\.1\r\n")%r(Help,103,"220-sgp65\.siteground\.asia\x20
+SF:ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025\x2003:32:17\x20\+0000\x20\r\n2
+SF:20-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x
+SF:20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mai
+SF:l\.\r\n214-Commands\x20supported:\r\n214\x20AUTH\x20HELO\x20EHLO\x20MAI
+SF:L\x20RCPT\x20DATA\x20BDAT\x20NOOP\x20QUIT\x20RSET\x20HELP\x20VRFY\r\n")
+SF:%r(GenericLines,DD,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\
+SF:x2005\x20Nov\x202025\x2003:32:25\x20\+0000\x20\r\n220-We\x20do\x20not\x
+SF:20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x2
+SF:0unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unreco
+SF:gnized\x20command\r\n500\x20unrecognized\x20command\r\n")%r(GetRequest,
+SF:DD,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x20
+SF:2025\x2003:32:30\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20t
+SF:he\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x2
+SF:0\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20comman
+SF:d\r\n500\x20unrecognized\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.92%I=7%D=11/5%Time=690AC539%P=x86_64-alpine-linux-musl%
+SF:r(NULL,A9,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20
+SF:Nov\x202025\x2003:32:03\x20\+0000\x20\r\n220-We\x20do\x20not\x20authori
+SF:ze\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolici
+SF:ted,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(GenericLines,DD,"
+SF:220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025
+SF:\x2003:32:03\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x
+SF:20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\
+SF:n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\
+SF:n500\x20unrecognized\x20command\r\n")%r(Hello,12D,"220-sgp65\.sitegroun
+SF:d\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025\x2003:32:15\x20\+00
+SF:00\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\
+SF:x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bu
+SF:lk\x20e-mail\.\r\n550-You\x20can\x20not\x20sent\x20a\x20blank\x20HELO/E
+SF:HLO\x20request\.\x2068\.220\.59\.227\x20sent\x20\[\]\x20EHLO/HELO\r\n55
+SF:0\x20greeting\.\x20Please\x20see\x20RFC\x202821\x20section\x204\.1\.1\.
+SF:1\r\n")%r(Help,10C,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\
+SF:x2005\x20Nov\x202025\x2003:32:15\x20\+0000\x20\r\n220-We\x20do\x20not\x
+SF:20authorize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x2
+SF:0unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n214-Commands\
+SF:x20supported:\r\n214\x20AUTH\x20STARTTLS\x20HELO\x20EHLO\x20MAIL\x20RCP
+SF:T\x20DATA\x20BDAT\x20NOOP\x20QUIT\x20RSET\x20HELP\x20VRFY\r\n")%r(GetRe
+SF:quest,DD,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20N
+SF:ov\x202025\x2003:32:23\x20\+0000\x20\r\n220-We\x20do\x20not\x20authoriz
+SF:e\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicit
+SF:ed,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20
+SF:command\r\n500\x20unrecognized\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port2525-TCP:V=7.92%I=7%D=11/5%Time=690AC539%P=x86_64-alpine-linux-musl
+SF:%r(NULL,A9,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x2
+SF:0Nov\x202025\x2003:32:03\x20\+0000\x20\r\n220-We\x20do\x20not\x20author
+SF:ize\x20the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolic
+SF:ited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n")%r(GetRequest,DD,"2
+SF:20-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025\
+SF:x2003:32:03\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x2
+SF:0use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n
+SF:220\x20and/or\x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n
+SF:500\x20unrecognized\x20command\r\n")%r(GenericLines,DD,"220-sgp65\.site
+SF:ground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x202025\x2003:32:15\x2
+SF:0\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20the\x20use\x20of\x20
+SF:this\x20system\x20to\x20transport\x20unsolicited,\x20\r\n220\x20and/or\
+SF:x20bulk\x20e-mail\.\r\n500\x20unrecognized\x20command\r\n500\x20unrecog
+SF:nized\x20command\r\n")%r(Hello,12D,"220-sgp65\.siteground\.asia\x20ESMT
+SF:P\x20#2\x20Wed,\x2005\x20Nov\x202025\x2003:32:20\x20\+0000\x20\r\n220-W
+SF:e\x20do\x20not\x20authorize\x20the\x20use\x20of\x20this\x20system\x20to
+SF:\x20transport\x20unsolicited,\x20\r\n220\x20and/or\x20bulk\x20e-mail\.\
+SF:r\n550-You\x20can\x20not\x20sent\x20a\x20blank\x20HELO/EHLO\x20request\
+SF:.\x2068\.220\.59\.227\x20sent\x20\[\]\x20EHLO/HELO\r\n550\x20greeting\.
+SF:\x20Please\x20see\x20RFC\x202821\x20section\x204\.1\.1\.1\r\n")%r(Help,
+SF:10C,"220-sgp65\.siteground\.asia\x20ESMTP\x20#2\x20Wed,\x2005\x20Nov\x2
+SF:02025\x2003:32:20\x20\+0000\x20\r\n220-We\x20do\x20not\x20authorize\x20
+SF:the\x20use\x20of\x20this\x20system\x20to\x20transport\x20unsolicited,\x
+SF:20\r\n220\x20and/or\x20bulk\x20e-mail\.\r\n214-Commands\x20supported:\r
+SF:\n214\x20AUTH\x20STARTTLS\x20HELO\x20EHLO\x20MAIL\x20RCPT\x20DATA\x20BD
+SF:AT\x20NOOP\x20QUIT\x20RSET\x20HELP\x20VRFY\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5432-TCP:V=7.92%I=7%D=11/5%Time=690AC53A%P=x86_64-alpine-linux-musl
+SF:%r(SMBProgNeg,8C,"E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20fr
+SF:ontend\x20protocol\x2065363\.19778:\x20server\x20supports\x203\.0\x20to
+SF:\x203\.0\0Fpostmaster\.c\0L2147\0RProcessStartupPacket\0\0");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 03:32:39 2025 -- 1 IP address (1 host up) scanned in 44.29 seconds
