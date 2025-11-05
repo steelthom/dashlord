@@ -1,0 +1,107 @@
+# Nmap 7.92 scan initiated Wed Nov  5 20:22:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bofip.impots.gouv.fr
+Nmap scan report for bofip.impots.gouv.fr (145.242.11.110)
+Host is up (0.15s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://192.168.186.3/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://192.168.186.3/
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Strict-Transport-Security: max-age=34560000; includeSubDomains
+|     date: Wed, 05 Nov 2025 20:22:54 GMT
+|     x-content-type-options: nosniff
+|     content-type: text/plain; charset=UTF-8
+|     x-varnish: 5560920
+|     x-cache: MISS
+|     age: 0
+|     cache-control: no-store, max-age=0
+|     content-length: 52
+|     set-cookie: SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+|     connection: close
+|     provided host name is not valid for this server.
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Strict-Transport-Security: max-age=34560000; includeSubDomains
+|     date: Wed, 05 Nov 2025 20:22:53 GMT
+|     x-content-type-options: nosniff
+|     content-type: text/plain; charset=UTF-8
+|     x-bofip-cache: 1
+|     x-bofip-cache-pit: 
+|     x-bofip-cache-jour: 
+|     x-now: 
+|     x-pit: 
+|     x-varnish: 4992924
+|     x-cache: MISS
+|     age: 0
+|     cache-control: no-store, max-age=0
+|     content-length: 52
+|     set-cookie: SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+|     connection: close
+|     provided host name is not valid for this server.
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Strict-Transport-Security: max-age=34560000; includeSubDomains
+|     date: Wed, 05 Nov 2025 20:22:54 GMT
+|     x-content-type-options: nosniff
+|     content-type: text/plain; charset=UTF-8
+|     x-varnish: 4992930
+|     x-cache: MISS
+|     age: 0
+|     cache-control: no-store, max-age=0
+|     content-length: 52
+|     set-cookie: SERVERID=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+|     connection: close
+|_    provided host name is not valid for this server.
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690BB217%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,57,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https://192\.168\.186\.3/\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOpt
+SF:ions,57,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https
+SF:://192\.168\.186\.3/\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequ
+SF:est,7A,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https:
+SF://192\.168\.186\.3/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-Leng
+SF:th:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690BB21D%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,20A,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nStrict-Tr
+SF:ansport-Security:\x20max-age=34560000;\x20includeSubDomains\r\ndate:\x2
+SF:0Wed,\x2005\x20Nov\x202025\x2020:22:53\x20GMT\r\nx-content-type-options
+SF::\x20nosniff\r\ncontent-type:\x20text/plain;\x20charset=UTF-8\r\nx-bofi
+SF:p-cache:\x201\r\nx-bofip-cache-pit:\x20\r\nx-bofip-cache-jour:\x20\r\nx
+SF:-now:\x20\r\nx-pit:\x20\r\nx-varnish:\x204992924\r\nx-cache:\x20MISS\r\
+SF:nage:\x200\r\ncache-control:\x20no-store,\x20max-age=0\r\ncontent-lengt
+SF:h:\x2052\r\nset-cookie:\x20SERVERID=;\x20Expires=Thu,\x2001-Jan-1970\x2
+SF:000:00:01\x20GMT;\x20path=/\r\nconnection:\x20close\r\n\r\nThe\x20provi
+SF:ded\x20host\x20name\x20is\x20not\x20valid\x20for\x20this\x20server\.")%
+SF:r(HTTPOptions,1BB,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nStrict-Transpo
+SF:rt-Security:\x20max-age=34560000;\x20includeSubDomains\r\ndate:\x20Wed,
+SF:\x2005\x20Nov\x202025\x2020:22:54\x20GMT\r\nx-content-type-options:\x20
+SF:nosniff\r\ncontent-type:\x20text/plain;\x20charset=UTF-8\r\nx-varnish:\
+SF:x204992930\r\nx-cache:\x20MISS\r\nage:\x200\r\ncache-control:\x20no-sto
+SF:re,\x20max-age=0\r\ncontent-length:\x2052\r\nset-cookie:\x20SERVERID=;\
+SF:x20Expires=Thu,\x2001-Jan-1970\x2000:00:01\x20GMT;\x20path=/\r\nconnect
+SF:ion:\x20close\r\n\r\nThe\x20provided\x20host\x20name\x20is\x20not\x20va
+SF:lid\x20for\x20this\x20server\.")%r(FourOhFourRequest,1BB,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nStrict-Transport-Security:\x20max-age=34560000
+SF:;\x20includeSubDomains\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2020:22:5
+SF:4\x20GMT\r\nx-content-type-options:\x20nosniff\r\ncontent-type:\x20text
+SF:/plain;\x20charset=UTF-8\r\nx-varnish:\x205560920\r\nx-cache:\x20MISS\r
+SF:\nage:\x200\r\ncache-control:\x20no-store,\x20max-age=0\r\ncontent-leng
+SF:th:\x2052\r\nset-cookie:\x20SERVERID=;\x20Expires=Thu,\x2001-Jan-1970\x
+SF:2000:00:01\x20GMT;\x20path=/\r\nconnection:\x20close\r\n\r\nThe\x20prov
+SF:ided\x20host\x20name\x20is\x20not\x20valid\x20for\x20this\x20server\.");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 20:23:22 2025 -- 1 IP address (1 host up) scanned in 52.26 seconds
