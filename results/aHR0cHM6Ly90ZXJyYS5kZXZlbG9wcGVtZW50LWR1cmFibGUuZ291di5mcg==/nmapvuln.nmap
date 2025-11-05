@@ -1,0 +1,124 @@
+# Nmap 7.92 scan initiated Wed Nov  5 02:38:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln terra.developpement-durable.gouv.fr
+Nmap scan report for terra.developpement-durable.gouv.fr (46.22.207.243)
+Host is up (0.16s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+21/tcp  open   ftp?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|   GetRequest: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|     What are you trying to do? Go away.
+|   HTTPOptions, RTSPRequest: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|     Wrong command.
+|   Help: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|     214-The following commands are recognized.
+|     RNTO RNFR XPWD MDTM REST APPE MKD RMD DELE
+|     ALLO STOR SIZE CDUP CWD TYPE SYST MFMT MODE XRMD
+|     ADAT PROT PBSZ MLSD LIST XCWD NOOP AUTH OPTS EPRT
+|     PASS QUIT PWD RETR USER NLST CLNT FEAT ABOR HELP
+|     XMKD MLST STRU PASV EPSV PORT STAT
+|_    Help ok.
+80/tcp  open   http      Apache httpd
+|_http-server-header: Apache
+113/tcp closed ident
+443/tcp open   ssl/http  Apache httpd
+|_http-server-header: Apache
+990/tcp open   ssl/ftps?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, GenericLines, NULL, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|   GetRequest: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|     What are you trying to do? Go away.
+|   HTTPOptions, RTSPRequest: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|     Wrong command.
+|   Help: 
+|     220-FileZilla Server 1.8.2
+|     Please visit https://filezilla-project.org/
+|     214-The following commands are recognized.
+|     RNTO RNFR XPWD MDTM REST APPE MKD RMD DELE
+|     ALLO STOR SIZE CDUP CWD TYPE SYST MFMT MODE XRMD
+|     ADAT PROT PBSZ MLSD LIST XCWD NOOP AUTH OPTS EPRT
+|     PASS QUIT PWD RETR USER NLST CLNT FEAT ABOR HELP
+|     XMKD MLST STRU PASV EPSV PORT STAT
+|_    Help ok.
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port21-TCP:V=7.92%I=7%D=11/5%Time=690AB8CA%P=x86_64-alpine-linux-musl%r
+SF:(NULL,4D,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\
+SF:x20https://filezilla-project\.org/\r\n")%r(GenericLines,4D,"220-FileZil
+SF:la\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-
+SF:project\.org/\r\n")%r(Help,17C,"220-FileZilla\x20Server\x201\.8\.2\r\n2
+SF:20\x20Please\x20visit\x20https://filezilla-project\.org/\r\n214-The\x20
+SF:following\x20commands\x20are\x20recognized\.\r\n\x20NOP\x20\x20RNTO\x20
+SF:RNFR\x20XPWD\x20MDTM\x20REST\x20APPE\x20MKD\x20\x20RMD\x20\x20DELE\r\n\
+SF:x20ALLO\x20STOR\x20SIZE\x20CDUP\x20CWD\x20\x20TYPE\x20SYST\x20MFMT\x20M
+SF:ODE\x20XRMD\r\n\x20ADAT\x20PROT\x20PBSZ\x20MLSD\x20LIST\x20XCWD\x20NOOP
+SF:\x20AUTH\x20OPTS\x20EPRT\r\n\x20PASS\x20QUIT\x20PWD\x20\x20RETR\x20USER
+SF:\x20NLST\x20CLNT\x20FEAT\x20ABOR\x20HELP\r\n\x20XMKD\x20MLST\x20STRU\x2
+SF:0PASV\x20EPSV\x20PORT\x20STAT\r\n214\x20Help\x20ok\.\r\n")%r(GetRequest
+SF:,76,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20ht
+SF:tps://filezilla-project\.org/\r\n501\x20What\x20are\x20you\x20trying\x2
+SF:0to\x20do\?\x20Go\x20away\.\r\n")%r(HTTPOptions,61,"220-FileZilla\x20Se
+SF:rver\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-project\
+SF:.org/\r\n500\x20Wrong\x20command\.\r\n")%r(RTSPRequest,61,"220-FileZill
+SF:a\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-p
+SF:roject\.org/\r\n500\x20Wrong\x20command\.\r\n")%r(RPCCheck,4D,"220-File
+SF:Zilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezil
+SF:la-project\.org/\r\n")%r(DNSVersionBindReqTCP,4D,"220-FileZilla\x20Serv
+SF:er\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-project\.o
+SF:rg/\r\n")%r(DNSStatusRequestTCP,4D,"220-FileZilla\x20Server\x201\.8\.2\
+SF:r\n220\x20Please\x20visit\x20https://filezilla-project\.org/\r\n")%r(SS
+SF:LSessionReq,4D,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20
+SF:visit\x20https://filezilla-project\.org/\r\n")%r(TerminalServerCookie,4
+SF:D,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20http
+SF:s://filezilla-project\.org/\r\n")%r(TLSSessionReq,4D,"220-FileZilla\x20
+SF:Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-projec
+SF:t\.org/\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port990-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AB8D1%P=x86_64-alpine-linux
+SF:-musl%r(NULL,4D,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x2
+SF:0visit\x20https://filezilla-project\.org/\r\n")%r(GenericLines,4D,"220-
+SF:FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://fil
+SF:ezilla-project\.org/\r\n")%r(Help,17C,"220-FileZilla\x20Server\x201\.8\
+SF:.2\r\n220\x20Please\x20visit\x20https://filezilla-project\.org/\r\n214-
+SF:The\x20following\x20commands\x20are\x20recognized\.\r\n\x20NOP\x20\x20R
+SF:NTO\x20RNFR\x20XPWD\x20MDTM\x20REST\x20APPE\x20MKD\x20\x20RMD\x20\x20DE
+SF:LE\r\n\x20ALLO\x20STOR\x20SIZE\x20CDUP\x20CWD\x20\x20TYPE\x20SYST\x20MF
+SF:MT\x20MODE\x20XRMD\r\n\x20ADAT\x20PROT\x20PBSZ\x20MLSD\x20LIST\x20XCWD\
+SF:x20NOOP\x20AUTH\x20OPTS\x20EPRT\r\n\x20PASS\x20QUIT\x20PWD\x20\x20RETR\
+SF:x20USER\x20NLST\x20CLNT\x20FEAT\x20ABOR\x20HELP\r\n\x20XMKD\x20MLST\x20
+SF:STRU\x20PASV\x20EPSV\x20PORT\x20STAT\r\n214\x20Help\x20ok\.\r\n")%r(Get
+SF:Request,76,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visi
+SF:t\x20https://filezilla-project\.org/\r\n501\x20What\x20are\x20you\x20tr
+SF:ying\x20to\x20do\?\x20Go\x20away\.\r\n")%r(HTTPOptions,61,"220-FileZill
+SF:a\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-p
+SF:roject\.org/\r\n500\x20Wrong\x20command\.\r\n")%r(RTSPRequest,61,"220-F
+SF:ileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://file
+SF:zilla-project\.org/\r\n500\x20Wrong\x20command\.\r\n")%r(RPCCheck,4D,"2
+SF:20-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://
+SF:filezilla-project\.org/\r\n")%r(DNSVersionBindReqTCP,4D,"220-FileZilla\
+SF:x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-pro
+SF:ject\.org/\r\n")%r(DNSStatusRequestTCP,4D,"220-FileZilla\x20Server\x201
+SF:\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla-project\.org/\r\n
+SF:")%r(SSLSessionReq,4D,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Ple
+SF:ase\x20visit\x20https://filezilla-project\.org/\r\n")%r(TerminalServerC
+SF:ookie,4D,"220-FileZilla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\
+SF:x20https://filezilla-project\.org/\r\n")%r(TLSSessionReq,4D,"220-FileZi
+SF:lla\x20Server\x201\.8\.2\r\n220\x20Please\x20visit\x20https://filezilla
+SF:-project\.org/\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 02:40:00 2025 -- 1 IP address (1 host up) scanned in 69.99 seconds
