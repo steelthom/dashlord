@@ -1,0 +1,34 @@
+# Nmap 7.92 scan initiated Wed Nov  5 02:41:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln tst.dume.chorus-pro.gouv.fr
+Nmap scan report for tst.dume.chorus-pro.gouv.fr (146.59.137.130)
+Host is up (0.12s latency).
+rDNS record for 146.59.137.130: ip130.ip-146-59-137.eu
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https Web Server
+|_http-server-header: Web Server
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Type: text/html
+|     Content-Length: 148
+|     Date: Wed, 05 Nov 2025 02:42:24 GMT
+|     <html>
+|     <head>
+|     <title>403 Forbidden</title>
+|     </head>
+|     <body>
+|     <h1>You don't have permission to access this resource on the server.</h1>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AB98F%P=x86_64-alpine-linux
+SF:-musl%r(HTTPOptions,101,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Type:
+SF:\x20text/html\r\nContent-Length:\x20148\r\nDate:\x20Wed,\x2005\x20Nov\x
+SF:202025\x2002:42:24\x20GMT\r\n\r\n<html>\n<head>\n<title>403\x20Forbidde
+SF:n</title>\n</head>\n<body>\n<h1>You\x20don't\x20have\x20permission\x20t
+SF:o\x20access\x20this\x20resource\x20on\x20the\x20server\.</h1>\n</body>\
+SF:n</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 02:44:34 2025 -- 1 IP address (1 host up) scanned in 159.14 seconds
