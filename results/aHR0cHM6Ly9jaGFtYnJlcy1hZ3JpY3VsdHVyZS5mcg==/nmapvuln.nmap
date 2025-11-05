@@ -1,0 +1,192 @@
+# Nmap 7.92 scan initiated Wed Nov  5 20:50:56 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln chambres-agriculture.fr
+Nmap scan report for chambres-agriculture.fr (185.188.161.19)
+Host is up (0.12s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http      DNSI
+|_http-server-header: DNSI
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 20:51:25 GMT
+|     x-frame-options: SAMEORIGIN
+|     last-modified: Tue, 23 May 2023 08:46:50 GMT
+|     etag: "29cd-5fc586da31b2c"
+|     accept-ranges: bytes
+|     content-length: 10701
+|     cache-control: max-age=0
+|     expires: Wed, 05 Nov 2025 20:51:25 GMT
+|     vary: Accept-Encoding
+|     x-content-type-options: nosniff
+|     x-xss-protection: 1; mode=block
+|     keep-alive: timeout=5, max=99
+|     content-type: text/html
+|     server: DNSI
+|     set-cookie: SERVERID=s1; path=/
+|     connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <title>Apache2 Debian Default Page: It works</title>
+|     <style type="text/css" media="screen">
+|     margin: 0px 0px 0px 0px;
+|     padding: 0px 0px 0px 0px;
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 20:51:25 GMT
+|     x-frame-options: SAMEORIGIN
+|     allow: GET,POST,OPTIONS,HEAD
+|     cache-control: max-age=0
+|     expires: Wed, 05 Nov 2025 20:51:25 GMT
+|     x-content-type-options: nosniff
+|     x-xss-protection: 1; mode=block
+|     content-length: 0
+|     keep-alive: timeout=5, max=99
+|     content-type: text/html
+|     server: DNSI
+|     set-cookie: SERVERID=s1; path=/
+|     connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+113/tcp closed ident
+443/tcp open   ssl/https DNSI
+|_http-server-header: DNSI
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     date: Wed, 05 Nov 2025 20:51:32 GMT
+|     x-frame-options: SAMEORIGIN
+|     content-length: 196
+|     keep-alive: timeout=5, max=96
+|     content-type: text/html; charset=iso-8859-1
+|     server: DNSI
+|     set-cookie: SERVERID=s1; path=/
+|     connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>404 Not Found</title>
+|     </head><body>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on this server.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 20:51:31 GMT
+|     x-frame-options: SAMEORIGIN
+|     last-modified: Tue, 23 May 2023 08:46:50 GMT
+|     etag: "29cd-5fc586da31b2c"
+|     accept-ranges: bytes
+|     content-length: 10701
+|     cache-control: max-age=0
+|     expires: Wed, 05 Nov 2025 20:51:31 GMT
+|     vary: Accept-Encoding
+|     x-content-type-options: nosniff
+|     x-xss-protection: 1; mode=block
+|     keep-alive: timeout=5, max=97
+|     content-type: text/html
+|     server: DNSI
+|     set-cookie: SERVERID=s1; path=/
+|     connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+|     <title>Apache2 Debian Default Page: It works</title>
+|     <style type="text/css" media="screen">
+|     margin: 0px 0px 0px 0px;
+|     padding: 0px 0px 0px 0px;
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 20:51:31 GMT
+|     x-frame-options: SAMEORIGIN
+|     allow: GET,POST,OPTIONS,HEAD
+|     cache-control: max-age=0
+|     expires: Wed, 05 Nov 2025 20:51:31 GMT
+|     x-content-type-options: nosniff
+|     x-xss-protection: 1; mode=block
+|     content-length: 0
+|     keep-alive: timeout=5, max=96
+|     content-type: text/html
+|     server: DNSI
+|     set-cookie: SERVERID=s1; path=/
+|_    connection: close
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690BB8CD%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1C20,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Wed,\x2005\x20Nov\
+SF:x202025\x2020:51:25\x20GMT\r\nx-frame-options:\x20SAMEORIGIN\r\nlast-mo
+SF:dified:\x20Tue,\x2023\x20May\x202023\x2008:46:50\x20GMT\r\netag:\x20\"2
+SF:9cd-5fc586da31b2c\"\r\naccept-ranges:\x20bytes\r\ncontent-length:\x2010
+SF:701\r\ncache-control:\x20max-age=0\r\nexpires:\x20Wed,\x2005\x20Nov\x20
+SF:2025\x2020:51:25\x20GMT\r\nvary:\x20Accept-Encoding\r\nx-content-type-o
+SF:ptions:\x20nosniff\r\nx-xss-protection:\x201;\x20mode=block\r\nkeep-ali
+SF:ve:\x20timeout=5,\x20max=99\r\ncontent-type:\x20text/html\r\nserver:\x2
+SF:0DNSI\r\nset-cookie:\x20SERVERID=s1;\x20path=/\r\nconnection:\x20close\
+SF:r\n\r\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\
+SF:x20Transitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-tra
+SF:nsitional\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\n
+SF:\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x2
+SF:0content=\"text/html;\x20charset=UTF-8\"\x20/>\n\x20\x20\x20\x20<title>
+SF:Apache2\x20Debian\x20Default\x20Page:\x20It\x20works</title>\n\x20\x20\
+SF:x20\x20<style\x20type=\"text/css\"\x20media=\"screen\">\n\x20\x20\*\x20
+SF:{\n\x20\x20\x20\x20margin:\x200px\x200px\x200px\x200px;\n\x20\x20\x20\x
+SF:20padding:\x200px\x200px\x200px\x200px;\n\x20\x20}\n")%r(HTTPOptions,18
+SF:4,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2020:5
+SF:1:25\x20GMT\r\nx-frame-options:\x20SAMEORIGIN\r\nallow:\x20GET,POST,OPT
+SF:IONS,HEAD\r\ncache-control:\x20max-age=0\r\nexpires:\x20Wed,\x2005\x20N
+SF:ov\x202025\x2020:51:25\x20GMT\r\nx-content-type-options:\x20nosniff\r\n
+SF:x-xss-protection:\x201;\x20mode=block\r\ncontent-length:\x200\r\nkeep-a
+SF:live:\x20timeout=5,\x20max=99\r\ncontent-type:\x20text/html\r\nserver:\
+SF:x20DNSI\r\nset-cookie:\x20SERVERID=s1;\x20path=/\r\nconnection:\x20clos
+SF:e\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nCon
+SF:tent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20clos
+SF:e\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20re
+SF:quest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</bo
+SF:dy></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690BB8D3%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2BAE,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Wed,\x2005\
+SF:x20Nov\x202025\x2020:51:31\x20GMT\r\nx-frame-options:\x20SAMEORIGIN\r\n
+SF:last-modified:\x20Tue,\x2023\x20May\x202023\x2008:46:50\x20GMT\r\netag:
+SF:\x20\"29cd-5fc586da31b2c\"\r\naccept-ranges:\x20bytes\r\ncontent-length
+SF::\x2010701\r\ncache-control:\x20max-age=0\r\nexpires:\x20Wed,\x2005\x20
+SF:Nov\x202025\x2020:51:31\x20GMT\r\nvary:\x20Accept-Encoding\r\nx-content
+SF:-type-options:\x20nosniff\r\nx-xss-protection:\x201;\x20mode=block\r\nk
+SF:eep-alive:\x20timeout=5,\x20max=97\r\ncontent-type:\x20text/html\r\nser
+SF:ver:\x20DNSI\r\nset-cookie:\x20SERVERID=s1;\x20path=/\r\nconnection:\x2
+SF:0close\r\n\r\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x
+SF:201\.0\x20Transitional//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xht
+SF:ml1-transitional\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xht
+SF:ml\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Ty
+SF:pe\"\x20content=\"text/html;\x20charset=UTF-8\"\x20/>\n\x20\x20\x20\x20
+SF:<title>Apache2\x20Debian\x20Default\x20Page:\x20It\x20works</title>\n\x
+SF:20\x20\x20\x20<style\x20type=\"text/css\"\x20media=\"screen\">\n\x20\x2
+SF:0\*\x20{\n\x20\x20\x20\x20margin:\x200px\x200px\x200px\x200px;\n\x20\x2
+SF:0\x20\x20padding:\x200px\x200px\x200px\x200px;\n\x20\x20}\n")%r(HTTPOpt
+SF:ions,184,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Wed,\x2005\x20Nov\x202025\
+SF:x2020:51:31\x20GMT\r\nx-frame-options:\x20SAMEORIGIN\r\nallow:\x20GET,P
+SF:OST,OPTIONS,HEAD\r\ncache-control:\x20max-age=0\r\nexpires:\x20Wed,\x20
+SF:05\x20Nov\x202025\x2020:51:31\x20GMT\r\nx-content-type-options:\x20nosn
+SF:iff\r\nx-xss-protection:\x201;\x20mode=block\r\ncontent-length:\x200\r\
+SF:nkeep-alive:\x20timeout=5,\x20max=96\r\ncontent-type:\x20text/html\r\ns
+SF:erver:\x20DNSI\r\nset-cookie:\x20SERVERID=s1;\x20path=/\r\nconnection:\
+SF:x20close\r\n\r\n")%r(FourOhFourRequest,1C3,"HTTP/1\.1\x20404\x20Not\x20
+SF:Found\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2020:51:32\x20GMT\r\nx-fra
+SF:me-options:\x20SAMEORIGIN\r\ncontent-length:\x20196\r\nkeep-alive:\x20t
+SF:imeout=5,\x20max=96\r\ncontent-type:\x20text/html;\x20charset=iso-8859-
+SF:1\r\nserver:\x20DNSI\r\nset-cookie:\x20SERVERID=s1;\x20path=/\r\nconnec
+SF:tion:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20
+SF:HTML\x202\.0//EN\">\n<html><head>\n<title>404\x20Not\x20Found</title>\n
+SF:</head><body>\n<h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20was
+SF:\x20not\x20found\x20on\x20this\x20server\.</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 20:51:51 2025 -- 1 IP address (1 host up) scanned in 55.24 seconds
