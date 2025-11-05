@@ -1,0 +1,142 @@
+# Nmap 7.92 scan initiated Wed Nov  5 02:23:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln testsenligne.gendarmerie.interieur.gouv.fr
+Nmap scan report for testsenligne.gendarmerie.interieur.gouv.fr (185.209.55.163)
+Host is up (0.11s latency).
+rDNS record for 185.209.55.163: vm2191.jn-hebergement.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     content-length: 0
+|     location: https:///
+|     connection: close
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp open  ssl/https Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 02:23:38 GMT
+|     server: Apache
+|     vary: Accept-Encoding
+|     content-length: 1444
+|     content-type: text/html; charset=UTF-8
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|     <!DOCTYPE html>
+|     <html id="page">
+|     <head>
+|     <title>Tests en ligne Gendarmerie</title>
+|     <link rel="stylesheet" href="index.css">
+|     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+|     </head>
+|     <body>
+|     <div id="header">
+|     <div id="headZone">
+|     <div id="Gd"><img id="imgMinint" src="img/logo_minint2024.png" alt="MainSiteTitle"><div id="headerTextZone"><span id="gendarmerie">Gendarmerie nationale</span><span id="minint"><br><center><-- Tests en ligne --></center></span></div></div><p><div id="imgGdZone"><img id="imgGendarmerie" src="img/logo_gendarmerie.png"></div></p> </div>
+|     </div>
+|     <table class="align"><tr><td><a href="https://eubusiness.pa
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     date: Wed, 05 Nov 2025 02:23:39 GMT
+|     server: Apache
+|     vary: Accept-Encoding
+|     content-length: 1444
+|     content-type: text/html; charset=UTF-8
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|     <!DOCTYPE html>
+|     <html id="page">
+|     <head>
+|     <title>Tests en ligne Gendarmerie</title>
+|     <link rel="stylesheet" href="index.css">
+|     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+|     </head>
+|     <body>
+|     <div id="header">
+|     <div id="headZone">
+|     <div id="Gd"><img id="imgMinint" src="img/logo_minint2024.png" alt="MainSiteTitle"><div id="headerTextZone"><span id="gendarmerie">Gendarmerie nationale</span><span id="minint"><br><center><-- Tests en ligne --></center></span></div></div><p><div id="imgGdZone"><img id="imgGendarmerie" src="img/logo_gendarmerie.png"></div></p> </div>
+|     </div>
+|     <table class="align"><tr><td><a href="https://eubusiness.pa
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690AB523%P=x86_64-alpine-linux-musl%r
+SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
+SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
+SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
+SF:x20time\.\n</body></html>\n")%r(GetRequest,5D,"HTTP/1\.1\x20301\x20Move
+SF:d\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\nc
+SF:onnection:\x20close\r\n\r\n")%r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Mov
+SF:ed\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\n
+SF:connection:\x20close\r\n\r\n")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301
+SF:\x20Moved\x20Permanently\r\ncontent-length:\x200\r\nlocation:\x20https:
+SF:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nconnection:\x20close\r\n\r\n
+SF:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690AB52A%P=x86_64-alpine-linux
+SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
+SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
+SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
+SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,681,"HTTP/1\.1\x20200
+SF:\x20OK\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2002:23:38\x20GMT\r\nserv
+SF:er:\x20Apache\r\nvary:\x20Accept-Encoding\r\ncontent-length:\x201444\r\
+SF:ncontent-type:\x20text/html;\x20charset=UTF-8\r\nstrict-transport-secur
+SF:ity:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20ht
+SF:ml>\n<html\x20id=\"page\">\n\x20\x20<head>\n\x20\x20\x20\x20<title>Test
+SF:s\x20en\x20ligne\x20Gendarmerie</title>\n\t<link\x20rel=\"stylesheet\"\
+SF:x20href=\"index\.css\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-
+SF:Type\"\x20content=\"text/html;\x20charset=iso-8859-1\"\x20/>\n\x20\x20<
+SF:/head>\n\x20\x20<body>\n\t<div\x20id=\"header\">\n\t\t<div\x20id=\"head
+SF:Zone\">\n\t\t\t<div\x20id=\"Gd\"><img\x20id=\"imgMinint\"\x20src=\"img/
+SF:logo_minint2024\.png\"\x20alt=\"MainSiteTitle\"><div\x20id=\"headerText
+SF:Zone\"><span\x20id=\"gendarmerie\">Gendarmerie\x20nationale</span><span
+SF:\x20id=\"minint\"><br><center><--\x20Tests\x20en\x20ligne\x20--></cente
+SF:r></span></div></div><p><div\x20id=\"imgGdZone\"><img\x20id=\"imgGendar
+SF:merie\"\x20src=\"img/logo_gendarmerie\.png\"></div></p>\t\t</div>\n\t</
+SF:div>\n\x20\x20\x20<table\x20class=\"align\"><tr><td><a\x20href=\"https:
+SF://eubusiness\.pa")%r(HTTPOptions,681,"HTTP/1\.1\x20200\x20OK\r\ndate:\x
+SF:20Wed,\x2005\x20Nov\x202025\x2002:23:39\x20GMT\r\nserver:\x20Apache\r\n
+SF:vary:\x20Accept-Encoding\r\ncontent-length:\x201444\r\ncontent-type:\x2
+SF:0text/html;\x20charset=UTF-8\r\nstrict-transport-security:\x20max-age=6
+SF:3072000\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20id=
+SF:\"page\">\n\x20\x20<head>\n\x20\x20\x20\x20<title>Tests\x20en\x20ligne\
+SF:x20Gendarmerie</title>\n\t<link\x20rel=\"stylesheet\"\x20href=\"index\.
+SF:css\">\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content
+SF:=\"text/html;\x20charset=iso-8859-1\"\x20/>\n\x20\x20</head>\n\x20\x20<
+SF:body>\n\t<div\x20id=\"header\">\n\t\t<div\x20id=\"headZone\">\n\t\t\t<d
+SF:iv\x20id=\"Gd\"><img\x20id=\"imgMinint\"\x20src=\"img/logo_minint2024\.
+SF:png\"\x20alt=\"MainSiteTitle\"><div\x20id=\"headerTextZone\"><span\x20i
+SF:d=\"gendarmerie\">Gendarmerie\x20nationale</span><span\x20id=\"minint\"
+SF:><br><center><--\x20Tests\x20en\x20ligne\x20--></center></span></div></
+SF:div><p><div\x20id=\"imgGdZone\"><img\x20id=\"imgGendarmerie\"\x20src=\"
+SF:img/logo_gendarmerie\.png\"></div></p>\t\t</div>\n\t</div>\n\x20\x20\x2
+SF:0<table\x20class=\"align\"><tr><td><a\x20href=\"https://eubusiness\.pa"
+SF:);
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 02:24:03 2025 -- 1 IP address (1 host up) scanned in 46.44 seconds
