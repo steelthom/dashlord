@@ -1,0 +1,148 @@
+# Nmap 7.92 scan initiated Wed Nov  5 04:12:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln univ-tlse3.fr
+Nmap scan report for univ-tlse3.fr (195.220.43.84)
+Host is up (0.16s latency).
+rDNS record for 195.220.43.84: prod-www2.univ-tlse3.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     content-length: 0
+|     location: https:///
+|     cache-control: no-cache
+|     connection: close
+|   Help, X11Probe: 
+|     HTTP/1.0 400 Bad request
+|     cache-control: no-cache
+|     content-type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+443/tcp open  ssl/https Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 404
+|     date: Wed, 05 Nov 2025 04:12:46 GMT
+|     server: Apache
+|     upgrade: h2
+|     connection: Upgrade
+|     x-content-type-options: nosniff
+|     x-frame-options: sameorigin
+|     set-cookie: JSESSIONID=E3978BC3458A9F852DF6B489CBEA6BCC.prod-ksup2-front1.private.univ-tlse3.fr; Path=/; Secure; HttpOnly;HttpOnly;Secure
+|     x-xss-protection: 1; mode=block
+|     content-type: text/html;charset=UTF-8
+|     strict-transport-security: max-age=31536000; includeSubDomains;
+|     set-cookie: SERVERID=front1; path=/
+|     cache-control: private
+|     <!DOCTYPE html>
+|     <html class="no-js html" xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <meta name="apple-mobile-web-app-capable" content="yes"/>
+|     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+|     <title></title>
+|     <link rel=
+|   GetRequest: 
+|     HTTP/1.1 404 404
+|     date: Wed, 05 Nov 2025 04:12:45 GMT
+|     server: Apache
+|     upgrade: h2
+|     connection: Upgrade
+|     x-content-type-options: nosniff
+|     x-frame-options: sameorigin
+|     set-cookie: JSESSIONID=465F91331676FB9F864DBCBC2363F539.prod-ksup2-front2.private.univ-tlse3.fr; Path=/; Secure; HttpOnly;HttpOnly;Secure
+|     x-xss-protection: 1; mode=block
+|     content-type: text/html;charset=UTF-8
+|     strict-transport-security: max-age=31536000; includeSubDomains;
+|     set-cookie: SERVERID=front2; path=/
+|     cache-control: private
+|     <!DOCTYPE html>
+|     <html class="no-js html" xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <meta name="apple-mobile-web-app-capable" content="yes"/>
+|     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+|     <title></title>
+|     <link rel=
+|   HTTPOptions: 
+|     HTTP/1.1 200 200
+|     date: Wed, 05 Nov 2025 04:12:45 GMT
+|     server: Apache
+|     upgrade: h2
+|     connection: Upgrade
+|     allow: GET,HEAD,POST
+|     content-length: 0
+|     x-content-type-options: nosniff
+|     x-frame-options: sameorigin
+|     set-cookie: JSESSIONID=7606742860060225F7D731CE1BB16560.prod-ksup2-front1.private.univ-tlse3.fr; Path=/; Secure; HttpOnly;HttpOnly;Secure
+|     x-xss-protection: 1; mode=block
+|     keep-alive: timeout=5, max=100
+|     strict-transport-security: max-age=31536000; includeSubDomains;
+|     set-cookie: SERVERID=front1; path=/
+|_    cache-control: private
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690ACEB6%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlo
+SF:cation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20cl
+SF:ose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-le
+SF:ngth:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\nc
+SF:onnection:\x20close\r\n\r\n")%r(X11Probe,A9,"HTTP/1\.0\x20400\x20Bad\x2
+SF:0request\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\
+SF:n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sen
+SF:t\x20an\x20invalid\x20request\.\n</body></html>\n\n")%r(Help,A9,"HTTP/1
+SF:\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache\r\ncontent-t
+SF:ype:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYo
+SF:ur\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n\n
+SF:");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690ACEBD%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2EED,"HTTP/1\.1\x20404\x20404\r\ndate:\x20Wed,\x2005
+SF:\x20Nov\x202025\x2004:12:45\x20GMT\r\nserver:\x20Apache\r\nupgrade:\x20
+SF:h2\r\nconnection:\x20Upgrade\r\nx-content-type-options:\x20nosniff\r\nx
+SF:-frame-options:\x20sameorigin\r\nset-cookie:\x20JSESSIONID=465F91331676
+SF:FB9F864DBCBC2363F539\.prod-ksup2-front2\.private\.univ-tlse3\.fr;\x20Pa
+SF:th=/;\x20Secure;\x20HttpOnly;HttpOnly;Secure\r\nx-xss-protection:\x201;
+SF:\x20mode=block\r\ncontent-type:\x20text/html;charset=UTF-8\r\nstrict-tr
+SF:ansport-security:\x20max-age=31536000;\x20includeSubDomains;\r\nset-coo
+SF:kie:\x20SERVERID=front2;\x20path=/\r\ncache-control:\x20private\r\n\r\n
+SF:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n\n\n\r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+SF:n\n\n<!DOCTYPE\x20html>\n<html\x20class=\"no-js\x20html\"\x20xmlns=\"ht
+SF:tp://www\.w3\.org/1999/xhtml\"\x20lang=\"fr\">\n<head>\n\x20\x20\x20\x2
+SF:0<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initial
+SF:-scale=1\.0\"\x20/>\n\x20\x20\x20\x20<meta\x20name=\"apple-mobile-web-a
+SF:pp-capable\"\x20content=\"yes\"/>\n\x20\x20\x20\x20\n\n\n\n\n\n\n\n\n\n
+SF:\n\n\n\n\n\n\n\n<meta\x20http-equiv=\"content-type\"\x20content=\"text/
+SF:html;\x20charset=utf-8\"\x20/>\n<title></title>\n\n\n\n<link\x20rel=")%
+SF:r(HTTPOptions,21C,"HTTP/1\.1\x20200\x20200\r\ndate:\x20Wed,\x2005\x20No
+SF:v\x202025\x2004:12:45\x20GMT\r\nserver:\x20Apache\r\nupgrade:\x20h2\r\n
+SF:connection:\x20Upgrade\r\nallow:\x20GET,HEAD,POST\r\ncontent-length:\x2
+SF:00\r\nx-content-type-options:\x20nosniff\r\nx-frame-options:\x20sameori
+SF:gin\r\nset-cookie:\x20JSESSIONID=7606742860060225F7D731CE1BB16560\.prod
+SF:-ksup2-front1\.private\.univ-tlse3\.fr;\x20Path=/;\x20Secure;\x20HttpOn
+SF:ly;HttpOnly;Secure\r\nx-xss-protection:\x201;\x20mode=block\r\nkeep-ali
+SF:ve:\x20timeout=5,\x20max=100\r\nstrict-transport-security:\x20max-age=3
+SF:1536000;\x20includeSubDomains;\r\nset-cookie:\x20SERVERID=front1;\x20pa
+SF:th=/\r\ncache-control:\x20private\r\n\r\n")%r(FourOhFourRequest,2F23,"H
+SF:TTP/1\.1\x20404\x20404\r\ndate:\x20Wed,\x2005\x20Nov\x202025\x2004:12:4
+SF:6\x20GMT\r\nserver:\x20Apache\r\nupgrade:\x20h2\r\nconnection:\x20Upgra
+SF:de\r\nx-content-type-options:\x20nosniff\r\nx-frame-options:\x20sameori
+SF:gin\r\nset-cookie:\x20JSESSIONID=E3978BC3458A9F852DF6B489CBEA6BCC\.prod
+SF:-ksup2-front1\.private\.univ-tlse3\.fr;\x20Path=/;\x20Secure;\x20HttpOn
+SF:ly;HttpOnly;Secure\r\nx-xss-protection:\x201;\x20mode=block\r\ncontent-
+SF:type:\x20text/html;charset=UTF-8\r\nstrict-transport-security:\x20max-a
+SF:ge=31536000;\x20includeSubDomains;\r\nset-cookie:\x20SERVERID=front1;\x
+SF:20path=/\r\ncache-control:\x20private\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r
+SF:\n\r\n\n\n\n\n\r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!DOCTYPE\x20html>\n<
+SF:html\x20class=\"no-js\x20html\"\x20xmlns=\"http://www\.w3\.org/1999/xht
+SF:ml\"\x20lang=\"fr\">\n<head>\n\x20\x20\x20\x20<meta\x20name=\"viewport\
+SF:"\x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\n\x20\
+SF:x20\x20\x20<meta\x20name=\"apple-mobile-web-app-capable\"\x20content=\"
+SF:yes\"/>\n\x20\x20\x20\x20\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<meta\x20h
+SF:ttp-equiv=\"content-type\"\x20content=\"text/html;\x20charset=utf-8\"\x
+SF:20/>\n<title></title>\n\n\n\n<link\x20rel=");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 04:13:45 2025 -- 1 IP address (1 host up) scanned in 84.61 seconds
