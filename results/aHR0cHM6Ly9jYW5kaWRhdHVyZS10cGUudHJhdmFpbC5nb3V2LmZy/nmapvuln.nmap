@@ -1,0 +1,109 @@
+# Nmap 7.92 scan initiated Wed Nov  5 20:07:16 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln candidature-tpe.travail.gouv.fr
+Nmap scan report for candidature-tpe.travail.gouv.fr (164.131.212.202)
+Host is up (0.11s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT      STATE  SERVICE       VERSION
+80/tcp    closed http
+113/tcp   closed ident
+416/tcp   closed silverplatter
+443/tcp   open   ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Wed, 05 Nov 2025 20:15:32 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=600
+|     Last-Modified: Fri, 08 Nov 2024 10:20:09 GMT
+|     ETag: "ea15-6266418726840"
+|     Accept-Ranges: bytes
+|     Content-Length: 59925
+|     X-XSS-Protection: 1; mode=block
+|     Strict-Transport-Security: max-age=63072000; includeSubDomains
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html><html lang="fr"><head>
+|     <meta charset="utf-8">
+|     <title>FrontOffice</title>
+|     <base href="/">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+|     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+|     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+|     <link rel="manifest" href="/favicon/manifest.webmanifest" crossorigin="use-credentials">
+|     <style>:roo
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Wed, 05 Nov 2025 20:15:32 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=600
+|     Last-Modified: Wed, 27 Jul 2022 18:04:30 GMT
+|     ETag: "1dc4-5e4cd3f996780"
+|     Accept-Ranges: bytes
+|     Content-Length: 7620
+|     X-XSS-Protection: 1; mode=block
+|     Strict-Transport-Security: max-age=63072000; includeSubDomains
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!doctype html>
+|     <html>
+|     <head>
+|     <meta charset='utf-8'>
+|     <meta name='viewport' content='width=device-width, initial-scale=1'>
+|     <title>HTTP Server Test Page powered by: Rocky Linux</title>
+|     <style type="text/css">
+|     /*<![CDATA[*/
+|     html {
+|     height: 100%;
+|     width: 100%;
+|     body {
+|     background: rgb(20,72,50);
+|     background: -moz-linear-gradient(180deg, rgba(20,72,50,1) 30%, rgba(0,0,0,1) 90%) ;
+|_    background: -webkit-linear-gradient(180deg,
+1122/tcp  closed availant-mgr
+1123/tcp  closed murray
+2604/tcp  closed ospfd
+7921/tcp  closed unknown
+8254/tcp  closed unknown
+11967/tcp closed sysinfo-sp
+49159/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690BB064%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1FF0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2005\
+SF:x20Nov\x202025\x2020:15:32\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r\n
+SF:Strict-Transport-Security:\x20max-age=600\r\nLast-Modified:\x20Fri,\x20
+SF:08\x20Nov\x202024\x2010:20:09\x20GMT\r\nETag:\x20\"ea15-6266418726840\"
+SF:\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x2059925\r\nX-XSS-Protec
+SF:tion:\x201;\x20mode=block\r\nStrict-Transport-Security:\x20max-age=6307
+SF:2000;\x20includeSubDomains\r\nConnection:\x20close\r\nContent-Type:\x20
+SF:text/html;\x20charset=UTF-8\r\n\r\n<!DOCTYPE\x20html><html\x20lang=\"fr
+SF:\"><head>\n\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>FrontOff
+SF:ice</title>\n\x20\x20<base\x20href=\"/\">\n\n\x20\x20<meta\x20name=\"vi
+SF:ewport\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\n\x20
+SF:\x20<link\x20rel=\"apple-touch-icon\"\x20href=\"/favicon/apple-touch-ic
+SF:on\.png\">\n\x20\x20<link\x20rel=\"icon\"\x20href=\"/favicon/favicon\.s
+SF:vg\"\x20type=\"image/svg\+xml\">\n\x20\x20<link\x20rel=\"shortcut\x20ic
+SF:on\"\x20href=\"/favicon/favicon\.ico\"\x20type=\"image/x-icon\">\n\x20\
+SF:x20<link\x20rel=\"manifest\"\x20href=\"/favicon/manifest\.webmanifest\"
+SF:\x20crossorigin=\"use-credentials\">\n<style>:roo")%r(HTTPOptions,1F5A,
+SF:"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2
+SF:020:15:32\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-
+SF:Security:\x20max-age=600\r\nLast-Modified:\x20Wed,\x2027\x20Jul\x202022
+SF:\x2018:04:30\x20GMT\r\nETag:\x20\"1dc4-5e4cd3f996780\"\r\nAccept-Ranges
+SF::\x20bytes\r\nContent-Length:\x207620\r\nX-XSS-Protection:\x201;\x20mod
+SF:e=block\r\nStrict-Transport-Security:\x20max-age=63072000;\x20includeSu
+SF:bDomains\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20char
+SF:set=UTF-8\r\n\r\n<!doctype\x20html>\n<html>\n\x20\x20<head>\n\x20\x20\x
+SF:20\x20<meta\x20charset='utf-8'>\n\x20\x20\x20\x20<meta\x20name='viewpor
+SF:t'\x20content='width=device-width,\x20initial-scale=1'>\n\x20\x20\x20\x
+SF:20<title>HTTP\x20Server\x20Test\x20Page\x20powered\x20by:\x20Rocky\x20L
+SF:inux</title>\n\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\x20\x2
+SF:0\x20\x20\x20/\*<!\[CDATA\[\*/\n\x20\x20\x20\x20\x20\x20\n\x20\x20\x20\
+SF:x20\x20\x20html\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\n\x20\x20\x20\x20\x20\
+SF:x20}\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20backgr
+SF:ound:\x20rgb\(20,72,50\);\n\x20\x20background:\x20-moz-linear-gradient\
+SF:(180deg,\x20rgba\(20,72,50,1\)\x2030%,\x20rgba\(0,0,0,1\)\x2090%\)\x20\
+SF:x20;\n\x20\x20background:\x20-webkit-linear-gradient\(180deg,");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  5 20:17:44 2025 -- 1 IP address (1 host up) scanned in 628.23 seconds
