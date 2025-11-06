@@ -1,0 +1,188 @@
+# Nmap 7.92 scan initiated Thu Nov  6 14:33:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln francetransfert.numerique.gouv.fr
+Nmap scan report for francetransfert.numerique.gouv.fr (185.231.164.153)
+Host is up (0.14s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Thu, 06 Nov 2025 14:33:26 GMT
+|     Content-Type: text/html
+|     Content-Length: 166
+|     Connection: close
+|     Location: https://francetransfert.numerique.gouv.fr/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Thu, 06 Nov 2025 14:33:25 GMT
+|     Content-Type: text/html
+|     Content-Length: 166
+|     Connection: close
+|     Location: https://francetransfert.numerique.gouv.fr/
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 14:33:25 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 14:33:26 GMT
+|     Content-Type: text/html
+|     Content-Length: 154
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>openresty</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 06 Nov 2025 14:33:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 4009
+|     Connection: close
+|     Referrer-Policy: no-referrer
+|     Cache-Control: no-cache
+|     Strict-Transport-Security: max-age=63072000
+|     X-Frame-Options: DENY
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"domain":".numerique.gouv.fr","checkChallengeParams":{"request_fate":"challengejs","tracking_id":"","bot_category":"unknown","rule_id":""},"cookie":{"name":"bln_challengejs","path":"/","value":"7Ozdo7_lJ0Vu-SVLdWTXifkiWVWlf5PzG4YWY2Z0ZffOD3sEMstWy7xe4QujvGuoULGnkDlfiPPNrbjrQDZq6onEXG-g7QwBzJrgE-Fjb0JthdFeMyV7iC7ZHb1QcKQYuQdwg3nqHfpN1WAPViRdbud-7C5JphsEtZwEMNOEVWE","sameSite":"None","secure":true,"maxAge":900}};(()=>{
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 06 Nov 2025 14:33:31 GMT
+|     Content-Type: text/html
+|     Content-Length: 4009
+|     Connection: close
+|     Referrer-Policy: no-referrer
+|     Cache-Control: no-cache
+|     Strict-Transport-Security: max-age=63072000
+|     X-Frame-Options: DENY
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     <!doctypehtml><meta name="viewport"content="width=device-width"><meta charset="utf-8"><script></script><script>var __blnChallengeStore={"unregisterServiceWorker":false,"cookie":{"name":"bln_challengejs","maxAge":900,"path":"/","secure":true,"value":"7Ozdo7_lJ0Vu-SVLdWTXiWSq-oGUGeCjyKbAPWePoE93oy34NbL0_6_VhZIdI-lkCRbA9urqBVN19CRfT9OPcdt7TeII60PvQxqqGee5rQHY05tSrdAQjbfZUGc7bwNGYP0iRu-8UfpOpt8JZkTGwg9hKrh1NwwCCFk_JXts7uo","sameSite":"None"},"domain":".numerique.gouv.fr","checkChallengeParams":{"tracking_id":"","rule_id":"","request_fate":"challengejs","bot_category":"unknown"}};(()=>{
+|   HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 06 Nov 2025 14:33:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 146
+|     Connection: close
+|     X-Varnish: 4736000
+|     Age: 0
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Frame-Options: DENY
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: origin-when-cross-origin
+|     X-XSS-Protection: 1; mode=block
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CB1B5%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,164,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20T
+SF:hu,\x2006\x20Nov\x202025\x2014:33:25\x20GMT\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20166\r\nConnection:\x20close\r\nLocation:\x20ht
+SF:tps://francetransfert\.numerique\.gouv\.fr/\r\n\r\n<html>\r\n<head><tit
+SF:le>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>
+SF:301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>openresty</cen
+SF:ter>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,164,"HTTP/1\.1\x20301\x2
+SF:0Moved\x20Permanently\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2014:33:25
+SF:\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20166\r\nConn
+SF:ection:\x20close\r\nLocation:\x20https://francetransfert\.numerique\.go
+SF:uv\.fr/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</titl
+SF:e></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></ce
+SF:nter>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n")%r(R
+SF:TSPRequest,11C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Thu,\x20
+SF:06\x20Nov\x202025\x2014:33:25\x20GMT\r\nContent-Type:\x20text/html\r\nC
+SF:ontent-Length:\x20154\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><t
+SF:itle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\
+SF:x20Bad\x20Request</h1></center>\r\n<hr><center>openresty</center>\r\n</
+SF:body>\r\n</html>\r\n")%r(X11Probe,11C,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2014:33:26\x20GMT\r\nContent-
+SF:Type:\x20text/html\r\nContent-Length:\x20154\r\nConnection:\x20close\r\
+SF:n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<bo
+SF:dy>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>o
+SF:penresty</center>\r\n</body>\r\n</html>\r\n")%r(FourOhFourRequest,187,"
+SF:HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Thu,\x2006\x20Nov\
+SF:x202025\x2014:33:26\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:gth:\x20166\r\nConnection:\x20close\r\nLocation:\x20https://francetrans
+SF:fert\.numerique\.gouv\.fr/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<
+SF:html>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<bo
+SF:dy>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><ce
+SF:nter>openresty</center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CB1BB%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,10E0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2006\
+SF:x20Nov\x202025\x2014:33:31\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x204009\r\nConnection:\x20close\r\nReferrer-Policy:\x20no-r
+SF:eferrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Security:\x20
+SF:max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-Options:
+SF:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!doctypeht
+SF:ml><meta\x20name=\"viewport\"content=\"width=device-width\"><meta\x20ch
+SF:arset=\"utf-8\"><script></script><script>var\x20__blnChallengeStore={\"
+SF:unregisterServiceWorker\":false,\"cookie\":{\"name\":\"bln_challengejs\
+SF:",\"maxAge\":900,\"path\":\"\\/\",\"secure\":true,\"value\":\"7Ozdo7_lJ
+SF:0Vu-SVLdWTXiWSq-oGUGeCjyKbAPWePoE93oy34NbL0_6_VhZIdI-lkCRbA9urqBVN19CRf
+SF:T9OPcdt7TeII60PvQxqqGee5rQHY05tSrdAQjbfZUGc7bwNGYP0iRu-8UfpOpt8JZkTGwg9
+SF:hKrh1NwwCCFk_JXts7uo\",\"sameSite\":\"None\"},\"domain\":\"\.numerique\
+SF:.gouv\.fr\",\"checkChallengeParams\":{\"tracking_id\":\"\",\"rule_id\":
+SF:\"\",\"request_fate\":\"challengejs\",\"bot_category\":\"unknown\"}};\(
+SF:\(\)=>{")%r(HTTPOptions,1F2,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\
+SF:x20Thu,\x2006\x20Nov\x202025\x2014:33:32\x20GMT\r\nContent-Type:\x20tex
+SF:t/html\r\nContent-Length:\x20146\r\nConnection:\x20close\r\nX-Varnish:\
+SF:x204736000\r\nAge:\x200\r\nStrict-Transport-Security:\x20max-age=315360
+SF:00;\x20includeSubDomains\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-
+SF:Options:\x20nosniff\r\nReferrer-Policy:\x20origin-when-cross-origin\r\n
+SF:X-XSS-Protection:\x201;\x20mode=block\r\n\r\n<html>\r\n<head><title>404
+SF:\x20Not\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20
+SF:Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>
+SF:\r\n")%r(FourOhFourRequest,10E0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu
+SF:,\x2006\x20Nov\x202025\x2014:33:32\x20GMT\r\nContent-Type:\x20text/html
+SF:\r\nContent-Length:\x204009\r\nConnection:\x20close\r\nReferrer-Policy:
+SF:\x20no-referrer\r\nCache-Control:\x20no-cache\r\nStrict-Transport-Secur
+SF:ity:\x20max-age=63072000\r\nX-Frame-Options:\x20DENY\r\nX-Content-Type-
+SF:Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\n\r\n<!d
+SF:octypehtml><meta\x20name=\"viewport\"content=\"width=device-width\"><me
+SF:ta\x20charset=\"utf-8\"><script></script><script>var\x20__blnChallengeS
+SF:tore={\"unregisterServiceWorker\":false,\"domain\":\"\.numerique\.gouv\
+SF:.fr\",\"checkChallengeParams\":{\"request_fate\":\"challengejs\",\"trac
+SF:king_id\":\"\",\"bot_category\":\"unknown\",\"rule_id\":\"\"},\"cookie\
+SF:":{\"name\":\"bln_challengejs\",\"path\":\"\\/\",\"value\":\"7Ozdo7_lJ0
+SF:Vu-SVLdWTXifkiWVWlf5PzG4YWY2Z0ZffOD3sEMstWy7xe4QujvGuoULGnkDlfiPPNrbjrQ
+SF:DZq6onEXG-g7QwBzJrgE-Fjb0JthdFeMyV7iC7ZHb1QcKQYuQdwg3nqHfpN1WAPViRdbud-
+SF:7C5JphsEtZwEMNOEVWE\",\"sameSite\":\"None\",\"secure\":true,\"maxAge\":
+SF:900}};\(\(\)=>{");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 14:33:55 2025 -- 1 IP address (1 host up) scanned in 46.91 seconds
