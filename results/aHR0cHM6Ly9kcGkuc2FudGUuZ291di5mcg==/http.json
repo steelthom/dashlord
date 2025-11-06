@@ -1,0 +1,179 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 75,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Thu, 06 Nov 2025 07:33:55 GMT",
+      "strict-transport-security": "max-age=63072000; includeSubDomains",
+      "x-frame-options": "DENY",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://matomo.fabrique.social.gouv.fr; connect-src 'self' https://matomo.fabrique.social.gouv.fr; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'self';",
+      "content-type": "text/html;charset=UTF-8",
+      "content-length": "1282",
+      "set-cookie": [
+        "JSESSIONID=3B7277D43341DAA07039E05D729E8C50; Path=/dpi-public-webapp; Secure; HttpOnly;HttpOnly;Secure",
+        "TS0163c68c=012337f68db108b800394d63685c2fb1f9dd487788714dc37864c6522bdbd05d51123d5188dc917c298c5430e1b10657d6f3404b90b7a821e185f34d201b55923c7775e59b; Path=/;",
+        "TS012d2c46=012337f68d48974abd5b30b3b2999673cc8e5d804c714dc37864c6522bdbd05d51123d5188dc917c298c5430e1b10657d6f3404b900c49930fa3f3b0bea0322f31683f53977de40fdf1adf652c59348b81ab2ad196; path=/dpi-public-webapp"
+      ],
+      "connection": "close"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'self'"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https://matomo.fabrique.social.gouv.fr"
+        ],
+        "connect-src": [
+          "'self'",
+          "https://matomo.fabrique.social.gouv.fr"
+        ],
+        "img-src": [
+          "'self'"
+        ],
+        "style-src": [
+          "'self'"
+        ],
+        "base-uri": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": false,
+        "insecureFormAction": false,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": false,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "Current_Session": {
+          "domain": "dpi.sante.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS0163c68c": {
+          "domain": "dpi.sante.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "JSESSIONID": {
+          "domain": "dpi.sante.gouv.fr",
+          "httponly": true,
+          "path": "/dpi-public-webapp",
+          "port": null,
+          "secure": true
+        },
+        "TS012d2c46": {
+          "domain": "dpi.sante.gouv.fr",
+          "path": "/dpi-public-webapp",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-not-needed-no-http",
+      "scoreModifier": 0,
+      "destination": null,
+      "redirects": true,
+      "route": [],
+      "statusCode": null
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 63072000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "DENY"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
