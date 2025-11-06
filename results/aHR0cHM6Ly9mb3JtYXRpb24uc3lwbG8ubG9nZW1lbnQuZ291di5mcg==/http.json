@@ -1,0 +1,135 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 0,
+    "statusCode": 200,
+    "testsFailed": 6,
+    "testsPassed": 4,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Thu, 06 Nov 2025 14:40:32 GMT",
+      "server": "Apache",
+      "cache-control": "max-age=0, must-revalidate, no-cache, no-store, private",
+      "pragma": "no-cache",
+      "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+      "set-cookie": [
+        "XSRF-TOKEN=eyJpdiI6ImlhaTdET1V1L2xtbDhzMEFGS3JHaVE9PSIsInZhbHVlIjoiYnVoWFdWQWRRWStaOFVWTEhQN1Z1azZHMUdROHkycG1QUjVOU05FOHJ5NEFZMFpGNXlqZE5peWdSWHl2Q1drQkp3VHJkZkttZWcrNm1FaDZocFpncEc3WFl0aEZQUTcrNCtMQWd2WDVuMTVNNmprVlM3SnRhMk5FT25ZTk80OW4iLCJtYWMiOiJmYmFiYzgzYWJmOGNjZDI2ZGFhZWMzZWY0NTZhZTRiMTU3ZjU5NTkzODgxNzE4ZWYxOGE3NWYxODczOWU1ZmQwIiwidGFnIjoiIn0%3D; expires=Thu, 06 Nov 2025 16:40:33 GMT; Max-Age=7200; path=/; samesite=lax",
+        "athena_salva_session=eyJpdiI6InJ2OFkyR0FpNUdxakNQejUzUkc5MEE9PSIsInZhbHVlIjoidmtXZDNmd2Z4TEdTLzJRSkJiRHl1TEw3TkhUZGduSFFMMTY1OUpTd0VKcCtWaEtVRWw0bkhVUldUTk9lYjBlclYrenk2S0RtcjMxRE1ld1pSNk5CSVZuSnBIWjh5bTUxaTB2OGZmTnUrQXhiM1lSL3I2L08vdmtyQ3F1RmZnTVkiLCJtYWMiOiI1M2FkYTdmY2YzOWJlNzdjZTg5NWMwOWRhMTNjYmI5MGMyYzZiODYyNTg4YWFiNjNhZjk3NWEzZDhlNjQwOTQwIiwidGFnIjoiIn0%3D; expires=Thu, 06 Nov 2025 16:40:33 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
+      ],
+      "connection": "close",
+      "transfer-encoding": "chunked",
+      "content-type": "text/html; charset=UTF-8"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag",
+      "scoreModifier": -40,
+      "data": {
+        "athena_salva_session": {
+          "domain": "formation.syplo.logement.gouv.fr",
+          "expires": "2025-11-06T16:40:33.000Z",
+          "httponly": true,
+          "max-age": 7200,
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
+        },
+        "XSRF-TOKEN": {
+          "domain": "formation.syplo.logement.gouv.fr",
+          "expires": "2025-11-06T16:40:33.000Z",
+          "max-age": 7200,
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": false,
+      "result": "redirection-not-to-https",
+      "scoreModifier": -20,
+      "destination": "http://formation.syplo.logement.gouv.fr/login",
+      "redirects": true,
+      "route": [
+        "http://formation.syplo.logement.gouv.fr/",
+        "http://formation.syplo.logement.gouv.fr/login"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-invalid-cert",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
