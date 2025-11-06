@@ -1,0 +1,77 @@
+# Nmap 7.92 scan initiated Thu Nov  6 14:20:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln fsv.fr
+Nmap scan report for fsv.fr (149.13.119.214)
+Host is up (0.14s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE        VERSION
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  open   ssl/https
+| fingerprint-strings: 
+|   RTSPRequest: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Thu, 06 Nov 2025 14:21:25 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|     <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+|   SIPOptions: 
+|     HTTP/1.1 400 Invalid Request
+|     Date: Thu, 06 Nov 2025 14:22:37 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 87
+|     Content-Type: text/html
+|_    <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
+554/tcp  closed rtsp
+587/tcp  open   smtp
+| fingerprint-strings: 
+|   GenericLines, GetRequest: 
+|     220 house4.aprile.fr ESMTP ready.
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220 house4.aprile.fr ESMTP ready.
+|     Syntactically invalid EHLO argument(s)
+|   Help: 
+|     220 house4.aprile.fr ESMTP ready.
+|     214-Commands supported:
+|     AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|   NULL: 
+|_    220 house4.aprile.fr ESMTP ready.
+5900/tcp closed vnc
+8888/tcp closed sun-answerbook
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CAEE5%P=x86_64-alpine-linux
+SF:-musl%r(RTSPRequest,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r\nDate
+SF::\x20Thu,\x2006\x20Nov\x202025\x2014:21:25\x20GMT\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x2087\r
+SF:\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Invalid\x
+SF:20Request</title></head><body>Invalid\x20Request:\x20\?\?</body>\r\n")%
+SF:r(SIPOptions,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r\nDate:\x20Th
+SF:u,\x2006\x20Nov\x202025\x2014:22:37\x20GMT\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x2087\r\nConte
+SF:nt-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Invalid\x20Reque
+SF:st</title></head><body>Invalid\x20Request:\x20\?\?</body>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.92%I=7%D=11/6%Time=690CAED2%P=x86_64-alpine-linux-musl%
+SF:r(NULL,23,"220\x20house4\.aprile\.fr\x20ESMTP\x20ready\.\r\n")%r(Generi
+SF:cLines,57,"220\x20house4\.aprile\.fr\x20ESMTP\x20ready\.\r\n500\x20unre
+SF:cognized\x20command\r\n500\x20unrecognized\x20command\r\n")%r(Hello,4F,
+SF:"220\x20house4\.aprile\.fr\x20ESMTP\x20ready\.\r\n501\x20Syntactically\
+SF:x20invalid\x20EHLO\x20argument\(s\)\r\n")%r(Help,81,"220\x20house4\.apr
+SF:ile\.fr\x20ESMTP\x20ready\.\r\n214-Commands\x20supported:\r\n214\x20AUT
+SF:H\x20STARTTLS\x20HELO\x20EHLO\x20MAIL\x20RCPT\x20DATA\x20BDAT\x20NOOP\x
+SF:20QUIT\x20RSET\x20HELP\r\n")%r(GetRequest,57,"220\x20house4\.aprile\.fr
+SF:\x20ESMTP\x20ready\.\r\n500\x20unrecognized\x20command\r\n500\x20unreco
+SF:gnized\x20command\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 14:23:32 2025 -- 1 IP address (1 host up) scanned in 160.58 seconds
