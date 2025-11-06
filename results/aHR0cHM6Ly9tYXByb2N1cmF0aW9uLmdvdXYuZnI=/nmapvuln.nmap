@@ -1,0 +1,132 @@
+# Nmap 7.92 scan initiated Thu Nov  6 20:52:43 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln maprocuration.gouv.fr
+Nmap scan report for maprocuration.gouv.fr (5.22.145.247)
+Host is up (0.16s latency).
+Other addresses for maprocuration.gouv.fr (not scanned): 5.22.145.230 2a00:18e0:5:3:a356:6a4c:7d74:3f0b 2a00:18e0:5:2:f015:6b46:7bb3:1c36
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     content-length: 93
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>403 Forbidden</h1>
+|     Request forbidden by administrative rules.
+|     </body></html>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp  open  ssl/https  Apache
+|_http-server-header: Apache
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     content-length: 93
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>403 Forbidden</h1>
+|     Request forbidden by administrative rules.
+|     </body></html>
+|   GenericLines: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|     </body></html>
+|   RPCCheck, RTSPRequest, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     Content-length: 90
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+9080/tcp open  ssl/glrpc?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690D0AAE%P=x86_64-alpine-linux-musl%r
+SF:(HTTPOptions,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:\x2093
+SF:\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnect
+SF:ion:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x20
+SF:forbidden\x20by\x20administrative\x20rules\.\n</body></html>\n")%r(RTSP
+SF:Request,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(X
+SF:11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(F
+SF:ourOhFourRequest,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:\x
+SF:2093\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\ncon
+SF:nection:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest
+SF:\x20forbidden\x20by\x20administrative\x20rules\.\n</body></html>\n")%r(
+SF:GenericLines,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
+SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
+SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
+SF:\x20in\x20time\.\n</body></html>\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\
+SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><bod
+SF:y><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inva
+SF:lid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\
+SF:.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\
+SF:x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r
+SF:\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x
+SF:20an\x20invalid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690D0AB4%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:
+SF:\x2093\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nc
+SF:onnection:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nReque
+SF:st\x20forbidden\x20by\x20administrative\x20rules\.\n</body></html>\n")%
+SF:r(HTTPOptions,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:\x209
+SF:3\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnec
+SF:tion:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x2
+SF:0forbidden\x20by\x20administrative\x20rules\.\n</body></html>\n")%r(Fou
+SF:rOhFourRequest,D0,"HTTP/1\.1\x20403\x20Forbidden\r\ncontent-length:\x20
+SF:93\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconne
+SF:ction:\x20close\r\n\r\n<html><body><h1>403\x20Forbidden</h1>\nRequest\x
+SF:20forbidden\x20by\x20administrative\x20rules\.\n</body></html>\n")%r(to
+SF:r-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2
+SF:090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Ty
+SF:pe:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYou
+SF:r\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%
+SF:r(GenericLines,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-l
+SF:ength:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Tim
+SF:e-out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20reque
+SF:st\x20in\x20time\.\n</body></html>\n")%r(RTSPRequest,CF,"HTTP/1\.1\x204
+SF:00\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-c
+SF:ache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html
+SF:><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x2
+SF:0invalid\x20request\.\n</body></html>\n")%r(RPCCheck,CF,"HTTP/1\.1\x204
+SF:00\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-c
+SF:ache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html
+SF:><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x2
+SF:0invalid\x20request\.\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 20:56:23 2025 -- 1 IP address (1 host up) scanned in 219.09 seconds
