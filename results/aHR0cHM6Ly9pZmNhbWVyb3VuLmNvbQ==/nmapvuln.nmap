@@ -1,0 +1,185 @@
+# Nmap 7.92 scan initiated Thu Nov  6 19:05:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ifcameroun.com
+Nmap scan report for ifcameroun.com (85.236.157.37)
+Host is up (0.11s latency).
+rDNS record for 85.236.157.37: hc-trulymajorkrill-eu.n0c.com
+Not shown: 931 filtered tcp ports (no-response), 57 closed tcp ports (reset)
+PORT     STATE SERVICE   VERSION
+21/tcp   open  ftp       Pure-FTPd
+25/tcp   open  smtp      Postfix smtpd
+80/tcp   open  http      LiteSpeed
+|_http-server-header: LiteSpeed
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/html
+|     cache-control: private, no-cache, max-age=0
+|     pragma: no-cache
+|     content-length: 1249
+|     date: Thu, 06 Nov 2025 19:06:11 GMT
+|     server: LiteSpeed
+|     connection: close
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title> 404 Not Found
+|     </title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+|     style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
+|     style="margin-top:20px;font-size: 30px;">Not
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     etag: "4-68a5e3c5-64b5e;;;"
+|     last-modified: Wed, 20 Aug 2025 15:03:33 GMT
+|     content-type: text/html
+|     content-length: 4
+|     accept-ranges: bytes
+|     date: Thu, 06 Nov 2025 19:06:05 GMT
+|     server: LiteSpeed
+|     connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     content-type: text/html
+|     cache-control: private, no-cache, max-age=0
+|     pragma: no-cache
+|     content-length: 767
+|     date: Thu, 06 Nov 2025 19:06:06 GMT
+|     server: LiteSpeed
+|     connection: close
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title> 400 Bad Request
+|     </title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+|     style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">400</h1>
+|_    style="margin-top:20px;font-size: 30px;">B
+110/tcp  open  pop3      Dovecot pop3d
+143/tcp  open  imap      Dovecot imapd
+443/tcp  open  ssl/https LiteSpeed
+|_http-server-header: LiteSpeed
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     content-type: text/html
+|     cache-control: private, no-cache, max-age=0
+|     pragma: no-cache
+|     content-length: 1249
+|     date: Thu, 06 Nov 2025 19:06:13 GMT
+|     server: LiteSpeed
+|     alt-svc: h3=":443"; ma=2592000, h3-29=":443"; ma=2592000, h3-Q050=":443"; ma=2592000, h3-Q046=":443"; ma=2592000, h3-Q043=":443"; ma=2592000, quic=":443"; ma=2592000; v="43,46"
+|     connection: close
+|     <!DOCTYPE html>
+|     <html style="height:100%">
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <title> 404 Not Found
+|     </title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
+|     <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+|     <div style="height:auto; min-height:100%; "> <div style="text-align: center; width:800px; margin-left: -400px; posit
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     etag: "4-68a5e3c5-64b5f;;;"
+|     last-modified: Wed, 20 Aug 2025 15:03:33 GMT
+|     content-type: text/html
+|     content-length: 4
+|     accept-ranges: bytes
+|     date: Thu, 06 Nov 2025 19:06:12 GMT
+|     server: LiteSpeed
+|     alt-svc: h3=":443"; ma=2592000, h3-29=":443"; ma=2592000, h3-Q050=":443"; ma=2592000, h3-Q046=":443"; ma=2592000, h3-Q043=":443"; ma=2592000, quic=":443"; ma=2592000; v="43,46"
+|_    connection: close
+465/tcp  open  ssl/smtp  Postfix smtpd
+587/tcp  open  smtp      Postfix smtpd
+993/tcp  open  imaps?
+995/tcp  open  pop3s?
+4443/tcp open  ssl/http  nginx
+8888/tcp open  http      Apache httpd
+|_http-server-header: Apache
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CF19D%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,EF,"HTTP/1\.0\x20200\x20OK\r\netag:\x20\"4-68a5e3c5-64b5e;;
+SF:;\"\r\nlast-modified:\x20Wed,\x2020\x20Aug\x202025\x2015:03:33\x20GMT\r
+SF:\ncontent-type:\x20text/html\r\ncontent-length:\x204\r\naccept-ranges:\
+SF:x20bytes\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:06:05\x20GMT\r\nse
+SF:rver:\x20LiteSpeed\r\nconnection:\x20close\r\n\r\nn0c\n")%r(HTTPOptions
+SF:,EF,"HTTP/1\.0\x20200\x20OK\r\netag:\x20\"4-68a5e3c5-64b5e;;;\"\r\nlast
+SF:-modified:\x20Wed,\x2020\x20Aug\x202025\x2015:03:33\x20GMT\r\ncontent-t
+SF:ype:\x20text/html\r\ncontent-length:\x204\r\naccept-ranges:\x20bytes\r\
+SF:ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:06:05\x20GMT\r\nserver:\x20Li
+SF:teSpeed\r\nconnection:\x20close\r\n\r\nn0c\n")%r(RTSPRequest,3D3,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\ncontent-type:\x20text/html\r\ncache-co
+SF:ntrol:\x20private,\x20no-cache,\x20max-age=0\r\npragma:\x20no-cache\r\n
+SF:content-length:\x20767\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:06:0
+SF:6\x20GMT\r\nserver:\x20LiteSpeed\r\nconnection:\x20close\r\n\r\n<!DOCTY
+SF:PE\x20html>\n<html\x20style=\"height:100%\">\n<head>\n<meta\x20name=\"v
+SF:iewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20shrin
+SF:k-to-fit=no\">\n<title>\x20400\x20Bad\x20Request\r\n</title><style>@med
+SF:ia\x20\(prefers-color-scheme:dark\){body{background-color:#000!importan
+SF:t}}</style></head>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\
+SF:x20normal\x2014px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height
+SF::100%;\x20background-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x
+SF:20min-height:100%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align
+SF::\x20center;\x20width:800px;\x20margin-left:\x20-400px;\x20position:abs
+SF:olute;\x20top:\x2030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0<h1\x20style=\"margin:0;\x20font-size:150px;\x20line-height:150px;\x20
+SF:font-weight:bold;\">400</h1>\n<h2\x20style=\"margin-top:20px;font-size:
+SF:\x2030px;\">B")%r(FourOhFourRequest,5B4,"HTTP/1\.0\x20404\x20Not\x20Fou
+SF:nd\r\ncontent-type:\x20text/html\r\ncache-control:\x20private,\x20no-ca
+SF:che,\x20max-age=0\r\npragma:\x20no-cache\r\ncontent-length:\x201249\r\n
+SF:date:\x20Thu,\x2006\x20Nov\x202025\x2019:06:11\x20GMT\r\nserver:\x20Lit
+SF:eSpeed\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20styl
+SF:e=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"\x20content=\"wid
+SF:th=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n<title>\x2
+SF:0404\x20Not\x20Found\r\n</title><style>@media\x20\(prefers-color-scheme
+SF::dark\){body{background-color:#000!important}}</style></head>\n<body\x2
+SF:0style=\"color:\x20#444;\x20margin:0;font:\x20normal\x2014px/20px\x20Ar
+SF:ial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x20background-color:\
+SF:x20#fff;\">\n<div\x20style=\"height:auto;\x20min-height:100%;\x20\">\x2
+SF:0\x20\x20\x20\x20<div\x20style=\"text-align:\x20center;\x20width:800px;
+SF:\x20margin-left:\x20-400px;\x20position:absolute;\x20top:\x2030%;\x20le
+SF:ft:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\"margin:0;\x2
+SF:0font-size:150px;\x20line-height:150px;\x20font-weight:bold;\">404</h1>
+SF:\n<h2\x20style=\"margin-top:20px;font-size:\x2030px;\">Not\x20");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CF1A4%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1A1,"HTTP/1\.0\x20200\x20OK\r\netag:\x20\"4-68a5e3c5
+SF:-64b5f;;;\"\r\nlast-modified:\x20Wed,\x2020\x20Aug\x202025\x2015:03:33\
+SF:x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length:\x204\r\naccept-
+SF:ranges:\x20bytes\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:06:12\x20G
+SF:MT\r\nserver:\x20LiteSpeed\r\nalt-svc:\x20h3=\":443\";\x20ma=2592000,\x
+SF:20h3-29=\":443\";\x20ma=2592000,\x20h3-Q050=\":443\";\x20ma=2592000,\x2
+SF:0h3-Q046=\":443\";\x20ma=2592000,\x20h3-Q043=\":443\";\x20ma=2592000,\x
+SF:20quic=\":443\";\x20ma=2592000;\x20v=\"43,46\"\r\nconnection:\x20close\
+SF:r\n\r\nn0c\n")%r(HTTPOptions,1A1,"HTTP/1\.0\x20200\x20OK\r\netag:\x20\"
+SF:4-68a5e3c5-64b5f;;;\"\r\nlast-modified:\x20Wed,\x2020\x20Aug\x202025\x2
+SF:015:03:33\x20GMT\r\ncontent-type:\x20text/html\r\ncontent-length:\x204\
+SF:r\naccept-ranges:\x20bytes\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:
+SF:06:12\x20GMT\r\nserver:\x20LiteSpeed\r\nalt-svc:\x20h3=\":443\";\x20ma=
+SF:2592000,\x20h3-29=\":443\";\x20ma=2592000,\x20h3-Q050=\":443\";\x20ma=2
+SF:592000,\x20h3-Q046=\":443\";\x20ma=2592000,\x20h3-Q043=\":443\";\x20ma=
+SF:2592000,\x20quic=\":443\";\x20ma=2592000;\x20v=\"43,46\"\r\nconnection:
+SF:\x20close\r\n\r\nn0c\n")%r(FourOhFourRequest,666,"HTTP/1\.0\x20404\x20N
+SF:ot\x20Found\r\ncontent-type:\x20text/html\r\ncache-control:\x20private,
+SF:\x20no-cache,\x20max-age=0\r\npragma:\x20no-cache\r\ncontent-length:\x2
+SF:01249\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:06:13\x20GMT\r\nserve
+SF:r:\x20LiteSpeed\r\nalt-svc:\x20h3=\":443\";\x20ma=2592000,\x20h3-29=\":
+SF:443\";\x20ma=2592000,\x20h3-Q050=\":443\";\x20ma=2592000,\x20h3-Q046=\"
+SF::443\";\x20ma=2592000,\x20h3-Q043=\":443\";\x20ma=2592000,\x20quic=\":4
+SF:43\";\x20ma=2592000;\x20v=\"43,46\"\r\nconnection:\x20close\r\n\r\n<!DO
+SF:CTYPE\x20html>\n<html\x20style=\"height:100%\">\n<head>\n<meta\x20name=
+SF:\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1,\x20sh
+SF:rink-to-fit=no\">\n<title>\x20404\x20Not\x20Found\r\n</title><style>@me
+SF:dia\x20\(prefers-color-scheme:dark\){body{background-color:#000!importa
+SF:nt}}</style></head>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:
+SF:\x20normal\x2014px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20heigh
+SF:t:100%;\x20background-color:\x20#fff;\">\n<div\x20style=\"height:auto;\
+SF:x20min-height:100%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-alig
+SF:n:\x20center;\x20width:800px;\x20margin-left:\x20-400px;\x20posit");
+Service Info: Host:  hc-trulymajorkrill-eu.n0c.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 19:07:59 2025 -- 1 IP address (1 host up) scanned in 129.88 seconds
