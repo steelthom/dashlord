@@ -1,0 +1,145 @@
+# Nmap 7.92 scan initiated Thu Nov  6 15:02:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln garde-nationale.gouv.fr
+Nmap scan report for garde-nationale.gouv.fr (185.209.55.188)
+Host is up (0.16s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <!doctype html>
+|     <html lang="fr" data-fr-scheme="system">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/dsfr/dsfr.css">
+|     <meta name="theme-color" content="#000091">
+|     <link rel="apple-touch-icon" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/apple-touch-icon.png">
+|     <link rel="icon" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/favicon.svg" type="image/svg+xml">
+|     <link rel="shortcut icon" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/favicon.ico" type="image/x-icon">
+|     <link rel="manifest" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/manifest.webmanifest" crossorigin="use-credentials">
+|     <tit
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 503 Service Unavailable
+|     cache-control: no-cache
+|     content-type: text/html
+|     <!doctype html>
+|     <html lang="fr" data-fr-scheme="system">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+|     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/dsfr/dsfr.css">
+|     <meta name="theme-color" content="#000091">
+|     <link rel="apple-touch-icon" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/apple-touch-icon.png">
+|     <link rel="icon" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/favicon.svg" type="image/svg+xml">
+|     <link rel="shortcut icon" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/favicon.ico" type="image/x-icon">
+|     <link rel="manifest" href="https://unpkg.com/@gouvfr/dsfr@1.4.1/dist/favicon/manifest.webmanifest" crossorigin="use-credentials">
+|     <tit
+|   NULL: 
+|     HTTP/1.1 408 Request Time-out
+|     Content-length: 110
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html
+|     <html><body><h1>408 Request Time-out</h1>
+|     Your browser didn't send a complete request in time.
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CB8A6%P=x86_64-alpine-linux-musl%r
+SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
+SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
+SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
+SF:x20time\.\n</body></html>\n")%r(GetRequest,CFA,"HTTP/1\.0\x20503\x20Ser
+SF:vice\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-type:\x20t
+SF:ext/html\r\n\r\n<!doctype\x20html>\n<html\x20lang=\"fr\"\x20data-fr-sch
+SF:eme=\"system\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf
+SF:-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=de
+SF:vice-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\x20\x2
+SF:0<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@
+SF:1\.4\.1/dist/dsfr/dsfr\.css\">\n\x20\x20\n\x20\x20\x20\x20<meta\x20name
+SF:=\"theme-color\"\x20content=\"#000091\">\n\x20\x20\x20\x20<link\x20rel=
+SF:\"apple-touch-icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.4\.1/
+SF:dist/favicon/apple-touch-icon\.png\">\n\x20\x20\x20\x20<link\x20rel=\"i
+SF:con\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.4\.1/dist/favicon/fa
+SF:vicon\.svg\"\x20type=\"image/svg\+xml\">\n\x20\x20\x20\x20<link\x20rel=
+SF:\"shortcut\x20icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.4\.1/
+SF:dist/favicon/favicon\.ico\"\x20type=\"image/x-icon\">\n\x20\x20\x20\x20
+SF:<link\x20rel=\"manifest\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.
+SF:4\.1/dist/favicon/manifest\.webmanifest\"\x20crossorigin=\"use-credenti
+SF:als\">\n\n\n\x20\x20\x20\x20<tit")%r(HTTPOptions,CFA,"HTTP/1\.0\x20503\
+SF:x20Service\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-type
+SF::\x20text/html\r\n\r\n<!doctype\x20html>\n<html\x20lang=\"fr\"\x20data-
+SF:fr-scheme=\"system\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charset
+SF:=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"wi
+SF:dth=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20\
+SF:x20\x20<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/@gouvfr
+SF:/dsfr@1\.4\.1/dist/dsfr/dsfr\.css\">\n\x20\x20\n\x20\x20\x20\x20<meta\x
+SF:20name=\"theme-color\"\x20content=\"#000091\">\n\x20\x20\x20\x20<link\x
+SF:20rel=\"apple-touch-icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\
+SF:.4\.1/dist/favicon/apple-touch-icon\.png\">\n\x20\x20\x20\x20<link\x20r
+SF:el=\"icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.4\.1/dist/favi
+SF:con/favicon\.svg\"\x20type=\"image/svg\+xml\">\n\x20\x20\x20\x20<link\x
+SF:20rel=\"shortcut\x20icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\
+SF:.4\.1/dist/favicon/favicon\.ico\"\x20type=\"image/x-icon\">\n\x20\x20\x
+SF:20\x20<link\x20rel=\"manifest\"\x20href=\"https://unpkg\.com/@gouvfr/ds
+SF:fr@1\.4\.1/dist/favicon/manifest\.webmanifest\"\x20crossorigin=\"use-cr
+SF:edentials\">\n\n\n\x20\x20\x20\x20<tit");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CB8AD%P=x86_64-alpine-linux
+SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
+SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
+SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
+SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
+SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,CFA,"HTTP/1\.0\x20503
+SF:\x20Service\x20Unavailable\r\ncache-control:\x20no-cache\r\ncontent-typ
+SF:e:\x20text/html\r\n\r\n<!doctype\x20html>\n<html\x20lang=\"fr\"\x20data
+SF:-fr-scheme=\"system\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20charse
+SF:t=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"w
+SF:idth=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x20\x20
+SF:\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/@gouvf
+SF:r/dsfr@1\.4\.1/dist/dsfr/dsfr\.css\">\n\x20\x20\n\x20\x20\x20\x20<meta\
+SF:x20name=\"theme-color\"\x20content=\"#000091\">\n\x20\x20\x20\x20<link\
+SF:x20rel=\"apple-touch-icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1
+SF:\.4\.1/dist/favicon/apple-touch-icon\.png\">\n\x20\x20\x20\x20<link\x20
+SF:rel=\"icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.4\.1/dist/fav
+SF:icon/favicon\.svg\"\x20type=\"image/svg\+xml\">\n\x20\x20\x20\x20<link\
+SF:x20rel=\"shortcut\x20icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1
+SF:\.4\.1/dist/favicon/favicon\.ico\"\x20type=\"image/x-icon\">\n\x20\x20\
+SF:x20\x20<link\x20rel=\"manifest\"\x20href=\"https://unpkg\.com/@gouvfr/d
+SF:sfr@1\.4\.1/dist/favicon/manifest\.webmanifest\"\x20crossorigin=\"use-c
+SF:redentials\">\n\n\n\x20\x20\x20\x20<tit")%r(HTTPOptions,CFA,"HTTP/1\.0\
+SF:x20503\x20Service\x20Unavailable\r\ncache-control:\x20no-cache\r\nconte
+SF:nt-type:\x20text/html\r\n\r\n<!doctype\x20html>\n<html\x20lang=\"fr\"\x
+SF:20data-fr-scheme=\"system\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20
+SF:charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20conte
+SF:nt=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\">\n\x
+SF:20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/
+SF:@gouvfr/dsfr@1\.4\.1/dist/dsfr/dsfr\.css\">\n\x20\x20\n\x20\x20\x20\x20
+SF:<meta\x20name=\"theme-color\"\x20content=\"#000091\">\n\x20\x20\x20\x20
+SF:<link\x20rel=\"apple-touch-icon\"\x20href=\"https://unpkg\.com/@gouvfr/
+SF:dsfr@1\.4\.1/dist/favicon/apple-touch-icon\.png\">\n\x20\x20\x20\x20<li
+SF:nk\x20rel=\"icon\"\x20href=\"https://unpkg\.com/@gouvfr/dsfr@1\.4\.1/di
+SF:st/favicon/favicon\.svg\"\x20type=\"image/svg\+xml\">\n\x20\x20\x20\x20
+SF:<link\x20rel=\"shortcut\x20icon\"\x20href=\"https://unpkg\.com/@gouvfr/
+SF:dsfr@1\.4\.1/dist/favicon/favicon\.ico\"\x20type=\"image/x-icon\">\n\x2
+SF:0\x20\x20\x20<link\x20rel=\"manifest\"\x20href=\"https://unpkg\.com/@go
+SF:uvfr/dsfr@1\.4\.1/dist/favicon/manifest\.webmanifest\"\x20crossorigin=\
+SF:"use-credentials\">\n\n\n\x20\x20\x20\x20<tit");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 15:03:39 2025 -- 1 IP address (1 host up) scanned in 54.41 seconds
