@@ -1,0 +1,85 @@
+# Nmap 7.92 scan initiated Thu Nov  6 13:23:15 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ensad-nancy.eu
+Nmap scan report for ensad-nancy.eu (146.88.233.98)
+Host is up (0.11s latency).
+rDNS record for 146.88.233.98: world-304.fr.planethoster.net
+Not shown: 932 filtered tcp ports (no-response), 58 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      Pure-FTPd
+25/tcp  open  smtp?
+80/tcp  open  http     Apache httpd
+|_http-server-header: Apache
+110/tcp open  pop3     Dovecot pop3d
+143/tcp open  imap     Dovecot imapd
+443/tcp open  ssl/http Apache httpd
+|_http-server-header: Apache
+465/tcp open  ssl/smtp Exim smtpd 4.98.2
+| vulners: 
+|   cpe:/a:exim:exim:4.98.2: 
+|     	EXPLOITPACK:4FFD4258EB9240F56C83A57C965E0913	10.0	https://vulners.com/exploitpack/EXPLOITPACK:4FFD4258EB9240F56C83A57C965E0913	*EXPLOIT*
+|     	EXIM_EXPANSION_RCE	10.0	https://vulners.com/canvas/EXIM_EXPANSION_RCE	*EXPLOIT*
+|     	EDB-ID:47307	10.0	https://vulners.com/exploitdb/EDB-ID:47307	*EXPLOIT*
+|     	EDB-ID:46996	10.0	https://vulners.com/exploitdb/EDB-ID:46996	*EXPLOIT*
+|     	EDB-ID:46974	10.0	https://vulners.com/exploitdb/EDB-ID:46974	*EXPLOIT*
+|     	E1FEC345-BB7E-5FFE-AD78-64A1B9E93172	10.0	https://vulners.com/githubexploit/E1FEC345-BB7E-5FFE-AD78-64A1B9E93172	*EXPLOIT*
+|     	CNVD-2020-59206	10.0	https://vulners.com/cnvd/CNVD-2020-59206
+|     	CNVD-2019-26542	10.0	https://vulners.com/cnvd/CNVD-2019-26542
+|     	CNVD-2019-16594	10.0	https://vulners.com/cnvd/CNVD-2019-16594
+|     	ADA0DDA5-BF6D-5656-87DA-B9E2BF0777ED	10.0	https://vulners.com/githubexploit/ADA0DDA5-BF6D-5656-87DA-B9E2BF0777ED	*EXPLOIT*
+|     	910B7127-C06A-533E-BFC7-6ED36944EA87	10.0	https://vulners.com/githubexploit/910B7127-C06A-533E-BFC7-6ED36944EA87	*EXPLOIT*
+|     	7DB4D6C1-099F-581F-8C39-DB454925C570	10.0	https://vulners.com/githubexploit/7DB4D6C1-099F-581F-8C39-DB454925C570	*EXPLOIT*
+|     	7B7215E0-65A8-5ECC-B222-5204D0DE0ABF	10.0	https://vulners.com/githubexploit/7B7215E0-65A8-5ECC-B222-5204D0DE0ABF	*EXPLOIT*
+|     	6272EBB5-612E-577A-8BC0-FBC7A470DFF1	10.0	https://vulners.com/githubexploit/6272EBB5-612E-577A-8BC0-FBC7A470DFF1	*EXPLOIT*
+|     	53BB099A-E497-5170-9B4B-16FB5A78CF67	10.0	https://vulners.com/githubexploit/53BB099A-E497-5170-9B4B-16FB5A78CF67	*EXPLOIT*
+|     	314FBFEA-2B26-54C6-BD8B-833438155879	10.0	https://vulners.com/githubexploit/314FBFEA-2B26-54C6-BD8B-833438155879	*EXPLOIT*
+|     	1337DAY-ID-33150	10.0	https://vulners.com/zdt/1337DAY-ID-33150	*EXPLOIT*
+|     	1337DAY-ID-32848	10.0	https://vulners.com/zdt/1337DAY-ID-32848	*EXPLOIT*
+|     	MSF:EXPLOIT-LINUX-LOCAL-EXIM4_DELIVER_MESSAGE_PRIV_ESC-	9.8	https://vulners.com/metasploit/MSF:EXPLOIT-LINUX-LOCAL-EXIM4_DELIVER_MESSAGE_PRIV_ESC-	*EXPLOIT*
+|     	D4A90249-DD8A-53F0-BF5C-2A24402535BB	9.8	https://vulners.com/githubexploit/D4A90249-DD8A-53F0-BF5C-2A24402535BB	*EXPLOIT*
+|     	CNVD-2021-34514	7.8	https://vulners.com/cnvd/CNVD-2021-34514
+|     	CNVD-2021-34513	7.8	https://vulners.com/cnvd/CNVD-2021-34513
+|     	CNVD-2021-34512	7.8	https://vulners.com/cnvd/CNVD-2021-34512
+|     	SSV:99253	7.5	https://vulners.com/seebug/SSV:99253	*EXPLOIT*
+|     	PACKETSTORM:154198	7.5	https://vulners.com/packetstorm/PACKETSTORM:154198	*EXPLOIT*
+|     	PACKETSTORM:153312	7.5	https://vulners.com/packetstorm/PACKETSTORM:153312	*EXPLOIT*
+|     	EXPLOITPACK:5F07E65256D3B05FE6074E80F7346498	7.5	https://vulners.com/exploitpack/EXPLOITPACK:5F07E65256D3B05FE6074E80F7346498	*EXPLOIT*
+|     	CNVD-2021-34511	7.5	https://vulners.com/cnvd/CNVD-2021-34511
+|     	1337DAY-ID-32869	7.5	https://vulners.com/zdt/1337DAY-ID-32869	*EXPLOIT*
+|_    	CNVD-2016-12888	5.9	https://vulners.com/cnvd/CNVD-2016-12888
+587/tcp open  smtp     Exim smtpd 4.98.2
+| vulners: 
+|   cpe:/a:exim:exim:4.98.2: 
+|     	EXPLOITPACK:4FFD4258EB9240F56C83A57C965E0913	10.0	https://vulners.com/exploitpack/EXPLOITPACK:4FFD4258EB9240F56C83A57C965E0913	*EXPLOIT*
+|     	EXIM_EXPANSION_RCE	10.0	https://vulners.com/canvas/EXIM_EXPANSION_RCE	*EXPLOIT*
+|     	EDB-ID:47307	10.0	https://vulners.com/exploitdb/EDB-ID:47307	*EXPLOIT*
+|     	EDB-ID:46996	10.0	https://vulners.com/exploitdb/EDB-ID:46996	*EXPLOIT*
+|     	EDB-ID:46974	10.0	https://vulners.com/exploitdb/EDB-ID:46974	*EXPLOIT*
+|     	E1FEC345-BB7E-5FFE-AD78-64A1B9E93172	10.0	https://vulners.com/githubexploit/E1FEC345-BB7E-5FFE-AD78-64A1B9E93172	*EXPLOIT*
+|     	CNVD-2020-59206	10.0	https://vulners.com/cnvd/CNVD-2020-59206
+|     	CNVD-2019-26542	10.0	https://vulners.com/cnvd/CNVD-2019-26542
+|     	CNVD-2019-16594	10.0	https://vulners.com/cnvd/CNVD-2019-16594
+|     	ADA0DDA5-BF6D-5656-87DA-B9E2BF0777ED	10.0	https://vulners.com/githubexploit/ADA0DDA5-BF6D-5656-87DA-B9E2BF0777ED	*EXPLOIT*
+|     	910B7127-C06A-533E-BFC7-6ED36944EA87	10.0	https://vulners.com/githubexploit/910B7127-C06A-533E-BFC7-6ED36944EA87	*EXPLOIT*
+|     	7DB4D6C1-099F-581F-8C39-DB454925C570	10.0	https://vulners.com/githubexploit/7DB4D6C1-099F-581F-8C39-DB454925C570	*EXPLOIT*
+|     	7B7215E0-65A8-5ECC-B222-5204D0DE0ABF	10.0	https://vulners.com/githubexploit/7B7215E0-65A8-5ECC-B222-5204D0DE0ABF	*EXPLOIT*
+|     	6272EBB5-612E-577A-8BC0-FBC7A470DFF1	10.0	https://vulners.com/githubexploit/6272EBB5-612E-577A-8BC0-FBC7A470DFF1	*EXPLOIT*
+|     	53BB099A-E497-5170-9B4B-16FB5A78CF67	10.0	https://vulners.com/githubexploit/53BB099A-E497-5170-9B4B-16FB5A78CF67	*EXPLOIT*
+|     	314FBFEA-2B26-54C6-BD8B-833438155879	10.0	https://vulners.com/githubexploit/314FBFEA-2B26-54C6-BD8B-833438155879	*EXPLOIT*
+|     	1337DAY-ID-33150	10.0	https://vulners.com/zdt/1337DAY-ID-33150	*EXPLOIT*
+|     	1337DAY-ID-32848	10.0	https://vulners.com/zdt/1337DAY-ID-32848	*EXPLOIT*
+|     	MSF:EXPLOIT-LINUX-LOCAL-EXIM4_DELIVER_MESSAGE_PRIV_ESC-	9.8	https://vulners.com/metasploit/MSF:EXPLOIT-LINUX-LOCAL-EXIM4_DELIVER_MESSAGE_PRIV_ESC-	*EXPLOIT*
+|     	D4A90249-DD8A-53F0-BF5C-2A24402535BB	9.8	https://vulners.com/githubexploit/D4A90249-DD8A-53F0-BF5C-2A24402535BB	*EXPLOIT*
+|     	CNVD-2021-34514	7.8	https://vulners.com/cnvd/CNVD-2021-34514
+|     	CNVD-2021-34513	7.8	https://vulners.com/cnvd/CNVD-2021-34513
+|     	CNVD-2021-34512	7.8	https://vulners.com/cnvd/CNVD-2021-34512
+|     	SSV:99253	7.5	https://vulners.com/seebug/SSV:99253	*EXPLOIT*
+|     	PACKETSTORM:154198	7.5	https://vulners.com/packetstorm/PACKETSTORM:154198	*EXPLOIT*
+|     	PACKETSTORM:153312	7.5	https://vulners.com/packetstorm/PACKETSTORM:153312	*EXPLOIT*
+|     	EXPLOITPACK:5F07E65256D3B05FE6074E80F7346498	7.5	https://vulners.com/exploitpack/EXPLOITPACK:5F07E65256D3B05FE6074E80F7346498	*EXPLOIT*
+|     	CNVD-2021-34511	7.5	https://vulners.com/cnvd/CNVD-2021-34511
+|     	1337DAY-ID-32869	7.5	https://vulners.com/zdt/1337DAY-ID-32869	*EXPLOIT*
+|_    	CNVD-2016-12888	5.9	https://vulners.com/cnvd/CNVD-2016-12888
+993/tcp open  imaps?
+995/tcp open  pop3s?
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 13:26:11 2025 -- 1 IP address (1 host up) scanned in 176.12 seconds
