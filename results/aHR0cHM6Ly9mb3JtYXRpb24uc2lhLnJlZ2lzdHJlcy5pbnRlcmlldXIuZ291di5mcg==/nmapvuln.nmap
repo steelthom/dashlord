@@ -1,0 +1,179 @@
+# Nmap 7.92 scan initiated Thu Nov  6 14:50:56 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln formation.sia.registres.interieur.gouv.fr
+Nmap scan report for formation.sia.registres.interieur.gouv.fr (143.196.253.156)
+Host is up (0.086s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Thu, 06 Nov 2025 14:51:25 GMT
+|     Location: https://sia.registres.interieur.gouv.fr/nice ports,/Trinity.txt.bak
+|     Content-Length: 275
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://sia.registres.interieur.gouv.fr/nice ports,/Trinity.txt.bak">here</a>.</p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Thu, 06 Nov 2025 14:51:14 GMT
+|     Location: https://sia.registres.interieur.gouv.fr/
+|     Content-Length: 248
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://sia.registres.interieur.gouv.fr/">here</a>.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Thu, 06 Nov 2025 14:51:15 GMT
+|     Location: https://sia.registres.interieur.gouv.fr/
+|     Content-Length: 248
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>301 Moved Permanently</title>
+|     </head><body>
+|     <h1>Moved Permanently</h1>
+|     <p>The document has moved <a href="https://sia.registres.interieur.gouv.fr/">here</a>.</p>
+|     </body></html>
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 14:51:45 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 14:51:22 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 14:51:21 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 14:51:32 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CB5E2%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1C8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20T
+SF:hu,\x2006\x20Nov\x202025\x2014:51:14\x20GMT\r\nLocation:\x20https://sia
+SF:\.registres\.interieur\.gouv\.fr/\r\nContent-Length:\x20248\r\nConnecti
+SF:on:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\
+SF:n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head><body
+SF:>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20moved\x2
+SF:0<a\x20href=\"https://sia\.registres\.interieur\.gouv\.fr/\">here</a>\.
+SF:</p>\n</body></html>\n")%r(HTTPOptions,1C8,"HTTP/1\.1\x20301\x20Moved\x
+SF:20Permanently\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2014:51:15\x20GMT\
+SF:r\nLocation:\x20https://sia\.registres\.interieur\.gouv\.fr/\r\nContent
+SF:-Length:\x20248\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\
+SF:x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
+SF:DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Perman
+SF:ently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20
+SF:document\x20has\x20moved\x20<a\x20href=\"https://sia\.registres\.interi
+SF:eur\.gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(FourOhFourRequest
+SF:,1FE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Thu,\x2006\x
+SF:20Nov\x202025\x2014:51:25\x20GMT\r\nLocation:\x20https://sia\.registres
+SF:\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nContent-Lengt
+SF:h:\x20275\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x2
+SF:0HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently<
+SF:/title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20docume
+SF:nt\x20has\x20moved\x20<a\x20href=\"https://sia\.registres\.interieur\.g
+SF:ouv\.fr/nice\x20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n</body></htm
+SF:l>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Thu,\
+SF:x2006\x20Nov\x202025\x2014:51:45\x20GMT\r\nContent-Length:\x20226\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
+SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
+SF:EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body
+SF:>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\
+SF:x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p
+SF:>\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CB5E9%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Thu,\x2006\x20Nov\x202025\x2014:51:21\x20GMT\r\nContent-Length:\x20226\
+SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8
+SF:859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
+SF:\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head>
+SF:<body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20req
+SF:uest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>
+SF:\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2014:51:21\x20GMT\r\nC
+SF:ontent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/
+SF:html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
+SF:IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Re
+SF:quest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brows
+SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
+SF:0understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,17
+SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Thu,\x2006\x20Nov\x20
+SF:2025\x2014:51:22\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
+SF:se\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYP
+SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
+SF:ad>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Re
+SF:quest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\
+SF:x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html
+SF:>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
+SF:0Thu,\x2006\x20Nov\x202025\x2014:51:32\x20GMT\r\nContent-Length:\x20226
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
+SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
+SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
+SF:><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20re
+SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
+SF:>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 14:53:07 2025 -- 1 IP address (1 host up) scanned in 130.72 seconds
