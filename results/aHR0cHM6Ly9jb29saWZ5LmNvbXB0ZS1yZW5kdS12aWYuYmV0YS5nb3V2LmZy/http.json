@@ -1,0 +1,137 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "D",
+    "error": null,
+    "score": 30,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "alt-svc": "h3=\":443\"; ma=2592000",
+      "cache-control": "no-cache, private",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Thu, 06 Nov 2025 03:28:49 GMT",
+      "server": "nginx",
+      "set-cookie": [
+        "XSRF-TOKEN=eyJpdiI6ImJ6eWl5b011enNaU2JsWmtwTDBGK0E9PSIsInZhbHVlIjoic2FyQ2lpTVFOQkhJVUlaNTVFSmNpd0tSMWp3ZjFnbzZ0a1RkV3p3ZTU4bXhZZ01RU0dQZWhFOEdPTGVLVVlkM2g0djJJWHFzL0grZmxHWU16a2lDUlpPOCttbVMveXpwWEJkZEF0L2JOVExodi9KT1J0UjdQMC83cTI3L2pNelEiLCJtYWMiOiI1YmNiZTBlMTUzZTEzYWI1NDQ0YmIyMWExNTM4NzQ5OWM2NjAzMGU0OTdlOTZjMjhjM2EwYTljOTVlMjAwOGE5IiwidGFnIjoiIn0%3D; expires=Thu, 13 Nov 2025 03:28:49 GMT; Max-Age=604800; path=/; secure; samesite=lax",
+        "coolify_session=eyJpdiI6ImJXUU5JTG9HL1c1eCtuUW9OdlgxWUE9PSIsInZhbHVlIjoiOG5jVHQwcHRPQ3Jkc21QTU1GNGU4cDhMbzU5cU82TGYxWXNaUFMrRXBzR2pLOWVCeUtqcmlsbHRnMWdzM3gzYS9CV21Sci90NVFMTWlkaHdDT0xRYWZ2aHhZbEx0RldBQ2ZoODhQcXZwbExwYWxhOEFSdnVpSUpsVWFyWFhMemgiLCJtYWMiOiI2NjA2ZjNlMzI5MjNlMTYxNjkzN2E1MTgyZTljYTZjMTE2NDcwN2Y4MjVhNDJmMTBhNWNjZjQwZjE5ZDZjMGI4IiwidGFnIjoiIn0%3D; expires=Thu, 13 Nov 2025 03:28:49 GMT; Max-Age=604800; path=/; secure; httponly; samesite=lax"
+      ],
+      "connection": "close",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
+      "data": {
+        "XSRF-TOKEN": {
+          "domain": "coolify.compte-rendu-vif.beta.gouv.fr",
+          "expires": "2025-11-13T03:28:49.000Z",
+          "max-age": 604800,
+          "path": "/",
+          "port": null,
+          "samesite": "lax",
+          "secure": true
+        },
+        "coolify_session": {
+          "domain": "coolify.compte-rendu-vif.beta.gouv.fr",
+          "expires": "2025-11-13T03:28:49.000Z",
+          "httponly": true,
+          "max-age": 604800,
+          "path": "/",
+          "port": null,
+          "samesite": "lax",
+          "secure": true
+        }
+      },
+      "sameSite": true
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://coolify.compte-rendu-vif.beta.gouv.fr/login",
+      "redirects": true,
+      "route": [
+        "http://coolify.compte-rendu-vif.beta.gouv.fr/",
+        "https://coolify.compte-rendu-vif.beta.gouv.fr/",
+        "https://coolify.compte-rendu-vif.beta.gouv.fr/login"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
