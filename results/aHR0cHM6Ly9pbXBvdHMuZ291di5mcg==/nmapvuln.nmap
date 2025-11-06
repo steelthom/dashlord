@@ -1,0 +1,124 @@
+# Nmap 7.92 scan initiated Thu Nov  6 18:56:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln impots.gouv.fr
+Nmap scan report for impots.gouv.fr (145.242.11.100)
+Host is up (0.10s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://145.242.11.100/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://145.242.11.100/
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 Mire
+|     Date: Thu, 06 Nov 2025 18:57:11 GMT
+|     Content-Type: text/html
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     Content-Length: 1086726
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr"><head>
+|     <base href="/" />
+|     <script type="text/javascript">
+|     _event_transid='1678411050';
+|     </script>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <title>Imp
+|     ts.gouv.fr 
+|     site en maintenance</title>
+|     <style> 
+|     .fr-icon-mail-line::before,
+|     .fr-icon-mail-line::after {
+|     -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=
+|   HTTPOptions: 
+|     HTTP/1.1 200 Mire
+|     Date: Thu, 06 Nov 2025 18:57:12 GMT
+|     Content-Type: text/html
+|     Cache-Control: no-cache, no-store, must-revalidate
+|     Pragma: no-cache
+|     Expires: 0
+|     Content-Length: 1086726
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang="fr"><head>
+|     <base href="/" />
+|     <script type="text/javascript">
+|     _event_transid='1678411079';
+|     </script>
+|     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+|     <title>Imp
+|     ts.gouv.fr 
+|     site en maintenance</title>
+|     <style> 
+|     .fr-icon-mail-line::before,
+|     .fr-icon-mail-line::after {
+|_    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CEF82%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https://145\.242\.11\.100/\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOp
+SF:tions,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
+SF:s://145\.242\.11\.100/\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRe
+SF:quest,7B,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
+SF:s://145\.242\.11\.100/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-L
+SF:ength:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CEF88%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20Mire\r\nDate:\x20Thu,\x200
+SF:6\x20Nov\x202025\x2018:57:11\x20GMT\r\nContent-Type:\x20text/html\r\nCa
+SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate\r\nPragma:\x2
+SF:0no-cache\r\nExpires:\x200\r\nContent-Length:\x201086726\r\nConnection:
+SF:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"><head>\n<base
+SF:\x20href=\"/\"\x20/>\n<script\x20type=\"text/javascript\">\n\x20\x20var
+SF:\x20_event_transid='1678411050';\n</script>\n\n\x20\x20<meta\x20http-eq
+SF:uiv=\"content-type\"\x20content=\"text/html;\x20charset=UTF-8\">\n\x20\
+SF:x20<meta\x20charset=\"utf-8\">\n\x20\x20<meta\x20http-equiv=\"X-UA-Comp
+SF:atible\"\x20content=\"IE=edge\">\n\x20\x20<meta\x20http-equiv=\"Cache-C
+SF:ontrol\"\x20content=\"no-cache,\x20no-store,\x20must-revalidate\">\n\x2
+SF:0\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20ini
+SF:tial-scale=1\.0\"\x20/>\n\x20\x20<title>Imp\xc3\xb4ts\.gouv\.fr\x20\xe2
+SF:\x80\x93\x20site\x20en\x20maintenance</title>\n\x20\x20<style>\x20\n\x2
+SF:0\x20\x20\x20\.fr-icon-mail-line::before,\n\x20\x20\x20\x20\.fr-icon-ma
+SF:il-line::after\x20{\n\x20\x20\x20\x20\x20\x20-webkit-mask-image:\x20url
+SF:\('data:image/svg\+xml,<svg\x20xmlns=\"http://www\.w3\.org/2000/svg\"\x
+SF:20viewBox=\"0\x200\x2024\x2024\"\x20width=")%r(HTTPOptions,C000,"HTTP/1
+SF:\.1\x20200\x20Mire\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2018:57:12\x2
+SF:0GMT\r\nContent-Type:\x20text/html\r\nCache-Control:\x20no-cache,\x20no
+SF:-store,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nC
+SF:ontent-Length:\x201086726\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20h
+SF:tml>\n<html\x20lang=\"fr\"><head>\n<base\x20href=\"/\"\x20/>\n<script\x
+SF:20type=\"text/javascript\">\n\x20\x20var\x20_event_transid='1678411079'
+SF:;\n</script>\n\n\x20\x20<meta\x20http-equiv=\"content-type\"\x20content
+SF:=\"text/html;\x20charset=UTF-8\">\n\x20\x20<meta\x20charset=\"utf-8\">\
+SF:n\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"
+SF:>\n\x20\x20<meta\x20http-equiv=\"Cache-Control\"\x20content=\"no-cache,
+SF:\x20no-store,\x20must-revalidate\">\n\x20\x20<meta\x20name=\"viewport\"
+SF:\x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\n\x20\x
+SF:20<title>Imp\xc3\xb4ts\.gouv\.fr\x20\xe2\x80\x93\x20site\x20en\x20maint
+SF:enance</title>\n\x20\x20<style>\x20\n\x20\x20\x20\x20\.fr-icon-mail-lin
+SF:e::before,\n\x20\x20\x20\x20\.fr-icon-mail-line::after\x20{\n\x20\x20\x
+SF:20\x20\x20\x20-webkit-mask-image:\x20url\('data:image/svg\+xml,<svg\x20
+SF:xmlns=\"http://www\.w3\.org/2000/svg\"\x20viewBox=\"0\x200\x2024\x2024\
+SF:"\x20width=");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 18:59:20 2025 -- 1 IP address (1 host up) scanned in 148.28 seconds
