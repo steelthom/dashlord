@@ -1,0 +1,96 @@
+# Nmap 7.92 scan initiated Thu Nov  6 13:17:44 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln expositions-servicehistorique.sga.defense.gouv.fr
+Nmap scan report for expositions-servicehistorique.sga.defense.gouv.fr (92.222.151.34)
+Host is up (0.15s latency).
+rDNS record for 92.222.151.34: ip34.ip-92-222-151.eu
+Not shown: 993 filtered tcp ports (no-response)
+PORT      STATE  SERVICE               VERSION
+20/tcp    closed ftp-data
+21/tcp    open   ftp                   ProFTPD
+25/tcp    open   smtp                  Postfix smtpd
+53/tcp    open   domain                ISC BIND 9.18.41-1~deb12u1 (Debian Linux)
+| vulners: 
+|   cpe:/a:isc:bind:9.18.41-1~deb12u1: 
+|     	CNVD-2017-12537	7.5	https://vulners.com/cnvd/CNVD-2017-12537
+|_    	9ED8A03D-FE34-5F77-8C66-C03C9615AF07	7.5	https://vulners.com/gitee/9ED8A03D-FE34-5F77-8C66-C03C9615AF07	*EXPLOIT*
+80/tcp    open   http                  Apache httpd
+|_http-server-header: Apache
+443/tcp   open   ssl/http              Apache httpd
+|_http-server-header: Apache
+10000/tcp open   ssl/snet-sensor-mgmt?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 Document follows
+|     Date: Thu, 6 Nov 2025 13:18:13 GMT
+|     Server: MiniServ
+|     Connection: close
+|     Auth-type: auth-required=1
+|     Set-Cookie: redirect=1; path=/; secure; httpOnly
+|     Set-Cookie: testing=1; path=/; secure; httpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self'; child-src 'self'
+|     X-Content-Type-Options: nosniff
+|     X-no-links: 1
+|     Content-type: text/html; Charset=UTF-8
+|     <!DOCTYPE HTML>
+|     <html data-bgs="gainsboro" class="session_login">
+|     <head>
+|     <meta name="color-scheme" content="only light">
+|     <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { background-color: #1a1c20; } html[data-bgs="nightRider"] div[data-noscript] { color: #979ba080; } html[data-slider-fixed='1'] { margin-right: 0 !important; } body > div[data-noscript] ~ * { display: none !impor
+|   HTTPOptions: 
+|     HTTP/1.0 200 Document follows
+|     Date: Thu, 6 Nov 2025 13:18:14 GMT
+|     Server: MiniServ
+|     Connection: close
+|     Auth-type: auth-required=1
+|     Set-Cookie: redirect=1; path=/; secure; httpOnly
+|     Set-Cookie: testing=1; path=/; secure; httpOnly
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: script-src 'self' 'unsafe-inline' 'unsafe-eval'; frame-src 'self'; child-src 'self'
+|     X-Content-Type-Options: nosniff
+|     X-no-links: 1
+|     Content-type: text/html; Charset=UTF-8
+|     <!DOCTYPE HTML>
+|     <html data-bgs="gainsboro" class="session_login">
+|     <head>
+|     <meta name="color-scheme" content="only light">
+|_    <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { background-color: #1a1c20; } html[data-bgs="nightRider"] div[data-noscript] { color: #979ba080; } html[data-slider-fixed='1'] { margin-right: 0 !important; } body > div[data-noscript] ~ * { display: none !impor
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port10000-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CA016%P=x86_64-alpine-lin
+SF:ux-musl%r(GetRequest,15B7,"HTTP/1\.0\x20200\x20Document\x20follows\r\nD
+SF:ate:\x20Thu,\x206\x20Nov\x202025\x2013:18:13\x20GMT\r\nServer:\x20MiniS
+SF:erv\r\nConnection:\x20close\r\nAuth-type:\x20auth-required=1\r\nSet-Coo
+SF:kie:\x20redirect=1;\x20path=/;\x20secure;\x20httpOnly\r\nSet-Cookie:\x2
+SF:0testing=1;\x20path=/;\x20secure;\x20httpOnly\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe
+SF:-inline'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'sel
+SF:f'\r\nX-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nContent
+SF:-type:\x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20HTML>\n<html\
+SF:x20data-bgs=\"gainsboro\"\x20class=\"session_login\">\n<head>\n\x20<met
+SF:a\x20name=\"color-scheme\"\x20content=\"only\x20light\">\n\x20<noscript
+SF:>\x20<style>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20background-color
+SF::\x20#d6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{\x20backgroun
+SF:d-color:\x20#1a1c20;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20div\[da
+SF:ta-noscript\]\x20{\x20color:\x20#979ba080;\x20}\x20html\[data-slider-fi
+SF:xed='1'\]\x20{\x20margin-right:\x200\x20!important;\x20}\x20body\x20>\x
+SF:20div\[data-noscript\]\x20~\x20\*\x20{\x20display:\x20none\x20!impor")%
+SF:r(HTTPOptions,15B7,"HTTP/1\.0\x20200\x20Document\x20follows\r\nDate:\x2
+SF:0Thu,\x206\x20Nov\x202025\x2013:18:14\x20GMT\r\nServer:\x20MiniServ\r\n
+SF:Connection:\x20close\r\nAuth-type:\x20auth-required=1\r\nSet-Cookie:\x2
+SF:0redirect=1;\x20path=/;\x20secure;\x20httpOnly\r\nSet-Cookie:\x20testin
+SF:g=1;\x20path=/;\x20secure;\x20httpOnly\r\nX-Frame-Options:\x20SAMEORIGI
+SF:N\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe-inline
+SF:'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'self'\r\nX
+SF:-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nContent-type:\
+SF:x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20HTML>\n<html\x20data
+SF:-bgs=\"gainsboro\"\x20class=\"session_login\">\n<head>\n\x20<meta\x20na
+SF:me=\"color-scheme\"\x20content=\"only\x20light\">\n\x20<noscript>\x20<s
+SF:tyle>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20background-color:\x20#d
+SF:6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{\x20background-color
+SF::\x20#1a1c20;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20div\[data-nosc
+SF:ript\]\x20{\x20color:\x20#979ba080;\x20}\x20html\[data-slider-fixed='1'
+SF:\]\x20{\x20margin-right:\x200\x20!important;\x20}\x20body\x20>\x20div\[
+SF:data-noscript\]\x20~\x20\*\x20{\x20display:\x20none\x20!impor");
+Service Info: Host:  shd.minit-l.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 13:19:58 2025 -- 1 IP address (1 host up) scanned in 133.86 seconds
