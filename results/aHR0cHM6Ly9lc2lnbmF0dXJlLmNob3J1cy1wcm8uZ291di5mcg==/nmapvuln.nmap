@@ -1,0 +1,95 @@
+# Nmap 7.92 scan initiated Thu Nov  6 13:57:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln esignature.chorus-pro.gouv.fr
+Nmap scan report for esignature.chorus-pro.gouv.fr (185.24.185.59)
+Host is up (0.090s latency).
+Not shown: 977 filtered tcp ports (no-response)
+PORT      STATE  SERVICE           VERSION
+113/tcp   closed ident
+443/tcp   open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Date: Thu, 06 Nov 2025 14:05:49 GMT
+|     Content-Type: text/html
+|     Content-Length: 146
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Xss-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Content-Security-Policy: default-src 'none'; connect-src *; font-src 'self' data: *; frame-src * data: blob: ; img-src 'self' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline' *; style-src 'self' 'unsafe-inline' *; media-src 'self'
+|     X-Frame-Options: SAMEORIGIN
+|     Referrer-Policy: no-referrer
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+625/tcp   closed apple-xsrvr-admin
+1085/tcp  closed webobjects
+1580/tcp  closed tn-tl-r1
+1801/tcp  closed msmq
+2038/tcp  closed objectmanager
+3689/tcp  closed rendezvous
+4000/tcp  closed remoteanything
+5003/tcp  closed filemaker
+5566/tcp  closed westec-connect
+5633/tcp  closed beorl
+5810/tcp  closed unknown
+7625/tcp  closed unknown
+7777/tcp  closed cbt
+7937/tcp  closed nsrexecd
+10617/tcp closed unknown
+12265/tcp closed unknown
+16992/tcp closed amt-soap-http
+32768/tcp closed filenet-tms
+51103/tcp closed unknown
+54328/tcp closed unknown
+57797/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CAB3D%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2EA,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Th
+SF:u,\x2006\x20Nov\x202025\x2014:05:49\x20GMT\r\nContent-Type:\x20text/htm
+SF:l\r\nContent-Length:\x20146\r\nStrict-Transport-Security:\x20max-age=31
+SF:536000;\x20includeSubDomains\r\nX-Xss-Protection:\x201;\x20mode=block\r
+SF:\nX-Content-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20def
+SF:ault-src\x20'none';\x20connect-src\x20\*;\x20font-src\x20'self'\x20data
+SF::\x20\*;\x20frame-src\x20\*\x20data:\x20blob:\x20;\x20img-src\x20'self'
+SF:\x20data:;\x20script-src\x20'self'\x20'unsafe-eval'\x20'unsafe-inline'\
+SF:x20\*;\x20style-src\x20'self'\x20'unsafe-inline'\x20\*;\x20media-src\x2
+SF:0'self'\r\nX-Frame-Options:\x20SAMEORIGIN\r\nReferrer-Policy:\x20no-ref
+SF:errer\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-age=
+SF:31536000\r\n\r\n<html>\r\n<head><title>404\x20Not\x20Found</title></hea
+SF:d>\r\n<body>\r\n<center><h1>404\x20Not\x20Found</h1></center>\r\n<hr><c
+SF:enter>nginx</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,2EA,"HTT
+SF:P/1\.1\x20404\x20Not\x20Found\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x20
+SF:14:05:49\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20146
+SF:\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomain
+SF:s\r\nX-Xss-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x
+SF:20nosniff\r\nContent-Security-Policy:\x20default-src\x20'none';\x20conn
+SF:ect-src\x20\*;\x20font-src\x20'self'\x20data:\x20\*;\x20frame-src\x20\*
+SF:\x20data:\x20blob:\x20;\x20img-src\x20'self'\x20data:;\x20script-src\x2
+SF:0'self'\x20'unsafe-eval'\x20'unsafe-inline'\x20\*;\x20style-src\x20'sel
+SF:f'\x20'unsafe-inline'\x20\*;\x20media-src\x20'self'\r\nX-Frame-Options:
+SF:\x20SAMEORIGIN\r\nReferrer-Policy:\x20no-referrer\r\nConnection:\x20clo
+SF:se\r\nStrict-Transport-Security:\x20max-age=31536000\r\n\r\n<html>\r\n<
+SF:head><title>404\x20Not\x20Found</title></head>\r\n<body>\r\n<center><h1
+SF:>404\x20Not\x20Found</h1></center>\r\n<hr><center>nginx</center>\r\n</b
+SF:ody>\r\n</html>\r\n")%r(FourOhFourRequest,2EA,"HTTP/1\.1\x20404\x20Not\
+SF:x20Found\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2014:05:49\x20GMT\r\nCo
+SF:ntent-Type:\x20text/html\r\nContent-Length:\x20146\r\nStrict-Transport-
+SF:Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Xss-Protection
+SF::\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nContent-
+SF:Security-Policy:\x20default-src\x20'none';\x20connect-src\x20\*;\x20fon
+SF:t-src\x20'self'\x20data:\x20\*;\x20frame-src\x20\*\x20data:\x20blob:\x2
+SF:0;\x20img-src\x20'self'\x20data:;\x20script-src\x20'self'\x20'unsafe-ev
+SF:al'\x20'unsafe-inline'\x20\*;\x20style-src\x20'self'\x20'unsafe-inline'
+SF:\x20\*;\x20media-src\x20'self'\r\nX-Frame-Options:\x20SAMEORIGIN\r\nRef
+SF:errer-Policy:\x20no-referrer\r\nConnection:\x20close\r\nStrict-Transpor
+SF:t-Security:\x20max-age=31536000\r\n\r\n<html>\r\n<head><title>404\x20No
+SF:t\x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20Found<
+SF:/h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 14:07:33 2025 -- 1 IP address (1 host up) scanned in 598.09 seconds
