@@ -14,9 +14,9 @@ concurrency:
   group: report
 
 jobs:
-  website:
+  report:
     runs-on: ubuntu-latest
-    name: Website
+    name: JSON report
     steps:
       - name: Get triggering workflow inputs
         if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
