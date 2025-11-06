@@ -1,0 +1,108 @@
+# Nmap 7.92 scan initiated Thu Nov  6 19:59:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln honorabilite.social.gouv.fr
+Nmap scan report for honorabilite.social.gouv.fr (185.194.83.147)
+Host is up (0.15s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http?
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 19:59:37 GMT
+|     Content-Length: 226
+|     Content-Type: text/html; charset=iso-8859-1
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-sih-edito-prod.cegedim.cloud.cegedim.cloud-tcp80=!2AOQe6b+2DA42yUXIkI7F7SI9ajmilS9bwn97HP2y4h6s3uLDexzq8OKW3UdQQ9Y2QYEXMVUu6Vc24aFSE8cbKadz9k=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 19:59:36 GMT
+|     Content-Length: 226
+|     Content-Type: text/html; charset=iso-8859-1
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-sih-edito-prod.cegedim.cloud.cegedim.cloud-tcp80=!3S5uHFkBB5wS6xsXIkI7F7SI9ajmikCQb12P/3ebiaI7qgC9N/lGnDOxHL8aMNM3gL1PszCdzMWfHYXcg5eA5h+BnbU=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Thu, 06 Nov 2025 19:59:37 GMT
+|     Content-Length: 226
+|     Content-Type: text/html; charset=iso-8859-1
+|     Age: 0
+|     X-Cache: MISS
+|     X-Cache-Hits: 0
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-sih-edito-prod.cegedim.cloud.cegedim.cloud-tcp80=!uzA21PImpfBan7sXIkI7F7SI9ajmikA2aiXVIg/veTUMcVsheRiqUF4i7IyjBAEAL1F3htYJtJr8sc6XsdhpJvRCkZA=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CFE28%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2A6,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
+SF:Thu,\x2006\x20Nov\x202025\x2019:59:36\x20GMT\r\nContent-Length:\x20226\
+SF:r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nAge:\x200\r\nX-
+SF:Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nConnection:\x20close\r\nSet-Coo
+SF:kie:\x20BIGipServerpool-sih-edito-prod\.cegedim\.cloud\.cegedim\.cloud-
+SF:tcp80=!3S5uHFkBB5wS6xsXIkI7F7SI9ajmikCQb12P/3ebiaI7qgC9N/lGnDOxHL8aMNM3
+SF:gL1PszCdzMWfHYXcg5eA5h\+BnbU=;\x20path=/;\x20Httponly;\x20Secure\r\nStr
+SF:ict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\
+SF:n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1
+SF:>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20tha
+SF:t\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</b
+SF:ody></html>\n")%r(HTTPOptions,2A6,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nDate:\x20Thu,\x2006\x20Nov\x202025\x2019:59:37\x20GMT\r\nContent-Leng
+SF:th:\x20226\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nAge:
+SF:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nConnection:\x20close
+SF:\r\nSet-Cookie:\x20BIGipServerpool-sih-edito-prod\.cegedim\.cloud\.cege
+SF:dim\.cloud-tcp80=!uzA21PImpfBan7sXIkI7F7SI9ajmikA2aiXVIg/veTUMcVsheRiqU
+SF:F4i7IyjBAEAL1F3htYJtJr8sc6XsdhpJvRCkZA=;\x20path=/;\x20Httponly;\x20Sec
+SF:ure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDom
+SF:ains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\
+SF:.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><
+SF:body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20requ
+SF:est\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\
+SF:n</p>\n</body></html>\n")%r(FourOhFourRequest,2A6,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2019:59:37\x20GMT
+SF:\r\nContent-Length:\x20226\r\nContent-Type:\x20text/html;\x20charset=is
+SF:o-8859-1\r\nAge:\x200\r\nX-Cache:\x20MISS\r\nX-Cache-Hits:\x200\r\nConn
+SF:ection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-sih-edito-prod\.cege
+SF:dim\.cloud\.cegedim\.cloud-tcp80=!2AOQe6b\+2DA42yUXIkI7F7SI9ajmilS9bwn9
+SF:7HP2y4h6s3uLDexzq8OKW3UdQQ9Y2QYEXMVUu6Vc24aFSE8cbKadz9k=;\x20path=/;\x2
+SF:0Httponly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;
+SF:\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
+SF:DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request<
+SF:/title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20
+SF:sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20under
+SF:stand\.<br\x20/>\n</p>\n</body></html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 20:02:06 2025 -- 1 IP address (1 host up) scanned in 173.35 seconds
