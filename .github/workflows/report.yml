@@ -41,26 +41,26 @@ jobs:
           echo "Tool input is not 'all', skipping job."
           exit 0
 
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
-      - uses: Quentium-Forks/dashlord-actions/report@main
+      - name: Generate web report
+        uses: Quentium-Forks/dashlord-actions/report@main
         with:
           base-path: /dashlord
+          output: report_full.json
 
       - name: Simplify report.json
         run: |
-          mv report.json report_full.json
           # keep only url and summary
           jq '[.[] | {url, summary}]' report_full.json > report.json
+          du -sh report.json
 
-      - uses: EndBug/add-and-commit@v9
+      - name: Add and commit
+        uses: EndBug/add-and-commit@v9
         with:
           add: "report.json"
-          default_author: "github_actions"
+          default_author: github_actions
           message: "update: report.json"
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build
