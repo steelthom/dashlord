@@ -1,0 +1,108 @@
+# Nmap 7.92 scan initiated Thu Nov  6 07:08:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln diplomatie.gouv.fr
+Nmap scan report for diplomatie.gouv.fr (77.158.88.130)
+Host is up (0.12s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+|_http-server-header: BigIP
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 42680
+|     <!DOCTYPE HTML>
+|     <html>
+|     <head>
+|     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta charset="utf-8" />
+|     <title>Minist
+|     l'Europe et des Affaires 
+|     trang
+|     res</title>
+|     <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAIAAACTslUmAAALkElEQVR4Ae2bBVxbVxfAHw5B6+469w23FB3tNuo+d6/M3SgRtASn7u4+wd0pnvdeQhyLEE++E5allkn6BXifnN/FCbz/79xzj17Ec1HiUCxSWAoSmY5EZSNRmfDlE35fvPDIa0nzl1yZ6o2PmTfgMUXpManfcxp39Gz4cuiWlfD+j/fKk29leq8vCljOWxSrWLxSvXz9wLpXeze+KVz9qiB2Iy98GefJMPb8p1gT7/nPwHOIyZyx8QD5k7Mfp/16/GRFY+l1USum4Au1YoleodRrNPpBgU90SqVOItXwBaqmFvnPBZKs3T0ffsELW8qe/Rjh8GY8y4jZfOS7nSXny3GUL1G
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Thu, 06 Nov 2025 07:09:19 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Set-Cookie: fdiplo-prst=!4g5hTTklGEc83F3ZBnPHRjiRP6sUVY3iG5uzkkAbAnOXEdpOXD4c5HgQNObokO10VKLHyVXNGlZADw==; path=/; Httponly; Secure
+|     X-XSS-Protection: 1
+|     X-Content-Type-Options: nosniff
+|     Set-Cookie: TS01947c6a=0118540908b44bf22e10bceb9a401a727c8fd62a1b32557f26c8d150fb87b0d475cbfe52fc64f38386926e22ea41f8fa79dbd237c5e628eb3e84eba136222b79dc1fad4819; Path=/
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Thu, 06 Nov 2025 07:09:20 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     Set-Cookie: fdiplo-prst=!MLYMpn0m/KXK+BXZBnPHRjiRP6sUVacyeZskVnHYKMSHzHUISVsXqe8UABgkuNGcK94M86/r+6S/3Q==; path=/; Httponly; Secure
+|     X-XSS-Protection: 1
+|     X-Content-Type-Options: nosniff
+|     Set-Cookie: TS01947c6a=0118540908b01345d5311d86aac9a876cda5c0bfa65d0c6ef93064b39b1a9ee6c2975f3441773e4345ca3545feeed73100de4c4fa2502901d81b0404084bb462d4f392e3b1; Path=/
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|_    </body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690C499F%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,2C1,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Thu,\
+SF:x2006\x20Nov\x202025\x2007:09:19\x20GMT\r\nContent-Length:\x20199\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
+SF:\r\nSet-Cookie:\x20fdiplo-prst=!4g5hTTklGEc83F3ZBnPHRjiRP6sUVY3iG5uzkkA
+SF:bAnOXEdpOXD4c5HgQNObokO10VKLHyVXNGlZADw==;\x20path=/;\x20Httponly;\x20S
+SF:ecure\r\nX-XSS-Protection:\x201\r\nX-Content-Type-Options:\x20nosniff\r
+SF:\nSet-Cookie:\x20TS01947c6a=0118540908b44bf22e10bceb9a401a727c8fd62a1b3
+SF:2557f26c8d150fb87b0d475cbfe52fc64f38386926e22ea41f8fa79dbd237c5e628eb3e
+SF:84eba136222b79dc1fad4819;\x20Path=/\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\
+SF:x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20F
+SF:orbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x2
+SF:0have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body><
+SF:/html>\n")%r(HTTPOptions,2C1,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x2
+SF:0Thu,\x2006\x20Nov\x202025\x2007:09:20\x20GMT\r\nContent-Length:\x20199
+SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
+SF:8859-1\r\nSet-Cookie:\x20fdiplo-prst=!MLYMpn0m/KXK\+BXZBnPHRjiRP6sUVacy
+SF:eZskVnHYKMSHzHUISVsXqe8UABgkuNGcK94M86/r\+6S/3Q==;\x20path=/;\x20Httpon
+SF:ly;\x20Secure\r\nX-XSS-Protection:\x201\r\nX-Content-Type-Options:\x20n
+SF:osniff\r\nSet-Cookie:\x20TS01947c6a=0118540908b01345d5311d86aac9a876cda
+SF:5c0bfa65d0c6ef93064b39b1a9ee6c2975f3441773e4345ca3545feeed73100de4c4fa2
+SF:502901d81b0404084bb462d4f392e3b1;\x20Path=/\r\n\r\n<!DOCTYPE\x20HTML\x2
+SF:0PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>
+SF:403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20
+SF:don't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n
+SF:</body></html>\n")%r(FourOhFourRequest,80D2,"HTTP/1\.1\x20403\x20Forbid
+SF:den\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mod
+SF:e=block\r\nX-Content-Type-Options:\x20nosniff\r\nCache-Control:\x20no-c
+SF:ache\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=
+SF:utf-8\r\nPragma:\x20no-cache\r\nContent-Length:\x2042680\r\n\r\n<!DOCTY
+SF:PE\x20HTML>\r\n<html>\r\n<head>\r\n\t<meta\x20name=\"viewport\"\x20cont
+SF:ent=\"width=device-width,\x20initial-scale=1\.0\"\x20/><meta\x20charset
+SF:=\"utf-8\"\x20/>\r\n\t<title>Minist\xc3\xa8re\x20de\x20l'Europe\x20et\x
+SF:20des\x20Affaires\x20\xc3\xa9trang\xc3\xa8res</title>\r\n\t<link\x20rel
+SF:=\"shortcut\x20icon\"\x20href=\"data:image/x-icon;base64,iVBORw0KGgoAAA
+SF:ANSUhEUgAAAEoAAABKCAIAAACTslUmAAALkElEQVR4Ae2bBVxbVxfAHw5B6\+469w23FB3t
+SF:Nuo\+d6/M3SgRtASn7u4\+wd0pnvdeQhyLEE\+\+E5allkn6BXifnN/FCbz/79xzj17Ec1H
+SF:iUCxSWAoSmY5EZSNRmfDlE35fvPDIa0nzl1yZ6o2PmTfgMUXpManfcxp39Gz4cuiWlfD\+j
+SF:/fKk29leq8vCljOWxSrWLxSvXz9wLpXeze\+KVz9qiB2Iy98GefJMPb8p1gT7/nPwHOIyZy
+SF:x8QD5k7Mfp/16/GRFY\+l1USum4Au1YoleodRrNPpBgU90SqVOItXwBaqmFvnPBZKs3T0ff
+SF:sELW8qe/Rjh8GY8y4jZfOS7nSXny3GUL1G");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 07:11:36 2025 -- 1 IP address (1 host up) scanned in 161.11 seconds
