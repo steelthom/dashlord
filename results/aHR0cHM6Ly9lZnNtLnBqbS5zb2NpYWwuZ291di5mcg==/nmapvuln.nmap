@@ -1,0 +1,143 @@
+# Nmap 7.92 scan initiated Thu Nov  6 08:26:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln efsm.pjm.social.gouv.fr
+Nmap scan report for efsm.pjm.social.gouv.fr (185.194.82.76)
+Host is up (0.080s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
+|     Connection: close
+|_    Content-Length: 0
+113/tcp closed ident
+443/tcp open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 06 Nov 2025 08:26:27 GMT
+|     Upgrade: h2,h2c
+|     Connection: Upgrade, Keep-Alive
+|     Last-Modified: Fri, 18 Apr 2025 09:31:41 GMT
+|     Accept-Ranges: bytes
+|     Content-Length: 17384
+|     Vary: Accept-Encoding
+|     Keep-Alive: timeout=5, max=100
+|     Content-Type: text/html
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!m2bNdmE9JNJwOl0XIkI7F7SI9ajmip5F4g2oXq1g0KsOhXF9ByCgQrHxPgXXABJLEmHkmschkTBSxI7wDjMfv+dKMjpr; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html><html lang="fr"><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+|     <meta charset="utf-8">
+|     <title>e-FSM : Financement des services mandataires en ligne</title>
+|     <base href="/">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="icon" type="image/x-icon" href="favicon.ico">
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 06 Nov 2025 08:26:26 GMT
+|     Upgrade: h2,h2c
+|     Connection: Upgrade, Keep-Alive
+|     Last-Modified: Fri, 18 Apr 2025 09:31:41 GMT
+|     Accept-Ranges: bytes
+|     Content-Length: 17384
+|     Vary: Accept-Encoding
+|     Keep-Alive: timeout=5, max=100
+|     Content-Type: text/html
+|     Connection: close
+|     Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!yVuCZiGm+q8s1KwXIkI7F7SI9ajmiqDJSjeMw+7XpKHq/TAX/0SmEd5qbajP7A2oIyMxZWWPnbafOl8L9Q5vcjZ7Nidu; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html><html lang="fr"><head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+|     <meta charset="utf-8">
+|     <title>e-FSM : Financement des services mandataires en ligne</title>
+|     <base href="/">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="icon" type="image/x-icon" href="favicon.ico">
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 06 Nov 2025 08:26:27 GMT
+|     Allow: POST,OPTIONS,HEAD,GET
+|     Content-Length: 0
+|     Keep-Alive: timeout=5, max=99
+|     Connection: close
+|     Content-Type: text/html
+|     Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!bc0okZW35+dhfBsXIkI7F7SI9ajmitVXRdKtvflmYMjJMWfsNbed6n43dQoAs6ubX+yQrFvkPyykO96ed+NjmGQYRQJU; path=/; Httponly; Secure
+|_    Strict-Transport-Security: max-age=31536000; includeSubDomains
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690C5BAC%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
+SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
+SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
+SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
+SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690C5BB3%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,3958,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2006\
+SF:x20Nov\x202025\x2008:26:26\x20GMT\r\nUpgrade:\x20h2,h2c\r\nConnection:\
+SF:x20Upgrade,\x20Keep-Alive\r\nLast-Modified:\x20Fri,\x2018\x20Apr\x20202
+SF:5\x2009:31:41\x20GMT\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x201
+SF:7384\r\nVary:\x20Accept-Encoding\r\nKeep-Alive:\x20timeout=5,\x20max=10
+SF:0\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nSet-Cookie:\
+SF:x20BIGipServerpool-dgcs-man\.cegedim\.cloud-http=!yVuCZiGm\+q8s1KwXIkI7
+SF:F7SI9ajmiqDJSjeMw\+7XpKHq/TAX/0SmEd5qbajP7A2oIyMxZWWPnbafOl8L9Q5vcjZ7Ni
+SF:du;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20
+SF:max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20html><html\x
+SF:20lang=\"fr\"><head><link\x20rel=\"preconnect\"\x20href=\"https://fonts
+SF:\.gstatic\.com\"\x20crossorigin=\"\">\n\x20\x20\x20\x20<meta\x20charset
+SF:=\"utf-8\">\n\x20\x20\x20\x20<title>e-FSM\x20:\x20Financement\x20des\x2
+SF:0services\x20mandataires\x20en\x20ligne</title>\n\x20\x20\x20\x20<base\
+SF:x20href=\"/\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\
+SF:"width=device-width,\x20initial-scale=1\">\n\x20\x20\x20\x20<link\x20re
+SF:l=\"icon\"\x20type=\"image/x-icon\"\x20href=\"favicon\.ico\">\n")%r(HTT
+SF:POptions,1A5,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2006\x20Nov\x202
+SF:025\x2008:26:27\x20GMT\r\nAllow:\x20POST,OPTIONS,HEAD,GET\r\nContent-Le
+SF:ngth:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=99\r\nConnection:\x20clo
+SF:se\r\nContent-Type:\x20text/html\r\nSet-Cookie:\x20BIGipServerpool-dgcs
+SF:-man\.cegedim\.cloud-http=!bc0okZW35\+dhfBsXIkI7F7SI9ajmitVXRdKtvflmYMj
+SF:JMWfsNbed6n43dQoAs6ubX\+yQrFvkPyykO96ed\+NjmGQYRQJU;\x20path=/;\x20Http
+SF:only;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20i
+SF:ncludeSubDomains\r\n\r\n")%r(FourOhFourRequest,1D10,"HTTP/1\.1\x20200\x
+SF:20OK\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2008:26:27\x20GMT\r\nUpgrad
+SF:e:\x20h2,h2c\r\nConnection:\x20Upgrade,\x20Keep-Alive\r\nLast-Modified:
+SF:\x20Fri,\x2018\x20Apr\x202025\x2009:31:41\x20GMT\r\nAccept-Ranges:\x20b
+SF:ytes\r\nContent-Length:\x2017384\r\nVary:\x20Accept-Encoding\r\nKeep-Al
+SF:ive:\x20timeout=5,\x20max=100\r\nContent-Type:\x20text/html\r\nConnecti
+SF:on:\x20close\r\nSet-Cookie:\x20BIGipServerpool-dgcs-man\.cegedim\.cloud
+SF:-http=!m2bNdmE9JNJwOl0XIkI7F7SI9ajmip5F4g2oXq1g0KsOhXF9ByCgQrHxPgXXABJL
+SF:EmHkmschkTBSxI7wDjMfv\+dKMjpr;\x20path=/;\x20Httponly;\x20Secure\r\nStr
+SF:ict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r
+SF:\n<!DOCTYPE\x20html><html\x20lang=\"fr\"><head><link\x20rel=\"preconnec
+SF:t\"\x20href=\"https://fonts\.gstatic\.com\"\x20crossorigin=\"\">\n\x20\
+SF:x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<title>e-FSM\x2
+SF:0:\x20Financement\x20des\x20services\x20mandataires\x20en\x20ligne</tit
+SF:le>\n\x20\x20\x20\x20<base\x20href=\"/\">\n\x20\x20\x20\x20<meta\x20nam
+SF:e=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\">\n
+SF:\x20\x20\x20\x20<link\x20rel=\"icon\"\x20type=\"image/x-icon\"\x20href=
+SF:\"favicon\.ico\">\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  6 08:28:36 2025 -- 1 IP address (1 host up) scanned in 148.87 seconds
