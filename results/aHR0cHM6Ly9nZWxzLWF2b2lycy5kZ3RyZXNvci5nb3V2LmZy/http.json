@@ -1,0 +1,224 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 75,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "cache-control": "no-cache, no-store, must-revalidate",
+      "pragma": "no-cache",
+      "content-type": "text/html; charset=utf-8",
+      "expires": "-1",
+      "strict-transport-security": "max-age=31536000",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-xss-protection": "1; mode=block",
+      "x-frame-options": "Deny",
+      "x-download-options": "noopen",
+      "content-security-policy": "default-src 'self';script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com;style-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com;img-src 'self' data:;frame-src https://www.google.com;base-uri 'self';form-action 'self';frame-ancestors 'none'",
+      "set-cookie": [
+        "X-XSRF-TOKEN-COOKIE=CfDJ8EprJhS8gsRPnZF1mpHyNEAVVBXLbS2qlNZQttveOD_gofarFa4R6tZYrXT1YCAkTkVPoaXyW3dMy0yHZ_pygzvdVjN6jVpPJjxYqmKEBp_ozL3YKtT0f8cjs4xYcp4-sGvYjWLiSWFK3ALP37FpUV0; path=/; samesite=strict; httponly",
+        ".AspNetCore.Mvc.CookieTempDataProvider=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; samesite=lax; httponly",
+        "BIGipServerP-IIS_pool=1689888960.47873.0000; expires=Thu, 06-Nov-2025 20:20:15 GMT; path=/; Httponly; Secure",
+        "f5avraaaaaaaaaaaaaaaa_session_=IPCGFHKNNJONIPPCPPKDMGDMJFHCFKIKMNGGNBKABEMPGKJMECDCHBJODECEEFNFDJCDOMNLEOFEBHDPAPIABICLFKOFJNNMFGMDHGDILAHBKAPGKBMCCGAFKDKPIIOO; HttpOnly; secure;",
+        "f5_cspm=1234;;",
+        "TS0122a4ab=016e60d0e52a8982c333d7c8412d76d28260d793aa4ba346b549f27caa4dc5a8c5b8300d016e126a214b953255afd5695d3a72bff4f5953e38150addfda60cd1ce0736697843b9e2be08dbc4634dec5403d45ac49842a5034e8ca62f196682e0f16f78150d88f7b742dd60f3c9132e08a9844a51df8a6c1a146657ad44388899acec8539ad; Path=/; Domain=.gels-avoirs.dgtresor.gouv.fr",
+        "TSe7068a16029=083162354fab280053f80cd0fee142c1b1afc4caf619573341567701653f3ac90646fdd2e33abadbc7ffa2f879d10cc1; Max-Age=30; Path=/",
+        "TS9248c179027=083162354fab20003c65b02f56a40ecf9f188b40e9eef8dd911b12f816e284669008db9228f6dc9c08d11fef4711300090f68a3a0db7f84ff23ba73cba024413474a48f23846137a7972a4abd3791659468265304e03d12f711ca4373c154926; Path=/"
+      ],
+      "x-ua-compatible": "IE=Edge",
+      "date": "Thu, 06 Nov 2025 14:20:14 GMT",
+      "connection": "close",
+      "vary": "Accept-Encoding",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'self'"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-inline'",
+          "https://www.google.com",
+          "https://www.gstatic.com"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'",
+          "https://www.google.com",
+          "https://www.gstatic.com"
+        ],
+        "img-src": [
+          "'self'",
+          "data:"
+        ],
+        "frame-src": [
+          "https://www.google.com"
+        ],
+        "base-uri": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "frame-ancestors": [
+          "'none'"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": false,
+        "insecureFormAction": false,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "X-XSRF-TOKEN-COOKIE": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "strict"
+        },
+        ".AspNetCore.Mvc.CookieTempDataProvider": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "expires": "1970-01-01T00:00:00.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
+        },
+        "BIGipServerP-IIS_pool": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "expires": "2025-11-06T20:20:15.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "f5avraaaaaaaaaaaaaaaa_session_": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "f5_cspm": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "TS0122a4ab": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "TSe7068a16029": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "max-age": 30,
+          "path": "/",
+          "port": null
+        },
+        "TS9248c179027": {
+          "domain": "gels-avoirs.dgtresor.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-not-needed-no-http",
+      "scoreModifier": 0,
+      "destination": null,
+      "redirects": true,
+      "route": [],
+      "statusCode": null
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
+      "includeSubDomains": false,
+      "maxAge": 31536000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": "Deny"
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
