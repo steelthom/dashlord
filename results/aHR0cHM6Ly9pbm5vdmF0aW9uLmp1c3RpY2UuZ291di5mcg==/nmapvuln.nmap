@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Nov  4 02:46:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln innovation.justice.gouv.fr
+# Nmap 7.92 scan initiated Fri Nov  7 13:47:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln innovation.justice.gouv.fr
 Nmap scan report for innovation.justice.gouv.fr (93.187.45.149)
-Host is up (0.086s latency).
+Host is up (0.13s latency).
 rDNS record for 93.187.45.149: ip-93.187.45.149.rev.cloud-temple.com
 Not shown: 986 closed tcp ports (reset)
 PORT     STATE    SERVICE       VERSION
@@ -11,7 +11,7 @@ PORT     STATE    SERVICE       VERSION
 |     Cache-Control: no-cache
 |     Connection: close
 |     Content-Length: 6160
-|     Sozu-Id: 01K96C4WM4C1PM5WVFQP0K7QQS
+|     Sozu-Id: 01K9F94A64JFGHQV6N2HDVV6G9
 |     <!doctype html>
 |     <html lang=en-US>
 |     <head>
@@ -24,7 +24,7 @@ PORT     STATE    SERVICE       VERSION
 |     Cache-Control: no-cache
 |     Connection: close
 |     Content-Length: 6164
-|     Sozu-Id: 01K96C52N4XYCV87ZKSAQSNHDM
+|     Sozu-Id: 01K9F94G9NR46VHPG2MMHWDWG1
 |     <!doctype html>
 |     <html lang=en-US>
 |     <head>
@@ -38,7 +38,22 @@ PORT     STATE    SERVICE       VERSION
 1081/tcp open     pvuniwien?
 5002/tcp open     ssh           FortiSSH (protocol 2.0)
 5120/tcp open     tcpwrapped
-5221/tcp open     smtp          Postfix smtpd
+5221/tcp open     smtp
+| fingerprint-strings: 
+|   GenericLines, GetRequest: 
+|     220 mailhog.example ESMTP MailHog
+|     Unrecognised command
+|     Unrecognised command
+|   Hello: 
+|     220 mailhog.example ESMTP MailHog
+|     250-Hello 
+|     250-PIPELINING
+|     AUTH PLAIN
+|   Help: 
+|     220 mailhog.example ESMTP MailHog
+|     Unrecognised command
+|   NULL: 
+|_    220 mailhog.example ESMTP MailHog
 5357/tcp open     ssh           FortiSSH (protocol 2.0)
 5666/tcp open     tcpwrapped
 5800/tcp open     amqp          RabbitMQ 3.12.14 (0-9)
@@ -81,51 +96,56 @@ PORT     STATE    SERVICE       VERSION
 |_    220 4c1617ac-677e-4c8c-9fc7-bf3b8f46cd07 Mailpit ESMTP Service ready
 8200/tcp open     ssl/trivnet1?
 | fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help: 
+|   DNSStatusRequestTCP, Help: 
 |     HTTP/1.1 400 Bad Request
 |     content-length: 0
 |     connection: close
-|     date: Tue, 04 Nov 2025 02:46:59 GMT
+|     date: Fri, 07 Nov 2025 13:47:27 GMT
+|   DNSVersionBindReqTCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     content-length: 0
+|     connection: close
+|     date: Fri, 07 Nov 2025 13:47:26 GMT
 |   GenericLines: 
 |     HTTP/1.1 408 Request Timeout
 |     content-length: 0
 |     connection: close
-|     date: Tue, 04 Nov 2025 02:46:57 GMT
+|     date: Fri, 07 Nov 2025 13:47:23 GMT
 |   GetRequest: 
 |     HTTP/1.0 404 Not Found
 |     content-length: 0
-|     date: Tue, 04 Nov 2025 02:46:57 GMT
+|     date: Fri, 07 Nov 2025 13:47:24 GMT
 |   HTTPOptions: 
 |     HTTP/1.0 404 Not Found
 |     content-length: 0
-|     date: Tue, 04 Nov 2025 02:46:58 GMT
-|   Kerberos: 
+|     date: Fri, 07 Nov 2025 13:47:25 GMT
+|   Kerberos, TLSSessionReq: 
 |     HTTP/1.1 400 Bad Request
 |     content-length: 0
 |     connection: close
-|     date: Tue, 04 Nov 2025 02:47:01 GMT
+|     date: Fri, 07 Nov 2025 13:47:29 GMT
 |   NULL: 
 |     HTTP/1.1 408 Request Timeout
 |     content-length: 0
 |     connection: close
-|     date: Tue, 04 Nov 2025 02:46:52 GMT
-|   RPCCheck, RTSPRequest: 
+|     date: Fri, 07 Nov 2025 13:47:18 GMT
+|   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
 |     content-length: 0
 |     connection: close
-|     date: Tue, 04 Nov 2025 02:46:58 GMT
-|   SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     date: Fri, 07 Nov 2025 13:47:25 GMT
+|   SSLSessionReq, TerminalServerCookie: 
 |     HTTP/1.1 400 Bad Request
 |     content-length: 0
 |     connection: close
-|_    date: Tue, 04 Nov 2025 02:47:00 GMT
+|_    date: Fri, 07 Nov 2025 13:47:28 GMT
 9999/tcp filtered abyss
-3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=69096919%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690DF862%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,1893,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\
 SF:x20no-cache\r\nConnection:\x20close\r\nContent-Length:\x206160\r\nSozu-
-SF:Id:\x2001K96C4WM4C1PM5WVFQP0K7QQS\r\n\r\n<!doctype\x20html>\r\n<html\x2
+SF:Id:\x2001K9F94A64JFGHQV6N2HDVV6G9\r\n\r\n<!doctype\x20html>\r\n<html\x2
 SF:0lang=en-US>\r\n\x20\x20<head>\r\n\x20\x20\x20\x20<meta\x20charset=utf-
 SF:8>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=dev
 SF:ice-width\"\x20/>\r\n\x20\x20\x20\x20<title>400\x20Bad\x20Request</titl
@@ -138,9 +158,9 @@ SF:-code:#3a3871;--border-color:rgba\(34,\x2036,\x2038,\x200\.15\);--logo-
 SF:color:#aaa}\.content,body{flex-direction:column;display:flex}body,html{
 SF:scroll-behavior:smooth;height:100%;-webkit-font-smoothing:antialiased;f
 SF:ont-family:var\(--font-family\);background-color:var\(--bg-color\)}butt
-SF:on#copy-btn,code{")%r(HTTPOptions,1650,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:on#copy-btn,code{")%r(HTTPOptions,1897,"HTTP/1\.1\x20400\x20Bad\x20Requ
 SF:est\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Le
-SF:ngth:\x206164\r\nSozu-Id:\x2001K96C52N4XYCV87ZKSAQSNHDM\r\n\r\n<!doctyp
+SF:ngth:\x206164\r\nSozu-Id:\x2001K9F94G9NR46VHPG2MMHWDWG1\r\n\r\n<!doctyp
 SF:e\x20html>\r\n<html\x20lang=en-US>\r\n\x20\x20<head>\r\n\x20\x20\x20\x2
 SF:0<meta\x20charset=utf-8>\r\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\
 SF:x20content=\"width=device-width\"\x20/>\r\n\x20\x20\x20\x20<title>400\x
@@ -155,7 +175,17 @@ SF:isplay:flex}body,html{scroll-behavior:smooth;height:100%;-webkit-font-s
 SF:moothing:antialiased;font-family:var\(--font-family\);background-color:
 SF:var\(--bg-color\)}button#copy-btn,code{");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5961-TCP:V=7.92%I=7%D=11/4%Time=69096919%P=x86_64-alpine-linux-musl
+SF-Port5221-TCP:V=7.92%I=7%D=11/7%Time=690DF862%P=x86_64-alpine-linux-musl
+SF:%r(NULL,23,"220\x20mailhog\.example\x20ESMTP\x20MailHog\r\n")%r(Generic
+SF:Lines,57,"220\x20mailhog\.example\x20ESMTP\x20MailHog\r\n500\x20Unrecog
+SF:nised\x20command\r\n500\x20Unrecognised\x20command\r\n")%r(GetRequest,5
+SF:7,"220\x20mailhog\.example\x20ESMTP\x20MailHog\r\n500\x20Unrecognised\x
+SF:20command\r\n500\x20Unrecognised\x20command\r\n")%r(Hello,4F,"220\x20ma
+SF:ilhog\.example\x20ESMTP\x20MailHog\r\n250-Hello\x20\r\n250-PIPELINING\r
+SF:\n250\x20AUTH\x20PLAIN\r\n")%r(Help,3D,"220\x20mailhog\.example\x20ESMT
+SF:P\x20MailHog\r\n500\x20Unrecognised\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5961-TCP:V=7.92%I=7%D=11/7%Time=690DF862%P=x86_64-alpine-linux-musl
 SF:%r(NULL,46,"220\x204c1617ac-677e-4c8c-9fc7-bf3b8f46cd07\x20Mailpit\x20E
 SF:SMTP\x20Service\x20ready\r\n")%r(GenericLines,A2,"220\x204c1617ac-677e-
 SF:4c8c-9fc7-bf3b8f46cd07\x20Mailpit\x20ESMTP\x20Service\x20ready\r\n500\x
@@ -171,39 +201,39 @@ SF:0\x20SMTPUTF8\r\n")%r(Help,69,"220\x204c1617ac-677e-4c8c-9fc7-bf3b8f46c
 SF:d07\x20Mailpit\x20ESMTP\x20Service\x20ready\r\n502\x205\.5\.1\x20Comman
 SF:d\x20not\x20implemented\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port8200-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=6909691C%P=x86_64-alpine-linu
+SF-Port8200-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690DF867%P=x86_64-alpine-linu
 SF:x-musl%r(NULL,6B,"HTTP/1\.1\x20408\x20Request\x20Timeout\r\ncontent-len
-SF:gth:\x200\r\nconnection:\x20close\r\ndate:\x20Tue,\x2004\x20Nov\x202025
-SF:\x2002:46:52\x20GMT\r\n\r\n")%r(GenericLines,6B,"HTTP/1\.1\x20408\x20Re
+SF:gth:\x200\r\nconnection:\x20close\r\ndate:\x20Fri,\x2007\x20Nov\x202025
+SF:\x2013:47:18\x20GMT\r\n\r\n")%r(GenericLines,6B,"HTTP/1\.1\x20408\x20Re
 SF:quest\x20Timeout\r\ncontent-length:\x200\r\nconnection:\x20close\r\ndat
-SF:e:\x20Tue,\x2004\x20Nov\x202025\x2002:46:57\x20GMT\r\n\r\n")%r(GetReque
+SF:e:\x20Fri,\x2007\x20Nov\x202025\x2013:47:23\x20GMT\r\n\r\n")%r(GetReque
 SF:st,52,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-length:\x200\r\ndate
-SF::\x20Tue,\x2004\x20Nov\x202025\x2002:46:57\x20GMT\r\n\r\n")%r(HTTPOptio
+SF::\x20Fri,\x2007\x20Nov\x202025\x2013:47:24\x20GMT\r\n\r\n")%r(HTTPOptio
 SF:ns,52,"HTTP/1\.0\x20404\x20Not\x20Found\r\ncontent-length:\x200\r\ndate
-SF::\x20Tue,\x2004\x20Nov\x202025\x2002:46:58\x20GMT\r\n\r\n")%r(RTSPReque
+SF::\x20Fri,\x2007\x20Nov\x202025\x2013:47:25\x20GMT\r\n\r\n")%r(RTSPReque
 SF:st,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x200\r\nco
-SF:nnection:\x20close\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2002:46:58\x2
+SF:nnection:\x20close\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x2013:47:25\x2
 SF:0GMT\r\n\r\n")%r(RPCCheck,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncon
-SF:tent-length:\x200\r\nconnection:\x20close\r\ndate:\x20Tue,\x2004\x20Nov
-SF:\x202025\x2002:46:58\x20GMT\r\n\r\n")%r(DNSVersionBindReqTCP,67,"HTTP/1
+SF:tent-length:\x200\r\nconnection:\x20close\r\ndate:\x20Fri,\x2007\x20Nov
+SF:\x202025\x2013:47:26\x20GMT\r\n\r\n")%r(DNSVersionBindReqTCP,67,"HTTP/1
 SF:\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x200\r\nconnection:\x20
-SF:close\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2002:46:59\x20GMT\r\n\r\n"
+SF:close\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x2013:47:26\x20GMT\r\n\r\n"
 SF:)%r(DNSStatusRequestTCP,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nconte
-SF:nt-length:\x200\r\nconnection:\x20close\r\ndate:\x20Tue,\x2004\x20Nov\x
-SF:202025\x2002:46:59\x20GMT\r\n\r\n")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\
+SF:nt-length:\x200\r\nconnection:\x20close\r\ndate:\x20Fri,\x2007\x20Nov\x
+SF:202025\x2013:47:27\x20GMT\r\n\r\n")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\
 SF:x20Request\r\ncontent-length:\x200\r\nconnection:\x20close\r\ndate:\x20
-SF:Tue,\x2004\x20Nov\x202025\x2002:46:59\x20GMT\r\n\r\n")%r(SSLSessionReq,
+SF:Fri,\x2007\x20Nov\x202025\x2013:47:27\x20GMT\r\n\r\n")%r(SSLSessionReq,
 SF:67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x200\r\nconne
-SF:ction:\x20close\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2002:47:00\x20GM
+SF:ction:\x20close\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x2013:47:28\x20GM
 SF:T\r\n\r\n")%r(TerminalServerCookie,67,"HTTP/1\.1\x20400\x20Bad\x20Reque
-SF:st\r\ncontent-length:\x200\r\nconnection:\x20close\r\ndate:\x20Tue,\x20
-SF:04\x20Nov\x202025\x2002:47:00\x20GMT\r\n\r\n")%r(TLSSessionReq,67,"HTTP
+SF:st\r\ncontent-length:\x200\r\nconnection:\x20close\r\ndate:\x20Fri,\x20
+SF:07\x20Nov\x202025\x2013:47:28\x20GMT\r\n\r\n")%r(TLSSessionReq,67,"HTTP
 SF:/1\.1\x20400\x20Bad\x20Request\r\ncontent-length:\x200\r\nconnection:\x
-SF:20close\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2002:47:00\x20GMT\r\n\r\
+SF:20close\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x2013:47:29\x20GMT\r\n\r\
 SF:n")%r(Kerberos,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-length
-SF::\x200\r\nconnection:\x20close\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2
-SF:002:47:01\x20GMT\r\n\r\n");
-Service Info: Host: mailhog.example; CPE: cpe:/o:fortinet:fortios
+SF::\x200\r\nconnection:\x20close\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x2
+SF:013:47:29\x20GMT\r\n\r\n");
+Service Info: CPE: cpe:/o:fortinet:fortios
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 02:47:16 2025 -- 1 IP address (1 host up) scanned in 37.71 seconds
+# Nmap done at Fri Nov  7 13:47:43 2025 -- 1 IP address (1 host up) scanned in 37.92 seconds

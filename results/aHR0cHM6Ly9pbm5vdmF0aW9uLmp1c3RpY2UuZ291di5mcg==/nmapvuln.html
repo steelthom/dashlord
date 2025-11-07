@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln innovation.justice.gouv.fr</pre>
-<p class="lead">Tue Nov  4 02:46:39 2025 – Tue Nov  4 02:47:16 2025<br>1 hosts scanned.
+<p class="lead">Fri Nov  7 13:47:05 2025 – Fri Nov  7 13:47:43 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -127,7 +127,7 @@
     Cache-Control: no-cache
     Connection: close
     Content-Length: 6160
-    Sozu-Id: 01K96C4WM4C1PM5WVFQP0K7QQS
+    Sozu-Id: 01K9F94A64JFGHQV6N2HDVV6G9
     &lt;!doctype html&gt;
     &lt;html lang=en-US&gt;
     &lt;head&gt;
@@ -140,7 +140,7 @@
     Cache-Control: no-cache
     Connection: close
     Content-Length: 6164
-    Sozu-Id: 01K96C52N4XYCV87ZKSAQSNHDM
+    Sozu-Id: 01K9F94G9NR46VHPG2MMHWDWG1
     &lt;!doctype html&gt;
     &lt;html lang=en-US&gt;
     &lt;head&gt;
@@ -207,11 +207,28 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">smtp</td>
-<td title="Product">Postfix smtpd</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:postfix:postfix">cpe:/a:postfix:postfix</a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GenericLines, GetRequest: 
+    220 mailhog.example ESMTP MailHog
+    Unrecognised command
+    Unrecognised command
+  Hello: 
+    220 mailhog.example ESMTP MailHog
+    250-Hello 
+    250-PIPELINING
+    AUTH PLAIN
+  Help: 
+    220 mailhog.example ESMTP MailHog
+    Unrecognised command
+  NULL: 
+    220 mailhog.example ESMTP MailHog</pre>
+</td></tr>
 <tr class="success">
 <td title="Port">5357</td>
 <td title="Protocol">tcp</td>
@@ -314,44 +331,49 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help: 
+  DNSStatusRequestTCP, Help: 
     HTTP/1.1 400 Bad Request
     content-length: 0
     connection: close
-    date: Tue, 04 Nov 2025 02:46:59 GMT
+    date: Fri, 07 Nov 2025 13:47:27 GMT
+  DNSVersionBindReqTCP, RPCCheck: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    connection: close
+    date: Fri, 07 Nov 2025 13:47:26 GMT
   GenericLines: 
     HTTP/1.1 408 Request Timeout
     content-length: 0
     connection: close
-    date: Tue, 04 Nov 2025 02:46:57 GMT
+    date: Fri, 07 Nov 2025 13:47:23 GMT
   GetRequest: 
     HTTP/1.0 404 Not Found
     content-length: 0
-    date: Tue, 04 Nov 2025 02:46:57 GMT
+    date: Fri, 07 Nov 2025 13:47:24 GMT
   HTTPOptions: 
     HTTP/1.0 404 Not Found
     content-length: 0
-    date: Tue, 04 Nov 2025 02:46:58 GMT
-  Kerberos: 
+    date: Fri, 07 Nov 2025 13:47:25 GMT
+  Kerberos, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
     connection: close
-    date: Tue, 04 Nov 2025 02:47:01 GMT
+    date: Fri, 07 Nov 2025 13:47:29 GMT
   NULL: 
     HTTP/1.1 408 Request Timeout
     content-length: 0
     connection: close
-    date: Tue, 04 Nov 2025 02:46:52 GMT
-  RPCCheck, RTSPRequest: 
+    date: Fri, 07 Nov 2025 13:47:18 GMT
+  RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
     connection: close
-    date: Tue, 04 Nov 2025 02:46:58 GMT
-  SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+    date: Fri, 07 Nov 2025 13:47:25 GMT
+  SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
     connection: close
-    date: Tue, 04 Nov 2025 02:47:00 GMT</pre>
+    date: Fri, 07 Nov 2025 13:47:28 GMT</pre>
 </td></tr>
 <tr class="warning">
 <td>9999</td>
@@ -444,9 +466,9 @@
 <td>5221</td>
 <td>tcp</td>
 <td>smtp</td>
-<td>Postfix smtpd</td>
 <td></td>
-<td>cpe:/a:postfix:postfix</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
