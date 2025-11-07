@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Nov  4 04:32:34 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrance.si
+# Nmap 7.92 scan initiated Fri Nov  7 19:27:15 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrance.si
 Nmap scan report for institutfrance.si (212.44.112.50)
-Host is up (0.10s latency).
+Host is up (0.12s latency).
 rDNS record for 212.44.112.50: cp-18.controlpanel.si
 Not shown: 979 filtered tcp ports (no-response)
 PORT      STATE  SERVICE    VERSION
@@ -111,7 +111,7 @@ PORT      STATE  SERVICE    VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     date: Tue, 04 Nov 2025 04:32:45 GMT
+|     date: Fri, 07 Nov 2025 19:27:28 GMT
 |     server: Apache
 |     last-modified: Tue, 05 Aug 2025 23:18:53 GMT
 |     accept-ranges: bytes
@@ -125,9 +125,9 @@ PORT      STATE  SERVICE    VERSION
 |     <html><head><META HTTP-EQUIV="Cache-control" CONTENT="no-cache"><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Tue, 04 Nov 2025 04:32:46 GMT
+|     date: Fri, 07 Nov 2025 19:27:29 GMT
 |     server: Apache
-|     allow: GET,POST,OPTIONS,HEAD
+|     allow: OPTIONS,HEAD,GET,POST
 |     cache-control: no-cache, no-store, must-revalidate
 |     pragma: no-cache
 |     expires: 0
@@ -137,7 +137,7 @@ PORT      STATE  SERVICE    VERSION
 |     connection: close
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     date: Tue, 04 Nov 2025 04:32:46 GMT
+|     date: Fri, 07 Nov 2025 19:27:29 GMT
 |     server: Apache
 |     accept-ranges: bytes
 |     cache-control: no-cache, no-store, must-revalidate
@@ -173,7 +173,7 @@ PORT      STATE  SERVICE    VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Tue, 04 Nov 2025 04:32:53 GMT
+|     date: Fri, 07 Nov 2025 19:27:36 GMT
 |     server: Apache
 |     content-length: 315
 |     content-type: text/html; charset=iso-8859-1
@@ -191,7 +191,7 @@ PORT      STATE  SERVICE    VERSION
 |     </body></html>
 |   GetRequest: 
 |     HTTP/1.1 403 Forbidden
-|     date: Tue, 04 Nov 2025 04:32:52 GMT
+|     date: Fri, 07 Nov 2025 19:27:35 GMT
 |     server: Apache
 |     content-length: 318
 |     content-type: text/html; charset=iso-8859-1
@@ -208,9 +208,9 @@ PORT      STATE  SERVICE    VERSION
 |     </body></html>
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     date: Tue, 04 Nov 2025 04:32:52 GMT
+|     date: Fri, 07 Nov 2025 19:27:35 GMT
 |     server: Apache
-|     allow: GET,POST,OPTIONS,HEAD
+|     allow: OPTIONS,HEAD,GET,POST
 |     content-length: 0
 |     content-type: httpd/unix-directory
 |     set-cookie: PH_HPXY_CHECK=s1; path=/; HttpOnly; Secure; SameSite=Strict
@@ -228,7 +228,6 @@ PORT      STATE  SERVICE    VERSION
 | http-server-header: 
 |   Apache
 |_  openresty/1.27.1.1
-|_http-trane-info: Problem with XML parsing of /evox/about
 465/tcp   open   ssl/smtp   Exim smtpd 4.98.2
 | vulners: 
 |   cpe:/a:exim:exim:4.98.2: 
@@ -447,9 +446,9 @@ PORT      STATE  SERVICE    VERSION
 50006/tcp closed unknown
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690981ED%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,1F2,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Tue,\x2004\x20Nov\x
-SF:202025\x2004:32:45\x20GMT\r\nserver:\x20Apache\r\nlast-modified:\x20Tue
+SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690E4820%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1F2,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Fri,\x2007\x20Nov\x
+SF:202025\x2019:27:28\x20GMT\r\nserver:\x20Apache\r\nlast-modified:\x20Tue
 SF:,\x2005\x20Aug\x202025\x2023:18:53\x20GMT\r\naccept-ranges:\x20bytes\r\
 SF:ncontent-length:\x20163\r\ncache-control:\x20no-cache,\x20no-store,\x20
 SF:must-revalidate\r\npragma:\x20no-cache\r\nexpires:\x200\r\ncontent-type
@@ -457,14 +456,14 @@ SF::\x20text/html\r\nset-cookie:\x20PH_HPXY_CHECK=s1;\x20path=/;\x20HttpOn
 SF:ly\r\nconnection:\x20close\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"Cac
 SF:he-control\"\x20CONTENT=\"no-cache\"><META\x20HTTP-EQUIV=\"refresh\"\x2
 SF:0CONTENT=\"0;URL=/cgi-sys/defaultwebpage\.cgi\"></head><body></body></h
-SF:tml>\n")%r(HTTPOptions,127,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Tue,\x20
-SF:04\x20Nov\x202025\x2004:32:46\x20GMT\r\nserver:\x20Apache\r\nallow:\x20
-SF:GET,POST,OPTIONS,HEAD\r\ncache-control:\x20no-cache,\x20no-store,\x20mu
+SF:tml>\n")%r(HTTPOptions,127,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Fri,\x20
+SF:07\x20Nov\x202025\x2019:27:29\x20GMT\r\nserver:\x20Apache\r\nallow:\x20
+SF:OPTIONS,HEAD,GET,POST\r\ncache-control:\x20no-cache,\x20no-store,\x20mu
 SF:st-revalidate\r\npragma:\x20no-cache\r\nexpires:\x200\r\ncontent-length
 SF::\x200\r\ncontent-type:\x20text/html\r\nset-cookie:\x20PH_HPXY_CHECK=s1
 SF:;\x20path=/;\x20HttpOnly\r\nconnection:\x20close\r\n\r\n")%r(RTSPReques
-SF:t,1650,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Tue,\x2004\x20No
-SF:v\x202025\x2004:32:46\x20GMT\r\nserver:\x20Apache\r\naccept-ranges:\x20
+SF:t,1650,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Fri,\x2007\x20No
+SF:v\x202025\x2019:27:29\x20GMT\r\nserver:\x20Apache\r\naccept-ranges:\x20
 SF:bytes\r\ncache-control:\x20no-cache,\x20no-store,\x20must-revalidate\r\
 SF:npragma:\x20no-cache\r\nexpires:\x200\r\ncontent-type:\x20text/html\r\n
 SF:set-cookie:\x20PH_HPXY_CHECK=s1;\x20path=/;\x20HttpOnly\r\nconnection:\
@@ -485,9 +484,9 @@ SF:x20\x20\x20background-color:\x20#ffffff;\n\x20\x20\x20\x20\x20\x20\x20\
 SF:x20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x20\x20\x20\x20\x20\x20\x20
 SF:\x20\x20\x20\x20padding:\x20");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690981F4%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,22B,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Tue,\
-SF:x2004\x20Nov\x202025\x2004:32:52\x20GMT\r\nserver:\x20Apache\r\ncontent
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690E4827%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,22B,"HTTP/1\.1\x20403\x20Forbidden\r\ndate:\x20Fri,\
+SF:x2007\x20Nov\x202025\x2019:27:35\x20GMT\r\nserver:\x20Apache\r\ncontent
 SF:-length:\x20318\r\ncontent-type:\x20text/html;\x20charset=iso-8859-1\r\
 SF:nset-cookie:\x20PH_HPXY_CHECK=s1;\x20path=/;\x20HttpOnly;\x20Secure;\x2
 SF:0SameSite=Strict\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PU
@@ -497,13 +496,13 @@ SF:'t\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n<p>
 SF:Additionally,\x20a\x20403\x20Forbidden\nerror\x20was\x20encountered\x20
 SF:while\x20trying\x20to\x20use\x20an\x20ErrorDocument\x20to\x20handle\x20
 SF:the\x20request\.</p>\n</body></html>\n")%r(HTTPOptions,111,"HTTP/1\.1\x
-SF:20200\x20OK\r\ndate:\x20Tue,\x2004\x20Nov\x202025\x2004:32:52\x20GMT\r\
-SF:nserver:\x20Apache\r\nallow:\x20GET,POST,OPTIONS,HEAD\r\ncontent-length
+SF:20200\x20OK\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x2019:27:35\x20GMT\r\
+SF:nserver:\x20Apache\r\nallow:\x20OPTIONS,HEAD,GET,POST\r\ncontent-length
 SF::\x200\r\ncontent-type:\x20httpd/unix-directory\r\nset-cookie:\x20PH_HP
 SF:XY_CHECK=s1;\x20path=/;\x20HttpOnly;\x20Secure;\x20SameSite=Strict\r\nc
 SF:ache-control:\x20private\r\nconnection:\x20close\r\n\r\n")%r(FourOhFour
-SF:Request,240,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Tue,\x2004\x2
-SF:0Nov\x202025\x2004:32:53\x20GMT\r\nserver:\x20Apache\r\ncontent-length:
+SF:Request,240,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Fri,\x2007\x2
+SF:0Nov\x202025\x2019:27:36\x20GMT\r\nserver:\x20Apache\r\ncontent-length:
 SF:\x20315\r\ncontent-type:\x20text/html;\x20charset=iso-8859-1\r\nset-coo
 SF:kie:\x20PH_HPXY_CHECK=s1;\x20path=/;\x20HttpOnly;\x20Secure;\x20SameSit
 SF:e=Strict\r\ncache-control:\x20private\r\nconnection:\x20close\r\n\r\n<!
@@ -520,4 +519,4 @@ SF:nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\
 SF:n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 04:35:32 2025 -- 1 IP address (1 host up) scanned in 178.06 seconds
+# Nmap done at Fri Nov  7 19:30:17 2025 -- 1 IP address (1 host up) scanned in 181.44 seconds
