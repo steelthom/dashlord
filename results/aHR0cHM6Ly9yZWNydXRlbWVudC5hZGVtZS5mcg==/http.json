@@ -1,0 +1,181 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "B",
+    "error": null,
+    "score": 75,
+    "statusCode": 200,
+    "testsFailed": 2,
+    "testsPassed": 8,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "cache-control": "no-cache, no-store",
+      "pragma": "no-cache",
+      "content-type": "text/html; charset=utf-8",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "strict-transport-security": "max-age=31536000",
+      "traceparent": "00-cbe249a40883c0925771e44f878bb2f3-767738f661f3e334-01",
+      "tracestate": "d4240e8f-a7623821@dt=fw4;7;3d83bb02;22b671;2;0;0;146;9cd6;2h01;3h3d83bb02;4h22b671;5h01;7hd69fb1b4410f6146",
+      "p3p": "CP=CAO PSA OUR",
+      "x-route-name": "/Pages/General/accueil.aspx",
+      "content-security-policy": "frame-ancestors https://ademe.talent-soft.com https://ademe-hr.talent-soft.com;",
+      "set-cookie": [
+        "ASP.NET_SessionId=ibdizj0i0hua1yjs4kqeeih2; path=/; secure; HttpOnly; SameSite=None",
+        "__AntiXsrfToken=b18d09a5796a422daabddde27e2491f9; path=/; secure; HttpOnly; SameSite=None"
+      ],
+      "x-content-type-options": "nosniff",
+      "date": "Fri, 07 Nov 2025 03:09:11 GMT",
+      "content-length": "13964",
+      "connection": "close",
+      "referrer-policy": "strict-origin-when-cross-origin"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "frame-ancestors": [
+          "https://ademe-hr.talent-soft.com",
+          "https://ademe.talent-soft.com"
+        ]
+      },
+      "http": true,
+      "meta": false,
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": false,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
+      "data": {
+        "ts_sessionid": {
+          "domain": "recrutement.ademe.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "BIGipServerREC_PRD_FO_SBG1": {
+          "domain": "recrutement.ademe.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "ASP.NET_SessionId": {
+          "domain": "recrutement.ademe.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "__AntiXsrfToken": {
+          "domain": "recrutement.ademe.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        }
+      },
+      "sameSite": true
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://recrutement.ademe.fr/accueil.aspx?LCID=1036",
+      "redirects": true,
+      "route": [
+        "http://recrutement.ademe.fr/",
+        "https://recrutement.ademe.fr/",
+        "https://recrutement.ademe.fr/accueil.aspx?LCID=1036"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
+      "includeSubDomains": false,
+      "maxAge": 31536000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://www.google.com/recaptcha/api.js?render=explicit": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
