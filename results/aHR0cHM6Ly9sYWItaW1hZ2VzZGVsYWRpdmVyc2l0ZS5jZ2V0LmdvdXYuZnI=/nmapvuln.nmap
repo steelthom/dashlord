@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Nov  4 02:47:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lab-imagesdeladiversite.cget.gouv.fr
+# Nmap 7.92 scan initiated Fri Nov  7 13:58:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lab-imagesdeladiversite.cget.gouv.fr
 Nmap scan report for lab-imagesdeladiversite.cget.gouv.fr (164.132.166.70)
-Host is up (0.18s latency).
+Host is up (0.090s latency).
 rDNS record for 164.132.166.70: ns3041426.ovh.net
 Not shown: 993 closed tcp ports (reset)
 PORT     STATE SERVICE       VERSION
@@ -46,11 +46,10 @@ PORT     STATE SERVICE       VERSION
 |_http-server-header: Apache
 3306/tcp open  mysql         MySQL 5.7.42
 8443/tcp open  ssl/https-alt MiniServ
-|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.0 200 Document follows
-|     Date: Tue, 4 Nov 2025 02:47:29 GMT
+|     Date: Fri, 7 Nov 2025 13:59:01 GMT
 |     Server: MiniServ
 |     Connection: close
 |     Strict-Transport-Security: max-age=31536000;
@@ -73,7 +72,7 @@ PORT     STATE SERVICE       VERSION
 |     <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { back
 |   HTTPOptions: 
 |     HTTP/1.0 200 Document follows
-|     Date: Tue, 4 Nov 2025 02:47:35 GMT
+|     Date: Fri, 7 Nov 2025 13:59:07 GMT
 |     Server: MiniServ
 |     Connection: close
 |     Strict-Transport-Security: max-age=31536000;
@@ -90,15 +89,16 @@ PORT     STATE SERVICE       VERSION
 |     X-no-links: 1
 |     Content-type: text/html; Charset=UTF-8
 |     <!DOCTYPE html>
-|     <html data-bgs="gainsboro" class="ui--html session_login">
+|     <html class="ui--html session_login" data-bgs="gainsboro">
 |     <head>
 |     <meta name="color-scheme" content="only light">
 |_    <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { back
+|_http-trane-info: Problem with XML parsing of /evox/about
 |_http-server-header: MiniServ
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=69096947%P=x86_64-alpine-linu
+SF-Port8443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690DFB2B%P=x86_64-alpine-linu
 SF:x-musl%r(GetRequest,1132,"HTTP/1\.0\x20200\x20Document\x20follows\r\nDa
-SF:te:\x20Tue,\x204\x20Nov\x202025\x2002:47:29\x20GMT\r\nServer:\x20MiniSe
+SF:te:\x20Fri,\x207\x20Nov\x202025\x2013:59:01\x20GMT\r\nServer:\x20MiniSe
 SF:rv\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-age=315
 SF:36000;\r\npragma:\x20no-cache\r\nExpires:\x20Thu,\x201\x20Jan\x201970\x
 SF:2000:00:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-cache,\x20must-r
@@ -114,8 +114,8 @@ SF:--html\x20session_login\">\n<head>\n\x20<meta\x20name=\"color-scheme\"\
 SF:x20content=\"only\x20light\">\n\x20<noscript>\x20<style>\x20html\[data-
 SF:bgs=\"gainsboro\"\]\x20{\x20background-color:\x20#d6d6d6;\x20}\x20html\
 SF:[data-bgs=\"nightRider\"\]\x20{\x20back")%r(HTTPOptions,1132,"HTTP/1\.0
-SF:\x20200\x20Document\x20follows\r\nDate:\x20Tue,\x204\x20Nov\x202025\x20
-SF:02:47:35\x20GMT\r\nServer:\x20MiniServ\r\nConnection:\x20close\r\nStric
+SF:\x20200\x20Document\x20follows\r\nDate:\x20Fri,\x207\x20Nov\x202025\x20
+SF:13:59:07\x20GMT\r\nServer:\x20MiniServ\r\nConnection:\x20close\r\nStric
 SF:t-Transport-Security:\x20max-age=31536000;\r\npragma:\x20no-cache\r\nEx
 SF:pires:\x20Thu,\x201\x20Jan\x201970\x2000:00:00\x20GMT\r\nCache-Control:
 SF:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20post
@@ -126,7 +126,7 @@ SF:RIGIN\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe-in
 SF:line'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'self'\
 SF:r\nX-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nContent-ty
 SF:pe:\x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20html>\n<html\x20
-SF:data-bgs=\"gainsboro\"\x20class=\"ui--html\x20session_login\">\n<head>\
+SF:class=\"ui--html\x20session_login\"\x20data-bgs=\"gainsboro\">\n<head>\
 SF:n\x20<meta\x20name=\"color-scheme\"\x20content=\"only\x20light\">\n\x20
 SF:<noscript>\x20<style>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20backgro
 SF:und-color:\x20#d6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{\x20
@@ -134,4 +134,4 @@ SF:back");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 02:49:13 2025 -- 1 IP address (1 host up) scanned in 113.20 seconds
+# Nmap done at Fri Nov  7 14:00:39 2025 -- 1 IP address (1 host up) scanned in 106.72 seconds
