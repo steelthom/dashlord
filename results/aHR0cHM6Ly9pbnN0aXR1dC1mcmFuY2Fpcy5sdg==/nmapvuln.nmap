@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Nov  4 03:06:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institut-francais.lv
+# Nmap 7.92 scan initiated Fri Nov  7 13:54:03 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institut-francais.lv
 Nmap scan report for institut-francais.lv (213.133.121.44)
-Host is up (0.11s latency).
+Host is up (0.12s latency).
 rDNS record for 213.133.121.44: dedi3294.your-server.de
 Not shown: 936 filtered tcp ports (no-response), 50 closed tcp ports (reset)
 PORT     STATE SERVICE    VERSION
@@ -18,7 +18,9 @@ PORT     STATE SERVICE    VERSION
 |   Help: 
 |     220 dedi3294.your-server.de Exim ESMTP Service ready
 |     214-Commands supported:
-|_    AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP ETRN
+|     AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP ETRN
+|   NULL: 
+|_    220 dedi3294.your-server.de Exim ESMTP Service ready
 80/tcp   open  http       Apache httpd
 |_http-server-header: Apache
 110/tcp  open  pop3       Courier pop3d
@@ -310,19 +312,21 @@ PORT     STATE SERVICE    VERSION
 |_    RProcessStartupPacket
 4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port25-TCP:V=7.92%I=7%D=11/4%Time=69096DC9%P=x86_64-alpine-linux-musl%r
-SF:(Hello,62,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Service
-SF:\x20ready\r\n501\x20Syntactically\x20invalid\x20EHLO\x20argument\(s\)\r
-SF:\n")%r(Help,99,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Se
-SF:rvice\x20ready\r\n214-Commands\x20supported:\r\n214\x20AUTH\x20STARTTLS
-SF:\x20HELO\x20EHLO\x20MAIL\x20RCPT\x20DATA\x20BDAT\x20NOOP\x20QUIT\x20RSE
-SF:T\x20HELP\x20ETRN\r\n")%r(GenericLines,6A,"220\x20dedi3294\.your-server
-SF:\.de\x20Exim\x20ESMTP\x20Service\x20ready\r\n500\x20unrecognized\x20com
-SF:mand\r\n500\x20unrecognized\x20command\r\n")%r(GetRequest,6A,"220\x20de
-SF:di3294\.your-server\.de\x20Exim\x20ESMTP\x20Service\x20ready\r\n500\x20
-SF:unrecognized\x20command\r\n500\x20unrecognized\x20command\r\n");
+SF-Port25-TCP:V=7.92%I=7%D=11/7%Time=690DFA07%P=x86_64-alpine-linux-musl%r
+SF:(NULL,36,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Service\
+SF:x20ready\r\n")%r(Hello,62,"220\x20dedi3294\.your-server\.de\x20Exim\x20
+SF:ESMTP\x20Service\x20ready\r\n501\x20Syntactically\x20invalid\x20EHLO\x2
+SF:0argument\(s\)\r\n")%r(Help,99,"220\x20dedi3294\.your-server\.de\x20Exi
+SF:m\x20ESMTP\x20Service\x20ready\r\n214-Commands\x20supported:\r\n214\x20
+SF:AUTH\x20STARTTLS\x20HELO\x20EHLO\x20MAIL\x20RCPT\x20DATA\x20BDAT\x20NOO
+SF:P\x20QUIT\x20RSET\x20HELP\x20ETRN\r\n")%r(GenericLines,6A,"220\x20dedi3
+SF:294\.your-server\.de\x20Exim\x20ESMTP\x20Service\x20ready\r\n500\x20unr
+SF:ecognized\x20command\r\n500\x20unrecognized\x20command\r\n")%r(GetReque
+SF:st,6A,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Service\x20
+SF:ready\r\n500\x20unrecognized\x20command\r\n500\x20unrecognized\x20comma
+SF:nd\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=69096DC8%P=x86_64-alpine-linux
+SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690DFA0D%P=x86_64-alpine-linux
 SF:-musl%r(NULL,36,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20S
 SF:ervice\x20ready\r\n")%r(Hello,62,"220\x20dedi3294\.your-server\.de\x20E
 SF:xim\x20ESMTP\x20Service\x20ready\r\n501\x20Syntactically\x20invalid\x20
@@ -336,7 +340,7 @@ SF:,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Service\x20ready
 SF:\r\n500\x20unrecognized\x20command\r\n500\x20unrecognized\x20command\r\
 SF:n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port587-TCP:V=7.92%I=7%D=11/4%Time=69096DC2%P=x86_64-alpine-linux-musl%
+SF-Port587-TCP:V=7.92%I=7%D=11/7%Time=690DFA07%P=x86_64-alpine-linux-musl%
 SF:r(NULL,36,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Service
 SF:\x20ready\r\n")%r(GenericLines,6A,"220\x20dedi3294\.your-server\.de\x20
 SF:Exim\x20ESMTP\x20Service\x20ready\r\n500\x20unrecognized\x20command\r\n
@@ -350,10 +354,10 @@ SF:est,6A,"220\x20dedi3294\.your-server\.de\x20Exim\x20ESMTP\x20Service\x2
 SF:0ready\r\n500\x20unrecognized\x20command\r\n500\x20unrecognized\x20comm
 SF:and\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5432-TCP:V=7.92%I=7%D=11/4%Time=69096DC2%P=x86_64-alpine-linux-musl
+SF-Port5432-TCP:V=7.92%I=7%D=11/7%Time=690DFA08%P=x86_64-alpine-linux-musl
 SF:%r(SMBProgNeg,8C,"E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20fr
 SF:ontend\x20protocol\x2065363\.19778:\x20server\x20supports\x203\.0\x20to
 SF:\x203\.0\0Fpostmaster\.c\0L2200\0RProcessStartupPacket\0\0");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 03:07:16 2025 -- 1 IP address (1 host up) scanned in 49.00 seconds
+# Nmap done at Fri Nov  7 13:54:49 2025 -- 1 IP address (1 host up) scanned in 46.11 seconds
