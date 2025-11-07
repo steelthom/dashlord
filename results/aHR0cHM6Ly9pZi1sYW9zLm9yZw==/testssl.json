@@ -304,7 +304,7 @@
               "ip"           : "if-laos.org/213.186.33.17",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -451,7 +451,7 @@
               "ip"           : "if-laos.org/213.186.33.17",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "61 >= 30 days"
+              "finding"      : "57 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -597,15 +597,72 @@
               "id"           : "HTTP_status_code",
               "ip"           : "if-laos.org/213.186.33.17",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header request failed"
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "HTTP_clock_skew",
               "ip"           : "if-laos.org/213.186.33.17",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header was repeatedly zero due to missing X25519/X448 curves."
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762524161"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "OVHcloud"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "X-Powered-By: PHP/7.3"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "security_headers",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "if-laos.org/213.186.33.17",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "heartbleed",
@@ -673,10 +730,10 @@
               "id"           : "BREACH",
               "ip"           : "if-laos.org/213.186.33.17",
               "port"         : "443",
-              "severity"     : "WARN",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "Test failed as HTTP request stalled and was terminated"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1104,6 +1161,6 @@
               "ip"           : "if-laos.org/213.186.33.17",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "168"
+              "finding"      : "159"
           }
 ]
