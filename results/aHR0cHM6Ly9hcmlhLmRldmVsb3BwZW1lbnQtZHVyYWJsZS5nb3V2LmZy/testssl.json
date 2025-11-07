@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -423,7 +423,7 @@
               "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "34 >= 30 days"
+              "finding"      : "30 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -566,6 +566,147 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "301 Moved Permanently ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-2 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762500712"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Apache"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "4 at '/' (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "cookie_secure",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/4 at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/4 at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "default-src 'self' *.googleapis.com *.google.com *.google.fr *.w.org *.supportcandy.net *.gravatar.com *.dm-event.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googletagmanager.com *.googleapis.com *.google.com *.google.fr *.w.org *.supportcandy.net *.gravatar.com widgetlogic.org api.dmcdn.net *.dailymotion.com; style-src 'self' 'unsafe-inline'  *.googleapis.com; img-src 'self' 'unsafe-inline'  *.googleusercontent.com *.w.org *.supportcandy.net *.gravatar.com data: *.gstatic.com  *.googleapis.com searchwp.com supportcandy.net; frame-src 'self' authentification.din.developpement-durable.gouv.fr *.googleapis.com 208c73af.sibforms.com *.dailymotion.com; font-src 'self' data: *.googleapis.com *.gstatic.com"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "Upgrade",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "h2,h2c"
+          }
+,         {
+              "id"           : "X-UA-Compatible",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "IE=edge"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=3600"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
               "port"         : "443",
@@ -587,10 +728,10 @@
               "id"           : "ticketbleed",
               "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "ROBOT",
@@ -625,7 +766,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1053,6 +1203,6 @@
               "ip"           : "aria.developpement-durable.gouv.fr/146.59.186.64",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "105"
+              "finding"      : "78"
           }
 ]
