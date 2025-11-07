@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -311,7 +311,7 @@
               "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -451,7 +451,7 @@
               "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "64 >= 30 days"
+              "finding"      : "60 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -594,6 +594,112 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762546744"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1 at '/'"
+          }
+,         {
+              "id"           : "cookie_secure",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "All (1) at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "All (1) at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-store, no-cache, must-revalidate"
+          }
+,         {
+              "id"           : "Pragma",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
               "port"         : "443",
@@ -615,10 +721,10 @@
               "id"           : "ticketbleed",
               "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "no session ticket extension"
           }
 ,         {
               "id"           : "ROBOT",
@@ -653,7 +759,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1081,6 +1196,6 @@
               "ip"           : "lettres-infos.bercy.gouv.fr/57.128.91.236",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "118"
+              "finding"      : "88"
           }
 ]
