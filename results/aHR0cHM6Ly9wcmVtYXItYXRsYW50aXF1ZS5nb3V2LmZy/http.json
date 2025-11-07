@@ -1,0 +1,161 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "D",
+    "error": null,
+    "score": 35,
+    "statusCode": 200,
+    "testsFailed": 5,
+    "testsPassed": 5,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "server": "nginx",
+      "date": "Fri, 07 Nov 2025 03:48:54 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "connection": "close",
+      "x-powered-by": "PHP/7.4.33, PleskLin",
+      "cache-control": "max-age=0, must-revalidate, private",
+      "pragma": "no-cache",
+      "expires": "Fri, 07 Nov 2025 03:48:54 GMT",
+      "set-cookie": [
+        "PHPSESSID=2op57l20i0qu4fiqphqat2893g; path=/; HttpOnly",
+        "visid_incap_3209005=CmS4rWePQ5SP1v1sJ+E5syRsDWkAAAAAQUIPAAAAAABXlqXikjPVDIuB5aGecJLl; expires=Fri, 06 Nov 2026 06:28:11 GMT; HttpOnly; path=/; Domain=.premar-atlantique.gouv.fr; Secure; SameSite=None",
+        "nlbi_3209005=Vef1OqmibhIKERuqJBBkxwAAAABAkiN3ym8FdZKnpSfpxr1T; HttpOnly; path=/; Domain=.premar-atlantique.gouv.fr; Secure; SameSite=None",
+        "incap_ses_396_3209005=plw4QTXYunWqVV8W7t9+BSVsDWkAAAAApvOHcAgbgyodjuRZle1GRg==; path=/; Domain=.premar-atlantique.gouv.fr; Secure; SameSite=None"
+      ],
+      "vary": "Accept-Encoding,User-Agent",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-cdn": "Imperva",
+      "transfer-encoding": "chunked",
+      "x-iinfo": "2-7690490-7690491 NNNN CT(138 141 0) RT(1762487333131 3) q(0 0 3 0) r(4 11) U24"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -10,
+      "data": {
+        "PHPSESSID": {
+          "domain": "www.premar-atlantique.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "visid_incap_3209005": {
+          "domain": "premar-atlantique.gouv.fr",
+          "expires": "2026-11-06T06:28:11.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "nlbi_3209005": {
+          "domain": "premar-atlantique.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "incap_ses_396_3209005": {
+          "domain": "premar-atlantique.gouv.fr",
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.premar-atlantique.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://premar-atlantique.gouv.fr/",
+        "https://premar-atlantique.gouv.fr/",
+        "https://www.premar-atlantique.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://platform.twitter.com/widgets.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
