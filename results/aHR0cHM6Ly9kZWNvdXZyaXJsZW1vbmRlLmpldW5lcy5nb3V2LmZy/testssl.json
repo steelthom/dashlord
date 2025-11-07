@@ -10,8 +10,8 @@
               "id"           : "pre_128cipher",
               "ip"           : "decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No 128 cipher limit bug"
+              "severity"     : "MEDIUM",
+              "finding"      : "128 cipher limit bug"
           }
 ,         {
               "id"           : "SSLv2",
@@ -49,38 +49,17 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "TLS1_3",
+              "id"           : "scanProblem",
               "ip"           : "decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered with final"
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
           }
 ,         {
-              "id"           : "NPN",
+              "id"           : "scanTime",
               "ip"           : "decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
           }
-,         {
-              "id"           : "ALPN_HTTP2",
-              "ip"           : "decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "h2"
-          }
-,         {
-              "id"           : "ALPN",
-              "ip"           : "decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "http/1.1"
-          }
-,         {
-              "id"           : "cipherlist_NULL",
-              "ip"           : "decouvrirlemonde.jeunes.gouv.fr/185.75.143.93",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
+]
