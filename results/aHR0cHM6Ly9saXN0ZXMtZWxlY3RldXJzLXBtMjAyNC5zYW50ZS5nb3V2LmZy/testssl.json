@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -160,6 +160,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
@@ -178,7 +206,7 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -188,18 +216,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -237,11 +279,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -290,7 +332,7 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0591646E55D06E4009B7102633518BB1"
+              "finding"      : "E33908B069ABB7F8D11494AF451F33FF"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -304,21 +346,21 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "CA22CD507AB64D952E4D81DE19D64CAA29ACD339"
+              "finding"      : "797C2624414395CA2EF05F1237D704CFB6AF57EF"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "A9738148874D21EFA9D25BC4AE431C150CDA9C5F52D0AC02E9FB3E6F26FFF08F"
+              "finding"      : "5A8D5FE22AE97528F412CED00F4FDD43D7196A55623E746998C00C35A095B3B0"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -339,7 +381,7 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "listes-electeurs-pm2024.sante.gouv.fr www.listes-electeurs-pm2024.sante.gouv.fr"
+              "finding"      : "www.listes-electeurs-pm2024.sante.gouv.fr listes-electeurs-pm2024.sante.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
@@ -366,22 +408,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (25)"
+              "severity"     : "OK",
+              "finding"      : "87 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2024-10-28 23:00"
+              "finding"      : "2025-11-05 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-11-29 22:59"
+              "severity"     : "OK",
+              "finding"      : "2026-02-02 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -402,20 +444,20 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
+              "finding"      : "http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "OCSP_stapling",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -430,7 +472,7 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "issue=certigna.fr"
+              "finding"      : "issue=certigna.fr, issue=letsencrypt.org"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -458,49 +500,49 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 (Certigna from FR)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFhTCCBG2gAwIBAgIUZC/nHF2pouqOZECc9JYzehjW3kAwDQYJKoZIhvcNAQEMBQAwNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwHhcNMjUwMjI4MDk0OTA0WhcNMjcwNjI4MDk0OTAzWjB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANZ0kTuG6eFTF0KPbtvYBB5zIq+eR03FgyQAyRZE0lqCGRyx96ko+W/yyfxbCgPxMw5jlxdXteXBh8DLc5S4w0ICfOSc8vabFuXKhKa8BAB5/VtdzZosAF1AvFC1WLEVvPiUJRTsY0BkhnFI0UKdLN145hY4EL+CaSUENQ19006BR5P5HeWtmikYHgiq/TBlhTsnaYB6SL8mT40GfBxmp6PEjjrhKLurSQOMbF+6HiEnfZUr3OrKDncxN0GHxFYcIFBTL53JBNFA9qbPYsD6KubJmUqVoImyRKR+eXJHVNfPMhYzQv3EaYh2rpHRsjV96yZBIqBc3QSw82gj8bxh+rZRz8e+QISMlvljhHXqn+Qy4puuMt+3yQmnwFTYJQ13NFv1Uh3cJ5tEHP+yaLLCDqjy+cGCwNGMgsdWhS/67F4/AvRyI424psxuS/RbnKRrva0ZpDLTABgqfnONeU0LdkP817nGKNTKX2BDMD93BzOKzjDSBITJIRR8QICTKtQzmaKhd4UgbqPp+Bq1dMVhk5wW+x+bIHcB+wpqkO534SRMz93ijW2hSKrDWa2CB0Pl5tgcoGZThtjB3/Fm45XQLfW+vcTf+7nH8CRjMXO9swS6TovOXIpa5aG3jM+Dgewg6RbxtO/uIjv1zuIdS02d2h8Is2CvJ9/duOKucuYt1YnfAgMBAAGjggFLMIIBRzBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAKGJWh0dHA6Ly9jZXJ0LmNlcnRpZ25hLmNvbS9DZXJ0aWduYS5jZXIwHwYDVR0jBBgwFoAUGu3+QTmQtCRZvgHyUtVF9lo53BEwEgYDVR0TAQH/BAgwBgEB/wIBADBIBgNVHSAEQTA/MAgGBmeBDAECAjAzBgoqgXoBgTEBAAECMCUwIwYIKwYBBQUHAgEWF2h0dHA6Ly9jcHMuY2VydGlnbmEuY29tMDUGA1UdHwQuMCwwKqAooCaGJGh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSgcuZGxDBc5K3CHMLVYjiYgVpUpjANBgkqhkiG9w0BAQwFAAOCAQEAkYjFkMa/La7tXDId/3ltDS8PKsxhxmOBA6bRsLeDQWIU2E1M/1A1y0bRkw4Y6ZRGmkVLLdQRD9mJIvxnllTyoeOzJPk0BVW6xVgPncatyhNx0bKEFouetx7k+J7yKhu/k3jJP9XAxtbCWViQ4rZ3BvABYHA8rBmfccbVMr04a/+ILTpT/1QiGzhHcpo2fnlQ+okXq0cuikN5/WMlHNgsTJIG2b5yEFtYY84Hlx0ejJX3cOAd4pot9vHdjv8e2KvIq/jopdB5lyv/wbaQ4EHz9i5Z4dvmECjsx9oEHRDmUoeEoV1sb/I/2np3PHjtYTrzzoOTYUaebmdXkFasRpTx1w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "1A209DB499625B4EA29F597BE7744BA1E240B8C7629F75B41A3373339FD7EDDF"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2025-02-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-11-22 11:33"
+              "severity"     : "OK",
+              "finding"      : "2027-06-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires <= 20 days"
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
           }
 ,         {
               "id"           : "intermediate_cert_chain <#1>",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 <-- Certigna"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -528,7 +570,7 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762239817"
+              "finding"      : "1762542584"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -764,7 +806,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=A9738148874D21EFA9D25BC4AE431C150CDA9C5F52D0AC02E9FB3E6F26FFF08F"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=5A8D5FE22AE97528F412CED00F4FDD43D7196A55623E746998C00C35A095B3B0"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -839,63 +881,63 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -944,35 +986,35 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -986,42 +1028,42 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1035,21 +1077,21 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1063,7 +1105,7 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1133,20 +1175,13 @@
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "listes-electeurs-pm2024.sante.gouv.fr/185.194.83.125",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "60"
+              "finding"      : "77"
           }
 ]
