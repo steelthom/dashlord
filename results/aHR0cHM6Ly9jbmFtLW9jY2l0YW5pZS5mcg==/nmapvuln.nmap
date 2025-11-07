@@ -1,9 +1,9 @@
-# Nmap 7.92 scan initiated Mon Nov  3 19:28:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cnam-occitanie.fr
+# Nmap 7.92 scan initiated Fri Nov  7 07:20:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cnam-occitanie.fr
 Nmap scan report for cnam-occitanie.fr (163.173.128.40)
-Host is up (0.15s latency).
+Host is up (0.16s latency).
 rDNS record for 163.173.128.40: kaurip.cnam.fr
 Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE  VERSION
+PORT    STATE SERVICE        VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   GetRequest, HTTPOptions: 
@@ -14,7 +14,7 @@ PORT    STATE SERVICE  VERSION
 |   RTSPRequest: 
 |     HTTP/1.1 503 Service Unavailable
 |     Content-Type: text/html; charset=UTF-8
-|     Content-Length: 6690
+|     Content-Length: 6691
 |     Connection: close
 |     P3P: CP="CAO PSA OUR"
 |     Expires: Thu, 01 Jan 1970 00:00:00 GMT
@@ -46,16 +46,16 @@ PORT    STATE SERVICE  VERSION
 |     <html><body><h1>400 Bad request</h1>
 |     Your browser sent an invalid request.
 |_    </body></html>
-443/tcp open  ssl/http Apache httpd
+443/tcp open  ssl/tcpwrapped
 |_http-server-header: Apache
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=11/3%Time=6909026E%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690D9DE4%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-len
 SF:gth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nContent-le
 SF:ngth:\x200\r\nLocation:\x20https:///\r\nConnection:\x20close\r\n\r\n")%
-SF:r(RTSPRequest,1B37,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nConte
-SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x206690\r\nC
+SF:r(RTSPRequest,1B38,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x206691\r\nC
 SF:onnection:\x20close\r\nP3P:\x20CP=\"CAO\x20PSA\x20OUR\"\r\nExpires:\x20
 SF:Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nCache-Control:\x20no-st
 SF:ore,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r
@@ -81,4 +81,4 @@ SF:ody><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20in
 SF:valid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Nov  3 19:29:12 2025 -- 1 IP address (1 host up) scanned in 48.67 seconds
+# Nmap done at Fri Nov  7 07:21:30 2025 -- 1 IP address (1 host up) scanned in 43.32 seconds
