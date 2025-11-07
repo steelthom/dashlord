@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Tue Nov  4 03:18:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrancais-ukraine.com
+# Nmap 7.92 scan initiated Fri Nov  7 14:41:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrancais-ukraine.com
 Nmap scan report for institutfrancais-ukraine.com (194.28.172.205)
 Host is up (0.18s latency).
 Not shown: 982 filtered tcp ports (no-response)
@@ -379,6 +379,7 @@ PORT     STATE  SERVICE       VERSION
 |     	700E9EFF-DFA6-504F-8DD1-FB1A62E01721	10.0	https://vulners.com/githubexploit/700E9EFF-DFA6-504F-8DD1-FB1A62E01721	*EXPLOIT*
 |     	6FE65515-66EC-5D76-A22A-951B552D952D	10.0	https://vulners.com/githubexploit/6FE65515-66EC-5D76-A22A-951B552D952D	*EXPLOIT*
 |     	6F93E170-75AD-5F5C-B7CC-6C4CEAA695AB	10.0	https://vulners.com/githubexploit/6F93E170-75AD-5F5C-B7CC-6C4CEAA695AB	*EXPLOIT*
+|     	6F7B59BA-1758-5EC9-9672-B31BEA816482	10.0	https://vulners.com/githubexploit/6F7B59BA-1758-5EC9-9672-B31BEA816482	*EXPLOIT*
 |     	6F251270-3935-58F4-835C-C9D26FA97CD6	10.0	https://vulners.com/githubexploit/6F251270-3935-58F4-835C-C9D26FA97CD6	*EXPLOIT*
 |     	6F20D8B7-C252-5759-B02B-F8E2C9D42E38	10.0	https://vulners.com/githubexploit/6F20D8B7-C252-5759-B02B-F8E2C9D42E38	*EXPLOIT*
 |     	6EF7E52B-4C52-51AF-B760-DDDD5C8D98A8	10.0	https://vulners.com/gitee/6EF7E52B-4C52-51AF-B760-DDDD5C8D98A8	*EXPLOIT*
@@ -1389,7 +1390,16 @@ PORT     STATE  SERVICE       VERSION
 |     	1337DAY-ID-22707	0.0	https://vulners.com/zdt/1337DAY-ID-22707	*EXPLOIT*
 |_    	1337DAY-ID-22375	0.0	https://vulners.com/zdt/1337DAY-ID-22375	*EXPLOIT*
 80/tcp   open   http          nginx
-81/tcp   closed hosts2-ns
+81/tcp   open   http          Payara Server httpd 5.2020.5 (Servlet 4.0; JSP 2.3; Red Hat, Inc. Java 1.8)
+|_http-server-header: Payara Server  5.2020.5 #badassfish
+|_http-trane-info: Problem with XML parsing of /evox/about
+| vulners: 
+|   cpe:/a:payara:payara:5.2020.5: 
+|     	PACKETSTORM:169864	7.5	https://vulners.com/packetstorm/PACKETSTORM:169864	*EXPLOIT*
+|     	CVE-2022-45129	7.5	https://vulners.com/cve/CVE-2022-45129
+|     	CVE-2022-37422	7.5	https://vulners.com/cve/CVE-2022-37422
+|     	1337DAY-ID-38070	7.5	https://vulners.com/zdt/1337DAY-ID-38070	*EXPLOIT*
+|_    	CVE-2024-7312	7.0	https://vulners.com/cve/CVE-2024-7312
 110/tcp  open   pop3          Dovecot DirectAdmin pop3d
 143/tcp  open   imap          Dovecot imapd
 443/tcp  open   ssl/http      nginx
@@ -1582,18 +1592,26 @@ PORT     STATE  SERVICE       VERSION
 |     X-Directadmin: Unauthorized
 |     X-Frame-Options: sameorigin
 |     X-Valid: yes
-|     Date: Tue, 04 Nov 2025 03:18:54 GMT
+|     Date: Fri, 07 Nov 2025 14:41:25 GMT
 |     <!DOCTYPE html><html><head><title>DirectAdmin Login</title><meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>* { font-size: 8.5pt; font-family: verdana; }b { font-weight: bold; }.listtitle { background: #425984; color: #EEEEEE; white-space: nowrap; border-radius: 3px; box-shadow: 1px 1px 3px #727272; }td.list{ background: #EEEEEE; white-space: nowrap; }input { border-radius: 3px; padding-left: 4px; padding-right: 4px; }.inset { border: 1px inset #DDDDDD; }.auth-block { d
 |   HTTPOptions: 
 |     HTTP/1.0 405 Method Not Allowed
 |     Vary: Origin
 |     Vary: Accept-Encoding
 |     X-Frame-Options: sameorigin
-|     Date: Tue, 04 Nov 2025 03:18:54 GMT
+|     Date: Fri, 07 Nov 2025 14:41:25 GMT
 |_    Content-Length: 0
-4848/tcp closed appserv-http
+4848/tcp open   ssl/http      Payara Server httpd 5.2020.5 (Servlet 4.0; JSP 2.3; Red Hat, Inc. Java 1.8)
+|_http-server-header: Payara Server  5.2020.5 #badassfish
+| vulners: 
+|   cpe:/a:payara:payara:5.2020.5: 
+|     	PACKETSTORM:169864	7.5	https://vulners.com/packetstorm/PACKETSTORM:169864	*EXPLOIT*
+|     	CVE-2022-45129	7.5	https://vulners.com/cve/CVE-2022-45129
+|     	CVE-2022-37422	7.5	https://vulners.com/cve/CVE-2022-37422
+|     	1337DAY-ID-38070	7.5	https://vulners.com/zdt/1337DAY-ID-38070	*EXPLOIT*
+|_    	CVE-2024-7312	7.0	https://vulners.com/cve/CVE-2024-7312
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port2222-TCP:V=7.92%I=7%D=11/4%Time=6909709D%P=x86_64-alpine-linux-musl
+SF-Port2222-TCP:V=7.92%I=7%D=11/7%Time=690E0515%P=x86_64-alpine-linux-musl
 SF:%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
 SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
 SF:Bad\x20Request")%r(GetRequest,148C,"HTTP/1\.0\x20200\x20OK\r\nCache-Con
@@ -1602,7 +1620,7 @@ SF:r\nServer:\x20DirectAdmin\x20Daemon\r\nSet-Cookie:\x20session=;\x20path
 SF:=/;\x20expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT;\x20SameSit
 SF:e=Lax;\x20HttpOnly\r\nVary:\x20Origin\r\nVary:\x20Accept-Encoding\r\nX-
 SF:Directadmin:\x20Unauthorized\r\nX-Frame-Options:\x20sameorigin\r\nX-Val
-SF:id:\x20yes\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2003:18:54\x20GMT\r\n
+SF:id:\x20yes\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:41:25\x20GMT\r\n
 SF:\r\n<!DOCTYPE\x20html><html><head><title>DirectAdmin\x20Login</title><m
 SF:eta\x20name=\"robots\"\x20content=\"noindex,nofollow\"><meta\x20http-eq
 SF:uiv=\"Content-Type\"\x20content=\"text/html;\x20charset=UTF-8\"><style>
@@ -1615,7 +1633,7 @@ SF:order-radius:\x203px;\x20padding-left:\x204px;\x20padding-right:\x204px
 SF:;\x20}\.inset\x20{\x20border:\x201px\x20inset\x20#DDDDDD;\x20}\.auth-bl
 SF:ock\x20{\x20d")%r(HTTPOptions,9D,"HTTP/1\.0\x20405\x20Method\x20Not\x20
 SF:Allowed\r\nVary:\x20Origin\r\nVary:\x20Accept-Encoding\r\nX-Frame-Optio
-SF:ns:\x20sameorigin\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2003:18:54\x20
+SF:ns:\x20sameorigin\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:41:25\x20
 SF:GMT\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x2040
 SF:0\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\
 SF:nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/1\
@@ -1627,4 +1645,4 @@ SF:uest");
 Service Info: Host: server.institutfrancais-ukraine.com; OSs: Unix, Linux; CPE: cpe:/o:redhat:enterprise_linux:7
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 03:20:25 2025 -- 1 IP address (1 host up) scanned in 106.72 seconds
+# Nmap done at Fri Nov  7 14:42:58 2025 -- 1 IP address (1 host up) scanned in 108.16 seconds
