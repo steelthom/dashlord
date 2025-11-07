@@ -1,0 +1,169 @@
+# Nmap 7.92 scan initiated Fri Nov  7 03:21:03 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pha.ants.gouv.fr
+Nmap scan report for pha.ants.gouv.fr (66.22.32.116)
+Host is up (0.093s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT    STATE    SERVICE   VERSION
+20/tcp  filtered ftp-data
+21/tcp  filtered ftp
+22/tcp  filtered ssh
+80/tcp  open     http      rdwr
+|_http-server-header: rdwr
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 302 Moved Temporarily
+|     Server: rdwr
+|     Date: Fri, 07 Nov 2025 03:21:13 GMT
+|     Content-Type: text/html
+|     Content-Length: 137
+|     Connection: close
+|     Location: https://pha.ants.gouv.fr:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <html>
+|     <head><title>302 Found</title></head>
+|     <body>
+|     <center><h1>302 Found</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 302 Moved Temporarily
+|     Server: rdwr
+|     Date: Fri, 07 Nov 2025 03:21:12 GMT
+|     Content-Type: text/html
+|     Content-Length: 137
+|     Connection: close
+|     Location: https://pha.ants.gouv.fr:443/
+|     <html>
+|     <head><title>302 Found</title></head>
+|     <body>
+|     <center><h1>302 Found</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: rdwr
+|     Date: Fri, 07 Nov 2025 03:21:12 GMT
+|     Content-Type: text/html
+|     Content-Length: 149
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>rdwr</center>
+|     </body>
+|_    </html>
+161/tcp filtered snmp
+179/tcp filtered bgp
+443/tcp open     ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 303 Found
+|     Content-Type: text/html
+|     Content-Length: 533
+|     Connection: close
+|     Cache-Control: no-cache, private, no-store, must-revalidate
+|     Location: https://blocking.docaposte.fr/ants/?_event_transid=1888698291
+|     <html>
+|     <head>
+|     <title>Security Page redirect</title>
+|     <meta http-equiv="refresh" content="3;url=https://blocking.docaposte.fr/ants/?_event_transid=1888698291">
+|     <script type="text/javascript">
+|     function GoSecure() { location.href="https://blocking.docaposte.fr/ants/?_event_transid=1888698291";}
+|     function SetDelay() { setTimeout("GoSecure();",2000);}
+|     </script>
+|     </head>
+|     <body onLoad="SetDelay();">
+|     align="center">Click <a href="https://blocking.docaposte.fr/ants/?_event_transid=1888698291">Here</a> to continue.</h2>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Content-Length: 150
+|     Connection: close
+|     Date: Fri, 07 Nov 2025 03:21:19 GMT
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     Referrer-Policy: strict-origin-when-cross-origin
+|     Content-Security-Policy: frame-ancestors 'self'
+|     Permissions-Policy: camera=(), geolocation=(), microphone=()
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690D65A8%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:\x2
+SF:0rdwr\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2003:21:12\x20GMT\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x20close
+SF:\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<hea
+SF:d><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Fo
+SF:und</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\
+SF:n")%r(HTTPOptions,148,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServ
+SF:er:\x20rdwr\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2003:21:12\x20GMT\r\
+SF:nContent-Type:\x20text/html\r\nContent-Length:\x20137\r\nConnection:\x2
+SF:0close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:443/\r\n\r\n<html>\r
+SF:\n<head><title>302\x20Found</title></head>\r\n<body>\r\n<center><h1>302
+SF:\x20Found</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</ht
+SF:ml>\r\n")%r(RTSPRequest,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServ
+SF:er:\x20rdwr\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2003:21:12\x20GMT\r\
+SF:nContent-Type:\x20text/html\r\nContent-Length:\x20149\r\nConnection:\x2
+SF:0close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></hea
+SF:d>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr>
+SF:<center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\x20Fri,\x2007
+SF:\x20Nov\x202025\x2003:21:12\x20GMT\r\nContent-Type:\x20text/html\r\nCon
+SF:tent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><tit
+SF:le>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x2
+SF:0Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>\r\n</body>\r
+SF:\n</html>\r\n")%r(FourOhFourRequest,16B,"HTTP/1\.1\x20302\x20Moved\x20T
+SF:emporarily\r\nServer:\x20rdwr\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x20
+SF:03:21:13\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20137
+SF:\r\nConnection:\x20close\r\nLocation:\x20https://pha\.ants\.gouv\.fr:44
+SF:3/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<html>\r\n<head><title>30
+SF:2\x20Found</title></head>\r\n<body>\r\n<center><h1>302\x20Found</h1></c
+SF:enter>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690D65AF%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,218,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-T
+SF:ype:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\n
+SF:Date:\x20Fri,\x2007\x20Nov\x202025\x2003:21:19\x20GMT\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Fram
+SF:e-Options:\x20SAMEORIGIN\r\nReferrer-Policy:\x20strict-origin-when-cros
+SF:s-origin\r\nContent-Security-Policy:\x20frame-ancestors\x20'self'\r\nPe
+SF:rmissions-Policy:\x20camera=\(\),\x20geolocation=\(\),\x20microphone=\(
+SF:\)\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r
+SF:\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><cen
+SF:ter>nginx</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,218,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nContent-
+SF:Length:\x20150\r\nConnection:\x20close\r\nDate:\x20Fri,\x2007\x20Nov\x2
+SF:02025\x2003:21:19\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS
+SF:-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nR
+SF:eferrer-Policy:\x20strict-origin-when-cross-origin\r\nContent-Security-
+SF:Policy:\x20frame-ancestors\x20'self'\r\nPermissions-Policy:\x20camera=\
+SF:(\),\x20geolocation=\(\),\x20microphone=\(\)\r\n\r\n<html>\r\n<head><ti
+SF:tle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x
+SF:20Bad\x20Request</h1></center>\r\n<hr><center>nginx</center>\r\n</body>
+SF:\r\n</html>\r\n")%r(FourOhFourRequest,2F2,"HTTP/1\.1\x20303\x20Found\r\
+SF:nContent-Type:\x20text/html\r\nContent-Length:\x20533\r\nConnection:\x2
+SF:0close\r\nCache-Control:\x20no-cache,\x20private,\x20no-store,\x20must-
+SF:revalidate\r\nLocation:\x20https://blocking\.docaposte\.fr/ants/\?_even
+SF:t_transid=1888698291\r\n\r\n<html>\n<head>\n<title>Security\x20Page\x20
+SF:redirect</title>\n<meta\x20http-equiv=\"refresh\"\x20content=\"3;url=ht
+SF:tps://blocking\.docaposte\.fr/ants/\?_event_transid=1888698291\">\n<scr
+SF:ipt\x20type=\"text/javascript\">\nfunction\x20GoSecure\(\)\x20{\x20loca
+SF:tion\.href=\"https://blocking\.docaposte\.fr/ants/\?_event_transid=1888
+SF:698291\";}\nfunction\x20SetDelay\(\)\x20{\x20setTimeout\(\"GoSecure\(\)
+SF:;\",2000\);}\n</script>\n</head>\n<body\x20onLoad=\"SetDelay\(\);\">\n<
+SF:h2\x20align=\"center\">Click\x20<a\x20href=\"https://blocking\.docapost
+SF:e\.fr/ants/\?_event_transid=1888698291\">Here</a>\x20to\x20continue\.</
+SF:h2>\n</body>\n</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  7 03:21:36 2025 -- 1 IP address (1 host up) scanned in 32.81 seconds
