@@ -1,28 +1,22 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B+",
+    "grade": "F",
     "error": null,
-    "score": 80,
+    "score": 0,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 04 Nov 2025 08:43:24 GMT",
+      "date": "Sat, 08 Nov 2025 02:14:31 GMT",
       "set-cookie": [
-        "BWROUTEID=c69b9bbfa58bfe24ddc57c2176625688.2; Path=/; Secure"
+        "BWFSESSID_r3b96czs3w4yc66m8eygzmr6kw=zxjl99uzexmekhn63br35328mw043xjw656cgfepjnswu46nqlkz3522rj4shsrngx86q3awebzdbpnt2435ycfqmuxhsudl7eswcypw3m96sbz6b6e25y4h2vd6ewjuy985wpgqylmbpq9bvhjub6gawhaz6x2jsz2t5vjsdqeg6stbekwjdvazdm9yjenzufns8nrsjkvfv2uztw24xg46yp5qtl5c523h2h74cacvy833yyfdg2bsc5774f9yx6jrh33z93xefahgzhcwybb3re76qjv4hnafjsz9sengz3bp8yy46c5vhnnz6j3hej; Secure"
       ],
-      "last-modified": "Tue, 10 Jun 2025 13:08:02 GMT",
-      "etag": "\"823-6373762e687a4\"",
-      "accept-ranges": "bytes",
-      "content-length": "2083",
-      "content-security-policy": "style-src 'self' 'unsafe-inline'; default-src 'self' 'unsafe-inline'",
-      "content-type": "text/html; charset=utf-8",
-      "strict-transport-security": "max-age=31536000",
-      "referrer-policy": "strict-origin-when-cross-origin",
-      "x-content-type-options": "nosniff",
-      "x-frame-options": "DENY",
+      "content-type": "text/html",
+      "content-length": "932",
+      "cache-control": "private, max-age=0",
+      "pragma": "no-cache",
       "connection": "close"
     }
   },
@@ -30,42 +24,21 @@
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "style-src": [
-          "'self'",
-          "'unsafe-inline'"
-        ],
-        "default-src": [
-          "'self'",
-          "'unsafe-inline'"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": false,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": false,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": false
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions",
-      "scoreModifier": 0,
+      "pass": false,
+      "result": "cookies-session-without-httponly-flag",
+      "scoreModifier": -30,
       "data": {
-        "BWROUTEID": {
+        "BWFSESSID_r3b96czs3w4yc66m8eygzmr6kw": {
           "domain": "oceane.dsac.aviation-civile.gouv.fr",
           "path": "/",
           "port": null,
@@ -94,43 +67,43 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "strict-origin-when-cross-origin",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 31536000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "result": "sri-not-implemented-but-no-scripts-loaded",
       "scoreModifier": 0,
       "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "DENY"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
