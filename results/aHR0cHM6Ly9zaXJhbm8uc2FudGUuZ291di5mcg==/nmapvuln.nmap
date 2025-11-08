@@ -1,13 +1,23 @@
-# Nmap 7.92 scan initiated Tue Nov  4 19:40:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sirano.sante.gouv.fr
+# Nmap 7.92 scan initiated Sat Nov  8 13:54:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sirano.sante.gouv.fr
 Nmap scan report for sirano.sante.gouv.fr (185.194.83.130)
-Host is up (0.096s latency).
+Host is up (0.080s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
 | fingerprint-strings: 
-|   GetRequest: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest, HTTPOptions, RTSPRequest: 
 |     HTTP/1.0 302 Moved Temporarily
 |     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
 |     Connection: close
 |_    Content-Length: 0
 113/tcp closed ident
@@ -15,67 +25,76 @@ PORT    STATE  SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 04 Nov 2025 19:40:57 GMT
+|     Date: Sat, 08 Nov 2025 13:54:27 GMT
 |     Content-Type: application/octet-stream
 |     Content-Length: 0
 |     Connection: close
-|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!CaQMImkwn7tHzHUXIkI7F7SI9ajmivz3qAX4c3AM99HghwjG2fr3ofUDTet3jo3g2n/7+PoSwdkryjrBjWjvrHYUmUHO; path=/; Httponly; Secure; SameSite=Strict
+|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!QaafhfPaLqIa/LwXIkI7F7SI9ajmihzjLiLAS5lY9IsURe54d6uDCmLMJwnE0ugVKBycaYbzpTD0L65U16t9tZMBxgI7; path=/; Httponly; Secure; SameSite=Strict
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     Set-Cookie: TS01ac8ac8=01352d3811bbaed18ce0f68697c0505b295be1393ce7f0026c05fb9cfe3145fd0b229a2d941dad466f8e1fe79fb24b2fa7c7404fb3; Path=/; Secure; HttpOnly
+|     Set-Cookie: TS01ac8ac8=01352d381126db20201ba8110b50d10bcb842379e77d8189c308fa73553a2060f7d629d70d12b70c23ccdbe3680095290e515aa1b5; Path=/; Secure; HttpOnly
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 04 Nov 2025 19:40:56 GMT
+|     Date: Sat, 08 Nov 2025 13:54:26 GMT
 |     Content-Type: application/octet-stream
 |     Content-Length: 0
 |     Connection: close
-|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!ySfpLIhRAjKCcIAXIkI7F7SI9ajmiuajR7euAsO93HqEyLmI9wG/EXNAFrGvzrJKE6ZM4N+bqE801UVovu1YuLRRgMSD; path=/; Httponly; Secure; SameSite=Strict
+|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!hQoc87P5SXC+gAgXIkI7F7SI9ajmigsCakTv27rOzpI3MqgYXs71q/s/EN/KoRDDcIqokVIRw4mitg8/QSf3nXS6F1s+; path=/; Httponly; Secure; SameSite=Strict
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     Set-Cookie: TS01ac8ac8=01352d3811a2169cd64568663a6d88bbf8c98bb3f5f7ff4e62e2845ce55cd60a9ee9585997c9bd4cab4513b7f11fbea6bab5ddec5f; Path=/; Secure; HttpOnly
+|     Set-Cookie: TS01ac8ac8=01352d3811c92ffcf9bb136783e30b82fc4ed72c90f6d7726cbc93ce7777f8e5d952a91df2b0b3b356dbac8f68a3a4721613f680e3; Path=/; Secure; HttpOnly
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Tue, 04 Nov 2025 19:40:56 GMT
+|     Date: Sat, 08 Nov 2025 13:54:27 GMT
 |     Content-Type: application/octet-stream
 |     Content-Length: 0
 |     Connection: close
-|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!0rWtlBSTZx57HHgXIkI7F7SI9ajmivhq49PA9fb3cGF4PJbasa4gFCPghTTz2l2nfZjxqqn4R02rIjKBik3tjKwCDrQc; path=/; Httponly; Secure; SameSite=Strict
+|     Set-Cookie: BIGipServerpool-sirano-production.cegedim.cloud-tcp3000=!L0uvogPa9d4cT4EXIkI7F7SI9ajmip4m3+sS4tuh7eXe46m32RFy6Vykj+weJylUhOiuO6nji/ogf+RtIGV44xMinjbC; path=/; Httponly; Secure; SameSite=Strict
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|_    Set-Cookie: TS01ac8ac8=01352d3811c9e8219028b71af8584358d0dd0d22e84fdbf6618e88e2cf5b680377217367e1dc976fd8399ee3639c820dc9f672a57c; Path=/; Secure; HttpOnly
+|_    Set-Cookie: TS01ac8ac8=01352d3811fef64cdbdac8acfa5e8689d20998112b753617750526d935fd50d42f2fb6f7ee1c87660581e3fe5968b4a231dbea5adb; Path=/; Secure; HttpOnly
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A56C2%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690F4B8C%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
+SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
+SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,62,"HTTP/1\.0\
+SF:x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://sip:nm\r\nConnec
+SF:tion:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A56C8%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,231,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2004\x
-SF:20Nov\x202025\x2019:40:56\x20GMT\r\nContent-Type:\x20application/octet-
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690F4B92%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,231,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2008\x
+SF:20Nov\x202025\x2013:54:26\x20GMT\r\nContent-Type:\x20application/octet-
 SF:stream\r\nContent-Length:\x200\r\nConnection:\x20close\r\nSet-Cookie:\x
-SF:20BIGipServerpool-sirano-production\.cegedim\.cloud-tcp3000=!ySfpLIhRAj
-SF:KCcIAXIkI7F7SI9ajmiuajR7euAsO93HqEyLmI9wG/EXNAFrGvzrJKE6ZM4N\+bqE801UVo
-SF:vu1YuLRRgMSD;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\n
-SF:Strict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\
-SF:nSet-Cookie:\x20TS01ac8ac8=01352d3811a2169cd64568663a6d88bbf8c98bb3f5f7
-SF:ff4e62e2845ce55cd60a9ee9585997c9bd4cab4513b7f11fbea6bab5ddec5f;\x20Path
-SF:=/;\x20Secure;\x20HttpOnly\r\n\r\n")%r(HTTPOptions,231,"HTTP/1\.1\x2020
-SF:0\x20OK\r\nDate:\x20Tue,\x2004\x20Nov\x202025\x2019:40:56\x20GMT\r\nCon
-SF:tent-Type:\x20application/octet-stream\r\nContent-Length:\x200\r\nConne
-SF:ction:\x20close\r\nSet-Cookie:\x20BIGipServerpool-sirano-production\.ce
-SF:gedim\.cloud-tcp3000=!0rWtlBSTZx57HHgXIkI7F7SI9ajmivhq49PA9fb3cGF4PJbas
-SF:a4gFCPghTTz2l2nfZjxqqn4R02rIjKBik3tjKwCDrQc;\x20path=/;\x20Httponly;\x2
-SF:0Secure;\x20SameSite=Strict\r\nStrict-Transport-Security:\x20max-age=31
-SF:536000;\x20includeSubDomains\r\nSet-Cookie:\x20TS01ac8ac8=01352d3811c9e
-SF:8219028b71af8584358d0dd0d22e84fdbf6618e88e2cf5b680377217367e1dc976fd839
-SF:9ee3639c820dc9f672a57c;\x20Path=/;\x20Secure;\x20HttpOnly\r\n\r\n")%r(F
-SF:ourOhFourRequest,231,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2004\x20
-SF:Nov\x202025\x2019:40:57\x20GMT\r\nContent-Type:\x20application/octet-st
-SF:ream\r\nContent-Length:\x200\r\nConnection:\x20close\r\nSet-Cookie:\x20
-SF:BIGipServerpool-sirano-production\.cegedim\.cloud-tcp3000=!CaQMImkwn7tH
-SF:zHUXIkI7F7SI9ajmivz3qAX4c3AM99HghwjG2fr3ofUDTet3jo3g2n/7\+PoSwdkryjrBjW
-SF:jvrHYUmUHO;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nSt
-SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nS
-SF:et-Cookie:\x20TS01ac8ac8=01352d3811bbaed18ce0f68697c0505b295be1393ce7f0
-SF:026c05fb9cfe3145fd0b229a2d941dad466f8e1fe79fb24b2fa7c7404fb3;\x20Path=/
-SF:;\x20Secure;\x20HttpOnly\r\n\r\n");
+SF:20BIGipServerpool-sirano-production\.cegedim\.cloud-tcp3000=!hQoc87P5SX
+SF:C\+gAgXIkI7F7SI9ajmigsCakTv27rOzpI3MqgYXs71q/s/EN/KoRDDcIqokVIRw4mitg8/
+SF:QSf3nXS6F1s\+;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\
+SF:nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r
+SF:\nSet-Cookie:\x20TS01ac8ac8=01352d3811c92ffcf9bb136783e30b82fc4ed72c90f
+SF:6d7726cbc93ce7777f8e5d952a91df2b0b3b356dbac8f68a3a4721613f680e3;\x20Pat
+SF:h=/;\x20Secure;\x20HttpOnly\r\n\r\n")%r(HTTPOptions,231,"HTTP/1\.1\x202
+SF:00\x20OK\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2013:54:27\x20GMT\r\nCo
+SF:ntent-Type:\x20application/octet-stream\r\nContent-Length:\x200\r\nConn
+SF:ection:\x20close\r\nSet-Cookie:\x20BIGipServerpool-sirano-production\.c
+SF:egedim\.cloud-tcp3000=!L0uvogPa9d4cT4EXIkI7F7SI9ajmip4m3\+sS4tuh7eXe46m
+SF:32RFy6Vykj\+weJylUhOiuO6nji/ogf\+RtIGV44xMinjbC;\x20path=/;\x20Httponly
+SF:;\x20Secure;\x20SameSite=Strict\r\nStrict-Transport-Security:\x20max-ag
+SF:e=31536000;\x20includeSubDomains\r\nSet-Cookie:\x20TS01ac8ac8=01352d381
+SF:1fef64cdbdac8acfa5e8689d20998112b753617750526d935fd50d42f2fb6f7ee1c8766
+SF:0581e3fe5968b4a231dbea5adb;\x20Path=/;\x20Secure;\x20HttpOnly\r\n\r\n")
+SF:%r(FourOhFourRequest,231,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2008
+SF:\x20Nov\x202025\x2013:54:27\x20GMT\r\nContent-Type:\x20application/octe
+SF:t-stream\r\nContent-Length:\x200\r\nConnection:\x20close\r\nSet-Cookie:
+SF:\x20BIGipServerpool-sirano-production\.cegedim\.cloud-tcp3000=!QaafhfPa
+SF:LqIa/LwXIkI7F7SI9ajmihzjLiLAS5lY9IsURe54d6uDCmLMJwnE0ugVKBycaYbzpTD0L65
+SF:U16t9tZMBxgI7;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\
+SF:nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r
+SF:\nSet-Cookie:\x20TS01ac8ac8=01352d381126db20201ba8110b50d10bcb842379e77
+SF:d8189c308fa73553a2060f7d629d70d12b70c23ccdbe3680095290e515aa1b5;\x20Pat
+SF:h=/;\x20Secure;\x20HttpOnly\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 19:43:21 2025 -- 1 IP address (1 host up) scanned in 165.13 seconds
+# Nmap done at Sat Nov  8 13:56:50 2025 -- 1 IP address (1 host up) scanned in 162.99 seconds

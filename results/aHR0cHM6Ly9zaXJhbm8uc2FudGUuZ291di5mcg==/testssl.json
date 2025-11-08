@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered with final"
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
           }
 ,         {
               "id"           : "NPN",
@@ -160,34 +160,6 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
-              "id"           : "cipher_order-tls1_3",
-              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "server"
-          }
-,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "cipher-tls1_3_x1302",
-              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "cipherorder_TLSv1_3",
-              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
-          }
-,         {
               "id"           : "cipher_order",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
@@ -206,7 +178,7 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -216,32 +188,18 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
-              "id"           : "DH_groups",
-              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ffdhe3072 ffdhe4096"
-          }
-,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
-          }
-,         {
-              "id"           : "FS_TLS13_sig_algs",
-              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
+              "severity"     : "LOW",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -279,11 +237,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "certificate_compression",
+              "id"           : "cert_compression",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "none"
+              "finding"      : "N/A"
           }
 ,         {
               "id"           : "clientAuth",
@@ -332,7 +290,7 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "28067A3EC8CF245DDACC22E6A436C08E"
+              "finding"      : "2782DF368A92499234362C47623E7F00"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -346,21 +304,21 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "9257AF42B295B655DC33BE5B63B92F8DA38994C8"
+              "finding"      : "C1B9707FA57DCF911C5436BAE9D19C107746A735"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "136A3C6F0CAB35EBC54D2DC56ACAFFCCE2AA76E59659AF3A12B1B6E295DFA8FA"
+              "finding"      : "AD1DD2B4F6306F00CE67B9C1728DA18E2B783C7C92F1873094D3F5955C987425"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIIXzCCBkegAwIBAgIQKAZ6PsjPJF3azCLmpDbAjjANBgkqhkiG9w0BAQsFADB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTAeFw0yNTA5MDEwMDAwMDBaFw0yNTExMjkyMzU5NTlaMIGdMQswCQYDVQQGEwJGUjEOMAwGA1UEBwwFUEFSSVMxSTBHBgNVBAoMQFNFQ1JFVEFSSUFUIEdFTkVSQUwgREVTIE1JTklTVEVSRVMgQ0hBUkdFUyBERVMgQUZGQUlSRVMgU09DSUFMRVMxHTAbBgNVBAMMFHNpcmFuby5zYW50ZS5nb3V2LmZyMRQwEgYDVQQFEwtTMzU2ODAwMDQyMzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAOMLBDIDhQPIDvZR9ON/oRI/PWcdki0wHBuK6PoeYJyai+N6lJzGNlo5GOwhAy1y2P6gN2AZ93JR4DJOaSLSpzNGIiULsR3Sjv0l0LR9wps8t7zXqGiGrXW1lrglfnKs15NiSnOEunJBRqWOCWq2LbQx1bgxetJ+FPKrKLJlZv/C36d1f0SDkyqQ6SdnSCFz1iJ3kiB/cMWX20oYtI0U23axvLXBNu1vucawAaUdjVfAykhgMohLN4BaJ0VX7PWw9VqSZ9BrlgNrsEnkXhklkc8r8ZBufkQNWvQrg4kKg71FqoHMir1eINnIo1YqOgWY3tLQXxdHlEi7JUGjeYhtKP39kU/HLD3FB++1S+02PY75d5daOKN+10ODdQD/8upT3rseKVOHlbbECryNjKP0Uw23BU1G3jf5oxbmAEln4NLTygtSd/SJCpUnd5KpFI4IJmGcIn92DgZJpNJV9Hm0/J9dzS6wMeecWhfW0PrVq9SK2sEWgQXWEo+ZjVGfVUYqGQIDAQABo4IDPzCCAzswXwYIKwYBBQUHAQEEUzBRME8GCCsGAQUFBzAChkNodHRwOi8vY2VydC5jZXJ0aWduYS5jb20vQ2VydGlnbmFTZXJ2ZXJBdXRoZW50aWNhdGlvbk9WQ1BFVUNBRzEuY2VyMB8GA1UdIwQYMBaAFKBy5kbEMFzkrcIcwtViOJiBWlSmMAwGA1UdEwEB/wQCMAAwUwYDVR0gBEwwSjAIBgYEAI96AQcwNAYLKoF6AYExARcBAQEwJTAjBggrBgEFBQcCARYXaHR0cDovL2Nwcy5jZXJ0aWduYS5jb20wCAYGZ4EMAQICMFMGA1UdHwRMMEowSKBGoESGQmh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hU2VydmVyQXV0aGVudGljYXRpb25PVkNQRVVDQUcxLmNybDATBgNVHSUEDDAKBggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBaAwOQYDVR0RBDIwMIIYd3d3LnNpcmFuby5zYW50ZS5nb3V2LmZyghRzaXJhbm8uc2FudGUuZ291di5mcjAdBgNVHQ4EFgQUw+sKsuxFuFCMXHNKlga6Zm6nwJgwggF+BgorBgEEAdZ5AgQCBIIBbgSCAWoBaAB1ACjigTj9gyFF6anWqnU3bYN3qIUSs8B/ckFIIdy96YxmAAABmQVVtmAAAAQDAEYwRAIgP7uexL9A51/8ju6lCvEecYlqPJ7Y8FGnRFQYiSQXyBcCICKKSu5HwkppoZTkrEgnt3MwFjkPz0qZTIh+gUq/Y3RxAHcADeHyMCvTDcFAYhIJ6lUu/Ed0fLHX6TDvDkIetH5OqjQAAAGZBVW5YQAABAMASDBGAiEA9PQ2Pw/LDnWvVEypuVUfbF3MWLL8SMr5B4DMHOg8ym8CIQDJxrb4Trt3s15YSflQwBgH7PZnkchbZBA7nCNEcYJhmQB2AN3cyjSV1+EWBeeVMvrHn/g9HFDf2wA6FBJ2Ciysu8gqAAABmQVVt1kAAAQDAEcwRQIgY7NbVVk5vU7iMwOD1ZhSd98CQjmSpGUK7ACcv+cSjOACIQDqEbNShMR8Kq+fnrI4jA/rpAIYxMZXaEt4CloMzP7uVTANBgkqhkiG9w0BAQsFAAOCAgEAwsdWTUXAG6tzhBQSQhYWFcBGY87dWCeUgp+1lLj0UxXfFtM/RCfLnAPOctxxwMdetJO+sRLfbeGYWI07dMJnOS3XfIsFcPbYRO+pQEQVGnUdn9MBh3/F3kBpHPyyYmTDIpW+rIWsucGJXiyFqh/tUO8eVOKh11bIqjbDkSQoW5QHNGf1xhxlHRGl/WD8kd4nePCmLLfZ2qxSZZSu1kJcDbPt5RYfY1BGEiWoIFEwXP6CFl+JL7PqkHxeWISkwI/hDkY7MLMTWbKYLtYKjp7xtLx8fyWbGC29nHK1QbzVWpRosKlW7kTLDcFOMPmoqueZ2kxeKn8ReYe18veHtdxNFAwmWqUx/EykMC4XYboBqUea4luIBIEmyp53QrnMAryMe3iRF+JxXAFZ/YZqxhKk1dzRbKnN/hIuisUo2jkyvKg9x3eTmqvN/amLK9oH/+hHBf3kKgBAWczjilBtkbzr2LLZEkegwUJeLpvpfXBbk1gdwSdVHjyHNP0HQiUpEAnuYQaG/nrCRZ4Z1vUos85MCveRICug+PNB88lv76bTfxQ0l4xIoAnnsuIaZ4lZm0vm5Epe9+Z+sQAqs1lwzqIBEYX3/WB6d22Zr10D9QO1ldCyjQResJHEvV3bBPsQZZCr8KBCZqKW4474biFCD+NlYlvENSwHUyz6eT2zA6DgtXc=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -381,7 +339,7 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "www.sirano.sante.gouv.fr sirano.sante.gouv.fr"
+              "finding"      : "sirano.sante.gouv.fr www.sirano.sante.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
@@ -408,22 +366,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (25)"
+              "severity"     : "OK",
+              "finding"      : "86 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-09-01 00:00"
+              "finding"      : "2025-11-05 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-11-29 23:59"
+              "severity"     : "OK",
+              "finding"      : "2026-02-02 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -472,7 +430,7 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "issue=certigna.fr"
+              "finding"      : "issue=certigna.fr, issue=letsencrypt.org"
           }
 ,         {
               "id"           : "certificate_transparency",
@@ -570,7 +528,7 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762285204"
+              "finding"      : "1762610014"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -792,7 +750,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=136A3C6F0CAB35EBC54D2DC56ACAFFCCE2AA76E59659AF3A12B1B6E295DFA8FA"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=AD1DD2B4F6306F00CE67B9C1728DA18E2B783C7C92F1873094D3F5955C987425"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -867,63 +825,63 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -972,35 +930,35 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -1014,42 +972,42 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1063,21 +1021,21 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1091,7 +1049,7 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1161,13 +1119,20 @@
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A+"
+              "finding"      : "A-"
+          }
+,         {
+              "id"           : "grade_cap_warning_1",
+              "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS 1.3 is not supported"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "sirano.sante.gouv.fr/185.194.83.130",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "78"
+              "finding"      : "56"
           }
 ]
