@@ -19,9 +19,9 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on runnervmf2e7y:/home/testssl/bin/openssl.Linux.x86_64
+  on runnervmw9dnm:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-11-05 07:15:14        --&gt;&gt; 143.126.249.17:443 (www.galileo.finances.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-11-08 19:42:19        --&gt;&gt; 143.126.249.17:443 (www.galileo.finances.gouv.fr) &lt;&lt;--</span>
 
  rDNS (143.126.249.17):  --
  Service detected:       HTTP
@@ -66,10 +66,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH<span style="color:#008817;"> 256</span>   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
  xc028   ECDHE-RSA-AES256-SHA384           ECDH<span style="color:#008817;"> 256</span>   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384              
  xc027   ECDHE-RSA-AES128-SHA256           ECDH<span style="color:#008817;"> 256</span>   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256              
-<u>TLSv1.3</u><span style="color:#cd00cd;"> Oops: TCP connect problem</span>
-
-<span style="color:#cd00cd;">Unable to open a socket to 143.126.249.17:443. </span> (server order)
+<u>TLSv1.3</u> (server order)
  x1302   TLS_AES_256_GCM_SHA384            ECDH<span style="color:#008817;"> 253</span>   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH<span style="color:#008817;"> 253</span>   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 253</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+ x1304   TLS_AES_128_CCM_SHA256            ECDH<span style="color:#008817;"> 253</span>   AESCCM      128      TLS_AES_128_CCM_SHA256                             
 
 <span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;font-weight:bold;">yes (OK)</span> -- TLS 1.3 and below
 
@@ -107,45 +108,43 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Certificate Compression      </span>none
 <span style="font-weight:bold;"> Client Authentication        </span>none
 <span style="font-weight:bold;"> Signature Algorithm          </span><span style="color:#008817;">SHA256 with RSA</span>
-<span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
+<span style="font-weight:bold;"> Server key size              </span>RSA <span style="color:#008817;">3072</span> bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication
-<span style="font-weight:bold;"> Serial                       </span>074CD5898CB537D041C7014BCD2005B9 (OK: length 16)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 A13DF63EA754DF852D46C3016422CD64CF09AE41
-                              SHA256 E7E1242F5C8E2797E50DD1FE1746F17CC78E5A374AB5786AA76E4F0972BFFC44
+<span style="font-weight:bold;"> Serial                       </span>1BECE1F2FB695414A461BF481728EA6B (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 8C3B3E5113C7C20A38EA11CDA8BE8271029AAEB6
+                              SHA256 80913FFD58DFF2D4EE142E6C4B5286A601624E9B7DFAE1B20E83E6FA8C5C4F7E
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>www.mieist.finances.gouv.fr </i>
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>www.mieist.finances.gouv.fr
-                              nova.entreprises.gouv.fr
-                              www.indispo.finances.gouv.fr
-                              calypso.finances.gouv.fr extranet.sgae.gouv.fr
-                              www.galileo.finances.gouv.fr </i>
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>www.indispo.finances.gouv.fr
+                              extranet.sgae.gouv.fr picsel.finances.gouv.fr
+                              www.mieist.finances.gouv.fr
+                              www.galileo.finances.gouv.fr
+                              calypso.finances.gouv.fr nova.entreprises.gouv.fr
+                              matomo.finances.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#e52207;">expires &lt; 30 days (6)</span> (2025-08-14 00:00 --&gt; 2025-11-11 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">87 &gt;= 60 days</span> (2025-11-06 00:00 --&gt; 2026-02-03 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
-                              http://crl.dhimyotis.com/servicesca.crl
-<span style="font-weight:bold;"> OCSP URI                     </span>http://servicesca.ocsp.dhimyotis.com
-                              http://servicesca.ocsp.certigna.fr
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl
+<span style="font-weight:bold;"> OCSP URI                     </span>--
+<span style="font-weight:bold;"> OCSP stapling                </span>not offered
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#008817;">available</span> - please check for match with &quot;Issuer&quot; below
                               <i>issue=certeurope.fr, issue=certigna.com,
                               issue=digicert.com, issue=globalsign.com,
                               issue=sectigo.com</i>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
-<span style="font-weight:bold;"> Certificates provided</span>        3
-<span style="font-weight:bold;"> Issuer                       </span><i>Certigna Services CA</i> (<i>DHIMYOTIS</i> from <i>FR</i>)
-<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#e52207;">expires &lt;= 20 days</span> (2025-11-22 11:33). <i>Certigna Services CA</i> &lt;-- <i>Certigna</i>
-                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2027-06-29 15:13). <i>Certigna</i> &lt;-- <i>Certigna</i>
+<span style="font-weight:bold;"> Certificates provided</span>        2
+<span style="font-weight:bold;"> Issuer                       </span><i>Certigna Server Authentication OVCP EU CA G1</i> (<i>Certigna</i> from <i>FR</i>)
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2027-06-28 09:49). <i>Certigna Server Authentication OVCP EU CA G1</i> &lt;-- <i>Certigna</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-2 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">400 days</span>=34560000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>Apache&apos;
@@ -181,7 +180,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services, see
-                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=E7E1242F5C8E2797E50DD1FE1746F17CC78E5A374AB5786AA76E4F0972BFFC44" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=E7E1242F5C8E2797E50DD1FE1746F17CC78E5A374AB5786AA76E4F0972BFFC44</a>
+                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=80913FFD58DFF2D4EE142E6C4B5286A601624E9B7DFAE1B20E83E6FA8C5C4F7E" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=80913FFD58DFF2D4EE142E6C4B5286A601624E9B7DFAE1B20E83E6FA8C5C4F7E</a>
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no DH key detected with &lt;= TLS 1.2
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     potentially <span style="color:#a86437;">VULNERABLE</span>, uses obsolete cipher block chaining ciphers with TLS, see server prefs.
@@ -240,7 +239,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-11-05 07:24:21 [ 550s] --&gt;&gt; 143.126.249.17:443 (www.galileo.finances.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-11-08 19:47:41 [ 324s] --&gt;&gt; 143.126.249.17:443 (www.galileo.finances.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
