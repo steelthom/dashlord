@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Tue Nov  4 08:40:08 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln moxy.analyse.ensm.sports.gouv.fr
+# Nmap 7.92 scan initiated Sat Nov  8 02:37:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln moxy.analyse.ensm.sports.gouv.fr
 Nmap scan report for moxy.analyse.ensm.sports.gouv.fr (91.121.60.176)
-Host is up (0.14s latency).
+Host is up (0.092s latency).
 rDNS record for 91.121.60.176: zensa.ensm.org
 Not shown: 993 filtered tcp ports (no-response)
 PORT     STATE SERVICE    VERSION
@@ -52,6 +52,7 @@ PORT     STATE SERVICE    VERSION
 |     	HTTPD:3512E3F62E72F03B59F5E9CF8ECB3EEF	9.1	https://vulners.com/httpd/HTTPD:3512E3F62E72F03B59F5E9CF8ECB3EEF
 |     	HTTPD:2C227652EE0B3B961706AAFCACA3D1E1	9.1	https://vulners.com/httpd/HTTPD:2C227652EE0B3B961706AAFCACA3D1E1
 |     	FD2EE3A5-BAEA-5845-BA35-E6889992214F	9.1	https://vulners.com/githubexploit/FD2EE3A5-BAEA-5845-BA35-E6889992214F	*EXPLOIT*
+|     	FBC8A8BE-F00A-5B6D-832E-F99A72E7A3F7	9.1	https://vulners.com/githubexploit/FBC8A8BE-F00A-5B6D-832E-F99A72E7A3F7	*EXPLOIT*
 |     	E606D7F4-5FA2-5907-B30E-367D6FFECD89	9.1	https://vulners.com/githubexploit/E606D7F4-5FA2-5907-B30E-367D6FFECD89	*EXPLOIT*
 |     	D8A19443-2A37-5592-8955-F614504AAF45	9.1	https://vulners.com/githubexploit/D8A19443-2A37-5592-8955-F614504AAF45	*EXPLOIT*
 |     	CVE-2024-40898	9.1	https://vulners.com/cve/CVE-2024-40898
@@ -246,40 +247,40 @@ PORT     STATE SERVICE    VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     xmpp: 
-|       version: 1.0
-|     unknown: 
-|     features: 
-|     capabilities: 
-|     auth_mechanisms: 
 |     compression_methods: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve moxy.analyse.ensm.sports.gouv.fr
 |       stream:stream
-|_      (timeout)
+|       (timeout)
+|     capabilities: 
+|     features: 
+|     xmpp: 
+|       version: 1.0
+|_    unknown: 
 5269/tcp open  jabber     Prosody Jabber server (dialback)
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
-|     unknown: 
-|     stream_id: d7219481-e9cc-4a5b-a9b0-e1defdcaf129
-|     features: 
-|     capabilities: 
-|     auth_mechanisms: 
 |     compression_methods: 
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve moxy.analyse.ensm.sports.gouv.fr
 |       stream:stream
-|_      (timeout)
+|       (timeout)
+|     stream_id: 95e2d0a5-006c-4977-b50f-150514fe998d
+|     capabilities: 
+|     features: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|_    unknown: 
 5280/tcp open  http       Prosody XMPP BOSH httpd
 Service Info: Host:  www.ensastage.net; Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 08:40:33 2025 -- 1 IP address (1 host up) scanned in 25.21 seconds
+# Nmap done at Sat Nov  8 02:37:52 2025 -- 1 IP address (1 host up) scanned in 21.77 seconds
