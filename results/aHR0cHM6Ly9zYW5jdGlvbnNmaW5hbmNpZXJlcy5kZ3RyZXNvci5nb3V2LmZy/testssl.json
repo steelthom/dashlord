@@ -731,7 +731,7 @@
               "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "258 >= 60 days"
+              "finding"      : "254 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -877,135 +877,15 @@
               "id"           : "HTTP_status_code",
               "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header request failed"
           }
 ,         {
-              "id"           : "HTTP_clock_skew",
+              "id"           : "scanProblem",
               "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1762285852"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "400 days (=34560000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No Server banner line in header, interesting!"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/2 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/2 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SAMEORIGIN"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
-              "id"           : "Referrer-Policy",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "same-origin"
-          }
-,         {
-              "id"           : "X-UA-Compatible",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "IE=Edge"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "private"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header was repeatedly zero due to missing X25519/X448 curves."
           }
 ,         {
               "id"           : "heartbleed",
@@ -1073,10 +953,10 @@
               "id"           : "BREACH",
               "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "WARN",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
+              "finding"      : "Test failed as HTTP request stalled and was terminated"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1504,6 +1384,6 @@
               "ip"           : "sanctionsfinancieres.dgtresor.gouv.fr/185.114.101.201",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "285"
+              "finding"      : "162"
           }
 ]
