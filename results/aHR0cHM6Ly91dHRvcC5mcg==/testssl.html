@@ -19,12 +19,12 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on runnervmf2e7y:/home/testssl/bin/openssl.Linux.x86_64
+  on runnervmw9dnm:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-11-05 03:50:09        --&gt;&gt; 195.221.130.145:443 (uttop.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-11-08 20:22:26        --&gt;&gt; 195.221.130.145:443 (uttop.fr) &lt;&lt;--</span>
 
  rDNS (195.221.130.145): wwwv4.enit.fr.
- Service detected:       HTTP
+ Service detected:       Couldn&apos;t determine what&apos;s running on port 443, assuming no HTTP service =&gt; skipping all HTTP checks
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
 
@@ -101,4 +101,46 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>no -- no lifetime advertised
 <span style="font-weight:bold;"> SSL Session ID support       </span>no
 <span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
-<span style="font-weight:bold;"> TLS clock skew</span>               
+<span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
+<span style="font-weight:bold;"> Certificate Compression      </span>none
+<span style="font-weight:bold;"> Client Authentication        </span>none
+<span style="font-weight:bold;"> Signature Algorithm          </span><span style="color:#008817;">ECDSA with SHA384</span>
+<span style="font-weight:bold;"> Server key size              </span>EC <span style="color:#008817;">256</span> bits (curve P-256)
+<span style="font-weight:bold;"> Server key usage             </span>Digital Signature
+<span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Client Authentication, TLS Web Server Authentication
+<span style="font-weight:bold;"> Serial                       </span>59F1BC10F12667C57CAD97BF58866563 (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 682DF9D50ECA1EDDF32D154FCDA42AD2BC924FF7
+                              SHA256 C5A8C19816BF792E7D3B5E61C4F85B60747305E8F8506F4E74DD3C368178A6E2
+<span style="font-weight:bold;"> Common Name (CN)             </span><i>*.uttop.fr </i>
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>*.uttop.fr uttop.fr *.lgp.enit.fr lgp.enit.fr
+                              *.enit.fr enit.fr </i>
+<span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (same w/o SNI)
+                              <span style="color:#a86437;">wildcard certificate</span> could be problematic, see other hosts at
+                              https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=C5A8C19816BF792E7D3B5E61C4F85B60747305E8F8506F4E74DD3C368178A6E2
+<span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
+<span style="font-weight:bold;"> EV cert</span> (experimental)       no 
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">187 &gt;= 60 days</span> (2025-05-15 10:10 --&gt; 2026-05-15 10:10)
+<span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.harica.gr/HARICA-GEANT-TLS-E1.crl
+<span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp-tls.harica.gr
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
+<span style="font-weight:bold;"> OCSP must staple extension   </span>--
+<span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#008817;">available</span> - please check for match with &quot;Issuer&quot; below
+                              <i>issue=harica.gr, issue=letsencrypt.org,
+                              issue=sectigo.com, issuewild=harica.gr,
+                              issuewild=letsencrypt.org, issuewild=sectigo.com</i>
+<span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
+<span style="font-weight:bold;"> Certificates provided</span>        3
+<span style="font-weight:bold;"> Issuer                       </span><i>GEANT TLS ECC 1</i> (<i>Hellenic Academic and Research Institutions CA</i> from <i>GR</i>)
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2039-12-31 11:14). <i>GEANT TLS ECC 1</i> &lt;-- <i>HARICA TLS ECC Root CA 2021</i>
+                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2029-08-31 07:44). <i>HARICA TLS ECC Root CA 2021</i> &lt;-- <i>Hellenic Academic and Research Institutions ECC RootCA 2015</i>
+<span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
+
+
+<span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
+
+<span style="font-weight:bold;"> Heartbleed</span> (CVE-2014-0160)                <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no heartbeat extension
+<span style="font-weight:bold;"> CCS</span> (CVE-2014-0224)                       <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
+<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  (applicable only for HTTP service)
+<span style="font-weight:bold;"> ROBOT                                     </span><span style="color:#008817;font-weight:bold;">Server does not support any cipher suites that use RSA key transport</span>
+<span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span>
