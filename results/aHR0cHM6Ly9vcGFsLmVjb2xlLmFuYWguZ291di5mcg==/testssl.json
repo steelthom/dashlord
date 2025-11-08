@@ -1,16 +1,1110 @@
 [
          {
-              "id"           : "scanProblem",
+              "id"           : "service",
               "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
               "port"         : "443",
-              "severity"     : "FATAL",
-              "finding"      : "Can't connect to '194.5.170.153:443' Make sure a firewall is not between you and your scanning target!"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered + downgraded to weaker protocol"
+          }
+,         {
+              "id"           : "NPN",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_OBSOLETED",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_NOFS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG_FS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipher_order-tls1_2",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc030",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 256   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc02f",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH 256   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_2_x9f",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   x9f     DHE-RSA-AES256-GCM-SHA384         DH 3072    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_x9e",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   x9e     DHE-RSA-AES128-GCM-SHA256         DH 3072    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1 secp384r1 secp521r1 X25519 X448"
+          }
+,         {
+              "id"           : "DH_groups",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "RFC3526/Oakley Group 15"
+          }
+,         {
+              "id"           : "FS_TLS12_sig_algs",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512 RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA224"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'server name/#0' 'max fragment length/#1' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'renegotiation info/#65281'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "valid for 300 seconds only (<daily)"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "yes"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "cert_compression",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "N/A"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "RSA 4096 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "062692A8D5E3785B309170AD76F3D99EEEFA"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "18"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3A185A85072F37CF0A5063E575D244FB76B9F460"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "BB64E905C0BA7CE827B81CEA0C26FE7F2683405B4D4706E4090576C5FD4E2FF4"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "opal.ecole.anah.gouv.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "nowhere.din.developpement-durable.gouv.fr"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "opal.ecole.anah.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "64 >= 30 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2025-10-13 23:08"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2026-01-11 23:08"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://r12.c.lencr.org/123.crl"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "R12 (Let's Encrypt from US)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBjCCAu6gAwIBAgIRAMISMktwqbSRcdxA9+KFJjwwDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAzMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDEMMAoGA1UEAxMDUjEyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2pgodK2+lP474B7i5Ut1qywSf+2nAzJ+Npfs6DGPpRONC5kuHs0BUT1M5ShuCVUxqqUiXXL0LQfCTUA83wEjuXg39RplMjTmhnGdBO+ECFu9AhqZ66YBAJpzkG2Pogeg0JfT2kVhgTU9FPnEwF9q3AuWGrCf4yrqvSrWmMebcas7dA8827JgvlpLThjp2ypzXIlhZZ7+7Tymy05v5J75AEaz/xlNKmOzjmbGGIVwx1Blbzt05UiDDwhYXS0jnV6j/ujbAKHS9OMZTfLuevYnnuXNnC2i8n+cF63vEzc50bTILEHWhsDp7CH4WRt/uTp8n1wBnWIEwii9Cq08yhDsGwIDAQABo4H4MIH1MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUALUp8i2ObzHom0yteD763OkM0dIwHwYDVR0jBBgwFoAUebRZ5nu25eQBc4AIiMgaWPbpm24wMgYIKwYBBQUHAQEEJjAkMCIGCCsGAQUFBzAChhZodHRwOi8veDEuaS5sZW5jci5vcmcvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMCcGA1UdHwQgMB4wHKAaoBiGFmh0dHA6Ly94MS5jLmxlbmNyLm9yZy8wDQYJKoZIhvcNAQELBQADggIBAI910AnPanZIZTKS3rVEyIV29BWEjAK/duuz8eL5boSoVpHhkkv34eoAeEiPdZLj5EZ7G2ArIK+gzhTlRQ1q4FKGpPPaFBSpqV/xbUb5UlAXQOnkHn3mFVj+qYv87/WeY+Bm4sN3Ox8BhyaU7UAQ3LeZ7N1X01xxQe4wIAAE3JVLUCiHmZL+qoCUtgYIFPgcg350QMUIWgxPXNGEncT921ne7nluI02V8pLUmClqXOsCwULw+PVOZCB7qOMxxMBoCUeL2Ll4oMpOSr5pJCpLN3tRA2s6P1KLs9TSrVhOk+7LX28NMUlIusQ/nxLJID0RhAeFtPjyOCOscQBA53+NRjSCak7P4A5jX7ppmkcJECL+S0i3kXVUy5Me5BbrU8973jZNv/ax6+ZK6TM8jWmimL6of6OrX7ZU6E2WqazzsFrLG3o2kySbzlhSgJ81Cl4tv3SbYiYXnJExKQvzf83DYotox3f0fwv7xln1A2ZLplCb0O+l/AK0YE0DS2FPxSAHi0iwMfW2nNHJrXcY3LLHD77gRgje4Eveubi2xxa+Nmk/hmhLdIETiVDFanoCrMVIpQ59XWHkzdFmoHXHBV7oibVjGSO7ULSQ7MJ1Nz51phuDJSgAIU7A0zrLnOrAj/dfrlEWRhCvAgbuwLZX1A2sjNjXoPOHbsPiy+lO1KF8/XY7\n-----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "131FCE7784016899A5A00203A9EFC80F18EBBD75580717EDC1553580930836EC"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2024-03-13 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2027-03-12 23:59"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "R12 <-- ISRG Root X1"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762574812"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Apache"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "security_headers",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "Via: 1.1 opal.ecole.anah.gouv.fr"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable, no RSA key transport cipher"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "no protocol below TLS 1.2 offered"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=BB64E905C0BA7CE827B81CEA0C26FE7F2683405B4D4706E4090576C5FD4E2FF4"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "RFC3526/Oakley Group 15"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "not vulnerable, no SSL3 or TLS1"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_11_12",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_13_14",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_15",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_101_win10",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chromium_137_win11",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_100_win10",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_137_win11",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_101_win10_21h2",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-edge_133_win11_23h2",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_184_ios_184",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_154_osx_1231",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_184_osx_154",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_80442",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_1102",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_1703",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java_2106",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-go_1178",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-libressl_336",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_315",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_350",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_mail_16_0",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_91_9",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009r from 2025-05-16)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "100"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "30"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "36"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "96"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "A-"
+          }
+,         {
+              "id"           : "grade_cap_warning_1",
+              "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS 1.3 is not supported"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "opal.ecole.anah.gouv.fr/194.5.170.153",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "Scan interrupted"
+              "severity"     : "INFO",
+              "finding"      : "124"
           }
 ]
