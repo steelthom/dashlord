@@ -1,7 +1,7 @@
-# Nmap 7.92 scan initiated Tue Nov  4 15:17:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln prevention.moncompteformation.gouv.fr
-Nmap scan report for prevention.moncompteformation.gouv.fr (157.185.160.33)
-Host is up (0.0052s latency).
-Other addresses for prevention.moncompteformation.gouv.fr (not scanned): 157.185.177.205
+# Nmap 7.92 scan initiated Sat Nov  8 07:27:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln prevention.moncompteformation.gouv.fr
+Nmap scan report for prevention.moncompteformation.gouv.fr (140.150.36.51)
+Host is up (0.011s latency).
+Other addresses for prevention.moncompteformation.gouv.fr (not scanned): 157.185.175.102
 Not shown: 830 closed tcp ports (reset)
 PORT      STATE SERVICE    VERSION
 33/tcp    open  http       nginx
@@ -42,7 +42,7 @@ PORT      STATE SERVICE    VERSION
 2100/tcp  open  http       nginx
 2323/tcp  open  3d-nfsd?
 | fingerprint-strings: 
-|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, SIPOptions, TerminalServerCookie: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest, SIPOptions: 
 |     HTTP/1.0 404 FAIL
 |     Content-length:5
 |     Connection:Close
@@ -78,13 +78,13 @@ PORT      STATE SERVICE    VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     auth_mechanisms: 
 |     xmpp: 
+|     capabilities: 
 |     errors: 
 |       (timeout)
-|     compression_methods: 
 |     unknown: 
-|     capabilities: 
-|     auth_mechanisms: 
+|     compression_methods: 
 |_    features: 
 5280/tcp  open  http       nginx
 5566/tcp  open  http       nginx
@@ -195,18 +195,16 @@ PORT      STATE SERVICE    VERSION
 58080/tcp open  http       nginx
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port2323-TCP:V=7.92%I=7%D=11/4%Time=690A1931%P=x86_64-alpine-linux-musl
+SF-Port2323-TCP:V=7.92%I=7%D=11/8%Time=690EF0F3%P=x86_64-alpine-linux-musl
 SF:%r(GetRequest,3E,"HTTP/1\.0\x20404\x20FAIL\r\nContent-length:5\r\nConne
 SF:ction:Close\r\n\r\nERROR")%r(HTTPOptions,3E,"HTTP/1\.0\x20404\x20FAIL\r
 SF:\nContent-length:5\r\nConnection:Close\r\n\r\nERROR")%r(RTSPRequest,3E,
 SF:"HTTP/1\.0\x20404\x20FAIL\r\nContent-length:5\r\nConnection:Close\r\n\r
-SF:\nERROR")%r(TerminalServerCookie,3E,"HTTP/1\.0\x20404\x20FAIL\r\nConten
-SF:t-length:5\r\nConnection:Close\r\n\r\nERROR")%r(FourOhFourRequest,3E,"H
-SF:TTP/1\.0\x20404\x20FAIL\r\nContent-length:5\r\nConnection:Close\r\n\r\n
-SF:ERROR")%r(SIPOptions,3E,"HTTP/1\.0\x20404\x20FAIL\r\nContent-length:5\r
-SF:\nConnection:Close\r\n\r\nERROR");
+SF:\nERROR")%r(FourOhFourRequest,3E,"HTTP/1\.0\x20404\x20FAIL\r\nContent-l
+SF:ength:5\r\nConnection:Close\r\n\r\nERROR")%r(SIPOptions,3E,"HTTP/1\.0\x
+SF:20404\x20FAIL\r\nContent-length:5\r\nConnection:Close\r\n\r\nERROR");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port6666-TCP:V=7.92%I=7%D=11/4%Time=690A1948%P=x86_64-alpine-linux-musl
+SF-Port6666-TCP:V=7.92%I=7%D=11/8%Time=690EF10A%P=x86_64-alpine-linux-musl
 SF:%r(RPCCheck,1C,"\x80\x03\0\x04\0\0\0\x14\0\0\0\x02\0\0\0\x04\x7f\xff\xf
 SF:f\xff\0\0\0\x07\x01\0\0\0")%r(SSLSessionReq,1C,"\x80\x03\0\x04\0\0\0\x1
 SF:4\0\0\0\x02\0\0\0\x04\x7f\xff\xff\xff\0\0\0\x07\x01\0\0\0")%r(TerminalS
@@ -225,4 +223,4 @@ SF:\0\x07\x01\0\0\0")%r(afp,1C,"\x80\x03\0\x04\0\0\0\x14\0\0\0\x02\0\0\0\x
 SF:04\x7f\xff\xff\xff\0\0\0\x07\x01\0\0\0");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 15:20:44 2025 -- 1 IP address (1 host up) scanned in 192.71 seconds
+# Nmap done at Sat Nov  8 07:30:26 2025 -- 1 IP address (1 host up) scanned in 186.89 seconds
