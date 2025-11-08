@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -290,35 +290,35 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "valid for 7200 seconds only (<daily)"
+              "finding"      : "no -- no lifetime advertised"
           }
 ,         {
               "id"           : "SSL_sessionID_support",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "yes"
+              "finding"      : "no"
           }
 ,         {
               "id"           : "sessionresumption_ticket",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "supported"
+              "finding"      : "not supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "No Session ID, no resumption"
           }
 ,         {
               "id"           : "TLS_timestamp",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "off by -4 seconds from your localtime"
+              "finding"      : "off by -2 seconds from your localtime"
           }
 ,         {
               "id"           : "certificate_compression",
@@ -374,7 +374,7 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "065EF8493874EE6075133ABBCB541C98A764"
+              "finding"      : "05213D57CD6696C030284CC1B7FC5C01D65C"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -388,21 +388,21 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "E4B6425AF52EBADB47FA3903453CFA99FE51A8AF"
+              "finding"      : "C602F519614336A7D95D2569CF5B45C3C89EFA28"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "CDE6D92AD8E6ACD77A95D8836A9B4748FFF01AA7C8A68DED00B3D21C58FF7542"
+              "finding"      : "FE7290C7A30B3DD691C40D3EB96A54B7E8CB5598F1F7F4DA4CCFC9DF0C023342"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFGTCCBAGgAwIBAgISBl74STh07mB1Ezq7y1QcmKdkMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTMwHhcNMjUwOTA4MjEzNzQyWhcNMjUxMjA3MjEzNzQxWjARMQ8wDQYDVQQDEwZwc2wuZXUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQChHqVeLP4KeAjI62Ev147IMi8snui1BxJetQdBnd+mHQXgFA1m0Vh/sZFAp76EZ6N3H/YZwEfApRLx1TSGbVadU3feXViZmAw6ietuisVLeMZ0Z5mox4OeFgPrW7KLL+Xq3hLoeC+/9tR1YsPyonV9n0vfGSVxXWdCJK62A7k/+PZP46Th6S28BUVheb2GRfPBDxTqIxbDCtXkKzDyxKlzvhc9PWi+psYM7XJ9L3LHSxFPfP5P4wmPBVPq8+1Gm4Q+YhFZ5sd33jAEEzkFvCL1qmsMgcMsO03JDatLgDP52gfl8AQ469wgE7UmEGNj6j3xzuDn0eOZTtukxtHVPrhlAgMBAAGjggJHMIICQzAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFNY+Kr/H9CpnT233Go9cfgT0Qyg6MB8GA1UdIwQYMBaAFOernw8sM6BT015PeMiyhA471pIzMDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0cDovL3IxMy5pLmxlbmNyLm9yZy8wQQYDVR0RBDowOIIOZW5hbW9tYS5wc2wuZXWCBnBzbC5ldYIScmVjcnV0ZW1lbnQucHNsLmV1ggp3d3cucHNsLmV1MBMGA1UdIAQMMAowCAYGZ4EMAQIBMC8GA1UdHwQoMCYwJKAioCCGHmh0dHA6Ly9yMTMuYy5sZW5jci5vcmcvMTAxLmNybDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB2ABoE/0nQVB1Ar/agw7/x2MRnL07s7iNAaJhrF0Au3Il9AAABmSt4+LgAAAQDAEcwRQIgReBnk0CjrQBN2VLdR/G/HnjzYLt7SPXg64rOvE80ukgCIQDuYnnbJ07KMDFeq/u8SAQHV4SusUU+kvl8QLA+eDKVWAB2AMz7D2qFcQll/pWbU87psnwi6YVcDZeNtql+VMD+TA2wAAABmSt5AHwAAAQDAEcwRQIgC/409oFwL3guVr2niFh7KjndPenv0VimCvqWHl7e5G4CIQCcArLme3ms9aJw/DIRDECHUiWrmQ2RPgIy3hausXPiDDANBgkqhkiG9w0BAQsFAAOCAQEAHFfHOSH/RPPzFD8by147PboLd8te9MM+QA2fQ6OzzR2vJrM+UUbRMjzmEU+yIsE9GbyBYnCYhfbvei3aVFErKEdEnKKpvKvLOObBM1QBlGoZFanP1IhmydiUSk3I/q9DiwODAbzcoII0wvgnMZ8t6AehIN8sJ8wuOaRmgFm8w2dA0TIOf09aRv+aFHn02gwFZom16KbGtDsaUb+hiAHWxYeIyLojyJd4upxd1fJ86ME9DVZgtD+eCNhkUHXk3DJozHlaUT/YM6ZgmxTkilr+Ied404S9K4nOQPfgxbCV07IqhS4uOUnI/60GYuBIrQz+zVL/2VSQ262OU6WRugFfkg==\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFGTCCBAGgAwIBAgISBSE9V81mlsAwKEzBt/xcAdZcMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTIwHhcNMjUxMTA3MjEzMDUwWhcNMjYwMjA1MjEzMDQ5WjARMQ8wDQYDVQQDEwZwc2wuZXUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQChHqVeLP4KeAjI62Ev147IMi8snui1BxJetQdBnd+mHQXgFA1m0Vh/sZFAp76EZ6N3H/YZwEfApRLx1TSGbVadU3feXViZmAw6ietuisVLeMZ0Z5mox4OeFgPrW7KLL+Xq3hLoeC+/9tR1YsPyonV9n0vfGSVxXWdCJK62A7k/+PZP46Th6S28BUVheb2GRfPBDxTqIxbDCtXkKzDyxKlzvhc9PWi+psYM7XJ9L3LHSxFPfP5P4wmPBVPq8+1Gm4Q+YhFZ5sd33jAEEzkFvCL1qmsMgcMsO03JDatLgDP52gfl8AQ469wgE7UmEGNj6j3xzuDn0eOZTtukxtHVPrhlAgMBAAGjggJHMIICQzAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFNY+Kr/H9CpnT233Go9cfgT0Qyg6MB8GA1UdIwQYMBaAFAC1KfItjm8x6JtMrXg++tzpDNHSMDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0cDovL3IxMi5pLmxlbmNyLm9yZy8wQQYDVR0RBDowOIIOZW5hbW9tYS5wc2wuZXWCBnBzbC5ldYIScmVjcnV0ZW1lbnQucHNsLmV1ggp3d3cucHNsLmV1MBMGA1UdIAQMMAowCAYGZ4EMAQIBMC4GA1UdHwQnMCUwI6AhoB+GHWh0dHA6Ly9yMTIuYy5sZW5jci5vcmcvOTMuY3JsMIIBBQYKKwYBBAHWeQIEAgSB9gSB8wDxAHYASZybad4dfOz8Nt7Nh2SmuFuvCoeAGdFVUvvp6ynd+MMAAAGaYHA/NwAABAMARzBFAiEAyAHvHYQY47d9kaYOQWFA01hMrnpEcJTHGZZVzZkP33wCIFJNM/8WGgqHc1ysxgxSzu0G/ngRkaB+zfHtMKfRcaWfAHcAlpdkv1VYl633Q4doNwhCd+nwOtX2pPM2bkakPw/KqcYAAAGaYHA/ggAABAMASDBGAiEA3iDufO7Oql/o0YoCfd5fRLaKg92kIru5yXEWolYuWzcCIQDZ3P/CESZnzFAEMJDMVx08wu2LSBxto45VmB2WenDaBDANBgkqhkiG9w0BAQsFAAOCAQEAxfZGyDXOc4YGel7Y4A2WAHhF2RX3lrGgI4K2oBSlIQ1wE6att+FMBy3HR9jSISMLwvRtBsbwHdDYy9Gcqq+Xj3tUq74eUpdRzIIsCUzi2zviv8NIQmAVGNdHbkQ4lj80pHQJFreardZHxHuR9JgnwfaDnOELQm3kjxORQvQsH8mrxtAlCIQIF81dDtrOQULCtOYF8bhXNCWzqrMJ7QYiYVoLTPjw0XC2f/HTmmrrtJBjA7NB3sVXzqXqJz6CB+0BQZTk0cQDmUUbDlP4zUDpjwAzYlM5CZhhiSws0VItYmdPoFN7810JsED0CWxH6ZG+o1XXLtVP2JDDiNvFuEUQ0w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -451,21 +451,21 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "33 >= 30 days"
+              "finding"      : "89 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-09-08 21:37"
+              "finding"      : "2025-11-07 21:30"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2025-12-07 21:37"
+              "finding"      : "2026-02-05 21:30"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -486,7 +486,7 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://r13.c.lencr.org/101.crl"
+              "finding"      : "http://r12.c.lencr.org/93.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
@@ -542,21 +542,21 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R13 (Let's Encrypt from US)"
+              "finding"      : "R12 (Let's Encrypt from US)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBTCCAu2gAwIBAgIQWgDyEtjUtIDzkkFX6imDBTANBgkqhkiG9w0BAQsFADBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJuZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBYMTAeFw0yNDAzMTMwMDAwMDBaFw0yNzAzMTIyMzU5NTlaMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQClZ3CN0FaBZBUXYc25BtStGZCMJlA3mBZjklTb2cyEBZPs0+wIG6BgUUNIfSvHSJaetC3ancgnO1ehn6vw1g7UDjDKb5ux0daknTI+WE41b0VYaHEX/D7YXYKgL7JRbLAaXbhZzjVlyIuhrxA3/+OcXcJJFzT/jCuLjfC8cSyTDB0FxLrHzarJXnzRyQH3nAP2/Apd9Np75tt2QnDr9E0i2gB3b9bJXxf92nUupVcM9upctuBzpWjPoXTidYJ+EJ/B9aLrAek4sQpEzNPCifVJNYIKNLMc6YjCR06CDgo28EdPivEpBHXazeGaXP9enZiVuppD0EqiFwUBBDDTMrOPAgMBAAGjgfgwgfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBTnq58PLDOgU9NeT3jIsoQOO9aSMzAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAUTdYUqEimzW7TbrOypLqCfL7VOwYf/Q79OH5cHLCZeggfQhDconlk7Kgh8b0vi+/XuWu7CN8n/UPeg1vo3G+taXirrytthQinAHGwc/UdbOygJa9zuBcVyqoH3CXTXDInT+8a+c3aEVMJ2St+pSn4ed+WkDp8ijsijvEyFwE47hulW0Ltzjg9fOV5Pmrg/zxWbRuL+k0DBDHEJennCsAen7c35Pmx7jpmJ/HtgRhcnz0yjSBvyIw6L1QIupkCv2SBODT/xDD3gfQQyKv6roV4G2EhfEyAsWpmojxjCUCGiyg97FvDtm/NK2LSc9lybKxB73I2+P2G3CaWpvvpAiHCVu30jW8GCxKdfhsXtnIy2imskQqVZ2m0Pmxobb28Tucr7xBK7CtwvPrb79os7u2XP3O5f9b/H66GNyRrglRXlrYjI1oGYL/f4I1n/Sgusda6WvA6C190kxjU15Y12mHU4+BxyR9cx2hhGS9fAjMZKJss28qxvz6Axu4CaDmRNZpK/pQrXF17yXCXkmEWgvSOEZy6Z9pcbLIVEGckV/iVeq0AOo2pkg9p4QRIy0tK2diRENLSF2KysFwbY6B26BFeFs3v1sYVRhFW9nLkOrQVporCS0KyZmfwVD89qSTlnctLcZnIavjKsKUu1nA1iU0yYMdYepKR7lWbnwhdx3ewok=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBjCCAu6gAwIBAgIRAMISMktwqbSRcdxA9+KFJjwwDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjQwMzEzMDAwMDAwWhcNMjcwMzEyMjM1OTU5WjAzMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDEMMAoGA1UEAxMDUjEyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2pgodK2+lP474B7i5Ut1qywSf+2nAzJ+Npfs6DGPpRONC5kuHs0BUT1M5ShuCVUxqqUiXXL0LQfCTUA83wEjuXg39RplMjTmhnGdBO+ECFu9AhqZ66YBAJpzkG2Pogeg0JfT2kVhgTU9FPnEwF9q3AuWGrCf4yrqvSrWmMebcas7dA8827JgvlpLThjp2ypzXIlhZZ7+7Tymy05v5J75AEaz/xlNKmOzjmbGGIVwx1Blbzt05UiDDwhYXS0jnV6j/ujbAKHS9OMZTfLuevYnnuXNnC2i8n+cF63vEzc50bTILEHWhsDp7CH4WRt/uTp8n1wBnWIEwii9Cq08yhDsGwIDAQABo4H4MIH1MA4GA1UdDwEB/wQEAwIBhjAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4EFgQUALUp8i2ObzHom0yteD763OkM0dIwHwYDVR0jBBgwFoAUebRZ5nu25eQBc4AIiMgaWPbpm24wMgYIKwYBBQUHAQEEJjAkMCIGCCsGAQUFBzAChhZodHRwOi8veDEuaS5sZW5jci5vcmcvMBMGA1UdIAQMMAowCAYGZ4EMAQIBMCcGA1UdHwQgMB4wHKAaoBiGFmh0dHA6Ly94MS5jLmxlbmNyLm9yZy8wDQYJKoZIhvcNAQELBQADggIBAI910AnPanZIZTKS3rVEyIV29BWEjAK/duuz8eL5boSoVpHhkkv34eoAeEiPdZLj5EZ7G2ArIK+gzhTlRQ1q4FKGpPPaFBSpqV/xbUb5UlAXQOnkHn3mFVj+qYv87/WeY+Bm4sN3Ox8BhyaU7UAQ3LeZ7N1X01xxQe4wIAAE3JVLUCiHmZL+qoCUtgYIFPgcg350QMUIWgxPXNGEncT921ne7nluI02V8pLUmClqXOsCwULw+PVOZCB7qOMxxMBoCUeL2Ll4oMpOSr5pJCpLN3tRA2s6P1KLs9TSrVhOk+7LX28NMUlIusQ/nxLJID0RhAeFtPjyOCOscQBA53+NRjSCak7P4A5jX7ppmkcJECL+S0i3kXVUy5Me5BbrU8973jZNv/ax6+ZK6TM8jWmimL6of6OrX7ZU6E2WqazzsFrLG3o2kySbzlhSgJ81Cl4tv3SbYiYXnJExKQvzf83DYotox3f0fwv7xln1A2ZLplCb0O+l/AK0YE0DS2FPxSAHi0iwMfW2nNHJrXcY3LLHD77gRgje4Eveubi2xxa+Nmk/hmhLdIETiVDFanoCrMVIpQ59XWHkzdFmoHXHBV7oibVjGSO7ULSQ7MJ1Nz51phuDJSgAIU7A0zrLnOrAj/dfrlEWRhCvAgbuwLZX1A2sjNjXoPOHbsPiy+lO1KF8/XY7\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "D3B128216A843F8EF1321501F5DF52A5DF52939EE2C19297712CD3DE4D419354"
+              "finding"      : "131FCE7784016899A5A00203A9EFC80F18EBBD75580717EDC1553580930836EC"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
@@ -584,7 +584,7 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "R13 <-- ISRG Root X1"
+              "finding"      : "R12 <-- ISRG Root X1"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -592,119 +592,6 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "intermediate certificate(s) is/are ok"
-          }
-,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
-          }
-,         {
-              "id"           : "HTTP_clock_skew",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-499 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1762266531"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "only for this domain"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "domain is NOT marked for preloading"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Apache/2.4.65 (Debian) OpenSSL/1.1.1w"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ALLOW-FROM https://www.inria.fr/"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Cache-Control",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "max-age=3600, public"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
           }
 ,         {
               "id"           : "heartbleed",
@@ -728,10 +615,10 @@
               "id"           : "ticketbleed",
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "INFO",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not vulnerable"
+              "finding"      : "not applicable, not HTTP"
           }
 ,         {
               "id"           : "ROBOT",
@@ -766,16 +653,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "BREACH",
-              "ip"           : "psl.eu/13.37.145.162",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cve"          : "CVE-2013-3587",
-              "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable (not using HTTP anyway)"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -827,7 +705,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=CDE6D92AD8E6ACD77A95D8836A9B4748FFF01AA7C8A68DED00B3D21C58FF7542"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=FE7290C7A30B3DD691C40D3EB96A54B7E8CB5598F1F7F4DA4CCFC9DF0C023342"
           }
 ,         {
               "id"           : "LOGJAM-common_primes",
@@ -944,7 +822,7 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
@@ -1126,7 +1004,7 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1203,6 +1081,6 @@
               "ip"           : "psl.eu/13.37.145.162",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "106"
+              "finding"      : "81"
           }
 ]
