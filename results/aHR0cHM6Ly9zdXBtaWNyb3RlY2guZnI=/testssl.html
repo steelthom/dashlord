@@ -19,16 +19,15 @@
 <span style="font-weight:bold;">#####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
-  on runnervmf2e7y:/home/testssl/bin/openssl.Linux.x86_64
+  on runnervmw9dnm:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-11-04 20:35:04        --&gt;&gt; 194.167.45.16:443 (supmicrotech.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-11-08 13:26:13        --&gt;&gt; 194.167.45.16:443 (supmicrotech.fr) &lt;&lt;--</span>
 
- rDNS (194.167.45.16):   andromede.ens2m.fr.<span style="color:#cd00cd;"> Oops: TCP connect problem</span>
+ rDNS (194.167.45.16):   andromede.ens2m.fr.
+<span style="color:#cd00cd;"> Oops: TCP connect problem</span>
 
-<span style="color:#cd00cd;">Unable to open a socket to 194.167.45.16:443. </span>
-<span style="color:#be32d0;font-weight:bold;">Fatal error: Can&apos;t connect to &quot;194.167.45.16:443&quot;
-Make sure a firewall is not between you and your scanning target!</span>
-
-</pre>
-</body>
-</html>
+<span style="color:#cd00cd;">Unable to open a socket to 194.167.45.16:443. </span><span style="color:#cd00cd;">This shouldn&apos;t happen (pls report): Testing supmicrotech.fr:443 only succeeded using /home/testssl/bin/openssl.Linux.x86_64.</span>
+<span style="color:#cd00cd;">But testssl.sh also needs bash sockets to perform its checks correctly.
+</span>
+You can try to continue using the --ssl-native option but the results are likely not complete.
+Or you can restart using --ssl-native with another openssl version (--openssl &lt;PATH&gt;).
