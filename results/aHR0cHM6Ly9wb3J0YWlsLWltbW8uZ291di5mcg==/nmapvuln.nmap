@@ -1,11 +1,17 @@
-# Nmap 7.92 scan initiated Tue Nov  4 14:10:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail-immo.gouv.fr
+# Nmap 7.92 scan initiated Sat Nov  8 03:47:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail-immo.gouv.fr
 Nmap scan report for portail-immo.gouv.fr (5.144.143.172)
-Host is up (0.11s latency).
+Host is up (0.10s latency).
 Not shown: 995 filtered tcp ports (no-response)
 PORT     STATE  SERVICE     VERSION
 80/tcp   open   http
 | fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
+|   DNSStatusRequestTCP: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|   DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, X11Probe: 
 |     HTTP/1.1 400 Bad request
 |     content-length: 90
 |     cache-control: no-cache
@@ -28,15 +34,12 @@ PORT     STATE  SERVICE     VERSION
 443/tcp  open   ssl/https   nginx/1.27.5
 |_http-server-header: nginx/1.27.5
 | fingerprint-strings: 
-|   DNSVersionBindReqTCP, RPCCheck, tor-versions: 
+|   DNSVersionBindReqTCP: 
 |     HTTP/1.1 400 Bad request
 |     content-length: 90
 |     cache-control: no-cache
 |     content-type: text/html
 |     connection: close
-|     <html><body><h1>400 Bad request</h1>
-|     Your browser sent an invalid request.
-|     </body></html>
 |   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest: 
 |     HTTP/1.1 503 Service Unavailable
 |     content-length: 107
@@ -45,12 +48,21 @@ PORT     STATE  SERVICE     VERSION
 |     connection: close
 |     <html><body><h1>503 Service Unavailable</h1>
 |     server is available to handle this request.
+|     </body></html>
+|   RPCCheck, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
 |_    </body></html>
 2000/tcp open   cisco-sccp?
 5060/tcp open   sip?
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/4%Time=690A097B%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690EBD50%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
 SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
 SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
@@ -72,16 +84,19 @@ SF:HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-co
 SF:ntrol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20clos
 SF:e\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x2
 SF:0sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRequ
-SF:estTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\
+SF:estTCP,75,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\
 SF:r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnecti
-SF:on:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x2
-SF:0browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(He
-SF:lp,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\nc
-SF:ache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\
-SF:x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20bro
-SF:wser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+SF:on:\x20close\r\n\r\n")%r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\
+SF:ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x
+SF:20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x
+SF:20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n
+SF:</body></html>\n")%r(SSLSessionReq,CF,"HTTP/1\.1\x20400\x20Bad\x20reque
+SF:st\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-ty
+SF:pe:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20
+SF:Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20reques
+SF:t\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/4%Time=690A0982%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690EBD57%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nco
 SF:ntent-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20
 SF:text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Service
@@ -108,11 +123,9 @@ SF:></html>\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nconte
 SF:nt-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text
 SF:/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20requ
 SF:est</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body
-SF:></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20requ
+SF:></html>\n")%r(DNSVersionBindReqTCP,75,"HTTP/1\.1\x20400\x20Bad\x20requ
 SF:est\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-t
-SF:ype:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x2
-SF:0Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20reque
-SF:st\.\n</body></html>\n");
+SF:ype:\x20text/html\r\nconnection:\x20close\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Tue Nov  4 14:13:48 2025 -- 1 IP address (1 host up) scanned in 174.44 seconds
+# Nmap done at Sat Nov  8 03:50:08 2025 -- 1 IP address (1 host up) scanned in 173.86 seconds
