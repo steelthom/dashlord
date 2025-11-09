@@ -1,71 +1,106 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "D+",
     "error": null,
-    "score": 35,
+    "score": 40,
     "statusCode": 200,
     "testsFailed": 3,
     "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Wed, 05 Nov 2025 13:55:18 GMT",
-      "content-type": "text/html; charset=UTF-8",
-      "content-length": "13506",
+      "date": "Sun, 09 Nov 2025 07:23:31 GMT",
+      "content-type": "text/html",
+      "content-length": "1659",
+      "last-modified": "Mon, 30 Jan 2023 22:19:13 GMT",
       "connection": "close",
-      "set-cookie": [
-        "csrfCookie=ce47f0b52d0a1b98ae513d27a59c025a; expires=Wed, 05-Nov-2025 15:55:18 GMT; Max-Age=7200; path=/; secure",
-        "ea_session=rflc3natmrl57gdkobf300ijnbm2ppqi; expires=Wed, 05-Nov-2025 15:55:18 GMT; Max-Age=7200; path=/; secure; HttpOnly"
-      ],
-      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
-      "cache-control": "no-store, no-cache, must-revalidate",
-      "pragma": "no-cache",
-      "vary": "Accept-Encoding",
+      "etag": "\"63d84261-67b\"",
       "strict-transport-security": "max-age=63072000",
       "x-xss-protection": "1; mode=block",
       "x-download-options": "noopen",
       "x-content-type-options": "nosniff",
       "x-permitted-cross-domain-policies": "none",
-      "referrer-policy": "same-origin"
+      "referrer-policy": "same-origin",
+      "content-security-policy": "default-src 'none'; frame-src 'self' cloudron.io *.cloudron.io; connect-src wss: https: 'self' *.cloudron.io; script-src https: 'self' 'unsafe-inline' 'unsafe-eval'; img-src * data:; style-src https: 'unsafe-inline'; object-src 'none'; font-src https: 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self';",
+      "accept-ranges": "bytes"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'none'"
+        ],
+        "frame-src": [
+          "'self'",
+          "*.cloudron.io",
+          "cloudron.io"
+        ],
+        "connect-src": [
+          "'self'",
+          "*.cloudron.io",
+          "https:",
+          "wss:"
+        ],
+        "script-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "https:"
+        ],
+        "img-src": [
+          "*",
+          "data:"
+        ],
+        "style-src": [
+          "'unsafe-inline'",
+          "https:"
+        ],
+        "object-src": [
+          "'none'"
+        ],
+        "font-src": [
+          "'self'",
+          "https:"
+        ],
+        "frame-ancestors": [
+          "'none'"
+        ],
+        "base-uri": [
+          "'none'"
+        ],
+        "form-action": [
+          "'self'"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": true,
+        "defaultNone": true,
+        "insecureBaseUri": false,
+        "insecureFormAction": false,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": false
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-anticsrf-without-samesite-flag",
-      "scoreModifier": -20,
-      "data": {
-        "csrfCookie": {
-          "domain": "agenda.societenumerique.gouv.fr",
-          "expires": "2025-11-05T15:55:18.000Z",
-          "max-age": 7200,
-          "path": "/",
-          "port": null,
-          "secure": true
-        },
-        "ea_session": {
-          "domain": "agenda.societenumerique.gouv.fr",
-          "expires": "2025-11-05T15:55:18.000Z",
-          "httponly": true,
-          "max-age": 7200,
-          "path": "/",
-          "port": null,
-          "secure": true
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -77,14 +112,13 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://agenda.societenumerique.gouv.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://agenda.societenumerique.gouv.fr/",
+      "redirects": false,
       "route": [
-        "http://agenda.societenumerique.gouv.fr/",
-        "https://agenda.societenumerique.gouv.fr/"
+        "http://agenda.societenumerique.gouv.fr/"
       ],
       "statusCode": 200
     },
@@ -99,12 +133,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=63072000",
+      "pass": false,
+      "result": "hsts-invalid-cert",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 63072000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
@@ -124,9 +158,9 @@
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
+      "pass": true,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
       "data": null
     },
     "cross-origin-resource-policy": {

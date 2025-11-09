@@ -1,9 +1,9 @@
-# Nmap 7.92 scan initiated Wed Nov  5 13:57:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln agenda.societenumerique.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 07:27:39 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln agenda.societenumerique.gouv.fr
 Nmap scan report for agenda.societenumerique.gouv.fr (212.129.49.118)
-Host is up (0.091s latency).
+Host is up (0.15s latency).
 rDNS record for 212.129.49.118: my.societenumerique.gouv.fr
-Not shown: 991 filtered tcp ports (no-response)
-PORT    STATE  SERVICE    VERSION
+Not shown: 992 filtered tcp ports (no-response)
+PORT    STATE  SERVICE  VERSION
 22/tcp  closed ssh
 25/tcp  open   smtp
 | fingerprint-strings: 
@@ -19,9 +19,8 @@ PORT    STATE  SERVICE    VERSION
 |     implemented
 |   NULL: 
 |_    220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
-80/tcp  open   http       nginx
-222/tcp open   tcpwrapped
-443/tcp open   ssl/http   nginx
+80/tcp  open   http     nginx
+443/tcp open   ssl/http nginx
 465/tcp open   ssl/smtp
 | fingerprint-strings: 
 |   GenericLines, GetRequest: 
@@ -54,7 +53,7 @@ PORT    STATE  SERVICE    VERSION
 995/tcp open   pop3s?
 3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port25-TCP:V=7.92%I=7%D=11/5%Time=690B57EF%P=x86_64-alpine-linux-musl%r
+SF-Port25-TCP:V=7.92%I=7%D=11/9%Time=69104304%P=x86_64-alpine-linux-musl%r
 SF:(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8
 SF:\.28\x20ready\r\n")%r(Hello,74,"220\x20my\.societenumerique\.gouv\.fr\x
 SF:20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x20EHLO\x20requires\x20domai
@@ -67,7 +66,7 @@ SF:,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\
 SF:x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognized\x20co
 SF:mmand\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690B57F5%P=x86_64-alpine-linux
+SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=6910430B%P=x86_64-alpine-linux
 SF:-musl%r(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Hara
 SF:ka/2\.8\.28\x20ready\r\n")%r(Hello,74,"220\x20my\.societenumerique\.gou
 SF:v\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x20EHLO\x20requires\x
@@ -80,7 +79,7 @@ SF:Request,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\
 SF:.8\.28\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognize
 SF:d\x20command\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port587-TCP:V=7.92%I=7%D=11/5%Time=690B57EF%P=x86_64-alpine-linux-musl%
+SF-Port587-TCP:V=7.92%I=7%D=11/9%Time=69104304%P=x86_64-alpine-linux-musl%
 SF:r(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.
 SF:8\.28\x20ready\r\n")%r(GenericLines,6F,"220\x20my\.societenumerique\.go
 SF:uv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\x20Unrecognized\x20c
@@ -94,4 +93,4 @@ SF:\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognized\x20c
 SF:ommand\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 13:58:40 2025 -- 1 IP address (1 host up) scanned in 45.65 seconds
+# Nmap done at Sun Nov  9 07:30:48 2025 -- 1 IP address (1 host up) scanned in 188.57 seconds
