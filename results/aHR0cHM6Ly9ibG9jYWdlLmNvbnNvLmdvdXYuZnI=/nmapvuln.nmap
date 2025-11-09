@@ -1,10 +1,11 @@
-# Nmap 7.92 scan initiated Wed Nov  5 19:01:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln blocage.conso.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 07:24:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln blocage.conso.gouv.fr
 Nmap scan report for blocage.conso.gouv.fr (146.59.230.139)
-Host is up (0.12s latency).
+Host is up (0.10s latency).
 rDNS record for 146.59.230.139: vps-6aa1046e.vps.ovh.net
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE  VERSION
 80/tcp  open  http     Apache httpd 2.4.65 ((Debian))
+|_http-server-header: Apache/2.4.65 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.65: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -62,7 +63,6 @@ PORT    STATE SERVICE  VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
-|_http-server-header: Apache/2.4.65 (Debian)
 443/tcp open  ssl/http Apache httpd 2.4.65
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.65: 
@@ -125,4 +125,4 @@ PORT    STATE SERVICE  VERSION
 Service Info: Host: blocage.conso.gouv.fr
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 19:01:35 2025 -- 1 IP address (1 host up) scanned in 24.09 seconds
+# Nmap done at Sun Nov  9 07:24:27 2025 -- 1 IP address (1 host up) scanned in 22.81 seconds
