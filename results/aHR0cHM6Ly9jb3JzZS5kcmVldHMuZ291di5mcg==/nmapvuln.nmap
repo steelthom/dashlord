@@ -1,32 +1,12 @@
-# Nmap 7.92 scan initiated Thu Nov  6 03:07:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln corse.dreets.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 20:29:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln corse.dreets.gouv.fr
 Nmap scan report for corse.dreets.gouv.fr (185.194.83.84)
-Host is up (0.15s latency).
+Host is up (0.14s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE   VERSION
-80/tcp  open   http
-| fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
-|     Connection: close
-|     Content-Length: 0
-|   GetRequest, HTTPOptions, RTSPRequest: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https:///
-|     Connection: close
-|     Content-Length: 0
-|   SIPOptions: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https://sip:nm
-|     Connection: close
-|     Content-Length: 0
-|   TerminalServerCookie: 
-|     HTTP/1.0 302 Moved Temporarily
-|     Location: https://mstshash=nmap
-|     Connection: close
-|_    Content-Length: 0
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   tcpwrapped
 113/tcp closed ident
 443/tcp open   ssl/https
+|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 200 OK
@@ -38,16 +18,38 @@ PORT    STATE  SERVICE   VERSION
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 1; mode=block
 |     X-Content-Type-Options: nosniff
-|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <1938290215580653457><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <1938290216441185263><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|   GetRequest: 
+|     HTTP/1.1 503 Service Unavailable
+|     Date: Sun, 09 Nov 2025 20:29:36 GMT
+|     Expires: 0
+|     Cache-Control: no-cache, must-revalidate
+|     Pragma: no-cache
+|     X-Frame-Options: DENY
+|     Last-Modified: Sun, 09 Nov 2025 20:29:36 GMT
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!nQEdwjnZ+Sv2aDAXIkI7F7SI9ajmivNjNYdjPHutvuL1R3esGYCsOia6caK+kbSnm134P08zi19ON+W7CAKCin3qHDI=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html>
+|     <html class='ltr fr no-js' xmlns='http://www.w3.org/1999/xhtml' lang='fr' dir='ltr'>
+|     <head>
+|     <title>Site en travaux</title>
+|     <meta name="viewport" content="width=device-width" />
+|     <style type='text/css'>:root {--minipage-color-theme--h: 0;--minipage-color-theme--s: 0%;--minipage-color-theme--l: 60%;}
+|     :root {
+|     finie par d
+|     faut par m
 |   HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
-|     Date: Thu, 06 Nov 2025 03:08:05 GMT
+|     Date: Sun, 09 Nov 2025 20:29:37 GMT
 |     X-Frame-Options: DENY
 |     Content-Length: 199
-|     Keep-Alive: timeout=5, max=88
+|     Keep-Alive: timeout=5, max=100
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
-|     Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!cKe+IjtM1+osGqgXIkI7F7SI9ajmird3ac8FOPv3n8mh77so35xkfJXz6acFJVBIoENvd8FQtYfnvKxVS74Yc9ZRy70=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!TYsEIMddYnn1PUMXIkI7F7SI9ajmijgb5lShV9s+0yji+RO6Vh9Q1ZT6vtJh4BLEEVW1+AEYfIY9dq1vBn2j7MJ8V08=; path=/; Httponly; Secure
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 |     <html><head>
@@ -55,75 +57,46 @@ PORT    STATE  SERVICE   VERSION
 |     </head><body>
 |     <h1>Forbidden</h1>
 |     <p>You don't have permission to access this resource.</p>
-|     </body></html>
-|   RTSPRequest: 
-|     HTTP/1.1 400 Bad Request
-|     Date: Thu, 06 Nov 2025 03:08:16 GMT
-|     X-Frame-Options: DENY
-|     Content-Length: 226
-|     Connection: close
-|     Content-Type: text/html; charset=iso-8859-1
-|     Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!3nkerI1TuJCD830XIkI7F7SI9ajmikRNZt5dYHLa+0T5uiOl+EjIF35NynjySSP7hhftyuBo2KZ+0wf1+REuQtOh0T0=; path=/; Httponly; Secure
-|     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-|     <html><head>
-|     <title>400 Bad Request</title>
-|     </head><body>
-|     <h1>Bad Request</h1>
-|     <p>Your browser sent a request that this server could not understand.<br />
-|     </p>
 |_    </body></html>
-|_http-trane-info: Problem with XML parsing of /evox/about
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690C1109%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
-SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
-SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690C1115%P=x86_64-alpine-linux
-SF:-musl%r(HTTPOptions,281,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Thu,
-SF:\x2006\x20Nov\x202025\x2003:08:05\x20GMT\r\nX-Frame-Options:\x20DENY\r\
-SF:nContent-Length:\x20199\r\nKeep-Alive:\x20timeout=5,\x20max=88\r\nConne
-SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\
-SF:nSet-Cookie:\x20BIGipServerpool-dreets2\.cegedim\.cloud-http=!cKe\+IjtM
-SF:1\+osGqgXIkI7F7SI9ajmird3ac8FOPv3n8mh77so35xkfJXz6acFJVBIoENvd8FQtYfnvK
-SF:xVS74Yc9ZRy70=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-S
-SF:ecurity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20
-SF:HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n
-SF:<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>
-SF:You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20resource\
-SF:.</p>\n</body></html>\n")%r(FourOhFourRequest,1ED,"HTTP/1\.1\x20200\x20
-SF:OK\r\nCache-Control:\x20no-store,\x20must-revalidate,\x20no-cache\r\nPr
-SF:agma:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html
-SF:\r\nContent-Length:\x20244\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-P
-SF:rotection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\
-SF:n\r\n<html><head><title>Request\x20Rejected</title></head><body>The\x20
-SF:requested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with\x20y
-SF:our\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20<19382902
-SF:15580653457><br><br><a\x20href='javascript:history\.back\(\);'>\[Go\x20
-SF:Back\]</body></html>")%r(RTSPRequest,27F,"HTTP/1\.1\x20400\x20Bad\x20Re
-SF:quest\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2003:08:16\x20GMT\r\nX-Fra
-SF:me-Options:\x20DENY\r\nContent-Length:\x20226\r\nConnection:\x20close\r
-SF:\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nSet-Cookie:\x20B
-SF:IGipServerpool-dreets2\.cegedim\.cloud-http=!3nkerI1TuJCD830XIkI7F7SI9a
-SF:jmikRNZt5dYHLa\+0T5uiOl\+EjIF35NynjySSP7hhftyuBo2KZ\+0wf1\+REuQtOh0T0=;
-SF:\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20max
-SF:-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\
-SF:x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20B
-SF:ad\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\
-SF:x20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x
-SF:20not\x20understand\.<br\x20/>\n</p>\n</body></html>\n");
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=6910F9B0%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,1255,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\n
+SF:Date:\x20Sun,\x2009\x20Nov\x202025\x2020:29:36\x20GMT\r\nExpires:\x200\
+SF:r\nCache-Control:\x20no-cache,\x20must-revalidate\r\nPragma:\x20no-cach
+SF:e\r\nX-Frame-Options:\x20DENY\r\nLast-Modified:\x20Sun,\x2009\x20Nov\x2
+SF:02025\x2020:29:36\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nSet-
+SF:Cookie:\x20BIGipServerpool-dreets2\.cegedim\.cloud-http=!nQEdwjnZ\+Sv2a
+SF:DAXIkI7F7SI9ajmivNjNYdjPHutvuL1R3esGYCsOia6caK\+kbSnm134P08zi19ON\+W7CA
+SF:KCin3qHDI=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Secur
+SF:ity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20html
+SF:>\n<html\x20class='ltr\x20fr\x20no-js'\x20xmlns='http://www\.w3\.org/19
+SF:99/xhtml'\x20lang='fr'\x20dir='ltr'>\n<head>\n<title>Site\x20en\x20trav
+SF:aux</title>\n<meta\x20name=\"viewport\"\x20content=\"width=device-width
+SF:\"\x20/>\n<style\x20type='text/css'>:root\x20{--minipage-color-theme--h
+SF::\x200;--minipage-color-theme--s:\x200%;--minipage-color-theme--l:\x206
+SF:0%;}\n:root\x20{\n\t/\*\n\tD\xc3\xa9finie\x20par\x20d\xc3\xa9faut\x20pa
+SF:r\x20m")%r(HTTPOptions,282,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20S
+SF:un,\x2009\x20Nov\x202025\x2020:29:37\x20GMT\r\nX-Frame-Options:\x20DENY
+SF:\r\nContent-Length:\x20199\r\nKeep-Alive:\x20timeout=5,\x20max=100\r\nC
+SF:onnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-
+SF:1\r\nSet-Cookie:\x20BIGipServerpool-dreets2\.cegedim\.cloud-http=!TYsEI
+SF:MddYnn1PUMXIkI7F7SI9ajmijgb5lShV9s\+0yji\+RO6Vh9Q1ZT6vtJh4BLEEVW1\+AEYf
+SF:IY9dq1vBn2j7MJ8V08=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transp
+SF:ort-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!DOCTYP
+SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
+SF:ad>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>
+SF:\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20this\x20reso
+SF:urce\.</p>\n</body></html>\n")%r(FourOhFourRequest,1ED,"HTTP/1\.1\x2020
+SF:0\x20OK\r\nCache-Control:\x20no-store,\x20must-revalidate,\x20no-cache\
+SF:r\nPragma:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text
+SF:/html\r\nContent-Length:\x20244\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-
+SF:XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\n\r\n<html><head><title>Request\x20Rejected</title></head><body>Th
+SF:e\x20requested\x20URL\x20was\x20rejected\.\x20Please\x20consult\x20with
+SF:\x20your\x20administrator\.<br><br>Your\x20support\x20ID\x20is:\x20<193
+SF:8290216441185263><br><br><a\x20href='javascript:history\.back\(\);'>\[G
+SF:o\x20Back\]</body></html>");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 03:10:33 2025 -- 1 IP address (1 host up) scanned in 176.52 seconds
+# Nmap done at Sun Nov  9 20:31:57 2025 -- 1 IP address (1 host up) scanned in 163.36 seconds
