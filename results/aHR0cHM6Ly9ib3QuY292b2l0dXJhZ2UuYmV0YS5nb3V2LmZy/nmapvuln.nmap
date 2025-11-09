@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Nov  5 18:54:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bot.covoiturage.beta.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 07:00:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bot.covoiturage.beta.gouv.fr
 Nmap scan report for bot.covoiturage.beta.gouv.fr (151.80.136.60)
-Host is up (0.090s latency).
+Host is up (0.15s latency).
 rDNS record for 151.80.136.60: vps-5015c765.vps.ovh.net
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
@@ -164,7 +164,6 @@ PORT     STATE SERVICE  VERSION
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
 |_http-server-header: Apache/2.4.65 (Debian)
 443/tcp  open  ssl/http Apache httpd 2.4.65
-|_http-server-header: Apache/2.4.65 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.65: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -222,6 +221,7 @@ PORT     STATE SERVICE  VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
+|_http-server-header: Apache/2.4.65 (Debian)
 3000/tcp open  ppp?
 | fingerprint-strings: 
 |   GetRequest: 
@@ -233,7 +233,7 @@ PORT     STATE SERVICE  VERSION
 |     ETag: "mbla5e8wav1rym"
 |     Content-Type: text/html; charset=utf-8
 |     Content-Length: 83063
-|     Date: Wed, 05 Nov 2025 18:54:43 GMT
+|     Date: Sun, 09 Nov 2025 07:01:00 GMT
 |     Connection: close
 |     <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/2b3f1035ed87a788-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" as="image" imageSrcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffcp.d5589231.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffcp.d5589231.png&amp;w=2048&amp;q=75 2x" fetchPriority="high"/><link rel="stylesheet" href="/_next/static/css/ef5802f0da68487c.css" data-pre
 |   HTTPOptions: 
@@ -246,20 +246,20 @@ PORT     STATE SERVICE  VERSION
 |     ETag: "12uaa2kv1nh1jl"
 |     Content-Type: text/html; charset=utf-8
 |     Content-Length: 2001
-|     Date: Wed, 05 Nov 2025 18:54:44 GMT
+|     Date: Sun, 09 Nov 2025 07:01:01 GMT
 |     Connection: close
 |     <!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>405: Method Not Allowed</title><meta name="next-head-count" content="3"/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-6f50a1ded32ef061.js" defer=""></script><script src="/_next/static/chunks/framework-f66176bb897dc684.js" defer=""></script><script src="/_next/static/chunks/main-229d534ace220656.js" de
 |   Help, NCP: 
 |     HTTP/1.1 400 Bad Request
 |_    Connection: close
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3000-TCP:V=7.92%I=7%D=11/5%Time=690B9D74%P=x86_64-alpine-linux-musl
-SF:%r(GetRequest,37C8,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20RSC,\x20Next-Rou
+SF-Port3000-TCP:V=7.92%I=7%D=11/9%Time=69103C2C%P=x86_64-alpine-linux-musl
+SF:%r(GetRequest,1BE4,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20RSC,\x20Next-Rou
 SF:ter-State-Tree,\x20Next-Router-Prefetch,\x20Accept-Encoding\r\nx-nextjs
 SF:-cache:\x20HIT\r\nX-Powered-By:\x20Next\.js\r\nCache-Control:\x20s-maxa
 SF:ge=31536000,\x20stale-while-revalidate\r\nETag:\x20\"mbla5e8wav1rym\"\r
 SF:\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2083
-SF:063\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2018:54:43\x20GMT\r\nConnect
+SF:063\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2007:01:00\x20GMT\r\nConnect
 SF:ion:\x20close\r\n\r\n<!DOCTYPE\x20html><html\x20lang=\"en\"><head><meta
 SF:\x20charSet=\"utf-8\"/><meta\x20name=\"viewport\"\x20content=\"width=de
 SF:vice-width,\x20initial-scale=1\"/><link\x20rel=\"preload\"\x20href=\"/_
@@ -277,8 +277,8 @@ SF:RSC,\x20Next-Router-State-Tree,\x20Next-Router-Prefetch,\x20Accept-Enco
 SF:ding\r\nAllow:\x20GET\r\nAllow:\x20HEAD\r\nCache-Control:\x20no-cache,\
 SF:x20no-store,\x20max-age=0,\x20must-revalidate\r\nX-Powered-By:\x20Next\
 SF:.js\r\nETag:\x20\"12uaa2kv1nh1jl\"\r\nContent-Type:\x20text/html;\x20ch
-SF:arset=utf-8\r\nContent-Length:\x202001\r\nDate:\x20Wed,\x2005\x20Nov\x2
-SF:02025\x2018:54:44\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20ht
+SF:arset=utf-8\r\nContent-Length:\x202001\r\nDate:\x20Sun,\x2009\x20Nov\x2
+SF:02025\x2007:01:01\x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20ht
 SF:ml><html><head><meta\x20charSet=\"utf-8\"/><meta\x20name=\"viewport\"\x
 SF:20content=\"width=device-width\"/><title>405:\x20Method\x20Not\x20Allow
 SF:ed</title><meta\x20name=\"next-head-count\"\x20content=\"3\"/><noscript
@@ -291,4 +291,4 @@ SF:tic/chunks/main-229d534ace220656\.js\"\x20de");
 Service Info: Host: trefle-restauration.fr; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 18:54:50 2025 -- 1 IP address (1 host up) scanned in 20.09 seconds
+# Nmap done at Sun Nov  9 07:01:11 2025 -- 1 IP address (1 host up) scanned in 25.99 seconds
