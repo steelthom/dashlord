@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Nov  5 14:02:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln archiclasse.education.fr
+# Nmap 7.92 scan initiated Sun Nov  9 07:10:35 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln archiclasse.education.fr
 Nmap scan report for archiclasse.education.fr (193.50.120.99)
-Host is up (0.12s latency).
+Host is up (0.091s latency).
 rDNS record for 193.50.120.99: svc-daneweb.ac-normandie.fr
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
@@ -8,6 +8,7 @@ PORT    STATE  SERVICE    VERSION
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/http   Apache httpd 2.4.6 ((Red Hat Enterprise Linux))
+|_http-server-header: Apache/2.4.6 (Red Hat Enterprise Linux)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.6: 
 |     	3E6BA608-776F-5B1F-9BA5-589CD2A5A351	10.0	https://vulners.com/gitee/3E6BA608-776F-5B1F-9BA5-589CD2A5A351	*EXPLOIT*
@@ -76,6 +77,7 @@ PORT    STATE  SERVICE    VERSION
 |     	CNVD-2023-30860	9.0	https://vulners.com/cnvd/CNVD-2023-30860
 |     	CNVD-2022-03224	9.0	https://vulners.com/cnvd/CNVD-2022-03224
 |     	AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	9.0	https://vulners.com/githubexploit/AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	*EXPLOIT*
+|     	9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	9.0	https://vulners.com/githubexploit/9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	*EXPLOIT*
 |     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	9.0	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
 |     	7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	9.0	https://vulners.com/githubexploit/7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	*EXPLOIT*
 |     	36618CA8-9316-59CA-B748-82F15F407C4F	9.0	https://vulners.com/githubexploit/36618CA8-9316-59CA-B748-82F15F407C4F	*EXPLOIT*
@@ -235,8 +237,7 @@ PORT    STATE  SERVICE    VERSION
 |     	PACKETSTORM:127563	4.3	https://vulners.com/packetstorm/PACKETSTORM:127563	*EXPLOIT*
 |     	1337DAY-ID-33575	4.3	https://vulners.com/zdt/1337DAY-ID-33575	*EXPLOIT*
 |_    	PACKETSTORM:140265	0.0	https://vulners.com/packetstorm/PACKETSTORM:140265	*EXPLOIT*
-|_http-server-header: Apache/2.4.6 (Red Hat Enterprise Linux)
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 14:03:23 2025 -- 1 IP address (1 host up) scanned in 24.32 seconds
+# Nmap done at Sun Nov  9 07:11:00 2025 -- 1 IP address (1 host up) scanned in 25.37 seconds
