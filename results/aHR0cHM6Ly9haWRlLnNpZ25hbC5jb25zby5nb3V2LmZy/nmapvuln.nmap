@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Nov  5 13:08:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln aide.signal.conso.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 03:21:00 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln aide.signal.conso.gouv.fr
 Nmap scan report for aide.signal.conso.gouv.fr (172.65.251.114)
-Host is up (0.0051s latency).
+Host is up (0.018s latency).
 Other addresses for aide.signal.conso.gouv.fr (not scanned): 2606:4700:90:0:8fa5:a1b5:8782:d1e
 
 PORT      STATE SERVICE    VERSION
@@ -586,18 +586,28 @@ PORT      STATE SERVICE    VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     auth_mechanisms: 
-|     capabilities: 
-|     xmpp: 
-|     compression_methods: 
-|     features: 
-|     unknown: 
 |     errors: 
-|_      (timeout)
+|       (timeout)
+|     auth_mechanisms: 
+|     features: 
+|     capabilities: 
+|     compression_methods: 
+|     unknown: 
+|_    xmpp: 
 5225/tcp  open  tcpwrapped
 5226/tcp  open  tcpwrapped
 5269/tcp  open  tcpwrapped
-|_xmpp-info: ERROR: Script execution failed (use -d to debug)
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     errors: 
+|       (timeout)
+|     auth_mechanisms: 
+|     features: 
+|     capabilities: 
+|     compression_methods: 
+|     unknown: 
+|_    xmpp: 
 5280/tcp  open  tcpwrapped
 5298/tcp  open  tcpwrapped
 5357/tcp  open  tcpwrapped
@@ -800,7 +810,6 @@ PORT      STATE SERVICE    VERSION
 9080/tcp  open  tcpwrapped
 9081/tcp  open  tcpwrapped
 9090/tcp  open  tcpwrapped
-|_drda-info: ERROR
 9091/tcp  open  tcpwrapped
 9099/tcp  open  tcpwrapped
 9100/tcp  open  jetdirect?
@@ -1020,4 +1029,4 @@ PORT      STATE SERVICE    VERSION
 65389/tcp open  tcpwrapped
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 13:08:28 2025 -- 1 IP address (1 host up) scanned in 21.02 seconds
+# Nmap done at Sun Nov  9 03:21:26 2025 -- 1 IP address (1 host up) scanned in 26.42 seconds
