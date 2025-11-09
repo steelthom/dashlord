@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln depot-teleservices-cnaps.interieur.gouv.fr</pre>
-<p class="lead">Thu Nov  6 03:33:39 2025 – Thu Nov  6 03:34:29 2025<br>1 hosts scanned.
+<p class="lead">Sun Nov  9 20:23:31 2025 – Sun Nov  9 20:24:11 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -157,37 +157,43 @@
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
-    HTTP/1.1 403 Forbidden
-    date: Thu, 06 Nov 2025 03:34:04 GMT
+    HTTP/1.1 404 Not Found
+    date: Sun, 09 Nov 2025 20:23:54 GMT
     server: Apache
     x-frame-options: DENY
-    content-length: 199
+    content-length: 196
     content-type: text/html; charset=iso-8859-1
     strict-transport-security: max-age=63072000
     connection: close
     &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
     &lt;html&gt;&lt;head&gt;
-    &lt;title&gt;403 Forbidden&lt;/title&gt;
+    &lt;title&gt;404 Not Found&lt;/title&gt;
     &lt;/head&gt;&lt;body&gt;
-    &lt;h1&gt;Forbidden&lt;/h1&gt;
-    &lt;p&gt;You don't have permission to access this resource.&lt;/p&gt;
+    &lt;h1&gt;Not Found&lt;/h1&gt;
+    &lt;p&gt;The requested URL was not found on this server.&lt;/p&gt;
     &lt;/body&gt;&lt;/html&gt;
-  GetRequest, HTTPOptions: 
-    HTTP/1.1 403 Forbidden
-    date: Thu, 06 Nov 2025 03:34:03 GMT
+  GetRequest: 
+    HTTP/1.1 200 OK
+    date: Sun, 09 Nov 2025 20:23:53 GMT
     server: Apache
     x-frame-options: DENY
-    content-length: 199
-    content-type: text/html; charset=iso-8859-1
+    last-modified: Wed, 04 May 2016 14:59:40 GMT
+    etag: "0-53205799d043c"
+    accept-ranges: bytes
+    content-length: 0
+    content-type: text/html
     strict-transport-security: max-age=63072000
     connection: close
-    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
-    &lt;html&gt;&lt;head&gt;
-    &lt;title&gt;403 Forbidden&lt;/title&gt;
-    &lt;/head&gt;&lt;body&gt;
-    &lt;h1&gt;Forbidden&lt;/h1&gt;
-    &lt;p&gt;You don't have permission to access this resource.&lt;/p&gt;
-    &lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    date: Sun, 09 Nov 2025 20:23:53 GMT
+    server: Apache
+    x-frame-options: DENY
+    allow: GET,HEAD,POST,OPTIONS
+    content-length: 0
+    content-type: text/html
+    strict-transport-security: max-age=63072000
+    connection: close
   NULL: 
     HTTP/1.1 408 Request Time-out
     Content-length: 110
@@ -196,6 +202,15 @@
     Content-Type: text/html
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;408 Request Time-out&lt;/h1&gt;
     Your browser didn't send a complete request in time.
+    &lt;/body&gt;&lt;/html&gt;
+  RTSPRequest, tor-versions: 
+    HTTP/1.1 400 Bad request
+    Content-length: 90
+    Cache-Control: no-cache
+    Connection: close
+    Content-Type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
+    Your browser sent an invalid request.
     &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 </tbody>
