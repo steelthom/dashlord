@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Nov  5 13:53:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ansm.sante.fr
+# Nmap 7.92 scan initiated Sun Nov  9 07:40:13 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ansm.sante.fr
 Nmap scan report for ansm.sante.fr (217.115.174.72)
-Host is up (0.13s latency).
+Host is up (0.12s latency).
 rDNS record for 217.115.174.72: prod2-fw-afssaps-dimedia.integra.fr
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
@@ -8,7 +8,7 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Wed, 05 Nov 2025 13:54:12 GMT
+|     Date: Sun, 09 Nov 2025 07:40:36 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -19,9 +19,22 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Forbidden</h1>
 |     <p>You don't have permission to access this resource.</p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Wed, 05 Nov 2025 13:54:06 GMT
+|     Date: Sun, 09 Nov 2025 07:40:30 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Date: Sun, 09 Nov 2025 07:40:31 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -34,7 +47,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   Help: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 05 Nov 2025 13:54:33 GMT
+|     Date: Sun, 09 Nov 2025 07:40:57 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -48,7 +61,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 05 Nov 2025 13:54:07 GMT
+|     Date: Sun, 09 Nov 2025 07:40:31 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -62,9 +75,23 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 443/tcp open  ssl/https Unknown
 | fingerprint-strings: 
-|   FourOhFourRequest, HTTPOptions: 
+|   FourOhFourRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 05 Nov 2025 13:54:18 GMT
+|     Date: Sun, 09 Nov 2025 07:40:43 GMT
+|     Content-Length: 226
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>400 Bad Request</title>
+|     </head><body>
+|     <h1>Bad Request</h1>
+|     <p>Your browser sent a request that this server could not understand.<br />
+|     </p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sun, 09 Nov 2025 07:40:42 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -78,7 +105,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   Help: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 05 Nov 2025 13:54:46 GMT
+|     Date: Sun, 09 Nov 2025 07:41:10 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -92,7 +119,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Wed, 05 Nov 2025 13:54:29 GMT
+|     Date: Sun, 09 Nov 2025 07:40:54 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -107,36 +134,36 @@ PORT    STATE SERVICE   VERSION
 |_http-server-header: Unknown
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690B56FF%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,15B,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Wed,\x2005\x
-SF:20Nov\x202025\x2013:54:06\x20GMT\r\nContent-Length:\x20199\r\nConnectio
+SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=6910456F%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,15B,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Sun,\x2009\x
+SF:20Nov\x202025\x2007:40:30\x20GMT\r\nContent-Length:\x20199\r\nConnectio
 SF:n:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\
 SF:n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n
 SF:<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbi
 SF:dden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20thi
 SF:s\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,15B,"HTTP/1\.0\x2
-SF:0403\x20Forbidden\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:54:06\x20
+SF:0403\x20Forbidden\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2007:40:31\x20
 SF:GMT\r\nContent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\
 SF:x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\
 SF:x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20F
 SF:orbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x2
 SF:0have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body><
 SF:/html>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDat
-SF:e:\x20Wed,\x2005\x20Nov\x202025\x2013:54:07\x20GMT\r\nContent-Length:\x
+SF:e:\x20Sun,\x2009\x20Nov\x202025\x2007:40:31\x20GMT\r\nContent-Length:\x
 SF:20226\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
 SF:=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTM
 SF:L\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n<
 SF:/head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\
 SF:x20request\x20that\x20this\x20server\x20could\x20not\x20understand\.<br
 SF:\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,15B,"HTTP/1\.0\x20
-SF:403\x20Forbidden\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:54:12\x20G
+SF:403\x20Forbidden\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2007:40:36\x20G
 SF:MT\r\nContent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\x
 SF:20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x
 SF:20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Fo
 SF:rbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20
 SF:have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body></
-SF:html>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20We
-SF:d,\x2005\x20Nov\x202025\x2013:54:33\x20GMT\r\nContent-Length:\x20226\r\
+SF:html>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Su
+SF:n,\x2009\x20Nov\x202025\x2007:40:57\x20GMT\r\nContent-Length:\x20226\r\
 SF:nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-885
 SF:9-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.
 SF:0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><b
@@ -144,31 +171,31 @@ SF:ody>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20reque
 SF:st\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n
 SF:</p>\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690B570B%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=6910457B%P=x86_64-alpine-linux
 SF:-musl%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Wed,\x2005\x20Nov\x202025\x2013:54:18\x20GMT\r\nContent-Length:\x20226
+SF:0Sun,\x2009\x20Nov\x202025\x2007:40:42\x20GMT\r\nContent-Length:\x20226
 SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
 SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
 SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
 SF:><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20re
 SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
 SF:>\n</p>\n</body></html>\n")%r(FourOhFourRequest,178,"HTTP/1\.1\x20400\x
-SF:20Bad\x20Request\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:54:18\x20G
+SF:20Bad\x20Request\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2007:40:43\x20G
 SF:MT\r\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x
 SF:20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x
 SF:20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Ba
 SF:d\x20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x
 SF:20browser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x2
 SF:0not\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(RTSPRequest,1
-SF:78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2005\x20Nov\x2
-SF:02025\x2013:54:29\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20cl
+SF:78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2009\x20Nov\x2
+SF:02025\x2007:40:54\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20cl
 SF:ose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTY
 SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
 SF:ead>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20R
 SF:equest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this
 SF:\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></htm
-SF:l>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\
-SF:x2005\x20Nov\x202025\x2013:54:46\x20GMT\r\nContent-Length:\x20226\r\nCo
+SF:l>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\
+SF:x2009\x20Nov\x202025\x2007:41:10\x20GMT\r\nContent-Length:\x20226\r\nCo
 SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
 SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
 SF:EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body
@@ -177,4 +204,4 @@ SF:x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p
 SF:>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 13:56:02 2025 -- 1 IP address (1 host up) scanned in 130.65 seconds
+# Nmap done at Sun Nov  9 07:42:25 2025 -- 1 IP address (1 host up) scanned in 131.89 seconds
