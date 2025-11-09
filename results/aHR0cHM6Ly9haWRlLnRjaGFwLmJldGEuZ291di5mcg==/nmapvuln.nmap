@@ -1,14 +1,14 @@
-# Nmap 7.92 scan initiated Wed Nov  5 13:36:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln aide.tchap.beta.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 07:03:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln aide.tchap.beta.gouv.fr
 Nmap scan report for aide.tchap.beta.gouv.fr (172.65.251.114)
-Host is up (0.018s latency).
+Host is up (0.17s latency).
 Other addresses for aide.tchap.beta.gouv.fr (not scanned): 2606:4700:90:0:8fa5:a1b5:8782:d1e
 
-PORT      STATE SERVICE    VERSION
+PORT      STATE SERVICE        VERSION
 1/tcp     open  tcpwrapped
 3/tcp     open  tcpwrapped
 4/tcp     open  tcpwrapped
 6/tcp     open  tcpwrapped
-7/tcp     open  tcpwrapped
+7/tcp     open  echo?
 9/tcp     open  tcpwrapped
 13/tcp    open  tcpwrapped
 17/tcp    open  tcpwrapped
@@ -30,7 +30,7 @@ PORT      STATE SERVICE    VERSION
 53/tcp    open  tcpwrapped
 70/tcp    open  tcpwrapped
 79/tcp    open  tcpwrapped
-80/tcp    open  http       nginx
+80/tcp    open  http           nginx
 81/tcp    open  tcpwrapped
 82/tcp    open  tcpwrapped
 83/tcp    open  tcpwrapped
@@ -39,7 +39,7 @@ PORT      STATE SERVICE    VERSION
 88/tcp    open  tcpwrapped
 89/tcp    open  tcpwrapped
 90/tcp    open  tcpwrapped
-99/tcp    open  tcpwrapped
+99/tcp    open  metagram?
 100/tcp   open  tcpwrapped
 106/tcp   open  tcpwrapped
 109/tcp   open  tcpwrapped
@@ -78,7 +78,7 @@ PORT      STATE SERVICE    VERSION
 417/tcp   open  tcpwrapped
 425/tcp   open  tcpwrapped
 427/tcp   open  tcpwrapped
-443/tcp   open  ssl/http   nginx
+443/tcp   open  ssl/http       nginx
 444/tcp   open  tcpwrapped
 445/tcp   open  tcpwrapped
 458/tcp   open  tcpwrapped
@@ -165,7 +165,7 @@ PORT      STATE SERVICE    VERSION
 1028/tcp  open  tcpwrapped
 1029/tcp  open  tcpwrapped
 1030/tcp  open  tcpwrapped
-1031/tcp  open  tcpwrapped
+1031/tcp  open  iad2?
 1032/tcp  open  tcpwrapped
 1033/tcp  open  tcpwrapped
 1034/tcp  open  tcpwrapped
@@ -430,7 +430,7 @@ PORT      STATE SERVICE    VERSION
 2522/tcp  open  tcpwrapped
 2525/tcp  open  tcpwrapped
 2557/tcp  open  tcpwrapped
-2601/tcp  open  tcpwrapped
+2601/tcp  open  zebra?
 2602/tcp  open  tcpwrapped
 2604/tcp  open  tcpwrapped
 2605/tcp  open  tcpwrapped
@@ -587,7 +587,17 @@ PORT      STATE SERVICE    VERSION
 5225/tcp  open  tcpwrapped
 5226/tcp  open  tcpwrapped
 5269/tcp  open  tcpwrapped
-|_xmpp-info: ERROR: Script execution failed (use -d to debug)
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     errors: 
+|       (timeout)
+|     compression_methods: 
+|     unknown: 
+|     capabilities: 
+|     auth_mechanisms: 
+|     xmpp: 
+|_    features: 
 5280/tcp  open  tcpwrapped
 5298/tcp  open  tcpwrapped
 5357/tcp  open  tcpwrapped
@@ -618,7 +628,7 @@ PORT      STATE SERVICE    VERSION
 5815/tcp  open  tcpwrapped
 5822/tcp  open  tcpwrapped
 5825/tcp  open  tcpwrapped
-5850/tcp  open  tcpwrapped
+5850/tcp  open  unknown
 5859/tcp  open  tcpwrapped
 5862/tcp  open  tcpwrapped
 5877/tcp  open  tcpwrapped
@@ -640,7 +650,7 @@ PORT      STATE SERVICE    VERSION
 5960/tcp  open  tcpwrapped
 5961/tcp  open  tcpwrapped
 5962/tcp  open  tcpwrapped
-5963/tcp  open  tcpwrapped
+5963/tcp  open  indy?
 5987/tcp  open  tcpwrapped
 5988/tcp  open  tcpwrapped
 5989/tcp  open  tcpwrapped
@@ -747,16 +757,16 @@ PORT      STATE SERVICE    VERSION
 8090/tcp  open  tcpwrapped
 8093/tcp  open  tcpwrapped
 8099/tcp  open  tcpwrapped
-8100/tcp  open  tcpwrapped
+8100/tcp  open  xprint-server?
 8180/tcp  open  tcpwrapped
 8181/tcp  open  tcpwrapped
 8192/tcp  open  tcpwrapped
 8193/tcp  open  tcpwrapped
-8194/tcp  open  tcpwrapped
+8194/tcp  open  sophos?
 8200/tcp  open  tcpwrapped
 8222/tcp  open  tcpwrapped
 8254/tcp  open  tcpwrapped
-8290/tcp  open  tcpwrapped
+8290/tcp  open  unknown
 8291/tcp  open  tcpwrapped
 8292/tcp  open  tcpwrapped
 8300/tcp  open  tcpwrapped
@@ -771,7 +781,7 @@ PORT      STATE SERVICE    VERSION
 8651/tcp  open  tcpwrapped
 8652/tcp  open  tcpwrapped
 8654/tcp  open  tcpwrapped
-8701/tcp  open  tcpwrapped
+8701/tcp  open  unknown
 8800/tcp  open  tcpwrapped
 8873/tcp  open  tcpwrapped
 8888/tcp  open  tcpwrapped
@@ -781,8 +791,8 @@ PORT      STATE SERVICE    VERSION
 9001/tcp  open  tcpwrapped
 9002/tcp  open  tcpwrapped
 9003/tcp  open  tcpwrapped
-9009/tcp  open  tcpwrapped
-9010/tcp  open  tcpwrapped
+9009/tcp  open  pichat?
+9010/tcp  open  sdr?
 9011/tcp  open  tcpwrapped
 9040/tcp  open  tcpwrapped
 9050/tcp  open  tcpwrapped
@@ -814,7 +824,7 @@ PORT      STATE SERVICE    VERSION
 9594/tcp  open  tcpwrapped
 9595/tcp  open  tcpwrapped
 9618/tcp  open  tcpwrapped
-9666/tcp  open  tcpwrapped
+9666/tcp  open  zoomcp?
 9876/tcp  open  tcpwrapped
 9877/tcp  open  tcpwrapped
 9878/tcp  open  tcpwrapped
@@ -824,7 +834,7 @@ PORT      STATE SERVICE    VERSION
 9929/tcp  open  tcpwrapped
 9943/tcp  open  tcpwrapped
 9944/tcp  open  tcpwrapped
-9968/tcp  open  tcpwrapped
+9968/tcp  open  unknown
 9998/tcp  open  tcpwrapped
 9999/tcp  open  tcpwrapped
 10000/tcp open  tcpwrapped
@@ -875,7 +885,7 @@ PORT      STATE SERVICE    VERSION
 16012/tcp open  tcpwrapped
 16016/tcp open  tcpwrapped
 16018/tcp open  tcpwrapped
-16080/tcp open  tcpwrapped
+16080/tcp open  osxwebadmin?
 16113/tcp open  tcpwrapped
 16992/tcp open  tcpwrapped
 16993/tcp open  tcpwrapped
@@ -1009,4 +1019,4 @@ PORT      STATE SERVICE    VERSION
 65389/tcp open  tcpwrapped
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 13:36:54 2025 -- 1 IP address (1 host up) scanned in 24.07 seconds
+# Nmap done at Sun Nov  9 07:04:36 2025 -- 1 IP address (1 host up) scanned in 49.19 seconds
