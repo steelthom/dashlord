@@ -1,14 +1,85 @@
-# Nmap 7.92 scan initiated Thu Nov  6 03:42:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln data-drihl.developpement-durable.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 19:12:44 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln data-drihl.developpement-durable.gouv.fr
 Nmap scan report for data-drihl.developpement-durable.gouv.fr (195.42.148.193)
-Host is up (0.088s latency).
+Host is up (0.087s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE  VERSION
-80/tcp  open   http     Apache httpd
-|_http-server-header: Apache
+PORT    STATE  SERVICE    VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 4508
+|     Connection: Close
+|     Cache-Control: no-cache
+|     Content-Type: text/html; charset=utf-8
+|     X-Frame-Options: SAMEORIGIN
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta charset="UTF-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=8; IE=EDGE">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+|     <style type="text/css">
+|     body {
+|     height: 100%;
+|     font-family: Roboto, Helvetica, Arial, sans-serif;
+|     color: #6a6a6a;
+|     margin: 0;
+|     display: flex;
+|     align-items: center;
+|     justify-content: center;
+|_    input[type=date], input[type=email], input[type=number], input[type=password], input[
 113/tcp closed ident
-443/tcp open   ssl/http Apache httpd
-|_http-server-header: Apache
-Service Info: Host: data-drihl.developpement-durable.gouv.fr
+443/tcp open   tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=6910E7BB%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,1236,"HTTP/1\.1\x20200\x20OK\r\nContent-Length:\x204508\r\n
+SF:Connection:\x20Close\r\nCache-Control:\x20no-cache\r\nContent-Type:\x20
+SF:text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20SAMEORIGIN\r\n\r\n<!
+SF:DOCTYPE\x20html>\n<html\x20lang=\"en\">\n\x20\x20\x20\x20<head>\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20charset=\"UTF-8\">\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE
+SF:=8;\x20IE=EDGE\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20name=\"view
+SF:port\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20<link\x20href=\"https://fonts\.googleapis\.com/
+SF:css\?family=Roboto&display=swap\"\x20rel=\"stylesheet\">\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20<style\x20type=\"text/css\">\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Roboto,\x20Hel
+SF:vetica,\x20Arial,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20color:\x20#6a6a6a;\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items
+SF::\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20justify-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20}\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20input\[
+SF:type=date\],\x20input\[type=email\],\x20input\[type=number\],\x20input\
+SF:[type=password\],\x20input\[")%r(HTTPOptions,1236,"HTTP/1\.1\x20200\x20
+SF:OK\r\nContent-Length:\x204508\r\nConnection:\x20Close\r\nCache-Control:
+SF:\x20no-cache\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame
+SF:-Options:\x20SAMEORIGIN\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"en\"
+SF:>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20cha
+SF:rset=\"UTF-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"
+SF:X-UA-Compatible\"\x20content=\"IE=8;\x20IE=EDGE\">\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width
+SF:,\x20initial-scale=1\">\n\x20\x20\x20\x20\x20\x20\x20\x20<link\x20href=
+SF:\"https://fonts\.googleapis\.com/css\?family=Roboto&display=swap\"\x20r
+SF:el=\"stylesheet\">\n\x20\x20\x20\x20\x20\x20\x20\x20<style\x20type=\"te
+SF:xt/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\
+SF:x20100%;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20font-family:\x20Roboto,\x20Helvetica,\x20Arial,\x20sans-serif;\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#
+SF:6a6a6a;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20display:\x20flex;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20align-items:\x20center;\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20input\[type=date\],\x20input\[type=email\],\x
+SF:20input\[type=number\],\x20input\[type=password\],\x20input\[");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 03:42:22 2025 -- 1 IP address (1 host up) scanned in 21.28 seconds
+# Nmap done at Sun Nov  9 19:13:12 2025 -- 1 IP address (1 host up) scanned in 27.81 seconds
