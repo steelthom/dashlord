@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bonusmalus.travail-emploi.gouv.fr</pre>
-<p class="lead">Wed Nov  5 19:03:13 2025 – Wed Nov  5 19:05:48 2025<br>1 hosts scanned.
+<p class="lead">Sun Nov  9 08:41:41 2025 – Sun Nov  9 08:44:31 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -153,12 +153,38 @@
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Fortinet FortiGate 50B or FortiWifi 60C or 80C firewall http config</td>
+<td title="Service">https</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/h:fortinet:fortiwifi:80c">cpe:/h:fortinet:fortiwifi:80c</a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 404 Not Found
+    Connection: Keep-Alive
+    Content-Length: 9
+    ERROR
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    Date: Sun, 09 Nov 2025 08:42:06 GMT
+    Allow: POST,OPTIONS,GET,HEAD
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    Referrer-Policy: strict-origin
+    Content-Length: 0
+    Keep-Alive: timeout=2, max=100
+    Connection: close
+    Content-Type: text/html; charset=ISO-8859-1
+    Set-Cookie: BIGipServerpool-dgefp-aspe.cegedim.cloud-http=!ggmB+beGzLDsp+kXIkI7F7SI9ajmipYk6ow3ZP1JyKR7kdPPFG00KJxBmmVF+uCxAj2ldw3BvIsWTizzqq1kgOgo/7s=; path=/; Httponly; Secure
+  RTSPRequest, SIPOptions: 
+    HTTP/1.0 400 Bad Request
+    Connection: Keep-Alive
+    Content-Length: 9
+    ERROR</pre>
+</td></tr>
 </tbody>
 </table></div>
 </div>
@@ -190,10 +216,10 @@
 <td>185.194.82.150 - bonusmalus.travail-emploi.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http</td>
-<td>Fortinet FortiGate 50B or FortiWifi 60C or 80C firewall http config</td>
+<td>https</td>
 <td></td>
-<td>cpe:/h:fortinet:fortiwifi:80c</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
