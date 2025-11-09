@@ -1,13 +1,17 @@
-# Nmap 7.92 scan initiated Wed Nov  5 14:33:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln atlas.patrimoines.culture.fr
+# Nmap 7.92 scan initiated Sun Nov  9 08:28:57 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln atlas.patrimoines.culture.fr
 Nmap scan report for atlas.patrimoines.culture.fr (143.126.211.128)
-Host is up (0.10s latency).
+Host is up (0.12s latency).
 rDNS record for 143.126.211.128: web7.culture.fr
-Not shown: 925 filtered tcp ports (no-response), 73 closed tcp ports (reset)
-PORT    STATE SERVICE  VERSION
-80/tcp  open  http     Apache httpd
+Not shown: 994 filtered tcp ports (no-response)
+PORT      STATE  SERVICE        VERSION
+80/tcp    open   http           Apache httpd
 |_http-server-header: Apache
-443/tcp open  ssl/http Apache httpd
+113/tcp   closed ident
+443/tcp   open   ssl/http       Apache httpd
 |_http-server-header: Apache
+3914/tcp  closed listcrt-port-2
+4343/tcp  closed unicall
+49167/tcp closed unknown
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 14:36:53 2025 -- 1 IP address (1 host up) scanned in 212.45 seconds
+# Nmap done at Sun Nov  9 08:37:53 2025 -- 1 IP address (1 host up) scanned in 535.78 seconds
