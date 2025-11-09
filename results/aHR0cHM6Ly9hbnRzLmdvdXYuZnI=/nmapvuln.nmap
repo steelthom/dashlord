@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Nov  5 13:45:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ants.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 08:00:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ants.gouv.fr
 Nmap scan report for ants.gouv.fr (176.100.168.125)
-Host is up (0.15s latency).
+Host is up (0.12s latency).
 Not shown: 993 closed tcp ports (reset)
 PORT    STATE    SERVICE   VERSION
 20/tcp  filtered ftp-data
@@ -9,152 +9,130 @@ PORT    STATE    SERVICE   VERSION
 80/tcp  open     http      rdwr
 |_http-server-header: rdwr
 | fingerprint-strings: 
-|   FourOhFourRequest: 
-|     HTTP/1.1 301 Moved Permanently
+|   GetRequest: 
+|     HTTP/1.1 200 OK
 |     Server: rdwr
-|     Date: Wed, 05 Nov 2025 13:45:51 GMT
-|     Content-Type: text/html
-|     Content-Length: 161
+|     Date: Sun, 09 Nov 2025 08:00:48 GMT
+|     Content-Type: text/html; charset=UTF-8
 |     Connection: close
-|     Location: https://ants.gouv.fr:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
-|     <html>
-|     <head><title>301 Moved Permanently</title></head>
-|     <body>
-|     <center><h1>301 Moved Permanently</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|     </html>
-|   GetRequest, HTTPOptions: 
-|     HTTP/1.1 301 Moved Permanently
+|     Set-Cookie: __uzma=844fe5b4-6a1c-4894-a2b4-877dbb8e049e; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmb=1762675248; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzme=9172; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmc=150340745526; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmd=1762675248; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmf=7f9000844fe5b4-6a1c-4894-a2b4-877dbb8e049e1-17626752481450-001cd431f68fde9fd7407; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-A
+|   HTTPOptions: 
+|     HTTP/1.1 302 Moved Temporarily
 |     Server: rdwr
-|     Date: Wed, 05 Nov 2025 13:45:50 GMT
+|     Date: Sun, 09 Nov 2025 08:00:48 GMT
 |     Content-Type: text/html
-|     Content-Length: 161
 |     Connection: close
-|     Location: https://ants.gouv.fr:443/
-|     <html>
-|     <head><title>301 Moved Permanently</title></head>
-|     <body>
-|     <center><h1>301 Moved Permanently</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|     </html>
-|   RTSPRequest, X11Probe: 
-|     HTTP/1.1 400 Bad Request
-|     Server: rdwr
-|     Date: Wed, 05 Nov 2025 13:45:50 GMT
-|     Content-Type: text/html
-|     Content-Length: 149
-|     Connection: close
-|     <html>
-|     <head><title>400 Bad Request</title></head>
-|     <body>
-|     <center><h1>400 Bad Request</h1></center>
-|     <hr><center>rdwr</center>
-|     </body>
-|_    </html>
+|     Set-Cookie: __uzma=93db78d1-18bc-4eee-bd13-2816a786ce24; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmb=1762675248; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzme=8115; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmc=169371062774; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmd=1762675248; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-Age=15724800; SameSite=Lax
+|_    Set-Cookie: __uzmf=7f900093db78d1-18bc-4eee-bd13-2816a786ce241-17626752486830-0016895152e1eb7263310; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:48 GMT; Max-A
 161/tcp filtered snmp
 179/tcp filtered bgp
-443/tcp open     ssl/https
+443/tcp open     ssl/https rdwr
+|_http-server-header: rdwr
 | fingerprint-strings: 
 |   GetRequest: 
-|     HTTP/1.1 400 Bad Request
-|     Content-Type: text/html
+|     HTTP/1.1 200 OK
+|     Server: rdwr
+|     Date: Sun, 09 Nov 2025 08:00:54 GMT
+|     Content-Type: text/html; charset=UTF-8
 |     Connection: close
-|     Set-Cookie: __uzma=fe931ffe-dc96-4e43-9a4f-26b44b3d79d6; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:56 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzmb=1762350356; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:56 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzme=7615; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:56 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzmc=192211089766; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:56 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzmd=1762350356; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:56 GMT; Max-Age=15724800; SameSite=Lax
-|     Date: Wed, 05 Nov 2025 13:45:56 GMT
-|     X-Content-Type-Options: nosniff
-|     X-XSS-Protection: 1; mode=block
-|     X-Frame-Options: SAMEORIGIN
-|     Referrer-Policy: strict-origin-when-cross-origin
-|     Content-Security-Policy: frame-ances
+|     Set-Cookie: __uzma=af1d3366-4e1e-49a7-8318-a536146230a7; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:54 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmb=1762675254; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:54 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzme=9294; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:54 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmc=174570748976; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:54 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmd=1762675254; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:54 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmf=7f9000af1d3366-4e1e-49a7-8318-a536146230a71-17626752545160-001b1d3501c359a8f6d07; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:54 GMT; Max-A
 |   HTTPOptions: 
-|     HTTP/1.1 303 Found
+|     HTTP/1.1 302 Moved Temporarily
+|     Server: rdwr
+|     Date: Sun, 09 Nov 2025 08:00:55 GMT
 |     Content-Type: text/html
 |     Connection: close
-|     Set-Cookie: __uzma=3c351664-13b7-4968-aaaa-1f9abd23ff99; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:57 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzmb=1762350357; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:57 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzme=5246; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:57 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzmc=554941038972; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:57 GMT; Max-Age=15724800; SameSite=Lax
-|     Set-Cookie: __uzmd=1762350357; HttpOnly; path=/; Expires=Wed, 06-May-26 13:45:57 GMT; Max-Age=15724800; SameSite=Lax
-|     Cache-Control: no-cache, private, no-store, must-revalidate
-|     Location: https://blocking.docaposte.fr/ants/?_event_transid=2105283289
-|     <html>
-|     <head>
-|     <title>Security Page redirect</title>
-|_    <meta http-equiv="refresh" content="
+|     Set-Cookie: __uzma=05adc379-b581-4160-b097-0f3c5c3bfb51; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:55 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmb=1762675255; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:55 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzme=6271; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:55 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmc=555191010372; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:55 GMT; Max-Age=15724800; SameSite=Lax
+|     Set-Cookie: __uzmd=1762675255; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:55 GMT; Max-Age=15724800; SameSite=Lax
+|_    Set-Cookie: __uzmf=7f900005adc379-b581-4160-b097-0f3c5c3bfb511-17626752554740-00152c0663c0202998410; HttpOnly; path=/; Expires=Sun, 10-May-26 08:00:55 GMT; Max-A
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/5%Time=690B550E%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,15C,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
-SF:0rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:45:50\x20GMT\r\nConte
-SF:nt-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20close
-SF:\r\nLocation:\x20https://ants\.gouv\.fr:443/\r\n\r\n<html>\r\n<head><ti
-SF:tle>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1
-SF:>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>rdwr</center>
-SF:\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,15C,"HTTP/1\.1\x20301\x20Mov
-SF:ed\x20Permanently\r\nServer:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202
-SF:025\x2013:45:50\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:
-SF:\x20161\r\nConnection:\x20close\r\nLocation:\x20https://ants\.gouv\.fr:
-SF:443/\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title><
-SF:/head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></cente
-SF:r>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(RTSPReque
-SF:st,125,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20rdwr\r\nDate:\
-SF:x20Wed,\x2005\x20Nov\x202025\x2013:45:50\x20GMT\r\nContent-Type:\x20tex
-SF:t/html\r\nContent-Length:\x20149\r\nConnection:\x20close\r\n\r\n<html>\
-SF:r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<cent
-SF:er><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>rdwr</center>
-SF:\r\n</body>\r\n</html>\r\n")%r(X11Probe,125,"HTTP/1\.1\x20400\x20Bad\x2
-SF:0Request\r\nServer:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013
-SF::45:50\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20149\r
-SF:\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Requ
-SF:est</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1><
-SF:/center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n")%r(Fou
-SF:rOhFourRequest,17F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:
-SF:\x20rdwr\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:45:51\x20GMT\r\nCo
-SF:ntent-Type:\x20text/html\r\nContent-Length:\x20161\r\nConnection:\x20cl
-SF:ose\r\nLocation:\x20https://ants\.gouv\.fr:443/nice%20ports%2C/Tri%6Eit
-SF:y\.txt%2ebak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently<
-SF:/title></head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1
-SF:></center>\r\n<hr><center>rdwr</center>\r\n</body>\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=69104A30%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,3570,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20rdwr\r\nDate:\x2
+SF:0Sun,\x2009\x20Nov\x202025\x2008:00:48\x20GMT\r\nContent-Type:\x20text/
+SF:html;\x20charset=UTF-8\r\nConnection:\x20close\r\nSet-Cookie:\x20__uzma
+SF:=844fe5b4-6a1c-4894-a2b4-877dbb8e049e;\x20HttpOnly;\x20path=/;\x20Expir
+SF:es=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800;\x20SameSi
+SF:te=Lax\r\nSet-Cookie:\x20__uzmb=1762675248;\x20HttpOnly;\x20path=/;\x20
+SF:Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800;\x20S
+SF:ameSite=Lax\r\nSet-Cookie:\x20__uzme=9172;\x20HttpOnly;\x20path=/;\x20E
+SF:xpires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800;\x20Sa
+SF:meSite=Lax\r\nSet-Cookie:\x20__uzmc=150340745526;\x20HttpOnly;\x20path=
+SF:/;\x20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800
+SF:;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762675248;\x20HttpOnly;\x20
+SF:path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=157
+SF:24800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmf=7f9000844fe5b4-6a1c-489
+SF:4-a2b4-877dbb8e049e1-17626752481450-001cd431f68fde9fd7407;\x20HttpOnly;
+SF:\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-A")
+SF:%r(HTTPOptions,DC9,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\nServer:
+SF:\x20rdwr\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2008:00:48\x20GMT\r\nCo
+SF:ntent-Type:\x20text/html\r\nConnection:\x20close\r\nSet-Cookie:\x20__uz
+SF:ma=93db78d1-18bc-4eee-bd13-2816a786ce24;\x20HttpOnly;\x20path=/;\x20Exp
+SF:ires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800;\x20Same
+SF:Site=Lax\r\nSet-Cookie:\x20__uzmb=1762675248;\x20HttpOnly;\x20path=/;\x
+SF:20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800;\x2
+SF:0SameSite=Lax\r\nSet-Cookie:\x20__uzme=8115;\x20HttpOnly;\x20path=/;\x2
+SF:0Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=15724800;\x20
+SF:SameSite=Lax\r\nSet-Cookie:\x20__uzmc=169371062774;\x20HttpOnly;\x20pat
+SF:h=/;\x20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=157248
+SF:00;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762675248;\x20HttpOnly;\x
+SF:20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-Age=1
+SF:5724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmf=7f900093db78d1-18bc-4
+SF:eee-bd13-2816a786ce241-17626752486830-0016895152e1eb7263310;\x20HttpOnl
+SF:y;\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:48\x20GMT;\x20Max-A
+SF:");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/5%Time=690B5514%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,8CA,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-T
-SF:ype:\x20text/html\r\nConnection:\x20close\r\nSet-Cookie:\x20__uzma=fe93
-SF:1ffe-dc96-4e43-9a4f-26b44b3d79d6;\x20HttpOnly;\x20path=/;\x20Expires=We
-SF:d,\x2006-May-26\x2013:45:56\x20GMT;\x20Max-Age=15724800;\x20SameSite=La
-SF:x\r\nSet-Cookie:\x20__uzmb=1762350356;\x20HttpOnly;\x20path=/;\x20Expir
-SF:es=Wed,\x2006-May-26\x2013:45:56\x20GMT;\x20Max-Age=15724800;\x20SameSi
-SF:te=Lax\r\nSet-Cookie:\x20__uzme=7615;\x20HttpOnly;\x20path=/;\x20Expire
-SF:s=Wed,\x2006-May-26\x2013:45:56\x20GMT;\x20Max-Age=15724800;\x20SameSit
-SF:e=Lax\r\nSet-Cookie:\x20__uzmc=192211089766;\x20HttpOnly;\x20path=/;\x2
-SF:0Expires=Wed,\x2006-May-26\x2013:45:56\x20GMT;\x20Max-Age=15724800;\x20
-SF:SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762350356;\x20HttpOnly;\x20path=
-SF:/;\x20Expires=Wed,\x2006-May-26\x2013:45:56\x20GMT;\x20Max-Age=15724800
-SF:;\x20SameSite=Lax\r\nDate:\x20Wed,\x2005\x20Nov\x202025\x2013:45:56\x20
-SF:GMT\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x2
-SF:0mode=block\r\nX-Frame-Options:\x20SAMEORIGIN\r\nReferrer-Policy:\x20st
-SF:rict-origin-when-cross-origin\r\nContent-Security-Policy:\x20frame-ance
-SF:s")%r(HTTPOptions,9A4,"HTTP/1\.1\x20303\x20Found\r\nContent-Type:\x20te
-SF:xt/html\r\nConnection:\x20close\r\nSet-Cookie:\x20__uzma=3c351664-13b7-
-SF:4968-aaaa-1f9abd23ff99;\x20HttpOnly;\x20path=/;\x20Expires=Wed,\x2006-M
-SF:ay-26\x2013:45:57\x20GMT;\x20Max-Age=15724800;\x20SameSite=Lax\r\nSet-C
-SF:ookie:\x20__uzmb=1762350357;\x20HttpOnly;\x20path=/;\x20Expires=Wed,\x2
-SF:006-May-26\x2013:45:57\x20GMT;\x20Max-Age=15724800;\x20SameSite=Lax\r\n
-SF:Set-Cookie:\x20__uzme=5246;\x20HttpOnly;\x20path=/;\x20Expires=Wed,\x20
-SF:06-May-26\x2013:45:57\x20GMT;\x20Max-Age=15724800;\x20SameSite=Lax\r\nS
-SF:et-Cookie:\x20__uzmc=554941038972;\x20HttpOnly;\x20path=/;\x20Expires=W
-SF:ed,\x2006-May-26\x2013:45:57\x20GMT;\x20Max-Age=15724800;\x20SameSite=L
-SF:ax\r\nSet-Cookie:\x20__uzmd=1762350357;\x20HttpOnly;\x20path=/;\x20Expi
-SF:res=Wed,\x2006-May-26\x2013:45:57\x20GMT;\x20Max-Age=15724800;\x20SameS
-SF:ite=Lax\r\nCache-Control:\x20no-cache,\x20private,\x20no-store,\x20must
-SF:-revalidate\r\nLocation:\x20https://blocking\.docaposte\.fr/ants/\?_eve
-SF:nt_transid=2105283289\r\n\r\n<html>\n<head>\n<title>Security\x20Page\x2
-SF:0redirect</title>\n<meta\x20http-equiv=\"refresh\"\x20content=\"");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=69104A36%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,8000,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20rdwr\r\nD
+SF:ate:\x20Sun,\x2009\x20Nov\x202025\x2008:00:54\x20GMT\r\nContent-Type:\x
+SF:20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nSet-Cookie:\x2
+SF:0__uzma=af1d3366-4e1e-49a7-8318-a536146230a7;\x20HttpOnly;\x20path=/;\x
+SF:20Expires=Sun,\x2010-May-26\x2008:00:54\x20GMT;\x20Max-Age=15724800;\x2
+SF:0SameSite=Lax\r\nSet-Cookie:\x20__uzmb=1762675254;\x20HttpOnly;\x20path
+SF:=/;\x20Expires=Sun,\x2010-May-26\x2008:00:54\x20GMT;\x20Max-Age=1572480
+SF:0;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzme=9294;\x20HttpOnly;\x20path=
+SF:/;\x20Expires=Sun,\x2010-May-26\x2008:00:54\x20GMT;\x20Max-Age=15724800
+SF:;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmc=174570748976;\x20HttpOnly;\x
+SF:20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:54\x20GMT;\x20Max-Age=1
+SF:5724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762675254;\x20HttpOn
+SF:ly;\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:54\x20GMT;\x20Max-
+SF:Age=15724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmf=7f9000af1d3366-4
+SF:e1e-49a7-8318-a536146230a71-17626752545160-001b1d3501c359a8f6d07;\x20Ht
+SF:tpOnly;\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:54\x20GMT;\x20
+SF:Max-A")%r(HTTPOptions,DCA,"HTTP/1\.1\x20302\x20Moved\x20Temporarily\r\n
+SF:Server:\x20rdwr\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2008:00:55\x20GM
+SF:T\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nSet-Cookie:\
+SF:x20__uzma=05adc379-b581-4160-b097-0f3c5c3bfb51;\x20HttpOnly;\x20path=/;
+SF:\x20Expires=Sun,\x2010-May-26\x2008:00:55\x20GMT;\x20Max-Age=15724800;\
+SF:x20SameSite=Lax\r\nSet-Cookie:\x20__uzmb=1762675255;\x20HttpOnly;\x20pa
+SF:th=/;\x20Expires=Sun,\x2010-May-26\x2008:00:55\x20GMT;\x20Max-Age=15724
+SF:800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzme=6271;\x20HttpOnly;\x20pat
+SF:h=/;\x20Expires=Sun,\x2010-May-26\x2008:00:55\x20GMT;\x20Max-Age=157248
+SF:00;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmc=555191010372;\x20HttpOnly;
+SF:\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:55\x20GMT;\x20Max-Age
+SF:=15724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmd=1762675255;\x20Http
+SF:Only;\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:55\x20GMT;\x20Ma
+SF:x-Age=15724800;\x20SameSite=Lax\r\nSet-Cookie:\x20__uzmf=7f900005adc379
+SF:-b581-4160-b097-0f3c5c3bfb511-17626752554740-00152c0663c0202998410;\x20
+SF:HttpOnly;\x20path=/;\x20Expires=Sun,\x2010-May-26\x2008:00:55\x20GMT;\x
+SF:20Max-A");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 13:46:22 2025 -- 1 IP address (1 host up) scanned in 57.35 seconds
+# Nmap done at Sun Nov  9 08:01:17 2025 -- 1 IP address (1 host up) scanned in 43.13 seconds
