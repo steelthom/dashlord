@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 04:02:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln dgcs-ocmi.social.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov  9 20:12:57 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln dgcs-ocmi.social.gouv.fr
 Nmap scan report for dgcs-ocmi.social.gouv.fr (195.154.205.146)
-Host is up (0.13s latency).
+Host is up (0.090s latency).
 rDNS record for 195.154.205.146: 195-154-205-146.rev.poneytelecom.eu
 Not shown: 994 filtered tcp ports (no-response)
 PORT    STATE  SERVICE      VERSION
@@ -125,7 +125,6 @@ PORT    STATE  SERVICE      VERSION
 135/tcp closed msrpc
 139/tcp closed netbios-ssn
 443/tcp open   ssl/https    DGCS-ALT
-|_http-server-header: DGCS-ALT
 | fingerprint-strings: 
 |   DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, tor-versions: 
 |     HTTP/1.1 400 Bad request
@@ -143,10 +142,11 @@ PORT    STATE  SERVICE      VERSION
 |     <html><body><h1>503 Service Unavailable</h1>
 |     server is available to handle this request.
 |_    </body></html>
+|_http-server-header: DGCS-ALT
 445/tcp closed microsoft-ds
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690C1DCD%P=x86_64-alpine-linux-musl%r
+SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=6910F5D6%P=x86_64-alpine-linux-musl%r
 SF:(GetRequest,C2,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\ncache-con
 SF:trol:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><body><h1>
 SF:503\x20Service\x20Unavailable</h1>\nNo\x20server\x20is\x20available\x20
@@ -180,7 +180,7 @@ SF:che-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20te
 SF:xt/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brow
 SF:ser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690C1DD4%P=x86_64-alpine-linux
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=6910F5DC%P=x86_64-alpine-linux
 SF:-musl%r(GetRequest,C2,"HTTP/1\.0\x20503\x20Service\x20Unavailable\r\nca
 SF:che-control:\x20no-cache\r\ncontent-type:\x20text/html\r\n\r\n<html><bo
 SF:dy><h1>503\x20Service\x20Unavailable</h1>\nNo\x20server\x20is\x20availa
@@ -217,4 +217,4 @@ SF:);
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 04:02:50 2025 -- 1 IP address (1 host up) scanned in 42.66 seconds
+# Nmap done at Sun Nov  9 20:13:33 2025 -- 1 IP address (1 host up) scanned in 36.31 seconds
