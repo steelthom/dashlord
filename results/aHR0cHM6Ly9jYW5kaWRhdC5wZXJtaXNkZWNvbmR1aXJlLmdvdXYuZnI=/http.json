@@ -1,15 +1,15 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "C",
     "error": null,
-    "score": 30,
+    "score": 50,
     "statusCode": 403,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Wed, 05 Nov 2025 20:12:09 GMT",
+      "date": "Sun, 09 Nov 2025 13:51:03 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
@@ -20,9 +20,9 @@
       "vary": "accept-encoding",
       "server": "cloudflare",
       "set-cookie": [
-        "__cf_bm=_bkxI3TAg9ahQf8diV6jKpwhmFccz_pPKqWs4uGSfck-1762373529.888067-1.0.1.1-FcxEnsMaXdFz7szyMjWuhyHTkK8XNU7nv.LGBrqx5tlFiW1NmBYvA6f35ZxbHxuTVvf6Q5ysuc2W73X85zeSYyA2wA55gWjWrq0rgnd9964uQa5_2zSfmiN4ahGIlkAC; HttpOnly; Secure; Path=/; Domain=permisdeconduire.gouv.fr; Expires=Wed, 05 Nov 2025 20:42:09 GMT"
+        "__cf_bm=wBeHE36YbKbTP5ifZiLyaqfic47AdxxV0ssRAm3cE38-1762696263.2827084-1.0.1.1-bHLOdE1Bb9xfNq6k2mhiRNGBVXcUVgs6CS8ca8O9BO4nK0UE539zseH.Jg82O_ZWfpEoFhkQYWy07wWzghpNl3x7jXFDAX5JlB.4Tf7sJviUorsp7gMUWPQftzLumIaR; HttpOnly; Secure; Path=/; Domain=permisdeconduire.gouv.fr; Expires=Sun, 09 Nov 2025 14:21:03 GMT"
       ],
-      "cf-ray": "999f0121cfc09c1f-IAD"
+      "cf-ray": "99bdc85d8ef5e5e9-IAD"
     }
   },
   "tests": {
@@ -45,7 +45,7 @@
       "data": {
         "__cf_bm": {
           "domain": "permisdeconduire.gouv.fr",
-          "expires": "2025-11-05T20:42:09.000Z",
+          "expires": "2025-11-09T14:21:03.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -63,13 +63,15 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-missing",
-      "scoreModifier": -20,
-      "destination": "http://candidat.permisdeconduire.gouv.fr/",
-      "redirects": false,
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://moncompte.permisdeconduire.gouv.fr/auth/realms/usager/protocol/openid-connect/auth?response_type=code&scope=openid%20email%20profile&client_id=rdvp-front-candidat&state=-CEfocN2ORY9UTmdwMn8k0tvg64&redirect_uri=https%3A%2F%2Fcandidat.permisdeconduire.gouv.fr%2Foidc-callback&nonce=TvySUycvnF-2DC6aTC3ssAzQ6yF9SEvLSkqXkUf2m-0",
+      "redirects": true,
       "route": [
-        "http://candidat.permisdeconduire.gouv.fr/"
+        "http://candidat.permisdeconduire.gouv.fr/",
+        "https://candidat.permisdeconduire.gouv.fr/",
+        "https://moncompte.permisdeconduire.gouv.fr/auth/realms/usager/protocol/openid-connect/auth?response_type=code&scope=openid%20email%20profile&client_id=rdvp-front-candidat&state=-CEfocN2ORY9UTmdwMn8k0tvg64&redirect_uri=https%3A%2F%2Fcandidat.permisdeconduire.gouv.fr%2Foidc-callback&nonce=TvySUycvnF-2DC6aTC3ssAzQ6yF9SEvLSkqXkUf2m-0"
       ],
       "statusCode": 403
     },
