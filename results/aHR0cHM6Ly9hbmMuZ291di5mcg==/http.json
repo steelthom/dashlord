@@ -1,16 +1,16 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "B",
     "error": null,
-    "score": 35,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Wed, 05 Nov 2025 09:20:50 GMT",
+      "date": "Sun, 09 Nov 2025 04:24:18 GMT",
       "content-type": "text/html; charset=UTF-8",
       "connection": "close",
       "cache-control": "max-age=600",
@@ -18,7 +18,7 @@
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
-      "expires": "Wed, 05 Nov 2025 09:30:50 GMT",
+      "expires": "Sun, 09 Nov 2025 04:34:18 GMT",
       "last-modified": "Mon, 03 Nov 2025 08:22:41 GMT",
       "etag": "\"1762158161\"",
       "vary": "Cookie,Accept-Encoding",
@@ -35,11 +35,11 @@
       "x-xss-protection": "1;mode=block",
       "upgrade-insecure-requests": "1",
       "set-cookie": [
-        "incap_ses_7224_3164287=KcPpVVkXZ37EVowhQ85AZPIWC2kAAAAAF0v9K3VYyzuqmuCq14xJjA==; path=/; Domain=.anc.gouv.fr; Secure; SameSite=None"
+        "incap_ses_7239_3164287=nrwmRtgKUVUv/fiRkBh2ZHIXEGkAAAAAvBeOhCOxep051JcNXAJ5LA==; path=/; Domain=.anc.gouv.fr; Secure; SameSite=None"
       ],
       "x-cdn": "Imperva",
       "transfer-encoding": "chunked",
-      "x-iinfo": "9-5606079-5606080 NNYN CT(111 251 0) RT(1762334450362 10) q(0 1 4 0) r(5 6) U12"
+      "x-iinfo": "13-59063088-59063090 NNYN CT(123 251 0) RT(1762662258231 4) q(0 0 4 0) r(5 7) U12"
     }
   },
   "tests": {
@@ -85,23 +85,27 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
       "data": {
         "visid_incap_3164287": {
           "domain": "anc.gouv.fr",
-          "expires": "2026-11-04T22:56:44.000Z",
+          "expires": "2026-11-08T22:13:39.000Z",
           "httponly": true,
           "path": "/",
-          "port": null
+          "port": null,
+          "samesite": "none",
+          "secure": true
         },
-        "incap_ses_608_3164287": {
+        "incap_ses_577_3164287": {
           "domain": "anc.gouv.fr",
           "path": "/",
-          "port": null
+          "port": null,
+          "samesite": "none",
+          "secure": true
         },
-        "incap_ses_7224_3164287": {
+        "incap_ses_7239_3164287": {
           "domain": "anc.gouv.fr",
           "path": "/",
           "port": null,
@@ -109,7 +113,7 @@
           "secure": true
         }
       },
-      "sameSite": false
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -142,13 +146,13 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented-no-https",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
