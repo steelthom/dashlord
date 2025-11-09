@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Wed Nov  5 19:01:36 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beauxartsparis.fr
+# Nmap 7.92 scan initiated Sun Nov  9 08:46:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beauxartsparis.fr
 Nmap scan report for beauxartsparis.fr (137.74.197.41)
-Host is up (0.15s latency).
+Host is up (0.090s latency).
 rDNS record for 137.74.197.41: vps-3ebb3cf5.vps.ovh.net
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
@@ -105,6 +105,7 @@ PORT     STATE SERVICE  VERSION
 |     	4C6E2182-0E99-5626-83F6-1646DD648C57	3.6	https://vulners.com/githubexploit/4C6E2182-0E99-5626-83F6-1646DD648C57	*EXPLOIT*
 |_    	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
 80/tcp   open  http     nginx 1.22.1
+|_http-server-header: nginx/1.22.1
 | vulners: 
 |   nginx 1.22.1: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -114,8 +115,8 @@ PORT     STATE SERVICE  VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-server-header: nginx/1.22.1
 443/tcp  open  ssl/http nginx 1.22.1
+|_http-server-header: nginx/1.22.1
 | vulners: 
 |   nginx 1.22.1: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -125,7 +126,6 @@ PORT     STATE SERVICE  VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-server-header: nginx/1.22.1
 3306/tcp open  mysql    MySQL 5.5.5-10.11.14-MariaDB-0+deb12u2
 | vulners: 
 |   cpe:/a:mariadb:mariadb:5.5.5-10.11.14-mariadb-0%2Bdeb12u2: 
@@ -270,4 +270,4 @@ PORT     STATE SERVICE  VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Nov  5 19:01:55 2025 -- 1 IP address (1 host up) scanned in 19.19 seconds
+# Nmap done at Sun Nov  9 08:46:43 2025 -- 1 IP address (1 host up) scanned in 16.92 seconds
