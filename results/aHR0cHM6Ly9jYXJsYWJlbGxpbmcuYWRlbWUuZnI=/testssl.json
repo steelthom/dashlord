@@ -416,7 +416,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "TLS_timestamp",
@@ -556,7 +556,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "84 >= 60 days"
+              "finding"      : "80 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -857,7 +857,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "84 >= 60 days"
+              "finding"      : "80 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -1053,7 +1053,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -1067,7 +1067,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762375951"
+              "finding"      : "1762700432"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1075,7 +1075,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=m6.QwMewCqa1c3w4EEHvAly0arOHSoUHouodVINiYls-1762375949.798374-1.0.1.1-dvdL2iYw0IOPlNfgvfJA5XzRGUMb19_khF5fhPJvjhGtGrneb9F06xZ0Yw9DbLi1cV8rD0cXRopP8SIBI0gcQZoHXOUaWaHIpbwPgC1mHM35dgyIjHGrfattKxU9a4gv; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Wed, 05 Nov 2025 21:22:31 GMT (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=pDLAeBI.VFIe4xIebGbkknV.HYgyoiZJCvg130B32Jk-1762700432.5297616-1.0.1.1-PngHXCep2Y_ktFWmP09DtE_YZgqDM0OFobl.I0bqAWeT3u3.mqzzpL8uls8rAvUZot.31K0ww_VLRxPhblshS.XI36tpaGi6GLWcO0cMOpEXzzm65XV2XVzLRtcM4iJ7; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Sun, 09 Nov 2025 15:30:32 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -1110,7 +1110,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -1124,14 +1124,28 @@
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (maybe missed the application)"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "carlabelling.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "carlabelling.ademe.fr/104.18.0.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "carlabelling.ademe.fr/104.18.0.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=0, must-revalidate, private"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -2190,7 +2204,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "84 >= 60 days"
+              "finding"      : "80 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#1>",
@@ -2491,7 +2505,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "84 >= 60 days"
+              "finding"      : "80 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore <hostCert#2>",
@@ -2687,7 +2701,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "403 Forbidden ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
@@ -2701,7 +2715,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762376042"
+              "finding"      : "1762700514"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -2709,7 +2723,7 @@
               "port"         : "443",
               "severity"     : "MEDIUM",
               "cwe"          : "CWE-212",
-              "finding"      : "Set-Cookie: __cf_bm=fp6c8FYDMUfId4G_xlAxEjn7D554F.AO9Y3p.VJMB50-1762376040.655723-1.0.1.1-a7o6lZRDLP85w9PvKikYjSZcWstKY5pr4xB0xqKrATuI55vC4KGo543s5oe3Z2bGTop6L59cFC4tp9E6oyOmZ01v0JON3Z3OBFoiFACkEN5pAtVq5RrP6Gaz2h6mYx4X; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Wed, 05 Nov 2025 21:24:02 GMT (check if it's your IP address or e.g. a cluster IP)"
+              "finding"      : "Set-Cookie: __cf_bm=txYC6N4AtXKWOT2KJo76lq5X3k6PaGNtjJFoP0eLA60-1762700514.9480822-1.0.1.1-k0QZmd5Kq7jlNPGpnFFR6TRNnT6VnH7Ek1JqMzlWc7XZyAbvbhsG07Qxh14D9zNAGfqbgWC3sT8II7JbgosBZKghPVfIp9tl4XN8GnMPjeopKgzvPuZqgMD7UfOLwgTS; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Sun, 09 Nov 2025 15:31:54 GMT (check if it's your IP address or e.g. a cluster IP)"
           }
 ,         {
               "id"           : "HSTS",
@@ -2744,7 +2758,7 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1 at '/'"
+              "finding"      : "1 at '/' (maybe missed the application)"
           }
 ,         {
               "id"           : "cookie_secure",
@@ -2758,14 +2772,28 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "All (1) at '/' marked as HttpOnly"
+              "finding"      : "All (1) at '/' marked as HttpOnly (maybe missed the application)"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "carlabelling.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "carlabelling.ademe.fr/104.18.1.202",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
           }
 ,         {
               "id"           : "Cache-Control",
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=0, must-revalidate, private"
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -3272,6 +3300,6 @@
               "ip"           : "carlabelling.ademe.fr/104.18.1.202",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "184"
+              "finding"      : "167"
           }
 ]
