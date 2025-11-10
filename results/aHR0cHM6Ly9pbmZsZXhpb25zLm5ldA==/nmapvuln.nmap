@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 19:38:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln inflexions.net
+# Nmap 7.92 scan initiated Mon Nov 10 15:05:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln inflexions.net
 Nmap scan report for inflexions.net (51.159.19.178)
-Host is up (0.16s latency).
+Host is up (0.090s latency).
 rDNS record for 51.159.19.178: scandella.clients.ipsolution.fr
 Not shown: 930 filtered tcp ports (no-response), 59 closed tcp ports (reset)
 PORT    STATE SERVICE  VERSION
@@ -50,7 +50,6 @@ PORT    STATE SERVICE  VERSION
 |     	CNVD-2017-12537	7.5	https://vulners.com/cnvd/CNVD-2017-12537
 |_    	9ED8A03D-FE34-5F77-8C66-C03C9615AF07	7.5	https://vulners.com/gitee/9ED8A03D-FE34-5F77-8C66-C03C9615AF07	*EXPLOIT*
 80/tcp  open  http     Apache httpd 2.4.62 ((Debian))
-|_http-server-header: Apache/2.4.62 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -117,9 +116,11 @@ PORT    STATE SERVICE  VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
+|_http-server-header: Apache/2.4.62 (Debian)
 110/tcp open  pop3     Courier pop3d
 143/tcp open  imap     Courier Imapd (released 2019)
 443/tcp open  ssl/http Apache httpd 2.4.62
+|_http-server-header: Apache/2.4.62 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -186,11 +187,10 @@ PORT    STATE SERVICE  VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
-|_http-server-header: Apache/2.4.62 (Debian)
 587/tcp open  smtp     Postfix smtpd
 993/tcp open  ssl/imap Courier Imapd (released 2019)
 995/tcp open  ssl/pop3 Courier pop3d
 Service Info: Hosts:  scandella.clients.ipsolution.fr, arcfot.scandella.fr; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 19:38:42 2025 -- 1 IP address (1 host up) scanned in 23.09 seconds
+# Nmap done at Mon Nov 10 15:05:45 2025 -- 1 IP address (1 host up) scanned in 19.84 seconds
