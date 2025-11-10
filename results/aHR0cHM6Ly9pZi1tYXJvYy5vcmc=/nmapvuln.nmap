@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 19:29:31 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln if-maroc.org
+# Nmap 7.92 scan initiated Mon Nov 10 14:14:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln if-maroc.org
 Nmap scan report for if-maroc.org (116.202.192.240)
-Host is up (0.14s latency).
+Host is up (0.13s latency).
 rDNS record for 116.202.192.240: sennin.nindohost.net
 Not shown: 986 closed tcp ports (reset)
 PORT     STATE SERVICE   VERSION
@@ -83,9 +83,6 @@ PORT     STATE SERVICE   VERSION
 |     	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
 |_    	1337DAY-ID-30937	0.0	https://vulners.com/zdt/1337DAY-ID-30937	*EXPLOIT*
 25/tcp   open  smtp?
-| fingerprint-strings: 
-|   SSLSessionReq: 
-|_    421 Too many concurrent SMTP connections; please try again later.
 53/tcp   open  domain    PowerDNS Authoritative Server 4.9.2
 80/tcp   open  http      LiteSpeed
 | fingerprint-strings: 
@@ -93,7 +90,7 @@ PORT     STATE SERVICE   VERSION
 |     HTTP/1.0 404 Not Found
 |     Connection: close
 |     content-type: text/html
-|     date: Thu, 06 Nov 2025 19:29:46 GMT
+|     date: Mon, 10 Nov 2025 14:15:02 GMT
 |     server: LiteSpeed
 |     <!DOCTYPE html>
 |     <html>
@@ -124,7 +121,7 @@ PORT     STATE SERVICE   VERSION
 |     last-modified: Wed, 17 Jun 2020 20:01:33 GMT
 |     accept-ranges: bytes
 |     content-length: 163
-|     date: Thu, 06 Nov 2025 19:29:40 GMT
+|     date: Mon, 10 Nov 2025 14:14:56 GMT
 |     server: LiteSpeed
 |     <html><head><META HTTP-EQUIV="Cache-control" CONTENT="no-cache"><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head><body></body></html>
 |   HTTPOptions: 
@@ -132,7 +129,7 @@ PORT     STATE SERVICE   VERSION
 |     Connection: close
 |     allow: OPTIONS,HEAD,GET,POST
 |     content-length: 0
-|     date: Thu, 06 Nov 2025 19:29:40 GMT
+|     date: Mon, 10 Nov 2025 14:14:56 GMT
 |     server: LiteSpeed
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
@@ -141,7 +138,7 @@ PORT     STATE SERVICE   VERSION
 |     pragma: no-cache
 |     content-type: text/html
 |     content-length: 769
-|     date: Thu, 06 Nov 2025 19:29:40 GMT
+|     date: Mon, 10 Nov 2025 14:14:56 GMT
 |     server: LiteSpeed
 |     <!DOCTYPE html>
 |     <html style="height:100%">
@@ -176,7 +173,7 @@ PORT     STATE SERVICE   VERSION
 |     x-litespeed-cache-control: public,max-age=3600
 |     x-litespeed-tag: 7ad_HTTP.404,7ad_PGSRP,7ad_404,7ad_URL.45fef726657f76ecb3e46efb3aad76cf,7ad_
 |     x-litespeed-cache: miss
-|     date: Thu, 06 Nov 2025 19:29:48 GMT
+|     date: Mon, 10 Nov 2025 14:15:06 GMT
 |     server: LiteSpeed
 |     <!DOCTYPE html>
 |     <html lang="fr-FR" prefix="og: https://ogp.me/ns#">
@@ -189,6 +186,18 @@ PORT     STATE SERVICE   VERSION
 |     </script>
 |     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <styl
 |   GetRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Connection: close
+|     x-powered-by: PHP/8.2.29
+|     content-type: text/html; charset=UTF-8
+|     x-redirect-by: WordPress
+|     location: https:///
+|     x-litespeed-cache-control: no-cache
+|     cache-control: no-cache, must-revalidate, max-age=0, no-store, private
+|     content-length: 0
+|     date: Mon, 10 Nov 2025 14:15:03 GMT
+|     server: LiteSpeed
+|   HTTPOptions: 
 |     HTTP/1.0 200 OK
 |     Connection: close
 |     x-powered-by: PHP/8.2.29
@@ -196,9 +205,9 @@ PORT     STATE SERVICE   VERSION
 |     link: <https://affilior.com/wp-json/>; rel="https://api.w.org/"
 |     link: <https://affilior.com/wp-json/wp/v2/pages/8699>; rel="alternate"; title="JSON"; type="application/json"
 |     link: <https://affilior.com/>; rel=shortlink
-|     etag: "58057-1762455031;;;"
-|     x-litespeed-cache: hit
-|     date: Thu, 06 Nov 2025 19:29:46 GMT
+|     x-litespeed-cache-control: no-cache
+|     cache-control: no-cache, must-revalidate, max-age=0, no-store, private
+|     date: Mon, 10 Nov 2025 14:15:04 GMT
 |     server: LiteSpeed
 |     <!DOCTYPE html>
 |     <html lang="fr-FR" prefix="og: https://ogp.me/ns#">
@@ -209,14 +218,7 @@ PORT     STATE SERVICE   VERSION
 |     <script type="text/javascript">
 |     document.documentElement.className = 'js';
 |     </script>
-|     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googlea
-|   HTTPOptions: 
-|     HTTP/1.0 200 OK
-|     Connection: close
-|     allow: OPTIONS,HEAD,GET,POST
-|     content-length: 0
-|     date: Thu, 06 Nov 2025 19:29:47 GMT
-|_    server: LiteSpeed
+|_    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googl
 |_http-server-header: LiteSpeed
 465/tcp  open  ssl/smtp  Exim smtpd 4.98.1
 | vulners: 
@@ -429,102 +431,102 @@ PORT     STATE SERVICE   VERSION
 |     	EDB-ID:39867	4.0	https://vulners.com/exploitdb/EDB-ID:39867	*EXPLOIT*
 |     	C882EFEA-AFE2-5F2D-96B0-1D3887517B47	4.0	https://vulners.com/githubexploit/C882EFEA-AFE2-5F2D-96B0-1D3887517B47	*EXPLOIT*
 |_    	1337DAY-ID-26031	4.0	https://vulners.com/zdt/1337DAY-ID-26031	*EXPLOIT*
-3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port25-TCP:V=7.92%I=7%D=11/6%Time=690CF74D%P=x86_64-alpine-linux-musl%r
-SF:(SSLSessionReq,43,"421\x20Too\x20many\x20concurrent\x20SMTP\x20connecti
-SF:ons;\x20please\x20try\x20again\x20later\.\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/10%Time=6911F360%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,173,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\ncon
+SF:tent-type:\x20text/html\r\nlast-modified:\x20Wed,\x2017\x20Jun\x202020\
+SF:x2020:01:33\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20163
+SF:\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x2014:14:56\x20GMT\r\nserver:\x2
+SF:0LiteSpeed\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"Cache-control\"\x20
+SF:CONTENT=\"no-cache\"><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL
+SF:=/cgi-sys/defaultwebpage\.cgi\"></head><body></body></html>\n")%r(HTTPO
+SF:ptions,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nallow:\x20
+SF:OPTIONS,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\x20Mon,\x2010\x2
+SF:0Nov\x202025\x2014:14:56\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n")%r(RTS
+SF:PRequest,3F0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20clos
+SF:e\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-reval
+SF:idate,\x20max-age=0\r\npragma:\x20no-cache\r\ncontent-type:\x20text/htm
+SF:l\r\ncontent-length:\x20769\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x2014
+SF::14:56\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\
+SF:x20style=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"\x20conten
+SF:t=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\"\x20/>
+SF:\n<title>\x20400\x20Bad\x20Request\r\n</title><style>@media\x20\(prefer
+SF:s-color-scheme:dark\){body{background-color:#000!important}}</style></h
+SF:ead>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20normal\x201
+SF:4px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x20back
+SF:ground-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20min-height:1
+SF:00%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x20center;\x
+SF:20width:800px;\x20margin-left:\x20-400px;\x20position:absolute;\x20top:
+SF:\x2030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=
+SF:\"margin:0;\x20font-size:150px;\x20line-height:150px;\x20font-weight:bo
+SF:ld;\">400</h1>\n<h2\x20style=\"margin")%r(FourOhFourRequest,1BE4,"HTTP/
+SF:1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\ncontent-type:\x2
+SF:0text/html\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x2014:15:02\x20GMT\r\n
+SF:server:\x20LiteSpeed\r\n\r\n\n\n\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\
+SF:x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20
+SF:content=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20http
+SF:-equiv=\"Cache-control\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<met
+SF:a\x20http-equiv=\"Pragma\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<m
+SF:eta\x20http-equiv=\"Expires\"\x20content=\"0\">\n\x20\x20\x20\x20<meta\
+SF:x20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=
+SF:1\.0\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>\n\x20\x20\x
+SF:20\x20<style\x20type=\"text/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20bod
+SF:y\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x2
+SF:0Arial,\x20Helvetica,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20line-height:\x201\.428571429;\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20background-color:\x20#ffffff;\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20section,\x20footer\x20{\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\
+SF:n\x20\x20\x20\x20\x20\x20");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CF724%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,173,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\ncont
-SF:ent-type:\x20text/html\r\nlast-modified:\x20Wed,\x2017\x20Jun\x202020\x
-SF:2020:01:33\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20163\
-SF:r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:29:40\x20GMT\r\nserver:\x20
-SF:LiteSpeed\r\n\r\n<html><head><META\x20HTTP-EQUIV=\"Cache-control\"\x20C
-SF:ONTENT=\"no-cache\"><META\x20HTTP-EQUIV=\"refresh\"\x20CONTENT=\"0;URL=
-SF:/cgi-sys/defaultwebpage\.cgi\"></head><body></body></html>\n")%r(HTTPOp
-SF:tions,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nallow:\x20O
-SF:PTIONS,HEAD,GET,POST\r\ncontent-length:\x200\r\ndate:\x20Thu,\x2006\x20
-SF:Nov\x202025\x2019:29:40\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n")%r(RTSP
-SF:Request,3F0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close
-SF:\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revali
-SF:date,\x20max-age=0\r\npragma:\x20no-cache\r\ncontent-type:\x20text/html
-SF:\r\ncontent-length:\x20769\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:
-SF:29:40\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\x
-SF:20style=\"height:100%\">\n<head>\n<meta\x20name=\"viewport\"\x20content
-SF:=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no\"\x20/>\
-SF:n<title>\x20400\x20Bad\x20Request\r\n</title><style>@media\x20\(prefers
-SF:-color-scheme:dark\){body{background-color:#000!important}}</style></he
-SF:ad>\n<body\x20style=\"color:\x20#444;\x20margin:0;font:\x20normal\x2014
-SF:px/20px\x20Arial,\x20Helvetica,\x20sans-serif;\x20height:100%;\x20backg
-SF:round-color:\x20#fff;\">\n<div\x20style=\"height:auto;\x20min-height:10
-SF:0%;\x20\">\x20\x20\x20\x20\x20<div\x20style=\"text-align:\x20center;\x2
-SF:0width:800px;\x20margin-left:\x20-400px;\x20position:absolute;\x20top:\
-SF:x2030%;\x20left:50%;\">\n\x20\x20\x20\x20\x20\x20\x20\x20<h1\x20style=\
-SF:"margin:0;\x20font-size:150px;\x20line-height:150px;\x20font-weight:bol
-SF:d;\">400</h1>\n<h2\x20style=\"margin")%r(FourOhFourRequest,1650,"HTTP/1
-SF:\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\ncontent-type:\x20
-SF:text/html\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:29:46\x20GMT\r\ns
-SF:erver:\x20LiteSpeed\r\n\r\n\n\n\n<!DOCTYPE\x20html>\n<html>\n\x20\x20\x
-SF:20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20c
-SF:ontent=\"text/html;\x20charset=utf-8\">\n\x20\x20\x20\x20<meta\x20http-
-SF:equiv=\"Cache-control\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<meta
-SF:\x20http-equiv=\"Pragma\"\x20content=\"no-cache\">\n\x20\x20\x20\x20<me
-SF:ta\x20http-equiv=\"Expires\"\x20content=\"0\">\n\x20\x20\x20\x20<meta\x
-SF:20name=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1
-SF:\.0\">\n\x20\x20\x20\x20<title>404\x20Not\x20Found</title>\n\x20\x20\x2
-SF:0\x20<style\x20type=\"text/css\">\n\x20\x20\x20\x20\x20\x20\x20\x20body
-SF:\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20
-SF:Arial,\x20Helvetica,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x
-SF:20\x20\x20\x20font-size:\x2014px;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
-SF:\x20\x20\x20line-height:\x201\.428571429;\n\x20\x20\x20\x20\x20\x20\x20
-SF:\x20\x20\x20\x20\x20background-color:\x20#ffffff;\n\x20\x20\x20\x20\x20
-SF:\x20\x20\x20\x20\x20\x20\x20color:\x20#2F3230;\n\x20\x20\x20\x20\x20\x2
-SF:0\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x
-SF:20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\x2
-SF:0\x20\x20\x20\x20\x20\x20\x20section,\x20footer\x20{\n\x20\x20\x20\x20\
-SF:x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\n\x20\x20\x20\x20\x20
-SF:\x20\x20\x20\x20\x20\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x2
-SF:0\x20\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n
-SF:\x20\x20\x20\x20\x20\x20");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CF72A%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,3FEA,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close
-SF:\r\nx-powered-by:\x20PHP/8\.2\.29\r\ncontent-type:\x20text/html;\x20cha
-SF:rset=UTF-8\r\nlink:\x20<https://affilior\.com/wp-json/>;\x20rel=\"https
-SF:://api\.w\.org/\"\r\nlink:\x20<https://affilior\.com/wp-json/wp/v2/page
-SF:s/8699>;\x20rel=\"alternate\";\x20title=\"JSON\";\x20type=\"application
-SF:/json\"\r\nlink:\x20<https://affilior\.com/>;\x20rel=shortlink\r\netag:
-SF:\x20\"58057-1762455031;;;\"\r\nx-litespeed-cache:\x20hit\r\ndate:\x20Th
-SF:u,\x2006\x20Nov\x202025\x2019:29:46\x20GMT\r\nserver:\x20LiteSpeed\r\n\
-SF:r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr-FR\"\x20prefix=\"og:\x20https
-SF:://ogp\.me/ns#\">\n<head>\n\t<meta\x20charset=\"UTF-8\"\x20/>\n<meta\x2
-SF:0http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n\t<link\x20rel
-SF:=\"pingback\"\x20href=\"https://affilior\.com/xmlrpc\.php\"\x20/>\n\n\t
-SF:<script\x20type=\"text/javascript\">\n\t\tdocument\.documentElement\.cl
-SF:assName\x20=\x20'js';\n\t</script>\n\t\n\t<link\x20rel=\"preconnect\"\x
-SF:20href=\"https://fonts\.gstatic\.com\"\x20crossorigin\x20/><style\x20id
-SF:=\"et-builder-googlefonts-cached-inline\">/\*\x20Original:\x20https://f
-SF:onts\.googlea")%r(HTTPOptions,8F,"HTTP/1\.0\x20200\x20OK\r\nConnection:
-SF:\x20close\r\nallow:\x20OPTIONS,HEAD,GET,POST\r\ncontent-length:\x200\r\
-SF:ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:29:47\x20GMT\r\nserver:\x20Li
-SF:teSpeed\r\n\r\n")%r(FourOhFourRequest,3FEA,"HTTP/1\.0\x20404\x20Not\x20
-SF:Found\r\nConnection:\x20close\r\nx-powered-by:\x20PHP/8\.2\.29\r\nexpir
-SF:es:\x20Wed,\x2011\x20Jan\x201984\x2005:00:00\x20GMT\r\ncache-control:\x
-SF:20no-cache,\x20must-revalidate,\x20max-age=0,\x20no-store,\x20private\r
-SF:\ncontent-type:\x20text/html;\x20charset=UTF-8\r\nlink:\x20<https://aff
-SF:ilior\.com/wp-json/>;\x20rel=\"https://api\.w\.org/\"\r\nx-litespeed-ca
-SF:che-control:\x20public,max-age=3600\r\nx-litespeed-tag:\x207ad_HTTP\.40
-SF:4,7ad_PGSRP,7ad_404,7ad_URL\.45fef726657f76ecb3e46efb3aad76cf,7ad_\r\nx
-SF:-litespeed-cache:\x20miss\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2019:2
-SF:9:48\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\x2
-SF:0lang=\"fr-FR\"\x20prefix=\"og:\x20https://ogp\.me/ns#\">\n<head>\n\t<m
-SF:eta\x20charset=\"UTF-8\"\x20/>\n<meta\x20http-equiv=\"X-UA-Compatible\"
-SF:\x20content=\"IE=edge\">\n\t<link\x20rel=\"pingback\"\x20href=\"https:/
-SF:/affilior\.com/xmlrpc\.php\"\x20/>\n\n\t<script\x20type=\"text/javascri
-SF:pt\">\n\t\tdocument\.documentElement\.className\x20=\x20'js';\n\t</scri
-SF:pt>\n\t\n\t<link\x20rel=\"preconnect\"\x20href=\"https://fonts\.gstatic
-SF:\.com\"\x20crossorigin\x20/>\t<styl");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/10%Time=6911F367%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,15E,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nCo
+SF:nnection:\x20close\r\nx-powered-by:\x20PHP/8\.2\.29\r\ncontent-type:\x2
+SF:0text/html;\x20charset=UTF-8\r\nx-redirect-by:\x20WordPress\r\nlocation
+SF::\x20https:///\r\nx-litespeed-cache-control:\x20no-cache\r\ncache-contr
+SF:ol:\x20no-cache,\x20must-revalidate,\x20max-age=0,\x20no-store,\x20priv
+SF:ate\r\ncontent-length:\x200\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x2014
+SF::15:03\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n")%r(HTTPOptions,3FEA,"HTT
+SF:P/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nx-powered-by:\x20PHP/8\.
+SF:2\.29\r\ncontent-type:\x20text/html;\x20charset=UTF-8\r\nlink:\x20<http
+SF:s://affilior\.com/wp-json/>;\x20rel=\"https://api\.w\.org/\"\r\nlink:\x
+SF:20<https://affilior\.com/wp-json/wp/v2/pages/8699>;\x20rel=\"alternate\
+SF:";\x20title=\"JSON\";\x20type=\"application/json\"\r\nlink:\x20<https:/
+SF:/affilior\.com/>;\x20rel=shortlink\r\nx-litespeed-cache-control:\x20no-
+SF:cache\r\ncache-control:\x20no-cache,\x20must-revalidate,\x20max-age=0,\
+SF:x20no-store,\x20private\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x2014:15:
+SF:04\x20GMT\r\nserver:\x20LiteSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\x20l
+SF:ang=\"fr-FR\"\x20prefix=\"og:\x20https://ogp\.me/ns#\">\n<head>\n\t<met
+SF:a\x20charset=\"UTF-8\"\x20/>\n<meta\x20http-equiv=\"X-UA-Compatible\"\x
+SF:20content=\"IE=edge\">\n\t<link\x20rel=\"pingback\"\x20href=\"https://a
+SF:ffilior\.com/xmlrpc\.php\"\x20/>\n\n\t<script\x20type=\"text/javascript
+SF:\">\n\t\tdocument\.documentElement\.className\x20=\x20'js';\n\t</script
+SF:>\n\t\n\t<link\x20rel=\"preconnect\"\x20href=\"https://fonts\.gstatic\.
+SF:com\"\x20crossorigin\x20/><style\x20id=\"et-builder-googl")%r(FourOhFou
+SF:rRequest,7FEA,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close
+SF:\r\nx-powered-by:\x20PHP/8\.2\.29\r\nexpires:\x20Wed,\x2011\x20Jan\x201
+SF:984\x2005:00:00\x20GMT\r\ncache-control:\x20no-cache,\x20must-revalidat
+SF:e,\x20max-age=0,\x20no-store,\x20private\r\ncontent-type:\x20text/html;
+SF:\x20charset=UTF-8\r\nlink:\x20<https://affilior\.com/wp-json/>;\x20rel=
+SF:\"https://api\.w\.org/\"\r\nx-litespeed-cache-control:\x20public,max-ag
+SF:e=3600\r\nx-litespeed-tag:\x207ad_HTTP\.404,7ad_PGSRP,7ad_404,7ad_URL\.
+SF:45fef726657f76ecb3e46efb3aad76cf,7ad_\r\nx-litespeed-cache:\x20miss\r\n
+SF:date:\x20Mon,\x2010\x20Nov\x202025\x2014:15:06\x20GMT\r\nserver:\x20Lit
+SF:eSpeed\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr-FR\"\x20prefix=\"o
+SF:g:\x20https://ogp\.me/ns#\">\n<head>\n\t<meta\x20charset=\"UTF-8\"\x20/
+SF:>\n<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n\t<
+SF:link\x20rel=\"pingback\"\x20href=\"https://affilior\.com/xmlrpc\.php\"\
+SF:x20/>\n\n\t<script\x20type=\"text/javascript\">\n\t\tdocument\.document
+SF:Element\.className\x20=\x20'js';\n\t</script>\n\t\n\t<link\x20rel=\"pre
+SF:connect\"\x20href=\"https://fonts\.gstatic\.com\"\x20crossorigin\x20/>\
+SF:t<styl");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 19:32:01 2025 -- 1 IP address (1 host up) scanned in 150.13 seconds
+# Nmap done at Mon Nov 10 14:17:14 2025 -- 1 IP address (1 host up) scanned in 147.39 seconds
