@@ -1,12 +1,13 @@
-# Nmap 7.92 scan initiated Thu Nov  6 19:52:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln hcfea.fr
+# Nmap 7.92 scan initiated Mon Nov 10 14:17:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln hcfea.fr
 Nmap scan report for hcfea.fr (185.194.83.96)
-Host is up (0.095s latency).
+Host is up (0.080s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
-443/tcp open   ssl/http   Apache httpd 2.4.65 ((Debian))
+443/tcp open   ssl/http   Apache httpd 2.4.65
+|_http-server-header: Apache/2.4.65 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.65: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -64,8 +65,7 @@ PORT    STATE  SERVICE    VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
-|_http-server-header: Apache/2.4.65 (Debian)
-Service Info: Device: load balancer
+Service Info: Host: www.hcfea.gouv.fr; Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 19:52:44 2025 -- 1 IP address (1 host up) scanned in 21.65 seconds
+# Nmap done at Mon Nov 10 14:17:48 2025 -- 1 IP address (1 host up) scanned in 25.99 seconds
