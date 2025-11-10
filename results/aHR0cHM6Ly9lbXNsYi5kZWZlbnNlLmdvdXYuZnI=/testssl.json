@@ -465,7 +465,7 @@
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "43 >= 30 days"
+              "finding"      : "40 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -612,28 +612,28 @@
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "+221 seconds from localtime"
+              "finding"      : "+591 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762415484"
+              "finding"      : "1762742957"
           }
 ,         {
               "id"           : "HTTP_headerAge",
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "221 seconds"
+              "finding"      : "591 seconds"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -682,7 +682,7 @@
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/'"
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
               "id"           : "X-Content-Type-Options",
@@ -727,12 +727,19 @@
               "finding"      : "no-referrer-when-downgrade"
           }
 ,         {
+              "id"           : "Cache-Control",
+              "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "max-age=3600"
+          }
+,         {
               "id"           : "banner_reverseproxy",
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
               "cwe"          : "CWE-200",
-              "finding"      : "X-Varnish: 67064775 62709140Via: 1.1 varnish (Varnish/7.1)"
+              "finding"      : "X-Varnish: 86442489 78447632Via: 1.1 varnish (Varnish/7.1)"
           }
 ,         {
               "id"           : "heartbleed",
@@ -800,10 +807,10 @@
               "id"           : "BREACH",
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1231,6 +1238,6 @@
               "ip"           : "emslb.defense.gouv.fr/46.105.55.23",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "167"
+              "finding"      : "163"
           }
 ]
