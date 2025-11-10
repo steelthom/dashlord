@@ -3,10 +3,10 @@
     "algorithmVersion": 4,
     "grade": "F",
     "error": null,
-    "score": 15,
+    "score": 10,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
       "cache-control": "max-age=300, public",
@@ -14,8 +14,8 @@
       "x-content-type-options": "nosniff, nosniff",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
       "strict-transport-security": "max-age=15768000; includeSubDomains; preload",
-      "last-modified": "Fri, 07 Nov 2025 02:19:46 GMT",
-      "etag": "\"1762481986-gzip\"",
+      "last-modified": "Mon, 10 Nov 2025 19:00:37 GMT",
+      "etag": "\"1762801237-gzip\"",
       "x-xss-protection": "1; mode=block",
       "x-permitted-cross-domain-policies": "none",
       "referrer-policy": "same-origin",
@@ -23,11 +23,16 @@
       "x-cache-hits": "0",
       "x-frame-options": "SAMEORIGIN",
       "x-cdn": "Imperva",
-      "x-iinfo": "10-21809000-21773535 pNNy RT(1762481986197 12) q(0 0 0 6) r(9 9) U24",
-      "content-length": "18305",
-      "date": "Fri, 07 Nov 2025 02:19:47 GMT",
+      "x-iinfo": "13-3152892-3070016 pNNy RT(1762801011362 225837) q(0 0 0 4) r(14 14) U24",
+      "content-length": "18310",
+      "date": "Mon, 10 Nov 2025 19:00:38 GMT",
       "connection": "close",
-      "vary": "Accept-Encoding"
+      "vary": "Accept-Encoding",
+      "set-cookie": [
+        "nlbi_2290223=xkTQC+bGTRoPzqfxSSsW3QAAAACv1yO3O+I/Nr5SuT0UaNd3; HttpOnly; path=/; Domain=.monparcourshandicap.gouv.fr",
+        "visid_incap_2290223=zqjy9VXdT16ouDqj1YceBVQ2EmkAAAAAQUIPAAAAAADHz2uVBJgzvYj/5j88e2RS; expires=Tue, 10 Nov 2026 08:17:25 GMT; HttpOnly; path=/; Domain=.monparcourshandicap.gouv.fr",
+        "incap_ses_418_2290223=WvKeR85JBmLxN8bOOAnNBVY2EmkAAAAAqOyqZBgBh5E7TT0o6dNKrw==; path=/; Domain=.monparcourshandicap.gouv.fr"
+      ]
     }
   },
   "tests": {
@@ -44,10 +49,29 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "nlbi_2290223": {
+          "domain": "monparcourshandicap.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "visid_incap_2290223": {
+          "domain": "monparcourshandicap.gouv.fr",
+          "expires": "2026-11-10T08:17:25.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "incap_ses_418_2290223": {
+          "domain": "monparcourshandicap.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
