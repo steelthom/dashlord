@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "has-sante.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -430,7 +430,7 @@
               "ip"           : "has-sante.fr/87.98.187.73",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "344 >= 60 days"
+              "finding"      : "340 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -615,6 +615,154 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-1 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762782442"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1 at '/'"
+          }
+,         {
+              "id"           : "cookie_secure",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "All (1) at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "All (1) at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "accelerometer=(), autoplay=(), camera=*, geolocation=(self), gyroscope=(), magnetometer=(), microphone=*, midi=(), payment=(), usb=()"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "Access-Control-Allow-Origin",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "*"
+          }
+,         {
+              "id"           : "Permissions-Policy",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "accelerometer=(), autoplay=(), camera=*, geolocation=(self), gyroscope=(), magnetometer=(), microphone=*, midi=(), payment=(), usb=()"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "strict-origin-when-cross-origin"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache, no-store, must-revalidate"
+          }
+,         {
+              "id"           : "Pragma",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "has-sante.fr/87.98.187.73",
               "port"         : "443",
@@ -636,10 +784,10 @@
               "id"           : "ticketbleed",
               "ip"           : "has-sante.fr/87.98.187.73",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "no session ticket extension"
           }
 ,         {
               "id"           : "ROBOT",
@@ -674,7 +822,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "has-sante.fr/87.98.187.73",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1102,6 +1259,6 @@
               "ip"           : "has-sante.fr/87.98.187.73",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "162"
+              "finding"      : "95"
           }
 ]
