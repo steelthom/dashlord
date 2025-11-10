@@ -10,18 +10,24 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "openresty",
-      "date": "Fri, 07 Nov 2025 02:48:50 GMT",
+      "date": "Mon, 10 Nov 2025 20:30:29 GMT",
       "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "connection": "close",
       "vary": "Accept-Encoding",
-      "strikingly-cache": "current",
-      "strikingly-cache-version": "0000-0",
-      "strikingly-cache-region": "us-west-1",
+      "status": "200 OK",
+      "x-xss-protection": "1; mode=block",
+      "x-content-type-options": "nosniff",
       "set-cookie": [
-        "__strk_viewer_info=eyJjaXR5TmFtZSI6IlBob2VuaXgiLCJsYXRpdHVkZSI6IjMzLjQ1MzIwIiwiY29udGluZW50Q29kZSI6Ik5BIiwiaXAiOiIyMC4xNjkuNzIuMTkiLCJjb250aW5lbnROYW1lIjoiTm9ydGggQW1lcmljYSIsInBvc3RhbENvZGUiOiI4NTAzNiIsImNvdW50cnlDb2RlIjoiVVMiLCJ0aW1lWm9uZSI6IkFtZXJpY2FcL1Bob2VuaXgiLCJjb3VudHJ5TmFtZSI6IlVuaXRlZCBTdGF0ZXMiLCJsb25naXR1ZGUiOiItMTEyLjA3NDgwIiwicmVnaW9uTmFtZSI6IkFyaXpvbmEifQ==; Path=/; Expires=Sat, 07-Nov-26 02:48:50 GMT; Secure",
-        "__strk_cookie_eu_visitor=false; Path=/; Secure"
-      ]
+        "__strk_cookie_eu_visitor=false; path=/",
+        "XSRF-TOKEN=W3iNI77VrBi7ahB%2Bq3O6MHCIAK4CTmYjAtgilPhSbO2quxUWjZtyy5wh2mu3OHjFdnSYeGQzCYLyAlYwUbutQQ%3D%3D; path=/",
+        "_bobcat_session=SEpScnZqVUNxeFdVcjdkVXBJc015am1sT3NmMkhubVFnYVpDeXlobWdaZW1DYXY3TE9EZS9lSUU3WUhORDZWUVJSaFNrWjhHZHYzS0pNTytHTS9sdkQvaE53cTNSMk0yaTlRWmtjZVhlRTVwN1VFNFFLNmJtQ0JTSFg4SDBpeWFmcmc1VmxuNEY0dG9NQUFUZlNBV3h3PT0tLU9ROTBzZWFvSEVaNmpuTFg2YXZQUFE9PQ%3D%3D--110d306ee8ae78ba301c4a878681e922e9de7b81; path=/; expires=Sat, 10 Nov 2035 20:30:29 -0000; HttpOnly"
+      ],
+      "etag": "W/\"808dec5897f8a000c4bde72d99967bdc\"",
+      "last-modified": "Mon, 10 Nov 2025 15:07:36 GMT",
+      "cache-control": "max-age=0, public, must-revalidate",
+      "x-request-id": "0ae40f3782473fb353c07d9f0d4fbb3a",
+      "x-runtime": "3.549136"
     }
   },
   "tests": {
@@ -38,22 +44,26 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions",
-      "scoreModifier": 0,
+      "pass": false,
+      "result": "cookies-session-without-secure-flag",
+      "scoreModifier": -40,
       "data": {
-        "__strk_viewer_info": {
-          "domain": "xd.ademe.fr",
-          "expires": "2026-11-07T02:48:50.000Z",
-          "path": "/",
-          "port": null,
-          "secure": true
-        },
         "__strk_cookie_eu_visitor": {
           "domain": "xd.ademe.fr",
           "path": "/",
-          "port": null,
-          "secure": true
+          "port": null
+        },
+        "XSRF-TOKEN": {
+          "domain": "xd.ademe.fr",
+          "path": "/",
+          "port": null
+        },
+        "_bobcat_session": {
+          "domain": "xd.ademe.fr",
+          "expires": "2035-11-10T20:30:29.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
         }
       },
       "sameSite": false
@@ -120,10 +130,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
