@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
               "port"         : "443",
-              "severity"     : "DEBUG",
-              "finding"      : "Couldn't determine service, skipping all HTTP checks"
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -29,6 +29,13 @@
           }
 ,         {
               "id"           : "TLS1",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1_1",
               "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
               "port"         : "443",
               "severity"     : "INFO",
@@ -444,7 +451,7 @@
               "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "342 >= 60 days"
+              "finding"      : "338 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -629,6 +636,112 @@
               "finding"      : "intermediate certificate(s) is/are ok"
           }
 ,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-1 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762746276"
+          }
+,         {
+              "id"           : "HSTS_multiple",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple HSTS headers. Using first header: max-age=63072000;includeSubDomains; preload"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "domain IS marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : ""
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-Frame-Options_multiple",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "Multiple X-Frame-Options headers. Using first header: SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SAMEORIGIN"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
               "id"           : "heartbleed",
               "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
               "port"         : "443",
@@ -650,10 +763,10 @@
               "id"           : "ticketbleed",
               "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "OK",
               "cve"          : "CVE-2016-9244",
               "cwe"          : "CWE-200",
-              "finding"      : "not applicable, not HTTP"
+              "finding"      : "no session ticket extension"
           }
 ,         {
               "id"           : "ROBOT",
@@ -688,7 +801,16 @@
               "severity"     : "OK",
               "cve"          : "CVE-2012-4929",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable (not using HTTP anyway)"
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1116,6 +1238,6 @@
               "ip"           : "draaf.bretagne.agriculture.gouv.fr/185.24.186.182",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "741"
+              "finding"      : "332"
           }
 ]
