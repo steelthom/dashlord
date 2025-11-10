@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 18:56:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln impots.gouv.fr
+# Nmap 7.92 scan initiated Mon Nov 10 08:34:09 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln impots.gouv.fr
 Nmap scan report for impots.gouv.fr (145.242.11.100)
-Host is up (0.10s latency).
+Host is up (0.081s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -15,11 +15,10 @@ PORT    STATE  SERVICE   VERSION
 |_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
-|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 Mire
-|     Date: Thu, 06 Nov 2025 18:57:11 GMT
+|     Date: Mon, 10 Nov 2025 08:34:27 GMT
 |     Content-Type: text/html
 |     Cache-Control: no-cache, no-store, must-revalidate
 |     Pragma: no-cache
@@ -30,7 +29,7 @@ PORT    STATE  SERVICE   VERSION
 |     <html lang="fr"><head>
 |     <base href="/" />
 |     <script type="text/javascript">
-|     _event_transid='1678411050';
+|     _event_transid='1688540814';
 |     </script>
 |     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 |     <meta charset="utf-8">
@@ -46,7 +45,7 @@ PORT    STATE  SERVICE   VERSION
 |     -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=
 |   HTTPOptions: 
 |     HTTP/1.1 200 Mire
-|     Date: Thu, 06 Nov 2025 18:57:12 GMT
+|     Date: Mon, 10 Nov 2025 08:34:28 GMT
 |     Content-Type: text/html
 |     Cache-Control: no-cache, no-store, must-revalidate
 |     Pragma: no-cache
@@ -57,7 +56,7 @@ PORT    STATE  SERVICE   VERSION
 |     <html lang="fr"><head>
 |     <base href="/" />
 |     <script type="text/javascript">
-|     _event_transid='1678411079';
+|     _event_transid='1688540844';
 |     </script>
 |     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 |     <meta charset="utf-8">
@@ -73,52 +72,52 @@ PORT    STATE  SERVICE   VERSION
 |_    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CEF82%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https://145\.242\.11\.100/\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOp
-SF:tions,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
-SF:s://145\.242\.11\.100/\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRe
-SF:quest,7B,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20http
-SF:s://145\.242\.11\.100/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-L
-SF:ength:\x200\r\n\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/10%Time=6911A38D%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https://145\.242\.11\.100/\r\nContent-Length:\x200\r\n\r\n")%r(HTTPO
+SF:ptions,58,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20htt
+SF:ps://145\.242\.11\.100/\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourR
+SF:equest,7B,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20htt
+SF:ps://145\.242\.11\.100/nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nContent-
+SF:Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CEF88%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20Mire\r\nDate:\x20Thu,\x200
-SF:6\x20Nov\x202025\x2018:57:11\x20GMT\r\nContent-Type:\x20text/html\r\nCa
-SF:che-Control:\x20no-cache,\x20no-store,\x20must-revalidate\r\nPragma:\x2
-SF:0no-cache\r\nExpires:\x200\r\nContent-Length:\x201086726\r\nConnection:
-SF:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"><head>\n<base
-SF:\x20href=\"/\"\x20/>\n<script\x20type=\"text/javascript\">\n\x20\x20var
-SF:\x20_event_transid='1678411050';\n</script>\n\n\x20\x20<meta\x20http-eq
-SF:uiv=\"content-type\"\x20content=\"text/html;\x20charset=UTF-8\">\n\x20\
-SF:x20<meta\x20charset=\"utf-8\">\n\x20\x20<meta\x20http-equiv=\"X-UA-Comp
-SF:atible\"\x20content=\"IE=edge\">\n\x20\x20<meta\x20http-equiv=\"Cache-C
-SF:ontrol\"\x20content=\"no-cache,\x20no-store,\x20must-revalidate\">\n\x2
-SF:0\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20ini
-SF:tial-scale=1\.0\"\x20/>\n\x20\x20<title>Imp\xc3\xb4ts\.gouv\.fr\x20\xe2
-SF:\x80\x93\x20site\x20en\x20maintenance</title>\n\x20\x20<style>\x20\n\x2
-SF:0\x20\x20\x20\.fr-icon-mail-line::before,\n\x20\x20\x20\x20\.fr-icon-ma
-SF:il-line::after\x20{\n\x20\x20\x20\x20\x20\x20-webkit-mask-image:\x20url
-SF:\('data:image/svg\+xml,<svg\x20xmlns=\"http://www\.w3\.org/2000/svg\"\x
-SF:20viewBox=\"0\x200\x2024\x2024\"\x20width=")%r(HTTPOptions,C000,"HTTP/1
-SF:\.1\x20200\x20Mire\r\nDate:\x20Thu,\x2006\x20Nov\x202025\x2018:57:12\x2
-SF:0GMT\r\nContent-Type:\x20text/html\r\nCache-Control:\x20no-cache,\x20no
-SF:-store,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\nC
-SF:ontent-Length:\x201086726\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20h
-SF:tml>\n<html\x20lang=\"fr\"><head>\n<base\x20href=\"/\"\x20/>\n<script\x
-SF:20type=\"text/javascript\">\n\x20\x20var\x20_event_transid='1678411079'
-SF:;\n</script>\n\n\x20\x20<meta\x20http-equiv=\"content-type\"\x20content
-SF:=\"text/html;\x20charset=UTF-8\">\n\x20\x20<meta\x20charset=\"utf-8\">\
-SF:n\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\"
-SF:>\n\x20\x20<meta\x20http-equiv=\"Cache-Control\"\x20content=\"no-cache,
-SF:\x20no-store,\x20must-revalidate\">\n\x20\x20<meta\x20name=\"viewport\"
-SF:\x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\n\x20\x
-SF:20<title>Imp\xc3\xb4ts\.gouv\.fr\x20\xe2\x80\x93\x20site\x20en\x20maint
-SF:enance</title>\n\x20\x20<style>\x20\n\x20\x20\x20\x20\.fr-icon-mail-lin
-SF:e::before,\n\x20\x20\x20\x20\.fr-icon-mail-line::after\x20{\n\x20\x20\x
-SF:20\x20\x20\x20-webkit-mask-image:\x20url\('data:image/svg\+xml,<svg\x20
-SF:xmlns=\"http://www\.w3\.org/2000/svg\"\x20viewBox=\"0\x200\x2024\x2024\
-SF:"\x20width=");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/10%Time=6911A394%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20Mire\r\nDate:\x20Mon,\x20
+SF:10\x20Nov\x202025\x2008:34:27\x20GMT\r\nContent-Type:\x20text/html\r\nC
+SF:ache-Control:\x20no-cache,\x20no-store,\x20must-revalidate\r\nPragma:\x
+SF:20no-cache\r\nExpires:\x200\r\nContent-Length:\x201086726\r\nConnection
+SF::\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"><head>\n<bas
+SF:e\x20href=\"/\"\x20/>\n<script\x20type=\"text/javascript\">\n\x20\x20va
+SF:r\x20_event_transid='1688540814';\n</script>\n\n\x20\x20<meta\x20http-e
+SF:quiv=\"content-type\"\x20content=\"text/html;\x20charset=UTF-8\">\n\x20
+SF:\x20<meta\x20charset=\"utf-8\">\n\x20\x20<meta\x20http-equiv=\"X-UA-Com
+SF:patible\"\x20content=\"IE=edge\">\n\x20\x20<meta\x20http-equiv=\"Cache-
+SF:Control\"\x20content=\"no-cache,\x20no-store,\x20must-revalidate\">\n\x
+SF:20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20in
+SF:itial-scale=1\.0\"\x20/>\n\x20\x20<title>Imp\xc3\xb4ts\.gouv\.fr\x20\xe
+SF:2\x80\x93\x20site\x20en\x20maintenance</title>\n\x20\x20<style>\x20\n\x
+SF:20\x20\x20\x20\.fr-icon-mail-line::before,\n\x20\x20\x20\x20\.fr-icon-m
+SF:ail-line::after\x20{\n\x20\x20\x20\x20\x20\x20-webkit-mask-image:\x20ur
+SF:l\('data:image/svg\+xml,<svg\x20xmlns=\"http://www\.w3\.org/2000/svg\"\
+SF:x20viewBox=\"0\x200\x2024\x2024\"\x20width=")%r(HTTPOptions,8000,"HTTP/
+SF:1\.1\x20200\x20Mire\r\nDate:\x20Mon,\x2010\x20Nov\x202025\x2008:34:28\x
+SF:20GMT\r\nContent-Type:\x20text/html\r\nCache-Control:\x20no-cache,\x20n
+SF:o-store,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x200\r\n
+SF:Content-Length:\x201086726\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20
+SF:html>\n<html\x20lang=\"fr\"><head>\n<base\x20href=\"/\"\x20/>\n<script\
+SF:x20type=\"text/javascript\">\n\x20\x20var\x20_event_transid='1688540844
+SF:';\n</script>\n\n\x20\x20<meta\x20http-equiv=\"content-type\"\x20conten
+SF:t=\"text/html;\x20charset=UTF-8\">\n\x20\x20<meta\x20charset=\"utf-8\">
+SF:\n\x20\x20<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\
+SF:">\n\x20\x20<meta\x20http-equiv=\"Cache-Control\"\x20content=\"no-cache
+SF:,\x20no-store,\x20must-revalidate\">\n\x20\x20<meta\x20name=\"viewport\
+SF:"\x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\n\x20\
+SF:x20<title>Imp\xc3\xb4ts\.gouv\.fr\x20\xe2\x80\x93\x20site\x20en\x20main
+SF:tenance</title>\n\x20\x20<style>\x20\n\x20\x20\x20\x20\.fr-icon-mail-li
+SF:ne::before,\n\x20\x20\x20\x20\.fr-icon-mail-line::after\x20{\n\x20\x20\
+SF:x20\x20\x20\x20-webkit-mask-image:\x20url\('data:image/svg\+xml,<svg\x2
+SF:0xmlns=\"http://www\.w3\.org/2000/svg\"\x20viewBox=\"0\x200\x2024\x2024
+SF:\"\x20width=");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 18:59:20 2025 -- 1 IP address (1 host up) scanned in 148.28 seconds
+# Nmap done at Mon Nov 10 08:36:34 2025 -- 1 IP address (1 host up) scanned in 145.19 seconds
