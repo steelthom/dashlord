@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 14:57:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln franceservices.etalab.gouv.fr
+# Nmap 7.92 scan initiated Mon Nov 10 08:24:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln franceservices.etalab.gouv.fr
 Nmap scan report for franceservices.etalab.gouv.fr (171.33.91.171)
-Host is up (0.12s latency).
+Host is up (0.088s latency).
 rDNS record for 171.33.91.171: ows-171-33-91-171.eu-west-2.compute.outscale.com
 Not shown: 994 closed tcp ports (reset)
 PORT     STATE SERVICE       VERSION
@@ -125,9 +125,9 @@ PORT     STATE SERVICE       VERSION
 |_    RProcessStartupPacket
 8090/tcp open  opsmessaging?
 | fingerprint-strings: 
-|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, SSLSessionReq: 
 |     HTTP/1.1 400 Bad Request
-|     date: Thu, 06 Nov 2025 14:57:33 GMT
+|     date: Mon, 10 Nov 2025 08:24:27 GMT
 |     server: uvicorn
 |     content-type: text/plain; charset=utf-8
 |     content-length: 30
@@ -135,51 +135,59 @@ PORT     STATE SERVICE       VERSION
 |     Invalid HTTP request received.
 |   GetRequest, HTTPOptions, RTSPRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Thu, 06 Nov 2025 14:57:32 GMT
+|     date: Mon, 10 Nov 2025 08:24:26 GMT
 |     server: uvicorn
 |     content-length: 22
 |     content-type: application/json
-|_    {"detail":"Not Found"}
+|     {"detail":"Not Found"}
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     date: Mon, 10 Nov 2025 08:24:26 GMT
+|     server: uvicorn
+|     content-type: text/plain; charset=utf-8
+|     content-length: 30
+|     connection: close
+|_    Invalid HTTP request received.
 9080/tcp open  http          Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5432-TCP:V=7.92%I=7%D=11/6%Time=690CB758%P=x86_64-alpine-linux-musl
-SF:%r(SMBProgNeg,8C,"E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20fr
-SF:ontend\x20protocol\x2065363\.19778:\x20server\x20supports\x203\.0\x20to
-SF:\x203\.0\0Fpostmaster\.c\0L2145\0RProcessStartupPacket\0\0");
+SF-Port5432-TCP:V=7.92%I=7%D=11/10%Time=6911A136%P=x86_64-alpine-linux-mus
+SF:l%r(SMBProgNeg,8C,"E\0\0\0\x8bSFATAL\0VFATAL\0C0A000\0Munsupported\x20f
+SF:rontend\x20protocol\x2065363\.19778:\x20server\x20supports\x203\.0\x20t
+SF:o\x203\.0\0Fpostmaster\.c\0L2145\0RProcessStartupPacket\0\0");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port8090-TCP:V=7.92%I=7%D=11/6%Time=690CB75C%P=x86_64-alpine-linux-musl
-SF:%r(GetRequest,9A,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Thu,\x20
-SF:06\x20Nov\x202025\x2014:57:32\x20GMT\r\nserver:\x20uvicorn\r\ncontent-l
-SF:ength:\x2022\r\ncontent-type:\x20application/json\r\n\r\n{\"detail\":\"
-SF:Not\x20Found\"}")%r(HTTPOptions,9A,"HTTP/1\.1\x20404\x20Not\x20Found\r\
-SF:ndate:\x20Thu,\x2006\x20Nov\x202025\x2014:57:32\x20GMT\r\nserver:\x20uv
-SF:icorn\r\ncontent-length:\x2022\r\ncontent-type:\x20application/json\r\n
-SF:\r\n{\"detail\":\"Not\x20Found\"}")%r(RTSPRequest,9A,"HTTP/1\.1\x20404\
-SF:x20Not\x20Found\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2014:57:32\x20GM
-SF:T\r\nserver:\x20uvicorn\r\ncontent-length:\x2022\r\ncontent-type:\x20ap
-SF:plication/json\r\n\r\n{\"detail\":\"Not\x20Found\"}")%r(RPCCheck,C0,"HT
-SF:TP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Thu,\x2006\x20Nov\x202025\
-SF:x2014:57:33\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/plain
-SF:;\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20close\r\n
-SF:\r\nInvalid\x20HTTP\x20request\x20received\.")%r(DNSVersionBindReqTCP,C
-SF:0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Thu,\x2006\x20Nov\x20
-SF:2025\x2014:57:33\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/
-SF:plain;\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20clos
-SF:e\r\n\r\nInvalid\x20HTTP\x20request\x20received\.")%r(DNSStatusRequestT
-SF:CP,C0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Thu,\x2006\x20Nov
-SF:\x202025\x2014:57:33\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20t
-SF:ext/plain;\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20
-SF:close\r\n\r\nInvalid\x20HTTP\x20request\x20received\.")%r(Help,C0,"HTTP
-SF:/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2
-SF:014:57:33\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/plain;\
-SF:x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20close\r\n\r
-SF:\nInvalid\x20HTTP\x20request\x20received\.")%r(SSLSessionReq,C0,"HTTP/1
-SF:\.1\x20400\x20Bad\x20Request\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x201
-SF:4:57:33\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/plain;\x2
-SF:0charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20close\r\n\r\n
-SF:Invalid\x20HTTP\x20request\x20received\.");
+SF-Port8090-TCP:V=7.92%I=7%D=11/10%Time=6911A13B%P=x86_64-alpine-linux-mus
+SF:l%r(GetRequest,9A,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Mon,\x2
+SF:010\x20Nov\x202025\x2008:24:26\x20GMT\r\nserver:\x20uvicorn\r\ncontent-
+SF:length:\x2022\r\ncontent-type:\x20application/json\r\n\r\n{\"detail\":\
+SF:"Not\x20Found\"}")%r(HTTPOptions,9A,"HTTP/1\.1\x20404\x20Not\x20Found\r
+SF:\ndate:\x20Mon,\x2010\x20Nov\x202025\x2008:24:26\x20GMT\r\nserver:\x20u
+SF:vicorn\r\ncontent-length:\x2022\r\ncontent-type:\x20application/json\r\
+SF:n\r\n{\"detail\":\"Not\x20Found\"}")%r(RTSPRequest,9A,"HTTP/1\.1\x20404
+SF:\x20Not\x20Found\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x2008:24:26\x20G
+SF:MT\r\nserver:\x20uvicorn\r\ncontent-length:\x2022\r\ncontent-type:\x20a
+SF:pplication/json\r\n\r\n{\"detail\":\"Not\x20Found\"}")%r(RPCCheck,C0,"H
+SF:TTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Mon,\x2010\x20Nov\x202025
+SF:\x2008:24:26\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/plai
+SF:n;\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20close\r\
+SF:n\r\nInvalid\x20HTTP\x20request\x20received\.")%r(DNSVersionBindReqTCP,
+SF:C0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Mon,\x2010\x20Nov\x2
+SF:02025\x2008:24:27\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text
+SF:/plain;\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20clo
+SF:se\r\n\r\nInvalid\x20HTTP\x20request\x20received\.")%r(DNSStatusRequest
+SF:TCP,C0,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Mon,\x2010\x20No
+SF:v\x202025\x2008:24:27\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20
+SF:text/plain;\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x2
+SF:0close\r\n\r\nInvalid\x20HTTP\x20request\x20received\.")%r(Help,C0,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x
+SF:2008:24:27\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/plain;
+SF:\x20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20close\r\n\
+SF:r\nInvalid\x20HTTP\x20request\x20received\.")%r(SSLSessionReq,C0,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x20
+SF:08:24:27\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text/plain;\x
+SF:20charset=utf-8\r\ncontent-length:\x2030\r\nconnection:\x20close\r\n\r\
+SF:nInvalid\x20HTTP\x20request\x20received\.");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 14:57:57 2025 -- 1 IP address (1 host up) scanned in 37.88 seconds
+# Nmap done at Mon Nov 10 08:24:51 2025 -- 1 IP address (1 host up) scanned in 36.98 seconds
