@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln dscr.questionnaire.interieur.gouv.fr</pre>
-<p class="lead">Thu Nov  6 08:12:01 2025 – Thu Nov  6 08:12:41 2025<br>1 hosts scanned.
+<p class="lead">Mon Nov 10 03:15:38 2025 – Mon Nov 10 03:16:16 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,7 +122,33 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSVersionBindReqTCP, RPCCheck, RTSPRequest, X11Probe: 
+  FourOhFourRequest: 
+    HTTP/1.1 403 Forbidden
+    date: Mon, 10 Nov 2025 03:15:53 GMT
+    cache-control: no-cache
+    content-type: text/html
+    age: 0
+    x-cache: Miss
+    content-length: 94
+    keep-alive: timeout=5, max=100
+    connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
+    Request forbidden by administrative rules.
+    &lt;/body&gt;&lt;/html&gt;
+  GetRequest, HTTPOptions: 
+    HTTP/1.1 403 Forbidden
+    date: Mon, 10 Nov 2025 03:15:52 GMT
+    cache-control: no-cache
+    content-type: text/html
+    age: 0
+    x-cache: Miss
+    content-length: 94
+    keep-alive: timeout=5, max=100
+    connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
+    Request forbidden by administrative rules.
+    &lt;/body&gt;&lt;/html&gt;
+  RPCCheck, RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad request
     Content-length: 90
     Cache-Control: no-cache
@@ -130,28 +156,6 @@
     Content-Type: text/html
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
     Your browser sent an invalid request.
-    &lt;/body&gt;&lt;/html&gt;
-  FourOhFourRequest: 
-    HTTP/1.1 403 Forbidden
-    date: Thu, 06 Nov 2025 08:12:16 GMT
-    cache-control: no-cache
-    content-type: text/html
-    age: 0
-    x-cache: Miss
-    connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
-    Request forbidden by administrative rules.
-    &lt;/body&gt;&lt;/html&gt;
-  GetRequest, HTTPOptions: 
-    HTTP/1.1 403 Forbidden
-    date: Thu, 06 Nov 2025 08:12:15 GMT
-    cache-control: no-cache
-    content-type: text/html
-    age: 0
-    x-cache: Miss
-    connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
-    Request forbidden by administrative rules.
     &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 <tr class="success">
@@ -166,9 +170,40 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest, GetRequest: 
+  DNSVersionBindReqTCP, RPCCheck, RTSPRequest, tor-versions: 
+    HTTP/1.1 400 Bad request
+    Content-length: 90
+    Cache-Control: no-cache
+    Connection: close
+    Content-Type: text/html
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
+    Your browser sent an invalid request.
+    &lt;/body&gt;&lt;/html&gt;
+  FourOhFourRequest: 
     HTTP/1.1 403 Forbidden
-    date: Thu, 06 Nov 2025 08:12:22 GMT
+    date: Mon, 10 Nov 2025 03:16:00 GMT
+    cache-control: no-cache
+    content-type: text/html
+    age: 0
+    x-cache: Miss
+    connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
+    Request forbidden by administrative rules.
+    &lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
+    HTTP/1.1 403 Forbidden
+    date: Mon, 10 Nov 2025 03:15:59 GMT
+    cache-control: no-cache
+    content-type: text/html
+    age: 0
+    x-cache: Miss
+    connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
+    Request forbidden by administrative rules.
+    &lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 403 Forbidden
+    date: Mon, 10 Nov 2025 03:15:59 GMT
     cache-control: no-cache
     content-type: text/html
     age: 0
@@ -178,26 +213,6 @@
     connection: close
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
     Request forbidden by administrative rules.
-    &lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.1 403 Forbidden
-    date: Thu, 06 Nov 2025 08:12:22 GMT
-    cache-control: no-cache
-    content-type: text/html
-    age: 0
-    x-cache: Miss
-    connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;403 Forbidden&lt;/h1&gt;
-    Request forbidden by administrative rules.
-    &lt;/body&gt;&lt;/html&gt;
-  RPCCheck, RTSPRequest, tor-versions: 
-    HTTP/1.1 400 Bad request
-    Content-length: 90
-    Cache-Control: no-cache
-    Connection: close
-    Content-Type: text/html
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
-    Your browser sent an invalid request.
     &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 </tbody>
