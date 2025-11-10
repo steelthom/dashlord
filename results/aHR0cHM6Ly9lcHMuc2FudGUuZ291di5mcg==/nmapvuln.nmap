@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 14:01:57 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln eps.sante.gouv.fr
+# Nmap 7.92 scan initiated Mon Nov 10 07:34:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln eps.sante.gouv.fr
 Nmap scan report for eps.sante.gouv.fr (185.194.82.46)
-Host is up (0.15s latency).
+Host is up (0.082s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -30,7 +30,7 @@ PORT    STATE  SERVICE   VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 
-|     Date: Thu, 06 Nov 2025 14:02:19 GMT
+|     Date: Mon, 10 Nov 2025 07:34:46 GMT
 |     X-Frame-Options: DENY
 |     Vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
 |     Last-Modified: Thu, 03 Jul 2025 12:04:34 GMT
@@ -46,7 +46,7 @@ PORT    STATE  SERVICE   VERSION
 |     Permissions-Policy: geolocation=(), midi=(), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), fullscreen=(self), payment=()
 |   HTTPOptions: 
 |     HTTP/1.1 200 
-|     Date: Thu, 06 Nov 2025 14:02:20 GMT
+|     Date: Mon, 10 Nov 2025 07:34:46 GMT
 |     X-Frame-Options: DENY
 |     Vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
 |     Allow: GET,HEAD,OPTIONS
@@ -60,59 +60,59 @@ PORT    STATE  SERVICE   VERSION
 |     Referrer-Policy: strict-origin-when-cross-origin
 |     Permissions-Policy: geolocation=(), midi=(), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), fullscreen=(self), payment=()
 |     Content-Length: 0
-|     Keep-Alive: timeout=5, max=100
-|_    Connection
+|     Keep-Alive: timeout=60, max=100
+|_    Connectio
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690CAA65%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/10%Time=6911958F%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690CAA6C%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,3693,"HTTP/1\.1\x20200\x20\r\nDate:\x20Thu,\x2006\x2
-SF:0Nov\x202025\x2014:02:19\x20GMT\r\nX-Frame-Options:\x20DENY\r\nVary:\x2
-SF:0origin,access-control-request-method,access-control-request-headers,ac
-SF:cept-encoding\r\nLast-Modified:\x20Thu,\x2003\x20Jul\x202025\x2012:04:3
-SF:4\x20GMT\r\nAccept-Ranges:\x20bytes\r\nX-Content-Type-Options:\x20nosni
-SF:ff\r\nX-XSS-Protection:\x200\r\nCache-Control:\x20no-cache,\x20no-store
-SF:,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\x
-SF:200\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20default-
-SF:src\x20'self';\x20frame-src\x20'self'\x20data:;\x20script-src\x20'self'
-SF:\x20'unsafe-inline'\x20'unsafe-eval'\x20https://storage\.googleapis\.co
-SF:m;\x20style-src\x20'self'\x20'unsafe-inline'\x20https://static\.piste\.
-SF:gouv\.fr;\x20img-src\x20'self'\x20https://static\.piste\.gouv\.fr\x20da
-SF:ta:;\x20font-src\x20'self'\x20data:\r\nReferrer-Policy:\x20strict-origi
-SF:n-when-cross-origin\r\nPermissions-Policy:\x20geolocation=\(\),\x20midi
-SF:=\(\),\x20sync-xhr=\(\),\x20microphone=\(\),\x20camera=\(\),\x20magneto
-SF:meter=\(\),\x20gyroscope=\(\),\x20speaker=\(\),\x20fullscreen=\(self\),
-SF:\x20payment=\(\)\r\nCo")%r(HTTPOptions,51D,"HTTP/1\.1\x20200\x20\r\nDat
-SF:e:\x20Thu,\x2006\x20Nov\x202025\x2014:02:20\x20GMT\r\nX-Frame-Options:\
-SF:x20DENY\r\nVary:\x20Origin,Access-Control-Request-Method,Access-Control
-SF:-Request-Headers\r\nAllow:\x20GET,HEAD,OPTIONS\r\nX-Content-Type-Option
-SF:s:\x20nosniff\r\nX-XSS-Protection:\x200\r\nCache-Control:\x20no-cache,\
-SF:x20no-store,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no-cache\r\
-SF:nExpires:\x200\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\
-SF:x20default-src\x20'self';\x20frame-src\x20'self'\x20data:;\x20script-sr
-SF:c\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\x20https://storage\.goo
-SF:gleapis\.com;\x20style-src\x20'self'\x20'unsafe-inline'\x20https://stat
-SF:ic\.piste\.gouv\.fr;\x20img-src\x20'self'\x20https://static\.piste\.gou
-SF:v\.fr\x20data:;\x20font-src\x20'self'\x20data:\r\nReferrer-Policy:\x20s
-SF:trict-origin-when-cross-origin\r\nPermissions-Policy:\x20geolocation=\(
-SF:\),\x20midi=\(\),\x20sync-xhr=\(\),\x20microphone=\(\),\x20camera=\(\),
-SF:\x20magnetometer=\(\),\x20gyroscope=\(\),\x20speaker=\(\),\x20fullscree
-SF:n=\(self\),\x20payment=\(\)\r\nContent-Length:\x200\r\nKeep-Alive:\x20t
-SF:imeout=5,\x20max=100\r\nConnection");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/10%Time=69119596%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,3694,"HTTP/1\.1\x20200\x20\r\nDate:\x20Mon,\x2010\x
+SF:20Nov\x202025\x2007:34:46\x20GMT\r\nX-Frame-Options:\x20DENY\r\nVary:\x
+SF:20origin,access-control-request-method,access-control-request-headers,a
+SF:ccept-encoding\r\nLast-Modified:\x20Thu,\x2003\x20Jul\x202025\x2012:04:
+SF:34\x20GMT\r\nAccept-Ranges:\x20bytes\r\nX-Content-Type-Options:\x20nosn
+SF:iff\r\nX-XSS-Protection:\x200\r\nCache-Control:\x20no-cache,\x20no-stor
+SF:e,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no-cache\r\nExpires:\
+SF:x200\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:\x20default
+SF:-src\x20'self';\x20frame-src\x20'self'\x20data:;\x20script-src\x20'self
+SF:'\x20'unsafe-inline'\x20'unsafe-eval'\x20https://storage\.googleapis\.c
+SF:om;\x20style-src\x20'self'\x20'unsafe-inline'\x20https://static\.piste\
+SF:.gouv\.fr;\x20img-src\x20'self'\x20https://static\.piste\.gouv\.fr\x20d
+SF:ata:;\x20font-src\x20'self'\x20data:\r\nReferrer-Policy:\x20strict-orig
+SF:in-when-cross-origin\r\nPermissions-Policy:\x20geolocation=\(\),\x20mid
+SF:i=\(\),\x20sync-xhr=\(\),\x20microphone=\(\),\x20camera=\(\),\x20magnet
+SF:ometer=\(\),\x20gyroscope=\(\),\x20speaker=\(\),\x20fullscreen=\(self\)
+SF:,\x20payment=\(\)\r\nCo")%r(HTTPOptions,51E,"HTTP/1\.1\x20200\x20\r\nDa
+SF:te:\x20Mon,\x2010\x20Nov\x202025\x2007:34:46\x20GMT\r\nX-Frame-Options:
+SF:\x20DENY\r\nVary:\x20Origin,Access-Control-Request-Method,Access-Contro
+SF:l-Request-Headers\r\nAllow:\x20GET,HEAD,OPTIONS\r\nX-Content-Type-Optio
+SF:ns:\x20nosniff\r\nX-XSS-Protection:\x200\r\nCache-Control:\x20no-cache,
+SF:\x20no-store,\x20max-age=0,\x20must-revalidate\r\nPragma:\x20no-cache\r
+SF:\nExpires:\x200\r\nX-Frame-Options:\x20DENY\r\nContent-Security-Policy:
+SF:\x20default-src\x20'self';\x20frame-src\x20'self'\x20data:;\x20script-s
+SF:rc\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'\x20https://storage\.go
+SF:ogleapis\.com;\x20style-src\x20'self'\x20'unsafe-inline'\x20https://sta
+SF:tic\.piste\.gouv\.fr;\x20img-src\x20'self'\x20https://static\.piste\.go
+SF:uv\.fr\x20data:;\x20font-src\x20'self'\x20data:\r\nReferrer-Policy:\x20
+SF:strict-origin-when-cross-origin\r\nPermissions-Policy:\x20geolocation=\
+SF:(\),\x20midi=\(\),\x20sync-xhr=\(\),\x20microphone=\(\),\x20camera=\(\)
+SF:,\x20magnetometer=\(\),\x20gyroscope=\(\),\x20speaker=\(\),\x20fullscre
+SF:en=\(self\),\x20payment=\(\)\r\nContent-Length:\x200\r\nKeep-Alive:\x20
+SF:timeout=60,\x20max=100\r\nConnectio");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 14:04:48 2025 -- 1 IP address (1 host up) scanned in 171.83 seconds
+# Nmap done at Mon Nov 10 07:36:56 2025 -- 1 IP address (1 host up) scanned in 149.30 seconds
