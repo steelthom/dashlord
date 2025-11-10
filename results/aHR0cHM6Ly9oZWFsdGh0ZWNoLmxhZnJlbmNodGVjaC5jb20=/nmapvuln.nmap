@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Thu Nov  6 20:19:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln healthtech.lafrenchtech.com
+# Nmap 7.92 scan initiated Mon Nov 10 14:23:12 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln healthtech.lafrenchtech.com
 Nmap scan report for healthtech.lafrenchtech.com (163.172.207.110)
-Host is up (0.14s latency).
+Host is up (0.13s latency).
 rDNS record for 163.172.207.110: gateway.orson.io
 Not shown: 995 closed tcp ports (reset)
 PORT      STATE SERVICE           VERSION
@@ -82,7 +82,6 @@ PORT      STATE SERVICE           VERSION
 |     	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
 |_    	1337DAY-ID-30937	0.0	https://vulners.com/zdt/1337DAY-ID-30937	*EXPLOIT*
 80/tcp    open  http              nginx
-|_http-server-header: nginx
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
@@ -91,16 +90,16 @@ PORT      STATE SERVICE           VERSION
 |     x-frame-options: SAMEORIGIN
 |     x-xss-protection: 1; mode=block
 |     x-content-type-options: nosniff
-|     debug: protocol:http://,header.X_FORWARDED_FOR:,header.X_REAL_IP:,remote_ip:::ffff:172.182.196.57,request.ip:::ffff:172.182.196.57,port:80,host:127.0.0.1
+|     debug: protocol:http://,header.X_FORWARDED_FOR:,header.X_REAL_IP:,remote_ip:::ffff:52.176.138.194,request.ip:::ffff:52.176.138.194,port:80,host:127.0.0.1
 |     location: https://fr.orson.io/1441/page-introuvable
 |     cache-control: no-cache
-|     x-request-id: 39afb7d3-ca28-4c39-92f0-1f29973d3b45
-|     x-runtime: 0.063282
+|     x-request-id: bfb9b83e-62ae-4b6f-b2e6-5d6a1c1bb288
+|     x-runtime: 0.071335
 |     server: nginx
 |     content-length: 107
 |     accept-ranges: bytes
-|     date: Thu, 06 Nov 2025 20:19:41 GMT
-|     x-varnish: 234250901
+|     date: Mon, 10 Nov 2025 14:23:21 GMT
+|     x-varnish: 234591014
 |     age: 0
 |     via: 1.1 varnish
 |     x-cache: MISS
@@ -112,13 +111,13 @@ PORT      STATE SERVICE           VERSION
 |     HTTP/1.1 404 Not Found
 |     content-type: text/html; charset=utf-8
 |     status: 404 Not Found
-|     x-request-id: 47af59e7-8c9f-4c1b-8fef-0235f14488d5
-|     x-runtime: 0.143807
+|     x-request-id: 5eaec84b-4d54-4875-a8cd-8c90a5606bee
+|     x-runtime: 0.145698
 |     server: nginx
 |     content-length: 0
 |     accept-ranges: bytes
-|     date: Thu, 06 Nov 2025 20:19:42 GMT
-|     x-varnish: 234250902
+|     date: Mon, 10 Nov 2025 14:23:21 GMT
+|     x-varnish: 234591015
 |     age: 0
 |     via: 1.1 varnish
 |     x-cache: MISS
@@ -142,6 +141,7 @@ PORT      STATE SERVICE           VERSION
 |     <html><body><h1>400 Bad request</h1>
 |     Your browser sent an invalid request.
 |_    </body></html>
+|_http-server-header: nginx
 111/tcp   open  rpcbind           2-4 (RPC #100000)
 | rpcinfo: 
 |   program version    port/proto  service
@@ -159,13 +159,13 @@ PORT      STATE SERVICE           VERSION
 |     HTTP/1.1 406 Not Acceptable
 |     content-type: text/html; charset=utf-8
 |     status: 406 Not Acceptable
-|     x-request-id: 0ea7e8f5-b162-4b1b-83b1-5e691792f781
-|     x-runtime: 0.211225
+|     x-request-id: f3251f67-6b04-44cb-8980-a59cc25ee7b6
+|     x-runtime: 0.364950
 |     server: nginx
 |     content-length: 0
 |     accept-ranges: bytes
-|     date: Thu, 06 Nov 2025 20:19:49 GMT
-|     x-varnish: 1612678702
+|     date: Mon, 10 Nov 2025 14:23:29 GMT
+|     x-varnish: 234591028
 |     age: 0
 |     via: 1.1 varnish
 |     x-cache: MISS
@@ -179,16 +179,16 @@ PORT      STATE SERVICE           VERSION
 |     x-frame-options: SAMEORIGIN
 |     x-xss-protection: 1; mode=block
 |     x-content-type-options: nosniff
-|     debug: protocol:https://,header.X_FORWARDED_FOR:,header.X_REAL_IP:,remote_ip:::ffff:172.182.196.57,request.ip:::ffff:172.182.196.57,port:443,host:127.0.0.1
+|     debug: protocol:https://,header.X_FORWARDED_FOR:,header.X_REAL_IP:,remote_ip:::ffff:52.176.138.194,request.ip:::ffff:52.176.138.194,port:443,host:127.0.0.1
 |     location: https://fr.orson.io/1441/page-introuvable
 |     cache-control: no-cache
-|     x-request-id: 611c970a-d17b-4346-84b4-008f0e03f9d3
-|     x-runtime: 0.059558
+|     x-request-id: 8597dde3-cbf8-466b-a496-fc0cb666efaa
+|     x-runtime: 0.066471
 |     server: nginx
 |     content-length: 107
 |     accept-ranges: bytes
-|     date: Thu, 06 Nov 2025 20:19:48 GMT
-|     x-varnish: 234250905
+|     date: Mon, 10 Nov 2025 14:23:27 GMT
+|     x-varnish: 1613021240
 |     age: 0
 |     via: 1.1 varnish
 |     x-cache: MISS
@@ -200,13 +200,13 @@ PORT      STATE SERVICE           VERSION
 |     HTTP/1.1 404 Not Found
 |     content-type: text/html; charset=utf-8
 |     status: 404 Not Found
-|     x-request-id: d6bf5a49-72bb-43af-8e9c-ce04679570ad
-|     x-runtime: 0.144336
+|     x-request-id: 46990806-7f55-484a-ae80-881f4631f941
+|     x-runtime: 0.144294
 |     server: nginx
 |     content-length: 0
 |     accept-ranges: bytes
-|     date: Thu, 06 Nov 2025 20:19:48 GMT
-|     x-varnish: 234250906
+|     date: Mon, 10 Nov 2025 14:23:28 GMT
+|     x-varnish: 1613021242
 |     age: 0
 |     via: 1.1 varnish
 |     x-cache: MISS
@@ -236,102 +236,102 @@ PORT      STATE SERVICE           VERSION
 |_    </body></html>
 3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/6%Time=690D02DD%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,33F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-ty
-SF:pe:\x20text/html;\x20charset=utf-8\r\nstatus:\x20301\x20Moved\x20Perman
-SF:ently\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protection:\x201;\x20m
-SF:ode=block\r\nx-content-type-options:\x20nosniff\r\ndebug:\x20protocol:h
-SF:ttp://,header\.X_FORWARDED_FOR:,header\.X_REAL_IP:,remote_ip:::ffff:172
-SF:\.182\.196\.57,request\.ip:::ffff:172\.182\.196\.57,port:80,host:127\.0
-SF:\.0\.1\r\nlocation:\x20https://fr\.orson\.io/1441/page-introuvable\r\nc
-SF:ache-control:\x20no-cache\r\nx-request-id:\x2039afb7d3-ca28-4c39-92f0-1
-SF:f29973d3b45\r\nx-runtime:\x200\.063282\r\nserver:\x20nginx\r\ncontent-l
-SF:ength:\x20107\r\naccept-ranges:\x20bytes\r\ndate:\x20Thu,\x2006\x20Nov\
-SF:x202025\x2020:19:41\x20GMT\r\nx-varnish:\x20234250901\r\nage:\x200\r\nv
-SF:ia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBARAK-X-PROT
-SF:O\r\nx-haproxy:\x20Yes\r\nconnection:\x20close\r\n\r\n<html><body>You\x
-SF:20are\x20being\x20<a\x20href=\"https://fr\.orson\.io/1441/page-introuva
-SF:ble\">redirected</a>\.</body></html>")%r(HTTPOptions,17A,"HTTP/1\.1\x20
-SF:404\x20Not\x20Found\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\n
-SF:status:\x20404\x20Not\x20Found\r\nx-request-id:\x2047af59e7-8c9f-4c1b-8
-SF:fef-0235f14488d5\r\nx-runtime:\x200\.143807\r\nserver:\x20nginx\r\ncont
-SF:ent-length:\x200\r\naccept-ranges:\x20bytes\r\ndate:\x20Thu,\x2006\x20N
-SF:ov\x202025\x2020:19:42\x20GMT\r\nx-varnish:\x20234250902\r\nage:\x200\r
-SF:\nvia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBARAK-X-P
-SF:ROTO\r\nx-haproxy:\x20Yes\r\nconnection:\x20close\r\n\r\n")%r(RTSPReque
-SF:st,B9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cache
-SF:\r\ncontent-type:\x20text/html\r\nx-haproxy:\x20Yes\r\n\r\n<html><body>
-SF:<h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invali
-SF:d\x20request\.\n</body></html>\n\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x2
-SF:0Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\
-SF:r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><bod
-SF:y><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inva
-SF:lid\x20request\.\n</body></html>\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/10%Time=6911F559%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,33F,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-t
+SF:ype:\x20text/html;\x20charset=utf-8\r\nstatus:\x20301\x20Moved\x20Perma
+SF:nently\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protection:\x201;\x20
+SF:mode=block\r\nx-content-type-options:\x20nosniff\r\ndebug:\x20protocol:
+SF:http://,header\.X_FORWARDED_FOR:,header\.X_REAL_IP:,remote_ip:::ffff:52
+SF:\.176\.138\.194,request\.ip:::ffff:52\.176\.138\.194,port:80,host:127\.
+SF:0\.0\.1\r\nlocation:\x20https://fr\.orson\.io/1441/page-introuvable\r\n
+SF:cache-control:\x20no-cache\r\nx-request-id:\x20bfb9b83e-62ae-4b6f-b2e6-
+SF:5d6a1c1bb288\r\nx-runtime:\x200\.071335\r\nserver:\x20nginx\r\ncontent-
+SF:length:\x20107\r\naccept-ranges:\x20bytes\r\ndate:\x20Mon,\x2010\x20Nov
+SF:\x202025\x2014:23:21\x20GMT\r\nx-varnish:\x20234591014\r\nage:\x200\r\n
+SF:via:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBARAK-X-PRO
+SF:TO\r\nx-haproxy:\x20Yes\r\nconnection:\x20close\r\n\r\n<html><body>You\
+SF:x20are\x20being\x20<a\x20href=\"https://fr\.orson\.io/1441/page-introuv
+SF:able\">redirected</a>\.</body></html>")%r(HTTPOptions,17A,"HTTP/1\.1\x2
+SF:0404\x20Not\x20Found\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\
+SF:nstatus:\x20404\x20Not\x20Found\r\nx-request-id:\x205eaec84b-4d54-4875-
+SF:a8cd-8c90a5606bee\r\nx-runtime:\x200\.145698\r\nserver:\x20nginx\r\ncon
+SF:tent-length:\x200\r\naccept-ranges:\x20bytes\r\ndate:\x20Mon,\x2010\x20
+SF:Nov\x202025\x2014:23:21\x20GMT\r\nx-varnish:\x20234591015\r\nage:\x200\
+SF:r\nvia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBARAK-X-
+SF:PROTO\r\nx-haproxy:\x20Yes\r\nconnection:\x20close\r\n\r\n")%r(RTSPRequ
+SF:est,B9,"HTTP/1\.0\x20400\x20Bad\x20request\r\ncache-control:\x20no-cach
+SF:e\r\ncontent-type:\x20text/html\r\nx-haproxy:\x20Yes\r\n\r\n<html><body
+SF:><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inval
+SF:id\x20request\.\n</body></html>\n\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x
+SF:20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache
+SF:\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><bo
+SF:dy><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inv
+SF:alid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/6%Time=690D02E4%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,345,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncon
-SF:tent-type:\x20text/html;\x20charset=utf-8\r\nstatus:\x20301\x20Moved\x2
-SF:0Permanently\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protection:\x20
-SF:1;\x20mode=block\r\nx-content-type-options:\x20nosniff\r\ndebug:\x20pro
-SF:tocol:https://,header\.X_FORWARDED_FOR:,header\.X_REAL_IP:,remote_ip:::
-SF:ffff:172\.182\.196\.57,request\.ip:::ffff:172\.182\.196\.57,port:443,ho
-SF:st:127\.0\.0\.1\r\nlocation:\x20https://fr\.orson\.io/1441/page-introuv
-SF:able\r\ncache-control:\x20no-cache\r\nx-request-id:\x20611c970a-d17b-43
-SF:46-84b4-008f0e03f9d3\r\nx-runtime:\x200\.059558\r\nserver:\x20nginx\r\n
-SF:content-length:\x20107\r\naccept-ranges:\x20bytes\r\ndate:\x20Thu,\x200
-SF:6\x20Nov\x202025\x2020:19:48\x20GMT\r\nx-varnish:\x20234250905\r\nage:\
-SF:x200\r\nvia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBAR
-SF:AK-X-PROTO\r\nx-haproxy-ssl:\x20Yes\r\nconnection:\x20close\r\n\r\n<htm
-SF:l><body>You\x20are\x20being\x20<a\x20href=\"https://fr\.orson\.io/1441/
-SF:page-introuvable\">redirected</a>\.</body></html>")%r(HTTPOptions,17E,"
-SF:HTTP/1\.1\x20404\x20Not\x20Found\r\ncontent-type:\x20text/html;\x20char
-SF:set=utf-8\r\nstatus:\x20404\x20Not\x20Found\r\nx-request-id:\x20d6bf5a4
-SF:9-72bb-43af-8e9c-ce04679570ad\r\nx-runtime:\x200\.144336\r\nserver:\x20
-SF:nginx\r\ncontent-length:\x200\r\naccept-ranges:\x20bytes\r\ndate:\x20Th
-SF:u,\x2006\x20Nov\x202025\x2020:19:48\x20GMT\r\nx-varnish:\x20234250906\r
-SF:\nage:\x200\r\nvia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20
-SF:X-MUBARAK-X-PROTO\r\nx-haproxy-ssl:\x20Yes\r\nconnection:\x20close\r\n\
-SF:r\n")%r(FourOhFourRequest,189,"HTTP/1\.1\x20406\x20Not\x20Acceptable\r\
-SF:ncontent-type:\x20text/html;\x20charset=utf-8\r\nstatus:\x20406\x20Not\
-SF:x20Acceptable\r\nx-request-id:\x200ea7e8f5-b162-4b1b-83b1-5e691792f781\
-SF:r\nx-runtime:\x200\.211225\r\nserver:\x20nginx\r\ncontent-length:\x200\
-SF:r\naccept-ranges:\x20bytes\r\ndate:\x20Thu,\x2006\x20Nov\x202025\x2020:
-SF:19:49\x20GMT\r\nx-varnish:\x201612678702\r\nage:\x200\r\nvia:\x201\.1\x
-SF:20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBARAK-X-PROTO\r\nx-haprox
-SF:y-ssl:\x20Yes\r\nconnection:\x20close\r\n\r\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/10%Time=6911F55F%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,346,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nco
+SF:ntent-type:\x20text/html;\x20charset=utf-8\r\nstatus:\x20301\x20Moved\x
+SF:20Permanently\r\nx-frame-options:\x20SAMEORIGIN\r\nx-xss-protection:\x2
+SF:01;\x20mode=block\r\nx-content-type-options:\x20nosniff\r\ndebug:\x20pr
+SF:otocol:https://,header\.X_FORWARDED_FOR:,header\.X_REAL_IP:,remote_ip::
+SF::ffff:52\.176\.138\.194,request\.ip:::ffff:52\.176\.138\.194,port:443,h
+SF:ost:127\.0\.0\.1\r\nlocation:\x20https://fr\.orson\.io/1441/page-introu
+SF:vable\r\ncache-control:\x20no-cache\r\nx-request-id:\x208597dde3-cbf8-4
+SF:66b-a496-fc0cb666efaa\r\nx-runtime:\x200\.066471\r\nserver:\x20nginx\r\
+SF:ncontent-length:\x20107\r\naccept-ranges:\x20bytes\r\ndate:\x20Mon,\x20
+SF:10\x20Nov\x202025\x2014:23:27\x20GMT\r\nx-varnish:\x201613021240\r\nage
+SF::\x200\r\nvia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUB
+SF:ARAK-X-PROTO\r\nx-haproxy-ssl:\x20Yes\r\nconnection:\x20close\r\n\r\n<h
+SF:tml><body>You\x20are\x20being\x20<a\x20href=\"https://fr\.orson\.io/144
+SF:1/page-introuvable\">redirected</a>\.</body></html>")%r(HTTPOptions,17F
+SF:,"HTTP/1\.1\x20404\x20Not\x20Found\r\ncontent-type:\x20text/html;\x20ch
+SF:arset=utf-8\r\nstatus:\x20404\x20Not\x20Found\r\nx-request-id:\x2046990
+SF:806-7f55-484a-ae80-881f4631f941\r\nx-runtime:\x200\.144294\r\nserver:\x
+SF:20nginx\r\ncontent-length:\x200\r\naccept-ranges:\x20bytes\r\ndate:\x20
+SF:Mon,\x2010\x20Nov\x202025\x2014:23:28\x20GMT\r\nx-varnish:\x20161302124
+SF:2\r\nage:\x200\r\nvia:\x201\.1\x20varnish\r\nx-cache:\x20MISS\r\nvary:\
+SF:x20X-MUBARAK-X-PROTO\r\nx-haproxy-ssl:\x20Yes\r\nconnection:\x20close\r
+SF:\n\r\n")%r(FourOhFourRequest,188,"HTTP/1\.1\x20406\x20Not\x20Acceptable
+SF:\r\ncontent-type:\x20text/html;\x20charset=utf-8\r\nstatus:\x20406\x20N
+SF:ot\x20Acceptable\r\nx-request-id:\x20f3251f67-6b04-44cb-8980-a59cc25ee7
+SF:b6\r\nx-runtime:\x200\.364950\r\nserver:\x20nginx\r\ncontent-length:\x2
+SF:00\r\naccept-ranges:\x20bytes\r\ndate:\x20Mon,\x2010\x20Nov\x202025\x20
+SF:14:23:29\x20GMT\r\nx-varnish:\x20234591028\r\nage:\x200\r\nvia:\x201\.1
+SF:\x20varnish\r\nx-cache:\x20MISS\r\nvary:\x20X-MUBARAK-X-PROTO\r\nx-hapr
+SF:oxy-ssl:\x20Yes\r\nconnection:\x20close\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port10000-TCP:V=7.92%I=7%D=11/6%Time=690D02DD%P=x86_64-alpine-linux-mus
-SF:l%r(GetRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nconten
+SF-Port10000-TCP:V=7.92%I=7%D=11/10%Time=6911F559%P=x86_64-alpine-linux-mu
+SF:sl%r(GetRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nconte
+SF:nt-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20tex
+SF:t/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Service\x2
+SF:0Unavailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handle\x20t
+SF:his\x20request\.\n</body></html>\n")%r(HTTPOptions,E9,"HTTP/1\.1\x20503
+SF:\x20Service\x20Unavailable\r\ncontent-length:\x20107\r\ncache-control:\
+SF:x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r
+SF:\n<html><body><h1>503\x20Service\x20Unavailable</h1>\nNo\x20server\x20i
+SF:s\x20available\x20to\x20handle\x20this\x20request\.\n</body></html>\n")
+SF:%r(RTSPRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nconten
 SF:t-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text
 SF:/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Service\x20
 SF:Unavailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handle\x20th
-SF:is\x20request\.\n</body></html>\n")%r(HTTPOptions,E9,"HTTP/1\.1\x20503\
-SF:x20Service\x20Unavailable\r\ncontent-length:\x20107\r\ncache-control:\x
+SF:is\x20request\.\n</body></html>\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20
+SF:Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r
+SF:\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body
+SF:><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20inval
+SF:id\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.
+SF:1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x
 SF:20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\
-SF:n<html><body><h1>503\x20Service\x20Unavailable</h1>\nNo\x20server\x20is
-SF:\x20available\x20to\x20handle\x20this\x20request\.\n</body></html>\n")%
-SF:r(RTSPRequest,E9,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\ncontent
-SF:-length:\x20107\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/
-SF:html\r\nconnection:\x20close\r\n\r\n<html><body><h1>503\x20Service\x20U
-SF:navailable</h1>\nNo\x20server\x20is\x20available\x20to\x20handle\x20thi
-SF:s\x20request\.\n</body></html>\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20B
-SF:ad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\
-SF:ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body>
-SF:<h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invali
-SF:d\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1
-SF:\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x2
-SF:0no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n
-SF:<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20
-SF:an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF
-SF:,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-
-SF:control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20cl
-SF:ose\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\
-SF:x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(Help,CF,"HT
-SF:TP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-cont
-SF:rol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\
-SF:r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20s
-SF:ent\x20an\x20invalid\x20request\.\n</body></html>\n");
+SF:n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x2
+SF:0an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRequestTCP,C
+SF:F,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache
+SF:-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20c
+SF:lose\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser
+SF:\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(Help,CF,"H
+SF:TTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-con
+SF:trol:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close
+SF:\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20
+SF:sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Nov  6 20:20:41 2025 -- 1 IP address (1 host up) scanned in 68.87 seconds
+# Nmap done at Mon Nov 10 14:24:18 2025 -- 1 IP address (1 host up) scanned in 65.73 seconds
