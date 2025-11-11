@@ -1,12 +1,78 @@
-# Nmap 7.92 scan initiated Sat Nov  8 03:36:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pension-alimentaire.caf.fr
+# Nmap 7.92 scan initiated Tue Nov 11 19:22:21 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pension-alimentaire.caf.fr
 Nmap scan report for pension-alimentaire.caf.fr (91.231.174.21)
-Host is up (0.12s latency).
+Host is up (0.10s latency).
 Not shown: 998 filtered tcp ports (no-response)
-PORT    STATE SERVICE        VERSION
-80/tcp  open  http-proxy     F5 BIG-IP load balancer http proxy
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
-443/tcp open  ssl/tcpwrapped
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 11 Nov 2025 19:22:43 GMT
+|     X-OneAgent-JS-Injection: true
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1
+|     Set-Cookie: JSESSIONID=2042E01065388874112D10B2EF71F03A; Path=/; HttpOnly
+|     Set-Cookie: COOKIE_SUPPORT=true; Expires=Wed, 11-Nov-2026 19:22:43 GMT; Path=/; HttpOnly
+|     Set-Cookie: GUEST_LANGUAGE_ID=fr_FR; Domain=.pension-alimentaire.caf.fr; Expires=Wed, 11-Nov-2026 19:22:43 GMT; Path=/; HttpOnly
+|     Liferay-Portal: Liferay Community Edition Portal 7.0.6 GA7 (Wilberforce / Build 7006 / April 17, 2018)
+|     ETag: "0:dtagent10323250822043923EoSB:dtagent10323250822043923EoSB"
+|     Content-Type: text/html;charset=utf-8
+|     Content-Length: 0
+|     Server-Timing: dtSInfo;desc="1"
+|     Set-Cookie: dtCookie=v_4_srv_1_sn_E495B8F04DC8E7CC9F04E74FA7EA63C9_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1; Path=/
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 11 Nov 2025 19:22:43 GMT
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1
+|     Set-Cookie: JSESSIONID=56B4AF4E1E205E19534D332005B7654B; Path=/; HttpOnly
+|     Set-Cookie: COOKIE_SUPPORT=true; Expires=Wed, 11-Nov-2026 19:22:43 GMT; Path=/; HttpOnly
+|     Set-Cookie: GUEST_LANGUAGE_ID=fr_FR; Domain=.pension-alimentaire.caf.fr; Expires=Wed, 11-Nov-2026 19:22:43 GMT; Path=/; HttpOnly
+|     Liferay-Portal: Liferay Community Edition Portal 7.0.6 GA7 (Wilberforce / Build 7006 / April 17, 2018)
+|     ETag: "0:dtagent10323250822043923EoSB"
+|     Content-Type: text/html;charset=utf-8
+|     X-OneAgent-JS-Injection: true
+|     X-ruxit-JS-Agent: true
+|     Server-Timing: dtSInfo;desc="1"
+|     Content-Length: 0
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=69138D03%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,368,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2011\
+SF:x20Nov\x202025\x2019:22:43\x20GMT\r\nX-OneAgent-JS-Injection:\x20true\r
+SF:\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nX-XSS-Protection:\x201\r\nSet-Cookie:\x20JSESSIONID=2042E01065388874
+SF:112D10B2EF71F03A;\x20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20COOKIE_SUPPO
+SF:RT=true;\x20Expires=Wed,\x2011-Nov-2026\x2019:22:43\x20GMT;\x20Path=/;\
+SF:x20HttpOnly\r\nSet-Cookie:\x20GUEST_LANGUAGE_ID=fr_FR;\x20Domain=\.pens
+SF:ion-alimentaire\.caf\.fr;\x20Expires=Wed,\x2011-Nov-2026\x2019:22:43\x2
+SF:0GMT;\x20Path=/;\x20HttpOnly\r\nLiferay-Portal:\x20Liferay\x20Community
+SF:\x20Edition\x20Portal\x207\.0\.6\x20GA7\x20\(Wilberforce\x20/\x20Build\
+SF:x207006\x20/\x20April\x2017,\x202018\)\r\nETag:\x20\"0:dtagent103232508
+SF:22043923EoSB:dtagent10323250822043923EoSB\"\r\nContent-Type:\x20text/ht
+SF:ml;charset=utf-8\r\nContent-Length:\x200\r\nServer-Timing:\x20dtSInfo;d
+SF:esc=\"1\"\r\nSet-Cookie:\x20dtCookie=v_4_srv_1_sn_E495B8F04DC8E7CC9F04E
+SF:74FA7EA63C9_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1;\x20Path=/\
+SF:r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,2E7,"HTTP/1\.1\x20200\x
+SF:20OK\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2019:22:43\x20GMT\r\nX-Cont
+SF:ent-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS
+SF:-Protection:\x201\r\nSet-Cookie:\x20JSESSIONID=56B4AF4E1E205E19534D3320
+SF:05B7654B;\x20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20COOKIE_SUPPORT=true;
+SF:\x20Expires=Wed,\x2011-Nov-2026\x2019:22:43\x20GMT;\x20Path=/;\x20HttpO
+SF:nly\r\nSet-Cookie:\x20GUEST_LANGUAGE_ID=fr_FR;\x20Domain=\.pension-alim
+SF:entaire\.caf\.fr;\x20Expires=Wed,\x2011-Nov-2026\x2019:22:43\x20GMT;\x2
+SF:0Path=/;\x20HttpOnly\r\nLiferay-Portal:\x20Liferay\x20Community\x20Edit
+SF:ion\x20Portal\x207\.0\.6\x20GA7\x20\(Wilberforce\x20/\x20Build\x207006\
+SF:x20/\x20April\x2017,\x202018\)\r\nETag:\x20\"0:dtagent10323250822043923
+SF:EoSB\"\r\nContent-Type:\x20text/html;charset=utf-8\r\nX-OneAgent-JS-Inj
+SF:ection:\x20true\r\nX-ruxit-JS-Agent:\x20true\r\nServer-Timing:\x20dtSIn
+SF:fo;desc=\"1\"\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 03:37:19 2025 -- 1 IP address (1 host up) scanned in 20.16 seconds
+# Nmap done at Tue Nov 11 19:24:58 2025 -- 1 IP address (1 host up) scanned in 156.80 seconds
