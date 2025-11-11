@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 19:36:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln liste-noire.travail-emploi.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 14:46:15 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln liste-noire.travail-emploi.gouv.fr
 Nmap scan report for liste-noire.travail-emploi.gouv.fr (185.194.82.16)
-Host is up (0.082s latency).
+Host is up (0.095s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -35,7 +35,7 @@ PORT    STATE  SERVICE   VERSION
 |     ERROR
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Fri, 07 Nov 2025 19:37:10 GMT
+|     Date: Tue, 11 Nov 2025 14:46:35 GMT
 |     Last-Modified: Mon, 02 Jun 2025 15:19:16 GMT
 |     Accept-Ranges: bytes
 |     Content-Length: 9187
@@ -44,7 +44,7 @@ PORT    STATE  SERVICE   VERSION
 |     Connection: close
 |     Content-Type: text/html; charset=UTF-8
 |     Content-Language: fr-FR
-|     Set-Cookie: BIGipServerpool-dicom-portail-liste-noire-prod.cegedim.cloud-tcp80=!eUEOBG51ID2vOHkXIkI7F7SI9ajmigJfiv0SgrgZLA7KvjtTsdH5arxSO1FRmzAvX1keZurgwCyMEP9fLqVdtysb/JE=; path=/; Httponly; Secure; SameSite=Strict
+|     Set-Cookie: BIGipServerpool-dicom-portail-liste-noire-prod.cegedim.cloud-tcp80=!qDhQ05dT3g5DDGEXIkI7F7SI9ajmit+XLrQ90WssANlK0YeMSuv+UGMDHTrKkPrMc6RQtutGgUBL/cnFTuwd+RihAN0=; path=/; Httponly; Secure; SameSite=Strict
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |     <!DOCTYPE html>
 |     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr">
@@ -56,14 +56,14 @@ PORT    STATE  SERVICE   VERSION
 |     <link rel=
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Fri, 07 Nov 2025 19:37:11 GMT
+|     Date: Tue, 11 Nov 2025 14:46:36 GMT
 |     Allow: GET,POST,OPTIONS,HEAD
 |     Content-Length: 0
-|     Keep-Alive: timeout=5, max=99
+|     Keep-Alive: timeout=5, max=100
 |     Connection: close
 |     Content-Type: text/html; charset=UTF-8
 |     Content-Language: fr-FR
-|     Set-Cookie: BIGipServerpool-dicom-portail-liste-noire-prod.cegedim.cloud-tcp80=!Lyv7omur1b8Qt9MXIkI7F7SI9ajmirE3doBQsYEWVZDh2Gzyq0JBRbJ7PURnTZiv0sa13eSoNFWmey0S+2VvFljkv5o=; path=/; Httponly; Secure; SameSite=Strict
+|     Set-Cookie: BIGipServerpool-dicom-portail-liste-noire-prod.cegedim.cloud-tcp80=!ZNofReNzu3lEOEIXIkI7F7SI9ajmivv30yWQWWBu6DtppuM7AEYRPJRJtichOBAPGQrV6oZzf/tUvYx/8vxYqY2Rv3k=; path=/; Httponly; Secure; SameSite=Strict
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
 |   RTSPRequest: 
 |     HTTP/1.0 400 Bad Request
@@ -72,51 +72,51 @@ PORT    STATE  SERVICE   VERSION
 |_    ERROR
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690E4A60%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=69134C48%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690E4A67%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,2619,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2007\
-SF:x20Nov\x202025\x2019:37:10\x20GMT\r\nLast-Modified:\x20Mon,\x2002\x20Ju
-SF:n\x202025\x2015:19:16\x20GMT\r\nAccept-Ranges:\x20bytes\r\nContent-Leng
-SF:th:\x209187\r\nVary:\x20Accept-Encoding\r\nKeep-Alive:\x20timeout=5,\x2
-SF:0max=100\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20char
-SF:set=UTF-8\r\nContent-Language:\x20fr-FR\r\nSet-Cookie:\x20BIGipServerpo
-SF:ol-dicom-portail-liste-noire-prod\.cegedim\.cloud-tcp80=!eUEOBG51ID2vOH
-SF:kXIkI7F7SI9ajmigJfiv0SgrgZLA7KvjtTsdH5arxSO1FRmzAvX1keZurgwCyMEP9fLqVdt
-SF:ysb/JE=;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nStric
-SF:t-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n
-SF:\r\n<!DOCTYPE\x20html>\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xht
-SF:ml\"\x20xml:lang=\"fr\"\x20dir=\"ltr\"\x20lang=\"fr\">\r\n\t<head>\r\n\
-SF:t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20char
-SF:set=utf-8\"\x20/>\r\n\t\t<title>Liste\x20des\x20personnes\x20physiques\
-SF:x20condamn\xc3\xa9es</title>\r\n\t\t\r\n\t\t<meta\x20name=\"viewport\"\
-SF:x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\r\n\r\n\
-SF:t\t<link\x20rel=")%r(HTTPOptions,1F5,"HTTP/1\.1\x20200\x20OK\r\nDate:\x
-SF:20Fri,\x2007\x20Nov\x202025\x2019:37:11\x20GMT\r\nAllow:\x20GET,POST,OP
-SF:TIONS,HEAD\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=
-SF:99\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UT
-SF:F-8\r\nContent-Language:\x20fr-FR\r\nSet-Cookie:\x20BIGipServerpool-dic
-SF:om-portail-liste-noire-prod\.cegedim\.cloud-tcp80=!Lyv7omur1b8Qt9MXIkI7
-SF:F7SI9ajmirE3doBQsYEWVZDh2Gzyq0JBRbJ7PURnTZiv0sa13eSoNFWmey0S\+2VvFljkv5
-SF:o=;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nStrict-Tra
-SF:nsport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n")%r(
-SF:FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x
-SF:20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPReques
-SF:t,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Alive\r
-SF:\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=69134C4B%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,2619,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2011
+SF:\x20Nov\x202025\x2014:46:35\x20GMT\r\nLast-Modified:\x20Mon,\x2002\x20J
+SF:un\x202025\x2015:19:16\x20GMT\r\nAccept-Ranges:\x20bytes\r\nContent-Len
+SF:gth:\x209187\r\nVary:\x20Accept-Encoding\r\nKeep-Alive:\x20timeout=5,\x
+SF:20max=100\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nContent-Language:\x20fr-FR\r\nSet-Cookie:\x20BIGipServerp
+SF:ool-dicom-portail-liste-noire-prod\.cegedim\.cloud-tcp80=!qDhQ05dT3g5DD
+SF:GEXIkI7F7SI9ajmit\+XLrQ90WssANlK0YeMSuv\+UGMDHTrKkPrMc6RQtutGgUBL/cnFTu
+SF:wd\+RihAN0=;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nS
+SF:trict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n
+SF:\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20xmlns=\"http://www\.w3\.org/1999
+SF:/xhtml\"\x20xml:lang=\"fr\"\x20dir=\"ltr\"\x20lang=\"fr\">\r\n\t<head>\
+SF:r\n\t\t<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20
+SF:charset=utf-8\"\x20/>\r\n\t\t<title>Liste\x20des\x20personnes\x20physiq
+SF:ues\x20condamn\xc3\xa9es</title>\r\n\t\t\r\n\t\t<meta\x20name=\"viewpor
+SF:t\"\x20content=\"width=device-width,\x20initial-scale=1\.0\"\x20/>\r\n\
+SF:r\n\t\t<link\x20rel=")%r(HTTPOptions,1F6,"HTTP/1\.1\x20200\x20OK\r\nDat
+SF:e:\x20Tue,\x2011\x20Nov\x202025\x2014:46:36\x20GMT\r\nAllow:\x20GET,POS
+SF:T,OPTIONS,HEAD\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20
+SF:max=100\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20chars
+SF:et=UTF-8\r\nContent-Language:\x20fr-FR\r\nSet-Cookie:\x20BIGipServerpoo
+SF:l-dicom-portail-liste-noire-prod\.cegedim\.cloud-tcp80=!ZNofReNzu3lEOEI
+SF:XIkI7F7SI9ajmivv30yWQWWBu6DtppuM7AEYRPJRJtichOBAPGQrV6oZzf/tUvYx/8vxYqY
+SF:2Rv3k=;\x20path=/;\x20Httponly;\x20Secure;\x20SameSite=Strict\r\nStrict
+SF:-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n"
+SF:)%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnectio
+SF:n:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPRe
+SF:quest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Ali
+SF:ve\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 19:39:35 2025 -- 1 IP address (1 host up) scanned in 163.52 seconds
+# Nmap done at Tue Nov 11 14:49:00 2025 -- 1 IP address (1 host up) scanned in 165.38 seconds
