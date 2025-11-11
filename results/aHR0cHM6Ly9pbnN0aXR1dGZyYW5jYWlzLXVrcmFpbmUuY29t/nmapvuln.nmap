@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 14:41:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrancais-ukraine.com
+# Nmap 7.92 scan initiated Tue Nov 11 07:44:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln institutfrancais-ukraine.com
 Nmap scan report for institutfrancais-ukraine.com (194.28.172.205)
-Host is up (0.18s latency).
+Host is up (0.13s latency).
 Not shown: 982 filtered tcp ports (no-response)
 PORT     STATE  SERVICE       VERSION
 20/tcp   closed ftp-data
@@ -675,6 +675,7 @@ PORT     STATE  SERVICE       VERSION
 |     	CVE-2021-44142	9.0	https://vulners.com/cve/CVE-2021-44142
 |     	CVE-2020-25719	9.0	https://vulners.com/cve/CVE-2020-25719
 |     	CVE-2017-15103	9.0	https://vulners.com/cve/CVE-2017-15103
+|     	B612A143-E83D-51AD-AAB8-2A5E7EE17DE2	9.0	https://vulners.com/githubexploit/B612A143-E83D-51AD-AAB8-2A5E7EE17DE2	*EXPLOIT*
 |     	B0F54D1F-71E5-54D9-BED8-BA166E090B14	9.0	https://vulners.com/githubexploit/B0F54D1F-71E5-54D9-BED8-BA166E090B14	*EXPLOIT*
 |     	EF874BB4-C10F-5624-8475-92A78F2530E5	8.8	https://vulners.com/githubexploit/EF874BB4-C10F-5624-8475-92A78F2530E5	*EXPLOIT*
 |     	CVE-2025-5372	8.8	https://vulners.com/cve/CVE-2025-5372
@@ -1391,8 +1392,8 @@ PORT     STATE  SERVICE       VERSION
 |_    	1337DAY-ID-22375	0.0	https://vulners.com/zdt/1337DAY-ID-22375	*EXPLOIT*
 80/tcp   open   http          nginx
 81/tcp   open   http          Payara Server httpd 5.2020.5 (Servlet 4.0; JSP 2.3; Red Hat, Inc. Java 1.8)
-|_http-server-header: Payara Server  5.2020.5 #badassfish
 |_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: Payara Server  5.2020.5 #badassfish
 | vulners: 
 |   cpe:/a:payara:payara:5.2020.5: 
 |     	PACKETSTORM:169864	7.5	https://vulners.com/packetstorm/PACKETSTORM:169864	*EXPLOIT*
@@ -1592,14 +1593,14 @@ PORT     STATE  SERVICE       VERSION
 |     X-Directadmin: Unauthorized
 |     X-Frame-Options: sameorigin
 |     X-Valid: yes
-|     Date: Fri, 07 Nov 2025 14:41:25 GMT
+|     Date: Tue, 11 Nov 2025 07:45:04 GMT
 |     <!DOCTYPE html><html><head><title>DirectAdmin Login</title><meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>* { font-size: 8.5pt; font-family: verdana; }b { font-weight: bold; }.listtitle { background: #425984; color: #EEEEEE; white-space: nowrap; border-radius: 3px; box-shadow: 1px 1px 3px #727272; }td.list{ background: #EEEEEE; white-space: nowrap; }input { border-radius: 3px; padding-left: 4px; padding-right: 4px; }.inset { border: 1px inset #DDDDDD; }.auth-block { d
 |   HTTPOptions: 
 |     HTTP/1.0 405 Method Not Allowed
 |     Vary: Origin
 |     Vary: Accept-Encoding
 |     X-Frame-Options: sameorigin
-|     Date: Fri, 07 Nov 2025 14:41:25 GMT
+|     Date: Tue, 11 Nov 2025 07:45:05 GMT
 |_    Content-Length: 0
 4848/tcp open   ssl/http      Payara Server httpd 5.2020.5 (Servlet 4.0; JSP 2.3; Red Hat, Inc. Java 1.8)
 |_http-server-header: Payara Server  5.2020.5 #badassfish
@@ -1611,38 +1612,38 @@ PORT     STATE  SERVICE       VERSION
 |     	1337DAY-ID-38070	7.5	https://vulners.com/zdt/1337DAY-ID-38070	*EXPLOIT*
 |_    	CVE-2024-7312	7.0	https://vulners.com/cve/CVE-2024-7312
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port2222-TCP:V=7.92%I=7%D=11/7%Time=690E0515%P=x86_64-alpine-linux-musl
-SF:%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:
-SF:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20
-SF:Bad\x20Request")%r(GetRequest,148C,"HTTP/1\.0\x20200\x20OK\r\nCache-Con
-SF:trol:\x20no-cache\r\nContent-Type:\x20text/html\r\nPragma:\x20no-cache\
-SF:r\nServer:\x20DirectAdmin\x20Daemon\r\nSet-Cookie:\x20session=;\x20path
-SF:=/;\x20expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT;\x20SameSit
-SF:e=Lax;\x20HttpOnly\r\nVary:\x20Origin\r\nVary:\x20Accept-Encoding\r\nX-
-SF:Directadmin:\x20Unauthorized\r\nX-Frame-Options:\x20sameorigin\r\nX-Val
-SF:id:\x20yes\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:41:25\x20GMT\r\n
-SF:\r\n<!DOCTYPE\x20html><html><head><title>DirectAdmin\x20Login</title><m
-SF:eta\x20name=\"robots\"\x20content=\"noindex,nofollow\"><meta\x20http-eq
-SF:uiv=\"Content-Type\"\x20content=\"text/html;\x20charset=UTF-8\"><style>
-SF:\*\x20{\x20font-size:\x208\.5pt;\x20font-family:\x20verdana;\x20}b\x20{
-SF:\x20font-weight:\x20bold;\x20}\.listtitle\x20{\x20background:\x20#42598
-SF:4;\x20color:\x20#EEEEEE;\x20white-space:\x20nowrap;\x20border-radius:\x
-SF:203px;\x20box-shadow:\x201px\x201px\x203px\x20#727272;\x20}td\.list{\x2
-SF:0background:\x20#EEEEEE;\x20white-space:\x20nowrap;\x20}input\x20{\x20b
-SF:order-radius:\x203px;\x20padding-left:\x204px;\x20padding-right:\x204px
-SF:;\x20}\.inset\x20{\x20border:\x201px\x20inset\x20#DDDDDD;\x20}\.auth-bl
-SF:ock\x20{\x20d")%r(HTTPOptions,9D,"HTTP/1\.0\x20405\x20Method\x20Not\x20
-SF:Allowed\r\nVary:\x20Origin\r\nVary:\x20Accept-Encoding\r\nX-Frame-Optio
-SF:ns:\x20sameorigin\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:41:25\x20
-SF:GMT\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x2040
-SF:0\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\
-SF:nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/1\
-SF:.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=
-SF:utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSessi
-SF:onReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/p
-SF:lain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Req
-SF:uest");
+SF-Port2222-TCP:V=7.92%I=7%D=11/11%Time=6912E980%P=x86_64-alpine-linux-mus
+SF:l%r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x2
+SF:0Bad\x20Request")%r(GetRequest,148C,"HTTP/1\.0\x20200\x20OK\r\nCache-Co
+SF:ntrol:\x20no-cache\r\nContent-Type:\x20text/html\r\nPragma:\x20no-cache
+SF:\r\nServer:\x20DirectAdmin\x20Daemon\r\nSet-Cookie:\x20session=;\x20pat
+SF:h=/;\x20expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT;\x20SameSi
+SF:te=Lax;\x20HttpOnly\r\nVary:\x20Origin\r\nVary:\x20Accept-Encoding\r\nX
+SF:-Directadmin:\x20Unauthorized\r\nX-Frame-Options:\x20sameorigin\r\nX-Va
+SF:lid:\x20yes\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2007:45:04\x20GMT\r\
+SF:n\r\n<!DOCTYPE\x20html><html><head><title>DirectAdmin\x20Login</title><
+SF:meta\x20name=\"robots\"\x20content=\"noindex,nofollow\"><meta\x20http-e
+SF:quiv=\"Content-Type\"\x20content=\"text/html;\x20charset=UTF-8\"><style
+SF:>\*\x20{\x20font-size:\x208\.5pt;\x20font-family:\x20verdana;\x20}b\x20
+SF:{\x20font-weight:\x20bold;\x20}\.listtitle\x20{\x20background:\x20#4259
+SF:84;\x20color:\x20#EEEEEE;\x20white-space:\x20nowrap;\x20border-radius:\
+SF:x203px;\x20box-shadow:\x201px\x201px\x203px\x20#727272;\x20}td\.list{\x
+SF:20background:\x20#EEEEEE;\x20white-space:\x20nowrap;\x20}input\x20{\x20
+SF:border-radius:\x203px;\x20padding-left:\x204px;\x20padding-right:\x204p
+SF:x;\x20}\.inset\x20{\x20border:\x201px\x20inset\x20#DDDDDD;\x20}\.auth-b
+SF:lock\x20{\x20d")%r(HTTPOptions,9D,"HTTP/1\.0\x20405\x20Method\x20Not\x2
+SF:0Allowed\r\nVary:\x20Origin\r\nVary:\x20Accept-Encoding\r\nX-Frame-Opti
+SF:ons:\x20sameorigin\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2007:45:05\x2
+SF:0GMT\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r
+SF:\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,67,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset
+SF:=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(SSLSess
+SF:ionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest");
 Service Info: Host: server.institutfrancais-ukraine.com; OSs: Unix, Linux; CPE: cpe:/o:redhat:enterprise_linux:7
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 14:42:58 2025 -- 1 IP address (1 host up) scanned in 108.16 seconds
+# Nmap done at Tue Nov 11 07:46:34 2025 -- 1 IP address (1 host up) scanned in 103.49 seconds
