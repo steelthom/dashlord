@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 19:21:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln librairie.rcn.aife.economie.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 13:58:07 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln librairie.rcn.aife.economie.gouv.fr
 Nmap scan report for librairie.rcn.aife.economie.gouv.fr (162.19.99.235)
-Host is up (0.086s latency).
+Host is up (0.12s latency).
 rDNS record for 162.19.99.235: aifesandbox-ns3042402.one2net.net
 Not shown: 992 filtered tcp ports (no-response)
 PORT      STATE  SERVICE        VERSION
@@ -116,7 +116,6 @@ PORT      STATE  SERVICE        VERSION
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_http-server-header: nginx/1.22.1
 443/tcp   open   ssl/http       nginx 1.22.1
-|_http-server-header: nginx/1.22.1
 | vulners: 
 |   nginx 1.22.1: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -127,6 +126,7 @@ PORT      STATE  SERVICE        VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_http-trane-info: Problem with XML parsing of /evox/about
+|_http-server-header: nginx/1.22.1
 1322/tcp  open   ssh            OpenSSH 9.2p1 Debian 2+deb12u7 (protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:9.2p1: 
@@ -251,18 +251,18 @@ PORT      STATE  SERVICE        VERSION
 |_    220 0.0.0.0 ESMTP Service Ready
 32772/tcp closed sometimes-rpc7
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port10025-TCP:V=7.92%I=7%D=11/7%Time=690E46D0%P=x86_64-alpine-linux-mus
-SF:l%r(NULL,21,"220\x200\.0\.0\.0\x20ESMTP\x20Service\x20Ready\r\n")%r(Gen
-SF:ericLines,5B,"220\x200\.0\.0\.0\x20ESMTP\x20Service\x20Ready\r\n500\x20
-SF:5\.5\.2\x20Error:\x20bad\x20syntax\r\n500\x205\.5\.2\x20Error:\x20bad\x
-SF:20syntax\r\n")%r(GetRequest,55,"220\x200\.0\.0\.0\x20ESMTP\x20Service\x
-SF:20Ready\r\n501\x205\.5\.2\x20Bad\x20command\r\n500\x205\.5\.2\x20Error:
-SF:\x20bad\x20syntax\r\n")%r(Hello,56,"220\x200\.0\.0\.0\x20ESMTP\x20Servi
-SF:ce\x20Ready\r\n501\x205\.5\.2\x20Domain/address\x20argument\x20required
-SF:\x20for\x20HELO\r\n")%r(Help,49,"220\x200\.0\.0\.0\x20ESMTP\x20Service\
-SF:x20Ready\r\n502\x205\.5\.1\x20HELP\x20command\x20not\x20implemented\r\n
-SF:");
+SF-Port10025-TCP:V=7.92%I=7%D=11/11%Time=691340FE%P=x86_64-alpine-linux-mu
+SF:sl%r(NULL,21,"220\x200\.0\.0\.0\x20ESMTP\x20Service\x20Ready\r\n")%r(Ge
+SF:nericLines,5B,"220\x200\.0\.0\.0\x20ESMTP\x20Service\x20Ready\r\n500\x2
+SF:05\.5\.2\x20Error:\x20bad\x20syntax\r\n500\x205\.5\.2\x20Error:\x20bad\
+SF:x20syntax\r\n")%r(GetRequest,55,"220\x200\.0\.0\.0\x20ESMTP\x20Service\
+SF:x20Ready\r\n501\x205\.5\.2\x20Bad\x20command\r\n500\x205\.5\.2\x20Error
+SF::\x20bad\x20syntax\r\n")%r(Hello,56,"220\x200\.0\.0\.0\x20ESMTP\x20Serv
+SF:ice\x20Ready\r\n501\x205\.5\.2\x20Domain/address\x20argument\x20require
+SF:d\x20for\x20HELO\r\n")%r(Help,49,"220\x200\.0\.0\.0\x20ESMTP\x20Service
+SF:\x20Ready\r\n502\x205\.5\.1\x20HELP\x20command\x20not\x20implemented\r\
+SF:n");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 19:22:20 2025 -- 1 IP address (1 host up) scanned in 39.75 seconds
+# Nmap done at Tue Nov 11 13:58:50 2025 -- 1 IP address (1 host up) scanned in 43.11 seconds
