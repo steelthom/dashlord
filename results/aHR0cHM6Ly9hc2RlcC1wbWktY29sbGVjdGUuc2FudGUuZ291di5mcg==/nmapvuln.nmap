@@ -1,16 +1,22 @@
-# Nmap 7.92 scan initiated Fri Nov  7 07:16:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln asdep-pmi-collecte.sante.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 03:21:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln asdep-pmi-collecte.sante.gouv.fr
 Nmap scan report for asdep-pmi-collecte.sante.gouv.fr (185.194.83.112)
-Host is up (0.13s latency).
+Host is up (0.081s latency).
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE    VERSION
-80/tcp  open   tcpwrapped
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Connection: close
+|_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/https
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
 |     Content-Type: text/html
-|     Date: Fri, 07 Nov 2025 07:16:37 GMT
+|     Date: Tue, 11 Nov 2025 03:22:11 GMT
 |     Connection: close
 |     Content-Length: 1245
 |     X-Frame-Options: SAMEORIGIN
@@ -33,7 +39,7 @@ PORT    STATE  SERVICE    VERSION
 |     Content-Type: text/html
 |     Last-Modified: Wed, 01 Mar 2023 13:58:34 GMT
 |     Accept-Ranges: bytes
-|     Date: Fri, 07 Nov 2025 07:16:36 GMT
+|     Date: Tue, 11 Nov 2025 03:22:11 GMT
 |     Connection: close
 |     Content-Length: 703
 |     X-Frame-Options: SAMEORIGIN
@@ -63,51 +69,61 @@ PORT    STATE  SERVICE    VERSION
 |     HTTP/1.1 200 OK
 |     Allow: OPTIONS, TRACE, GET, HEAD, POST
 |     Public: OPTIONS, TRACE, GET, HEAD, POST
-|     Date: Fri, 07 Nov 2025 07:16:36 GMT
+|     Date: Tue, 11 Nov 2025 03:22:11 GMT
 |     Connection: close
 |     Content-Length: 0
 |     X-Frame-Options: SAMEORIGIN
 |_    Strict-Transport-Security: max-age=31536000; includeSubDomains
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690D9CD4%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,3D9,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text
-SF:/html\r\nLast-Modified:\x20Wed,\x2001\x20Mar\x202023\x2013:58:34\x20GMT
-SF:\r\nAccept-Ranges:\x20bytes\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2007
-SF::16:36\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x20703\r\nX-Fr
-SF:ame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=315
-SF:36000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//
-SF:W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/x
-SF:html1/DTD/xhtml1-strict\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.org
-SF:/1999/xhtml\">\r\n<head>\r\n<meta\x20http-equiv=\"Content-Type\"\x20con
-SF:tent=\"text/html;\x20charset=iso-8859-1\"\x20/>\r\n<title>IIS\x20Window
-SF:s\x20Server</title>\r\n<style\x20type=\"text/css\">\r\n<!--\r\nbody\x20
-SF:{\r\n\tcolor:#000000;\r\n\tbackground-color:#0072C6;\r\n\tmargin:0;\r\n
-SF:}\r\n\r\n#container\x20{\r\n\tmargin-left:auto;\r\n\tmargin-right:auto;
-SF:\r\n\ttext-align:center;\r\n\t}\r\n\r\na\x20img\x20{\r\n\tborder:none;\
-SF:r\n}\r\n\r\n-->\r\n</style>\r\n</head>\r\n<body>\r\n<div\x20id=\"contai
-SF:ner\">\r\n<a\x20href=\"http://go\.microsoft\.com/fwlink/\?linkid=66138&
-SF:amp;clcid=0x409\"><img\x20s")%r(HTTPOptions,10C,"HTTP/1\.1\x20200\x20OK
-SF:\r\nAllow:\x20OPTIONS,\x20TRACE,\x20GET,\x20HEAD,\x20POST\r\nPublic:\x2
-SF:0OPTIONS,\x20TRACE,\x20GET,\x20HEAD,\x20POST\r\nDate:\x20Fri,\x2007\x20
-SF:Nov\x202025\x2007:16:36\x20GMT\r\nConnection:\x20close\r\nContent-Lengt
-SF:h:\x200\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:
-SF:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n")%r(FourOhFourReques
-SF:t,5BB,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\r
-SF:\nDate:\x20Fri,\x2007\x20Nov\x202025\x2007:16:37\x20GMT\r\nConnection:\
-SF:x20close\r\nContent-Length:\x201245\r\nX-Frame-Options:\x20SAMEORIGIN\r
-SF:\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains\
-SF:r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x2
-SF:0Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd
-SF:\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\r\n<head>\r\n
-SF:<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset
-SF:=iso-8859-1\"/>\r\n<title>404\x20-\x20File\x20or\x20directory\x20not\x2
-SF:0found\.</title>\r\n<style\x20type=\"text/css\">\r\n<!--\r\nbody{margin
-SF::0;font-size:\.7em;font-family:Verdana,\x20Arial,\x20Helvetica,\x20sans
-SF:-serif;background:#EEEEEE;}\r\nfieldset{padding:0\x2015px\x2010px\x2015
-SF:px;}\x20\r\nh1{font-size:2\.4em;margin:0;color:#FFF;}\r\nh2{font-size:1
-SF:\.7em;margin:0;color:#CC0000;}\x20\r\nh3{font-size:1\.2em;margin:10px\x
-SF:200\x200\x200;color:#000000;}\x20\r\n#header{width:96%;margin:0\x200\x2
-SF:00\x200;padding:6px\x202%\x206px\x202%;font-family:\"trebuch");
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=6912ABDD%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=6912ABE3%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,3D9,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20tex
+SF:t/html\r\nLast-Modified:\x20Wed,\x2001\x20Mar\x202023\x2013:58:34\x20GM
+SF:T\r\nAccept-Ranges:\x20bytes\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x200
+SF:3:22:11\x20GMT\r\nConnection:\x20close\r\nContent-Length:\x20703\r\nX-F
+SF:rame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security:\x20max-age=31
+SF:536000;\x20includeSubDomains\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-/
+SF:/W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/
+SF:xhtml1/DTD/xhtml1-strict\.dtd\">\r\n<html\x20xmlns=\"http://www\.w3\.or
+SF:g/1999/xhtml\">\r\n<head>\r\n<meta\x20http-equiv=\"Content-Type\"\x20co
+SF:ntent=\"text/html;\x20charset=iso-8859-1\"\x20/>\r\n<title>IIS\x20Windo
+SF:ws\x20Server</title>\r\n<style\x20type=\"text/css\">\r\n<!--\r\nbody\x2
+SF:0{\r\n\tcolor:#000000;\r\n\tbackground-color:#0072C6;\r\n\tmargin:0;\r\
+SF:n}\r\n\r\n#container\x20{\r\n\tmargin-left:auto;\r\n\tmargin-right:auto
+SF:;\r\n\ttext-align:center;\r\n\t}\r\n\r\na\x20img\x20{\r\n\tborder:none;
+SF:\r\n}\r\n\r\n-->\r\n</style>\r\n</head>\r\n<body>\r\n<div\x20id=\"conta
+SF:iner\">\r\n<a\x20href=\"http://go\.microsoft\.com/fwlink/\?linkid=66138
+SF:&amp;clcid=0x409\"><img\x20s")%r(HTTPOptions,10C,"HTTP/1\.1\x20200\x20O
+SF:K\r\nAllow:\x20OPTIONS,\x20TRACE,\x20GET,\x20HEAD,\x20POST\r\nPublic:\x
+SF:20OPTIONS,\x20TRACE,\x20GET,\x20HEAD,\x20POST\r\nDate:\x20Tue,\x2011\x2
+SF:0Nov\x202025\x2003:22:11\x20GMT\r\nConnection:\x20close\r\nContent-Leng
+SF:th:\x200\r\nX-Frame-Options:\x20SAMEORIGIN\r\nStrict-Transport-Security
+SF::\x20max-age=31536000;\x20includeSubDomains\r\n\r\n")%r(FourOhFourReque
+SF:st,5BB,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html\
+SF:r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2003:22:11\x20GMT\r\nConnection:
+SF:\x20close\r\nContent-Length:\x201245\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains
+SF:\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x
+SF:20Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dt
+SF:d\">\r\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\r\n<head>\r\
+SF:n<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;\x20charse
+SF:t=iso-8859-1\"/>\r\n<title>404\x20-\x20File\x20or\x20directory\x20not\x
+SF:20found\.</title>\r\n<style\x20type=\"text/css\">\r\n<!--\r\nbody{margi
+SF:n:0;font-size:\.7em;font-family:Verdana,\x20Arial,\x20Helvetica,\x20san
+SF:s-serif;background:#EEEEEE;}\r\nfieldset{padding:0\x2015px\x2010px\x201
+SF:5px;}\x20\r\nh1{font-size:2\.4em;margin:0;color:#FFF;}\r\nh2{font-size:
+SF:1\.7em;margin:0;color:#CC0000;}\x20\r\nh3{font-size:1\.2em;margin:10px\
+SF:x200\x200\x200;color:#000000;}\x20\r\n#header{width:96%;margin:0\x200\x
+SF:200\x200;padding:6px\x202%\x206px\x202%;font-family:\"trebuch");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 07:18:56 2025 -- 1 IP address (1 host up) scanned in 161.98 seconds
+# Nmap done at Tue Nov 11 03:24:35 2025 -- 1 IP address (1 host up) scanned in 163.11 seconds
