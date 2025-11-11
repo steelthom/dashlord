@@ -1,12 +1,11 @@
-# Nmap 7.92 scan initiated Fri Nov  7 14:09:50 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln labo.societenumerique.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 07:41:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln labo.societenumerique.gouv.fr
 Nmap scan report for labo.societenumerique.gouv.fr (141.95.193.199)
-Host is up (0.15s latency).
+Host is up (0.11s latency).
 rDNS record for 141.95.193.199: vps-f89fcd70.vps.ovh.net
 Not shown: 996 closed tcp ports (reset)
 PORT     STATE SERVICE  VERSION
 25/tcp   open  smtp     Postfix smtpd
 80/tcp   open  http     nginx 1.18.0 (Ubuntu)
-|_http-server-header: nginx/1.18.0 (Ubuntu)
 | vulners: 
 |   nginx 1.18.0: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -27,8 +26,8 @@ PORT     STATE SERVICE  VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_    	PACKETSTORM:162830	0.0	https://vulners.com/packetstorm/PACKETSTORM:162830	*EXPLOIT*
+|_http-server-header: nginx/1.18.0 (Ubuntu)
 443/tcp  open  ssl/http nginx 1.18.0 (Ubuntu)
-|_http-server-header: nginx/1.18.0 (Ubuntu)
 | vulners: 
 |   nginx 1.18.0: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -49,13 +48,14 @@ PORT     STATE SERVICE  VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_    	PACKETSTORM:162830	0.0	https://vulners.com/packetstorm/PACKETSTORM:162830	*EXPLOIT*
+|_http-server-header: nginx/1.18.0 (Ubuntu)
 3000/tcp open  ppp?
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
 |     Content-Type: text/html;charset=UTF-8
 |     Server-Timing: -;dur=0;desc="Generate"
-|     Date: Fri, 07 Nov 2025 14:10:04 GMT
+|     Date: Tue, 11 Nov 2025 07:42:08 GMT
 |     Connection: close
 |     <!DOCTYPE html>
 |     <html data-head-attrs="">
@@ -65,7 +65,7 @@ PORT     STATE SERVICE  VERSION
 |     HTTP/1.1 200 OK
 |     Content-Type: text/html;charset=UTF-8
 |     Server-Timing: -;dur=0;desc="Generate"
-|     Date: Fri, 07 Nov 2025 14:10:05 GMT
+|     Date: Tue, 11 Nov 2025 07:42:09 GMT
 |     Connection: close
 |     <!DOCTYPE html>
 |     <html data-head-attrs="">
@@ -75,43 +75,43 @@ PORT     STATE SERVICE  VERSION
 |     HTTP/1.1 400 Bad Request
 |_    Connection: close
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port3000-TCP:V=7.92%I=7%D=11/7%Time=690DFDBC%P=x86_64-alpine-linux-musl
-SF:%r(GetRequest,10FB,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/htm
-SF:l;charset=UTF-8\r\nServer-Timing:\x20-;dur=0;desc=\"Generate\"\r\nDate:
-SF:\x20Fri,\x2007\x20Nov\x202025\x2014:10:04\x20GMT\r\nConnection:\x20clos
-SF:e\r\n\r\n<!DOCTYPE\x20html>\n<html\x20\x20data-head-attrs=\"\">\n\n<hea
-SF:d\x20>\n\x20\x20<title></title><meta\x20charset=\"utf-8\"><meta\x20name
-SF:=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\"><me
-SF:ta\x20name=\"head:count\"\x20content=\"2\"><link\x20rel=\"modulepreload
-SF:\"\x20href=\"/_nuxt/entry-20198f8e\.mjs\"\x20as=\"script\"\x20crossorig
-SF:in><link\x20rel=\"preload\"\x20href=\"/_nuxt/entry\.f8fbecd2\.css\"\x20
-SF:as=\"style\"><link\x20rel=\"modulepreload\"\x20href=\"/_nuxt/default-88
-SF:52e1af\.mjs\"\x20as=\"script\"\x20crossorigin><link\x20rel=\"moduleprel
-SF:oad\"\x20href=\"/_nuxt/index-9808a8c6\.mjs\"\x20as=\"script\"\x20crosso
-SF:rigin><link\x20rel=\"prefetch\"\x20as=\"script\"\x20href=\"/_nuxt/reche
-SF:rche-ffc11cf0\.mjs\"><link\x20rel=\"prefetch\"\x20as=\"script\"\x20href
-SF:=\"/_nuxt/algoliasearch-lite\.esm\.browser-6c7e984e\.mjs\"><link\x20rel
-SF:=\"prefetch\"\x20as=\"script\"\x20href=\"/_nuxt/algoliasearch\.esm\.bro
-SF:wser-f77")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:
-SF:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCon
-SF:nection:\x20close\r\n\r\n")%r(HTTPOptions,10FB,"HTTP/1\.1\x20200\x20OK\
-SF:r\nContent-Type:\x20text/html;charset=UTF-8\r\nServer-Timing:\x20-;dur=
-SF:0;desc=\"Generate\"\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:10:05\x
-SF:20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20\x20d
-SF:ata-head-attrs=\"\">\n\n<head\x20>\n\x20\x20<title></title><meta\x20cha
-SF:rset=\"utf-8\"><meta\x20name=\"viewport\"\x20content=\"width=device-wid
-SF:th,\x20initial-scale=1\"><meta\x20name=\"head:count\"\x20content=\"2\">
-SF:<link\x20rel=\"modulepreload\"\x20href=\"/_nuxt/entry-20198f8e\.mjs\"\x
-SF:20as=\"script\"\x20crossorigin><link\x20rel=\"preload\"\x20href=\"/_nux
-SF:t/entry\.f8fbecd2\.css\"\x20as=\"style\"><link\x20rel=\"modulepreload\"
-SF:\x20href=\"/_nuxt/default-8852e1af\.mjs\"\x20as=\"script\"\x20crossorig
-SF:in><link\x20rel=\"modulepreload\"\x20href=\"/_nuxt/index-9808a8c6\.mjs\
-SF:"\x20as=\"script\"\x20crossorigin><link\x20rel=\"prefetch\"\x20as=\"scr
-SF:ipt\"\x20href=\"/_nuxt/recherche-ffc11cf0\.mjs\"><link\x20rel=\"prefetc
-SF:h\"\x20as=\"script\"\x20href=\"/_nuxt/algoliasearch-lite\.esm\.browser-
-SF:6c7e984e\.mjs\"><link\x20rel=\"prefetch\"\x20as=\"script\"\x20href=\"/_
-SF:nuxt/algoliasearch\.esm\.browser-f77");
+SF-Port3000-TCP:V=7.92%I=7%D=11/11%Time=6912E8D0%P=x86_64-alpine-linux-mus
+SF:l%r(GetRequest,10FB,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/ht
+SF:ml;charset=UTF-8\r\nServer-Timing:\x20-;dur=0;desc=\"Generate\"\r\nDate
+SF::\x20Tue,\x2011\x20Nov\x202025\x2007:42:08\x20GMT\r\nConnection:\x20clo
+SF:se\r\n\r\n<!DOCTYPE\x20html>\n<html\x20\x20data-head-attrs=\"\">\n\n<he
+SF:ad\x20>\n\x20\x20<title></title><meta\x20charset=\"utf-8\"><meta\x20nam
+SF:e=\"viewport\"\x20content=\"width=device-width,\x20initial-scale=1\"><m
+SF:eta\x20name=\"head:count\"\x20content=\"2\"><link\x20rel=\"modulepreloa
+SF:d\"\x20href=\"/_nuxt/entry-20198f8e\.mjs\"\x20as=\"script\"\x20crossori
+SF:gin><link\x20rel=\"preload\"\x20href=\"/_nuxt/entry\.f8fbecd2\.css\"\x2
+SF:0as=\"style\"><link\x20rel=\"modulepreload\"\x20href=\"/_nuxt/default-8
+SF:852e1af\.mjs\"\x20as=\"script\"\x20crossorigin><link\x20rel=\"modulepre
+SF:load\"\x20href=\"/_nuxt/index-9808a8c6\.mjs\"\x20as=\"script\"\x20cross
+SF:origin><link\x20rel=\"prefetch\"\x20as=\"script\"\x20href=\"/_nuxt/rech
+SF:erche-ffc11cf0\.mjs\"><link\x20rel=\"prefetch\"\x20as=\"script\"\x20hre
+SF:f=\"/_nuxt/algoliasearch-lite\.esm\.browser-6c7e984e\.mjs\"><link\x20re
+SF:l=\"prefetch\"\x20as=\"script\"\x20href=\"/_nuxt/algoliasearch\.esm\.br
+SF:owser-f77")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection
+SF::\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:nnection:\x20close\r\n\r\n")%r(HTTPOptions,10FB,"HTTP/1\.1\x20200\x20OK
+SF:\r\nContent-Type:\x20text/html;charset=UTF-8\r\nServer-Timing:\x20-;dur
+SF:=0;desc=\"Generate\"\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2007:42:09\
+SF:x20GMT\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20\x20
+SF:data-head-attrs=\"\">\n\n<head\x20>\n\x20\x20<title></title><meta\x20ch
+SF:arset=\"utf-8\"><meta\x20name=\"viewport\"\x20content=\"width=device-wi
+SF:dth,\x20initial-scale=1\"><meta\x20name=\"head:count\"\x20content=\"2\"
+SF:><link\x20rel=\"modulepreload\"\x20href=\"/_nuxt/entry-20198f8e\.mjs\"\
+SF:x20as=\"script\"\x20crossorigin><link\x20rel=\"preload\"\x20href=\"/_nu
+SF:xt/entry\.f8fbecd2\.css\"\x20as=\"style\"><link\x20rel=\"modulepreload\
+SF:"\x20href=\"/_nuxt/default-8852e1af\.mjs\"\x20as=\"script\"\x20crossori
+SF:gin><link\x20rel=\"modulepreload\"\x20href=\"/_nuxt/index-9808a8c6\.mjs
+SF:\"\x20as=\"script\"\x20crossorigin><link\x20rel=\"prefetch\"\x20as=\"sc
+SF:ript\"\x20href=\"/_nuxt/recherche-ffc11cf0\.mjs\"><link\x20rel=\"prefet
+SF:ch\"\x20as=\"script\"\x20href=\"/_nuxt/algoliasearch-lite\.esm\.browser
+SF:-6c7e984e\.mjs\"><link\x20rel=\"prefetch\"\x20as=\"script\"\x20href=\"/
+SF:_nuxt/algoliasearch\.esm\.browser-f77");
 Service Info: Host:  vps-f89fcd70.vps.ovh.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 14:10:15 2025 -- 1 IP address (1 host up) scanned in 25.87 seconds
+# Nmap done at Tue Nov 11 07:42:16 2025 -- 1 IP address (1 host up) scanned in 21.74 seconds
