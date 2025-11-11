@@ -21,8 +21,11 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on runnervmw9dnm:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-11-07 19:05:04        --&gt;&gt; 176.162.143.84:443 (itsap.asso.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-11-11 14:35:05        --&gt;&gt; 176.162.143.84:443 (itsap.asso.fr) &lt;&lt;--</span>
 
  rDNS (176.162.143.84):  static-css-csd-143084.business.bouyguestelecom.com.
-
-<span style="font-weight:bold;"> 176.162.143.84:443 </span><span style="font-weight:bold;">doesn&apos;t seem to be a TLS/SSL enabled server</span>
+<span style="color:#cd00cd;">This shouldn&apos;t happen (pls report): Testing itsap.asso.fr:443 only succeeded using /home/testssl/bin/openssl.Linux.x86_64.</span>
+<span style="color:#cd00cd;">But testssl.sh also needs bash sockets to perform its checks correctly.
+</span>
+You can try to continue using the --ssl-native option but the results are likely not complete.
+Or you can restart using --ssl-native with another openssl version (--openssl &lt;PATH&gt;).
