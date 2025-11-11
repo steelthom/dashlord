@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cng.sante.fr</pre>
-<p class="lead">Fri Nov  7 07:25:18 2025 – Fri Nov  7 07:26:07 2025<br>1 hosts scanned.
+<p class="lead">Tue Nov 11 03:05:10 2025 – Tue Nov 11 03:05:51 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -199,68 +199,96 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">https-alt</td>
-<td title="Product">Apache/2.4.62 (Debian)</td>
+<td title="Product">Varnish</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Varnish</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
-    HTTP/1.1 400 Bad Request
-    date: Fri, 07 Nov 2025 07:25:41 GMT
-    server: Apache/2.4.62 (Debian)
-    x-powered-by: PHP/8.3.14
-    cache-control: no-cache, private
-    content-type: text/plain; charset=UTF-8
-    x-varnish: 78512606
+    HTTP/1.1 503 Backend fetch failed
+    date: Tue, 11 Nov 2025 03:05:31 GMT
+    server: Varnish
+    content-type: text/html; charset=utf-8
+    retry-after: 5
+    x-varnish: 103355489
     age: 0
     x-cache-status: MISS
     x-cache-hits: 0
-    content-length: 52
-    set-cookie: webfarm=CNG-PROD-SWI-VAR02; path=/
-    connection: close
-    provided host name is not valid for this server.
-  GetRequest: 
-    HTTP/1.1 400 Bad Request
-    date: Fri, 07 Nov 2025 07:25:40 GMT
-    server: Apache/2.4.62 (Debian)
-    x-powered-by: PHP/8.3.14
-    cache-control: no-cache, private
-    content-type: text/plain; charset=UTF-8
-    x-varnish: 72170437
-    age: 0
-    x-cache-status: MISS
-    x-cache-hits: 0
-    set-cookie: webfarm=CNG-PROD-SWI-VAR02; path=/
-    connection: close
-    provided host name is not valid for this server.
-  HTTPOptions: 
-    HTTP/1.1 400 Bad Request
-    date: Fri, 07 Nov 2025 07:25:41 GMT
-    server: Apache/2.4.62 (Debian)
-    x-powered-by: PHP/8.3.14
-    cache-control: no-cache, private
-    content-type: text/plain; charset=UTF-8
-    x-varnish: 94711983
-    age: 0
-    x-cache-status: MISS
-    x-cache-hits: 0
-    content-length: 52
+    content-length: 286
     set-cookie: webfarm=CNG-PROD-SWI-VAR01; path=/
     connection: close
-    provided host name is not valid for this server.
-  RPCCheck, RTSPRequest: 
-    HTTP/1.1 400 Bad request
-    Content-length: 90
-    Cache-Control: no-cache
-    Connection: close
-    Content-Type: text/html
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
-    Your browser sent an invalid request.
-    &lt;/body&gt;&lt;/html&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache/2.4.62 (Debian)</pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;503 Backend fetch failed&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Error 503 Backend fetch failed&lt;/h1&gt;
+    &lt;p&gt;Backend fetch failed&lt;/p&gt;
+    &lt;h3&gt;Guru Meditation:&lt;/h3&gt;
+    &lt;p&gt;XID: 103355490&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Varnish cache server&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  GetRequest: 
+    HTTP/1.1 503 Backend fetch failed
+    date: Tue, 11 Nov 2025 03:05:30 GMT
+    server: Varnish
+    content-type: text/html; charset=utf-8
+    retry-after: 5
+    x-varnish: 104631564
+    age: 0
+    x-cache-status: MISS
+    x-cache-hits: 0
+    content-length: 286
+    set-cookie: webfarm=CNG-PROD-SWI-VAR01; path=/
+    connection: close
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;503 Backend fetch failed&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Error 503 Backend fetch failed&lt;/h1&gt;
+    &lt;p&gt;Backend fetch failed&lt;/p&gt;
+    &lt;h3&gt;Guru Meditation:&lt;/h3&gt;
+    &lt;p&gt;XID: 104631565&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Varnish cache server&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 503 Backend fetch failed
+    date: Tue, 11 Nov 2025 03:05:31 GMT
+    server: Varnish
+    content-type: text/html; charset=utf-8
+    retry-after: 5
+    x-varnish: 83531790
+    age: 0
+    x-cache-status: MISS
+    x-cache-hits: 0
+    content-length: 285
+    set-cookie: webfarm=CNG-PROD-SWI-VAR02; path=/
+    connection: close
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;503 Backend fetch failed&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Error 503 Backend fetch failed&lt;/h1&gt;
+    &lt;p&gt;Backend fetch failed&lt;/p&gt;
+    &lt;h3&gt;Guru Meditation:&lt;/h3&gt;
+    &lt;p&gt;XID: 83531791&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Varnish cache server&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -314,7 +342,7 @@
 <td>8443</td>
 <td>tcp</td>
 <td>https-alt</td>
-<td>Apache/2.4.62 (Debian)</td>
+<td>Varnish</td>
 <td></td>
 <td></td>
 <td></td>
