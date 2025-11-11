@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 13:55:30 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln iedom.fr
+# Nmap 7.92 scan initiated Tue Nov 11 07:49:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln iedom.fr
 Nmap scan report for iedom.fr (195.60.188.95)
-Host is up (0.14s latency).
+Host is up (0.15s latency).
 rDNS record for 195.60.188.95: iedom.web.reagi.com
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
@@ -29,7 +29,7 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Fri, 07 Nov 2025 13:55:55 GMT
+|     date: Tue, 11 Nov 2025 07:49:26 GMT
 |     x-server-id: 1906
 |     content-length: 196
 |     keep-alive: timeout=1, max=100
@@ -42,9 +42,31 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Not Found</h1>
 |     <p>The requested URL was not found on this server.</p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 503 Service Unavailable
-|     date: Fri, 07 Nov 2025 13:55:54 GMT
+|     date: Tue, 11 Nov 2025 07:49:24 GMT
+|     x-server-id: 1906
+|     last-modified: Fri, 13 Dec 2019 10:37:08 GMT
+|     accept-ranges: bytes
+|     content-length: 385
+|     content-type: text/html
+|     connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta name="robots" content="noindex" />
+|     <title>Bienvenue sur nos serveurs</title>
+|     <style type="text/css">
+|     body { background: url("./logo.png") no-repeat fixed center #000000; }
+|     </style>
+|     </head>
+|     <body>
+|     <div>&nbsp;</div>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 503 Service Unavailable
+|     date: Tue, 11 Nov 2025 07:49:25 GMT
 |     x-server-id: 1906
 |     last-modified: Fri, 13 Dec 2019 10:37:08 GMT
 |     accept-ranges: bytes
@@ -66,71 +88,71 @@ PORT    STATE SERVICE   VERSION
 |_    </html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690DFA63%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-len
-SF:gth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=6912EA7E%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-le
 SF:ngth:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")%
-SF:r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
-SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
-SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
-SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
-SF:")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:
-SF:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent
-SF:-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\n
-SF:Your\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n
-SF:")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\n
-SF:content-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eity
-SF:\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\
-SF:x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20
-SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<
-SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
-SF:n\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,CF
-SF:,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-
-SF:Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/h
-SF:tml\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\
-SF:x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusRe
-SF:questTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x209
-SF:0\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type
-SF::\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\
-SF:x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(
-SF:Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\
-SF:nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x2
-SF:0text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20b
-SF:rowser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+SF:r(HTTPOptions,5D,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\ncontent-l
+SF:ength:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")
+SF:%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length
+SF::\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nConten
+SF:t-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\
+SF:nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\
+SF:n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length
+SF::\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nConten
+SF:t-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\
+SF:nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\
+SF:n")%r(FourOhFourRequest,80,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\
+SF:ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6Eit
+SF:y\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1
+SF:\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x2
+SF:0no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n
+SF:<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20
+SF:an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP,C
+SF:F,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache
+SF:-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/
+SF:html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser
+SF:\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatusR
+SF:equestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x20
+SF:90\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Typ
+SF:e:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour
+SF:\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r
+SF:(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nContent-length:\x2090\r
+SF:\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-Type:\x
+SF:20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20
+SF:browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690DFA6A%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,262,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\nd
-SF:ate:\x20Fri,\x2007\x20Nov\x202025\x2013:55:54\x20GMT\r\nx-server-id:\x2
-SF:01906\r\nlast-modified:\x20Fri,\x2013\x20Dec\x202019\x2010:37:08\x20GMT
-SF:\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20385\r\ncontent-type:\
-SF:x20text/html\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC
-SF:\x20\"-//W3C//DTD\x20XHTML\x201\.1//EN\"\x20\"http://www\.w3\.org/TR/xh
-SF:tml11/DTD/xhtml11\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xh
-SF:tml\">\n<head>\n<meta\x20name=\"robots\"\x20content=\"noindex\"\x20/>\n
-SF:<title>Bienvenue\x20sur\x20nos\x20serveurs</title>\n<style\x20type=\"te
-SF:xt/css\">\nbody\x20{\x20background:\x20url\(\"\./logo\.png\"\)\x20no-re
-SF:peat\x20fixed\x20center\x20#000000;\x20}\n</style>\n</head>\n<body>\n<d
-SF:iv>&nbsp;</div>\n</body>\n</html>\n")%r(HTTPOptions,262,"HTTP/1\.1\x205
-SF:03\x20Service\x20Unavailable\r\ndate:\x20Fri,\x2007\x20Nov\x202025\x201
-SF:3:55:54\x20GMT\r\nx-server-id:\x201906\r\nlast-modified:\x20Fri,\x2013\
-SF:x20Dec\x202019\x2010:37:08\x20GMT\r\naccept-ranges:\x20bytes\r\ncontent
-SF:-length:\x20385\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r
-SF:\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.1//EN
-SF:\"\x20\"http://www\.w3\.org/TR/xhtml11/DTD/xhtml11\.dtd\">\n<html\x20xm
-SF:lns=\"http://www\.w3\.org/1999/xhtml\">\n<head>\n<meta\x20name=\"robots
-SF:\"\x20content=\"noindex\"\x20/>\n<title>Bienvenue\x20sur\x20nos\x20serv
-SF:eurs</title>\n<style\x20type=\"text/css\">\nbody\x20{\x20background:\x2
-SF:0url\(\"\./logo\.png\"\)\x20no-repeat\x20fixed\x20center\x20#000000;\x2
-SF:0}\n</style>\n</head>\n<body>\n<div>&nbsp;</div>\n</body>\n</html>\n")%
-SF:r(FourOhFourRequest,18B,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20F
-SF:ri,\x2007\x20Nov\x202025\x2013:55:55\x20GMT\r\nx-server-id:\x201906\r\n
-SF:content-length:\x20196\r\nkeep-alive:\x20timeout=1,\x20max=100\r\nconte
-SF:nt-type:\x20text/html;\x20charset=iso-8859-1\r\nconnection:\x20close\r\
-SF:n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\
-SF:">\n<html><head>\n<title>404\x20Not\x20Found</title>\n</head><body>\n<h
-SF:1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\
-SF:x20on\x20this\x20server\.</p>\n</body></html>\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=6912EA85%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,262,"HTTP/1\.1\x20503\x20Service\x20Unavailable\r\n
+SF:date:\x20Tue,\x2011\x20Nov\x202025\x2007:49:24\x20GMT\r\nx-server-id:\x
+SF:201906\r\nlast-modified:\x20Fri,\x2013\x20Dec\x202019\x2010:37:08\x20GM
+SF:T\r\naccept-ranges:\x20bytes\r\ncontent-length:\x20385\r\ncontent-type:
+SF:\x20text/html\r\nconnection:\x20close\r\n\r\n<!DOCTYPE\x20html\x20PUBLI
+SF:C\x20\"-//W3C//DTD\x20XHTML\x201\.1//EN\"\x20\"http://www\.w3\.org/TR/x
+SF:html11/DTD/xhtml11\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/x
+SF:html\">\n<head>\n<meta\x20name=\"robots\"\x20content=\"noindex\"\x20/>\
+SF:n<title>Bienvenue\x20sur\x20nos\x20serveurs</title>\n<style\x20type=\"t
+SF:ext/css\">\nbody\x20{\x20background:\x20url\(\"\./logo\.png\"\)\x20no-r
+SF:epeat\x20fixed\x20center\x20#000000;\x20}\n</style>\n</head>\n<body>\n<
+SF:div>&nbsp;</div>\n</body>\n</html>\n")%r(HTTPOptions,262,"HTTP/1\.1\x20
+SF:503\x20Service\x20Unavailable\r\ndate:\x20Tue,\x2011\x20Nov\x202025\x20
+SF:07:49:25\x20GMT\r\nx-server-id:\x201906\r\nlast-modified:\x20Fri,\x2013
+SF:\x20Dec\x202019\x2010:37:08\x20GMT\r\naccept-ranges:\x20bytes\r\nconten
+SF:t-length:\x20385\r\ncontent-type:\x20text/html\r\nconnection:\x20close\
+SF:r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.1//E
+SF:N\"\x20\"http://www\.w3\.org/TR/xhtml11/DTD/xhtml11\.dtd\">\n<html\x20x
+SF:mlns=\"http://www\.w3\.org/1999/xhtml\">\n<head>\n<meta\x20name=\"robot
+SF:s\"\x20content=\"noindex\"\x20/>\n<title>Bienvenue\x20sur\x20nos\x20ser
+SF:veurs</title>\n<style\x20type=\"text/css\">\nbody\x20{\x20background:\x
+SF:20url\(\"\./logo\.png\"\)\x20no-repeat\x20fixed\x20center\x20#000000;\x
+SF:20}\n</style>\n</head>\n<body>\n<div>&nbsp;</div>\n</body>\n</html>\n")
+SF:%r(FourOhFourRequest,18B,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20
+SF:Tue,\x2011\x20Nov\x202025\x2007:49:26\x20GMT\r\nx-server-id:\x201906\r\
+SF:ncontent-length:\x20196\r\nkeep-alive:\x20timeout=1,\x20max=100\r\ncont
+SF:ent-type:\x20text/html;\x20charset=iso-8859-1\r\nconnection:\x20close\r
+SF:\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN
+SF:\">\n<html><head>\n<title>404\x20Not\x20Found</title>\n</head><body>\n<
+SF:h1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found
+SF:\x20on\x20this\x20server\.</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 13:56:16 2025 -- 1 IP address (1 host up) scanned in 46.44 seconds
+# Nmap done at Tue Nov 11 07:49:48 2025 -- 1 IP address (1 host up) scanned in 47.57 seconds
