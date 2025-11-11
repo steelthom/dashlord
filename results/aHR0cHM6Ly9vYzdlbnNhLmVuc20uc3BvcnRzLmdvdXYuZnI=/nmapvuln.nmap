@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Fri Nov  7 20:39:43 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln oc7ensa.ensm.sports.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 14:10:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln oc7ensa.ensm.sports.gouv.fr
 Nmap scan report for oc7ensa.ensm.sports.gouv.fr (91.121.60.176)
 Host is up (0.13s latency).
 rDNS record for 91.121.60.176: zensa.ensm.org
@@ -76,6 +76,7 @@ PORT     STATE SERVICE    VERSION
 |     	CNVD-2023-30860	9.0	https://vulners.com/cnvd/CNVD-2023-30860
 |     	CNVD-2022-03224	9.0	https://vulners.com/cnvd/CNVD-2022-03224
 |     	AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	9.0	https://vulners.com/githubexploit/AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	*EXPLOIT*
+|     	9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	9.0	https://vulners.com/githubexploit/9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	*EXPLOIT*
 |     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	9.0	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
 |     	7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	9.0	https://vulners.com/githubexploit/7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	*EXPLOIT*
 |     	36618CA8-9316-59CA-B748-82F15F407C4F	9.0	https://vulners.com/githubexploit/36618CA8-9316-59CA-B748-82F15F407C4F	*EXPLOIT*
@@ -247,40 +248,40 @@ PORT     STATE SERVICE    VERSION
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     capabilities: 
+|     xmpp: 
+|       version: 1.0
+|     auth_mechanisms: 
 |     unknown: 
+|     features: 
+|     compression_methods: 
+|     capabilities: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve oc7ensa.ensm.sports.gouv.fr
 |       stream:stream
-|       (timeout)
-|     auth_mechanisms: 
-|     xmpp: 
-|       version: 1.0
-|_    compression_methods: 
+|_      (timeout)
 5269/tcp open  jabber     Prosody Jabber server (dialback)
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     features: 
-|     capabilities: 
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     stream_id: e13028ff-bf0c-40b7-a61a-843dbade0924
+|     auth_mechanisms: 
 |     unknown: 
+|     features: 
+|     compression_methods: 
+|     capabilities: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve oc7ensa.ensm.sports.gouv.fr
 |       stream:stream
-|       (timeout)
-|     auth_mechanisms: 
-|     xmpp: 
-|       lang: en
-|       version: 1.0
-|     compression_methods: 
-|_    stream_id: 3eae12b5-d171-40b6-94ac-a0a64303455e
+|_      (timeout)
 5280/tcp open  http       Prosody XMPP BOSH httpd
 Service Info: Host:  www.ensastage.net; Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 20:40:05 2025 -- 1 IP address (1 host up) scanned in 21.88 seconds
+# Nmap done at Tue Nov 11 14:10:38 2025 -- 1 IP address (1 host up) scanned in 24.67 seconds
