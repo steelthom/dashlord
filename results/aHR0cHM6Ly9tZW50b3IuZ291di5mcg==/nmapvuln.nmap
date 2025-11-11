@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 20:30:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mentor.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 13:57:44 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mentor.gouv.fr
 Nmap scan report for mentor.gouv.fr (145.242.17.5)
-Host is up (0.081s latency).
+Host is up (0.14s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -32,7 +32,7 @@ PORT    STATE  SERVICE   VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 303 See Other
-|     date: Fri, 07 Nov 2025 20:31:10 GMT
+|     date: Tue, 11 Nov 2025 13:58:07 GMT
 |     server: Apache
 |     x-redirect-by: Moodle
 |     location: https://mentor.gouv.fr
@@ -40,7 +40,7 @@ PORT    STATE  SERVICE   VERSION
 |     content-length: 1510
 |     content-type: text/html; charset=UTF-8
 |     set-cookie: MOODLESERVER=az1-prod-back-moodle-v2-1; path=/; HttpOnly; Secure
-|     x-varnish: 358318453
+|     x-varnish: 154601234
 |     age: 0
 |     via: 1.1 varnish (Varnish/6.6)
 |     strict-transport-security: max-age=16000000; includeSubDomains; preload;
@@ -59,7 +59,7 @@ PORT    STATE  SERVICE   VERSION
 |     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji",
 |   HTTPOptions: 
 |     HTTP/1.1 303 See Other
-|     date: Fri, 07 Nov 2025 20:31:10 GMT
+|     date: Tue, 11 Nov 2025 13:58:08 GMT
 |     server: Apache
 |     x-redirect-by: Moodle
 |     location: https://mentor.gouv.fr
@@ -67,7 +67,7 @@ PORT    STATE  SERVICE   VERSION
 |     content-length: 1510
 |     content-type: text/html; charset=UTF-8
 |     set-cookie: MOODLESERVER=az1-prod-back-moodle-v2-0; path=/; HttpOnly; Secure
-|     x-varnish: 356290629
+|     x-varnish: 149394682
 |     age: 0
 |     via: 1.1 varnish (Varnish/6.6)
 |     strict-transport-security: max-age=16000000; includeSubDomains; preload;
@@ -86,77 +86,77 @@ PORT    STATE  SERVICE   VERSION
 |_    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji",
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690E5708%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nlo
-SF:cation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20cl
-SF:ose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-le
-SF:ngth:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\nc
-SF:onnection:\x20close\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Bad
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=691340E9%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nl
+SF:ocation:\x20https:///\r\ncache-control:\x20no-cache\r\nconnection:\x20c
+SF:lose\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.1\x20302\x20Found\r\ncontent-l
+SF:ength:\x200\r\nlocation:\x20https:///\r\ncache-control:\x20no-cache\r\n
+SF:connection:\x20close\r\n\r\n")%r(RTSPRequest,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n")%r(FourOhFourRequest,8D,"HTTP/1\.1\x20
+SF:302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///nice%20po
+SF:rts%2C/Tri%6Eity\.txt%2ebak\r\ncache-control:\x20no-cache\r\nconnection
+SF::\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\
+SF:r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x
+SF:20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad
+SF:\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.
+SF:\n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad
 SF:\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nC
 SF:onnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h
 SF:1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\
-SF:x20request\.\n</body></html>\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad
-SF:\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nC
-SF:onnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h
-SF:1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\
-SF:x20request\.\n</body></html>\n")%r(FourOhFourRequest,8D,"HTTP/1\.1\x203
-SF:02\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///nice%20por
-SF:ts%2C/Tri%6Eity\.txt%2ebak\r\ncache-control:\x20no-cache\r\nconnection:
-SF:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r
-SF:\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nConnection:\x2
-SF:0close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\
-SF:x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\
-SF:n</body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\
-SF:x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cache\r\nCo
-SF:nnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><body><h1
-SF:>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x
-SF:20request\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20
-SF:400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-
-SF:cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<htm
-SF:l><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x
-SF:20invalid\x20request\.\n</body></html>\n")%r(Help,CF,"HTTP/1\.1\x20400\
-SF:x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cach
-SF:e\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><b
-SF:ody><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20in
-SF:valid\x20request\.\n</body></html>\n");
+SF:x20request\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no
+SF:-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<ht
+SF:ml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\
+SF:x20invalid\x20request\.\n</body></html>\n")%r(Help,CF,"HTTP/1\.1\x20400
+SF:\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-cac
+SF:he\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html><
+SF:body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20i
+SF:nvalid\x20request\.\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690E570E%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,80A,"HTTP/1\.1\x20303\x20See\x20Other\r\ndate:\x20Fr
-SF:i,\x2007\x20Nov\x202025\x2020:31:10\x20GMT\r\nserver:\x20Apache\r\nx-re
-SF:direct-by:\x20Moodle\r\nlocation:\x20https://mentor\.gouv\.fr\r\nconten
-SF:t-language:\x20fr\r\ncontent-length:\x201510\r\ncontent-type:\x20text/h
-SF:tml;\x20charset=UTF-8\r\nset-cookie:\x20MOODLESERVER=az1-prod-back-mood
-SF:le-v2-1;\x20path=/;\x20HttpOnly;\x20Secure\r\nx-varnish:\x20358318453\r
-SF:\nage:\x200\r\nvia:\x201\.1\x20varnish\x20\(Varnish/6\.6\)\r\nstrict-tr
-SF:ansport-security:\x20max-age=16000000;\x20includeSubDomains;\x20preload
-SF:;\r\nx-content-type-options:\x20nosniff\r\nx-xss-protection:\x201;\x20m
-SF:ode=block\r\nx-frame-options:\x20SAMEORIGIN\r\nconnection:\x20close\r\n
-SF:\r\n<!DOCTYPE\x20html>\n<html\x20\x20lang=\"fr\"\x20xml:lang=\"fr\">\n\
-SF:x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-eq
-SF:uiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n
-SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<title>
-SF:Redirection</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<style>\nbody\x20{
-SF:\n\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20font-family:\x20-apple
-SF:-system,BlinkMacSystemFont,\"Segoe\x20UI\",Roboto,\"Helvetica\x20Neue\"
-SF:,Arial,\"Noto\x20Sans\",sans-serif,\"Apple\x20Color\x20Emoji\",")%r(HTT
-SF:POptions,80A,"HTTP/1\.1\x20303\x20See\x20Other\r\ndate:\x20Fri,\x2007\x
-SF:20Nov\x202025\x2020:31:10\x20GMT\r\nserver:\x20Apache\r\nx-redirect-by:
-SF:\x20Moodle\r\nlocation:\x20https://mentor\.gouv\.fr\r\ncontent-language
-SF::\x20fr\r\ncontent-length:\x201510\r\ncontent-type:\x20text/html;\x20ch
-SF:arset=UTF-8\r\nset-cookie:\x20MOODLESERVER=az1-prod-back-moodle-v2-0;\x
-SF:20path=/;\x20HttpOnly;\x20Secure\r\nx-varnish:\x20356290629\r\nage:\x20
-SF:0\r\nvia:\x201\.1\x20varnish\x20\(Varnish/6\.6\)\r\nstrict-transport-se
-SF:curity:\x20max-age=16000000;\x20includeSubDomains;\x20preload;\r\nx-con
-SF:tent-type-options:\x20nosniff\r\nx-xss-protection:\x201;\x20mode=block\
-SF:r\nx-frame-options:\x20SAMEORIGIN\r\nconnection:\x20close\r\n\r\n<!DOCT
-SF:YPE\x20html>\n<html\x20\x20lang=\"fr\"\x20xml:lang=\"fr\">\n\x20\x20\x2
-SF:0\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"Cont
-SF:ent-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n\x20\x20\x
-SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<title>Redirectio
-SF:n</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<style>\nbody\x20{\n\x20\x20
-SF:\x20\x20margin:\x200;\n\x20\x20\x20\x20font-family:\x20-apple-system,Bl
-SF:inkMacSystemFont,\"Segoe\x20UI\",Roboto,\"Helvetica\x20Neue\",Arial,\"N
-SF:oto\x20Sans\",sans-serif,\"Apple\x20Color\x20Emoji\",");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=691340EF%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,80A,"HTTP/1\.1\x20303\x20See\x20Other\r\ndate:\x20T
+SF:ue,\x2011\x20Nov\x202025\x2013:58:07\x20GMT\r\nserver:\x20Apache\r\nx-r
+SF:edirect-by:\x20Moodle\r\nlocation:\x20https://mentor\.gouv\.fr\r\nconte
+SF:nt-language:\x20fr\r\ncontent-length:\x201510\r\ncontent-type:\x20text/
+SF:html;\x20charset=UTF-8\r\nset-cookie:\x20MOODLESERVER=az1-prod-back-moo
+SF:dle-v2-1;\x20path=/;\x20HttpOnly;\x20Secure\r\nx-varnish:\x20154601234\
+SF:r\nage:\x200\r\nvia:\x201\.1\x20varnish\x20\(Varnish/6\.6\)\r\nstrict-t
+SF:ransport-security:\x20max-age=16000000;\x20includeSubDomains;\x20preloa
+SF:d;\r\nx-content-type-options:\x20nosniff\r\nx-xss-protection:\x201;\x20
+SF:mode=block\r\nx-frame-options:\x20SAMEORIGIN\r\nconnection:\x20close\r\
+SF:n\r\n<!DOCTYPE\x20html>\n<html\x20\x20lang=\"fr\"\x20xml:lang=\"fr\">\n
+SF:\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-e
+SF:quiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<title
+SF:>Redirection</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<style>\nbody\x20
+SF:{\n\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20font-family:\x20-appl
+SF:e-system,BlinkMacSystemFont,\"Segoe\x20UI\",Roboto,\"Helvetica\x20Neue\
+SF:",Arial,\"Noto\x20Sans\",sans-serif,\"Apple\x20Color\x20Emoji\",")%r(HT
+SF:TPOptions,80A,"HTTP/1\.1\x20303\x20See\x20Other\r\ndate:\x20Tue,\x2011\
+SF:x20Nov\x202025\x2013:58:08\x20GMT\r\nserver:\x20Apache\r\nx-redirect-by
+SF::\x20Moodle\r\nlocation:\x20https://mentor\.gouv\.fr\r\ncontent-languag
+SF:e:\x20fr\r\ncontent-length:\x201510\r\ncontent-type:\x20text/html;\x20c
+SF:harset=UTF-8\r\nset-cookie:\x20MOODLESERVER=az1-prod-back-moodle-v2-0;\
+SF:x20path=/;\x20HttpOnly;\x20Secure\r\nx-varnish:\x20149394682\r\nage:\x2
+SF:00\r\nvia:\x201\.1\x20varnish\x20\(Varnish/6\.6\)\r\nstrict-transport-s
+SF:ecurity:\x20max-age=16000000;\x20includeSubDomains;\x20preload;\r\nx-co
+SF:ntent-type-options:\x20nosniff\r\nx-xss-protection:\x201;\x20mode=block
+SF:\r\nx-frame-options:\x20SAMEORIGIN\r\nconnection:\x20close\r\n\r\n<!DOC
+SF:TYPE\x20html>\n<html\x20\x20lang=\"fr\"\x20xml:lang=\"fr\">\n\x20\x20\x
+SF:20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"Con
+SF:tent-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<title>Redirecti
+SF:on</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<style>\nbody\x20{\n\x20\x2
+SF:0\x20\x20margin:\x200;\n\x20\x20\x20\x20font-family:\x20-apple-system,B
+SF:linkMacSystemFont,\"Segoe\x20UI\",Roboto,\"Helvetica\x20Neue\",Arial,\"
+SF:Noto\x20Sans\",sans-serif,\"Apple\x20Color\x20Emoji\",");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 20:31:25 2025 -- 1 IP address (1 host up) scanned in 34.70 seconds
+# Nmap done at Tue Nov 11 13:58:30 2025 -- 1 IP address (1 host up) scanned in 45.35 seconds
