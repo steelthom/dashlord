@@ -436,8 +436,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "60 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (57)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -450,7 +450,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2026-01-07 23:59"
           }
 ,         {
@@ -583,22 +583,22 @@
               "id"           : "HTTP_status_code",
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "Unexpected 202 Accepted @ '/'"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762568233"
+              "finding"      : "1762888001"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -675,7 +675,7 @@
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no-referrer"
+              "finding"      : "origin-when-cross-origin"
           }
 ,         {
               "id"           : "Cache-Control",
@@ -758,10 +758,10 @@
               "id"           : "BREACH",
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1189,6 +1189,6 @@
               "ip"           : "monservicesecurise.cyber.gouv.fr/185.231.164.99",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "88"
+              "finding"      : "74"
           }
 ]
