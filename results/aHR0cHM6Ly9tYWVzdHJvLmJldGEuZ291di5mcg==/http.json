@@ -1,22 +1,26 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C-",
+    "grade": "F",
     "error": null,
-    "score": 45,
+    "score": 0,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 6,
+    "testsPassed": 4,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Fri, 07 Nov 2025 20:40:04 GMT",
-      "content-type": "text/html; charset=UTF-8",
+      "server": "nginx",
+      "date": "Tue, 11 Nov 2025 19:06:01 GMT",
+      "content-type": "text/html; charset=utf8",
       "transfer-encoding": "chunked",
-      "connection": "close",
-      "x-request-id": "db8f6696-8c4f-44e3-971a-29563e54ee7b",
-      "vary": "Accept-Encoding",
-      "link": "<https://maestro.beta.gouv.fr/wp-json/>; rel=\"https://api.w.org/\", <https://maestro.beta.gouv.fr/wp-json/wp/v2/pages/7>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://maestro.beta.gouv.fr/>; rel=shortlink",
-      "strict-transport-security": "max-age=31536000"
+      "pragma": "no-cache",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "x-iplb-request-id": "04E38792:B400_D5BA2105:0050_69138919_5B3E4210:36A1",
+      "x-iplb-instance": "52193",
+      "set-cookie": [
+        "SERVERID77446=200177|aROJH|aROJH; path=/; HttpOnly"
+      ],
+      "connection": "close"
     }
   },
   "tests": {
@@ -33,10 +37,17 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "SERVERID77446": {
+          "domain": "maestro.beta.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -48,14 +59,13 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://maestro.beta.gouv.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://maestro.beta.gouv.fr/",
+      "redirects": false,
       "route": [
-        "http://maestro.beta.gouv.fr/",
-        "https://maestro.beta.gouv.fr/"
+        "http://maestro.beta.gouv.fr/"
       ],
       "statusCode": 200
     },
@@ -70,26 +80,21 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000",
+      "pass": false,
+      "result": "hsts-not-implemented-no-https",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 31536000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://www.google.com/recaptcha/api.js?render=6LeB-dorAAAAAGcEoFLh1sBNun2uZGpgie7UqBY9&ver=3.0": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
