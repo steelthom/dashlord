@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 13:15:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln francecompetences.fr
+# Nmap 7.92 scan initiated Tue Nov 11 07:05:24 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln francecompetences.fr
 Nmap scan report for francecompetences.fr (185.194.81.68)
-Host is up (0.081s latency).
+Host is up (0.082s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -35,7 +35,7 @@ PORT    STATE  SERVICE   VERSION
 |     ERROR
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Fri, 07 Nov 2025 13:15:38 GMT
+|     Date: Tue, 11 Nov 2025 07:05:43 GMT
 |     Content-Type: text/html; charset=UTF-8
 |     Connection: close
 |     Link: <https://www.francecompetences.fr/wp-json/>; rel="https://api.w.org/"
@@ -55,46 +55,64 @@ PORT    STATE  SERVICE   VERSION
 |     HTTP/1.0 405 Method Not Allowed
 |     Connection: Keep-Alive
 |     Content-Length: 9
+|     ERROR
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>nginx/1.18.0</center>
+|     </body>
+|     </html>
+|   SIPOptions: 
+|     HTTP/1.0 400 Bad Request
+|     Connection: Keep-Alive
+|     Content-Length: 9
 |_    ERROR
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690DF0F3%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=6912E041%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690DF0FA%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,5879,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Fri,\x2007\
-SF:x20Nov\x202025\x2013:15:38\x20GMT\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=UTF-8\r\nConnection:\x20close\r\nLink:\x20<https://www\.francecomp
-SF:etences\.fr/wp-json/>;\x20rel=\"https://api\.w\.org/\"\r\nLink:\x20<htt
-SF:ps://www\.francecompetences\.fr/wp-json/wp/v2/pages/270>;\x20rel=\"alte
-SF:rnate\";\x20title=\"JSON\";\x20type=\"application/json\"\r\nLink:\x20<h
-SF:ttps://www\.francecompetences\.fr/>;\x20rel=shortlink\r\nStrict-Transpo
-SF:rt-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!doctype
-SF:\x20html>\n<html\x20lang=\"fr-FR\">\n\x20\x20<head>\n\x20\x20\x20\x20<m
-SF:eta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\x
-SF:20content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=no
-SF:\">\n\x20\x20\x20\x20<meta\x20name='robots'\x20content='index,\x20follo
-SF:w,\x20max-image-preview:large,\x20max-snippet:-1,\x20max-video-preview:
-SF:-1'\x20/>\n<link\x20rel=\"alternate\"\x20hreflang=\"fr\"\x20href=\"http
-SF:s://www\.francecompetences\.fr\"\x20/>\n<link\x20rel=\"alternate\"\x20h
-SF:reflang=\"x-default\"\x20href=\"https://www\.francecompetences\.fr\"\x2
-SF:0/>\n\n\t<!--\x20This\x20site\x20is\x20op")%r(HTTPOptions,57,"HTTP/1\.0
-SF:\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x20Keep-Alive\r\nCon
-SF:tent-Length:\x209\r\n\r\n405\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1\
-SF:.0\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Alive\r\nContent-Lengt
-SF:h:\x209\r\n\r\n404\x20ERROR");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=6912E047%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,3583,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2011
+SF:\x20Nov\x202025\x2007:05:43\x20GMT\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=UTF-8\r\nConnection:\x20close\r\nLink:\x20<https://www\.francecom
+SF:petences\.fr/wp-json/>;\x20rel=\"https://api\.w\.org/\"\r\nLink:\x20<ht
+SF:tps://www\.francecompetences\.fr/wp-json/wp/v2/pages/270>;\x20rel=\"alt
+SF:ernate\";\x20title=\"JSON\";\x20type=\"application/json\"\r\nLink:\x20<
+SF:https://www\.francecompetences\.fr/>;\x20rel=shortlink\r\nStrict-Transp
+SF:ort-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<!doctyp
+SF:e\x20html>\n<html\x20lang=\"fr-FR\">\n\x20\x20<head>\n\x20\x20\x20\x20<
+SF:meta\x20charset=\"utf-8\">\n\x20\x20\x20\x20<meta\x20name=\"viewport\"\
+SF:x20content=\"width=device-width,\x20initial-scale=1,\x20shrink-to-fit=n
+SF:o\">\n\x20\x20\x20\x20<meta\x20name='robots'\x20content='index,\x20foll
+SF:ow,\x20max-image-preview:large,\x20max-snippet:-1,\x20max-video-preview
+SF::-1'\x20/>\n<link\x20rel=\"alternate\"\x20hreflang=\"fr\"\x20href=\"htt
+SF:ps://www\.francecompetences\.fr\"\x20/>\n<link\x20rel=\"alternate\"\x20
+SF:hreflang=\"x-default\"\x20href=\"https://www\.francecompetences\.fr\"\x
+SF:20/>\n\n\t<!--\x20This\x20site\x20is\x20op")%r(HTTPOptions,57,"HTTP/1\.
+SF:0\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x20Keep-Alive\r\nCo
+SF:ntent-Length:\x209\r\n\r\n405\x20ERROR")%r(FourOhFourRequest,4E,"HTTP/1
+SF:\.0\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Alive\r\nContent-Leng
+SF:th:\x209\r\n\r\n404\x20ERROR")%r(RTSPRequest,9D,"<html>\r\n<head><title
+SF:>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20B
+SF:ad\x20Request</h1></center>\r\n<hr><center>nginx/1\.18\.0</center>\r\n<
+SF:/body>\r\n</html>\r\n")%r(SIPOptions,50,"HTTP/1\.0\x20400\x20Bad\x20Req
+SF:uest\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x2
+SF:0ERROR");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 13:17:47 2025 -- 1 IP address (1 host up) scanned in 149.00 seconds
+# Nmap done at Tue Nov 11 07:08:08 2025 -- 1 IP address (1 host up) scanned in 164.34 seconds
