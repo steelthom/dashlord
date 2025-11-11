@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 14:32:56 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln intefp.travail-emploi.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 08:07:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln intefp.travail-emploi.gouv.fr
 Nmap scan report for intefp.travail-emploi.gouv.fr (185.194.82.157)
-Host is up (0.12s latency).
+Host is up (0.080s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -28,29 +28,28 @@ PORT    STATE  SERVICE   VERSION
 113/tcp closed ident
 443/tcp open   ssl/https
 | fingerprint-strings: 
-|   GetRequest: 
-|     HTTP/1.1 301 Moved Permanently
-|     Content-Type: text/html; charset=utf-8
-|     Content-Length: 410
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 63346
 |     Connection: close
-|     Date: Fri, 07 Nov 2025 14:33:17 GMT
-|     Location: http://intefp-production.cegedim.cloud/fr
-|     X-Drupal-Route-Normalizer: 1
+|     Cache-Control: max-age=600, public
+|     Date: Tue, 11 Nov 2025 08:07:58 GMT
+|     X-Drupal-Dynamic-Cache: UNCACHEABLE (poor cacheability)
+|     X-Drupal-Cache: MISS
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
 |     X-Frame-Options: SAMEORIGIN
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Cache-Control: max-age=600, public
-|     Last-Modified: Fri, 07 Nov 2025 14:33:17 GMT
+|     Last-Modified: Tue, 11 Nov 2025 08:07:58 GMT
 |     Vary: Cookie
-|     X-Drupal-Cache: MISS
 |     X-Content-Type-Options: nosniff
 |     Referrer-Policy: strict-origin-when-cross-origin
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 0
 |     Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
-|     Set-Cookie: BIGipServerpool-intefp-production.cegedim.cloud-tcp80=!q+SOVC5DFExrzd8XIkI7F7SI9ajmimNLN+eCbu8wuoz2K9KxvpGgvagxWiATBwzxQWyuZzRRH1rp6OiyRiVNdfM6zfg=; path=/; Httponly; Secure
-|     Strict-Transport-Securit
+|     Set-Cookie: BIGipServerpool-intefp-production.cegedim.cloud-tcp80=!4vORBwjOsRlArJsXIkI7F7SI9ajmipzTSdkclgNmnAejgKaWotbDWx1IoyY30BSPhic4w9eIQkF7L8lCvA1w1hUyyLQ=; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubD
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
 |     Content-Type: text/html; charset=UTF-8
@@ -58,7 +57,7 @@ PORT    STATE  SERVICE   VERSION
 |     Connection: close
 |     Allow: GET, POST
 |     Cache-Control: must-revalidate, no-cache, private
-|     Date: Fri, 07 Nov 2025 14:33:18 GMT
+|     Date: Tue, 11 Nov 2025 08:07:57 GMT
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
 |     X-Frame-Options: SAMEORIGIN
@@ -69,56 +68,56 @@ PORT    STATE  SERVICE   VERSION
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 0
 |     Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
-|     Set-Cookie: BIGipServerpool-intefp-production.cegedim.cloud-tcp80=!LqddVg1EsXhibj0XIkI7F7SI9ajmist6/kMAyvnQjXtEH2oFYWs5hL6I5IqnYvedBjat+psg5cQDVvYndBjqAYKO6Nk=; path=/; Httponly; Secure
+|     Set-Cookie: BIGipServerpool-intefp-production.cegedim.cloud-tcp80=!2sdxQQRyBemT4J8XIkI7F7SI9ajmii3Odu5AFsddr/IJuHxiy89n0caDgpclRoVP76Sh3TYL43LWiuvRf8M78vOZrY0=; path=/; Httponly; Secure
 |_    Strict-Transport-Security: max-age=31536000; includeSubDomains
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690E0327%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=6912EED2%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690E032E%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,548,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nCon
-SF:tent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20410\r\n
-SF:Connection:\x20close\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:33:17\
-SF:x20GMT\r\nLocation:\x20http://intefp-production\.cegedim\.cloud/fr\r\nX
-SF:-Drupal-Route-Normalizer:\x201\r\nContent-language:\x20fr\r\nX-Content-
-SF:Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\
-SF:x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nCache-Control:\x20ma
-SF:x-age=600,\x20public\r\nLast-Modified:\x20Fri,\x2007\x20Nov\x202025\x20
-SF:14:33:17\x20GMT\r\nVary:\x20Cookie\r\nX-Drupal-Cache:\x20MISS\r\nX-Cont
-SF:ent-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-
-SF:cross-origin\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x20
-SF:0\r\nPermissions-Policy:\x20geolocation=\(\),\x20microphone=\(\),\x20ca
-SF:mera=\(\),\x20payment=\(\),\x20usb=\(\)\r\nSet-Cookie:\x20BIGipServerpo
-SF:ol-intefp-production\.cegedim\.cloud-tcp80=!q\+SOVC5DFExrzd8XIkI7F7SI9a
-SF:jmimNLN\+eCbu8wuoz2K9KxvpGgvagxWiATBwzxQWyuZzRRH1rp6OiyRiVNdfM6zfg=;\x2
-SF:0path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Securit")%r(HTTPOpt
-SF:ions,310,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/html;\x20char
-SF:set=UTF-8\r\nContent-Length:\x200\r\nConnection:\x20close\r\nAllow:\x20
-SF:GET,\x20POST\r\nCache-Control:\x20must-revalidate,\x20no-cache,\x20priv
-SF:ate\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2014:33:18\x20GMT\r\nContent
-SF:-language:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Optio
-SF:ns:\x20SAMEORIGIN\r\nexpires:\x20-1\r\npragma:\x20no-cache\r\nX-Content
-SF:-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict-origin-when-cro
-SF:ss-origin\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x200\r
-SF:\nPermissions-Policy:\x20geolocation=\(\),\x20microphone=\(\),\x20camer
-SF:a=\(\),\x20payment=\(\),\x20usb=\(\)\r\nSet-Cookie:\x20BIGipServerpool-
-SF:intefp-production\.cegedim\.cloud-tcp80=!LqddVg1EsXhibj0XIkI7F7SI9ajmis
-SF:t6/kMAyvnQjXtEH2oFYWs5hL6I5IqnYvedBjat\+psg5cQDVvYndBjqAYKO6Nk=;\x20pat
-SF:h=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security:\x20max-age=31
-SF:536000;\x20includeSubDomains\r\n\r\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=6912EEDD%P=x86_64-alpine-linu
+SF:x-musl%r(HTTPOptions,310,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20te
+SF:xt/html;\x20charset=UTF-8\r\nContent-Length:\x200\r\nConnection:\x20clo
+SF:se\r\nAllow:\x20GET,\x20POST\r\nCache-Control:\x20must-revalidate,\x20n
+SF:o-cache,\x20private\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2008:07:57\x
+SF:20GMT\r\nContent-language:\x20fr\r\nX-Content-Type-Options:\x20nosniff\
+SF:r\nX-Frame-Options:\x20SAMEORIGIN\r\nexpires:\x20-1\r\npragma:\x20no-ca
+SF:che\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20strict
+SF:-origin-when-cross-origin\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Pr
+SF:otection:\x200\r\nPermissions-Policy:\x20geolocation=\(\),\x20microphon
+SF:e=\(\),\x20camera=\(\),\x20payment=\(\),\x20usb=\(\)\r\nSet-Cookie:\x20
+SF:BIGipServerpool-intefp-production\.cegedim\.cloud-tcp80=!2sdxQQRyBemT4J
+SF:8XIkI7F7SI9ajmii3Odu5AFsddr/IJuHxiy89n0caDgpclRoVP76Sh3TYL43LWiuvRf8M78
+SF:vOZrY0=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transport-Security
+SF::\x20max-age=31536000;\x20includeSubDomains\r\n\r\n")%r(FourOhFourReque
+SF:st,3816,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html
+SF:;\x20charset=UTF-8\r\nContent-Length:\x2063346\r\nConnection:\x20close\
+SF:r\nCache-Control:\x20max-age=600,\x20public\r\nDate:\x20Tue,\x2011\x20N
+SF:ov\x202025\x2008:07:58\x20GMT\r\nX-Drupal-Dynamic-Cache:\x20UNCACHEABLE
+SF:\x20\(poor\x20cacheability\)\r\nX-Drupal-Cache:\x20MISS\r\nContent-lang
+SF:uage:\x20fr\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nExpires:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GM
+SF:T\r\nLast-Modified:\x20Tue,\x2011\x20Nov\x202025\x2008:07:58\x20GMT\r\n
+SF:Vary:\x20Cookie\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Polic
+SF:y:\x20strict-origin-when-cross-origin\r\nX-Frame-Options:\x20SAMEORIGIN
+SF:\r\nX-XSS-Protection:\x200\r\nPermissions-Policy:\x20geolocation=\(\),\
+SF:x20microphone=\(\),\x20camera=\(\),\x20payment=\(\),\x20usb=\(\)\r\nSet
+SF:-Cookie:\x20BIGipServerpool-intefp-production\.cegedim\.cloud-tcp80=!4v
+SF:ORBwjOsRlArJsXIkI7F7SI9ajmipzTSdkclgNmnAejgKaWotbDWx1IoyY30BSPhic4w9eIQ
+SF:kF7L8lCvA1w1hUyyLQ=;\x20path=/;\x20Httponly;\x20Secure\r\nStrict-Transp
+SF:ort-Security:\x20max-age=31536000;\x20includeSubD");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 14:35:44 2025 -- 1 IP address (1 host up) scanned in 168.06 seconds
+# Nmap done at Tue Nov 11 08:10:21 2025 -- 1 IP address (1 host up) scanned in 168.33 seconds
