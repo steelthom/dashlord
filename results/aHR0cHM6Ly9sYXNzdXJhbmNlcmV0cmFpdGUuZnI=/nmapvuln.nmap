@@ -1,8 +1,7 @@
-# Nmap 7.92 scan initiated Fri Nov  7 19:01:59 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lassuranceretraite.fr
-Nmap scan report for lassuranceretraite.fr (212.194.219.40)
-Host is up (0.11s latency).
-Other addresses for lassuranceretraite.fr (not scanned): 188.231.111.40
-rDNS record for 212.194.219.40: static-dcd-cqq-219040.business.bouyguestelecom.com
+# Nmap 7.92 scan initiated Tue Nov 11 14:15:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lassuranceretraite.fr
+Nmap scan report for lassuranceretraite.fr (188.231.111.40)
+Host is up (0.085s latency).
+Other addresses for lassuranceretraite.fr (not scanned): 212.194.219.40
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
@@ -29,9 +28,9 @@ PORT    STATE SERVICE   VERSION
 |_    Content-Length: 0
 443/tcp open  ssl/https
 | fingerprint-strings: 
-|   FourOhFourRequest: 
+|   FourOhFourRequest, HTTPOptions: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Fri, 07 Nov 2025 19:02:16 GMT
+|     Date: Tue, 11 Nov 2025 14:15:48 GMT
 |     Content-Type: text/html
 |     Content-Length: 103
 |     Connection: close
@@ -45,7 +44,7 @@ PORT    STATE SERVICE   VERSION
 |     </html>
 |   GetRequest: 
 |     HTTP/1.0 301 Moved Permanently
-|     Date: Fri, 07 Nov 2025 19:02:15 GMT
+|     Date: Tue, 11 Nov 2025 14:15:47 GMT
 |     Location: https://www.lassuranceretraite.fr/portail-info/home.html
 |     Content-Length: 264
 |     Connection: close
@@ -57,23 +56,9 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Moved Permanently</h1>
 |     <p>The document has moved <a href="https://www.lassuranceretraite.fr/portail-info/home.html">here</a>.</p>
 |     </body></html>
-|   HTTPOptions: 
-|     HTTP/1.0 403 Forbidden
-|     Date: Fri, 07 Nov 2025 19:02:15 GMT
-|     Content-Type: text/html
-|     Content-Length: 103
-|     Connection: close
-|     <html>
-|     <head>
-|     <title>Forbidden</title>
-|     </head>
-|     <body>
-|     <h1>Forbidden</h1>
-|     </body>
-|     </html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Fri, 07 Nov 2025 19:02:27 GMT
+|     Date: Tue, 11 Nov 2025 14:15:59 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -87,7 +72,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   TerminalServerCookie: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Fri, 07 Nov 2025 19:02:57 GMT
+|     Date: Tue, 11 Nov 2025 14:16:28 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -101,56 +86,56 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/7%Time=690E4230%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=6913450D%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690E4237%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,1E8,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nDat
-SF:e:\x20Fri,\x2007\x20Nov\x202025\x2019:02:15\x20GMT\r\nLocation:\x20http
-SF:s://www\.lassuranceretraite\.fr/portail-info/home\.html\r\nContent-Leng
-SF:th:\x20264\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20ch
-SF:arset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x
-SF:20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently
-SF:</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20docum
-SF:ent\x20has\x20moved\x20<a\x20href=\"https://www\.lassuranceretraite\.fr
-SF:/portail-info/home\.html\">here</a>\.</p>\n</body></html>\n")%r(HTTPOpt
-SF:ions,E7,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Fri,\x2007\x20Nov\x2
-SF:02025\x2019:02:15\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Lengt
-SF:h:\x20103\r\nConnection:\x20close\r\n\r\n<html>\r\n\x20<head>\r\n\x20\x
-SF:20<title>Forbidden</title>\r\n\x20</head>\r\n\x20<body>\r\n\x20\x20<h1>
-SF:Forbidden</h1>\r\n\x20</body>\r\n</html>")%r(FourOhFourRequest,E7,"HTTP
-SF:/1\.0\x20403\x20Forbidden\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2019:0
-SF:2:16\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20103\r\n
-SF:Connection:\x20close\r\n\r\n<html>\r\n\x20<head>\r\n\x20\x20<title>Forb
-SF:idden</title>\r\n\x20</head>\r\n\x20<body>\r\n\x20\x20<h1>Forbidden</h1
-SF:>\r\n\x20</body>\r\n</html>")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Ba
-SF:d\x20Request\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2019:02:27\x20GMT\r
-SF:\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20te
-SF:xt/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"
-SF:-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x2
-SF:0Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20br
-SF:owser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not
-SF:\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(TerminalServerCoo
-SF:kie,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2007\x20N
-SF:ov\x202025\x2019:02:57\x20GMT\r\nContent-Length:\x20226\r\nConnection:\
-SF:x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!
-SF:DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<ht
-SF:ml><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad
-SF:\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x2
-SF:0this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body>
-SF:</html>\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=69134513%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1E8,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nDa
+SF:te:\x20Tue,\x2011\x20Nov\x202025\x2014:15:47\x20GMT\r\nLocation:\x20htt
+SF:ps://www\.lassuranceretraite\.fr/portail-info/home\.html\r\nContent-Len
+SF:gth:\x20264\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20c
+SF:harset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\
+SF:x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanentl
+SF:y</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20docu
+SF:ment\x20has\x20moved\x20<a\x20href=\"https://www\.lassuranceretraite\.f
+SF:r/portail-info/home\.html\">here</a>\.</p>\n</body></html>\n")%r(HTTPOp
+SF:tions,E7,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Tue,\x2011\x20Nov\x
+SF:202025\x2014:15:48\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
+SF:th:\x20103\r\nConnection:\x20close\r\n\r\n<html>\r\n\x20<head>\r\n\x20\
+SF:x20<title>Forbidden</title>\r\n\x20</head>\r\n\x20<body>\r\n\x20\x20<h1
+SF:>Forbidden</h1>\r\n\x20</body>\r\n</html>")%r(FourOhFourRequest,E7,"HTT
+SF:P/1\.0\x20403\x20Forbidden\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2014:
+SF:15:48\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20103\r\
+SF:nConnection:\x20close\r\n\r\n<html>\r\n\x20<head>\r\n\x20\x20<title>For
+SF:bidden</title>\r\n\x20</head>\r\n\x20<body>\r\n\x20\x20<h1>Forbidden</h
+SF:1>\r\n\x20</body>\r\n</html>")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2014:15:59\x20GMT\
+SF:r\nContent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\
+SF:"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x
+SF:20Request</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20b
+SF:rowser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20no
+SF:t\x20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(TerminalServerCo
+SF:okie,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Tue,\x2011\x20
+SF:Nov\x202025\x2014:16:28\x20GMT\r\nContent-Length:\x20226\r\nConnection:
+SF:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<
+SF:!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<h
+SF:tml><head>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Ba
+SF:d\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x
+SF:20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body
+SF:></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 19:04:44 2025 -- 1 IP address (1 host up) scanned in 164.83 seconds
+# Nmap done at Tue Nov 11 14:18:14 2025 -- 1 IP address (1 host up) scanned in 161.63 seconds
