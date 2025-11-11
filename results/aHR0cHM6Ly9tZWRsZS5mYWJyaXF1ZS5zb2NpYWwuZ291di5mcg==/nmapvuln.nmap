@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Fri Nov  7 20:39:01 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln medle.fabrique.social.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 14:31:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln medle.fabrique.social.gouv.fr
 Nmap scan report for medle.fabrique.social.gouv.fr (185.194.82.223)
-Host is up (0.081s latency).
+Host is up (0.082s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
@@ -8,7 +8,7 @@ PORT    STATE  SERVICE    VERSION
 113/tcp closed ident
 443/tcp open   ssl/https
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 200 OK
 |     X-Powered-By: Next.js
 |     ETag: "ahnoukf5sa7pb"
@@ -16,47 +16,60 @@ PORT    STATE  SERVICE    VERSION
 |     Content-Length: 10012
 |     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 |     Vary: Accept-Encoding
-|     Date: Fri, 07 Nov 2025 20:39:20 GMT
+|     Date: Tue, 11 Nov 2025 14:31:41 GMT
+|     Connection: close
+|     Keep-Alive: timeout=5
+|     <!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title class="jsx-547835882">Connexion - Medl
+|     </title><meta name="next-head-count" content="3"/><link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/_next/static/css/5ef1bef37945d623.css" as="style"/><link rel="stylesheet" href="/_next/static/css/5ef1bef37945d623.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/stat
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-Powered-By: Next.js
+|     ETag: "ahnoukf5sa7pb"
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 10012
+|     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+|     Vary: Accept-Encoding
+|     Date: Tue, 11 Nov 2025 14:31:42 GMT
 |     Connection: close
 |     Keep-Alive: timeout=5
 |     <!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title class="jsx-547835882">Connexion - Medl
 |_    </title><meta name="next-head-count" content="3"/><link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/_next/static/css/5ef1bef37945d623.css" as="style"/><link rel="stylesheet" href="/_next/static/css/5ef1bef37945d623.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/stat
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/7%Time=690E58F8%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,10F3,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20Nex
-SF:t\.js\r\nETag:\x20\"ahnoukf5sa7pb\"\r\nContent-Type:\x20text/html;\x20c
-SF:harset=utf-8\r\nContent-Length:\x2010012\r\nCache-Control:\x20private,\
-SF:x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nVary:\x20
-SF:Accept-Encoding\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2020:39:20\x20GM
-SF:T\r\nConnection:\x20close\r\nKeep-Alive:\x20timeout=5\r\n\r\n<!DOCTYPE\
-SF:x20html><html\x20lang=\"fr\"><head><meta\x20charSet=\"utf-8\"/><meta\x2
-SF:0name=\"viewport\"\x20content=\"width=device-width\"/><title\x20class=\
-SF:"jsx-547835882\">Connexion\x20-\x20Medl\xc3\xa9</title><meta\x20name=\"
-SF:next-head-count\"\x20content=\"3\"/><link\x20data-next-font=\"\"\x20rel
-SF:=\"preconnect\"\x20href=\"/\"\x20crossorigin=\"anonymous\"/><link\x20re
-SF:l=\"preload\"\x20href=\"/_next/static/css/5ef1bef37945d623\.css\"\x20as
-SF:=\"style\"/><link\x20rel=\"stylesheet\"\x20href=\"/_next/static/css/5ef
-SF:1bef37945d623\.css\"\x20data-n-g=\"\"/><noscript\x20data-n-css=\"\"></n
-SF:oscript><script\x20defer=\"\"\x20nomodule=\"\"\x20src=\"/_next/static/c
-SF:hunks/polyfills-c67a75d1b6f99dc8\.js\"></script><script\x20src=\"/_next
-SF:/stat")%r(HTTPOptions,284A,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20
-SF:Next\.js\r\nETag:\x20\"ahnoukf5sa7pb\"\r\nContent-Type:\x20text/html;\x
-SF:20charset=utf-8\r\nContent-Length:\x2010012\r\nCache-Control:\x20privat
-SF:e,\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nVary:\
-SF:x20Accept-Encoding\r\nDate:\x20Fri,\x2007\x20Nov\x202025\x2020:39:20\x2
-SF:0GMT\r\nConnection:\x20close\r\nKeep-Alive:\x20timeout=5\r\n\r\n<!DOCTY
-SF:PE\x20html><html\x20lang=\"fr\"><head><meta\x20charSet=\"utf-8\"/><meta
-SF:\x20name=\"viewport\"\x20content=\"width=device-width\"/><title\x20clas
-SF:s=\"jsx-547835882\">Connexion\x20-\x20Medl\xc3\xa9</title><meta\x20name
-SF:=\"next-head-count\"\x20content=\"3\"/><link\x20data-next-font=\"\"\x20
-SF:rel=\"preconnect\"\x20href=\"/\"\x20crossorigin=\"anonymous\"/><link\x2
-SF:0rel=\"preload\"\x20href=\"/_next/static/css/5ef1bef37945d623\.css\"\x2
-SF:0as=\"style\"/><link\x20rel=\"stylesheet\"\x20href=\"/_next/static/css/
-SF:5ef1bef37945d623\.css\"\x20data-n-g=\"\"/><noscript\x20data-n-css=\"\">
-SF:</noscript><script\x20defer=\"\"\x20nomodule=\"\"\x20src=\"/_next/stati
-SF:c/chunks/polyfills-c67a75d1b6f99dc8\.js\"></script><script\x20src=\"/_n
-SF:ext/stat");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=691348CE%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,10F3,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20Ne
+SF:xt\.js\r\nETag:\x20\"ahnoukf5sa7pb\"\r\nContent-Type:\x20text/html;\x20
+SF:charset=utf-8\r\nContent-Length:\x2010012\r\nCache-Control:\x20private,
+SF:\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nVary:\x2
+SF:0Accept-Encoding\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2014:31:41\x20G
+SF:MT\r\nConnection:\x20close\r\nKeep-Alive:\x20timeout=5\r\n\r\n<!DOCTYPE
+SF:\x20html><html\x20lang=\"fr\"><head><meta\x20charSet=\"utf-8\"/><meta\x
+SF:20name=\"viewport\"\x20content=\"width=device-width\"/><title\x20class=
+SF:\"jsx-547835882\">Connexion\x20-\x20Medl\xc3\xa9</title><meta\x20name=\
+SF:"next-head-count\"\x20content=\"3\"/><link\x20data-next-font=\"\"\x20re
+SF:l=\"preconnect\"\x20href=\"/\"\x20crossorigin=\"anonymous\"/><link\x20r
+SF:el=\"preload\"\x20href=\"/_next/static/css/5ef1bef37945d623\.css\"\x20a
+SF:s=\"style\"/><link\x20rel=\"stylesheet\"\x20href=\"/_next/static/css/5e
+SF:f1bef37945d623\.css\"\x20data-n-g=\"\"/><noscript\x20data-n-css=\"\"></
+SF:noscript><script\x20defer=\"\"\x20nomodule=\"\"\x20src=\"/_next/static/
+SF:chunks/polyfills-c67a75d1b6f99dc8\.js\"></script><script\x20src=\"/_nex
+SF:t/stat")%r(HTTPOptions,10F3,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x2
+SF:0Next\.js\r\nETag:\x20\"ahnoukf5sa7pb\"\r\nContent-Type:\x20text/html;\
+SF:x20charset=utf-8\r\nContent-Length:\x2010012\r\nCache-Control:\x20priva
+SF:te,\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nVary:
+SF:\x20Accept-Encoding\r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2014:31:42\x
+SF:20GMT\r\nConnection:\x20close\r\nKeep-Alive:\x20timeout=5\r\n\r\n<!DOCT
+SF:YPE\x20html><html\x20lang=\"fr\"><head><meta\x20charSet=\"utf-8\"/><met
+SF:a\x20name=\"viewport\"\x20content=\"width=device-width\"/><title\x20cla
+SF:ss=\"jsx-547835882\">Connexion\x20-\x20Medl\xc3\xa9</title><meta\x20nam
+SF:e=\"next-head-count\"\x20content=\"3\"/><link\x20data-next-font=\"\"\x2
+SF:0rel=\"preconnect\"\x20href=\"/\"\x20crossorigin=\"anonymous\"/><link\x
+SF:20rel=\"preload\"\x20href=\"/_next/static/css/5ef1bef37945d623\.css\"\x
+SF:20as=\"style\"/><link\x20rel=\"stylesheet\"\x20href=\"/_next/static/css
+SF:/5ef1bef37945d623\.css\"\x20data-n-g=\"\"/><noscript\x20data-n-css=\"\"
+SF:></noscript><script\x20defer=\"\"\x20nomodule=\"\"\x20src=\"/_next/stat
+SF:ic/chunks/polyfills-c67a75d1b6f99dc8\.js\"></script><script\x20src=\"/_
+SF:next/stat");
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 20:41:30 2025 -- 1 IP address (1 host up) scanned in 148.67 seconds
+# Nmap done at Tue Nov 11 14:33:51 2025 -- 1 IP address (1 host up) scanned in 148.66 seconds
