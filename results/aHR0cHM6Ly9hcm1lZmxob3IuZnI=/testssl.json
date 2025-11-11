@@ -10,8 +10,8 @@
               "id"           : "pre_128cipher",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No 128 cipher limit bug"
+              "severity"     : "MEDIUM",
+              "finding"      : "128 cipher limit bug"
           }
 ,         {
               "id"           : "SSLv2",
@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered with final"
+              "severity"     : "CRITICAL",
+              "finding"      : "connection failed rather than downgrading to TLSv1.2"
           }
 ,         {
               "id"           : "NPN",
@@ -67,7 +67,7 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not offered"
+              "finding"      : "http/1.1"
           }
 ,         {
               "id"           : "cipherlist_NULL",
@@ -113,9 +113,9 @@
               "id"           : "cipherlist_OBSOLETED",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "INFO",
+              "severity"     : "LOW",
               "cwe"          : "CWE-310",
-              "finding"      : "not offered"
+              "finding"      : "offered"
           }
 ,         {
               "id"           : "cipherlist_STRONG_NOFS",
@@ -128,71 +128,15 @@
               "id"           : "cipherlist_STRONG_FS",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
+              "severity"     : "MEDIUM",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "Could not determine server cipher order, no matching cipher in list found (pls report this): DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc030",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 256   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc028",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc028   ECDHE-RSA-AES256-SHA384           ECDH 256   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc014",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc014   ECDHE-RSA-AES256-SHA              ECDH 256   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc077",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc077   ECDHE-RSA-CAMELLIA256-SHA384      ECDH 256   Camellia    256      TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc02f",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.2   xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH 256   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc027",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc027   ECDHE-RSA-AES128-SHA256           ECDH 256   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
-          }
-,         {
-              "id"           : "cipher-tls1_2_xc013",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "TLSv1.2   xc013   ECDHE-RSA-AES128-SHA              ECDH 256   AES         128      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_2",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CAMELLIA256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA"
+              "finding"      : "server"
           }
 ,         {
               "id"           : "FS",
@@ -206,7 +150,7 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'session ticket/#35' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'max fragment length/#1' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -244,11 +188,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "certificate_compression",
+              "id"           : "cert_compression",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : ""
+              "finding"      : "N/A"
           }
 ,         {
               "id"           : "clientAuth",
@@ -258,277 +202,18 @@
               "finding"      : "none"
           }
 ,         {
+              "id"           : "scanProblem",
+              "ip"           : "armeflhor.fr/176.162.143.10",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "Client problem, shouldn't happen: Host certificate found but we can't continue with 'server defaults'."
+          }
+,         {
               "id"           : "cert_numbers",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1"
-          }
-,         {
-              "id"           : "cert_signatureAlgorithm",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SHA256 with RSA"
-          }
-,         {
-              "id"           : "cert_keySize",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA 2048 bits (exponent is 65537)"
-          }
-,         {
-              "id"           : "cert_keyUsage",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Digital Signature, Key Encipherment"
-          }
-,         {
-              "id"           : "cert_extKeyUsage",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
-          }
-,         {
-              "id"           : "cert_serialNumber",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "052525BB4CD54512A8A723F7A85D79BFDB4F"
-          }
-,         {
-              "id"           : "cert_serialNumberLen",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "18"
-          }
-,         {
-              "id"           : "cert_fingerprintSHA1",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "6A618645B1085B74C1328B13B954262AC39D7D75"
-          }
-,         {
-              "id"           : "cert_fingerprintSHA256",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "53A79E814B106AC3240A54B95C894C20D996A0A798EEC43DAF4F2F46DCD0DD94"
-          }
-,         {
-              "id"           : "cert",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBTCCA+2gAwIBAgISBSUlu0zVRRKopyP3qF15v9tPMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTMwHhcNMjUwOTExMTQzMTAzWhcNMjUxMjEwMTQzMTAyWjAXMRUwEwYDVQQDEwxhcm1lZmxob3IuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCSae4uNrUVjWlPSx3LB3ynWQKJxBJR5wG5SsDui4FFPuD8tg+wubxgne2DjEa6vgWxFomlzB52qUmZUJ3I95i3AYmUiKqAwn1rEr1M0eZ5w4W+UDqz2y0HNlmBLCS8MvM49jdeJdkcPpTAdlZVhSSQVoLoIUUkvgOtHIwqgTA+2ZcUY5p1ZIpwipDnOTKf6roib9umYmoXSdUq/R84tgNLQ9MGYQZmwof2LY7lGkfeeZnmyQNjYYEyu7DQZ+jTrqXAI+YQl0oaybRfXiC9hnAtP7OthSKmMzOnF5wIQfHeW6WK/9FcnYY/oiAtTFlDdFrZ6KI4bYLpmJpXMCPWl0svAgMBAAGjggItMIICKTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFNOajvkeCBxwoFxqlGX31ssSCnDTMB8GA1UdIwQYMBaAFOernw8sM6BT015PeMiyhA471pIzMDMGCCsGAQUFBwEBBCcwJTAjBggrBgEFBQcwAoYXaHR0cDovL3IxMy5pLmxlbmNyLm9yZy8wKQYDVR0RBCIwIIIMYXJtZWZsaG9yLmZyghB3d3cuYXJtZWZsaG9yLmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMC4GA1UdHwQnMCUwI6AhoB+GHWh0dHA6Ly9yMTMuYy5sZW5jci5vcmcvODAuY3JsMIIBAwYKKwYBBAHWeQIEAgSB9ASB8QDvAHUApELFBklgYVSPD9TqnPt6LSZFTYepfy/fRVn2J086hFQAAAGZOWVwtwAABAMARjBEAiAJ6o3S6rqxwqlpn8zWg35HVK+se9n+dXcUsMZkWMVC3gIgZbNA6HPAKui5x+lz3rc9X/w25cvIZWEIpOh/kwbWVoMAdgDd3Mo0ldfhFgXnlTL6x5/4PRxQ39sAOhQSdgosrLvIKgAAAZk5ZXjQAAAEAwBHMEUCIQCVQermJrVFF83k3Lty1jT+fGXeRct7NbRlOCUGKJP73QIgDjgbdrRO1/LiK68x7fYymJtOYWTuZTlg0efyffgk7ogwDQYJKoZIhvcNAQELBQADggEBAKEBNvJyTY8F6Gigrp7hdE6y9NbVmsYEf254IOoDfomGQIW6tUx/yL7L9bjFVG6zsw42Xg4RUTQLDvEkla0ReR7t6FWrdLoZRgeULqKkAlAeJKNuLhAnjKpnQuIaOaxfQSxZK0VIUnS28nx234sLMyt8N071yyWPad7BMQhRUuVlczcSj7p9/2nWvEit8yl6Xuv7utnKj9PgKh9KAVRzoPYc060Ek2WZ1l9+kY9dQCceFE3Ntp/s5jItQynwB8qMa/lxwxEEvspN5dc0HQz4Zdbac6ZSRFWhPav678iMxXRL0Qv+t1ZZaaKlW8fT9qskRJjVTcCnOsyFPMk76q+WoeM=\n-----END CERTIFICATE-----"
-          }
-,         {
-              "id"           : "cert_commonName",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "armeflhor.fr"
-          }
-,         {
-              "id"           : "cert_commonName_wo_SNI",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "request w/o SNI didn't succeed"
-          }
-,         {
-              "id"           : "cert_subjectAltName",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "armeflhor.fr www.armeflhor.fr"
-          }
-,         {
-              "id"           : "cert_trust",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "Ok via SAN and CN (SNI mandatory)"
-          }
-,         {
-              "id"           : "cert_chain_of_trust",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "passed."
-          }
-,         {
-              "id"           : "cert_certificatePolicies_EV",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no"
-          }
-,         {
-              "id"           : "cert_expirationStatus",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "33 >= 30 days"
-          }
-,         {
-              "id"           : "cert_notBefore",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2025-09-11 14:31"
-          }
-,         {
-              "id"           : "cert_notAfter",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "2025-12-10 14:31"
-          }
-,         {
-              "id"           : "cert_extlifeSpan",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "certificate has no extended life time according to browser forum"
-          }
-,         {
-              "id"           : "cert_eTLS",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not present"
-          }
-,         {
-              "id"           : "cert_crlDistributionPoints",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "http://r13.c.lencr.org/80.crl"
-          }
-,         {
-              "id"           : "cert_ocspURL",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "OCSP_stapling",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cert_mustStapleExtension",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "DNS_CAArecord",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "certificate_transparency",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "yes (certificate extension)"
-          }
-,         {
-              "id"           : "certs_countServer",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2"
-          }
-,         {
-              "id"           : "certs_list_ordering_problem",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no"
-          }
-,         {
-              "id"           : "cert_caIssuers",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "R13 (Let's Encrypt from US)"
-          }
-,         {
-              "id"           : "intermediate_cert <#1>",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFBTCCAu2gAwIBAgIQWgDyEtjUtIDzkkFX6imDBTANBgkqhkiG9w0BAQsFADBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJuZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBYMTAeFw0yNDAzMTMwMDAwMDBaFw0yNzAzMTIyMzU5NTlaMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQClZ3CN0FaBZBUXYc25BtStGZCMJlA3mBZjklTb2cyEBZPs0+wIG6BgUUNIfSvHSJaetC3ancgnO1ehn6vw1g7UDjDKb5ux0daknTI+WE41b0VYaHEX/D7YXYKgL7JRbLAaXbhZzjVlyIuhrxA3/+OcXcJJFzT/jCuLjfC8cSyTDB0FxLrHzarJXnzRyQH3nAP2/Apd9Np75tt2QnDr9E0i2gB3b9bJXxf92nUupVcM9upctuBzpWjPoXTidYJ+EJ/B9aLrAek4sQpEzNPCifVJNYIKNLMc6YjCR06CDgo28EdPivEpBHXazeGaXP9enZiVuppD0EqiFwUBBDDTMrOPAgMBAAGjgfgwgfUwDgYDVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATASBgNVHRMBAf8ECDAGAQH/AgEAMB0GA1UdDgQWBBTnq58PLDOgU9NeT3jIsoQOO9aSMzAfBgNVHSMEGDAWgBR5tFnme7bl5AFzgAiIyBpY9umbbjAyBggrBgEFBQcBAQQmMCQwIgYIKwYBBQUHMAKGFmh0dHA6Ly94MS5pLmxlbmNyLm9yZy8wEwYDVR0gBAwwCjAIBgZngQwBAgEwJwYDVR0fBCAwHjAcoBqgGIYWaHR0cDovL3gxLmMubGVuY3Iub3JnLzANBgkqhkiG9w0BAQsFAAOCAgEAUTdYUqEimzW7TbrOypLqCfL7VOwYf/Q79OH5cHLCZeggfQhDconlk7Kgh8b0vi+/XuWu7CN8n/UPeg1vo3G+taXirrytthQinAHGwc/UdbOygJa9zuBcVyqoH3CXTXDInT+8a+c3aEVMJ2St+pSn4ed+WkDp8ijsijvEyFwE47hulW0Ltzjg9fOV5Pmrg/zxWbRuL+k0DBDHEJennCsAen7c35Pmx7jpmJ/HtgRhcnz0yjSBvyIw6L1QIupkCv2SBODT/xDD3gfQQyKv6roV4G2EhfEyAsWpmojxjCUCGiyg97FvDtm/NK2LSc9lybKxB73I2+P2G3CaWpvvpAiHCVu30jW8GCxKdfhsXtnIy2imskQqVZ2m0Pmxobb28Tucr7xBK7CtwvPrb79os7u2XP3O5f9b/H66GNyRrglRXlrYjI1oGYL/f4I1n/Sgusda6WvA6C190kxjU15Y12mHU4+BxyR9cx2hhGS9fAjMZKJss28qxvz6Axu4CaDmRNZpK/pQrXF17yXCXkmEWgvSOEZy6Z9pcbLIVEGckV/iVeq0AOo2pkg9p4QRIy0tK2diRENLSF2KysFwbY6B26BFeFs3v1sYVRhFW9nLkOrQVporCS0KyZmfwVD89qSTlnctLcZnIavjKsKUu1nA1iU0yYMdYepKR7lWbnwhdx3ewok=\n-----END CERTIFICATE-----"
-          }
-,         {
-              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "D3B128216A843F8EF1321501F5DF52A5DF52939EE2C19297712CD3DE4D419354"
-          }
-,         {
-              "id"           : "intermediate_cert_notBefore <#1>",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2024-03-13 00:00"
-          }
-,         {
-              "id"           : "intermediate_cert_notAfter <#1>",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "2027-03-12 23:59"
-          }
-,         {
-              "id"           : "intermediate_cert_expiration <#1>",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ok > 40 days"
-          }
-,         {
-              "id"           : "intermediate_cert_chain <#1>",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "R13 <-- ISRG Root X1"
-          }
-,         {
-              "id"           : "intermediate_cert_badOCSP",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "intermediate certificate(s) is/are ok"
-          }
-,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header reply empty"
-          }
-,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "armeflhor.fr/176.162.143.10",
-              "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "No HTTP status code"
+              "finding"      : "0"
           }
 ,         {
               "id"           : "HTTP_status_code",
@@ -580,9 +265,9 @@
               "id"           : "secure_renego",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "WARN",
+              "severity"     : "OK",
               "cwe"          : "CWE-310",
-              "finding"      : "OpenSSL handshake didn't succeed"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "secure_client_renego",
@@ -591,7 +276,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2011-1473",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, mitigated"
+              "finding"      : "not vulnerable"
           }
 ,         {
               "id"           : "CRIME_TLS",
@@ -606,10 +291,10 @@
               "id"           : "BREACH",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "WARN",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "Test failed as first HTTP request stalled and was terminated"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -661,7 +346,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=53A79E814B106AC3240A54B95C894C20D996A0A798EEC43DAF4F2F46DCD0DD94"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=1626CEA36CE87C50BAD1D088248D393CDE026249D844C0A4003D0FA1CA89E480"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -694,10 +379,10 @@
               "id"           : "LUCKY13",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "LOW",
               "cve"          : "CVE-2013-0169",
               "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
+              "finding"      : "potentially vulnerable, uses obsolete TLS CBC ciphers"
           }
 ,         {
               "id"           : "winshock",
@@ -706,7 +391,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2014-6321",
               "cwe"          : "CWE-94",
-              "finding"      : "not vulnerable"
+              "finding"      : "not vulnerable - doesn't seem to be IIS 8.x"
           }
 ,         {
               "id"           : "RC4",
@@ -736,28 +421,28 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
@@ -785,7 +470,7 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
@@ -911,7 +596,7 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
@@ -960,7 +645,7 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "rating_spec",
@@ -995,35 +680,35 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "90"
+              "finding"      : "100"
           }
 ,         {
               "id"           : "key_exchange_score_weighted",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "27"
+              "finding"      : "30"
           }
 ,         {
               "id"           : "cipher_strength_score",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "90"
+              "finding"      : "60"
           }
 ,         {
               "id"           : "cipher_strength_score_weighted",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "36"
+              "finding"      : "24"
           }
 ,         {
               "id"           : "final_score",
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "93"
+              "finding"      : "84"
           }
 ,         {
               "id"           : "overall_grade",
@@ -1051,6 +736,6 @@
               "ip"           : "armeflhor.fr/176.162.143.10",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "214"
+              "finding"      : "249"
           }
 ]
