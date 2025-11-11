@@ -1,17 +1,18 @@
-# Nmap 7.92 scan initiated Fri Nov  7 13:25:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln helios.enseignementsup-recherche.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 07:56:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln helios.enseignementsup-recherche.gouv.fr
 Nmap scan report for helios.enseignementsup-recherche.gouv.fr (185.75.143.13)
-Host is up (0.11s latency).
+Host is up (0.095s latency).
 rDNS record for 185.75.143.13: MEN-CNUPUB-PROXY01.dedie.ate.info
 Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE  SERVICE VERSION
-80/tcp  open   http    nginx
+PORT    STATE  SERVICE   VERSION
+80/tcp  open   http      nginx
 113/tcp closed ident
-443/tcp open   https?
+443/tcp open   ssl/https
+|_http-server-header: nginx
 | fingerprint-strings: 
 |   OpenVPN: 
 |     HTTP/1.1 400 Bad Request
 |     Server: nginx
-|     Date: Fri, 07 Nov 2025 13:25:42 GMT
+|     Date: Tue, 11 Nov 2025 07:56:40 GMT
 |     Content-Type: text/html
 |     Content-Length: 150
 |     Connection: close
@@ -26,15 +27,15 @@ PORT    STATE  SERVICE VERSION
 |     </body>
 |_    </html>
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port443-TCP:V=7.92%I=7%D=11/7%Time=690DF356%P=x86_64-alpine-linux-musl%
-SF:r(OpenVPN,1B5,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx\r
-SF:\nDate:\x20Fri,\x2007\x20Nov\x202025\x2013:25:42\x20GMT\r\nContent-Type
-SF::\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\nStr
-SF:ict-Transport-Security:\x20max-age=31536000;\x20includeSubdomains\r\nRe
-SF:ferrer-Policy:\x20no-referrer-when-downgrade\r\nX-XSS-Protection:\x201;
-SF:\x20mode=block\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</tit
-SF:le></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>
-SF:\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n");
+SF-Port443-TCP:V=7.92%I=7%D=11/11%Time=6912EC39%P=x86_64-alpine-linux-musl
+SF:%r(OpenVPN,1B5,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20nginx\
+SF:r\nDate:\x20Tue,\x2011\x20Nov\x202025\x2007:56:40\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20150\r\nConnection:\x20close\r\nSt
+SF:rict-Transport-Security:\x20max-age=31536000;\x20includeSubdomains\r\nR
+SF:eferrer-Policy:\x20no-referrer-when-downgrade\r\nX-XSS-Protection:\x201
+SF:;\x20mode=block\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</ti
+SF:tle></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center
+SF:>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Nov  7 13:25:53 2025 -- 1 IP address (1 host up) scanned in 25.95 seconds
+# Nmap done at Tue Nov 11 07:56:47 2025 -- 1 IP address (1 host up) scanned in 21.93 seconds
