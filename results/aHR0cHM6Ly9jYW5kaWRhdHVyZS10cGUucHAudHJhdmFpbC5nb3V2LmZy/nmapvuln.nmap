@@ -1,1 +1,90 @@
-# Nmap 7.92 scan initiated Fri Nov  7 07:50:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln candidature-tpe.pp.travail.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 03:18:46 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln candidature-tpe.pp.travail.gouv.fr
+Nmap scan report for candidature-tpe.pp.travail.gouv.fr (164.131.214.150)
+Host is up (0.11s latency).
+Not shown: 986 filtered tcp ports (no-response)
+PORT      STATE  SERVICE         VERSION
+80/tcp    closed http
+113/tcp   closed ident
+443/tcp   open   ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 302 Found
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Length: 0
+|     Content-Type: text/html; charset=utf-8
+|     Location: https://www.candidature-tpe.pp.travail.gouv.fr/api/tpe/public/antivirus/error
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 11 Nov 2025 03:25:34 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=600
+|     Last-Modified: Fri, 08 Nov 2024 10:20:09 GMT
+|     ETag: "ea15-6266418726840"
+|     Accept-Ranges: bytes
+|     Content-Length: 59925
+|     X-XSS-Protection: 1; mode=block
+|     Strict-Transport-Security: max-age=63072000; includeSubDomains
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     Content-Type: text/html; charset=UTF-8
+|     <!DOCTYPE html><html lang="fr"><head>
+|     <meta charset="utf-8">
+|     <title>FrontOffice</title>
+|     <base href="/">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+|     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+|     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+|_    <link rel="manifest" href="/favicon/manifest.webmanifest" crossorig
+545/tcp   closed ekshell
+912/tcp   closed apex-mesh
+1088/tcp  closed cplscrambler-al
+4446/tcp  closed n1-fwp
+5550/tcp  closed sdadmind
+8089/tcp  closed unknown
+8194/tcp  closed sophos
+9944/tcp  closed unknown
+14000/tcp closed scotty-ft
+18040/tcp closed unknown
+50002/tcp closed iiimsf
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=6912ACAE%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1FF0,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2011
+SF:\x20Nov\x202025\x2003:25:34\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nStrict-Transport-Security:\x20max-age=600\r\nLast-Modified:\x20Fri,\x2
+SF:008\x20Nov\x202024\x2010:20:09\x20GMT\r\nETag:\x20\"ea15-6266418726840\
+SF:"\r\nAccept-Ranges:\x20bytes\r\nContent-Length:\x2059925\r\nX-XSS-Prote
+SF:ction:\x201;\x20mode=block\r\nStrict-Transport-Security:\x20max-age=630
+SF:72000;\x20includeSubDomains\r\nX-Content-Type-Options:\x20nosniff\r\nCo
+SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\n\
+SF:r\n<!DOCTYPE\x20html><html\x20lang=\"fr\"><head>\n\x20\x20<meta\x20char
+SF:set=\"utf-8\">\n\x20\x20<title>FrontOffice</title>\n\x20\x20<base\x20hr
+SF:ef=\"/\">\n\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=devi
+SF:ce-width,\x20initial-scale=1\">\n\n\x20\x20<link\x20rel=\"apple-touch-i
+SF:con\"\x20href=\"/favicon/apple-touch-icon\.png\">\n\x20\x20<link\x20rel
+SF:=\"icon\"\x20href=\"/favicon/favicon\.svg\"\x20type=\"image/svg\+xml\">
+SF:\n\x20\x20<link\x20rel=\"shortcut\x20icon\"\x20href=\"/favicon/favicon\
+SF:.ico\"\x20type=\"image/x-icon\">\n\x20\x20<link\x20rel=\"manifest\"\x20
+SF:href=\"/favicon/manifest\.webmanifest\"\x20crossorig")%r(HTTPOptions,11
+SF:C,"HTTP/1\.1\x20302\x20Found\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS
+SF:-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\
+SF:r\nConnection:\x20close\r\nContent-Length:\x200\r\nContent-Type:\x20tex
+SF:t/html;\x20charset=utf-8\r\nLocation:\x20https://www\.candidature-tpe\.
+SF:pp\.travail\.gouv\.fr/api/tpe/public/antivirus/error\r\n\r\n")%r(FourOh
+SF:FourRequest,11C,"HTTP/1\.1\x20302\x20Found\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x200\r\nConten
+SF:t-Type:\x20text/html;\x20charset=utf-8\r\nLocation:\x20https://www\.can
+SF:didature-tpe\.pp\.travail\.gouv\.fr/api/tpe/public/antivirus/error\r\n\
+SF:r\n")%r(RTSPRequest,11C,"HTTP/1\.1\x20302\x20Found\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Typ
+SF:e-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x200\r
+SF:\nContent-Type:\x20text/html;\x20charset=utf-8\r\nLocation:\x20https://
+SF:www\.candidature-tpe\.pp\.travail\.gouv\.fr/api/tpe/public/antivirus/er
+SF:ror\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 11 03:27:47 2025 -- 1 IP address (1 host up) scanned in 540.95 seconds
