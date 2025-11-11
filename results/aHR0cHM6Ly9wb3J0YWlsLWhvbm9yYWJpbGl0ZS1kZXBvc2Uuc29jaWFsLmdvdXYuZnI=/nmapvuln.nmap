@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Nov  8 03:42:48 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail-honorabilite-depose.social.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 11 20:34:45 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail-honorabilite-depose.social.gouv.fr
 Nmap scan report for portail-honorabilite-depose.social.gouv.fr (185.194.82.51)
-Host is up (0.095s latency).
+Host is up (0.15s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -39,7 +39,32 @@ PORT    STATE  SERVICE   VERSION
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 1; mode=block
 |     X-Content-Type-Options: nosniff
-|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <1938290216079339711><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <1938290216907836295><br><br><a href='javascript:history.back();'>[Go Back]</body></html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 11 Nov 2025 20:35:08 GMT
+|     Content-Type: text/html
+|     Content-Length: 612
+|     Last-Modified: Wed, 28 Jun 2023 08:08:33 GMT
+|     Connection: close
+|     Accept-Ranges: bytes
+|     Set-Cookie: BIGipServerpool-portail-honorabilite-depose.cegedim.cloud-http=!VdJ0cp14tLv1BTsXIkI7F7SI9ajmiquz8vBvSJnpQc8Kh6oLTSbfbTogyFArJ5YnqCoF956yOCDAXiwiU7sMawHkMpQ=; path=/; Httponly; Secure; SameSite=Strict
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     Set-Cookie: TS01ac8ac8=01352d3811d30f5dd69df97f1c1f05f46e5a5e87108ec3b3b4311ced5d02439bfffad3efbdf789c736557a402357eb341c82461ffa; Path=/; Secure; HttpOnly
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>Welcome to nginx!</title>
+|     <style>
+|     body {
+|     width: 35em;
+|     margin: 0 auto;
+|     font-family: Tahoma, Verdana, Arial, sans-serif;
+|     </style>
+|     </head>
+|     <body>
+|     <h1>Welcome to nginx!</h1>
+|     <p>If you see this page, the nginx w
 |   HTTPOptions: 
 |     HTTP/1.0 405 Method Not Allowed
 |     Connection: Keep-Alive
@@ -52,46 +77,56 @@ PORT    STATE  SERVICE   VERSION
 |     <center><h1>400 Bad Request</h1></center>
 |     <hr><center>nginx/1.18.0</center>
 |     </body>
-|     </html>
-|   SIPOptions: 
-|     HTTP/1.0 400 Bad Request
-|     Connection: Keep-Alive
-|     Content-Length: 9
-|_    ERROR
+|_    </html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690EBC46%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/11%Time=69139DF6%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
 SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
-SF:%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLo
-SF:cation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:
-SF:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,"
-SF:HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsha
-SF:sh=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SIP
-SF:Options,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20ht
-SF:tps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690EBC51%P=x86_64-alpine-linux
-SF:-musl%r(HTTPOptions,57,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\
-SF:nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n405\x20ERROR"
-SF:)%r(FourOhFourRequest,1ED,"HTTP/1\.1\x20200\x20OK\r\nCache-Control:\x20
-SF:no-store,\x20must-revalidate,\x20no-cache\r\nPragma:\x20no-cache\r\nCon
-SF:nection:\x20close\r\nContent-Type:\x20text/html\r\nContent-Length:\x202
-SF:44\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode
-SF:=block\r\nX-Content-Type-Options:\x20nosniff\r\n\r\n<html><head><title>
-SF:Request\x20Rejected</title></head><body>The\x20requested\x20URL\x20was\
-SF:x20rejected\.\x20Please\x20consult\x20with\x20your\x20administrator\.<b
-SF:r><br>Your\x20support\x20ID\x20is:\x20<1938290216079339711><br><br><a\x
-SF:20href='javascript:history\.back\(\);'>\[Go\x20Back\]</body></html>")%r
-SF:(RTSPRequest,9D,"<html>\r\n<head><title>400\x20Bad\x20Request</title></
-SF:head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<
-SF:hr><center>nginx/1\.18\.0</center>\r\n</body>\r\n</html>\r\n")%r(SIPOpt
-SF:ions,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Aliv
-SF:e\r\nContent-Length:\x209\r\n\r\n400\x20ERROR");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/11%Time=69139DFC%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,4D3,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2011\
+SF:x20Nov\x202025\x2020:35:08\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x20612\r\nLast-Modified:\x20Wed,\x2028\x20Jun\x202023\x2008
+SF::08:33\x20GMT\r\nConnection:\x20close\r\nAccept-Ranges:\x20bytes\r\nSet
+SF:-Cookie:\x20BIGipServerpool-portail-honorabilite-depose\.cegedim\.cloud
+SF:-http=!VdJ0cp14tLv1BTsXIkI7F7SI9ajmiquz8vBvSJnpQc8Kh6oLTSbfbTogyFArJ5Yn
+SF:qCoF956yOCDAXiwiU7sMawHkMpQ=;\x20path=/;\x20Httponly;\x20Secure;\x20Sam
+SF:eSite=Strict\r\nStrict-Transport-Security:\x20max-age=31536000;\x20incl
+SF:udeSubDomains\r\nSet-Cookie:\x20TS01ac8ac8=01352d3811d30f5dd69df97f1c1f
+SF:05f46e5a5e87108ec3b3b4311ced5d02439bfffad3efbdf789c736557a402357eb341c8
+SF:2461ffa;\x20Path=/;\x20Secure;\x20HttpOnly\r\n\r\n<!DOCTYPE\x20html>\n<
+SF:html>\n<head>\n<title>Welcome\x20to\x20nginx!</title>\n<style>\n\x20\x2
+SF:0\x20\x20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20width:\x2035em;\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20auto;\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20font-family:\x20Tahoma,\x20Verdana,\x20Arial,\x20sans-ser
+SF:if;\n\x20\x20\x20\x20}\n</style>\n</head>\n<body>\n<h1>Welcome\x20to\x2
+SF:0nginx!</h1>\n<p>If\x20you\x20see\x20this\x20page,\x20the\x20nginx\x20w
+SF:")%r(HTTPOptions,57,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nCo
+SF:nnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n405\x20ERROR")%r
+SF:(FourOhFourRequest,1ED,"HTTP/1\.1\x20200\x20OK\r\nCache-Control:\x20no-
+SF:store,\x20must-revalidate,\x20no-cache\r\nPragma:\x20no-cache\r\nConnec
+SF:tion:\x20close\r\nContent-Type:\x20text/html\r\nContent-Length:\x20244\
+SF:r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=bl
+SF:ock\r\nX-Content-Type-Options:\x20nosniff\r\n\r\n<html><head><title>Req
+SF:uest\x20Rejected</title></head><body>The\x20requested\x20URL\x20was\x20
+SF:rejected\.\x20Please\x20consult\x20with\x20your\x20administrator\.<br><
+SF:br>Your\x20support\x20ID\x20is:\x20<1938290216907836295><br><br><a\x20h
+SF:ref='javascript:history\.back\(\);'>\[Go\x20Back\]</body></html>")%r(RT
+SF:SPRequest,9D,"<html>\r\n<head><title>400\x20Bad\x20Request</title></hea
+SF:d>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr>
+SF:<center>nginx/1\.18\.0</center>\r\n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 03:45:38 2025 -- 1 IP address (1 host up) scanned in 170.06 seconds
+# Nmap done at Tue Nov 11 20:37:37 2025 -- 1 IP address (1 host up) scanned in 171.75 seconds
