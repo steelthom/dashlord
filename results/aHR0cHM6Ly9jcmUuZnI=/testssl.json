@@ -184,8 +184,15 @@
               "id"           : "cipher_order-tls1_3",
               "ip"           : "cre.fr/217.115.162.97",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "severity"     : "OK",
+              "finding"      : "server -- server prioritizes ChaCha ciphers when preferred by clients"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "cre.fr/217.115.162.97",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "cipher-tls1_3_x1302",
@@ -202,25 +209,25 @@
               "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH/MLKEM ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "cre.fr/217.115.162.97",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_3",
+              "id"           : "cipherorder_TLSv1_3",
               "ip"           : "cre.fr/217.115.162.97",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "prioritize_chacha_TLSv1_3",
+              "ip"           : "cre.fr/217.115.162.97",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "true"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "cre.fr/217.115.162.97",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server -- TLS 1.3 client determined"
+              "finding"      : "server"
           }
 ,         {
               "id"           : "FS",
@@ -437,7 +444,7 @@
               "ip"           : "cre.fr/217.115.162.97",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "58 >= 30 days"
+              "finding"      : "54 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -598,7 +605,7 @@
               "ip"           : "cre.fr/217.115.162.97",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762500983"
+              "finding"      : "1762829018"
           }
 ,         {
               "id"           : "HSTS",
@@ -1147,6 +1154,6 @@
               "ip"           : "cre.fr/217.115.162.97",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "77"
+              "finding"      : "147"
           }
 ]
