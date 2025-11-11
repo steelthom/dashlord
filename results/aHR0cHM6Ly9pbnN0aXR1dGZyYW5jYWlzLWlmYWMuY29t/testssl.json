@@ -430,7 +430,7 @@
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "79 >= 30 days"
+              "finding"      : "75 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -576,22 +576,22 @@
               "id"           : "HTTP_status_code",
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "Unexpected 503 Service Temporarily Unavailable @ '/'"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-764 seconds from localtime"
+              "finding"      : "-769 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762521473"
+              "finding"      : "1762848043"
           }
 ,         {
               "id"           : "HSTS",
@@ -626,14 +626,14 @@
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/'"
+              "finding"      : "0 at '/' (maybe missed the application)"
           }
 ,         {
-              "id"           : "security_headers",
+              "id"           : "Cache-Control",
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "--"
+              "severity"     : "INFO",
+              "finding"      : "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -709,10 +709,10 @@
               "id"           : "BREACH",
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, br gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1140,6 +1140,6 @@
               "ip"           : "institutfrancais-ifac.com/185.154.138.205",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "72"
+              "finding"      : "70"
           }
 ]
