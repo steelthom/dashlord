@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Nov  8 13:30:58 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln snosm.ensm.sports.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 08:17:04 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln snosm.ensm.sports.gouv.fr
 Nmap scan report for snosm.ensm.sports.gouv.fr (91.121.60.176)
-Host is up (0.090s latency).
+Host is up (0.11s latency).
 rDNS record for 91.121.60.176: zensa.ensm.org
 Not shown: 993 filtered tcp ports (no-response)
 PORT     STATE SERVICE    VERSION
@@ -14,9 +14,6 @@ PORT     STATE SERVICE    VERSION
 |   100000  3,4          111/tcp6  rpcbind
 |_  100000  3,4          111/udp6  rpcbind
 443/tcp  open  ssl/http   Apache httpd 2.4.29 ((Ubuntu))
-| http-server-header: 
-|   Apache/2.4.29 (Ubuntu)
-|_  Apache/2.4.62 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.29: 
 |     	PACKETSTORM:176334	9.8	https://vulners.com/packetstorm/PACKETSTORM:176334	*EXPLOIT*
@@ -76,6 +73,7 @@ PORT     STATE SERVICE    VERSION
 |     	CNVD-2023-30860	9.0	https://vulners.com/cnvd/CNVD-2023-30860
 |     	CNVD-2022-03224	9.0	https://vulners.com/cnvd/CNVD-2022-03224
 |     	AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	9.0	https://vulners.com/githubexploit/AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	*EXPLOIT*
+|     	9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	9.0	https://vulners.com/githubexploit/9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	*EXPLOIT*
 |     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	9.0	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
 |     	7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	9.0	https://vulners.com/githubexploit/7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	*EXPLOIT*
 |     	36618CA8-9316-59CA-B748-82F15F407C4F	9.0	https://vulners.com/githubexploit/36618CA8-9316-59CA-B748-82F15F407C4F	*EXPLOIT*
@@ -243,44 +241,47 @@ PORT     STATE SERVICE    VERSION
 |     	1337DAY-ID-33575	4.3	https://vulners.com/zdt/1337DAY-ID-33575	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
+| http-server-header: 
+|   Apache/2.4.29 (Ubuntu)
+|_  Apache/2.4.62 (Debian)
 5222/tcp open  jabber     Prosody Jabber client 0.8.0 or newer
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     xmpp: 
-|       version: 1.0
 |     compression_methods: 
 |     auth_mechanisms: 
+|     capabilities: 
+|     features: 
 |     unknown: 
+|     xmpp: 
+|       version: 1.0
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve snosm.ensm.sports.gouv.fr
 |       stream:stream
-|       (timeout)
-|     capabilities: 
-|_    features: 
+|_      (timeout)
 5269/tcp open  jabber     Prosody Jabber server (dialback)
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
+|     compression_methods: 
+|     stream_id: a7c7817e-5f7b-4145-b770-9410bea9ce80
+|     capabilities: 
+|     auth_mechanisms: 
+|     features: 
+|     unknown: 
 |     xmpp: 
 |       lang: en
 |       version: 1.0
-|     compression_methods: 
-|     auth_mechanisms: 
-|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve snosm.ensm.sports.gouv.fr
 |       stream:stream
-|       (timeout)
-|     capabilities: 
-|     stream_id: 1477d315-b912-40d2-8213-d82094fa1ee5
-|_    features: 
+|_      (timeout)
 5280/tcp open  http       Prosody XMPP BOSH httpd
 Service Info: Host:  www.ensastage.net; Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 13:31:19 2025 -- 1 IP address (1 host up) scanned in 21.07 seconds
+# Nmap done at Wed Nov 12 08:17:27 2025 -- 1 IP address (1 host up) scanned in 23.10 seconds
