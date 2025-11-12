@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Sat Nov  8 08:19:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sia.detenteurs.interieur.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 03:33:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sia.detenteurs.interieur.gouv.fr
 Nmap scan report for sia.detenteurs.interieur.gouv.fr (143.196.253.156)
-Host is up (0.082s latency).
+Host is up (0.11s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Sat, 08 Nov 2025 08:20:11 GMT
+|     Date: Wed, 12 Nov 2025 03:34:04 GMT
 |     Location: https://sia.registres.interieur.gouv.fr/nice ports,/Trinity.txt.bak
 |     Content-Length: 275
 |     Connection: close
@@ -21,7 +21,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Sat, 08 Nov 2025 08:20:01 GMT
+|     Date: Wed, 12 Nov 2025 03:33:54 GMT
 |     Location: https://sia.registres.interieur.gouv.fr/
 |     Content-Length: 248
 |     Connection: close
@@ -35,7 +35,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   Help: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 08 Nov 2025 08:20:32 GMT
+|     Date: Wed, 12 Nov 2025 03:34:25 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -49,9 +49,9 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 443/tcp open  ssl/https
 | fingerprint-strings: 
-|   FourOhFourRequest: 
+|   FourOhFourRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 08 Nov 2025 08:20:08 GMT
+|     Date: Wed, 12 Nov 2025 03:34:01 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -63,9 +63,9 @@ PORT    STATE SERVICE   VERSION
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 08 Nov 2025 08:20:07 GMT
+|     Date: Wed, 12 Nov 2025 03:34:00 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -79,7 +79,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sat, 08 Nov 2025 08:20:19 GMT
+|     Date: Wed, 12 Nov 2025 03:34:12 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -93,73 +93,73 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690EFD31%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,1C8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20S
-SF:at,\x2008\x20Nov\x202025\x2008:20:01\x20GMT\r\nLocation:\x20https://sia
-SF:\.registres\.interieur\.gouv\.fr/\r\nContent-Length:\x20248\r\nConnecti
-SF:on:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r
-SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\
-SF:n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head><body
-SF:>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20moved\x2
-SF:0<a\x20href=\"https://sia\.registres\.interieur\.gouv\.fr/\">here</a>\.
-SF:</p>\n</body></html>\n")%r(HTTPOptions,1C8,"HTTP/1\.1\x20301\x20Moved\x
-SF:20Permanently\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2008:20:01\x20GMT\
-SF:r\nLocation:\x20https://sia\.registres\.interieur\.gouv\.fr/\r\nContent
-SF:-Length:\x20248\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\
-SF:x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//
-SF:DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Perman
-SF:ently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20
-SF:document\x20has\x20moved\x20<a\x20href=\"https://sia\.registres\.interi
-SF:eur\.gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(FourOhFourRequest
-SF:,1FE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sat,\x2008\x
-SF:20Nov\x202025\x2008:20:11\x20GMT\r\nLocation:\x20https://sia\.registres
-SF:\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nContent-Lengt
-SF:h:\x20275\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x2
-SF:0HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently<
-SF:/title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20docume
-SF:nt\x20has\x20moved\x20<a\x20href=\"https://sia\.registres\.interieur\.g
-SF:ouv\.fr/nice\x20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n</body></htm
-SF:l>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\
-SF:x2008\x20Nov\x202025\x2008:20:32\x20GMT\r\nContent-Length:\x20226\r\nCo
-SF:nnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1
-SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
-SF:EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><body
-SF:>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\
-SF:x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p
-SF:>\n</body></html>\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=69140022%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,1C8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Wed,\x2012\x20Nov\x202025\x2003:33:54\x20GMT\r\nLocation:\x20https://si
+SF:a\.registres\.interieur\.gouv\.fr/\r\nContent-Length:\x20248\r\nConnect
+SF:ion:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\
+SF:r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">
+SF:\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head><bod
+SF:y>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20moved\x
+SF:20<a\x20href=\"https://sia\.registres\.interieur\.gouv\.fr/\">here</a>\
+SF:.</p>\n</body></html>\n")%r(HTTPOptions,1C8,"HTTP/1\.1\x20301\x20Moved\
+SF:x20Permanently\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:33:54\x20GMT
+SF:\r\nLocation:\x20https://sia\.registres\.interieur\.gouv\.fr/\r\nConten
+SF:t-Length:\x20248\r\nConnection:\x20close\r\nContent-Type:\x20text/html;
+SF:\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF/
+SF:/DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Perma
+SF:nently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x2
+SF:0document\x20has\x20moved\x20<a\x20href=\"https://sia\.registres\.inter
+SF:ieur\.gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(FourOhFourReques
+SF:t,1FE,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Wed,\x2012\
+SF:x20Nov\x202025\x2003:34:04\x20GMT\r\nLocation:\x20https://sia\.registre
+SF:s\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nContent-Leng
+SF:th:\x20275\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x
+SF:20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently
+SF:</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20docum
+SF:ent\x20has\x20moved\x20<a\x20href=\"https://sia\.registres\.interieur\.
+SF:gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\">here</a>\.</p>\n</body></ht
+SF:ml>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,
+SF:\x2012\x20Nov\x202025\x2003:34:25\x20GMT\r\nContent-Length:\x20226\r\nC
+SF:onnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-
+SF:1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0/
+SF:/EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head><bod
+SF:y>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20request
+SF:\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>\n</
+SF:p>\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690EFD37%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Sat,\x2008\x20Nov\x202025\x2008:20:07\x20GMT\r\nContent-Length:\x20226\
-SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8
-SF:859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
-SF:\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head>
-SF:<body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20req
-SF:uest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>
-SF:\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2008:20:07\x20GMT\r\nC
-SF:ontent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/
-SF:html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
-SF:IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Re
-SF:quest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brows
-SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
-SF:0understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,17
-SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2008\x20Nov\x20
-SF:2025\x2008:20:08\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
-SF:se\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYP
-SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
-SF:ad>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Re
-SF:quest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\
-SF:x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html
-SF:>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Sat,\x2008\x20Nov\x202025\x2008:20:19\x20GMT\r\nContent-Length:\x20226
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=69140028%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
+SF:0Wed,\x2012\x20Nov\x202025\x2003:34:00\x20GMT\r\nContent-Length:\x20226
 SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
 SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
 SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
 SF:><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20re
 SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
-SF:>\n</p>\n</body></html>\n");
+SF:>\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\
+SF:x20Request\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:34:01\x20GMT\r\n
+SF:Content-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text
+SF:/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20R
+SF:equest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brow
+SF:ser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x
+SF:20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,1
+SF:78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,\x2012\x20Nov\x2
+SF:02025\x2003:34:01\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
+SF:ead>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20R
+SF:equest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this
+SF:\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></htm
+SF:l>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x
+SF:20Wed,\x2012\x20Nov\x202025\x2003:34:12\x20GMT\r\nContent-Length:\x2022
+SF:6\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso
+SF:-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x2
+SF:02\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</hea
+SF:d><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20r
+SF:equest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20
+SF:/>\n</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 08:21:53 2025 -- 1 IP address (1 host up) scanned in 125.95 seconds
+# Nmap done at Wed Nov 12 03:35:49 2025 -- 1 IP address (1 host up) scanned in 130.47 seconds
