@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Nov  8 19:20:53 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln teleservices-cnaps.interieur.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 13:21:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln teleservices-cnaps.interieur.gouv.fr
 Nmap scan report for teleservices-cnaps.interieur.gouv.fr (185.209.55.140)
-Host is up (0.10s latency).
+Host is up (0.14s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
@@ -31,7 +31,7 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
-|     date: Sat, 08 Nov 2025 19:21:15 GMT
+|     date: Wed, 12 Nov 2025 13:22:20 GMT
 |     server: Apache
 |     content-length: 196
 |     content-type: text/html; charset=iso-8859-1
@@ -44,9 +44,18 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Not Found</h1>
 |     <p>The requested URL was not found on this server.</p>
 |     </body></html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     date: Sat, 08 Nov 2025 19:21:15 GMT
+|     date: Wed, 12 Nov 2025 13:22:18 GMT
+|     server: Apache
+|     location: https://teleservice.cnaps.minint.fr/teleservices/
+|     content-length: 0
+|     content-type: text/html; charset=UTF-8
+|     strict-transport-security: max-age=63072000
+|     connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     date: Wed, 12 Nov 2025 13:22:19 GMT
 |     server: Apache
 |     location: https://teleservice.cnaps.minint.fr/teleservices/
 |     content-length: 0
@@ -73,52 +82,52 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690F9824%P=x86_64-alpine-linux-musl%r
-SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x2
-SF:0110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-T
-SF:ype:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
-SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
-SF:x20time\.\n</body></html>\n")%r(GetRequest,6A,"HTTP/1\.1\x20302\x20Foun
-SF:d\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\ncache-control:\x
-SF:20no-cache\r\nconnection:\x20close\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.
-SF:1\x20302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\n
-SF:cache-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(FourOhFo
-SF:urRequest,8D,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nloca
-SF:tion:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\ncache-control
-SF::\x20no-cache\r\nconnection:\x20close\r\n\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=69148A03%P=x86_64-alpine-linux-musl%
+SF:r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-length:\x
+SF:20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nContent-
+SF:Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h
+SF:1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in
+SF:\x20time\.\n</body></html>\n")%r(GetRequest,6A,"HTTP/1\.1\x20302\x20Fou
+SF:nd\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\ncache-control:\
+SF:x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\
+SF:.1\x20302\x20Found\r\ncontent-length:\x200\r\nlocation:\x20https:///\r\
+SF:ncache-control:\x20no-cache\r\nconnection:\x20close\r\n\r\n")%r(FourOhF
+SF:ourRequest,8D,"HTTP/1\.1\x20302\x20Found\r\ncontent-length:\x200\r\nloc
+SF:ation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\ncache-contro
+SF:l:\x20no-cache\r\nconnection:\x20close\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690F982A%P=x86_64-alpine-linux
-SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-len
-SF:gth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nCo
-SF:ntent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time-
-SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
-SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,10F,"HTTP/1\.1\x20301
-SF:\x20Moved\x20Permanently\r\ndate:\x20Sat,\x2008\x20Nov\x202025\x2019:21
-SF::15\x20GMT\r\nserver:\x20Apache\r\nlocation:\x20https://teleservice\.cn
-SF:aps\.minint\.fr/teleservices/\r\ncontent-length:\x200\r\ncontent-type:\
-SF:x20text/html;\x20charset=UTF-8\r\nstrict-transport-security:\x20max-age
-SF:=63072000\r\nconnection:\x20close\r\n\r\n")%r(HTTPOptions,10F,"HTTP/1\.
-SF:1\x20301\x20Moved\x20Permanently\r\ndate:\x20Sat,\x2008\x20Nov\x202025\
-SF:x2019:21:15\x20GMT\r\nserver:\x20Apache\r\nlocation:\x20https://teleser
-SF:vice\.cnaps\.minint\.fr/teleservices/\r\ncontent-length:\x200\r\nconten
-SF:t-type:\x20text/html;\x20charset=UTF-8\r\nstrict-transport-security:\x2
-SF:0max-age=63072000\r\nconnection:\x20close\r\n\r\n")%r(FourOhFourRequest
-SF:,195,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Sat,\x2008\x20Nov\x2
-SF:02025\x2019:21:15\x20GMT\r\nserver:\x20Apache\r\ncontent-length:\x20196
-SF:\r\ncontent-type:\x20text/html;\x20charset=iso-8859-1\r\nstrict-transpo
-SF:rt-security:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCTY
-SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
-SF:ead>\n<title>404\x20Not\x20Found</title>\n</head><body>\n<h1>Not\x20Fou
-SF:nd</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20thi
-SF:s\x20server\.</p>\n</body></html>\n")%r(tor-versions,CF,"HTTP/1\.1\x204
-SF:00\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-c
-SF:ache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<html
-SF:><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x2
-SF:0invalid\x20request\.\n</body></html>\n")%r(RTSPRequest,CF,"HTTP/1\.1\x
-SF:20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20n
-SF:o-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<h
-SF:tml><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an
-SF:\x20invalid\x20request\.\n</body></html>\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=69148A0A%P=x86_64-alpine-linu
+SF:x-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\nContent-le
+SF:ngth:\x20110\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\nC
+SF:ontent-Type:\x20text/html\r\n\r\n<html><body><h1>408\x20Request\x20Time
+SF:-out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20reques
+SF:t\x20in\x20time\.\n</body></html>\n")%r(GetRequest,10F,"HTTP/1\.1\x2030
+SF:1\x20Moved\x20Permanently\r\ndate:\x20Wed,\x2012\x20Nov\x202025\x2013:2
+SF:2:18\x20GMT\r\nserver:\x20Apache\r\nlocation:\x20https://teleservice\.c
+SF:naps\.minint\.fr/teleservices/\r\ncontent-length:\x200\r\ncontent-type:
+SF:\x20text/html;\x20charset=UTF-8\r\nstrict-transport-security:\x20max-ag
+SF:e=63072000\r\nconnection:\x20close\r\n\r\n")%r(HTTPOptions,10F,"HTTP/1\
+SF:.1\x20301\x20Moved\x20Permanently\r\ndate:\x20Wed,\x2012\x20Nov\x202025
+SF:\x2013:22:19\x20GMT\r\nserver:\x20Apache\r\nlocation:\x20https://telese
+SF:rvice\.cnaps\.minint\.fr/teleservices/\r\ncontent-length:\x200\r\nconte
+SF:nt-type:\x20text/html;\x20charset=UTF-8\r\nstrict-transport-security:\x
+SF:20max-age=63072000\r\nconnection:\x20close\r\n\r\n")%r(FourOhFourReques
+SF:t,195,"HTTP/1\.1\x20404\x20Not\x20Found\r\ndate:\x20Wed,\x2012\x20Nov\x
+SF:202025\x2013:22:20\x20GMT\r\nserver:\x20Apache\r\ncontent-length:\x2019
+SF:6\r\ncontent-type:\x20text/html;\x20charset=iso-8859-1\r\nstrict-transp
+SF:ort-security:\x20max-age=63072000\r\nconnection:\x20close\r\n\r\n<!DOCT
+SF:YPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><
+SF:head>\n<title>404\x20Not\x20Found</title>\n</head><body>\n<h1>Not\x20Fo
+SF:und</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\x20on\x20th
+SF:is\x20server\.</p>\n</body></html>\n")%r(tor-versions,CF,"HTTP/1\.1\x20
+SF:400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20no-
+SF:cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<htm
+SF:l><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x
+SF:20invalid\x20request\.\n</body></html>\n")%r(RTSPRequest,CF,"HTTP/1\.1\
+SF:x20400\x20Bad\x20request\r\nContent-length:\x2090\r\nCache-Control:\x20
+SF:no-cache\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\n\r\n<
+SF:html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20a
+SF:n\x20invalid\x20request\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 19:21:34 2025 -- 1 IP address (1 host up) scanned in 40.40 seconds
+# Nmap done at Wed Nov 12 13:22:43 2025 -- 1 IP address (1 host up) scanned in 49.54 seconds
