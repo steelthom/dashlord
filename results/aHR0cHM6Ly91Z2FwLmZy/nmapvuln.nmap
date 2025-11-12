@@ -1,8 +1,8 @@
-# Nmap 7.92 scan initiated Sat Nov  8 14:58:38 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ugap.fr
-Nmap scan report for ugap.fr (82.210.54.138)
-Host is up (0.13s latency).
-Other addresses for ugap.fr (not scanned): 82.210.54.207
-rDNS record for 82.210.54.138: 138.54.210.82.in-addr.arpa.celeste.fr
+# Nmap 7.92 scan initiated Wed Nov 12 14:02:47 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ugap.fr
+Nmap scan report for ugap.fr (82.210.54.207)
+Host is up (0.10s latency).
+Other addresses for ugap.fr (not scanned): 82.210.54.138
+rDNS record for 82.210.54.207: 207.54.210.82.in-addr.arpa.celeste.fr
 Not shown: 998 closed tcp ports (reset)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
@@ -23,7 +23,7 @@ PORT    STATE SERVICE   VERSION
 |     <H1>The Document has moved</H1></BODY></HTML>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Invalid Request
-|     Date: Sat, 08 Nov 2025 14:58:47 GMT
+|     Date: Wed, 12 Nov 2025 14:02:55 GMT
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 1; mode=block
 |     X-Content-Type-Options: nosniff
@@ -33,7 +33,7 @@ PORT    STATE SERVICE   VERSION
 |     <html><head><title>400 Invalid Request</title></head><body>Invalid Request: ??</body>
 |   SIPOptions: 
 |     HTTP/1.1 400 Invalid Request
-|     Date: Sat, 08 Nov 2025 15:00:01 GMT
+|     Date: Wed, 12 Nov 2025 14:04:10 GMT
 |     X-Frame-Options: SAMEORIGIN
 |     X-XSS-Protection: 1; mode=block
 |     X-Content-Type-Options: nosniff
@@ -45,16 +45,16 @@ PORT    STATE SERVICE   VERSION
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Sat, 08 Nov 2025 14:58:53 GMT
+|     Date: Wed, 12 Nov 2025 14:03:01 GMT
 |     Content-Type: text/html; charset=utf-8
-|     Content-Length: 561080
+|     Content-Length: 559621
 |     Connection: close
-|     Etag: "88fb8-DZgOn562krOAyFSwkp5sLE938Zg"
+|     Etag: "88a05-rBnn2BvTigNTEnBB03CkL/CRrR0"
+|     X-Cache: MISS
+|     age: 0
 |     cache-control: private, max-age=3600
 |     vary: Cookie
 |     Accept-Ranges: bytes
-|     X-Cache: MISS
-|     age: 0
 |     Strict-Transport-Security: max-age=15724800; includeSubDomains
 |     <!doctype html>
 |     <html data-n-head-ssr lang="fr" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22fr%22%7D%7D">
@@ -66,13 +66,13 @@ PORT    STATE SERVICE   VERSION
 |     publics."><title>Centrale d&#x27;achat public | Le choix de l&#x27;achat juste
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Sat, 08 Nov 2025 14:58:54 GMT
+|     Date: Wed, 12 Nov 2025 14:03:02 GMT
 |     Content-Type: text/html; charset=utf-8
-|     Content-Length: 561080
+|     Content-Length: 559621
 |     Connection: close
 |     Vary: Accept-Encoding, Accept-Encoding
 |     Cache-Control: public,max-age=5,must-revalidate,proxy-revalidate
-|     Etag: "88fb8-DZgOn562krOAyFSwkp5sLE938Zg"
+|     Etag: "88a05-rBnn2BvTigNTEnBB03CkL/CRrR0"
 |     age: 0
 |     X-Cache: NONE
 |     Accept-Ranges: bytes
@@ -87,72 +87,72 @@ PORT    STATE SERVICE   VERSION
 |_    publics."><title>Centrale d&#x2
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690F5AA6%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,19C,"HTTP/1\.1\x20301\x20Moved\x20Permanently\x20\r\nConnec
-SF:tion:\x20close\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAM
-SF:EORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Opti
-SF:ons:\x20nosniff\r\nLocation:\x20https://192\.168\.220\.246/\r\nContent-
-SF:Length:\x20181\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20H
-SF:TML\x204\.0\x20Transitional//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Mov
-SF:ed\x20Permanently\x20</TITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\x
-SF:20has\x20moved</H1></BODY></HTML>\r\n\r\n")%r(HTTPOptions,19C,"HTTP/1\.
-SF:1\x20301\x20Moved\x20Permanently\x20\r\nConnection:\x20close\r\nContent
-SF:-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protecti
-SF:on:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nLocati
-SF:on:\x20https://192\.168\.220\.246/\r\nContent-Length:\x20181\r\n\r\n<!D
-SF:OCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.0\x20Transition
-SF:al//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Moved\x20Permanently\x20</TI
-SF:TLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\x20has\x20moved</H1></BODY
-SF:></HTML>\r\n\r\n")%r(RTSPRequest,13B,"HTTP/1\.1\x20400\x20Invalid\x20Re
-SF:quest\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2014:58:47\x20GMT\r\nX-Fra
-SF:me-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX
-SF:-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Le
-SF:ngth:\x2087\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400
-SF:\x20Invalid\x20Request</title></head><body>Invalid\x20Request:\x20\?\?<
-SF:/body>\r\n")%r(SIPOptions,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\r
-SF:\nDate:\x20Sat,\x2008\x20Nov\x202025\x2015:00:01\x20GMT\r\nX-Frame-Opti
-SF:ons:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conten
-SF:t-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\x
-SF:2087\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400\x20Inv
-SF:alid\x20Request</title></head><body>Invalid\x20Request:\x20\?\?</body>\
-SF:r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=6914938F%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,19C,"HTTP/1\.1\x20301\x20Moved\x20Permanently\x20\r\nConne
+SF:ction:\x20close\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Opt
+SF:ions:\x20nosniff\r\nLocation:\x20https://192\.168\.220\.246/\r\nContent
+SF:-Length:\x20181\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20
+SF:HTML\x204\.0\x20Transitional//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Mo
+SF:ved\x20Permanently\x20</TITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\
+SF:x20has\x20moved</H1></BODY></HTML>\r\n\r\n")%r(HTTPOptions,19C,"HTTP/1\
+SF:.1\x20301\x20Moved\x20Permanently\x20\r\nConnection:\x20close\r\nConten
+SF:t-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protect
+SF:ion:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nLocat
+SF:ion:\x20https://192\.168\.220\.246/\r\nContent-Length:\x20181\r\n\r\n<!
+SF:DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.0\x20Transitio
+SF:nal//EN\">\r\n<HTML><HEAD>\r\n<TITLE>301\x20Moved\x20Permanently\x20</T
+SF:ITLE>\r\n</HEAD><BODY>\r\n<H1>The\x20Document\x20has\x20moved</H1></BOD
+SF:Y></HTML>\r\n\r\n")%r(RTSPRequest,13B,"HTTP/1\.1\x20400\x20Invalid\x20R
+SF:equest\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2014:02:55\x20GMT\r\nX-Fr
+SF:ame-Options:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-L
+SF:ength:\x2087\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>40
+SF:0\x20Invalid\x20Request</title></head><body>Invalid\x20Request:\x20\?\?
+SF:</body>\r\n")%r(SIPOptions,13B,"HTTP/1\.1\x20400\x20Invalid\x20Request\
+SF:r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2014:04:10\x20GMT\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nConnection:\x20close\r\nContent-Length:\
+SF:x2087\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>400\x20In
+SF:valid\x20Request</title></head><body>Invalid\x20Request:\x20\?\?</body>
+SF:\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690F5AAD%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,2000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2008\
-SF:x20Nov\x202025\x2014:58:53\x20GMT\r\nContent-Type:\x20text/html;\x20cha
-SF:rset=utf-8\r\nContent-Length:\x20561080\r\nConnection:\x20close\r\nEtag
-SF::\x20\"88fb8-DZgOn562krOAyFSwkp5sLE938Zg\"\r\ncache-control:\x20private
-SF:,\x20max-age=3600\r\nvary:\x20Cookie\r\nAccept-Ranges:\x20bytes\r\nX-Ca
-SF:che:\x20MISS\r\nage:\x200\r\nStrict-Transport-Security:\x20max-age=1572
-SF:4800;\x20includeSubDomains\r\n\r\n<!doctype\x20html>\n<html\x20data-n-h
-SF:ead-ssr\x20lang=\"fr\"\x20data-n-head=\"%7B%22lang%22:%7B%22ssr%22:%22f
-SF:r%22%7D%7D\">\n\x20\x20<head\x20>\n\x20\x20\x20\x20<meta\x20data-n-head
-SF:=\"ssr\"\x20charset=\"utf-8\"><meta\x20data-n-head=\"ssr\"\x20data-hid=
-SF:\"viewport\"\x20name=\"viewport\"\x20content=\"width=device-width,\x20i
-SF:nitial-scale=1\"><meta\x20data-n-head=\"ssr\"\x20data-hid=\"description
-SF:\"\x20name=\"description\"\x20content=\"L&#x27;UGAP\x20met\x20\xc3\xa0\
-SF:x20votre\x20disposition\x20une\x20large\x20gamme\x20de\x20produits\x20e
-SF:t\x20de\x20services\x20s\xc3\xa9lectionn\xc3\xa9s\x20dans\x20le\x20resp
-SF:ect\x20du\x20Code\x20des\x20march\xc3\xa9s\x20publics\.\"><title>Centra
-SF:le\x20d&#x27;achat\x20public\x20\|\x20Le\x20choix\x20de\x20l&#x27;achat
-SF:\x20juste\x20\xe2\x80\x93\x20UG")%r(HTTPOptions,2000,"HTTP/1\.1\x20200\
-SF:x20OK\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2014:58:54\x20GMT\r\nConte
-SF:nt-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20561080\r\
-SF:nConnection:\x20close\r\nVary:\x20Accept-Encoding,\x20Accept-Encoding\r
-SF:\nCache-Control:\x20public,max-age=5,must-revalidate,proxy-revalidate\r
-SF:\nEtag:\x20\"88fb8-DZgOn562krOAyFSwkp5sLE938Zg\"\r\nage:\x200\r\nX-Cach
-SF:e:\x20NONE\r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x20
-SF:max-age=15724800;\x20includeSubDomains\r\n\r\n<!doctype\x20html>\n<html
-SF:\x20data-n-head-ssr\x20lang=\"fr\"\x20data-n-head=\"%7B%22lang%22:%7B%2
-SF:2ssr%22:%22fr%22%7D%7D\">\n\x20\x20<head\x20>\n\x20\x20\x20\x20<meta\x2
-SF:0data-n-head=\"ssr\"\x20charset=\"utf-8\"><meta\x20data-n-head=\"ssr\"\
-SF:x20data-hid=\"viewport\"\x20name=\"viewport\"\x20content=\"width=device
-SF:-width,\x20initial-scale=1\"><meta\x20data-n-head=\"ssr\"\x20data-hid=\
-SF:"description\"\x20name=\"description\"\x20content=\"L&#x27;UGAP\x20met\
-SF:x20\xc3\xa0\x20votre\x20disposition\x20une\x20large\x20gamme\x20de\x20p
-SF:roduits\x20et\x20de\x20services\x20s\xc3\xa9lectionn\xc3\xa9s\x20dans\x
-SF:20le\x20respect\x20du\x20Code\x20des\x20march\xc3\xa9s\x20publics\.\"><
-SF:title>Centrale\x20d&#x2");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=69149396%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,2000,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Wed,\x2012
+SF:\x20Nov\x202025\x2014:03:01\x20GMT\r\nContent-Type:\x20text/html;\x20ch
+SF:arset=utf-8\r\nContent-Length:\x20559621\r\nConnection:\x20close\r\nEta
+SF:g:\x20\"88a05-rBnn2BvTigNTEnBB03CkL/CRrR0\"\r\nX-Cache:\x20MISS\r\nage:
+SF:\x200\r\ncache-control:\x20private,\x20max-age=3600\r\nvary:\x20Cookie\
+SF:r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x20max-age=157
+SF:24800;\x20includeSubDomains\r\n\r\n<!doctype\x20html>\n<html\x20data-n-
+SF:head-ssr\x20lang=\"fr\"\x20data-n-head=\"%7B%22lang%22:%7B%22ssr%22:%22
+SF:fr%22%7D%7D\">\n\x20\x20<head\x20>\n\x20\x20\x20\x20<meta\x20data-n-hea
+SF:d=\"ssr\"\x20charset=\"utf-8\"><meta\x20data-n-head=\"ssr\"\x20data-hid
+SF:=\"viewport\"\x20name=\"viewport\"\x20content=\"width=device-width,\x20
+SF:initial-scale=1\"><meta\x20data-n-head=\"ssr\"\x20data-hid=\"descriptio
+SF:n\"\x20name=\"description\"\x20content=\"L&#x27;UGAP\x20met\x20\xc3\xa0
+SF:\x20votre\x20disposition\x20une\x20large\x20gamme\x20de\x20produits\x20
+SF:et\x20de\x20services\x20s\xc3\xa9lectionn\xc3\xa9s\x20dans\x20le\x20res
+SF:pect\x20du\x20Code\x20des\x20march\xc3\xa9s\x20publics\.\"><title>Centr
+SF:ale\x20d&#x27;achat\x20public\x20\|\x20Le\x20choix\x20de\x20l&#x27;acha
+SF:t\x20juste\x20\xe2\x80\x93\x20UG")%r(HTTPOptions,2000,"HTTP/1\.1\x20200
+SF:\x20OK\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2014:03:02\x20GMT\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x20559621\r
+SF:\nConnection:\x20close\r\nVary:\x20Accept-Encoding,\x20Accept-Encoding\
+SF:r\nCache-Control:\x20public,max-age=5,must-revalidate,proxy-revalidate\
+SF:r\nEtag:\x20\"88a05-rBnn2BvTigNTEnBB03CkL/CRrR0\"\r\nage:\x200\r\nX-Cac
+SF:he:\x20NONE\r\nAccept-Ranges:\x20bytes\r\nStrict-Transport-Security:\x2
+SF:0max-age=15724800;\x20includeSubDomains\r\n\r\n<!doctype\x20html>\n<htm
+SF:l\x20data-n-head-ssr\x20lang=\"fr\"\x20data-n-head=\"%7B%22lang%22:%7B%
+SF:22ssr%22:%22fr%22%7D%7D\">\n\x20\x20<head\x20>\n\x20\x20\x20\x20<meta\x
+SF:20data-n-head=\"ssr\"\x20charset=\"utf-8\"><meta\x20data-n-head=\"ssr\"
+SF:\x20data-hid=\"viewport\"\x20name=\"viewport\"\x20content=\"width=devic
+SF:e-width,\x20initial-scale=1\"><meta\x20data-n-head=\"ssr\"\x20data-hid=
+SF:\"description\"\x20name=\"description\"\x20content=\"L&#x27;UGAP\x20met
+SF:\x20\xc3\xa0\x20votre\x20disposition\x20une\x20large\x20gamme\x20de\x20
+SF:produits\x20et\x20de\x20services\x20s\xc3\xa9lectionn\xc3\xa9s\x20dans\
+SF:x20le\x20respect\x20du\x20Code\x20des\x20march\xc3\xa9s\x20publics\.\">
+SF:<title>Centrale\x20d&#x2");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 15:01:29 2025 -- 1 IP address (1 host up) scanned in 170.99 seconds
+# Nmap done at Wed Nov 12 14:05:40 2025 -- 1 IP address (1 host up) scanned in 173.16 seconds
