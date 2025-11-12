@@ -10,7 +10,7 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Sat, 08 Nov 2025 08:10:14 GMT",
+      "date": "Wed, 12 Nov 2025 02:51:54 GMT",
       "content-type": "text/html;charset=windows-1252",
       "content-length": "3393",
       "connection": "close",
@@ -20,11 +20,11 @@
       "x-frame-options": "SAMEORIGIN",
       "x-xss-protection": "1; mode=block",
       "set-cookie": [
-        "NYPSESSID=h0fvi4cr4hqiq062l0dmd1eptq; path=/; HttpOnly"
+        "NYPSESSID=6crmc97dkbvo4g9pk2p41f9nm9; path=/; HttpOnly"
       ],
       "vary": "Accept-Encoding",
       "upgrade": "h2",
-      "last-modified": "Sat, 08 Nov 2025 08:10:14 GMT"
+      "last-modified": "Wed, 12 Nov 2025 02:51:54 GMT"
     }
   },
   "tests": {
@@ -64,12 +64,16 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://preinscription.creps-toulouse.sports.gouv.fr/",
+      "destination": "https://preinscription.creps-toulouse.sports.gouv.fr/netypareo/index.php/preinscription/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://preinscription.creps-toulouse.sports.gouv.fr/",
+        "https://preinscription.creps-toulouse.sports.gouv.fr/",
+        "https://preinscription.creps-toulouse.sports.gouv.fr/netypareo/index.php/preinscription/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
