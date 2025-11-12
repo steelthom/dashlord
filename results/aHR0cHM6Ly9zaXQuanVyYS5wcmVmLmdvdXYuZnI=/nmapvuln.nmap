@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Nov  8 08:09:42 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sit.jura.pref.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 02:43:57 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln sit.jura.pref.gouv.fr
 Nmap scan report for sit.jura.pref.gouv.fr (147.135.136.94)
-Host is up (0.15s latency).
+Host is up (0.12s latency).
 rDNS record for 147.135.136.94: ns0.aricia.com
 Not shown: 992 closed tcp ports (reset)
 PORT      STATE SERVICE               VERSION
@@ -171,9 +171,6 @@ PORT      STATE SERVICE               VERSION
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
 |_http-server-header: Apache/2.4.65 (Debian)
 443/tcp   open  ssl/http              Apache httpd 2.4.65
-| http-server-header: 
-|   Apache/2.4.65 (Debian)
-|_  Microsoft-IIS/6.0
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.65: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -231,12 +228,15 @@ PORT      STATE SERVICE               VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
+| http-server-header: 
+|   Apache/2.4.65 (Debian)
+|_  Microsoft-IIS/6.0
 555/tcp   open  dsf?
 10000/tcp open  ssl/snet-sensor-mgmt?
 | fingerprint-strings: 
 |   GenericLines: 
 |     HTTP/1.0 200 Document follows
-|     Date: Sat, 8 Nov 2025 08:10:12 GMT
+|     Date: Wed, 12 Nov 2025 02:44:25 GMT
 |     Server: MiniServ
 |     Connection: close
 |     Strict-Transport-Security: max-age=31536000;
@@ -253,13 +253,13 @@ PORT      STATE SERVICE               VERSION
 |     X-no-links: 1
 |     Content-type: text/html; Charset=UTF-8
 |     <!DOCTYPE html>
-|     <html data-bgs="gainsboro" class="ui--html session_login">
+|     <html class="ui--html session_login" data-bgs="gainsboro">
 |     <head>
 |     <meta name="color-scheme" content="only light">
-|     <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { back
+|     <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { bac
 |   GetRequest: 
 |     HTTP/1.0 200 Document follows
-|     Date: Sat, 8 Nov 2025 08:10:19 GMT
+|     Date: Wed, 12 Nov 2025 02:44:32 GMT
 |     Server: MiniServ
 |     Connection: close
 |     Strict-Transport-Security: max-age=31536000;
@@ -276,47 +276,47 @@ PORT      STATE SERVICE               VERSION
 |     X-no-links: 1
 |     Content-type: text/html; Charset=UTF-8
 |     <!DOCTYPE html>
-|     <html data-bgs="gainsboro" class="ui--html session_login">
+|     <html class="ui--html session_login" data-bgs="gainsboro">
 |     <head>
 |     <meta name="color-scheme" content="only light">
-|_    <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { back
+|_    <noscript> <style> html[data-bgs="gainsboro"] { background-color: #d6d6d6; } html[data-bgs="nightRider"] { bac
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port10000-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690EFAEA%P=x86_64-alpine-lin
-SF:ux-musl%r(GenericLines,1132,"HTTP/1\.0\x20200\x20Document\x20follows\r\
-SF:nDate:\x20Sat,\x208\x20Nov\x202025\x2008:10:12\x20GMT\r\nServer:\x20Min
-SF:iServ\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-age=
-SF:31536000;\r\npragma:\x20no-cache\r\nExpires:\x20Thu,\x201\x20Jan\x20197
-SF:0\x2000:00:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-cache,\x20mus
-SF:t-revalidate\r\nCache-Control:\x20post-check=0,\x20pre-check=0\r\nAuth-
-SF:type:\x20auth-required=1\r\nSet-Cookie:\x20redirect=1;\x20path=/;\x20se
-SF:cure;\x20httpOnly\r\nSet-Cookie:\x20testing=1;\x20path=/;\x20secure;\x2
-SF:0httpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Security-Policy:
-SF:\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20frame-
-SF:src\x20'self';\x20child-src\x20'self'\r\nX-Content-Type-Options:\x20nos
-SF:niff\r\nX-no-links:\x201\r\nContent-type:\x20text/html;\x20Charset=UTF-
-SF:8\r\n\r\n<!DOCTYPE\x20html>\n<html\x20data-bgs=\"gainsboro\"\x20class=\
-SF:"ui--html\x20session_login\">\n<head>\n\x20<meta\x20name=\"color-scheme
-SF:\"\x20content=\"only\x20light\">\n\x20<noscript>\x20<style>\x20html\[da
-SF:ta-bgs=\"gainsboro\"\]\x20{\x20background-color:\x20#d6d6d6;\x20}\x20ht
-SF:ml\[data-bgs=\"nightRider\"\]\x20{\x20back")%r(GetRequest,1132,"HTTP/1\
-SF:.0\x20200\x20Document\x20follows\r\nDate:\x20Sat,\x208\x20Nov\x202025\x
-SF:2008:10:19\x20GMT\r\nServer:\x20MiniServ\r\nConnection:\x20close\r\nStr
-SF:ict-Transport-Security:\x20max-age=31536000;\r\npragma:\x20no-cache\r\n
-SF:Expires:\x20Thu,\x201\x20Jan\x201970\x2000:00:00\x20GMT\r\nCache-Contro
-SF:l:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20po
-SF:st-check=0,\x20pre-check=0\r\nAuth-type:\x20auth-required=1\r\nSet-Cook
-SF:ie:\x20redirect=1;\x20path=/;\x20secure;\x20httpOnly\r\nSet-Cookie:\x20
-SF:testing=1;\x20path=/;\x20secure;\x20httpOnly\r\nX-Frame-Options:\x20SAM
-SF:EORIGIN\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsafe-
-SF:inline'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'self
-SF:'\r\nX-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nContent-
-SF:type:\x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20html>\n<html\x
-SF:20data-bgs=\"gainsboro\"\x20class=\"ui--html\x20session_login\">\n<head
-SF:>\n\x20<meta\x20name=\"color-scheme\"\x20content=\"only\x20light\">\n\x
-SF:20<noscript>\x20<style>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20backg
-SF:round-color:\x20#d6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{\x
-SF:20back");
+SF-Port10000-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=6913F48F%P=x86_64-alpine-li
+SF:nux-musl%r(GenericLines,1133,"HTTP/1\.0\x20200\x20Document\x20follows\r
+SF:\nDate:\x20Wed,\x2012\x20Nov\x202025\x2002:44:25\x20GMT\r\nServer:\x20M
+SF:iniServ\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-ag
+SF:e=31536000;\r\npragma:\x20no-cache\r\nExpires:\x20Thu,\x201\x20Jan\x201
+SF:970\x2000:00:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-cache,\x20m
+SF:ust-revalidate\r\nCache-Control:\x20post-check=0,\x20pre-check=0\r\nAut
+SF:h-type:\x20auth-required=1\r\nSet-Cookie:\x20redirect=1;\x20path=/;\x20
+SF:secure;\x20httpOnly\r\nSet-Cookie:\x20testing=1;\x20path=/;\x20secure;\
+SF:x20httpOnly\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Security-Polic
+SF:y:\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20fram
+SF:e-src\x20'self';\x20child-src\x20'self'\r\nX-Content-Type-Options:\x20n
+SF:osniff\r\nX-no-links:\x201\r\nContent-type:\x20text/html;\x20Charset=UT
+SF:F-8\r\n\r\n<!DOCTYPE\x20html>\n<html\x20class=\"ui--html\x20session_log
+SF:in\"\x20data-bgs=\"gainsboro\">\n<head>\n\x20<meta\x20name=\"color-sche
+SF:me\"\x20content=\"only\x20light\">\n\x20<noscript>\x20<style>\x20html\[
+SF:data-bgs=\"gainsboro\"\]\x20{\x20background-color:\x20#d6d6d6;\x20}\x20
+SF:html\[data-bgs=\"nightRider\"\]\x20{\x20bac")%r(GetRequest,1133,"HTTP/1
+SF:\.0\x20200\x20Document\x20follows\r\nDate:\x20Wed,\x2012\x20Nov\x202025
+SF:\x2002:44:32\x20GMT\r\nServer:\x20MiniServ\r\nConnection:\x20close\r\nS
+SF:trict-Transport-Security:\x20max-age=31536000;\r\npragma:\x20no-cache\r
+SF:\nExpires:\x20Thu,\x201\x20Jan\x201970\x2000:00:00\x20GMT\r\nCache-Cont
+SF:rol:\x20no-store,\x20no-cache,\x20must-revalidate\r\nCache-Control:\x20
+SF:post-check=0,\x20pre-check=0\r\nAuth-type:\x20auth-required=1\r\nSet-Co
+SF:okie:\x20redirect=1;\x20path=/;\x20secure;\x20httpOnly\r\nSet-Cookie:\x
+SF:20testing=1;\x20path=/;\x20secure;\x20httpOnly\r\nX-Frame-Options:\x20S
+SF:AMEORIGIN\r\nContent-Security-Policy:\x20script-src\x20'self'\x20'unsaf
+SF:e-inline'\x20'unsafe-eval';\x20frame-src\x20'self';\x20child-src\x20'se
+SF:lf'\r\nX-Content-Type-Options:\x20nosniff\r\nX-no-links:\x201\r\nConten
+SF:t-type:\x20text/html;\x20Charset=UTF-8\r\n\r\n<!DOCTYPE\x20html>\n<html
+SF:\x20class=\"ui--html\x20session_login\"\x20data-bgs=\"gainsboro\">\n<he
+SF:ad>\n\x20<meta\x20name=\"color-scheme\"\x20content=\"only\x20light\">\n
+SF:\x20<noscript>\x20<style>\x20html\[data-bgs=\"gainsboro\"\]\x20{\x20bac
+SF:kground-color:\x20#d6d6d6;\x20}\x20html\[data-bgs=\"nightRider\"\]\x20{
+SF:\x20bac");
 Service Info: Hosts:  ns0.aricia.com, admin.agestis.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 08:12:22 2025 -- 1 IP address (1 host up) scanned in 160.60 seconds
+# Nmap done at Wed Nov 12 02:46:34 2025 -- 1 IP address (1 host up) scanned in 157.31 seconds
