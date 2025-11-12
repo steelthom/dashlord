@@ -1,10 +1,11 @@
-# Nmap 7.92 scan initiated Sat Nov  8 14:49:16 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln territoires.societenumerique.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 14:08:56 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln territoires.societenumerique.gouv.fr
 Nmap scan report for territoires.societenumerique.gouv.fr (212.129.49.118)
-Host is up (0.15s latency).
+Host is up (0.16s latency).
 rDNS record for 212.129.49.118: my.societenumerique.gouv.fr
-Not shown: 956 filtered tcp ports (no-response), 36 closed tcp ports (reset)
-PORT    STATE SERVICE    VERSION
-25/tcp  open  smtp
+Not shown: 968 filtered tcp ports (no-response)
+PORT      STATE  SERVICE        VERSION
+22/tcp    closed ssh
+25/tcp    open   smtp
 | fingerprint-strings: 
 |   GenericLines, GetRequest: 
 |     220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
@@ -18,10 +19,10 @@ PORT    STATE SERVICE    VERSION
 |     implemented
 |   NULL: 
 |_    220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
-80/tcp  open  http       nginx
-222/tcp open  tcpwrapped
-443/tcp open  ssl/http   nginx
-465/tcp open  ssl/smtp
+80/tcp    open   http           nginx
+222/tcp   open   tcpwrapped
+443/tcp   open   ssl/http       nginx
+465/tcp   open   ssl/smtp
 | fingerprint-strings: 
 |   GenericLines, GetRequest: 
 |     220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
@@ -35,7 +36,9 @@ PORT    STATE SERVICE    VERSION
 |     implemented
 |   NULL: 
 |_    220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
-587/tcp open  smtp
+481/tcp   closed dvs
+563/tcp   closed snews
+587/tcp   open   smtp
 | fingerprint-strings: 
 |   GenericLines, GetRequest: 
 |     220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
@@ -49,48 +52,69 @@ PORT    STATE SERVICE    VERSION
 |     implemented
 |   NULL: 
 |_    220 my.societenumerique.gouv.fr ESMTP Haraka/2.8.28 ready
-993/tcp open  imaps?
-995/tcp open  pop3s?
+687/tcp   closed asipregistry
+900/tcp   closed omginitialrefs
+992/tcp   closed telnets
+993/tcp   open   imaps?
+995/tcp   open   pop3s?
+1053/tcp  closed remote-as
+1328/tcp  closed ewall
+1783/tcp  closed unknown
+2004/tcp  closed mailbox
+2040/tcp  closed lam
+2144/tcp  closed lv-ffx
+2191/tcp  closed tvbus
+2967/tcp  closed symantec-av
+2968/tcp  closed enpp
+5298/tcp  closed presence
+5631/tcp  closed pcanywheredata
+6001/tcp  closed X11:1
+6003/tcp  closed X11:3
+6566/tcp  closed sane-port
+9878/tcp  closed kca-service
+10180/tcp closed unknown
+10215/tcp closed unknown
+34573/tcp closed unknown
 3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port25-TCP:V=7.92%I=7%D=11/8%Time=690F5899%P=x86_64-alpine-linux-musl%r
-SF:(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8
-SF:\.28\x20ready\r\n")%r(Hello,74,"220\x20my\.societenumerique\.gouv\.fr\x
-SF:20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x20EHLO\x20requires\x20domai
-SF:n/address\x20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,50,"220\x2
-SF:0my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\
-SF:n250\x20Not\x20implemented\r\n")%r(GenericLines,6F,"220\x20my\.societen
-SF:umerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\x20Unrec
-SF:ognized\x20command\r\n500\x20Unrecognized\x20command\r\n")%r(GetRequest
-SF:,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\
-SF:x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognized\x20co
-SF:mmand\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690F58A0%P=x86_64-alpine-linux
-SF:-musl%r(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Hara
-SF:ka/2\.8\.28\x20ready\r\n")%r(Hello,74,"220\x20my\.societenumerique\.gou
-SF:v\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x20EHLO\x20requires\x
-SF:20domain/address\x20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,50,
-SF:"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20r
-SF:eady\r\n250\x20Not\x20implemented\r\n")%r(GenericLines,6F,"220\x20my\.s
-SF:ocietenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\x
-SF:20Unrecognized\x20command\r\n500\x20Unrecognized\x20command\r\n")%r(Get
-SF:Request,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\
-SF:.8\.28\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognize
-SF:d\x20command\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port587-TCP:V=7.92%I=7%D=11/8%Time=690F5899%P=x86_64-alpine-linux-musl%
+SF-Port25-TCP:V=7.92%I=7%D=11/12%Time=69149513%P=x86_64-alpine-linux-musl%
 SF:r(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.
-SF:8\.28\x20ready\r\n")%r(GenericLines,6F,"220\x20my\.societenumerique\.go
-SF:uv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\x20Unrecognized\x20c
-SF:ommand\r\n500\x20Unrecognized\x20command\r\n")%r(Hello,74,"220\x20my\.s
-SF:ocietenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x
-SF:20EHLO\x20requires\x20domain/address\x20-\x20see\x20RFC-2821\x204\.1\.1
-SF:\.1\r\n")%r(Help,50,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20
-SF:Haraka/2\.8\.28\x20ready\r\n250\x20Not\x20implemented\r\n")%r(GetReques
+SF:8\.28\x20ready\r\n")%r(Hello,74,"220\x20my\.societenumerique\.gouv\.fr\
+SF:x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x20EHLO\x20requires\x20doma
+SF:in/address\x20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,50,"220\x
+SF:20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r
+SF:\n250\x20Not\x20implemented\r\n")%r(GenericLines,6F,"220\x20my\.societe
+SF:numerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\x20Unre
+SF:cognized\x20command\r\n500\x20Unrecognized\x20command\r\n")%r(GetReques
 SF:t,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28
 SF:\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognized\x20c
 SF:ommand\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port465-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=69149519%P=x86_64-alpine-linu
+SF:x-musl%r(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Har
+SF:aka/2\.8\.28\x20ready\r\n")%r(Hello,74,"220\x20my\.societenumerique\.go
+SF:uv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\x20EHLO\x20requires\
+SF:x20domain/address\x20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,50
+SF:,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20
+SF:ready\r\n250\x20Not\x20implemented\r\n")%r(GenericLines,6F,"220\x20my\.
+SF:societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\
+SF:x20Unrecognized\x20command\r\n500\x20Unrecognized\x20command\r\n")%r(Ge
+SF:tRequest,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2
+SF:\.8\.28\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecogniz
+SF:ed\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.92%I=7%D=11/12%Time=69149513%P=x86_64-alpine-linux-musl
+SF:%r(NULL,3B,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\
+SF:.8\.28\x20ready\r\n")%r(GenericLines,6F,"220\x20my\.societenumerique\.g
+SF:ouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n500\x20Unrecognized\x20
+SF:command\r\n500\x20Unrecognized\x20command\r\n")%r(Hello,74,"220\x20my\.
+SF:societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.28\x20ready\r\n501\
+SF:x20EHLO\x20requires\x20domain/address\x20-\x20see\x20RFC-2821\x204\.1\.
+SF:1\.1\r\n")%r(Help,50,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x2
+SF:0Haraka/2\.8\.28\x20ready\r\n250\x20Not\x20implemented\r\n")%r(GetReque
+SF:st,6F,"220\x20my\.societenumerique\.gouv\.fr\x20ESMTP\x20Haraka/2\.8\.2
+SF:8\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Unrecognized\x20
+SF:command\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 14:50:36 2025 -- 1 IP address (1 host up) scanned in 80.07 seconds
+# Nmap done at Wed Nov 12 14:09:58 2025 -- 1 IP address (1 host up) scanned in 61.40 seconds
