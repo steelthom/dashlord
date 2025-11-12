@@ -184,8 +184,15 @@
               "id"           : "cipher_order-tls1_3",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "NOT a cipher order configured"
+              "severity"     : "OK",
+              "finding"      : "server -- server prioritizes ChaCha ciphers when preferred by clients"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "cipher-tls1_3_x1302",
@@ -202,25 +209,25 @@
               "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH/MLKEM ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
-              "id"           : "cipher-tls1_3_x1301",
-              "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH/MLKEM AESGCM      128      TLS_AES_128_GCM_SHA256"
-          }
-,         {
-              "id"           : "supportedciphers_TLSv1_3",
+              "id"           : "cipherorder_TLSv1_3",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256"
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "prioritize_chacha_TLSv1_3",
+              "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "true"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "server -- TLS 1.3 client determined"
+              "finding"      : "server"
           }
 ,         {
               "id"           : "FS",
@@ -374,7 +381,7 @@
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "05B123F9AD8D4100F90F66C68E7AD712028F"
+              "finding"      : "050834CCA1151DFE0D38C41EC9B32224D47D"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -388,21 +395,21 @@
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "7F0546100935212D6D0F2D38099C0C1C469894FA"
+              "finding"      : "DFFA704A4B17BE5F1B90BED2EA498E31CAC1B8B7"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "EE3BEB1FBDAB2E39A8746E1E703C3B118A3A6DCB8BEEAD9A7E9A04A2F1C00146"
+              "finding"      : "04D02D5B617C8E18EE7AD3E61463E545EEAD42A882AB275A4809D60CFCED7E85"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFUDCCBDigAwIBAgISBbEj+a2NQQD5D2bGjnrXEgKPMA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTMwHhcNMjUwOTA5MTMxODQwWhcNMjUxMjA4MTMxODM5WjAwMS4wLAYDVQQDEyV0ZWxlcG9ydC5pbnQuY292b2l0dXJhZ2UuYmV0YS5nb3V2LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5X2xE8IZMH49ApOtYWIFFsxVwWqNrOwK8/lPY2DaifCuqZhcjCqCG0YPvRVAuGDaVCuBfND7aisqB4KJgW6r0Owfdqx0EhYCl6iovEiGhZbNVKtW3KKJnGV/dXyjSdjvcpHlFWD1As1qeH7XkfeGVDZP1bgHGheKeBDh6BO6vx6TWuxy06+1opgBesV2P8C/Q29DXBc05CjwHnLgSgwU9iX8xAkzzfh3WWFe8Q/Otrr0TKC21bzmZpmxdq8fmjAQsM9iSebN79Kpo26OSrONIwP4pN+MGYv0TmkwXkHUwCSO612mTilW6JJMExWgyh3M6tMfr871mKCtShHXO2qUuQIDAQABo4ICXzCCAlswDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBRYEpLed4K15efyWaGqRFTvMdQ4nTAfBgNVHSMEGDAWgBTnq58PLDOgU9NeT3jIsoQOO9aSMzAzBggrBgEFBQcBAQQnMCUwIwYIKwYBBQUHMAKGF2h0dHA6Ly9yMTMuaS5sZW5jci5vcmcvMFkGA1UdEQRSMFCCJyoudGVsZXBvcnQuaW50LmNvdm9pdHVyYWdlLmJldGEuZ291di5mcoIldGVsZXBvcnQuaW50LmNvdm9pdHVyYWdlLmJldGEuZ291di5mcjATBgNVHSAEDDAKMAgGBmeBDAECATAuBgNVHR8EJzAlMCOgIaAfhh1odHRwOi8vcjEzLmMubGVuY3Iub3JnLzE2LmNybDCCAQUGCisGAQQB1nkCBAIEgfYEgfMA8QB3AMz7D2qFcQll/pWbU87psnwi6YVcDZeNtql+VMD+TA2wAAABmS7WdMwAAAQDAEgwRgIhAKOWuoI8ddh4YJ9hKi7lxlMDo/Gu4Wtq3XiJC5CxM9TkAiEAl7m4FTLELRgXrqqPjkLuuMlX4S3ulp4mrei+5C2kABQAdgAN4fIwK9MNwUBiEgnqVS78R3R8sdfpMO8OQh60fk6qNAAAAZku1nTLAAAEAwBHMEUCIQDit4QaordN0h9bB29WMvwP99+/FlGZpjGyc/HwL1QLYAIgO8wrQAgh60/74qsiIx/uhLG5l9jk5Ag0hXpfNl2o+qkwDQYJKoZIhvcNAQELBQADggEBAF8BR1ukSa097yeArxraVNKWDF9wrm0Uvz8m6C9WW4aJA32PJyyeURwNH4VIdgngDNi4FQPZ1ZhTWAhi9sPINmXD3qBiNhczwkn2IxQlFDEpqmFIHI3Pk0v4O3wiIu5cWWalEpnAYzuxZ4/fms4KSAiYQcGKkpRObU8kCfac9POyvGa7M3lIuEXn+DqPGfoJNEAJ9PklS6JBwnOdlz4TJRE0wGhMpB5OwCZqXr1QBSs9fwMhFGaO08s4cLx92V8mDCB/sZcspOc6eZPNh8MQGhjO6eNoKRlUDuK6ONJV2mKQ+kjnKEZ4awMJnvpyXRKTAnOHs3nqRrCI2JlHSh9oB4A=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFTzCCBDegAwIBAgISBQg0zKEVHf4NOMQeybMiJNR9MA0GCSqGSIb3DQEBCwUAMDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNSMTMwHhcNMjUxMTA4MTIyMzI1WhcNMjYwMjA2MTIyMzI0WjAwMS4wLAYDVQQDEyV0ZWxlcG9ydC5pbnQuY292b2l0dXJhZ2UuYmV0YS5nb3V2LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxkHHB1Ck7Mp6nP3XuJD+5z+5ge6CjOPHAc0cWu6QFaY/0ecPpRb7fpC2MQdre1r4wInU5EhjkcpXDfKfZHEwyJCSf+tRP6PY23Ba+Hid5ad3ehKjCdMdnD+uLyKHxz7YGhWQH/6V9qTJeLa57A/8ob5j7NF15F4bPXC221AGWK1NQy7cHZNoo9RkU7RfaPkO1dWZyX8xLE+igf5NcIlrq8AiVVB8OxIuQzN2l/6V8jk/MfdyUhAfnKI45YKL1oytKuR+HDfLjzTbpQ+MB9+E5gk/KO8WemBr/SAJNGSUi4DAtfLVMsDCeJMnZAWqVnAbck/i87MnuWi51j5CYiliNwIDAQABo4ICXjCCAlowDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBSVkQwF0SEc+heYDMPOwW3v8nDdjTAfBgNVHSMEGDAWgBTnq58PLDOgU9NeT3jIsoQOO9aSMzAzBggrBgEFBQcBAQQnMCUwIwYIKwYBBQUHMAKGF2h0dHA6Ly9yMTMuaS5sZW5jci5vcmcvMFkGA1UdEQRSMFCCJyoudGVsZXBvcnQuaW50LmNvdm9pdHVyYWdlLmJldGEuZ291di5mcoIldGVsZXBvcnQuaW50LmNvdm9pdHVyYWdlLmJldGEuZ291di5mcjATBgNVHSAEDDAKMAgGBmeBDAECATAvBgNVHR8EKDAmMCSgIqAghh5odHRwOi8vcjEzLmMubGVuY3Iub3JnLzEyNi5jcmwwggEDBgorBgEEAdZ5AgQCBIH0BIHxAO8AdQDLOPcViXyEoURfW8Hd+8lu8ppZzUcKaQWFsMsUwxRY5wAAAZpjoW96AAAEAwBGMEQCIGo1fR6Vw+zhIAP0CkQQ2EmHLbabadg01ivn2kfDl5tRAiAwm5ZjPC1xUvL3cLDt4Qv9wD6X6Nj8H0C7sCkbSa9GpAB2AA5XlLzzrqk+MxssmQez95Dfm8I9cTIl3SGpJaxhxU4hAAABmmOhb18AAAQDAEcwRQIgLpFeDmW/KZIjdZq4D+FQjibraWqDiQiYCPZ3V6eNarkCIQCGfmykUWlO1WKcRbH7dYECNLDdh4FgovPsg3TOgdF5CTANBgkqhkiG9w0BAQsFAAOCAQEAKwarHGe1jSlJ8Dk82W7ltpSQRgExBz+znHXHM8ERUUeNfuACaQrAulMc1litXhObAbVYEhFwMkRKeAVztInYKb46kMF2vyjy33v6baxmLWbNhHAhk+1hMQ2yxcYPOAX9fsABFvl8z2CWPrLPsO/KJD9Ve84zdU3UPDD/cFn1eMxlamoKyqOPjXou2sQGKvxj+Vh31xTXGfhhxzzbMtcwVLiG8ovbjmFZC6Rmbq3NvpoC+wnKzvDJujHoSjUCFcsAyOCgNpAooW0m1lz8sC7m+JkJVC7N+bJuktkXJM2ivc+tcI3Gffz42YfGXkusETI4JlF8Z/NIhEWmL3OPFeTccA==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -450,22 +457,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "expires < 30 days (29)"
+              "severity"     : "OK",
+              "finding"      : "86 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2025-09-09 13:18"
+              "finding"      : "2025-11-08 12:23"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "2025-12-08 13:18"
+              "severity"     : "OK",
+              "finding"      : "2026-02-06 12:23"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -486,7 +493,7 @@
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://r13.c.lencr.org/16.crl"
+              "finding"      : "http://r13.c.lencr.org/126.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
@@ -612,7 +619,7 @@
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762608453"
+              "finding"      : "1762935837"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -841,7 +848,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=EE3BEB1FBDAB2E39A8746E1E703C3B118A3A6DCB8BEEAD9A7E9A04A2F1C00146"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=04D02D5B617C8E18EE7AD3E61463E545EEAD42A882AB275A4809D60CFCED7E85"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -1217,6 +1224,6 @@
               "ip"           : "teleport.int.covoiturage.beta.gouv.fr/195.154.196.62",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "174"
+              "finding"      : "159"
           }
 ]
