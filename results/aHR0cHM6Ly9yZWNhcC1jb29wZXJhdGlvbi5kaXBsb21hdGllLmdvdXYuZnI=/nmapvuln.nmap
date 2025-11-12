@@ -1,12 +1,11 @@
-# Nmap 7.92 scan initiated Sat Nov  8 07:51:20 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln recap-cooperation.diplomatie.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 03:41:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln recap-cooperation.diplomatie.gouv.fr
 Nmap scan report for recap-cooperation.diplomatie.gouv.fr (91.199.0.166)
-Host is up (0.27s latency).
+Host is up (0.15s latency).
 rDNS record for 91.199.0.166: agilab-conseiller.particuliers.engie.fr
 Not shown: 993 filtered tcp ports (no-response)
 PORT      STATE  SERVICE    VERSION
 22/tcp    closed ssh
 80/tcp    open   http       nginx 1.20.2
-|_http-server-header: Faveod
 | vulners: 
 |   nginx 1.20.2: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -16,8 +15,8 @@ PORT      STATE  SERVICE    VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: Faveod
 443/tcp   open   ssl/http   nginx 1.20.2
-|_http-server-header: Faveod
 | vulners: 
 |   nginx 1.20.2: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -27,10 +26,11 @@ PORT      STATE  SERVICE    VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
+|_http-server-header: Faveod
 3306/tcp  closed mysql
 5432/tcp  closed postgresql
 8080/tcp  closed http-proxy
 12345/tcp open   netbus?
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 07:54:31 2025 -- 1 IP address (1 host up) scanned in 190.61 seconds
+# Nmap done at Wed Nov 12 03:44:33 2025 -- 1 IP address (1 host up) scanned in 181.49 seconds
