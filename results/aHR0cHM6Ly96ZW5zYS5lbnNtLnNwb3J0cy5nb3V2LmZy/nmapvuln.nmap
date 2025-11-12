@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Sat Nov  8 20:09:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln zensa.ensm.sports.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 14:38:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln zensa.ensm.sports.gouv.fr
 Nmap scan report for zensa.ensm.sports.gouv.fr (91.121.60.176)
 Host is up (0.15s latency).
 rDNS record for 91.121.60.176: zensa.ensm.org
@@ -14,9 +14,6 @@ PORT     STATE SERVICE    VERSION
 |   100000  3,4          111/tcp6  rpcbind
 |_  100000  3,4          111/udp6  rpcbind
 443/tcp  open  ssl/http   Apache httpd 2.4.29 ((Ubuntu))
-| http-server-header: 
-|   Apache/2.4.29 (Ubuntu)
-|_  Apache/2.4.38 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.29: 
 |     	PACKETSTORM:176334	9.8	https://vulners.com/packetstorm/PACKETSTORM:176334	*EXPLOIT*
@@ -76,6 +73,7 @@ PORT     STATE SERVICE    VERSION
 |     	CNVD-2023-30860	9.0	https://vulners.com/cnvd/CNVD-2023-30860
 |     	CNVD-2022-03224	9.0	https://vulners.com/cnvd/CNVD-2022-03224
 |     	AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	9.0	https://vulners.com/githubexploit/AE3EF1CC-A0C3-5CB7-A6EF-4DAAAFA59C8C	*EXPLOIT*
+|     	9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	9.0	https://vulners.com/githubexploit/9D9B3F4D-6B5C-5377-BE39-F1C432C9E457	*EXPLOIT*
 |     	8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	9.0	https://vulners.com/githubexploit/8AFB43C5-ABD4-52AD-BB19-24D7884FF2A2	*EXPLOIT*
 |     	7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	9.0	https://vulners.com/githubexploit/7F48C6CF-47B2-5AF9-B6FD-1735FB2A95B2	*EXPLOIT*
 |     	36618CA8-9316-59CA-B748-82F15F407C4F	9.0	https://vulners.com/githubexploit/36618CA8-9316-59CA-B748-82F15F407C4F	*EXPLOIT*
@@ -243,44 +241,47 @@ PORT     STATE SERVICE    VERSION
 |     	1337DAY-ID-33575	4.3	https://vulners.com/zdt/1337DAY-ID-33575	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
+| http-server-header: 
+|   Apache/2.4.29 (Ubuntu)
+|_  Apache/2.4.38 (Debian)
 5222/tcp open  jabber     Prosody Jabber client 0.8.0 or newer
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     compression_methods: 
 |     features: 
+|     compression_methods: 
+|     xmpp: 
+|       version: 1.0
+|     auth_mechanisms: 
+|     unknown: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This server does not serve zensa.ensm.sports.gouv.fr
 |       stream:stream
 |       (timeout)
-|     auth_mechanisms: 
-|     xmpp: 
-|       version: 1.0
 |_    capabilities: 
 5269/tcp open  jabber     Prosody Jabber server (dialback)
 | xmpp-info: 
 |   STARTTLS Failed
 |   info: 
-|     unknown: 
-|     compression_methods: 
-|     stream_id: 605017d4-4875-4b71-81ef-aada2aaa28d5
 |     features: 
+|     compression_methods: 
+|     unknown: 
+|     stream_id: eac62d50-48f9-4ed1-a9de-d3fd704b0b51
+|     auth_mechanisms: 
 |     errors: 
 |       host-unknown
 |       
 |         text: This host does not serve zensa.ensm.sports.gouv.fr
 |       stream:stream
 |       (timeout)
-|     auth_mechanisms: 
+|     capabilities: 
 |     xmpp: 
 |       lang: en
-|       version: 1.0
-|_    capabilities: 
+|_      version: 1.0
 5280/tcp open  http       Prosody XMPP BOSH httpd
 Service Info: Host:  www.ensastage.net; Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 20:09:53 2025 -- 1 IP address (1 host up) scanned in 27.05 seconds
+# Nmap done at Wed Nov 12 14:39:21 2025 -- 1 IP address (1 host up) scanned in 26.66 seconds
