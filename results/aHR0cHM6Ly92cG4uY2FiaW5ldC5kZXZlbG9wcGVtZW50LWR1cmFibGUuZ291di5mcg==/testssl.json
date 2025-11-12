@@ -3,8 +3,8 @@
               "id"           : "service",
               "ip"           : "vpn.cabinet.developpement-durable.gouv.fr/185.24.186.89",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
+              "severity"     : "DEBUG",
+              "finding"      : "Couldn't determine service, skipping all HTTP checks"
           }
 ,         {
               "id"           : "pre_128cipher",
@@ -25,13 +25,6 @@
               "ip"           : "vpn.cabinet.developpement-durable.gouv.fr/185.24.186.89",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "TLS1",
-              "ip"           : "vpn.cabinet.developpement-durable.gouv.fr/185.24.186.89",
-              "port"         : "443",
-              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -118,16 +111,17 @@
               "finding"      : "offered"
           }
 ,         {
-              "id"           : "cipherlist_STRONG_NOFS",
+              "id"           : "scanProblem",
               "ip"           : "vpn.cabinet.developpement-durable.gouv.fr/185.24.186.89",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
           }
 ,         {
-              "id"           : "cipherlist_STRONG_FS",
+              "id"           : "scanTime",
               "ip"           : "vpn.cabinet.developpement-durable.gouv.fr/185.24.186.89",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
           }
+]
