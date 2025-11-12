@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln tech.covoiturage.beta.gouv.fr</pre>
-<p class="lead">Sat Nov  8 14:15:33 2025 – Sat Nov  8 14:15:52 2025<br>1 hosts scanned.
+<p class="lead">Wed Nov 12 07:47:27 2025 – Wed Nov 12 07:47:48 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -137,14 +137,72 @@
 <td title="Port">8080</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Cloudflare http proxy</td>
+<td title="Service">http-proxy</td>
+<td title="Product">cloudflare</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">cloudflare</pre>
+<h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.1 400 Bad Request
+    Date: Wed, 12 Nov 2025 07:47:39 GMT
+    Content-Length: 68
+    Connection: close
+    Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+    Referrer-Policy: same-origin
+    Expires: Thu, 01 Jan 1970 00:00:01 GMT
+    Proxy-Status: Cloudflare-Proxy;error=http_request_error
+    CF-RAY: 99d46c28c97af7b3-LAX
+    Cloudflare encountered an error processing this request: Bad Request
+  GetRequest: 
+    HTTP/1.1 400 Bad Request
+    Date: Wed, 12 Nov 2025 07:47:38 GMT
+    Content-Length: 68
+    Connection: close
+    Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+    Referrer-Policy: same-origin
+    Expires: Thu, 01 Jan 1970 00:00:01 GMT
+    Proxy-Status: Cloudflare-Proxy;error=http_request_error
+    CF-RAY: 99d46c286ebc69bc-LAX
+    Cloudflare encountered an error processing this request: Bad Request
+  HTTPOptions: 
+    HTTP/1.1 400 Bad Request
+    Date: Wed, 12 Nov 2025 07:47:38 GMT
+    Content-Length: 68
+    Connection: close
+    Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+    Referrer-Policy: same-origin
+    Expires: Thu, 01 Jan 1970 00:00:01 GMT
+    Proxy-Status: Cloudflare-Proxy;error=http_request_error
+    CF-RAY: 99d46c28899f75a3-LAX
+    Cloudflare encountered an error processing this request: Bad Request
+  RTSPRequest: 
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;cloudflare&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  Socks5: 
+    HTTP/1.1 400 Bad Request
+    Server: cloudflare
+    Date: Wed, 12 Nov 2025 07:47:39 GMT
+    Content-Type: text/html
+    Content-Length: 155
+    Connection: close
+    CF-RAY: -
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+    &lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+    &lt;hr&gt;&lt;center&gt;cloudflare&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">8443</td>
@@ -200,8 +258,8 @@
 <td>104.20.27.109 - tech.covoiturage.beta.gouv.fr</td>
 <td>8080</td>
 <td>tcp</td>
-<td>http</td>
-<td>Cloudflare http proxy</td>
+<td>http-proxy</td>
+<td>cloudflare</td>
 <td></td>
 <td></td>
 <td></td>

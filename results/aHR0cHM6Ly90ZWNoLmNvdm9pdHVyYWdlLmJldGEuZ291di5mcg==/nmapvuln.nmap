@@ -1,17 +1,110 @@
-# Nmap 7.92 scan initiated Sat Nov  8 14:15:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln tech.covoiturage.beta.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 07:47:27 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln tech.covoiturage.beta.gouv.fr
 Nmap scan report for tech.covoiturage.beta.gouv.fr (104.20.27.109)
-Host is up (0.0022s latency).
-Other addresses for tech.covoiturage.beta.gouv.fr (not scanned): 172.66.175.186 2606:4700:10::6814:1b6d 2606:4700:10::ac42:afba
+Host is up (0.0097s latency).
+Other addresses for tech.covoiturage.beta.gouv.fr (not scanned): 172.66.175.186 2606:4700:10::ac42:afba 2606:4700:10::6814:1b6d
 Not shown: 996 filtered tcp ports (no-response)
-PORT     STATE SERVICE  VERSION
-80/tcp   open  http     Cloudflare http proxy
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       Cloudflare http proxy
 |_http-server-header: cloudflare
-443/tcp  open  ssl/http Cloudflare http proxy
+443/tcp  open  ssl/http   Cloudflare http proxy
 |_http-server-header: cloudflare
-8080/tcp open  http     Cloudflare http proxy
+8080/tcp open  http-proxy cloudflare
 |_http-server-header: cloudflare
-8443/tcp open  ssl/http Cloudflare http proxy
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 12 Nov 2025 07:47:39 GMT
+|     Content-Length: 68
+|     Connection: close
+|     Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Referrer-Policy: same-origin
+|     Expires: Thu, 01 Jan 1970 00:00:01 GMT
+|     Proxy-Status: Cloudflare-Proxy;error=http_request_error
+|     CF-RAY: 99d46c28c97af7b3-LAX
+|     Cloudflare encountered an error processing this request: Bad Request
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 12 Nov 2025 07:47:38 GMT
+|     Content-Length: 68
+|     Connection: close
+|     Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Referrer-Policy: same-origin
+|     Expires: Thu, 01 Jan 1970 00:00:01 GMT
+|     Proxy-Status: Cloudflare-Proxy;error=http_request_error
+|     CF-RAY: 99d46c286ebc69bc-LAX
+|     Cloudflare encountered an error processing this request: Bad Request
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Wed, 12 Nov 2025 07:47:38 GMT
+|     Content-Length: 68
+|     Connection: close
+|     Cache-Control: private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|     Referrer-Policy: same-origin
+|     Expires: Thu, 01 Jan 1970 00:00:01 GMT
+|     Proxy-Status: Cloudflare-Proxy;error=http_request_error
+|     CF-RAY: 99d46c28899f75a3-LAX
+|     Cloudflare encountered an error processing this request: Bad Request
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|     </html>
+|   Socks5: 
+|     HTTP/1.1 400 Bad Request
+|     Server: cloudflare
+|     Date: Wed, 12 Nov 2025 07:47:39 GMT
+|     Content-Type: text/html
+|     Content-Length: 155
+|     Connection: close
+|     CF-RAY: -
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cloudflare</center>
+|     </body>
+|_    </html>
+8443/tcp open  ssl/http   Cloudflare http proxy
 |_http-server-header: cloudflare
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.92%I=7%D=11/12%Time=69143B9A%P=x86_64-alpine-linux-mus
+SF:l%r(GetRequest,1AC,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Wed,
+SF:\x2012\x20Nov\x202025\x2007:47:38\x20GMT\r\nContent-Length:\x2068\r\nCo
+SF:nnection:\x20close\r\nCache-Control:\x20private,\x20max-age=0,\x20no-st
+SF:ore,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-check=0\r
+SF:\nReferrer-Policy:\x20same-origin\r\nExpires:\x20Thu,\x2001\x20Jan\x201
+SF:970\x2000:00:01\x20GMT\r\nProxy-Status:\x20Cloudflare-Proxy;error=http_
+SF:request_error\r\nCF-RAY:\x2099d46c286ebc69bc-LAX\r\n\r\nCloudflare\x20e
+SF:ncountered\x20an\x20error\x20processing\x20this\x20request:\x20Bad\x20R
+SF:equest")%r(HTTPOptions,1AC,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:
+SF:\x20Wed,\x2012\x20Nov\x202025\x2007:47:38\x20GMT\r\nContent-Length:\x20
+SF:68\r\nConnection:\x20close\r\nCache-Control:\x20private,\x20max-age=0,\
+SF:x20no-store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pre-c
+SF:heck=0\r\nReferrer-Policy:\x20same-origin\r\nExpires:\x20Thu,\x2001\x20
+SF:Jan\x201970\x2000:00:01\x20GMT\r\nProxy-Status:\x20Cloudflare-Proxy;err
+SF:or=http_request_error\r\nCF-RAY:\x2099d46c28899f75a3-LAX\r\n\r\nCloudfl
+SF:are\x20encountered\x20an\x20error\x20processing\x20this\x20request:\x20
+SF:Bad\x20Request")%r(RTSPRequest,9B,"<html>\r\n<head><title>400\x20Bad\x2
+SF:0Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request<
+SF:/h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</html>\
+SF:r\n")%r(FourOhFourRequest,1AC,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDa
+SF:te:\x20Wed,\x2012\x20Nov\x202025\x2007:47:39\x20GMT\r\nContent-Length:\
+SF:x2068\r\nConnection:\x20close\r\nCache-Control:\x20private,\x20max-age=
+SF:0,\x20no-store,\x20no-cache,\x20must-revalidate,\x20post-check=0,\x20pr
+SF:e-check=0\r\nReferrer-Policy:\x20same-origin\r\nExpires:\x20Thu,\x2001\
+SF:x20Jan\x201970\x2000:00:01\x20GMT\r\nProxy-Status:\x20Cloudflare-Proxy;
+SF:error=http_request_error\r\nCF-RAY:\x2099d46c28c97af7b3-LAX\r\n\r\nClou
+SF:dflare\x20encountered\x20an\x20error\x20processing\x20this\x20request:\
+SF:x20Bad\x20Request")%r(Socks5,13C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nServer:\x20cloudflare\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2007:47:3
+SF:9\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20155\r\nCon
+SF:nection:\x20close\r\nCF-RAY:\x20-\r\n\r\n<html>\r\n<head><title>400\x20
+SF:Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Re
+SF:quest</h1></center>\r\n<hr><center>cloudflare</center>\r\n</body>\r\n</
+SF:html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 14:15:52 2025 -- 1 IP address (1 host up) scanned in 19.05 seconds
+# Nmap done at Wed Nov 12 07:47:48 2025 -- 1 IP address (1 host up) scanned in 21.38 seconds
