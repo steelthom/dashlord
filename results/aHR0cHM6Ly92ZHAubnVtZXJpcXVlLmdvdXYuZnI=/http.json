@@ -10,11 +10,11 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Sat, 08 Nov 2025 19:47:47 GMT",
+      "date": "Wed, 12 Nov 2025 14:27:40 GMT",
       "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "vary": "Accept-Encoding, Cookie",
-      "content-security-policy": "img-src 'self' data: https://storage.vulnerability-disclosure.com; frame-src 'none'; default-src 'none'; frame-ancestors 'none'; font-src 'self'; script-src 'self'; form-action 'self'; connect-src 'self'; media-src data:; style-src 'self' 'unsafe-inline'; block-all-mixed-content",
+      "content-security-policy": "font-src 'self'; script-src 'self'; default-src 'none'; frame-ancestors 'none'; img-src 'self' data: https://storage.vulnerability-disclosure.com; block-all-mixed-content; form-action 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; frame-src 'none'; media-src data:",
       "referrer-policy": "same-origin",
       "strict-transport-security": "includeSubDomains;max-age=31536000;preload;",
       "cache-control": "no-cache,max-age=60",
@@ -31,13 +31,11 @@
       "result": "csp-implemented-with-unsafe-inline-in-style-src-only",
       "scoreModifier": 0,
       "data": {
-        "img-src": [
-          "'self'",
-          "data:",
-          "https://storage.vulnerability-disclosure.com"
+        "font-src": [
+          "'self'"
         ],
-        "frame-src": [
-          "'none'"
+        "script-src": [
+          "'self'"
         ],
         "default-src": [
           "'none'"
@@ -45,11 +43,13 @@
         "frame-ancestors": [
           "'none'"
         ],
-        "font-src": [
-          "'self'"
+        "img-src": [
+          "'self'",
+          "data:",
+          "https://storage.vulnerability-disclosure.com"
         ],
-        "script-src": [
-          "'self'"
+        "block-all-mixed-content": [
+          "'none'"
         ],
         "form-action": [
           "'self'"
@@ -57,15 +57,15 @@
         "connect-src": [
           "'self'"
         ],
-        "media-src": [
-          "data:"
-        ],
         "style-src": [
           "'self'",
           "'unsafe-inline'"
         ],
-        "block-all-mixed-content": [
+        "frame-src": [
           "'none'"
+        ],
+        "media-src": [
+          "data:"
         ]
       },
       "http": true,
