@@ -437,7 +437,7 @@
               "ip"           : "onu.delegfrance.org/95.128.47.156",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "66 >= 60 days"
+              "finding"      : "62 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -625,15 +625,86 @@
               "id"           : "HTTP_status_code",
               "ip"           : "onu.delegfrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header request failed"
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "HTTP_clock_skew",
               "ip"           : "onu.delegfrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header was repeatedly zero due to missing X25519/X448 curves."
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1762919324"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "730 days (=63072000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "only for this domain"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "Upgrade",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "h2,h2c"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "onu.delegfrance.org/95.128.47.156",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "heartbleed",
@@ -701,10 +772,10 @@
               "id"           : "BREACH",
               "ip"           : "onu.delegfrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "WARN",
+              "severity"     : "MEDIUM",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "Test failed as HTTP request stalled and was terminated"
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1132,6 +1203,6 @@
               "ip"           : "onu.delegfrance.org/95.128.47.156",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "245"
+              "finding"      : "157"
           }
 ]
