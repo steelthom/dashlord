@@ -1,11 +1,12 @@
-# Nmap 7.92 scan initiated Sat Nov  8 08:24:31 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail.documentation.developpement-durable.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 02:44:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail.documentation.developpement-durable.gouv.fr
 Nmap scan report for portail.documentation.developpement-durable.gouv.fr (163.172.109.45)
-Host is up (0.11s latency).
+Host is up (0.092s latency).
 rDNS record for 163.172.109.45: sd-121294.dedibox.fr
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE SERVICE  VERSION
 25/tcp  open  smtp     Postfix smtpd
 80/tcp  open  http     Apache httpd 2.4.62 ((Debian))
+|_http-server-header: Apache/2.4.62 (Debian)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
 |     	CNVD-2024-36391	9.8	https://vulners.com/cnvd/CNVD-2024-36391
@@ -72,7 +73,6 @@ PORT    STATE SERVICE  VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
-|_http-server-header: Apache/2.4.62 (Debian)
 443/tcp open  ssl/http Apache httpd 2.4.62
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.62: 
@@ -146,4 +146,4 @@ PORT    STATE SERVICE  VERSION
 Service Info: Hosts:  sd-121294.dedibox.fr, preprod.bibliodaf.documentation.developpement-durable.gouv.fr
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 08:24:54 2025 -- 1 IP address (1 host up) scanned in 22.76 seconds
+# Nmap done at Wed Nov 12 02:45:14 2025 -- 1 IP address (1 host up) scanned in 21.73 seconds
