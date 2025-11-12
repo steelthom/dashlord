@@ -241,7 +241,7 @@
               "ip"           : "osi.finances.gouv.fr/193.17.19.225",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 TLS_AES_128_GCM_SHA256 TLS_AES_128_CCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -444,7 +444,7 @@
               "ip"           : "osi.finances.gouv.fr/193.17.19.225",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "81 >= 60 days"
+              "finding"      : "77 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -590,107 +590,15 @@
               "id"           : "HTTP_status_code",
               "ip"           : "osi.finances.gouv.fr/193.17.19.225",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header request failed"
           }
 ,         {
-              "id"           : "HTTP_clock_skew",
+              "id"           : "scanProblem",
               "ip"           : "osi.finances.gouv.fr/193.17.19.225",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1762574832"
-          }
-,         {
-              "id"           : "HSTS_time",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "400 days (=34560000 seconds) > 15552000 seconds"
-          }
-,         {
-              "id"           : "HSTS_subdomains",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "includes subdomains"
-          }
-,         {
-              "id"           : "HSTS_preload",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "domain IS marked for preloading"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Apache"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 at '/'"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "sameorigin"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "X-XSS-Protection",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1; mode=block"
-          }
-,         {
-              "id"           : "Referrer-Policy",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "same-origin"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
+              "severity"     : "WARN",
+              "finding"      : "HTTP header was repeatedly zero due to missing X25519/X448 curves."
           }
 ,         {
               "id"           : "heartbleed",
@@ -898,297 +806,17 @@
               "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
-              "id"           : "clientsimulation-android_11_12",
+              "id"           : "scanProblem",
               "ip"           : "osi.finances.gouv.fr/193.17.19.225",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-android_13_14",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-android_15",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_101_win10",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-chromium_137_win11",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-firefox_100_win10",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-firefox_137_win11",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_win7",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_win7",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_win81",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_winphone81",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_win10",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-edge_15_win10",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-edge_101_win10_21h2",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-edge_133_win11_23h2",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_184_ios_184",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_154_osx_1231",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_184_osx_154",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-java_7u25",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-java_80442",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-java_1102",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-java_1703",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-java_2106",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-go_1178",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-libressl_336",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_102e",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_111d",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_315",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_350",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-apple_mail_16_0",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-thunderbird_91_9",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "rating_spec",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009r from 2025-05-16)"
-          }
-,         {
-              "id"           : "rating_doc",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
-          }
-,         {
-              "id"           : "protocol_support_score",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "100"
-          }
-,         {
-              "id"           : "protocol_support_score_weighted",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "30"
-          }
-,         {
-              "id"           : "key_exchange_score",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "90"
-          }
-,         {
-              "id"           : "key_exchange_score_weighted",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "27"
-          }
-,         {
-              "id"           : "cipher_strength_score",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "90"
-          }
-,         {
-              "id"           : "cipher_strength_score_weighted",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "36"
-          }
-,         {
-              "id"           : "final_score",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "93"
-          }
-,         {
-              "id"           : "overall_grade",
-              "ip"           : "osi.finances.gouv.fr/193.17.19.225",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "A+"
+              "severity"     : "FATAL",
+              "finding"      : "repeated TCP connect problems, giving up"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "osi.finances.gouv.fr/193.17.19.225",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "173"
+              "severity"     : "WARN",
+              "finding"      : "Scan interrupted"
           }
 ]
