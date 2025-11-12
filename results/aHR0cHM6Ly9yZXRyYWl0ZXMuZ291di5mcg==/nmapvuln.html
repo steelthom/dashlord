@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln retraites.gouv.fr</pre>
-<p class="lead">Sat Nov  8 07:59:42 2025 – Sat Nov  8 08:02:21 2025<br>1 hosts scanned.
+<p class="lead">Wed Nov 12 02:47:20 2025 – Wed Nov 12 02:50:00 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,8 +111,8 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http-proxy</td>
-<td title="Product">F5 BIG-IP load balancer http proxy</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
@@ -143,17 +143,28 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 <h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  GetRequest: 
+  FourOhFourRequest: 
     HTTP/1.1 200 OK
-    Date: Sat, 08 Nov 2025 08:00:05 GMT
+    Cache-Control: no-store, must-revalidate, no-cache
+    Pragma: no-cache
+    Connection: close
+    Content-Type: text/html
+    Content-Length: 244
+    X-Frame-Options: SAMEORIGIN
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;1938290216980917736&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 200 OK
+    Date: Wed, 12 Nov 2025 02:47:45 GMT
     X-Spip-Cache: 21600
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Sat, 08 Nov 2025 08:00:05 GMT
+    Last-Modified: Wed, 12 Nov 2025 02:47:45 GMT
     Vary: Accept-Encoding
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!vb48IL1xptEABb4XIkI7F7SI9ajmiqLQZijnsdBe3U+evDsFIMrshBR/DB7C49FvRDe8heHCHPaZ2dzl3Nf6t/zx0PVm; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!WMvXVkECH51CPzMXIkI7F7SI9ajmipepUxjxZsAtU1Y433g3cxgDpNEucz+0UNClddpLojzBNKGq1o//7hUlIfnQ6SAu; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
     &lt;!DOCTYPE HTML&gt;
     &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
@@ -164,27 +175,23 @@
     l&amp;#039;acc
     soins&lt;/title&gt;
     &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl
-  HTTPOptions: 
-    HTTP/1.1 200 OK
-    Date: Sat, 08 Nov 2025 08:00:05 GMT
-    X-Spip-Cache: 21600
+  RTSPRequest: 
+    HTTP/1.1 400 Bad Request
+    Date: Wed, 12 Nov 2025 02:47:56 GMT
     X-Frame-Options: SAMEORIGIN
-    Last-Modified: Sat, 08 Nov 2025 08:00:05 GMT
-    Vary: Accept-Encoding
-    X-Content-Type-Options: nosniff
+    Content-Length: 226
     Connection: close
-    Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!KuQA3IfkOTtxmooXIkI7F7SI9ajmir+VYRlkAG/EpK6WijNdcIqpOqu0xJsIS665XrNV1HX7kEGu8BkukfPVFQiM5AXQ; path=/; Httponly; Secure
+    Content-Type: text/html; charset=iso-8859-1
+    Set-Cookie: BIGipServerpool-dicom-portail-dares.cegedim.cloud-http=!JO25v1zyYMu21iMXIkI7F7SI9ajmis6cA3VUV1LSdc3IHCYf3c8edmLbg/zCzbnmBV9uKgq9jaUj1C/QVEe/UJb5YBx1; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000
-    &lt;!DOCTYPE HTML&gt;
-    &lt;html class="page_sommaire ltr fr no-js" lang="fr" dir="ltr"&gt;
-    &lt;head&gt;
-    &lt;script&gt;/*&lt;![CDATA[*/(function(H){H.className=H.className.replace(/bno-jsb/,'js')})(document.documentElement);/*]]&gt;*/&lt;/script&gt;
-    &lt;title&gt;Accueil - Minist
-    sant
-    l&amp;#039;acc
-    soins&lt;/title&gt;
-    &lt;style type='text/css'&gt;img.adapt-img{max-width:100%;height:auto;}.adapt-img-wrapper {display:inline-bl</pre>
+    &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
+    &lt;html&gt;&lt;head&gt;
+    &lt;title&gt;400 Bad Request&lt;/title&gt;
+    &lt;/head&gt;&lt;body&gt;
+    &lt;h1&gt;Bad Request&lt;/h1&gt;
+    &lt;p&gt;Your browser sent a request that this server could not understand.&lt;br /&gt;
+    &lt;/p&gt;
+    &lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -207,8 +214,8 @@
 <td>185.194.82.27 - retraites.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http-proxy</td>
-<td>F5 BIG-IP load balancer http proxy</td>
+<td>tcpwrapped</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
