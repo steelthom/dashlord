@@ -1,1 +1,57 @@
-# Nmap 7.92 scan initiated Sat Nov  8 07:36:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln prix.conso.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 03:22:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln prix.conso.gouv.fr
+Nmap scan report for prix.conso.gouv.fr (185.24.187.247)
+Host is up (0.11s latency).
+Not shown: 981 filtered tcp ports (no-response)
+PORT      STATE  SERVICE       VERSION
+80/tcp    open   http
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Date: Wed, 12 Nov 2025 03:31:22 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|_    </body></html>
+113/tcp   closed ident
+254/tcp   closed unknown
+259/tcp   closed esro-gen
+443/tcp   open   ssl/https?
+683/tcp   closed corba-iiop
+1068/tcp  closed instl_bootc
+1078/tcp  closed avocent-proxy
+1085/tcp  closed webobjects
+1501/tcp  closed sas-3
+1521/tcp  closed oracle
+2065/tcp  closed dlsrpn
+3690/tcp  closed svn
+4001/tcp  closed newoak
+4998/tcp  closed maybe-veritas
+5033/tcp  closed jtnetd-server
+5633/tcp  closed beorl
+7778/tcp  closed interwise
+10778/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=6913FF8A%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,15B,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Wed,\x2012\
+SF:x20Nov\x202025\x2003:31:22\x20GMT\r\nContent-Length:\x20199\r\nConnecti
+SF:on:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\
+SF:n<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forb
+SF:idden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20th
+SF:is\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,15B,"HTTP/1\.0\x
+SF:20403\x20Forbidden\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:31:22\x2
+SF:0GMT\r\nContent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC
+SF:\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20
+SF:Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x
+SF:20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body>
+SF:</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 12 03:31:51 2025 -- 1 IP address (1 host up) scanned in 539.44 seconds
