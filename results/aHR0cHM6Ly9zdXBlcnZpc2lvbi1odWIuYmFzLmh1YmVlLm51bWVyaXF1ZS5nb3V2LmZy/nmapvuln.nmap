@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sat Nov  8 13:58:00 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln supervision-hub.bas.hubee.numerique.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 07:24:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln supervision-hub.bas.hubee.numerique.gouv.fr
 Nmap scan report for supervision-hub.bas.hubee.numerique.gouv.fr (148.253.96.243)
-Host is up (0.15s latency).
+Host is up (0.13s latency).
 rDNS record for 148.253.96.243: ows-148-253-96-243.cloudgouv-eu-west-1.compute.outscale.com
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
@@ -17,7 +17,7 @@ PORT    STATE SERVICE   VERSION
 |     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
 |     cache-control: private, no-cache, no-store, must-revalidate
 |     content-length: 0
-|     date: Sat, 08 Nov 2025 13:58:18 GMT
+|     date: Wed, 12 Nov 2025 07:24:22 GMT
 |     keep-alive: timeout=120
 |     connection: close
 |   HTTPOptions, RTSPRequest: 
@@ -30,12 +30,11 @@ PORT    STATE SERVICE   VERSION
 |     content-type: application/json; charset=utf-8
 |     cache-control: private, no-cache, no-store, must-revalidate
 |     content-length: 60
-|     date: Sat, 08 Nov 2025 13:58:18 GMT
+|     date: Wed, 12 Nov 2025 07:24:23 GMT
 |     keep-alive: timeout=120
 |     connection: close
 |_    {"statusCode":404,"error":"Not Found","message":"Not Found"}
 443/tcp open  ssl/https
-|_http-trane-info: Problem with XML parsing of /evox/about
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 302 Found
@@ -47,7 +46,7 @@ PORT    STATE SERVICE   VERSION
 |     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
 |     cache-control: private, no-cache, no-store, must-revalidate
 |     content-length: 0
-|     Date: Sat, 08 Nov 2025 13:58:26 GMT
+|     Date: Wed, 12 Nov 2025 07:24:30 GMT
 |     Connection: close
 |   GetRequest: 
 |     HTTP/1.1 302 Found
@@ -59,7 +58,7 @@ PORT    STATE SERVICE   VERSION
 |     kbn-license-sig: 64c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4
 |     cache-control: private, no-cache, no-store, must-revalidate
 |     content-length: 0
-|     Date: Sat, 08 Nov 2025 13:58:24 GMT
+|     Date: Wed, 12 Nov 2025 07:24:29 GMT
 |     Connection: close
 |   HTTPOptions: 
 |     HTTP/1.1 404 Not Found
@@ -71,76 +70,78 @@ PORT    STATE SERVICE   VERSION
 |     content-type: application/json; charset=utf-8
 |     cache-control: private, no-cache, no-store, must-revalidate
 |     content-length: 60
-|     Date: Sat, 08 Nov 2025 13:58:25 GMT
+|     Date: Wed, 12 Nov 2025 07:24:29 GMT
 |     Connection: close
 |     {"statusCode":404,"error":"Not Found","message":"Not Found"}
 |   tor-versions: 
 |_    HTTP/1.1 400 Bad Request
+|_http-trane-info: Problem with XML parsing of /evox/about
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690F4C7A%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,1FB,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login\?next
-SF:=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x20no-re
-SF:ferrer-when-downgrade\r\ncontent-security-policy:\x20script-src\x20'uns
-SF:afe-eval'\x20'self';\x20worker-src\x20blob:\x20'self';\x20style-src\x20
-SF:'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\nkbn-license-sig:\x
-SF:2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4\r\nc
-SF:ache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\
-SF:r\ncontent-length:\x200\r\ndate:\x20Sat,\x2008\x20Nov\x202025\x2013:58:
-SF:18\x20GMT\r\nkeep-alive:\x20timeout=120\r\nconnection:\x20close\r\n\r\n
-SF:")%r(HTTPOptions,250,"HTTP/1\.1\x20404\x20Not\x20Found\r\nx-content-typ
-SF:e-options:\x20nosniff\r\nreferrer-policy:\x20no-referrer-when-downgrade
-SF:\r\ncontent-security-policy:\x20script-src\x20'unsafe-eval'\x20'self';\
-SF:x20worker-src\x20blob:\x20'self';\x20style-src\x20'unsafe-inline'\x20's
-SF:elf'\r\nkbn-name:\x20kibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c7
-SF:2c3a633614b5a923ff467036b0df84122b170db3bddd4\r\ncontent-type:\x20appli
-SF:cation/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache
-SF:,\x20no-store,\x20must-revalidate\r\ncontent-length:\x2060\r\ndate:\x20
-SF:Sat,\x2008\x20Nov\x202025\x2013:58:18\x20GMT\r\nkeep-alive:\x20timeout=
-SF:120\r\nconnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\":\"Not\
-SF:x20Found\",\"message\":\"Not\x20Found\"}")%r(RTSPRequest,250,"HTTP/1\.1
-SF:\x20404\x20Not\x20Found\r\nx-content-type-options:\x20nosniff\r\nreferr
-SF:er-policy:\x20no-referrer-when-downgrade\r\ncontent-security-policy:\x2
-SF:0script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\x20'self
-SF:';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\
-SF:nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df841
-SF:22b170db3bddd4\r\ncontent-type:\x20application/json;\x20charset=utf-8\r
-SF:\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalida
-SF:te\r\ncontent-length:\x2060\r\ndate:\x20Sat,\x2008\x20Nov\x202025\x2013
-SF::58:18\x20GMT\r\nkeep-alive:\x20timeout=120\r\nconnection:\x20close\r\n
-SF:\r\n{\"statusCode\":404,\"error\":\"Not\x20Found\",\"message\":\"Not\x2
-SF:0Found\"}");
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=69143626%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,1FB,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login\?nex
+SF:t=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x20no-r
+SF:eferrer-when-downgrade\r\ncontent-security-policy:\x20script-src\x20'un
+SF:safe-eval'\x20'self';\x20worker-src\x20blob:\x20'self';\x20style-src\x2
+SF:0'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\nkbn-license-sig:\
+SF:x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bddd4\r\n
+SF:cache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate
+SF:\r\ncontent-length:\x200\r\ndate:\x20Wed,\x2012\x20Nov\x202025\x2007:24
+SF::22\x20GMT\r\nkeep-alive:\x20timeout=120\r\nconnection:\x20close\r\n\r\
+SF:n")%r(HTTPOptions,250,"HTTP/1\.1\x20404\x20Not\x20Found\r\nx-content-ty
+SF:pe-options:\x20nosniff\r\nreferrer-policy:\x20no-referrer-when-downgrad
+SF:e\r\ncontent-security-policy:\x20script-src\x20'unsafe-eval'\x20'self';
+SF:\x20worker-src\x20blob:\x20'self';\x20style-src\x20'unsafe-inline'\x20'
+SF:self'\r\nkbn-name:\x20kibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c
+SF:72c3a633614b5a923ff467036b0df84122b170db3bddd4\r\ncontent-type:\x20appl
+SF:ication/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cach
+SF:e,\x20no-store,\x20must-revalidate\r\ncontent-length:\x2060\r\ndate:\x2
+SF:0Wed,\x2012\x20Nov\x202025\x2007:24:23\x20GMT\r\nkeep-alive:\x20timeout
+SF:=120\r\nconnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\":\"Not
+SF:\x20Found\",\"message\":\"Not\x20Found\"}")%r(RTSPRequest,250,"HTTP/1\.
+SF:1\x20404\x20Not\x20Found\r\nx-content-type-options:\x20nosniff\r\nrefer
+SF:rer-policy:\x20no-referrer-when-downgrade\r\ncontent-security-policy:\x
+SF:20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\x20'sel
+SF:f';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r
+SF:\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84
+SF:122b170db3bddd4\r\ncontent-type:\x20application/json;\x20charset=utf-8\
+SF:r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalid
+SF:ate\r\ncontent-length:\x2060\r\ndate:\x20Wed,\x2012\x20Nov\x202025\x200
+SF:7:24:23\x20GMT\r\nkeep-alive:\x20timeout=120\r\nconnection:\x20close\r\
+SF:n\r\n{\"statusCode\":404,\"error\":\"Not\x20Found\",\"message\":\"Not\x
+SF:20Found\"}");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690F4C80%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,1E2,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/logi
-SF:n\?next=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x
-SF:20no-referrer-when-downgrade\r\ncontent-security-policy:\x20script-src\
-SF:x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\x20'self';\x20style-
-SF:src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\nkbn-license
-SF:-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bdd
-SF:d4\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-reva
-SF:lidate\r\ncontent-length:\x200\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2
-SF:013:58:24\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,237,"H
-SF:TTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-Options:\x20nosniff\r
-SF:\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nContent-Security-Po
-SF:licy:\x20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\
-SF:x20'self';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20ki
-SF:bana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff46703
-SF:6b0df84122b170db3bddd4\r\ncontent-type:\x20application/json;\x20charset
-SF:=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-
-SF:revalidate\r\ncontent-length:\x2060\r\nDate:\x20Sat,\x2008\x20Nov\x2020
-SF:25\x2013:58:25\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statusCode\":40
-SF:4,\"error\":\"Not\x20Found\",\"message\":\"Not\x20Found\"}")%r(FourOhFo
-SF:urRequest,205,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login\?next=%
-SF:2Fnice%2520ports%2C%2FTrinity\.txt\.bak\r\nx-content-type-options:\x20n
-SF:osniff\r\nreferrer-policy:\x20no-referrer-when-downgrade\r\ncontent-sec
-SF:urity-policy:\x20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x
-SF:20blob:\x20'self';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-nam
-SF:e:\x20kibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a92
-SF:3ff467036b0df84122b170db3bddd4\r\ncache-control:\x20private,\x20no-cach
-SF:e,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\r\nDate:\x20
-SF:Sat,\x2008\x20Nov\x202025\x2013:58:26\x20GMT\r\nConnection:\x20close\r\
-SF:n\r\n")%r(tor-versions,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=6914362D%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,1E2,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/log
+SF:in\?next=%2F\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\
+SF:x20no-referrer-when-downgrade\r\ncontent-security-policy:\x20script-src
+SF:\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:\x20'self';\x20style
+SF:-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20kibana1\r\nkbn-licens
+SF:e-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff467036b0df84122b170db3bd
+SF:dd4\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-rev
+SF:alidate\r\ncontent-length:\x200\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x
+SF:2007:24:29\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,237,"
+SF:HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-Options:\x20nosniff\
+SF:r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nContent-Security-P
+SF:olicy:\x20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\x20blob:
+SF:\x20'self';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-name:\x20k
+SF:ibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a923ff4670
+SF:36b0df84122b170db3bddd4\r\ncontent-type:\x20application/json;\x20charse
+SF:t=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must
+SF:-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Wed,\x2012\x20Nov\x202
+SF:025\x2007:24:29\x20GMT\r\nConnection:\x20close\r\n\r\n{\"statusCode\":4
+SF:04,\"error\":\"Not\x20Found\",\"message\":\"Not\x20Found\"}")%r(FourOhF
+SF:ourRequest,205,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/login\?next=
+SF:%2Fnice%2520ports%2C%2FTrinity\.txt\.bak\r\nx-content-type-options:\x20
+SF:nosniff\r\nreferrer-policy:\x20no-referrer-when-downgrade\r\ncontent-se
+SF:curity-policy:\x20script-src\x20'unsafe-eval'\x20'self';\x20worker-src\
+SF:x20blob:\x20'self';\x20style-src\x20'unsafe-inline'\x20'self'\r\nkbn-na
+SF:me:\x20kibana1\r\nkbn-license-sig:\x2064c415b2b5acb6868c72c3a633614b5a9
+SF:23ff467036b0df84122b170db3bddd4\r\ncache-control:\x20private,\x20no-cac
+SF:he,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\r\nDate:\x2
+SF:0Wed,\x2012\x20Nov\x202025\x2007:24:30\x20GMT\r\nConnection:\x20close\r
+SF:\n\r\n")%r(tor-versions,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n"
+SF:);
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 13:58:51 2025 -- 1 IP address (1 host up) scanned in 50.21 seconds
+# Nmap done at Wed Nov 12 07:24:53 2025 -- 1 IP address (1 host up) scanned in 46.51 seconds
