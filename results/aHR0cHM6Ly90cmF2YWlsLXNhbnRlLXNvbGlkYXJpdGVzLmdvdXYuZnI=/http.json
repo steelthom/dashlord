@@ -1,34 +1,35 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "B",
     "error": null,
-    "score": 35,
+    "score": 70,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sat, 08 Nov 2025 14:39:02 GMT",
+      "date": "Mon, 10 Nov 2025 10:24:07 GMT",
       "cache-control": "max-age=10800, public",
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
       "vary": "Cookie,Accept-Encoding",
-      "last-modified": "Sat, 08 Nov 2025 14:39:02 GMT",
+      "last-modified": "Wed, 12 Nov 2025 10:15:21 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "age": "0",
-      "etag": "W/\"1762612742-gzip\"",
-      "x-cache": "MISS",
-      "x-cache-hits": "0",
+      "age": "8055",
+      "x-cache": "HIT",
+      "x-cache-hits": "768",
+      "x-cache-ttl": "2744.762",
       "accept-ranges": "bytes",
       "connection": "close",
       "set-cookie": [
-        "BIGipServerpool-handicap-v2.cegedim.cloud-http=3485751562.20480.0000; path=/; Httponly; Secure",
-        "TS24c133e9029=087dc22938ab2800b24f095031531024709553dde59e2013d31e2a8ac1bb259cd6e11862ef482a300969dd9fb3129282; Max-Age=30; Path=/",
-        "TSe7b29e8c027=087dc22938ab200010286a8dc9597d417698b36f4e115c0236ebdd5f385eff7b54e304a5d47c172e082d53bc4f113000a65932feab756b7617e3eff1d6b84c4c98ac095afacb1185b3e40405ef540306a31f9b40d121504cb0edb80e469a8b6e; Path=/"
+        "BIGipServerpool-travail-production.cegedim.cloud-tcp80=!agd+COr2CeNWh5wXIkI7F7SI9ajmiqCc+MJR/pPah/fgHOwFoghlHwraMGiH+C7MHs0wPudafgkhJmgF/W1a9KOsuAsV; path=/; Httponly; Secure",
+        "TSe92b7ff4029=087dc22938ab280059540f5fbc4d5be3203ee6706fbb339b606fbbe7751524aab8b2d3219a88c027102a7c8b54bf8c33; Max-Age=30; Path=/",
+        "TS780b36e3027=087dc22938ab200062f04c0c127841a395fde828ef3d41d97c71d22e79936953595843dcbcd5d8c0084409c05e1130004cdba3a5d7bcafb7b2726e18030735e0776c9afa3bc8a82873b3729bd7d022087d9706d7be387500a546a0e773f072f4; Path=/"
       ],
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
       "transfer-encoding": "chunked"
     }
   },
@@ -47,24 +48,24 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
-        "BIGipServerpool-handicap-v2.cegedim.cloud-http": {
-          "domain": "travail-sante-solidarites.gouv.fr",
+        "BIGipServerpool-travail-production.cegedim.cloud-tcp80": {
+          "domain": "travail-emploi.gouv.fr",
           "httponly": true,
           "path": "/",
           "port": null,
           "secure": true
         },
-        "TS24c133e9029": {
-          "domain": "travail-sante-solidarites.gouv.fr",
+        "TSe92b7ff4029": {
+          "domain": "travail-emploi.gouv.fr",
           "max-age": 30,
           "path": "/",
           "port": null
         },
-        "TSe7b29e8c027": {
-          "domain": "travail-sante-solidarites.gouv.fr",
+        "TS780b36e3027": {
+          "domain": "travail-emploi.gouv.fr",
           "path": "/",
           "port": null
         }
@@ -83,11 +84,12 @@
       "pass": true,
       "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://travail-sante-solidarites.gouv.fr/",
+      "destination": "https://travail-emploi.gouv.fr/",
       "redirects": true,
       "route": [
         "http://travail-sante-solidarites.gouv.fr/",
-        "https://travail-sante-solidarites.gouv.fr/"
+        "https://travail-sante-solidarites.gouv.fr/",
+        "https://travail-emploi.gouv.fr/"
       ],
       "statusCode": 200
     },
@@ -102,12 +104,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
