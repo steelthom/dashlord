@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Sat Nov  8 07:12:34 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln polytechnique.edu
+# Nmap 7.92 scan initiated Wed Nov 12 03:31:14 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln polytechnique.edu
 Nmap scan report for polytechnique.edu (129.104.30.29)
 Host is up (0.13s latency).
 rDNS record for 129.104.30.29: drupal.polytechnique.fr
@@ -7,26 +7,10 @@ PORT    STATE SERVICE   VERSION
 80/tcp  open  http      sysdsi/6.6.6
 |_http-server-header: sysdsi/6.6.6
 | fingerprint-strings: 
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: sysdsi/6.6.6
-|     Date: Sat, 08 Nov 2025 07:12:50 GMT
-|     Content-Type: text/html
-|     Content-Length: 169
-|     Connection: close
-|     Location: https://www.polytechnique.edu/
-|     Strict-Transport-Security: max-age=31536000; includeSubDomains
-|     <html>
-|     <head><title>301 Moved Permanently</title></head>
-|     <body>
-|     <center><h1>301 Moved Permanently</h1></center>
-|     <hr><center>sysdsi/6.6.6</center>
-|     </body>
-|     </html>
-|   HTTPOptions: 
-|     HTTP/1.1 301 Moved Permanently
-|     Server: sysdsi/6.6.6
-|     Date: Sat, 08 Nov 2025 07:12:51 GMT
+|     Date: Wed, 12 Nov 2025 03:31:30 GMT
 |     Content-Type: text/html
 |     Content-Length: 169
 |     Connection: close
@@ -42,7 +26,7 @@ PORT    STATE SERVICE   VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: sysdsi/6.6.6
-|     Date: Sat, 08 Nov 2025 07:12:51 GMT
+|     Date: Wed, 12 Nov 2025 03:31:31 GMT
 |     Content-Type: text/html
 |     Content-Length: 157
 |     Connection: close
@@ -60,7 +44,7 @@ PORT    STATE SERVICE   VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 404 Not Found
 |     Server: sysdsi/6.6.6
-|     Date: Sat, 08 Nov 2025 07:12:58 GMT
+|     Date: Wed, 12 Nov 2025 03:31:38 GMT
 |     Content-Type: text/html; charset=UTF-8
 |     Content-Length: 208237
 |     Connection: close
@@ -70,8 +54,8 @@ PORT    STATE SERVICE   VERSION
 |     Content-language: fr
 |     X-Content-Type-Options: nosniff
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Last-Modified: Sat, 08 Nov 2025 07:12:58 GMT
-|     ETag: "1762585978"
+|     Last-Modified: Wed, 12 Nov 2025 03:31:38 GMT
+|     ETag: "1762918298"
 |     Vary: Cookie
 |     X-Generator: Drupal 10 (https://www.drupal.org)
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -87,7 +71,7 @@ PORT    STATE SERVICE   VERSION
 |   GetRequest: 
 |     HTTP/1.1 200 OK
 |     Server: sysdsi/6.6.6
-|     Date: Sat, 08 Nov 2025 07:12:57 GMT
+|     Date: Wed, 12 Nov 2025 03:31:37 GMT
 |     Content-Type: text/html; charset=UTF-8
 |     Content-Length: 243841
 |     Connection: close
@@ -97,8 +81,8 @@ PORT    STATE SERVICE   VERSION
 |     X-Content-Type-Options: nosniff
 |     X-Frame-Options: SAMEORIGIN
 |     Expires: Sun, 19 Nov 1978 05:00:00 GMT
-|     Last-Modified: Sat, 08 Nov 2025 07:12:57 GMT
-|     ETag: "1762585977"
+|     Last-Modified: Wed, 12 Nov 2025 03:31:37 GMT
+|     ETag: "1762918297"
 |     Vary: Cookie
 |     X-Generator: Drupal 10 (https://www.drupal.org)
 |     Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -117,7 +101,7 @@ PORT    STATE SERVICE   VERSION
 |   HTTPOptions: 
 |     HTTP/1.1 405 Not Allowed
 |     Server: sysdsi/6.6.6
-|     Date: Sat, 08 Nov 2025 07:12:58 GMT
+|     Date: Wed, 12 Nov 2025 03:31:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 157
 |     Connection: close
@@ -133,81 +117,81 @@ PORT    STATE SERVICE   VERSION
 |_    </html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690EED72%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,1B1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
-SF:0sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2007:12:50\x20GM
-SF:T\r\nContent-Type:\x20text/html\r\nContent-Length:\x20169\r\nConnection
-SF::\x20close\r\nLocation:\x20https://www\.polytechnique\.edu/\r\nStrict-T
-SF:ransport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<ht
-SF:ml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body
-SF:>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cent
-SF:er>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1B
-SF:1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20sysdsi/6\.6\.
-SF:6\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2007:12:51\x20GMT\r\nContent-T
-SF:ype:\x20text/html\r\nContent-Length:\x20169\r\nConnection:\x20close\r\n
-SF:Location:\x20https://www\.polytechnique\.edu/\r\nStrict-Transport-Secur
-SF:ity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><
-SF:title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><
-SF:h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>sysdsi/6\.6
-SF:\.6</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,175,"HTTP/1\.1\x
-SF:20400\x20Bad\x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x
-SF:2008\x20Nov\x202025\x2007:12:51\x20GMT\r\nContent-Type:\x20text/html\r\
-SF:nContent-Length:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Sec
-SF:urity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head
-SF:><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>4
-SF:00\x20Bad\x20Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</cente
-SF:r>\r\n</body>\r\n</html>\r\n")%r(X11Probe,175,"HTTP/1\.1\x20400\x20Bad\
-SF:x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2008\x20Nov\x
-SF:202025\x2007:12:51\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
-SF:th:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max
-SF:-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>400\x
-SF:20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20
-SF:Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>
-SF:\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=6913FF92%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,1B1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x
+SF:20sysdsi/6\.6\.6\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:31:30\x20G
+SF:MT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20169\r\nConnectio
+SF:n:\x20close\r\nLocation:\x20https://www\.polytechnique\.edu/\r\nStrict-
+SF:Transport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<h
+SF:tml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<bod
+SF:y>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cen
+SF:ter>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1
+SF:B1,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20sysdsi/6\.6\
+SF:.6\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:31:30\x20GMT\r\nContent-
+SF:Type:\x20text/html\r\nContent-Length:\x20169\r\nConnection:\x20close\r\
+SF:nLocation:\x20https://www\.polytechnique\.edu/\r\nStrict-Transport-Secu
+SF:rity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head>
+SF:<title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center>
+SF:<h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>sysdsi/6\.
+SF:6\.6</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,175,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Wed,\
+SF:x2012\x20Nov\x202025\x2003:31:31\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Se
+SF:curity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<hea
+SF:d><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>
+SF:400\x20Bad\x20Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</cent
+SF:er>\r\n</body>\r\n</html>\r\n")%r(X11Probe,175,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Wed,\x2012\x20Nov\
+SF:x202025\x2003:31:31\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Len
+SF:gth:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20ma
+SF:x-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>400\
+SF:x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x2
+SF:0Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body
+SF:>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/8%Time=690EED79%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sysdsi/6\
-SF:.6\.6\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2007:12:57\x20GMT\r\nConte
-SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x20243841\r\
-SF:nConnection:\x20close\r\nCache-Control:\x20max-age=10800,\x20public\r\n
-SF:X-Drupal-Dynamic-Cache:\x20HIT\r\nContent-language:\x20fr\r\nX-Content-
-SF:Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:\
-SF:x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nLast-Modified:\x20Sa
-SF:t,\x2008\x20Nov\x202025\x2007:12:57\x20GMT\r\nETag:\x20\"1762585977\"\r
-SF:\nVary:\x20Cookie\r\nX-Generator:\x20Drupal\x2010\x20\(https://www\.dru
-SF:pal\.org\)\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
-SF:eSubDomains\r\nX-Frame-Options:\x20sameorigin\r\nX-Content-Type-Options
-SF::\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nX-Xss
-SF:-Protection:\x201;\x20mode=block\r\n\r\n<!DOCTYPE\x20html>\n<html\x20la
-SF:ng=\"fr\"\x20dir=\"ltr\"\x20prefix=\"og:\x20https://ogp\.me/ns#\">\n\x2
-SF:0\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\"\x20/>\n<meta\x2
-SF:0name=\"description\"\x20content=\"L&#039;\xc3\x89cole\x20polytechnique
-SF:\x20est\x20une\x20\xc3\xa9cole\x20d&#039;ing\xc3\xa9nieur\x20qui\x20ass
-SF:")%r(HTTPOptions,1B7,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nServer:\x20
-SF:sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2007:12:58\x20GMT
-SF:\r\nContent-Type:\x20text/html\r\nContent-Length:\x20157\r\nConnection:
-SF:\x20close\r\nStrict-Transport-Security:\x20max-age=31536000;\x20include
-SF:SubDomains\r\nX-Content-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x
-SF:201;\x20mode=block\r\n\r\n<html>\r\n<head><title>405\x20Not\x20Allowed<
-SF:/title></head>\r\n<body>\r\n<center><h1>405\x20Not\x20Allowed</h1></cen
-SF:ter>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n")
-SF:%r(FourOhFourRequest,4000,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:\
-SF:x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x2007:12:58\x20
-SF:GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\
-SF:x20208237\r\nConnection:\x20close\r\nCache-Control:\x20max-age=10800,\x
-SF:20public\r\nX-Drupal-Dynamic-Cache:\x20UNCACHEABLE\x20\(poor\x20cacheab
-SF:ility\)\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-language:\x20fr\r\
-SF:nX-Content-Type-Options:\x20nosniff\r\nExpires:\x20Sun,\x2019\x20Nov\x2
-SF:01978\x2005:00:00\x20GMT\r\nLast-Modified:\x20Sat,\x2008\x20Nov\x202025
-SF:\x2007:12:58\x20GMT\r\nETag:\x20\"1762585978\"\r\nVary:\x20Cookie\r\nX-
-SF:Generator:\x20Drupal\x2010\x20\(https://www\.drupal\.org\)\r\nStrict-Tr
-SF:ansport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Conten
-SF:t-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;\x20mode=block\r\n
-SF:\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=\
-SF:"og:\x20https://ogp\.me/ns#\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x
-SF:20charset=\"utf-8\"\x20/>\n<link\x20rel=\"canonical\"\x20href=\"https:/
-SF:/www\.polytechnique\.edu/\"\x20/>\n<link\x20rel=\"shortlink\"\x20href=\
-SF:"https://www\.polytechnique\.edu/\"\x20/>\n<meta\x20property=");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/12%Time=6913FF99%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,4000,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sysdsi/6
+SF:\.6\.6\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:31:37\x20GMT\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x20243841\r
+SF:\nConnection:\x20close\r\nCache-Control:\x20max-age=10800,\x20public\r\
+SF:nX-Drupal-Dynamic-Cache:\x20HIT\r\nContent-language:\x20fr\r\nX-Content
+SF:-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SAMEORIGIN\r\nExpires:
+SF:\x20Sun,\x2019\x20Nov\x201978\x2005:00:00\x20GMT\r\nLast-Modified:\x20W
+SF:ed,\x2012\x20Nov\x202025\x2003:31:37\x20GMT\r\nETag:\x20\"1762918297\"\
+SF:r\nVary:\x20Cookie\r\nX-Generator:\x20Drupal\x2010\x20\(https://www\.dr
+SF:upal\.org\)\r\nStrict-Transport-Security:\x20max-age=31536000;\x20inclu
+SF:deSubDomains\r\nX-Frame-Options:\x20sameorigin\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nX-Xs
+SF:s-Protection:\x201;\x20mode=block\r\n\r\n<!DOCTYPE\x20html>\n<html\x20l
+SF:ang=\"fr\"\x20dir=\"ltr\"\x20prefix=\"og:\x20https://ogp\.me/ns#\">\n\x
+SF:20\x20<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\"\x20/>\n<meta\x
+SF:20name=\"description\"\x20content=\"L&#039;\xc3\x89cole\x20polytechniqu
+SF:e\x20est\x20une\x20\xc3\xa9cole\x20d&#039;ing\xc3\xa9nieur\x20qui\x20as
+SF:s")%r(HTTPOptions,1B7,"HTTP/1\.1\x20405\x20Not\x20Allowed\r\nServer:\x2
+SF:0sysdsi/6\.6\.6\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:31:37\x20GM
+SF:T\r\nContent-Type:\x20text/html\r\nContent-Length:\x20157\r\nConnection
+SF::\x20close\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
+SF:eSubDomains\r\nX-Content-Type-Options:\x20nosniff\r\nX-Xss-Protection:\
+SF:x201;\x20mode=block\r\n\r\n<html>\r\n<head><title>405\x20Not\x20Allowed
+SF:</title></head>\r\n<body>\r\n<center><h1>405\x20Not\x20Allowed</h1></ce
+SF:nter>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n"
+SF:)%r(FourOhFourRequest,4000,"HTTP/1\.1\x20404\x20Not\x20Found\r\nServer:
+SF:\x20sysdsi/6\.6\.6\r\nDate:\x20Wed,\x2012\x20Nov\x202025\x2003:31:38\x2
+SF:0GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:
+SF:\x20208237\r\nConnection:\x20close\r\nCache-Control:\x20max-age=10800,\
+SF:x20public\r\nX-Drupal-Dynamic-Cache:\x20UNCACHEABLE\x20\(poor\x20cachea
+SF:bility\)\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-language:\x20fr\r
+SF:\nX-Content-Type-Options:\x20nosniff\r\nExpires:\x20Sun,\x2019\x20Nov\x
+SF:201978\x2005:00:00\x20GMT\r\nLast-Modified:\x20Wed,\x2012\x20Nov\x20202
+SF:5\x2003:31:38\x20GMT\r\nETag:\x20\"1762918298\"\r\nVary:\x20Cookie\r\nX
+SF:-Generator:\x20Drupal\x2010\x20\(https://www\.drupal\.org\)\r\nStrict-T
+SF:ransport-Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Conte
+SF:nt-Type-Options:\x20nosniff\r\nX-Xss-Protection:\x201;\x20mode=block\r\
+SF:n\r\n<!DOCTYPE\x20html>\n<html\x20lang=\"fr\"\x20dir=\"ltr\"\x20prefix=
+SF:\"og:\x20https://ogp\.me/ns#\">\n\x20\x20<head>\n\x20\x20\x20\x20<meta\
+SF:x20charset=\"utf-8\"\x20/>\n<link\x20rel=\"canonical\"\x20href=\"https:
+SF://www\.polytechnique\.edu/\"\x20/>\n<link\x20rel=\"shortlink\"\x20href=
+SF:\"https://www\.polytechnique\.edu/\"\x20/>\n<meta\x20property=");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 07:13:19 2025 -- 1 IP address (1 host up) scanned in 44.21 seconds
+# Nmap done at Wed Nov 12 03:31:59 2025 -- 1 IP address (1 host up) scanned in 44.56 seconds
