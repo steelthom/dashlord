@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Sat Nov  8 07:20:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail-guadeloupe.colibris.education.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 12 03:31:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln portail-guadeloupe.colibris.education.gouv.fr
 Nmap scan report for portail-guadeloupe.colibris.education.gouv.fr (194.167.72.61)
 Host is up (0.090s latency).
 rDNS record for 194.167.72.61: colibris.phm.education.gouv.fr
@@ -11,22 +11,38 @@ PORT    STATE  SERVICE  VERSION
 |     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
 |     Connection: close
 |     Content-Length: 0
-|   GetRequest, HTTPOptions: 
+|   GetRequest, HTTPOptions, RTSPRequest: 
 |     HTTP/1.0 302 Moved Temporarily
 |     Location: https:///
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://sip:nm
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https://mstshash=nmap
 |     Connection: close
 |_    Content-Length: 0
 113/tcp closed ident
 443/tcp open   ssl/http nginx
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690EEF65%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x
-SF:20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r
-SF:(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF-Port80-TCP:V=7.92%I=7%D=11/12%Time=6913FF88%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
-SF:r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLoc
-SF:ation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection:\
-SF:x20close\r\nContent-Length:\x200\r\n\r\n");
+SF:r(HTTPOptions,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:
+SF:\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")
+SF:%r(RTSPRequest,5D,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation
+SF::\x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n"
+SF:)%r(FourOhFourRequest,80,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nL
+SF:ocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nConnection
+SF::\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie,69,
+SF:"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20https://mstsh
+SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,62,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\x20h
+SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 07:22:13 2025 -- 1 IP address (1 host up) scanned in 77.17 seconds
+# Nmap done at Wed Nov 12 03:33:44 2025 -- 1 IP address (1 host up) scanned in 158.01 seconds
