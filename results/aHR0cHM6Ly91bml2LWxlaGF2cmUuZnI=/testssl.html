@@ -21,7 +21,7 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on runnervmw9dnm:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-11-08 18:52:55        --&gt;&gt; 193.52.167.158:443 (univ-lehavre.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-11-13 03:41:14        --&gt;&gt; 193.52.167.158:443 (univ-lehavre.fr) &lt;&lt;--</span>
 
  rDNS (193.52.167.158):  apache-proxy.univ-lehavre.fr.
  Service detected:       HTTP
@@ -126,32 +126,34 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>none
 <span style="font-weight:bold;"> Client Authentication        </span>none
-<span style="font-weight:bold;"> Signature Algorithm          </span><span style="color:#008817;">SHA384 with RSA</span>
+<span style="font-weight:bold;"> Signature Algorithm          </span><span style="color:#008817;">SHA256 with RSA</span>
 <span style="font-weight:bold;"> Server key size              </span>RSA <span style="color:#008817;">4096</span> bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
-<span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>235F5DC555DC3F431CA5C6300CD003B7 (OK: length 16)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 37E854A92CF7C26B96FEA95F8657F87DE48A1478
-                              SHA256 2C32730E3EA1FA54D007524E6225213AE89AD85728349DF111DBE2F777CB941F
+<span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Client Authentication, TLS Web Server Authentication
+<span style="font-weight:bold;"> Serial                       </span>2CB0BEE041DDF3A624B0865060E67197 (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 AFAF167831518F9A600E2519513B543A24E12419
+                              SHA256 CE8F3C943979BCBE0812060E36E9634D864BE02243D925B570C4E58D1FA26294
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>*.univ-lehavre.fr </i>
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>*.univ-lehavre.fr univ-lehavre.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (same w/o SNI)
                               <span style="color:#a86437;">wildcard certificate</span> could be problematic, see other hosts at
-                              https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=2C32730E3EA1FA54D007524E6225213AE89AD85728349DF111DBE2F777CB941F
+                              https://search.censys.io/search?resource=hosts&amp;virtual_hosts=INCLUDE&amp;q=CE8F3C943979BCBE0812060E36E9634D864BE02243D925B570C4E58D1FA26294
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#e52207;">expires &lt; 30 days (13)</span> (2024-11-21 00:00 --&gt; 2025-11-21 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">134 &gt;= 60 days</span> (2025-03-27 10:36 --&gt; 2026-03-27 10:36)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>http://GEANT.crl.sectigo.com/GEANTOVRSACA4.crl
-<span style="font-weight:bold;"> OCSP URI                     </span>http://GEANT.ocsp.sectigo.com
+<span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.harica.gr/HARICA-GEANT-TLS-R1.crl
+<span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp-tls.harica.gr
 <span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#008817;">available</span> - please check for match with &quot;Issuer&quot; below
                               <i>issue=harica.gr, issuewild=harica.gr</i>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
-<span style="font-weight:bold;"> Certificates provided</span>        2
-<span style="font-weight:bold;"> Issuer                       </span><i>GEANT OV RSA CA 4</i> (<i>GEANT Vereniging</i> from <i>NL</i>)
-<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2033-05-01 23:59). <i>GEANT OV RSA CA 4</i> &lt;-- <i>USERTrust RSA Certification Authority</i>
+<span style="font-weight:bold;"> Certificates provided</span>        4<span style="color:#a86437;"> (certificate list ordering problem)</span>
+<span style="font-weight:bold;"> Issuer                       </span><i>GEANT TLS RSA 1</i> (<i>Hellenic Academic and Research Institutions CA</i> from <i>GR</i>)
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2039-12-31 11:14). <i>GEANT TLS RSA 1</i> &lt;-- <i>HARICA TLS RSA Root CA 2021</i>
+                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2029-08-31 07:41). <i>HARICA TLS RSA Root CA 2021</i> &lt;-- <i>Hellenic Academic and Research Institutions RootCA 2015</i>
+                              #3: <span style="color:#008817;">ok &gt; 40 days</span> (2045-02-13 10:55). <i>HARICA TLS RSA Root CA 2021</i> &lt;-- <i>HARICA TLS RSA Root CA 2021</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
@@ -184,7 +186,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services, see
-                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=2C32730E3EA1FA54D007524E6225213AE89AD85728349DF111DBE2F777CB941F" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=2C32730E3EA1FA54D007524E6225213AE89AD85728349DF111DBE2F777CB941F</a>
+                                           <a href="https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=CE8F3C943979BCBE0812060E36E9634D864BE02243D925B570C4E58D1FA26294" style="color:black;text-decoration:none;">https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=CE8F3C943979BCBE0812060E36E9634D864BE02243D925B570C4E58D1FA26294</a>
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      common prime with 4096 bits detected: <i>RFC3526/Oakley Group 16</i> (<span style="color:#008817;">4096 bits</span>),
                                            but no DH EXPORT ciphers
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
@@ -244,7 +246,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>96
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-11-08 18:57:16 [ 263s] --&gt;&gt; 193.52.167.158:443 (univ-lehavre.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-11-13 03:45:43 [ 271s] --&gt;&gt; 193.52.167.158:443 (univ-lehavre.fr) &lt;&lt;--</span>
 
 
 </pre>
