@@ -1,13 +1,13 @@
-# Nmap 7.92 scan initiated Sun Nov  9 03:08:32 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.rdv-permisdeconduire-ppol.interieur.gouv.fr
+# Nmap 7.92 scan initiated Thu Nov 13 05:21:17 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.rdv-permisdeconduire-ppol.interieur.gouv.fr
 Nmap scan report for www.rdv-permisdeconduire-ppol.interieur.gouv.fr (143.196.253.106)
-Host is up (0.15s latency).
+Host is up (0.082s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
 80/tcp  open  http
 | fingerprint-strings: 
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Sun, 09 Nov 2025 03:09:00 GMT
+|     Date: Thu, 13 Nov 2025 05:21:41 GMT
 |     Location: https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/nice ports,/Trinity.txt.bak
 |     Content-Length: 291
 |     Connection: close
@@ -19,23 +19,9 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Moved Permanently</h1>
 |     <p>The document has moved <a href="https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/nice ports,/Trinity.txt.bak">here</a>.</p>
 |     </body></html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 301 Moved Permanently
-|     Date: Sun, 09 Nov 2025 03:08:49 GMT
-|     Location: https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/
-|     Content-Length: 264
-|     Connection: close
-|     Content-Type: text/html; charset=iso-8859-1
-|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-|     <html><head>
-|     <title>301 Moved Permanently</title>
-|     </head><body>
-|     <h1>Moved Permanently</h1>
-|     <p>The document has moved <a href="https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/">here</a>.</p>
-|     </body></html>
-|   HTTPOptions: 
-|     HTTP/1.1 301 Moved Permanently
-|     Date: Sun, 09 Nov 2025 03:08:50 GMT
+|     Date: Thu, 13 Nov 2025 05:21:31 GMT
 |     Location: https://www.rdv-permisdeconduire-ppol.interieur.gouv.fr/
 |     Content-Length: 264
 |     Connection: close
@@ -49,7 +35,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   Help: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sun, 09 Nov 2025 03:09:21 GMT
+|     Date: Thu, 13 Nov 2025 05:22:02 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -63,9 +49,9 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 443/tcp open  ssl/https
 | fingerprint-strings: 
-|   FourOhFourRequest, HTTPOptions: 
+|   FourOhFourRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sun, 09 Nov 2025 03:08:57 GMT
+|     Date: Thu, 13 Nov 2025 05:21:38 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -77,9 +63,9 @@ PORT    STATE SERVICE   VERSION
 |     <p>Your browser sent a request that this server could not understand.<br />
 |     </p>
 |     </body></html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sun, 09 Nov 2025 03:08:56 GMT
+|     Date: Thu, 13 Nov 2025 05:21:37 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -93,7 +79,7 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
-|     Date: Sun, 09 Nov 2025 03:09:08 GMT
+|     Date: Thu, 13 Nov 2025 05:21:49 GMT
 |     Content-Length: 226
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -107,74 +93,74 @@ PORT    STATE SERVICE   VERSION
 |_    </body></html>
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=691005C1%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,1E8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20S
-SF:un,\x2009\x20Nov\x202025\x2003:08:49\x20GMT\r\nLocation:\x20https://www
-SF:\.rdv-permisdeconduire-ppol\.interieur\.gouv\.fr/\r\nContent-Length:\x2
-SF:0264\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=
-SF:iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
-SF:\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently</titl
-SF:e>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x2
-SF:0has\x20moved\x20<a\x20href=\"https://www\.rdv-permisdeconduire-ppol\.i
-SF:nterieur\.gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(HTTPOptions,
-SF:1E8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sun,\x2009\x2
-SF:0Nov\x202025\x2003:08:50\x20GMT\r\nLocation:\x20https://www\.rdv-permis
-SF:deconduire-ppol\.interieur\.gouv\.fr/\r\nContent-Length:\x20264\r\nConn
-SF:ection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r
-SF:\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN
-SF:\">\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head><
-SF:body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20move
-SF:d\x20<a\x20href=\"https://www\.rdv-permisdeconduire-ppol\.interieur\.go
-SF:uv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(FourOhFourRequest,21E,"H
-SF:TTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Sun,\x2009\x20Nov\x
-SF:202025\x2003:09:00\x20GMT\r\nLocation:\x20https://www\.rdv-permisdecond
-SF:uire-ppol\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nCont
-SF:ent-Length:\x20291\r\nConnection:\x20close\r\nContent-Type:\x20text/htm
-SF:l;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IET
-SF:F//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Per
-SF:manently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\
-SF:x20document\x20has\x20moved\x20<a\x20href=\"https://www\.rdv-permisdeco
-SF:nduire-ppol\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\">her
-SF:e</a>\.</p>\n</body></html>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x20
-SF:Request\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:09:21\x20GMT\r\nCon
-SF:tent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
+SF-Port80-TCP:V=7.92%I=7%D=11/13%Time=69156ADB%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,1E8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Thu,\x2013\x20Nov\x202025\x2005:21:31\x20GMT\r\nLocation:\x20https://ww
+SF:w\.rdv-permisdeconduire-ppol\.interieur\.gouv\.fr/\r\nContent-Length:\x
+SF:20264\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset
+SF:=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTM
+SF:L\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Permanently</tit
+SF:le>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x
+SF:20has\x20moved\x20<a\x20href=\"https://www\.rdv-permisdeconduire-ppol\.
+SF:interieur\.gouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(HTTPOptions
+SF:,1E8,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Thu,\x2013\x
+SF:20Nov\x202025\x2005:21:31\x20GMT\r\nLocation:\x20https://www\.rdv-permi
+SF:sdeconduire-ppol\.interieur\.gouv\.fr/\r\nContent-Length:\x20264\r\nCon
+SF:nection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\
+SF:r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//E
+SF:N\">\n<html><head>\n<title>301\x20Moved\x20Permanently</title>\n</head>
+SF:<body>\n<h1>Moved\x20Permanently</h1>\n<p>The\x20document\x20has\x20mov
+SF:ed\x20<a\x20href=\"https://www\.rdv-permisdeconduire-ppol\.interieur\.g
+SF:ouv\.fr/\">here</a>\.</p>\n</body></html>\n")%r(FourOhFourRequest,21E,"
+SF:HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20Thu,\x2013\x20Nov\
+SF:x202025\x2005:21:41\x20GMT\r\nLocation:\x20https://www\.rdv-permisdecon
+SF:duire-ppol\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\r\nCon
+SF:tent-Length:\x20291\r\nConnection:\x20close\r\nContent-Type:\x20text/ht
 SF:ml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IE
-SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Requ
-SF:est</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser
-SF:\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20u
-SF:nderstand\.<br\x20/>\n</p>\n</body></html>\n");
+SF:TF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>301\x20Moved\x20Pe
+SF:rmanently</title>\n</head><body>\n<h1>Moved\x20Permanently</h1>\n<p>The
+SF:\x20document\x20has\x20moved\x20<a\x20href=\"https://www\.rdv-permisdec
+SF:onduire-ppol\.interieur\.gouv\.fr/nice\x20ports,/Trinity\.txt\.bak\">he
+SF:re</a>\.</p>\n</body></html>\n")%r(Help,178,"HTTP/1\.1\x20400\x20Bad\x2
+SF:0Request\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2005:22:02\x20GMT\r\nCo
+SF:ntent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/h
+SF:tml;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//I
+SF:ETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Req
+SF:uest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browse
+SF:r\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x20
+SF:understand\.<br\x20/>\n</p>\n</body></html>\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=691005C8%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20
-SF:Sun,\x2009\x20Nov\x202025\x2003:08:56\x20GMT\r\nContent-Length:\x20226\
-SF:r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8
-SF:859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
-SF:\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head>
-SF:<body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20req
-SF:uest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/>
-SF:\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:08:57\x20GMT\r\nC
-SF:ontent-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text/
-SF:html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//
-SF:IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Re
-SF:quest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brows
-SF:er\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x2
-SF:0understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,17
-SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sun,\x2009\x20Nov\x20
-SF:2025\x2003:08:57\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20clo
-SF:se\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYP
-SF:E\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><he
-SF:ad>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20Re
-SF:quest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this\
-SF:x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></html
-SF:>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Sun,\x2009\x20Nov\x202025\x2003:09:08\x20GMT\r\nContent-Length:\x20226
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/13%Time=69156AE1%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
+SF:0Thu,\x2013\x20Nov\x202025\x2005:21:37\x20GMT\r\nContent-Length:\x20226
 SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
 SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
 SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
 SF:><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20re
 SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
-SF:>\n</p>\n</body></html>\n");
+SF:>\n</p>\n</body></html>\n")%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\
+SF:x20Request\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2005:21:37\x20GMT\r\n
+SF:Content-Length:\x20226\r\nConnection:\x20close\r\nContent-Type:\x20text
+SF:/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20R
+SF:equest</title>\n</head><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20brow
+SF:ser\x20sent\x20a\x20request\x20that\x20this\x20server\x20could\x20not\x
+SF:20understand\.<br\x20/>\n</p>\n</body></html>\n")%r(FourOhFourRequest,1
+SF:78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Thu,\x2013\x20Nov\x2
+SF:02025\x2005:21:38\x20GMT\r\nContent-Length:\x20226\r\nConnection:\x20cl
+SF:ose\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><h
+SF:ead>\n<title>400\x20Bad\x20Request</title>\n</head><body>\n<h1>Bad\x20R
+SF:equest</h1>\n<p>Your\x20browser\x20sent\x20a\x20request\x20that\x20this
+SF:\x20server\x20could\x20not\x20understand\.<br\x20/>\n</p>\n</body></htm
+SF:l>\n")%r(RTSPRequest,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x
+SF:20Thu,\x2013\x20Nov\x202025\x2005:21:49\x20GMT\r\nContent-Length:\x2022
+SF:6\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso
+SF:-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x2
+SF:02\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</hea
+SF:d><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20r
+SF:equest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20
+SF:/>\n</p>\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 03:10:49 2025 -- 1 IP address (1 host up) scanned in 136.59 seconds
+# Nmap done at Thu Nov 13 05:23:23 2025 -- 1 IP address (1 host up) scanned in 126.14 seconds
