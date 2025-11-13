@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Nov  9 03:21:05 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.franceagrimer.fr
+# Nmap 7.92 scan initiated Thu Nov 13 04:29:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.franceagrimer.fr
 Nmap scan report for www.franceagrimer.fr (92.222.209.51)
-Host is up (0.087s latency).
+Host is up (0.12s latency).
 rDNS record for 92.222.209.51: ip51.ip-92-222-209.eu
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE   VERSION
@@ -9,7 +9,7 @@ PORT    STATE SERVICE   VERSION
 |   FourOhFourRequest: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: NSX LB
-|     Date: Sun, 09 Nov 2025 03:23:36 GMT
+|     Date: Thu, 13 Nov 2025 04:32:30 GMT
 |     Content-Type: text/html
 |     Content-Length: 163
 |     Connection: close
@@ -21,10 +21,25 @@ PORT    STATE SERVICE   VERSION
 |     <hr><center>NSX LB</center>
 |     </body>
 |     </html>
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.1 301 Moved Permanently
 |     Server: NSX LB
-|     Date: Sun, 09 Nov 2025 03:23:35 GMT
+|     Date: Thu, 13 Nov 2025 04:32:29 GMT
+|     Content-Type: text/html
+|     Content-Length: 163
+|     Connection: close
+|     Location: https:///
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>NSX LB</center>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: NSX LB
+|     Date: Thu, 13 Nov 2025 04:32:30 GMT
 |     Content-Type: text/html
 |     Content-Length: 163
 |     Connection: close
@@ -39,7 +54,7 @@ PORT    STATE SERVICE   VERSION
 |   RTSPRequest, X11Probe: 
 |     HTTP/1.1 400 Bad Request
 |     Server: NSX LB
-|     Date: Sun, 09 Nov 2025 03:23:35 GMT
+|     Date: Thu, 13 Nov 2025 04:32:30 GMT
 |     Content-Type: text/html
 |     Content-Length: 151
 |     Connection: close
@@ -53,9 +68,9 @@ PORT    STATE SERVICE   VERSION
 |_http-server-header: NSX LB
 443/tcp open  ssl/https NSX LB
 | fingerprint-strings: 
-|   FourOhFourRequest, HTTPOptions: 
+|   FourOhFourRequest: 
 |     HTTP/1.1 403 Forbidden
-|     Date: Sun, 09 Nov 2025 03:23:42 GMT
+|     Date: Thu, 13 Nov 2025 04:32:37 GMT
 |     Content-Type: text/html; charset=iso-8859-1
 |     Content-Length: 199
 |     Connection: close
@@ -66,9 +81,9 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Forbidden</h1>
 |     <p>You don't have permission to access this resource.</p>
 |     </body></html>
-|   GetRequest: 
+|   GetRequest, HTTPOptions: 
 |     HTTP/1.1 403 Forbidden
-|     Date: Sun, 09 Nov 2025 03:23:41 GMT
+|     Date: Thu, 13 Nov 2025 04:32:36 GMT
 |     Content-Type: text/html; charset=iso-8859-1
 |     Content-Length: 199
 |     Connection: close
@@ -82,7 +97,7 @@ PORT    STATE SERVICE   VERSION
 |   RTSPRequest: 
 |     HTTP/1.1 400 Bad Request
 |     Server: NSX LB
-|     Date: Sun, 09 Nov 2025 03:23:48 GMT
+|     Date: Thu, 13 Nov 2025 04:32:43 GMT
 |     Content-Type: text/html
 |     Content-Length: 151
 |     Connection: close
@@ -96,7 +111,7 @@ PORT    STATE SERVICE   VERSION
 |   tor-versions: 
 |     HTTP/1.1 400 Bad Request
 |     Server: NSX LB
-|     Date: Sun, 09 Nov 2025 03:23:42 GMT
+|     Date: Thu, 13 Nov 2025 04:32:37 GMT
 |     Content-Type: text/html
 |     Content-Length: 151
 |     Connection: close
@@ -110,72 +125,72 @@ PORT    STATE SERVICE   VERSION
 |_http-server-header: NSX LB
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=691008AF%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,150,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x2
-SF:0NSX\x20LB\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:23:35\x20GMT\r\n
-SF:Content-Type:\x20text/html\r\nContent-Length:\x20163\r\nConnection:\x20
-SF:close\r\nLocation:\x20https:///\r\n\r\n<html>\r\n<head><title>301\x20Mo
-SF:ved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Moved
-SF:\x20Permanently</h1></center>\r\n<hr><center>NSX\x20LB</center>\r\n</bo
-SF:dy>\r\n</html>\r\n")%r(HTTPOptions,150,"HTTP/1\.1\x20301\x20Moved\x20Pe
-SF:rmanently\r\nServer:\x20NSX\x20LB\r\nDate:\x20Sun,\x2009\x20Nov\x202025
-SF:\x2003:23:35\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x2
-SF:0163\r\nConnection:\x20close\r\nLocation:\x20https:///\r\n\r\n<html>\r\
-SF:n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<
-SF:center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>NSX
-SF:\x20LB</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,129,"HTTP/1\.
-SF:1\x20400\x20Bad\x20Request\r\nServer:\x20NSX\x20LB\r\nDate:\x20Sun,\x20
-SF:09\x20Nov\x202025\x2003:23:35\x20GMT\r\nContent-Type:\x20text/html\r\nC
-SF:ontent-Length:\x20151\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><t
-SF:itle>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\
-SF:x20Bad\x20Request</h1></center>\r\n<hr><center>NSX\x20LB</center>\r\n</
-SF:body>\r\n</html>\r\n")%r(X11Probe,129,"HTTP/1\.1\x20400\x20Bad\x20Reque
-SF:st\r\nServer:\x20NSX\x20LB\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:
-SF:23:35\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20151\r\
-SF:nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Reque
-SF:st</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></
-SF:center>\r\n<hr><center>NSX\x20LB</center>\r\n</body>\r\n</html>\r\n")%r
-SF:(FourOhFourRequest,173,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nSer
-SF:ver:\x20NSX\x20LB\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:23:36\x20
-SF:GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20163\r\nConnecti
-SF:on:\x20close\r\nLocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2e
-SF:bak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title></
-SF:head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center
-SF:>\r\n<hr><center>NSX\x20LB</center>\r\n</body>\r\n</html>\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/13%Time=69155ECD%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,150,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x
+SF:20NSX\x20LB\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2004:32:29\x20GMT\r\
+SF:nContent-Type:\x20text/html\r\nContent-Length:\x20163\r\nConnection:\x2
+SF:0close\r\nLocation:\x20https:///\r\n\r\n<html>\r\n<head><title>301\x20M
+SF:oved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Move
+SF:d\x20Permanently</h1></center>\r\n<hr><center>NSX\x20LB</center>\r\n</b
+SF:ody>\r\n</html>\r\n")%r(HTTPOptions,150,"HTTP/1\.1\x20301\x20Moved\x20P
+SF:ermanently\r\nServer:\x20NSX\x20LB\r\nDate:\x20Thu,\x2013\x20Nov\x20202
+SF:5\x2004:32:30\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x
+SF:20163\r\nConnection:\x20close\r\nLocation:\x20https:///\r\n\r\n<html>\r
+SF:\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n
+SF:<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>NS
+SF:X\x20LB</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,129,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nServer:\x20NSX\x20LB\r\nDate:\x20Thu,\x2
+SF:013\x20Nov\x202025\x2004:32:30\x20GMT\r\nContent-Type:\x20text/html\r\n
+SF:Content-Length:\x20151\r\nConnection:\x20close\r\n\r\n<html>\r\n<head><
+SF:title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400
+SF:\x20Bad\x20Request</h1></center>\r\n<hr><center>NSX\x20LB</center>\r\n<
+SF:/body>\r\n</html>\r\n")%r(X11Probe,129,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nServer:\x20NSX\x20LB\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2004
+SF::32:30\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20151\r
+SF:\nConnection:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Requ
+SF:est</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1><
+SF:/center>\r\n<hr><center>NSX\x20LB</center>\r\n</body>\r\n</html>\r\n")%
+SF:r(FourOhFourRequest,173,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nSe
+SF:rver:\x20NSX\x20LB\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2004:32:30\x2
+SF:0GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20163\r\nConnect
+SF:ion:\x20close\r\nLocation:\x20https:///nice%20ports%2C/Tri%6Eity\.txt%2
+SF:ebak\r\n\r\n<html>\r\n<head><title>301\x20Moved\x20Permanently</title><
+SF:/head>\r\n<body>\r\n<center><h1>301\x20Moved\x20Permanently</h1></cente
+SF:r>\r\n<hr><center>NSX\x20LB</center>\r\n</body>\r\n</html>\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=691008B6%P=x86_64-alpine-linux
-SF:-musl%r(GetRequest,15B,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Sun,\
-SF:x2009\x20Nov\x202025\x2003:23:41\x20GMT\r\nContent-Type:\x20text/html;\
-SF:x20charset=iso-8859-1\r\nContent-Length:\x20199\r\nConnection:\x20close
-SF:\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//
-SF:EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h
-SF:1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access
-SF:\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,15B,"HTTP/
-SF:1\.1\x20403\x20Forbidden\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:23
-SF::42\x20GMT\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nCont
-SF:ent-Length:\x20199\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20
-SF:PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>4
-SF:03\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20d
-SF:on't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n<
-SF:/body></html>\n")%r(FourOhFourRequest,15B,"HTTP/1\.1\x20403\x20Forbidde
-SF:n\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:23:42\x20GMT\r\nContent-T
-SF:ype:\x20text/html;\x20charset=iso-8859-1\r\nContent-Length:\x20199\r\nC
-SF:onnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DT
-SF:D\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title>
-SF:\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permiss
-SF:ion\x20to\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(tor
-SF:-versions,129,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20NSX\x20
-SF:LB\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2003:23:42\x20GMT\r\nContent-
-SF:Type:\x20text/html\r\nContent-Length:\x20151\r\nConnection:\x20close\r\
-SF:n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<bo
-SF:dy>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>N
-SF:SX\x20LB</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,129,"HTTP/1
-SF:\.1\x20400\x20Bad\x20Request\r\nServer:\x20NSX\x20LB\r\nDate:\x20Sun,\x
-SF:2009\x20Nov\x202025\x2003:23:48\x20GMT\r\nContent-Type:\x20text/html\r\
-SF:nContent-Length:\x20151\r\nConnection:\x20close\r\n\r\n<html>\r\n<head>
-SF:<title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>40
-SF:0\x20Bad\x20Request</h1></center>\r\n<hr><center>NSX\x20LB</center>\r\n
-SF:</body>\r\n</html>\r\n");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/13%Time=69155ED3%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,15B,"HTTP/1\.1\x20403\x20Forbidden\r\nDate:\x20Thu,
+SF:\x2013\x20Nov\x202025\x2004:32:36\x20GMT\r\nContent-Type:\x20text/html;
+SF:\x20charset=iso-8859-1\r\nContent-Length:\x20199\r\nConnection:\x20clos
+SF:e\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0/
+SF:/EN\">\n<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<
+SF:h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20acces
+SF:s\x20this\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,15B,"HTTP
+SF:/1\.1\x20403\x20Forbidden\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2004:3
+SF:2:36\x20GMT\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\nCon
+SF:tent-Length:\x20199\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x2
+SF:0PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>
+SF:403\x20Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20
+SF:don't\x20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n
+SF:</body></html>\n")%r(FourOhFourRequest,15B,"HTTP/1\.1\x20403\x20Forbidd
+SF:en\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2004:32:37\x20GMT\r\nContent-
+SF:Type:\x20text/html;\x20charset=iso-8859-1\r\nContent-Length:\x20199\r\n
+SF:Connection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//D
+SF:TD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20Forbidden</title
+SF:>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x20have\x20permis
+SF:sion\x20to\x20access\x20this\x20resource\.</p>\n</body></html>\n")%r(to
+SF:r-versions,129,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20NSX\x2
+SF:0LB\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x2004:32:37\x20GMT\r\nContent
+SF:-Type:\x20text/html\r\nContent-Length:\x20151\r\nConnection:\x20close\r
+SF:\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<b
+SF:ody>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>
+SF:NSX\x20LB</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,129,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\nServer:\x20NSX\x20LB\r\nDate:\x20Thu,\
+SF:x2013\x20Nov\x202025\x2004:32:43\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20151\r\nConnection:\x20close\r\n\r\n<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>4
+SF:00\x20Bad\x20Request</h1></center>\r\n<hr><center>NSX\x20LB</center>\r\
+SF:n</body>\r\n</html>\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 03:21:45 2025 -- 1 IP address (1 host up) scanned in 40.04 seconds
+# Nmap done at Thu Nov 13 04:30:34 2025 -- 1 IP address (1 host up) scanned in 45.91 seconds
