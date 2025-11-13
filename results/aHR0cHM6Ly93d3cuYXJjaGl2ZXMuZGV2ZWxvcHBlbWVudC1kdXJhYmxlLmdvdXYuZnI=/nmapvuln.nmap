@@ -1,19 +1,20 @@
-# Nmap 7.92 scan initiated Sat Nov  8 21:07:26 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.archives.developpement-durable.gouv.fr
+# Nmap 7.92 scan initiated Thu Nov 13 03:56:51 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.archives.developpement-durable.gouv.fr
 Nmap scan report for www.archives.developpement-durable.gouv.fr (194.5.170.186)
 Host is up (0.11s latency).
-Not shown: 991 filtered tcp ports (no-response)
-PORT      STATE  SERVICE       VERSION
+Not shown: 980 filtered tcp ports (no-response)
+PORT      STATE  SERVICE         VERSION
+19/tcp    closed chargen
 80/tcp    open   http
 |_http-server-header: <empty>
 | fingerprint-strings: 
 |   GetRequest: 
 |     HTTP/1.1 200 OK
-|     Date: Sat, 08 Nov 2025 21:14:55 GMT
+|     Date: Thu, 13 Nov 2025 04:05:22 GMT
 |     Server: 
 |     Upgrade: h2,h2c
 |     Connection: Upgrade, close
 |     Last-Modified: Tue, 16 May 2023 05:53:51 GMT
-|     ETag: "3ec-5fbc9321cb33b"
+|     ETag: "3ec-5fbc9321c3012"
 |     Accept-Ranges: bytes
 |     Content-Length: 1004
 |     Vary: Accept-Encoding
@@ -33,45 +34,55 @@ PORT      STATE  SERVICE       VERSION
 |     #contact {margin-top:50px; color:#aaa;
 |   HTTPOptions: 
 |     HTTP/1.1 200 OK
-|     Date: Sat, 08 Nov 2025 21:14:55 GMT
+|     Date: Thu, 13 Nov 2025 04:05:22 GMT
 |     Server: 
 |     Upgrade: h2,h2c
 |     Connection: Upgrade, close
-|     Allow: GET,POST,OPTIONS,HEAD
+|     Allow: HEAD,GET,POST,OPTIONS
 |     Content-Length: 0
 |_    Content-Type: text/html
+81/tcp    closed hosts2-ns
+100/tcp   closed newacct
 113/tcp   closed ident
+340/tcp   closed unknown
 443/tcp   open   ssl/https?
-1074/tcp  closed warmspotMgmt
-1124/tcp  closed hpvmmcontrol
-2111/tcp  closed kx
-5120/tcp  closed barracuda-bbs
-8088/tcp  closed radan-http
-10010/tcp closed rxapi
+1021/tcp  closed exp1
+1065/tcp  closed syscomlan
+1688/tcp  closed nsjtp-data
+4279/tcp  closed vrml-multi-use
+4321/tcp  closed rwhois
+5925/tcp  closed unknown
+6000/tcp  closed X11
+6059/tcp  closed X11:59
+6666/tcp  closed irc
+8084/tcp  closed websnp
+19780/tcp closed unknown
+27715/tcp closed unknown
+44443/tcp closed coldfusion-auth
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port80-TCP:V=7.92%I=7%D=11/8%Time=690FB2CF%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,501,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2008\x20Nov\x
-SF:202025\x2021:14:55\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nC
-SF:onnection:\x20Upgrade,\x20close\r\nLast-Modified:\x20Tue,\x2016\x20May\
-SF:x202023\x2005:53:51\x20GMT\r\nETag:\x20\"3ec-5fbc9321cb33b\"\r\nAccept-
-SF:Ranges:\x20bytes\r\nContent-Length:\x201004\r\nVary:\x20Accept-Encoding
-SF:\r\nContent-Type:\x20text/html\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"
-SF:-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\">\n<html>\n<head>\n\x
-SF:20\x20<title>DNUM\x20-\x20Application\x20indisponible</title>\n\x20\x20
-SF:<meta\x20charset=\"utf-8\">\n\x20\x20<style\x20media=\"screen\">\n\x20\
-SF:x20\x20\x20/\*\x20Feuille\x20de\x20styles\x20interne\x20\*/\n\x20\x20\x
-SF:20\x20body{background:#eee;}\n\x20\x20\x20\x20div\x20{text-align:center
-SF:;\x20margin:auto\x20\*;}\n\x20\x20\x20\x20#container\x20{background-col
-SF:or:#fff;\x20width:850px;\x20margin:50px\x20auto;\x20padding:30px\x2050p
-SF:x;\x20box-shadow:0\x200\x2010px\x20#aaa;}\n\x20\x20\x20\x20#maintenance
-SF:\x20{padding:120px\x20120px\x2010px;\x20color:#374;\x20font-size:250%;f
-SF:ont-weight:bold;background:url\('maintenance-marianne\.png'\)\x20no-rep
-SF:eat\x20top\x20center;}\n\x20\x20\x20\x20#more\x20{font-size:65%;}\n\x20
-SF:\x20\x20\x20#contact\x20{margin-top:50px;\x20color:#aaa;")%r(HTTPOption
-SF:s,BA,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2008\x20Nov\x202025\x202
-SF:1:14:55\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nConnection:\
-SF:x20Upgrade,\x20close\r\nAllow:\x20GET,POST,OPTIONS,HEAD\r\nContent-Leng
-SF:th:\x200\r\nContent-Type:\x20text/html\r\n\r\n");
+SF-Port80-TCP:V=7.92%I=7%D=11/13%Time=69155902%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,501,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2013\x20Nov\
+SF:x202025\x2004:05:22\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\n
+SF:Connection:\x20Upgrade,\x20close\r\nLast-Modified:\x20Tue,\x2016\x20May
+SF:\x202023\x2005:53:51\x20GMT\r\nETag:\x20\"3ec-5fbc9321c3012\"\r\nAccept
+SF:-Ranges:\x20bytes\r\nContent-Length:\x201004\r\nVary:\x20Accept-Encodin
+SF:g\r\nContent-Type:\x20text/html\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\
+SF:"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\">\n<html>\n<head>\n\
+SF:x20\x20<title>DNUM\x20-\x20Application\x20indisponible</title>\n\x20\x2
+SF:0<meta\x20charset=\"utf-8\">\n\x20\x20<style\x20media=\"screen\">\n\x20
+SF:\x20\x20\x20/\*\x20Feuille\x20de\x20styles\x20interne\x20\*/\n\x20\x20\
+SF:x20\x20body{background:#eee;}\n\x20\x20\x20\x20div\x20{text-align:cente
+SF:r;\x20margin:auto\x20\*;}\n\x20\x20\x20\x20#container\x20{background-co
+SF:lor:#fff;\x20width:850px;\x20margin:50px\x20auto;\x20padding:30px\x2050
+SF:px;\x20box-shadow:0\x200\x2010px\x20#aaa;}\n\x20\x20\x20\x20#maintenanc
+SF:e\x20{padding:120px\x20120px\x2010px;\x20color:#374;\x20font-size:250%;
+SF:font-weight:bold;background:url\('maintenance-marianne\.png'\)\x20no-re
+SF:peat\x20top\x20center;}\n\x20\x20\x20\x20#more\x20{font-size:65%;}\n\x2
+SF:0\x20\x20\x20#contact\x20{margin-top:50px;\x20color:#aaa;")%r(HTTPOptio
+SF:ns,BA,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2013\x20Nov\x202025\x20
+SF:04:05:22\x20GMT\r\nServer:\x20\x20\r\nUpgrade:\x20h2,h2c\r\nConnection:
+SF:\x20Upgrade,\x20close\r\nAllow:\x20HEAD,GET,POST,OPTIONS\r\nContent-Len
+SF:gth:\x200\r\nContent-Type:\x20text/html\r\n\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Nov  8 21:15:24 2025 -- 1 IP address (1 host up) scanned in 478.96 seconds
+# Nmap done at Thu Nov 13 04:05:51 2025 -- 1 IP address (1 host up) scanned in 540.45 seconds
