@@ -21,7 +21,7 @@
   Using <i>OpenSSL 1.0.2-bad (Mar 28 2025)</i>  [~183 ciphers]
   on runnervmw9dnm:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="color:white;background-color:black;"> Start 2025-11-09 03:21:22        --&gt;&gt; 194.5.170.186:443 (www.dir.ouest.developpement-durable.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-11-13 04:48:13        --&gt;&gt; 194.5.170.186:443 (www.dir.ouest.developpement-durable.gouv.fr) &lt;&lt;--</span>
 
  rDNS (194.5.170.186):   --
  Service detected:       HTTP
@@ -61,13 +61,34 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
  - 
 <u>TLSv1.1</u>
  - 
-<u>TLSv1.2</u><span style="color:#cd00cd;"> Oops: TCP connect problem</span>
-
-<span style="color:#cd00cd;">Unable to open a socket to 194.5.170.186:443. </span> (server order)
+<u>TLSv1.2</u> (server order)
  xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH<span style="color:#008817;"> 253</span>   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
  xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH<span style="color:#008817;"> 253</span>   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
  xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH<span style="color:#008817;"> 253</span>   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256        
-<u>TLSv1.3</u>
+ x9e     DHE-RSA-AES128-GCM-SHA256         DH<span style="color:#008817;"> 3072</span>    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256                
+ x9f     DHE-RSA-AES256-GCM-SHA384         DH<span style="color:#008817;"> 3072</span>    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384                
+ xccaa   DHE-RSA-CHACHA20-POLY1305         DH<span style="color:#008817;"> 3072</span>    ChaCha20    256      TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256          
+<u>TLSv1.3</u> (server order)
+ x1302   TLS_AES_256_GCM_SHA384            ECDH<span style="color:#008817;"> 253</span>   AESGCM      256      TLS_AES_256_GCM_SHA384                             
+ x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH<span style="color:#008817;"> 253</span>   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256                       
+ x1301   TLS_AES_128_GCM_SHA256            ECDH<span style="color:#008817;"> 253</span>   AESGCM      128      TLS_AES_128_GCM_SHA256                             
+
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;font-weight:bold;">yes (OK)</span> -- TLS 1.3 and below
+
+
+<span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
+
+<span style="color:#008817;"> FS is offered (OK) </span>          TLS_AES_256_GCM_SHA384
+                              TLS_CHACHA20_POLY1305_SHA256
+                              ECDHE-RSA-AES256-GCM-SHA384
+                              DHE-RSA-AES256-GCM-SHA384
+                              ECDHE-RSA-CHACHA20-POLY1305
+                              DHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256
+                              ECDHE-RSA-AES128-GCM-SHA256
+                              DHE-RSA-AES128-GCM-SHA256 
+<span style="color:#cd00cd;"> Oops: TCP connect problem</span>
+
+<span style="color:#cd00cd;">Unable to open a socket to 194.5.170.186:443. </span>
 <span style="color:#be32d0;font-weight:bold;">Fatal error: repeated TCP connect problems, giving up</span>
 Consider increasing MAX_SOCKET_FAIL (currently: 2)
 
