@@ -1,9 +1,10 @@
-# Nmap 7.92 scan initiated Sun Nov  9 02:34:25 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.inserjeunes.education.gouv.fr
+# Nmap 7.92 scan initiated Thu Nov 13 04:49:22 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.inserjeunes.education.gouv.fr
 Nmap scan report for www.inserjeunes.education.gouv.fr (194.254.206.88)
-Host is up (0.13s latency).
+Host is up (0.10s latency).
 Not shown: 998 filtered tcp ports (no-response)
 PORT    STATE SERVICE  VERSION
 80/tcp  open  http     Apache httpd 2.4.52
+|_http-server-header: Apache/2.4.52 (Ubuntu)
 | vulners: 
 |   cpe:/a:apache:http_server:2.4.52: 
 |     	PACKETSTORM:176334	9.8	https://vulners.com/packetstorm/PACKETSTORM:176334	*EXPLOIT*
@@ -145,7 +146,6 @@ PORT    STATE SERVICE  VERSION
 |     	EXPLOITPACK:2666FB0676B4B582D689921651A30355	5.0	https://vulners.com/exploitpack/EXPLOITPACK:2666FB0676B4B582D689921651A30355	*EXPLOIT*
 |     	PACKETSTORM:152441	0.0	https://vulners.com/packetstorm/PACKETSTORM:152441	*EXPLOIT*
 |_    	1337DAY-ID-26497	0.0	https://vulners.com/zdt/1337DAY-ID-26497	*EXPLOIT*
-|_http-server-header: Apache/2.4.52 (Ubuntu)
 443/tcp open  ssl/http Apache httpd 2.4.52
 |_http-server-header: Apache/2.4.52 (Ubuntu)
 | vulners: 
@@ -292,4 +292,4 @@ PORT    STATE SERVICE  VERSION
 Service Info: Host: acce.depp.education.fr
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 02:35:28 2025 -- 1 IP address (1 host up) scanned in 63.55 seconds
+# Nmap done at Thu Nov 13 04:50:25 2025 -- 1 IP address (1 host up) scanned in 62.56 seconds
