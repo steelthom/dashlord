@@ -10,15 +10,15 @@
               "id"           : "pre_128cipher",
               "ip"           : "ac-clermont.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "128 cipher limit bug"
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
           }
 ,         {
               "id"           : "SSLv2",
               "ip"           : "ac-clermont.fr/185.75.143.93",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not offered"
+              "severity"     : "WARN",
+              "finding"      : "couldn't be tested, socket problem"
           }
 ,         {
               "id"           : "SSLv3",
@@ -47,6 +47,58 @@
               "port"         : "443",
               "severity"     : "OK",
               "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "NPN",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "offered with h2, http/1.1 (advertised)"
+          }
+,         {
+              "id"           : "ALPN_HTTP2",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "h2"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http/1.1"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "ac-clermont.fr/185.75.143.93",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
           }
 ,         {
               "id"           : "scanProblem",
