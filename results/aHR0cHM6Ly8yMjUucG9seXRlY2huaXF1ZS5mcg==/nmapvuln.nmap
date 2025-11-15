@@ -1,0 +1,160 @@
+# Nmap 7.92 scan initiated Sat Nov 15 03:35:43 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln 225.polytechnique.fr
+Nmap scan report for 225.polytechnique.fr (129.104.30.7)
+Host is up (0.089s latency).
+rDNS record for 129.104.30.7: webhost.polytechnique.fr
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      sysdsi/6.6.6
+|_http-server-header: sysdsi/6.6.6
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Server: sysdsi/6.6.6
+|     Date: Sat, 15 Nov 2025 03:35:57 GMT
+|     Content-Type: text/html
+|     Content-Length: 169
+|     Connection: close
+|     Location: https://225.polytechnique.fr/
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|     </html>
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Server: sysdsi/6.6.6
+|     Date: Sat, 15 Nov 2025 03:35:58 GMT
+|     Content-Type: text/html
+|     Content-Length: 157
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https sysdsi/6.6.6
+|_http-server-header: sysdsi/6.6.6
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Server: sysdsi/6.6.6
+|     Date: Sat, 15 Nov 2025 03:36:04 GMT
+|     Content-Type: text/html
+|     Content-Length: 153
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body>
+|     <center><h1>404 Not Found</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: sysdsi/6.6.6
+|     Date: Sat, 15 Nov 2025 03:36:03 GMT
+|     Content-Type: text/html
+|     Content-Length: 7931
+|     Connection: close
+|     Last-Modified: Wed, 29 May 2019 15:47:04 GMT
+|     ETag: "5ceea978-1efb"
+|     Accept-Ranges: bytes
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Frame-Options: sameorigin
+|     <!doctype html>
+|     <html class="no-js" lang="fr">
+|     <head>
+|     <meta https-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com/ https://www.youtube-nocookie.com/ https://www.youtube-nocookie.com/ https://www.google-analytics.com/; style-src 'self' 'unsafe-inline'; img-src 'self' https://www.google-analytics.com/; media-src 'self'; frame-src https://www.youtube-nocookie.com/ https://www.youtube-nocookie.com/; font-src 'self'">
+|     <meta charset="utf-8">
+|     <meta https-equiv="x-ua-compatible" content="i
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: sysdsi/6.6.6
+|     Date: Sat, 15 Nov 2025 03:36:04 GMT
+|     Content-Type: text/html
+|     Content-Length: 157
+|     Connection: close
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body>
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>sysdsi/6.6.6</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/15%Time=6917F51D%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,1B0,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x
+SF:20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:35:57\x20G
+SF:MT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20169\r\nConnectio
+SF:n:\x20close\r\nLocation:\x20https://225\.polytechnique\.fr/\r\nStrict-T
+SF:ransport-Security:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<ht
+SF:ml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<body
+SF:>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cent
+SF:er>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html>\r\n")%r(HTTPOptions,1B
+SF:0,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nServer:\x20sysdsi/6\.6\.
+SF:6\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:35:57\x20GMT\r\nContent-T
+SF:ype:\x20text/html\r\nContent-Length:\x20169\r\nConnection:\x20close\r\n
+SF:Location:\x20https://225\.polytechnique\.fr/\r\nStrict-Transport-Securi
+SF:ty:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><t
+SF:itle>301\x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h
+SF:1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><center>sysdsi/6\.6\
+SF:.6</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,175,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2
+SF:015\x20Nov\x202025\x2003:35:58\x20GMT\r\nContent-Type:\x20text/html\r\n
+SF:Content-Length:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Secu
+SF:rity:\x20max-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head>
+SF:<title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>40
+SF:0\x20Bad\x20Request</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</center
+SF:>\r\n</body>\r\n</html>\r\n")%r(X11Probe,175,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2015\x20Nov\x2
+SF:02025\x2003:35:58\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Lengt
+SF:h:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-
+SF:age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>400\x2
+SF:0Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20R
+SF:equest</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>\
+SF:r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/15%Time=6917F523%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,2043,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20sysdsi/6
+SF:\.6\.6\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:36:03\x20GMT\r\nCont
+SF:ent-Type:\x20text/html\r\nContent-Length:\x207931\r\nConnection:\x20clo
+SF:se\r\nLast-Modified:\x20Wed,\x2029\x20May\x202019\x2015:47:04\x20GMT\r\
+SF:nETag:\x20\"5ceea978-1efb\"\r\nAccept-Ranges:\x20bytes\r\nStrict-Transp
+SF:ort-Security:\x20max-age=31536000;\x20includeSubDomains\r\nX-Frame-Opti
+SF:ons:\x20sameorigin\r\n\r\n<!doctype\x20html>\n<html\x20class=\"no-js\"\
+SF:x20lang=\"fr\">\n<head>\n\x20\x20<meta\x20https-equiv=\"Content-Securit
+SF:y-Policy\"\x20content=\"default-src\x20'self';\x20script-src\x20'self'\
+SF:x20'unsafe-inline'\x20https://www\.googletagmanager\.com/\x20https://ww
+SF:w\.youtube-nocookie\.com/\x20https://www\.youtube-nocookie\.com/\x20htt
+SF:ps://www\.google-analytics\.com/;\x20style-src\x20'self'\x20'unsafe-inl
+SF:ine';\x20img-src\x20'self'\x20https://www\.google-analytics\.com/;\x20m
+SF:edia-src\x20'self';\x20frame-src\x20https://www\.youtube-nocookie\.com/
+SF:\x20https://www\.youtube-nocookie\.com/;\x20font-src\x20'self'\">\n\x20
+SF:\x20<meta\x20charset=\"utf-8\">\n\x20\x20<meta\x20https-equiv=\"x-ua-co
+SF:mpatible\"\x20content=\"i")%r(HTTPOptions,175,"HTTP/1\.1\x20405\x20Not\
+SF:x20Allowed\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2015\x20Nov\x
+SF:202025\x2003:36:04\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Leng
+SF:th:\x20157\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max
+SF:-age=31536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>405\x
+SF:20Not\x20Allowed</title></head>\r\n<body>\r\n<center><h1>405\x20Not\x20
+SF:Allowed</h1></center>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>
+SF:\r\n</html>\r\n")%r(FourOhFourRequest,16F,"HTTP/1\.1\x20404\x20Not\x20F
+SF:ound\r\nServer:\x20sysdsi/6\.6\.6\r\nDate:\x20Sat,\x2015\x20Nov\x202025
+SF:\x2003:36:04\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x2
+SF:0153\r\nConnection:\x20close\r\nStrict-Transport-Security:\x20max-age=3
+SF:1536000;\x20includeSubDomains\r\n\r\n<html>\r\n<head><title>404\x20Not\
+SF:x20Found</title></head>\r\n<body>\r\n<center><h1>404\x20Not\x20Found</h
+SF:1></center>\r\n<hr><center>sysdsi/6\.6\.6</center>\r\n</body>\r\n</html
+SF:>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 15 03:36:20 2025 -- 1 IP address (1 host up) scanned in 36.59 seconds
