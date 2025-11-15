@@ -1,0 +1,108 @@
+# Nmap 7.92 scan initiated Sat Nov 15 04:08:34 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lamarinerecrute.gouv.fr
+Nmap scan report for lamarinerecrute.gouv.fr (46.18.194.225)
+Host is up (0.15s latency).
+rDNS record for 46.18.194.225: ds-194-225.dri-services.net
+Not shown: 996 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+25/tcp  open  smtp      Postfix smtpd
+80/tcp  open  http
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|     </body></html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 308 Permanent Redirect
+|     content-length: 0
+|     location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     connection: close
+|   GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 308 Permanent Redirect
+|     content-length: 0
+|     location: https:///
+|_    connection: close
+443/tcp open  ssl/https nginx
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, TerminalServerCookie, tor-versions: 
+|     HTTP/1.1 400 Bad request
+|     content-length: 90
+|     cache-control: no-cache
+|     content-type: text/html
+|     connection: close
+|     <html><body><h1>400 Bad request</h1>
+|     Your browser sent an invalid request.
+|_    </body></html>
+|_http-server-header: nginx
+587/tcp open  smtp      Postfix smtpd
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/15%Time=6917FCCC%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\ncontent-l
+SF:ength:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n")
+SF:%r(HTTPOptions,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\ncontent
+SF:-length:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r\n
+SF:")%r(RTSPRequest,5E,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\r\nconte
+SF:nt-length:\x200\r\nlocation:\x20https:///\r\nconnection:\x20close\r\n\r
+SF:\n")%r(X11Probe,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-lengt
+SF:h:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\
+SF:nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>
+SF:\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>
+SF:\n")%r(FourOhFourRequest,81,"HTTP/1\.1\x20308\x20Permanent\x20Redirect\
+SF:r\ncontent-length:\x200\r\nlocation:\x20https:///nice%20ports%2C/Tri%6E
+SF:ity\.txt%2ebak\r\nconnection:\x20close\r\n\r\n")%r(RPCCheck,CF,"HTTP/1\
+SF:.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\
+SF:x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r
+SF:\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x
+SF:20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSVersionBindReqTCP
+SF:,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncac
+SF:he-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x2
+SF:0close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brows
+SF:er\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(DNSStatu
+SF:sRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x
+SF:2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\ncon
+SF:nection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYo
+SF:ur\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")
+SF:%r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090
+SF:\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnect
+SF:ion:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x
+SF:20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/15%Time=6917FCD5%P=x86_64-alpine-linu
+SF:x-musl%r(tor-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent
+SF:-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/h
+SF:tml\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20reques
+SF:t</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body><
+SF:/html>\n")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent
+SF:-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/h
+SF:tml\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20reques
+SF:t</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body><
+SF:/html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20reques
+SF:t\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-typ
+SF:e:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20B
+SF:ad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request
+SF:\.\n</body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\n
+SF:content-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><
+SF:h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid
+SF:\x20request\.\n</body></html>\n")%r(Help,CF,"HTTP/1\.1\x20400\x20Bad\x2
+SF:0request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncont
+SF:ent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>4
+SF:00\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20
+SF:request\.\n</body></html>\n")%r(SSLSessionReq,CF,"HTTP/1\.1\x20400\x20B
+SF:ad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\
+SF:ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body>
+SF:<h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invali
+SF:d\x20request\.\n</body></html>\n")%r(TerminalServerCookie,CF,"HTTP/1\.1
+SF:\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncache-control:\x2
+SF:0no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x20close\r\n\r\n
+SF:<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20
+SF:an\x20invalid\x20request\.\n</body></html>\n");
+Service Info: Host:  dvs29139.eva.produhost.net
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 15 04:09:17 2025 -- 1 IP address (1 host up) scanned in 43.14 seconds
