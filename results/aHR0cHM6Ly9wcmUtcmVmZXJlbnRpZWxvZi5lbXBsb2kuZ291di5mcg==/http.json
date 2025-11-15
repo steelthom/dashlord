@@ -1,1 +1,136 @@
-{"error":"Site did respond with an unexpected HTTP status code 503."}
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "F",
+    "error": null,
+    "score": 10,
+    "statusCode": 200,
+    "testsFailed": 5,
+    "testsPassed": 5,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Sat, 15 Nov 2025 04:23:33 GMT",
+      "set-cookie": [
+        "JSESSIONID=6B47BBD6306D538E3E3272E2C96FC23D; Path=/referentiel_of; Secure; HttpOnly",
+        "TS010a0e24=01611f729b2ae76b017975095de7e393de3592469589c57afca55b9f56e10558c045b8c68a6c7d7fdbce20d8568115da8a1a2fa45fe7ba48d7bd8d144f20bb2388e30d57f8; Path=/",
+        "TS01b1f390=01611f729ba3d8a80107e2c48e8fc7efce9a3d984889c57afca55b9f56e10558c045b8c68a6c7d7fdbce20d8568115da8a1a2fa45fdbd10c2d9ce553130baa2511b5f82f0157810da32f3e7121bee17517b3c8b3db; path=/referentiel_of"
+      ],
+      "content-type": "text/html;charset=UTF-8",
+      "connection": "close",
+      "transfer-encoding": "chunked"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "Current_Session": {
+          "domain": "pre-referentielof.emploi.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "TS010a0e24": {
+          "domain": "pre-referentielof.emploi.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "JSESSIONID": {
+          "domain": "pre-referentielof.emploi.gouv.fr",
+          "httponly": true,
+          "path": "/referentiel_of",
+          "port": null,
+          "secure": true
+        },
+        "TS01b1f390": {
+          "domain": "pre-referentielof.emploi.gouv.fr",
+          "path": "/referentiel_of",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-not-needed-no-http",
+      "scoreModifier": 0,
+      "destination": "https://pre-referentielof.emploi.gouv.fr/referentiel_of",
+      "redirects": true,
+      "route": [],
+      "statusCode": null
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-no-scripts-loaded",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
