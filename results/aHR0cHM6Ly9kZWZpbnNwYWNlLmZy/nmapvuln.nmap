@@ -1,0 +1,104 @@
+# Nmap 7.92 scan initiated Sat Nov 15 03:33:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln definspace.fr
+Nmap scan report for definspace.fr (23.236.62.147)
+Host is up (0.012s latency).
+rDNS record for 23.236.62.147: 147.62.236.23.bc.googleusercontent.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     X-Seen-By: 1ev8u3tblITHmgXkyGXE9h9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///
+|     X-Seen-By: dwc60INy8NFddnU/0WdlOB9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///
+|     X-Seen-By: ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https:///
+|     X-Seen-By: 9WD8GAcpJgs/Ng1WkD2i0h9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   SIPOptions: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://sip:nm
+|     X-Seen-By: ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 301 Moved Permanently
+|     Location: https://mstshash=nmap
+|     X-Seen-By: xIKq3IotbbLp4+7DTTMx8R9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|_    Content-Length: 0
+443/tcp open  ssl/https Pepyaka
+|_http-server-header: Pepyaka
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     X-Seen-By: ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.0 403 Forbidden
+|     X-Seen-By: dwc60INy8NFddnU/0WdlOB9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|     Content-Length: 0
+|   TerminalServerCookie: 
+|     HTTP/1.0 403 Forbidden
+|     X-Seen-By: 1ev8u3tblITHmgXkyGXE9h9slopJdhD+WySraMrpIY8=
+|     Connection: close
+|_    Content-Length: 0
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/15%Time=6917F4A9%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,96,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
+SF:x20https:///\r\nX-Seen-By:\x20dwc60INy8NFddnU/0WdlOB9slopJdhD\+WySraMrp
+SF:IY8=\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOp
+SF:tions,96,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20http
+SF:s:///\r\nX-Seen-By:\x20ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD\+WySraMrpIY8=\r\
+SF:nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,9
+SF:6,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https:///\r
+SF:\nX-Seen-By:\x209WD8GAcpJgs/Ng1WkD2i0h9slopJdhD\+WySraMrpIY8=\r\nConnec
+SF:tion:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,B9
+SF:,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20https:///nic
+SF:e%20ports%2C/Tri%6Eity\.txt%2ebak\r\nX-Seen-By:\x201ev8u3tblITHmgXkyGXE
+SF:9h9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20close\r\nContent-Length:\x2
+SF:00\r\n\r\n")%r(TerminalServerCookie,A2,"HTTP/1\.0\x20301\x20Moved\x20Pe
+SF:rmanently\r\nLocation:\x20https://mstshash=nmap\r\nX-Seen-By:\x20xIKq3I
+SF:otbbLp4\+7DTTMx8R9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20close\r\nCon
+SF:tent-Length:\x200\r\n\r\n")%r(SIPOptions,9B,"HTTP/1\.0\x20301\x20Moved\
+SF:x20Permanently\r\nLocation:\x20https://sip:nm\r\nX-Seen-By:\x20ui2Pjuc3
+SF:zC1HEw7V2qXeyh9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20close\r\nConten
+SF:t-Length:\x200\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/15%Time=6917F4AF%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,79,"HTTP/1\.0\x20403\x20Forbidden\r\nX-Seen-By:\x20
+SF:dwc60INy8NFddnU/0WdlOB9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20close\r
+SF:\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,79,"HTTP/1\.0\x20403\x20
+SF:Forbidden\r\nX-Seen-By:\x20ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD\+WySraMrpIY8
+SF:=\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFou
+SF:rRequest,79,"HTTP/1\.0\x20403\x20Forbidden\r\nX-Seen-By:\x20ui2Pjuc3zC1
+SF:HEw7V2qXeyh9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20close\r\nContent-L
+SF:ength:\x200\r\n\r\n")%r(RTSPRequest,79,"HTTP/1\.0\x20403\x20Forbidden\r
+SF:\nX-Seen-By:\x20ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD\+WySraMrpIY8=\r\nConnec
+SF:tion:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(TerminalServerCookie
+SF:,79,"HTTP/1\.0\x20403\x20Forbidden\r\nX-Seen-By:\x201ev8u3tblITHmgXkyGX
+SF:E9h9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20close\r\nContent-Length:\x
+SF:200\r\n\r\n")%r(SIPOptions,79,"HTTP/1\.0\x20403\x20Forbidden\r\nX-Seen-
+SF:By:\x20ui2Pjuc3zC1HEw7V2qXeyh9slopJdhD\+WySraMrpIY8=\r\nConnection:\x20
+SF:close\r\nContent-Length:\x200\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 15 03:36:29 2025 -- 1 IP address (1 host up) scanned in 160.11 seconds
