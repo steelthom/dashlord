@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -160,6 +160,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
@@ -178,7 +206,7 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -188,18 +216,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -237,11 +279,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -290,7 +332,7 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "143E29BB71A4BF6BE4DFC8504710B219"
+              "finding"      : "BBB4C6006B833B9B12859B310255A361"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -304,21 +346,21 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "94E758DAC10A5365AA0D8B70E70BD1AECB2465DC"
+              "finding"      : "8B5FFB7FA06A58B98817683E0D80C6225C7F7FD0"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1CB46F7307897207977B8F8FE6D3946D7A81DCE4A829ED3585F8C84D14428341"
+              "finding"      : "09E773DDF87237BFF0741794536E2E5021E7F11442F0E340E729E95456B9F1B5"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -366,22 +408,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (26)"
+              "severity"     : "OK",
+              "finding"      : "86 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2024-11-03 23:00"
+              "finding"      : "2025-11-12 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-12-05 22:59"
+              "severity"     : "OK",
+              "finding"      : "2026-02-09 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -402,20 +444,20 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.dhimyotis.com/servicesca.crl http://crl.certigna.fr/servicesca.crl"
+              "finding"      : "http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.certigna.fr http://servicesca.ocsp.dhimyotis.com"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "OCSP_stapling",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -458,49 +500,49 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 (Certigna from FR)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFhTCCBG2gAwIBAgIUZC/nHF2pouqOZECc9JYzehjW3kAwDQYJKoZIhvcNAQEMBQAwNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwHhcNMjUwMjI4MDk0OTA0WhcNMjcwNjI4MDk0OTAzWjB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANZ0kTuG6eFTF0KPbtvYBB5zIq+eR03FgyQAyRZE0lqCGRyx96ko+W/yyfxbCgPxMw5jlxdXteXBh8DLc5S4w0ICfOSc8vabFuXKhKa8BAB5/VtdzZosAF1AvFC1WLEVvPiUJRTsY0BkhnFI0UKdLN145hY4EL+CaSUENQ19006BR5P5HeWtmikYHgiq/TBlhTsnaYB6SL8mT40GfBxmp6PEjjrhKLurSQOMbF+6HiEnfZUr3OrKDncxN0GHxFYcIFBTL53JBNFA9qbPYsD6KubJmUqVoImyRKR+eXJHVNfPMhYzQv3EaYh2rpHRsjV96yZBIqBc3QSw82gj8bxh+rZRz8e+QISMlvljhHXqn+Qy4puuMt+3yQmnwFTYJQ13NFv1Uh3cJ5tEHP+yaLLCDqjy+cGCwNGMgsdWhS/67F4/AvRyI424psxuS/RbnKRrva0ZpDLTABgqfnONeU0LdkP817nGKNTKX2BDMD93BzOKzjDSBITJIRR8QICTKtQzmaKhd4UgbqPp+Bq1dMVhk5wW+x+bIHcB+wpqkO534SRMz93ijW2hSKrDWa2CB0Pl5tgcoGZThtjB3/Fm45XQLfW+vcTf+7nH8CRjMXO9swS6TovOXIpa5aG3jM+Dgewg6RbxtO/uIjv1zuIdS02d2h8Is2CvJ9/duOKucuYt1YnfAgMBAAGjggFLMIIBRzBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAKGJWh0dHA6Ly9jZXJ0LmNlcnRpZ25hLmNvbS9DZXJ0aWduYS5jZXIwHwYDVR0jBBgwFoAUGu3+QTmQtCRZvgHyUtVF9lo53BEwEgYDVR0TAQH/BAgwBgEB/wIBADBIBgNVHSAEQTA/MAgGBmeBDAECAjAzBgoqgXoBgTEBAAECMCUwIwYIKwYBBQUHAgEWF2h0dHA6Ly9jcHMuY2VydGlnbmEuY29tMDUGA1UdHwQuMCwwKqAooCaGJGh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSgcuZGxDBc5K3CHMLVYjiYgVpUpjANBgkqhkiG9w0BAQwFAAOCAQEAkYjFkMa/La7tXDId/3ltDS8PKsxhxmOBA6bRsLeDQWIU2E1M/1A1y0bRkw4Y6ZRGmkVLLdQRD9mJIvxnllTyoeOzJPk0BVW6xVgPncatyhNx0bKEFouetx7k+J7yKhu/k3jJP9XAxtbCWViQ4rZ3BvABYHA8rBmfccbVMr04a/+ILTpT/1QiGzhHcpo2fnlQ+okXq0cuikN5/WMlHNgsTJIG2b5yEFtYY84Hlx0ejJX3cOAd4pot9vHdjv8e2KvIq/jopdB5lyv/wbaQ4EHz9i5Z4dvmECjsx9oEHRDmUoeEoV1sb/I/2np3PHjtYTrzzoOTYUaebmdXkFasRpTx1w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "1A209DB499625B4EA29F597BE7744BA1E240B8C7629F75B41A3373339FD7EDDF"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2025-02-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-11-22 11:33"
+              "severity"     : "OK",
+              "finding"      : "2027-06-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires <= 20 days"
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
           }
 ,         {
               "id"           : "intermediate_cert_chain <#1>",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 <-- Certigna"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -535,7 +577,7 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762660983"
+              "finding"      : "1763180808"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -722,7 +764,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=1CB46F7307897207977B8F8FE6D3946D7A81DCE4A829ED3585F8C84D14428341"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=09E773DDF87237BFF0741794536E2E5021E7F11442F0E340E729E95456B9F1B5"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -797,63 +839,63 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -902,35 +944,35 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -944,42 +986,42 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -993,21 +1035,21 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1021,7 +1063,7 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1091,20 +1133,13 @@
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "www.etape1.oc-collecte.sante.gouv.fr/185.194.83.112",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "55"
+              "finding"      : "76"
           }
 ]
