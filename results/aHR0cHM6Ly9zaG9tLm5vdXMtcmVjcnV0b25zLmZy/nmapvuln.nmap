@@ -1,0 +1,187 @@
+# Nmap 7.92 scan initiated Sat Nov 15 03:55:23 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln shom.nous-recrutons.fr
+Nmap scan report for shom.nous-recrutons.fr (212.83.171.9)
+Host is up (0.13s latency).
+rDNS record for 212.83.171.9: beetween-jobs.com
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 15 Nov 2025 03:55:33 GMT
+|     Content-Type: text/html
+|     Content-Length: 216
+|     Connection: close
+|     Location: https://espace-emploi.ghba.fr:443/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Date: Sat, 15 Nov 2025 03:55:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 216
+|     Connection: close
+|     Location: https://espace-emploi.ghba.fr:443/
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>301 Moved Permanently</title></head>
+|     <body>
+|     <center><h1>301 Moved Permanently</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 15 Nov 2025 03:55:32 GMT
+|     Content-Type: text/html
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 15 Nov 2025 03:55:33 GMT
+|     Content-Type: text/html
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|_    </html>
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 15 Nov 2025 03:55:47 GMT
+|     Content-Type: text/html
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   RPCCheck, RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 15 Nov 2025 03:55:46 GMT
+|     Content-Type: text/html
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Sat, 15 Nov 2025 03:55:40 GMT
+|     Content-Type: text/html
+|     Content-Length: 204
+|     Connection: close
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body>
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>tengine</center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=11/15%Time=6917F9B4%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,18E,"HTTP/1\.1\x20301\x20Moved\x20Permanently\r\nDate:\x20
+SF:Sat,\x2015\x20Nov\x202025\x2003:55:32\x20GMT\r\nContent-Type:\x20text/h
+SF:tml\r\nContent-Length:\x20216\r\nConnection:\x20close\r\nLocation:\x20h
+SF:ttps://espace-emploi\.ghba\.fr:443/\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\
+SF:x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><title>301\
+SF:x20Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20
+SF:Moved\x20Permanently</h1></center>\r\n<hr><center>tengine</center>\r\n<
+SF:/body>\r\n</html>\r\n")%r(HTTPOptions,18E,"HTTP/1\.1\x20301\x20Moved\x2
+SF:0Permanently\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:55:32\x20GMT\r
+SF:\nContent-Type:\x20text/html\r\nContent-Length:\x20216\r\nConnection:\x
+SF:20close\r\nLocation:\x20https://espace-emploi\.ghba\.fr:443/\r\n\r\n<!D
+SF:OCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<h
+SF:tml>\r\n<head><title>301\x20Moved\x20Permanently</title></head>\r\n<bod
+SF:y>\r\n<center><h1>301\x20Moved\x20Permanently</h1></center>\r\n<hr><cen
+SF:ter>tengine</center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,14E,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x
+SF:2003:55:32\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x202
+SF:04\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//I
+SF:ETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><title>400\x20Bad\x2
+SF:0Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request<
+SF:/h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n
+SF:")%r(X11Probe,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\
+SF:x2015\x20Nov\x202025\x2003:55:33\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20204\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HT
+SF:ML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<hea
+SF:d><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>
+SF:400\x20Bad\x20Request</h1></center>\r\n<hr><center>tengine</center>\r\n
+SF:</body>\r\n</html>\r\n")%r(FourOhFourRequest,1B1,"HTTP/1\.1\x20301\x20M
+SF:oved\x20Permanently\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:55:33\x
+SF:20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20216\r\nConnec
+SF:tion:\x20close\r\nLocation:\x20https://espace-emploi\.ghba\.fr:443/nice
+SF:%20ports%2C/Tri%6Eity\.txt%2ebak\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20
+SF:\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><title>301\x20
+SF:Moved\x20Permanently</title></head>\r\n<body>\r\n<center><h1>301\x20Mov
+SF:ed\x20Permanently</h1></center>\r\n<hr><center>tengine</center>\r\n</bo
+SF:dy>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/15%Time=6917F9BC%P=x86_64-alpine-linu
+SF:x-musl%r(tor-versions,14E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\
+SF:x20Sat,\x2015\x20Nov\x202025\x2003:55:40\x20GMT\r\nContent-Type:\x20tex
+SF:t/html\r\nContent-Length:\x20204\r\nConnection:\x20close\r\n\r\n<!DOCTY
+SF:PE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>
+SF:\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body>\r\n<cen
+SF:ter><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>tengine</cen
+SF:ter>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,14E,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:55:46\x20GM
+SF:T\r\nContent-Type:\x20text/html\r\nContent-Length:\x20204\r\nConnection
+SF::\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
+SF:\x202\.0//EN\">\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title>
+SF:</head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\
+SF:n<hr><center>tengine</center>\r\n</body>\r\n</html>\r\n")%r(RPCCheck,14
+SF:E,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2015\x20Nov\x20
+SF:2025\x2003:55:46\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length
+SF::\x20204\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20
+SF:\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><title>400\x20
+SF:Bad\x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Re
+SF:quest</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(DNSVersionBindReqTCP,14E,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nDate:\x20Sat,\x2015\x20Nov\x202025\x2003:55:47\x20GMT\r\nContent-Ty
+SF:pe:\x20text/html\r\nContent-Length:\x20204\r\nConnection:\x20close\r\n\
+SF:r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">
+SF:\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<bod
+SF:y>\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n<hr><center>te
+SF:ngine</center>\r\n</body>\r\n</html>\r\n")%r(DNSStatusRequestTCP,14E,"H
+SF:TTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Sat,\x2015\x20Nov\x202025
+SF:\x2003:55:47\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x2
+SF:0204\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-/
+SF:/IETF//DTD\x20HTML\x202\.0//EN\">\r\n<html>\r\n<head><title>400\x20Bad\
+SF:x20Request</title></head>\r\n<body>\r\n<center><h1>400\x20Bad\x20Reques
+SF:t</h1></center>\r\n<hr><center>tengine</center>\r\n</body>\r\n</html>\r
+SF:\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 15 03:56:01 2025 -- 1 IP address (1 host up) scanned in 38.57 seconds
