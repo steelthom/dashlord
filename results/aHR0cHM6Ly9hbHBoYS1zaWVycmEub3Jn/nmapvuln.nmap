@@ -1,13 +1,26 @@
-# Nmap 7.92 scan initiated Sun Nov  9 08:37:49 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln alpha-sierra.org
+# Nmap 7.92 scan initiated Wed Nov 19 04:17:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln alpha-sierra.org
 Nmap scan report for alpha-sierra.org (143.196.147.107)
-Host is up (0.095s latency).
-Not shown: 895 filtered tcp ports (no-response), 103 closed tcp ports (reset)
-PORT    STATE SERVICE   VERSION
+Host is up (0.092s latency).
+Not shown: 945 filtered tcp ports (no-response), 53 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
 80/tcp  open  http
 | fingerprint-strings: 
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.0 403 Forbidden
-|     Date: Sun, 09 Nov 2025 08:39:06 GMT
+|     Date: Wed, 19 Nov 2025 04:20:04 GMT
+|     Content-Length: 199
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>403 Forbidden</title>
+|     </head><body>
+|     <h1>Forbidden</h1>
+|     <p>You don't have permission to access this resource.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 403 Forbidden
+|     Date: Wed, 19 Nov 2025 04:20:05 GMT
 |     Content-Length: 199
 |     Connection: close
 |     Content-Type: text/html; charset=iso-8859-1
@@ -18,49 +31,23 @@ PORT    STATE SERVICE   VERSION
 |     <h1>Forbidden</h1>
 |     <p>You don't have permission to access this resource.</p>
 |_    </body></html>
-443/tcp open  ssl/https
-| fingerprint-strings: 
-|   HTTPOptions: 
-|     HTTP/1.1 400 Bad Request
-|     Date: Sun, 09 Nov 2025 08:39:17 GMT
-|     Content-Length: 226
-|     Connection: close
-|     Content-Type: text/html; charset=iso-8859-1
-|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-|     <html><head>
-|     <title>400 Bad Request</title>
-|     </head><body>
-|     <h1>Bad Request</h1>
-|     <p>Your browser sent a request that this server could not understand.<br />
-|     </p>
-|_    </body></html>
-2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/9%Time=6910532A%P=x86_64-alpine-linux-musl%r
-SF:(GetRequest,15B,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Sun,\x2009\x
-SF:20Nov\x202025\x2008:39:06\x20GMT\r\nContent-Length:\x20199\r\nConnectio
-SF:n:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\
-SF:n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n
-SF:<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forbi
-SF:dden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20thi
-SF:s\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,15B,"HTTP/1\.0\x2
-SF:0403\x20Forbidden\r\nDate:\x20Sun,\x2009\x20Nov\x202025\x2008:39:06\x20
-SF:GMT\r\nContent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:\
-SF:x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\
-SF:x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20F
-SF:orbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x2
-SF:0have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body><
-SF:/html>\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/9%Time=69105335%P=x86_64-alpine-linux
-SF:-musl%r(HTTPOptions,178,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x2
-SF:0Sun,\x2009\x20Nov\x202025\x2008:39:17\x20GMT\r\nContent-Length:\x20226
-SF:\r\nConnection:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-
-SF:8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x20
-SF:2\.0//EN\">\n<html><head>\n<title>400\x20Bad\x20Request</title>\n</head
-SF:><body>\n<h1>Bad\x20Request</h1>\n<p>Your\x20browser\x20sent\x20a\x20re
-SF:quest\x20that\x20this\x20server\x20could\x20not\x20understand\.<br\x20/
-SF:>\n</p>\n</body></html>\n");
+443/tcp open  ssl/https?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/19%Time=691D45A5%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,15B,"HTTP/1\.0\x20403\x20Forbidden\r\nDate:\x20Wed,\x2019\
+SF:x20Nov\x202025\x2004:20:04\x20GMT\r\nContent-Length:\x20199\r\nConnecti
+SF:on:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\
+SF:n<html><head>\n<title>403\x20Forbidden</title>\n</head><body>\n<h1>Forb
+SF:idden</h1>\n<p>You\x20don't\x20have\x20permission\x20to\x20access\x20th
+SF:is\x20resource\.</p>\n</body></html>\n")%r(HTTPOptions,15B,"HTTP/1\.0\x
+SF:20403\x20Forbidden\r\nDate:\x20Wed,\x2019\x20Nov\x202025\x2004:20:05\x2
+SF:0GMT\r\nContent-Length:\x20199\r\nConnection:\x20close\r\nContent-Type:
+SF:\x20text/html;\x20charset=iso-8859-1\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC
+SF:\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n<html><head>\n<title>403\x20
+SF:Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You\x20don't\x
+SF:20have\x20permission\x20to\x20access\x20this\x20resource\.</p>\n</body>
+SF:</html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 08:39:31 2025 -- 1 IP address (1 host up) scanned in 102.61 seconds
+# Nmap done at Wed Nov 19 04:21:23 2025 -- 1 IP address (1 host up) scanned in 256.22 seconds
