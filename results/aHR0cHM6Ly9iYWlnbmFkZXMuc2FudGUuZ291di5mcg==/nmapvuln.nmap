@@ -1,1 +1,37 @@
-# Nmap 7.92 scan initiated Sun Nov  9 14:03:52 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln baignades.sante.gouv.fr
+# Nmap 7.92 scan initiated Wed Nov 19 04:49:41 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln baignades.sante.gouv.fr
+Nmap scan report for baignades.sante.gouv.fr (164.131.212.60)
+Host is up (0.11s latency).
+Not shown: 986 filtered tcp ports (no-response)
+PORT      STATE  SERVICE      VERSION
+80/tcp    open   http         web
+|_http-server-header: web
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Location: https:///
+|     Server: web
+|     Connection: close
+|_    Content-Length: 0
+113/tcp   closed ident
+163/tcp   closed cmip-man
+443/tcp   open   ssl/https?
+1010/tcp  closed surf
+2196/tcp  closed unknown
+3211/tcp  closed avsecuremgmt
+3333/tcp  closed dec-notes
+3766/tcp  closed sitewatch-s
+5666/tcp  closed nrpe
+5801/tcp  closed vnc-http-1
+6112/tcp  closed dtspc
+8402/tcp  closed abarsd
+32782/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=11/19%Time=691D4EC1%P=x86_64-alpine-linux-musl%
+SF:r(GetRequest,6A,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nLocation:\
+SF:x20https:///\r\nServer:\x20web\r\nConnection:\x20close\r\nContent-Lengt
+SF:h:\x200\r\n\r\n")%r(HTTPOptions,6A,"HTTP/1\.0\x20302\x20Moved\x20Tempor
+SF:arily\r\nLocation:\x20https:///\r\nServer:\x20web\r\nConnection:\x20clo
+SF:se\r\nContent-Length:\x200\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 19 05:00:14 2025 -- 1 IP address (1 host up) scanned in 633.28 seconds
