@@ -1,73 +1,41 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "D",
     "error": null,
-    "score": 75,
-    "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "score": 30,
+    "statusCode": 403,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sun, 09 Nov 2025 08:39:24 GMT",
-      "content-type": "text/html; charset=utf-8",
+      "date": "Wed, 19 Nov 2025 03:53:45 GMT",
+      "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "server": "cloudflare",
-      "cf-cache-status": "DYNAMIC",
-      "content-security-policy": "default-src * data: 'unsafe-eval' 'unsafe-inline'; img-src 'self' https://captcha.liveidentity.com https://captcha-prp.liveidentity.com https://www.google-analytics.com blob: data:;",
-      "content-language": "fr",
-      "last-modified": "Thu, 30 Oct 2025 15:28:52 GMT",
-      "referrer-policy": "strict-origin-when-cross-origin",
-      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
-      "vary": "Accept-Encoding",
-      "x-content-type-options": "nosniff",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "referrer-policy": "same-origin",
       "x-frame-options": "SAMEORIGIN",
-      "x-xss-protection": "1; mode=block",
+      "vary": "accept-encoding",
+      "server": "cloudflare",
       "set-cookie": [
-        "__cf_bm=e8VfgGJ1A3L4ZaWNDwXasooUldDm4KOzYtcyHe1t87k-1762677563.738225-1.0.1.1-yZfqHrcdFDGn3Ek67hr8TP2jRx2ADo.pE0n6ZkKD4oHEIXrK4o09lvC47cLx_cSn_.b4xJB2_9YFA2.tgK5_FY8dqgWMeJEj92yu2fD17FYJ7ZF15c61XjKWYjeVHjyg; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Sun, 09 Nov 2025 09:09:24 GMT"
+        "__cf_bm=OXgMSixV00NMoRHfW22QniUqLfZevb.5W35.Y9BjW24-1763524425.2572706-1.0.1.1-ccTdN05uYJx5L2P1_GxCSsKrdtyRPD8qahR09J9zM9DKe6NI6zuuVz7xeOLy4faioffLteyNpy5m_zsYbnj2TBvsaZnxewVLwzCV4klAG_fCOpkziwm7KbbfGaC4TUKB; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Wed, 19 Nov 2025 04:23:45 GMT"
       ],
-      "cf-ray": "99bbffd558bc2ced-ORD"
+      "cf-ray": "9a0cc329dd0ffb48-SJC"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "default-src": [
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "*",
-          "data:"
-        ],
-        "img-src": [
-          "'self'",
-          "blob:",
-          "data:",
-          "https://captcha-prp.liveidentity.com",
-          "https://captcha.liveidentity.com",
-          "https://www.google-analytics.com"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": false,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -77,7 +45,7 @@
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-11-09T09:09:24.000Z",
+          "expires": "2025-11-19T04:23:45.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -95,55 +63,49 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://base-empreinte.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://base-empreinte.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://base-empreinte.ademe.fr/",
-        "https://base-empreinte.ademe.fr/"
+        "http://base-empreinte.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "strict-origin-when-cross-origin",
+      "data": "same-origin",
       "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubDomains; preload",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
-      "preload": true,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=base-empreinte.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
