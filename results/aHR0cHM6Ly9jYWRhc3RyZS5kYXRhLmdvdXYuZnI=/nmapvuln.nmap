@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Nov  9 14:57:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cadastre.data.gouv.fr
+# Nmap 7.92 scan initiated Fri Nov 21 04:47:48 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cadastre.data.gouv.fr
 Nmap scan report for cadastre.data.gouv.fr (54.36.212.78)
-Host is up (0.15s latency).
+Host is up (0.086s latency).
 rDNS record for 54.36.212.78: cadastre-data-ipfo.geo.data.gouv.fr
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE SERVICE  VERSION
@@ -124,6 +124,7 @@ PORT    STATE SERVICE  VERSION
 |     	1337DAY-ID-26468	0.0	https://vulners.com/zdt/1337DAY-ID-26468	*EXPLOIT*
 |_    	1337DAY-ID-25391	0.0	https://vulners.com/zdt/1337DAY-ID-25391	*EXPLOIT*
 80/tcp  open  http     nginx 1.10.3 (Ubuntu)
+|_http-server-header: nginx/1.10.3 (Ubuntu)
 | vulners: 
 |   nginx 1.10.3: 
 |     	F24D1B4E-B7ED-546A-9886-CDE6898D6FA6	9.3	https://vulners.com/gitee/F24D1B4E-B7ED-546A-9886-CDE6898D6FA6	*EXPLOIT*
@@ -158,9 +159,7 @@ PORT    STATE SERVICE  VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	SSV:96273	5.0	https://vulners.com/seebug/SSV:96273	*EXPLOIT*
 |_    	PACKETSTORM:162830	0.0	https://vulners.com/packetstorm/PACKETSTORM:162830	*EXPLOIT*
-|_http-server-header: nginx/1.10.3 (Ubuntu)
 443/tcp open  ssl/http nginx 1.10.3 (Ubuntu)
-|_http-server-header: nginx/1.10.3 (Ubuntu)
 | vulners: 
 |   nginx 1.10.3: 
 |     	F24D1B4E-B7ED-546A-9886-CDE6898D6FA6	9.3	https://vulners.com/gitee/F24D1B4E-B7ED-546A-9886-CDE6898D6FA6	*EXPLOIT*
@@ -195,7 +194,8 @@ PORT    STATE SERVICE  VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	SSV:96273	5.0	https://vulners.com/seebug/SSV:96273	*EXPLOIT*
 |_    	PACKETSTORM:162830	0.0	https://vulners.com/packetstorm/PACKETSTORM:162830	*EXPLOIT*
+|_http-server-header: nginx/1.10.3 (Ubuntu)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 14:57:32 2025 -- 1 IP address (1 host up) scanned in 25.66 seconds
+# Nmap done at Fri Nov 21 04:48:09 2025 -- 1 IP address (1 host up) scanned in 21.26 seconds
