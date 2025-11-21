@@ -3,28 +3,21 @@
     "algorithmVersion": 4,
     "grade": "F",
     "error": null,
-    "score": 5,
+    "score": 10,
     "statusCode": 200,
-    "testsFailed": 6,
-    "testsPassed": 4,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "accept-ch": "viewport-width, dpr, device-memory, rtt, downlink, ect, ua, ua-full-version, ua-platform, ua-platform-version, ua-arch, ua-model, ua-mobile",
-      "accept-ch-lifetime": "30",
-      "alt-svc": "h3=\":50545\"; ma=2592000",
+      "date": "Fri, 21 Nov 2025 03:37:57 GMT",
+      "link": "<https://caspoa.org/wp-json/>; rel=\"https://api.w.org/\"",
+      "vary": "X-Forwarded-Proto,Accept-Encoding",
+      "content-length": "9893",
       "content-type": "text/html; charset=UTF-8",
-      "date": "Sun, 09 Nov 2025 14:35:32 GMT",
-      "server": "nginx",
-      "vary": "Accept-Encoding",
-      "via": "1.1 Caddy, 0.0 Caddy",
-      "x-adblock-key": "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALquDFETXRn0Hr05fUP7EJT77xYnPmRbpMy4vk8KYiHnkNpednjOANJcaXDXcKQJN0nXKZJL7TciJD8AoHXK158CAwEAAQ==_h7nq7ZWQC5qynMKhCGDV9afx/KUs3hoXzJJMdhmS5uu+ILzEYfgZWA46TZv25sVIWAvxG0tye3LA+kqtiCgw+A==",
-      "x-domain": "caspoa.org",
-      "x-pcrew-blocked-reason": "hosting network",
-      "x-pcrew-ip-organization": "Microsoft Azure",
-      "x-redirect": "blank",
-      "x-subdomain": "",
-      "connection": "close",
-      "transfer-encoding": "chunked"
+      "ssl": "Strict-Transport-Security: max-age=31536000; includeSubdomains; preload",
+      "sameorig": "X-Frame-Options: SAMEORIGIN",
+      "server": "Apache/2.4.6",
+      "connection": "close"
     }
   },
   "tests": {
@@ -78,7 +71,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-invalid-cert",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
@@ -88,15 +81,10 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://euob.youstarsbuilding.com/sxp/i/224f85302aa2b6ec30aac9a85da2cbf9.js": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
