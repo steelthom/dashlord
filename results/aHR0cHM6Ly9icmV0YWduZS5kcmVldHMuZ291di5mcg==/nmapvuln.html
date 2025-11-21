@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln bretagne.dreets.gouv.fr</pre>
-<p class="lead">Sun Nov  9 15:13:30 2025 – Sun Nov  9 15:16:13 2025<br>1 hosts scanned.
+<p class="lead">Fri Nov 21 04:21:47 2025 – Fri Nov 21 04:24:35 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -111,12 +111,35 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
+<td title="Service">http</td>
 <td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+    Content-Length: 0
+  GetRequest, HTTPOptions, RTSPRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://sip:nm
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://mstshash=nmap
+    Connection: close
+    Content-Length: 0</pre>
+</td></tr>
 <tr class="active">
 <td>113</td>
 <td>tcp</td>
@@ -136,7 +159,9 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.1 200 OK
@@ -148,19 +173,19 @@
     X-Frame-Options: SAMEORIGIN
     X-XSS-Protection: 1; mode=block
     X-Content-Type-Options: nosniff
-    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;1938290216406739020&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;head&gt;&lt;title&gt;Request Rejected&lt;/title&gt;&lt;/head&gt;&lt;body&gt;The requested URL was rejected. Please consult with your administrator.&lt;br&gt;&lt;br&gt;Your support ID is: &lt;1938290219248964345&gt;&lt;br&gt;&lt;br&gt;&lt;a href='javascript:history.back();'&gt;[Go Back]&lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.1 503 Service Unavailable
-    Date: Sun, 09 Nov 2025 15:13:53 GMT
+    Date: Fri, 21 Nov 2025 04:22:09 GMT
     Expires: 0
     Cache-Control: no-cache, must-revalidate
     Pragma: no-cache
     X-Frame-Options: DENY
-    Last-Modified: Sun, 09 Nov 2025 15:13:53 GMT
+    Last-Modified: Fri, 21 Nov 2025 04:22:09 GMT
     X-Content-Type-Options: nosniff
     Connection: close
     Content-Type: text/html; charset=utf-8
-    Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!MBCR0uLL/3p8x6AXIkI7F7SI9ajmirLroNVl8rL8puncdQRXvssRfVOhgrQW3PZHqtaJchuvQqNWVFW4Hr8Z/w6pXcE=; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!i4qUlUmt/ruZC38XIkI7F7SI9ajmim4rFMc0OrLdwpBhYr6j/+OSyPT5i7/gBX7ZKY/6tmg5lvtCuchEuREwoeDZNlI=; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE html&gt;
     &lt;html class='ltr fr no-js' xmlns='http://www.w3.org/1999/xhtml' lang='fr' dir='ltr'&gt;
@@ -173,13 +198,13 @@
     faut par m
   HTTPOptions: 
     HTTP/1.1 403 Forbidden
-    Date: Sun, 09 Nov 2025 15:13:53 GMT
+    Date: Fri, 21 Nov 2025 04:22:09 GMT
     X-Frame-Options: DENY
     Content-Length: 199
-    Keep-Alive: timeout=5, max=99
+    Keep-Alive: timeout=5, max=95
     Connection: close
     Content-Type: text/html; charset=iso-8859-1
-    Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!/zHaFYOcjeIwy/oXIkI7F7SI9ajmipisM6NTKJm4z6L2uDEAbbgPUA8m9RbQXH3E1tOolhWXjFbZ8haM5m3x+ohaCGw=; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dreets2.cegedim.cloud-http=!yjrY677QUnIqHVIXIkI7F7SI9ajmii6UqwTOjphcRYeyXzlu7sBzeRNXpub72Slt4ePr2t270rBPX/3yrRgYw1fXrNc=; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
     &lt;html&gt;&lt;head&gt;
@@ -188,8 +213,6 @@
     &lt;h1&gt;Forbidden&lt;/h1&gt;
     &lt;p&gt;You don't have permission to access this resource.&lt;/p&gt;
     &lt;/body&gt;&lt;/html&gt;</pre>
-<h5>http-trane-info</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -212,7 +235,7 @@
 <td>185.194.83.84 - bretagne.dreets.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
+<td>http</td>
 <td></td>
 <td></td>
 <td></td>
