@@ -1,12 +1,13 @@
-# Nmap 7.92 scan initiated Sun Nov  9 19:10:06 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln demat.social.gouv.fr
+# Nmap 7.92 scan initiated Fri Nov 21 04:16:33 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln demat.social.gouv.fr
 Nmap scan report for demat.social.gouv.fr (185.194.82.212)
-Host is up (0.15s latency).
+Host is up (0.080s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 80/tcp  open   http-proxy F5 BIG-IP load balancer http proxy
 |_http-server-header: BigIP
 113/tcp closed ident
 443/tcp open   ssl/http   nginx 1.14.2
+|_http-trane-info: Problem with XML parsing of /evox/about
 | vulners: 
 |   nginx 1.14.2: 
 |     	F24D1B4E-B7ED-546A-9886-CDE6898D6FA6	9.3	https://vulners.com/gitee/F24D1B4E-B7ED-546A-9886-CDE6898D6FA6	*EXPLOIT*
@@ -34,8 +35,7 @@ PORT    STATE  SERVICE    VERSION
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |     	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |_    	PACKETSTORM:162830	0.0	https://vulners.com/packetstorm/PACKETSTORM:162830	*EXPLOIT*
-|_http-trane-info: Problem with XML parsing of /evox/about
 Service Info: Device: load balancer
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 19:10:45 2025 -- 1 IP address (1 host up) scanned in 39.03 seconds
+# Nmap done at Fri Nov 21 04:17:06 2025 -- 1 IP address (1 host up) scanned in 32.99 seconds
