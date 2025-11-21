@@ -1,1 +1,83 @@
-# Nmap 7.92 scan initiated Sun Nov  9 18:58:55 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln declar-successions.journal-officiel.gouv.fr
+# Nmap 7.92 scan initiated Fri Nov 21 04:38:54 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln declar-successions.journal-officiel.gouv.fr
+Nmap scan report for declar-successions.journal-officiel.gouv.fr (185.24.187.146)
+Host is up (0.16s latency).
+Not shown: 886 filtered tcp ports (no-response), 112 closed tcp ports (reset)
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http-proxy F5 BIG-IP load balancer http proxy
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 247
+|     <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 14292766552451183143<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Date: Fri, 21 Nov 2025 04:46:30 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Location: http://declar-successions.journal-officiel.gouv.fr/successions/
+|     Content-Length: 247
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <html><head>
+|     <title>302 Found</title>
+|     </head><body>
+|     <h1>Found</h1>
+|     <p>The document has moved <a href="http://declar-successions.journal-officiel.gouv.fr/successions/">here</a>.</p>
+|     </body></html>
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Cache-Control: no-cache
+|     Connection: close
+|     Content-Type: text/html; charset=utf-8
+|     Pragma: no-cache
+|     Content-Length: 247
+|_    <html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: 14292766552453614294<br><br><a href='javascript:history.back();'>[Go Back]</a></body></html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/21%Time=691FEEA6%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,27A,"HTTP/1\.1\x20302\x20Found\r\nDate:\x20Fri,\x20
+SF:21\x20Nov\x202025\x2004:46:30\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\
+SF:r\nStrict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains
+SF:;\x20preload\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type
+SF:-Options:\x20nosniff\r\nLocation:\x20http://declar-successions\.journal
+SF:-officiel\.gouv\.fr/successions/\r\nContent-Length:\x20247\r\nConnectio
+SF:n:\x20close\r\nContent-Type:\x20text/html;\x20charset=iso-8859-1\r\n\r\
+SF:n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\n
+SF:<html><head>\n<title>302\x20Found</title>\n</head><body>\n<h1>Found</h1
+SF:>\n<p>The\x20document\x20has\x20moved\x20<a\x20href=\"http://declar-suc
+SF:cessions\.journal-officiel\.gouv\.fr/successions/\">here</a>\.</p>\n</b
+SF:ody></html>\n")%r(HTTPOptions,1E4,"HTTP/1\.1\x20200\x20OK\r\nX-Frame-Op
+SF:tions:\x20SAMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Cont
+SF:ent-Type-Options:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnectio
+SF:n:\x20close\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\
+SF:x20no-cache\r\nContent-Length:\x20247\r\n\r\n<html><head><title>Request
+SF:\x20Rejected</title></head><body>The\x20requested\x20URL\x20was\x20reje
+SF:cted\.\x20Please\x20consult\x20with\x20your\x20administrator\.<br><br>Y
+SF:our\x20support\x20ID\x20is:\x2014292766552453614294<br><br><a\x20href='
+SF:javascript:history\.back\(\);'>\[Go\x20Back\]</a></body></html>")%r(Fou
+SF:rOhFourRequest,1E4,"HTTP/1\.1\x20200\x20OK\r\nX-Frame-Options:\x20SAMEO
+SF:RIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Option
+SF:s:\x20nosniff\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n
+SF:Content-Type:\x20text/html;\x20charset=utf-8\r\nPragma:\x20no-cache\r\n
+SF:Content-Length:\x20247\r\n\r\n<html><head><title>Request\x20Rejected</t
+SF:itle></head><body>The\x20requested\x20URL\x20was\x20rejected\.\x20Pleas
+SF:e\x20consult\x20with\x20your\x20administrator\.<br><br>Your\x20support\
+SF:x20ID\x20is:\x2014292766552451183143<br><br><a\x20href='javascript:hist
+SF:ory\.back\(\);'>\[Go\x20Back\]</a></body></html>");
+Service Info: Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 21 04:48:55 2025 -- 1 IP address (1 host up) scanned in 601.75 seconds
