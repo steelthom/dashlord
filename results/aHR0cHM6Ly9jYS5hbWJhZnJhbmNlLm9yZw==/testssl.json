@@ -436,8 +436,8 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "64 >= 60 days"
+              "severity"     : "MEDIUM",
+              "finding"      : "expires < 60 days (53)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -450,7 +450,7 @@
               "id"           : "cert_notAfter",
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "MEDIUM",
               "finding"      : "2026-01-13 11:41"
           }
 ,         {
@@ -626,21 +626,14 @@
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
+              "finding"      : "301 Moved Permanently ('/')"
           }
 ,         {
               "id"           : "HTTP_clock_skew",
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-1 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "ca.ambafrance.org/95.128.47.156",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1762698935"
+              "finding"      : "Got no HTTP time, maybe try different URL?"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -689,14 +682,14 @@
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0 at '/'"
+              "finding"      : "0 at '/' (30x detected, better try target URL of 30x)"
           }
 ,         {
-              "id"           : "Upgrade",
+              "id"           : "security_headers",
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "h2,h2c"
+              "severity"     : "MEDIUM",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -772,10 +765,10 @@
               "id"           : "BREACH",
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "OK",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "not vulnerable, no gzip/deflate/compress/br HTTP compression  - only supplied '/' tested"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -1203,6 +1196,6 @@
               "ip"           : "ca.ambafrance.org/95.128.47.156",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "223"
+              "finding"      : "132"
           }
 ]
