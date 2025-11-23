@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -160,6 +160,34 @@
               "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 256   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 256   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_3",
+              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_128_GCM_SHA256 TLS_AES_256_GCM_SHA384"
+          }
+,         {
               "id"           : "cipher_order",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
@@ -178,7 +206,7 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 ECDHE-RSA-AES256-GCM-SHA384 TLS_AES_128_GCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
@@ -188,18 +216,32 @@
               "finding"      : "prime256v1 secp384r1 X25519"
           }
 ,         {
+              "id"           : "DH_groups",
+              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ffdhe3072 ffdhe4096"
+          }
+,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512 RSA+SHA1"
+              "severity"     : "INFO",
+              "finding"      : "RSA+SHA256 RSA+SHA384 RSA+SHA512"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA256 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA512"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'EC point formats/#11' 'extended master secret/#23' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -237,11 +279,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -290,7 +332,7 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "45293A1BC1EC9986247C36B23D770E4B"
+              "finding"      : "A87BE6642CE63D161D5C1DA761293D51"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -304,21 +346,21 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "6BB447A566262079834FC349C05454B9C0BB6A28"
+              "finding"      : "35398E039E94BB0E1369DBB40836AC31332E3620"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "A415405A788491314DDF89E39EE772D0D810FAD5F3518AF676B9581B1B78362B"
+              "finding"      : "3CF154445F9076A05820277D31CED6FA20349D9F8575422DA9555E5E3EC6B135"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIJwTCCB6mgAwIBAgIQRSk6G8HsmYYkfDayPXcOSzANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJGUjESMBAGA1UECgwJREhJTVlPVElTMRwwGgYDVQQLDBMwMDAyIDQ4MTQ2MzA4MTAwMDM2MR0wGwYDVQRhDBROVFJGUi00ODE0NjMwODEwMDAzNjEdMBsGA1UEAwwUQ2VydGlnbmEgU2VydmljZXMgQ0EwHhcNMjQxMDIwMjIwMDAwWhcNMjUxMTIxMjI1OTU5WjCBmTELMAkGA1UEBhMCRlIxDjAMBgNVBAcMBVBBUklTMUEwPwYDVQQKDDhTRUNSRVRBUklBVCBHRU5FUkFMIE1JTklTVEVSRVMgQ0hBUkdFUyBBRkZBSVJFUyBTT0NJQUxFUzEiMCAGA1UEAwwZd3d3LmRhcmVzLnRyYXZhaWwuZ291di5mcjETMBEGA1UEBRMKUzMyNTM0MjM0NjCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAJbHcEJXK9bXFwhVHvWqoRTJO1Y/kPVHYm32XjUkqklOLRDQ3Av+fWaHOdIZBcquF8UrOXjuwyTt1t9/ggXLdn4Ah50ObzRLvUcdeksIGvXLGaT+Goy6ZQfrr4ifaH5R7nnJm0gSsXDR0DikSSh5D6Hro8/eXfIkCk+vD0MgwCJz/6w34vjLZJXHR3UIdEydE3S6uOR6fa7AwIN5vGr1+9W7ZwCBctDl1h8ph7w0nWu3MWoSn4D3DBJ99xMlHKoFgJmpuhcveawrMiemko6JQAFOmrb1T36FZYsJYGybkwW2rAxMpZlN3zLtsnPrSe6jAmCFofUh0U0UsGnEwRevmIo/PqYdjX8OykWK6RmggPILv1sALPutmULoaNbvk10vT9Ck/0aNHno4wwcskhhQTxbr4/1buAw8n5vNp9ZBU0LkYKQdxPSlyyGd3aUWmhAqo0CmKEEiC+lSc5hInxizmlC8HnbYsYqWLMx9aO66sbgFquVBwP6naGGsioTdIdmTrQIDAQABo4IEnjCCBJowgeQGCCsGAQUFBwEBBIHXMIHUMDgGCCsGAQUFBzAChixodHRwOi8vYXV0b3JpdGUuZGhpbXlvdGlzLmNvbS9zZXJ2aWNlc2NhLmRlcjA2BggrBgEFBQcwAoYqaHR0cDovL2F1dG9yaXRlLmNlcnRpZ25hLmZyL3NlcnZpY2VzY2EuZGVyMC4GCCsGAQUFBzABhiJodHRwOi8vc2VydmljZXNjYS5vY3NwLmNlcnRpZ25hLmZyMDAGCCsGAQUFBzABhiRodHRwOi8vc2VydmljZXNjYS5vY3NwLmRoaW15b3Rpcy5jb20wHwYDVR0jBBgwFoAUrOyGj0s3HLh/FxsZ0K7oTuM0XBIwDAYDVR0TAQH/BAIwADBhBgNVHSAEWjBYMAgGBmeBDAECAjBMBgsqgXoBgTECBQEBAjA9MDsGCCsGAQUFBwIBFi9odHRwczovL3d3dy5jZXJ0aWduYS5jb20vYXV0b3JpdGUtY2VydGlmaWNhdGlvbjBlBgNVHR8EXjBcMC2gK6AphidodHRwOi8vY3JsLmRoaW15b3Rpcy5jb20vc2VydmljZXNjYS5jcmwwK6ApoCeGJWh0dHA6Ly9jcmwuY2VydGlnbmEuZnIvc2VydmljZXNjYS5jcmwwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMHsGA1UdEQR0MHKCIHd3dy5kYXJlcy50cmF2YWlsLWVtcGxvaS5nb3V2LmZyghVkYXJlcy50cmF2YWlsLmdvdXYuZnKCGXd3dy5kYXJlcy50cmF2YWlsLmdvdXYuZnKCHGRhcmVzLnRyYXZhaWwtZW1wbG9pLmdvdXYuZnIwHQYDVR0OBBYEFKg60bLkMVy5M1dyG8kTWMSNJeQLMIIB9QYKKwYBBAHWeQIEAgSCAeUEggHhAd8AdwAN4fIwK9MNwUBiEgnqVS78R3R8sdfpMO8OQh60fk6qNAAAAZKvKSR0AAAEAwBIMEYCIQDU8YDRsQl8uSthgFGPByIf2jrSmpQqhT5yQhmM4mtHBgIhAJfNJqKH6M/Uu7KSrRwLkiy+Hxv2ZUAGKeBUE1UvZPkfAHUAEvFONL1TckyEBhnDjz96E/jntWKHiJxtMAWE6+WGJjoAAAGSryki9wAABAMARjBEAiAu30fAZMMIiwqxdIE14+gEP9gIf4gLW8NP0eQxEbfpWQIgGO/2T5JIbBM4ckFkI8BvEFEBQpYu0m16bY/IAuaY/EYAdQDm0jFjQHeMwRBBBtdxuc7B0kD2loSG+7qHMh39HjeOUAAAAZKvKSXcAAAEAwBGMEQCICsdyUPmU88RIbkuMdnAtYrhBzzldMkqnvc/u8+Gw4dJAiA9BvJhCTSYUpRppwDqoXMlG9FDRUnu2MuaUZyIwl89WAB2AK8YGijWjKPgqYpMnGerCfi7vCK6rryxOKOhndP5tgMNAAABkq8pJVUAAAQDAEcwRQIhAJeA3lBwYxfemAC5Ox+FgyEVog8DNC6Bknfalk1PlFKTAiAdXm6irKTkmobcaHs2yP7VlRbgoNIy/7beKy/GUZcIpDANBgkqhkiG9w0BAQsFAAOCAgEAQ2m8CFRRywj8Id72igxwPZZ/LIfRn9rlkAVftB5P0AR9AnEr9EAnWdi/kZ3VwTRJM4S/Dcak1PNxPHk7UU3AzLuE8sT8N5729fYrLS7g57RPiQEwRnCSeyd97apdB4vIyeSXe7gs79etlpaQu6lxN97xBip6GTU4yPSmNnOqP8+5uK6Nux3qRxt/C5B767TNSitEv8gUw/iCX1byNAonknBGlCpFa+UOtNVA8QjuFfz0i5fIA60CVUG+JQnuRqgahVJmoL7v90MF496fW979lQSHygEotIcA7drVodH+rSrpenEn/y7uuQcA0xFTjcWayz4jIFgJi5hsopBT92n5cWki5lyf29yWJ63J9Kn9ppB3SXq+lJ0Au+VR6Yz7M0lWMwUiKypV6BCYRgTEE9QROq22gUPQA7gTXpXIqN5jmbUPzDMrVg7Uvpo9yCXrlhZ5faToay36z32pui4Qcf9cCV4uolvTlv/kKtVvcMr5Stbx2yi+URme7VgRv8q2YG6W0gwcNHw6sxbKrK83v+jjmzacEM1fTuighQo7ky3OU6vED1MUi++Eb0LrOodvu1rttFaO208hqVQrpsDPUx2F1bjrKU4OAU0bJCLYBYX8Ltkov+lt7wSRiL4xrMFMuSBmAXLSFBARHGL16pfA8MFi6hy93BKmOz6rD2t2Yu+czeM=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -339,7 +381,7 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "www.dares.travail-emploi.gouv.fr dares.travail.gouv.fr www.dares.travail.gouv.fr dares.travail-emploi.gouv.fr"
+              "finding"      : "dares.travail-emploi.gouv.fr www.dares.travail-emploi.gouv.fr www.dares.travail.gouv.fr dares.travail.gouv.fr"
           }
 ,         {
               "id"           : "cert_trust",
@@ -366,22 +408,22 @@
               "id"           : "cert_expirationStatus",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires < 30 days (12)"
+              "severity"     : "OK",
+              "finding"      : "71 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2024-10-20 22:00"
+              "finding"      : "2025-11-05 00:00"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-11-21 22:59"
+              "severity"     : "OK",
+              "finding"      : "2026-02-02 23:59"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -402,20 +444,20 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://crl.dhimyotis.com/servicesca.crl http://crl.certigna.fr/servicesca.crl"
+              "finding"      : "http://crl.certigna.com/CertignaServerAuthenticationOVCPEUCAG1.crl"
           }
 ,         {
               "id"           : "cert_ocspURL",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "http://servicesca.ocsp.certigna.fr http://servicesca.ocsp.dhimyotis.com"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "OCSP_stapling",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "LOW",
+              "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
@@ -458,49 +500,49 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA (DHIMYOTIS from FR)"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 (Certigna from FR)"
           }
 ,         {
               "id"           : "intermediate_cert <#1>",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFhTCCBG2gAwIBAgIUZC/nHF2pouqOZECc9JYzehjW3kAwDQYJKoZIhvcNAQEMBQAwNDELMAkGA1UEBhMCRlIxEjAQBgNVBAoMCURoaW15b3RpczERMA8GA1UEAwwIQ2VydGlnbmEwHhcNMjUwMjI4MDk0OTA0WhcNMjcwNjI4MDk0OTAzWjB2MQswCQYDVQQGEwJGUjERMA8GA1UECgwIQ2VydGlnbmExHTAbBgNVBGEMFE5UUkZSLTQ4MTQ2MzA4MTAwMDM2MTUwMwYDVQQDDCxDZXJ0aWduYSBTZXJ2ZXIgQXV0aGVudGljYXRpb24gT1ZDUCBFVSBDQSBHMTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANZ0kTuG6eFTF0KPbtvYBB5zIq+eR03FgyQAyRZE0lqCGRyx96ko+W/yyfxbCgPxMw5jlxdXteXBh8DLc5S4w0ICfOSc8vabFuXKhKa8BAB5/VtdzZosAF1AvFC1WLEVvPiUJRTsY0BkhnFI0UKdLN145hY4EL+CaSUENQ19006BR5P5HeWtmikYHgiq/TBlhTsnaYB6SL8mT40GfBxmp6PEjjrhKLurSQOMbF+6HiEnfZUr3OrKDncxN0GHxFYcIFBTL53JBNFA9qbPYsD6KubJmUqVoImyRKR+eXJHVNfPMhYzQv3EaYh2rpHRsjV96yZBIqBc3QSw82gj8bxh+rZRz8e+QISMlvljhHXqn+Qy4puuMt+3yQmnwFTYJQ13NFv1Uh3cJ5tEHP+yaLLCDqjy+cGCwNGMgsdWhS/67F4/AvRyI424psxuS/RbnKRrva0ZpDLTABgqfnONeU0LdkP817nGKNTKX2BDMD93BzOKzjDSBITJIRR8QICTKtQzmaKhd4UgbqPp+Bq1dMVhk5wW+x+bIHcB+wpqkO534SRMz93ijW2hSKrDWa2CB0Pl5tgcoGZThtjB3/Fm45XQLfW+vcTf+7nH8CRjMXO9swS6TovOXIpa5aG3jM+Dgewg6RbxtO/uIjv1zuIdS02d2h8Is2CvJ9/duOKucuYt1YnfAgMBAAGjggFLMIIBRzBBBggrBgEFBQcBAQQ1MDMwMQYIKwYBBQUHMAKGJWh0dHA6Ly9jZXJ0LmNlcnRpZ25hLmNvbS9DZXJ0aWduYS5jZXIwHwYDVR0jBBgwFoAUGu3+QTmQtCRZvgHyUtVF9lo53BEwEgYDVR0TAQH/BAgwBgEB/wIBADBIBgNVHSAEQTA/MAgGBmeBDAECAjAzBgoqgXoBgTEBAAECMCUwIwYIKwYBBQUHAgEWF2h0dHA6Ly9jcHMuY2VydGlnbmEuY29tMDUGA1UdHwQuMCwwKqAooCaGJGh0dHA6Ly9jcmwuY2VydGlnbmEuY29tL0NlcnRpZ25hLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBSgcuZGxDBc5K3CHMLVYjiYgVpUpjANBgkqhkiG9w0BAQwFAAOCAQEAkYjFkMa/La7tXDId/3ltDS8PKsxhxmOBA6bRsLeDQWIU2E1M/1A1y0bRkw4Y6ZRGmkVLLdQRD9mJIvxnllTyoeOzJPk0BVW6xVgPncatyhNx0bKEFouetx7k+J7yKhu/k3jJP9XAxtbCWViQ4rZ3BvABYHA8rBmfccbVMr04a/+ILTpT/1QiGzhHcpo2fnlQ+okXq0cuikN5/WMlHNgsTJIG2b5yEFtYY84Hlx0ejJX3cOAd4pot9vHdjv8e2KvIq/jopdB5lyv/wbaQ4EHz9i5Z4dvmECjsx9oEHRDmUoeEoV1sb/I/2np3PHjtYTrzzoOTYUaebmdXkFasRpTx1w==\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+              "finding"      : "1A209DB499625B4EA29F597BE7744BA1E240B8C7629F75B41A3373339FD7EDDF"
           }
 ,         {
               "id"           : "intermediate_cert_notBefore <#1>",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2015-11-25 11:33"
+              "finding"      : "2025-02-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_notAfter <#1>",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "2025-11-22 11:33"
+              "severity"     : "OK",
+              "finding"      : "2027-06-28 09:49"
           }
 ,         {
               "id"           : "intermediate_cert_expiration <#1>",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
-              "severity"     : "HIGH",
-              "finding"      : "expires <= 20 days"
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
           }
 ,         {
               "id"           : "intermediate_cert_chain <#1>",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Certigna Services CA <-- Certigna"
+              "finding"      : "Certigna Server Authentication OVCP EU CA G1 <-- Certigna"
           }
 ,         {
               "id"           : "intermediate_cert_badOCSP",
@@ -722,7 +764,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=A415405A788491314DDF89E39EE772D0D810FAD5F3518AF676B9581B1B78362B"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=3CF154445F9076A05820277D31CED6FA20349D9F8575422DA9555E5E3EC6B135"
           }
 ,         {
               "id"           : "LOGJAM",
@@ -797,63 +839,63 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -902,35 +944,35 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -944,42 +986,42 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -993,21 +1035,21 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1021,7 +1063,7 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1091,20 +1133,13 @@
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "dares.travail-emploi.gouv.fr/185.194.82.70",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "113"
+              "finding"      : "73"
           }
 ]
