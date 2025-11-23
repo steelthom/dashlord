@@ -16,17 +16,17 @@
       "vary": "Accept-Encoding",
       "x-content-type-options": "nosniff",
       "set-cookie": [
-        "_syrSessGuid=cd96b9a6-c46b-48d8-9548-c994681c22ff; expires=Sun, 09-Nov-2025 20:42:47 GMT; path=/; secure; HttpOnly; SameSite=Lax",
-        "_syrPrefsGuid=5ef47257-c462-4a1a-a35f-e3240c74b294; expires=Mon, 09-Nov-2026 20:12:47 GMT; path=/; secure; HttpOnly; SameSite=Lax",
-        "InstanceST=ENS=000404_MVdu_fl7_qU_WnGrQyvKjPrjnSykd2D7yQSfQ0yLnf8JHqL6pAHw5Pi0tz5rFn+MRTSWNk/SK6mYtRR5c=; path=/; secure; HttpOnly; SameSite=None",
-        "InstanceCI=ENS=QHXOSJcJUY0jo8bWmm6dShsiA5pS2yf9fYQev5xN; path=/; secure; HttpOnly; SameSite=None"
+        "_syrSessGuid=44ee065d-452a-4004-9b4b-382845c86ebd; expires=Sun, 23-Nov-2025 05:13:47 GMT; path=/; secure; HttpOnly; SameSite=Lax",
+        "_syrPrefsGuid=782bb3a7-0b9a-456f-9de4-09e006d0508f; expires=Mon, 23-Nov-2026 04:43:47 GMT; path=/; secure; HttpOnly; SameSite=Lax",
+        "InstanceST=ENS=00040RfHSb2EpOUCgERXxucfwJPiPcXKZlHl_LXLHK_PiFiiYGhBYVi3Frel7yu5tfQIwNVoaTATyL0ULMmpay5w=; path=/; secure; HttpOnly; SameSite=None",
+        "InstanceCI=ENS=HekmjoJDkm8zcHqG8-LVZi4crrygUQUN5IFxd2w_; path=/; secure; HttpOnly; SameSite=None"
       ],
       "referrer-policy": "strict-origin-when-cross-origin",
-      "content-security-policy": "default-src 'self' https: blob: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: blob:; font-src 'self' data: https:; frame-src 'self' https:; frame-ancestors 'self' https:",
+      "content-security-policy": "default-src 'self'; form-action 'self'; script-src https: 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: blob:; font-src 'self' data: https:; frame-src 'self' https: blob:; frame-ancestors 'self' https:; media-src 'self' blob:; connect-src 'self' https://*.google-analytics.com https://*.matomo.cloud",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "date": "Sun, 09 Nov 2025 20:12:47 GMT",
+      "date": "Sun, 23 Nov 2025 04:43:48 GMT",
       "connection": "close",
-      "content-length": "37412"
+      "content-length": "36829"
     }
   },
   "tests": {
@@ -37,10 +37,15 @@
       "scoreModifier": -20,
       "data": {
         "default-src": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "script-src": [
           "'self'",
           "'unsafe-eval'",
           "'unsafe-inline'",
-          "blob:",
           "https:"
         ],
         "object-src": [
@@ -64,11 +69,21 @@
         ],
         "frame-src": [
           "'self'",
+          "blob:",
           "https:"
         ],
         "frame-ancestors": [
           "'self'",
           "https:"
+        ],
+        "media-src": [
+          "'self'",
+          "blob:"
+        ],
+        "connect-src": [
+          "'self'",
+          "https://*.google-analytics.com",
+          "https://*.matomo.cloud"
         ]
       },
       "http": true,
@@ -77,7 +92,7 @@
         "antiClickjacking": false,
         "defaultNone": false,
         "insecureBaseUri": true,
-        "insecureFormAction": true,
+        "insecureFormAction": false,
         "insecureSchemeActive": false,
         "insecureSchemePassive": false,
         "strictDynamic": false,
@@ -96,7 +111,7 @@
       "data": {
         "_syrSessGuid": {
           "domain": "doc.ensm.sports.gouv.fr",
-          "expires": "2025-11-09T20:42:47.000Z",
+          "expires": "2025-11-23T05:13:47.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -105,7 +120,7 @@
         },
         "_syrPrefsGuid": {
           "domain": "doc.ensm.sports.gouv.fr",
-          "expires": "2026-11-09T20:12:47.000Z",
+          "expires": "2026-11-23T04:43:47.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
