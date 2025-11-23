@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Sun Nov  9 20:23:40 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln code.gouv.fr
+# Nmap 7.92 scan initiated Sun Nov 23 05:20:00 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln code.gouv.fr
 Nmap scan report for code.gouv.fr (62.210.173.74)
-Host is up (0.16s latency).
+Host is up (0.091s latency).
 rDNS record for 62.210.173.74: mail.code.gouv.fr
 Not shown: 988 closed tcp ports (reset)
 PORT     STATE    SERVICE        VERSION
@@ -106,6 +106,7 @@ PORT     STATE    SERVICE        VERSION
 |_    	PACKETSTORM:140261	0.0	https://vulners.com/packetstorm/PACKETSTORM:140261	*EXPLOIT*
 25/tcp   open     smtp           Postfix smtpd
 80/tcp   open     http           nginx 1.22.1
+|_http-server-header: nginx/1.22.1
 | vulners: 
 |   nginx 1.22.1: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -115,9 +116,9 @@ PORT     STATE    SERVICE        VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-server-header: nginx/1.22.1
 143/tcp  open     imap           Dovecot imapd
 443/tcp  open     ssl/http       nginx 1.22.1
+|_http-server-header: nginx/1.22.1
 | vulners: 
 |   nginx 1.22.1: 
 |     	3F71F065-66D4-541F-A813-9F1A2F2B1D91	8.8	https://vulners.com/githubexploit/3F71F065-66D4-541F-A813-9F1A2F2B1D91	*EXPLOIT*
@@ -127,7 +128,6 @@ PORT     STATE    SERVICE        VERSION
 |     	NGINX:CVE-2025-53859	6.3	https://vulners.com/nginx/NGINX:CVE-2025-53859
 |     	NGINX:CVE-2024-7347	5.7	https://vulners.com/nginx/NGINX:CVE-2024-7347
 |_    	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
-|_http-server-header: nginx/1.22.1
 465/tcp  open     ssl/smtp       Postfix smtpd
 587/tcp  open     smtp           Postfix smtpd
 993/tcp  open     imaps?
@@ -144,6 +144,7 @@ PORT     STATE    SERVICE        VERSION
 8081/tcp open     http           PHP cli server 5.5 or later (PHP 7.4.33)
 |_http-trane-info: Problem with XML parsing of /evox/about
 8090/tcp open     http           nginx 1.25.4
+|_http-server-header: nginx/1.25.4
 | vulners: 
 |   nginx 1.25.4: 
 |     	NGINX:CVE-2024-32760	6.5	https://vulners.com/nginx/NGINX:CVE-2024-32760
@@ -152,9 +153,8 @@ PORT     STATE    SERVICE        VERSION
 |     	NGINX:CVE-2025-23419	5.3	https://vulners.com/nginx/NGINX:CVE-2025-23419
 |     	NGINX:CVE-2024-35200	5.3	https://vulners.com/nginx/NGINX:CVE-2024-35200
 |_    	NGINX:CVE-2024-34161	5.3	https://vulners.com/nginx/NGINX:CVE-2024-34161
-|_http-server-header: nginx/1.25.4
 8888/tcp filtered sun-answerbook
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Nov  9 20:24:20 2025 -- 1 IP address (1 host up) scanned in 40.95 seconds
+# Nmap done at Sun Nov 23 05:20:38 2025 -- 1 IP address (1 host up) scanned in 38.06 seconds
