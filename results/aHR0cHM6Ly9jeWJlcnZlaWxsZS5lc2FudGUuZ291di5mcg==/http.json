@@ -1,28 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B+",
+    "grade": "B",
     "error": null,
-    "score": 80,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sun, 09 Nov 2025 02:18:41 GMT",
+      "date": "Sun, 23 Nov 2025 02:26:23 GMT",
       "server": "Apache",
       "cache-control": "max-age=300, public",
       "content-language": "fr",
       "x-frame-options": "SAMEORIGIN",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
       "vary": "Cookie,Accept-Encoding",
-      "content-security-policy": "default-src 'self'; child-src 'none'; connect-src 'self' https://use.typekit.net https://p.typekit.net https://cdnjs.cloudflare.com/ajax/libs/cropper https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.css https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js; font-src 'self' https://use.typekit.net; frame-src 'self' https://www.youtube-nocookie.com; img-src 'self' data: https://i.ytimg.com; media-src 'none'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.google.com; style-src 'self' 'unsafe-inline' https://p.typekit.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.typekit.net; worker-src 'self'; base-uri 'none'; frame-ancestors 'self'; report-uri https://cyberveille.esante.gouv.fr/report-uri/enforce",
+      "content-security-policy": "default-src 'self'; child-src 'none'; connect-src 'self' https://use.typekit.net https://p.typekit.net https://cdnjs.cloudflare.com/ajax/libs/cropper https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.css https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js https://fqjnnsg.pa-cd.com/ http://cdn.jsdelivr.net/npm/@popperjs/; font-src 'self' https://use.typekit.net; frame-src 'self' https://www.youtube-nocookie.com; img-src 'self' data: https://i.ytimg.com; media-src 'none'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://tag.aticdn.net https://www.google.com; style-src 'self' 'unsafe-inline' https://p.typekit.net https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://use.typekit.net; worker-src 'self'; base-uri 'none'; frame-ancestors 'self'; report-uri https://cyberveille.esante.gouv.fr/report-uri/enforce",
       "strict-transport-security": "max-age=63072000",
       "from-origin": "same-origin",
-      "last-modified": "Sun, 09 Nov 2025 02:19:23 GMT",
-      "etag": "\"1762654763-gzip\"",
+      "last-modified": "Sun, 23 Nov 2025 02:26:23 GMT",
+      "etag": "\"1763864783-gzip\"",
       "x-vhost-id": "cyberveille-sante.gouv.fr",
-      "content-length": "10543",
+      "content-length": "10407",
       "content-type": "text/html; charset=UTF-8",
       "x-xss-protection": "1; mode=block",
       "x-content-type-options": "nosniff",
@@ -44,9 +44,11 @@
         ],
         "connect-src": [
           "'self'",
+          "http://cdn.jsdelivr.net/npm/@popperjs/",
           "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js",
           "https://cdnjs.cloudflare.com/ajax/libs/cropper",
           "https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js",
+          "https://fqjnnsg.pa-cd.com/",
           "https://p.typekit.net",
           "https://use.typekit.net"
         ],
@@ -72,6 +74,7 @@
           "cdn.jsdelivr.net",
           "https://cdn.jsdelivr.net",
           "https://cdnjs.cloudflare.com",
+          "https://tag.aticdn.net",
           "https://www.google.com"
         ],
         "style-src": [
@@ -102,7 +105,7 @@
         "defaultNone": false,
         "insecureBaseUri": false,
         "insecureFormAction": true,
-        "insecureSchemeActive": false,
+        "insecureSchemeActive": true,
         "insecureSchemePassive": false,
         "strictDynamic": false,
         "unsafeEval": false,
@@ -162,10 +165,15 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://tag.aticdn.net/js-sdk/piano-analytics-6.16.3.js": {
+          "crossorigin": null,
+          "integrity": null
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
