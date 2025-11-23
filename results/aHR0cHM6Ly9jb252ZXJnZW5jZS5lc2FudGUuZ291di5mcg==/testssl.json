@@ -52,8 +52,8 @@
               "id"           : "TLS1_3",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered + downgraded to weaker protocol"
+              "severity"     : "OK",
+              "finding"      : "offered with final"
           }
 ,         {
               "id"           : "NPN",
@@ -67,7 +67,7 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not offered"
+              "finding"      : "http/1.1"
           }
 ,         {
               "id"           : "cipherlist_NULL",
@@ -153,6 +153,13 @@
               "finding"      : "TLSv1.2   x9f     DHE-RSA-AES256-GCM-SHA384         DH 2048    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
           }
 ,         {
+              "id"           : "cipher-tls1_2_xcca8",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xcca8   ECDHE-RSA-CHACHA20-POLY1305       ECDH 521   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+          }
+,         {
               "id"           : "cipher-tls1_2_xc02f",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
@@ -171,7 +178,49 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order-tls1_3",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1302",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1302   TLS_AES_256_GCM_SHA384            ECDH 253   AESGCM      256      TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1303",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1303   TLS_CHACHA20_POLY1305_SHA256      ECDH 253   ChaCha20    256      TLS_CHACHA20_POLY1305_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1301",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1301   TLS_AES_128_GCM_SHA256            ECDH 253   AESGCM      128      TLS_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_3_x1304",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.3   x1304   TLS_AES_128_CCM_SHA256            ECDH 253   AESCCM      128      TLS_AES_128_CCM_SHA256"
+          }
+,         {
+              "id"           : "supportedciphers_TLSv1_3",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 TLS_AES_128_GCM_SHA256 TLS_AES_128_CCM_SHA256"
           }
 ,         {
               "id"           : "cipher_order",
@@ -192,42 +241,49 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLS_AES_256_GCM_SHA384 TLS_CHACHA20_POLY1305_SHA256 ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-CHACHA20-POLY1305 TLS_AES_128_GCM_SHA256 TLS_AES_128_CCM_SHA256 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "FS_ECDHE_curves",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "secp256k1 prime256v1 secp384r1 secp521r1"
+              "finding"      : "prime256v1 secp384r1 secp521r1 X25519 X448"
           }
 ,         {
               "id"           : "DH_groups",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "RFC3526/Oakley Group 14"
+              "finding"      : "ffdhe2048 ffdhe3072 ffdhe4096 ffdhe6144 ffdhe8192"
           }
 ,         {
               "id"           : "FS_TLS12_sig_algs",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "LOW",
-              "finding"      : "RSA+SHA512 RSA+SHA384 RSA+SHA256 RSA+SHA224 RSA+SHA1"
+              "finding"      : "RSA-PSS-RSAE+SHA512 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA256 RSA+SHA512 RSA+SHA384 RSA+SHA256 RSA+SHA224 RSA+SHA1"
+          }
+,         {
+              "id"           : "FS_TLS13_sig_algs",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA-PSS-RSAE+SHA512 RSA-PSS-RSAE+SHA384 RSA-PSS-RSAE+SHA256"
           }
 ,         {
               "id"           : "TLS_extensions",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'server name/#0' 'EC point formats/#11' 'heartbeat/#15' 'session ticket/#35' 'renegotiation info/#65281'"
+              "finding"      : "'server name/#0' 'max fragment length/#1' 'supported_groups/#10' 'EC point formats/#11' 'application layer protocol negotiation/#16' 'extended master secret/#23' 'session ticket/#35' 'supported versions/#43' 'key share/#51' 'renegotiation info/#65281'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "valid for 7200 seconds only (<daily)"
+              "finding"      : "valid for 300 seconds only (<daily)"
           }
 ,         {
               "id"           : "SSL_sessionID_support",
@@ -258,11 +314,11 @@
               "finding"      : "random"
           }
 ,         {
-              "id"           : "cert_compression",
+              "id"           : "certificate_compression",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "N/A"
+              "finding"      : "none"
           }
 ,         {
               "id"           : "clientAuth",
@@ -388,7 +444,7 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "345 >= 60 days"
+              "finding"      : "331 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -549,7 +605,7 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1762718188"
+              "finding"      : "1763870730"
           }
 ,         {
               "id"           : "HSTS_time",
@@ -584,7 +640,7 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "Apache"
+              "finding"      : "gunicorn"
           }
 ,         {
               "id"           : "banner_application",
@@ -598,21 +654,21 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "3 at '/'"
+              "finding"      : "2 at '/'"
           }
 ,         {
               "id"           : "cookie_secure",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (3) at '/' marked as secure"
+              "severity"     : "INFO",
+              "finding"      : "0/2 at '/' marked as secure"
           }
 ,         {
               "id"           : "cookie_httponly",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "All (3) at '/' marked as HttpOnly"
+              "severity"     : "INFO",
+              "finding"      : "0/2 at '/' marked as HttpOnly"
           }
 ,         {
               "id"           : "X-Frame-Options",
@@ -629,6 +685,13 @@
               "finding"      : "nosniff"
           }
 ,         {
+              "id"           : "Cross-Origin-Opener-Policy",
+              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
               "id"           : "Referrer-Policy",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
@@ -640,7 +703,7 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "max-age=3"
+              "finding"      : "max-age=59"
           }
 ,         {
               "id"           : "banner_reverseproxy",
@@ -657,7 +720,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2014-0160",
               "cwe"          : "CWE-119",
-              "finding"      : "not vulnerable , timed out"
+              "finding"      : "not vulnerable, no heartbeat extension"
           }
 ,         {
               "id"           : "CCS",
@@ -846,63 +909,63 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_11_12",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_13_14",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_15",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chrome_101_win10",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-chromium_137_win11",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_100_win10",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_137_win11",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_8_win7",
@@ -951,35 +1014,35 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-edge_133_win11_23h2",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_ios_184",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_154_osx_1231",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_184_osx_154",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_7u25",
@@ -993,42 +1056,42 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_1102",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-java_1703",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-java_2106",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-go_1178",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-libressl_336",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -1042,21 +1105,21 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_315",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-openssl_350",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
           }
 ,         {
               "id"           : "clientsimulation-apple_mail_16_0",
@@ -1070,7 +1133,7 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.3 TLS_AES_128_GCM_SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1140,20 +1203,13 @@
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "A-"
-          }
-,         {
-              "id"           : "grade_cap_warning_1",
-              "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS 1.3 is not supported"
+              "finding"      : "A+"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "convergence.esante.gouv.fr/80.78.2.184",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "66"
+              "finding"      : "76"
           }
 ]
