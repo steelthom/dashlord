@@ -1,6 +1,6 @@
-# Nmap 7.92 scan initiated Mon Nov 10 03:20:10 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln e-collecte.igas.gouv.fr
+# Nmap 7.92 scan initiated Tue Nov 25 04:45:19 2025 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln e-collecte.igas.gouv.fr
 Nmap scan report for e-collecte.igas.gouv.fr (185.194.82.232)
-Host is up (0.081s latency).
+Host is up (0.13s latency).
 Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE   VERSION
 80/tcp  open   http
@@ -33,6 +33,33 @@ PORT    STATE  SERVICE   VERSION
 |     Connection: Keep-Alive
 |     Content-Length: 9
 |     ERROR
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 25 Nov 2025 04:45:41 GMT
+|     Content-Type: text/html
+|     Content-Length: 615
+|     Last-Modified: Mon, 24 Jun 2024 17:37:24 GMT
+|     Connection: close
+|     ETag: "6679aed4-267"
+|     Accept-Ranges: bytes
+|     Set-Cookie: BIGipServerpool-ecollecte-prod.cegedim.cloud-http=!fIudheyNn69tZ78XIkI7F7SI9ajmitVo4W9AAss40F3YDciXI+LcWZhFwEGZVFtnInZhzS+2Drrboes4w/TeLG99bzoe; path=/; Httponly; Secure
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <title>Welcome to nginx!</title>
+|     <style>
+|     html { color-scheme: light dark; }
+|     body { width: 35em; margin: 0 auto;
+|     font-family: Tahoma, Verdana, Arial, sans-serif; }
+|     </style>
+|     </head>
+|     <body>
+|     <h1>Welcome to nginx!</h1>
+|     <p>If you see this page, the nginx web server is successfully installed and
+|     working. Further configuration is required.</p>
+|     <p>For online documentation and support please refer to
+|     href="http://n
 |   HTTPOptions: 
 |     HTTP/1.0 405 Method Not Allowed
 |     Connection: Keep-Alive
@@ -45,7 +72,7 @@ PORT    STATE  SERVICE   VERSION
 |_    ERROR
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=11/10%Time=691159F7%P=x86_64-alpine-linux-musl%
+SF-Port80-TCP:V=7.92%I=7%D=11/25%Time=6925346F%P=x86_64-alpine-linux-musl%
 SF:r(GetRequest,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\
 SF:x20https:///\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%
 SF:r(HTTPOptions,5D,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:
@@ -60,15 +87,32 @@ SF:ash=nmap\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n")%r(SI
 SF:POptions,62,"HTTP/1\.0\x20301\x20Moved\x20Permanently\r\nLocation:\x20h
 SF:ttps://sip:nm\r\nConnection:\x20close\r\nContent-Length:\x200\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/10%Time=69115A02%P=x86_64-alpine-linu
-SF:x-musl%r(HTTPOptions,57,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r
-SF:\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n405\x20ERROR
-SF:")%r(FourOhFourRequest,4E,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnecti
-SF:on:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPR
-SF:equest,50,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Al
-SF:ive\r\nContent-Length:\x209\r\n\r\n400\x20ERROR")%r(SIPOptions,50,"HTTP
-SF:/1\.0\x20400\x20Bad\x20Request\r\nConnection:\x20Keep-Alive\r\nContent-
-SF:Length:\x209\r\n\r\n400\x20ERROR");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=11/25%Time=69253475%P=x86_64-alpine-linu
+SF:x-musl%r(GetRequest,431,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2025\
+SF:x20Nov\x202025\x2004:45:41\x20GMT\r\nContent-Type:\x20text/html\r\nCont
+SF:ent-Length:\x20615\r\nLast-Modified:\x20Mon,\x2024\x20Jun\x202024\x2017
+SF::37:24\x20GMT\r\nConnection:\x20close\r\nETag:\x20\"6679aed4-267\"\r\nA
+SF:ccept-Ranges:\x20bytes\r\nSet-Cookie:\x20BIGipServerpool-ecollecte-prod
+SF:\.cegedim\.cloud-http=!fIudheyNn69tZ78XIkI7F7SI9ajmitVo4W9AAss40F3YDciX
+SF:I\+LcWZhFwEGZVFtnInZhzS\+2Drrboes4w/TeLG99bzoe;\x20path=/;\x20Httponly;
+SF:\x20Secure\r\nStrict-Transport-Security:\x20max-age=31536000;\x20includ
+SF:eSubDomains\r\n\r\n<!DOCTYPE\x20html>\n<html>\n<head>\n<title>Welcome\x
+SF:20to\x20nginx!</title>\n<style>\nhtml\x20{\x20color-scheme:\x20light\x2
+SF:0dark;\x20}\nbody\x20{\x20width:\x2035em;\x20margin:\x200\x20auto;\nfon
+SF:t-family:\x20Tahoma,\x20Verdana,\x20Arial,\x20sans-serif;\x20}\n</style
+SF:>\n</head>\n<body>\n<h1>Welcome\x20to\x20nginx!</h1>\n<p>If\x20you\x20s
+SF:ee\x20this\x20page,\x20the\x20nginx\x20web\x20server\x20is\x20successfu
+SF:lly\x20installed\x20and\nworking\.\x20Further\x20configuration\x20is\x2
+SF:0required\.</p>\n\n<p>For\x20online\x20documentation\x20and\x20support\
+SF:x20please\x20refer\x20to\n<a\x20href=\"http://n")%r(HTTPOptions,57,"HTT
+SF:P/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nConnection:\x20Keep-Alive\
+SF:r\nContent-Length:\x209\r\n\r\n405\x20ERROR")%r(FourOhFourRequest,4E,"H
+SF:TTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20Keep-Alive\r\nContent
+SF:-Length:\x209\r\n\r\n404\x20ERROR")%r(RTSPRequest,50,"HTTP/1\.0\x20400\
+SF:x20Bad\x20Request\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\
+SF:r\n\r\n400\x20ERROR")%r(SIPOptions,50,"HTTP/1\.0\x20400\x20Bad\x20Reque
+SF:st\r\nConnection:\x20Keep-Alive\r\nContent-Length:\x209\r\n\r\n400\x20E
+SF:RROR");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Mon Nov 10 03:22:58 2025 -- 1 IP address (1 host up) scanned in 167.92 seconds
+# Nmap done at Tue Nov 25 04:48:09 2025 -- 1 IP address (1 host up) scanned in 169.78 seconds
