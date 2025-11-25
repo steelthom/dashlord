@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln efsm.pjm.social.gouv.fr</pre>
-<p class="lead">Mon Nov 10 02:56:48 2025 – Mon Nov 10 02:59:31 2025<br>1 hosts scanned.
+<p class="lead">Tue Nov 25 04:13:17 2025 – Tue Nov 25 04:16:01 2025<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,9 +119,24 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https:///nice%20ports%2C/Tri%6Eity.txt%2ebak
+    Connection: close
+    Content-Length: 0
   GetRequest, HTTPOptions, RTSPRequest: 
     HTTP/1.0 302 Moved Temporarily
     Location: https:///
+    Connection: close
+    Content-Length: 0
+  SIPOptions: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://sip:nm
+    Connection: close
+    Content-Length: 0
+  TerminalServerCookie: 
+    HTTP/1.0 302 Moved Temporarily
+    Location: https://mstshash=nmap
     Connection: close
     Content-Length: 0</pre>
 </td></tr>
@@ -148,17 +163,15 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.1 200 OK
-    Date: Mon, 10 Nov 2025 02:57:08 GMT
-    Upgrade: h2,h2c
-    Connection: Upgrade, Keep-Alive
+    Date: Tue, 25 Nov 2025 04:13:37 GMT
     Last-Modified: Fri, 18 Apr 2025 09:31:41 GMT
     Accept-Ranges: bytes
     Content-Length: 17384
     Vary: Accept-Encoding
-    Keep-Alive: timeout=5, max=100
-    Content-Type: text/html
+    Keep-Alive: timeout=5, max=99
     Connection: close
-    Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!BG2DlJhBM6x/q5EXIkI7F7SI9ajmis12bRlD/ehHKq41ZNA3cFHqA68TIlfXJigj/dQufJFLp85al3HwUlr/5GqeMbK5; path=/; Httponly; Secure
+    Content-Type: text/html
+    Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!xNrLA79BPGPdGRsXIkI7F7SI9ajmigUuEdWP2B2OfGEoxqPhL15c187t+inmOEhUxZI15t+01t9f1TTbklAcjpVp0doD; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE html&gt;&lt;html lang="fr"&gt;&lt;head&gt;&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""&gt;
     &lt;meta charset="utf-8"&gt;
@@ -166,9 +179,10 @@
     &lt;base href="/"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
     &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
+    &lt;style type="text/css"&gt;@font-face{font-family:'
   GetRequest: 
     HTTP/1.1 200 OK
-    Date: Mon, 10 Nov 2025 02:57:07 GMT
+    Date: Tue, 25 Nov 2025 04:13:36 GMT
     Upgrade: h2,h2c
     Connection: Upgrade, Keep-Alive
     Last-Modified: Fri, 18 Apr 2025 09:31:41 GMT
@@ -178,7 +192,7 @@
     Keep-Alive: timeout=5, max=100
     Content-Type: text/html
     Connection: close
-    Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!DWe0iXqDJOU7swsXIkI7F7SI9ajmisYxZEdk0f9UR6fOS1R2W/w00oMQ3Q0JXvtgsGtFpnrzIpCC9Gwoxa73xIut82Ba; path=/; Httponly; Secure
+    Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!Xq4y1nIBBog483YXIkI7F7SI9ajmiojklI6fcS05qeEPwLu/ufVkwtnEZu/WuPD90mheysJZk3tOBaKEXRR6HEbglN0b; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     &lt;!DOCTYPE html&gt;&lt;html lang="fr"&gt;&lt;head&gt;&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""&gt;
     &lt;meta charset="utf-8"&gt;
@@ -188,13 +202,15 @@
     &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
   HTTPOptions: 
     HTTP/1.1 200 OK
-    Date: Mon, 10 Nov 2025 02:57:08 GMT
-    Allow: OPTIONS,HEAD,GET,POST
+    Date: Tue, 25 Nov 2025 04:13:37 GMT
+    Upgrade: h2,h2c
+    Connection: Upgrade, Keep-Alive
+    Allow: GET,POST,OPTIONS,HEAD
     Content-Length: 0
-    Keep-Alive: timeout=5, max=99
-    Connection: close
+    Keep-Alive: timeout=5, max=100
     Content-Type: text/html
-    Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!FIcVQuaBtHxYuuYXIkI7F7SI9ajmihjFv/xeGtpzDND1jjdbb9g1vK9nul66hsUt2u7JnTsOwcG0xtl5w/03J2/XpKux; path=/; Httponly; Secure
+    Connection: close
+    Set-Cookie: BIGipServerpool-dgcs-man.cegedim.cloud-http=!c4T3HIeh/4w1HzAXIkI7F7SI9ajmipDVe//CbxeNai3ro2kKS1/A+TPj4vcNzUd2PQZZM04eNuAc4INlm1vhbDsZJYk9; path=/; Httponly; Secure
     Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
 </td></tr>
 </tbody>
