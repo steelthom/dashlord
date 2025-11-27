@@ -5,86 +5,33 @@
     "error": null,
     "score": 75,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "server": "nginx",
-      "date": "Mon, 10 Nov 2025 07:23:13 GMT",
-      "content-type": "text/html; charset=utf-8",
+      "date": "Thu, 27 Nov 2025 03:47:34 GMT",
+      "content-type": "text/html",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "vary": "Accept-Encoding, Accept",
-      "x-frame-options": "SAMEORIGIN",
-      "x-xss-protection": "0",
+      "referrer-policy": "no-referrer",
+      "cache-control": "no-cache",
+      "strict-transport-security": "max-age=63072000",
+      "x-frame-options": "DENY",
       "x-content-type-options": "nosniff",
-      "x-download-options": "noopen",
-      "x-permitted-cross-domain-policies": "none",
-      "referrer-policy": "strict-origin-when-cross-origin",
-      "x-discourse-route": "list/latest",
-      "cache-control": "no-cache, no-store",
-      "x-discourse-cached": "skip",
-      "x-request-id": "027f3b81-9005-4092-9e42-6716f2e782fb",
-      "x-runtime": "0.244181",
-      "x-discourse-trackview": "1",
-      "strict-transport-security": "max-age=15724800; includeSubdomains"
+      "x-xss-protection": "1; mode=block"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "script-src": [
-          "'self'",
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "https://cdn.logrocket.io",
-          "https://cdn.lr-ingest.io",
-          "https://incubateur-territoires.github.io",
-          "https://stats.data.gouv.fr",
-          "https://unpkg.com"
-        ],
-        "worker-src": [
-          "'self'",
-          "blob:"
-        ],
-        "frame-src": [
-          "'self'",
-          "blob:",
-          "https://*.typeform.com"
-        ],
-        "connect-src": [
-          "'self'",
-          "https://*.logrocket.com",
-          "https://*.logrocket.io",
-          "https://*.lr-ingest.io",
-          "https://*.typeform.com",
-          "https://incubateur.anct.gouv.fr",
-          "https://stats.data.gouv.fr"
-        ],
-        "font-src": [
-          "https://unpkg.com"
-        ]
-      },
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
       "http": false,
-      "meta": true,
-      "policy": {
-        "antiClickjacking": false,
-        "defaultNone": false,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": true
-      },
-      "numPolicies": 1
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -106,11 +53,12 @@
       "pass": true,
       "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://forum.incubateur.anct.gouv.fr/",
+      "destination": "https://anct.gouv.fr/",
       "redirects": true,
       "route": [
         "http://forum.incubateur.anct.gouv.fr/",
-        "https://forum.incubateur.anct.gouv.fr/"
+        "https://forum.incubateur.anct.gouv.fr/",
+        "https://anct.gouv.fr/"
       ],
       "statusCode": 200
     },
@@ -119,7 +67,7 @@
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "strict-origin-when-cross-origin",
+      "data": "no-referrer",
       "http": true,
       "meta": false
     },
@@ -128,27 +76,18 @@
       "pass": true,
       "result": "hsts-implemented-max-age-at-least-six-months",
       "scoreModifier": 0,
-      "data": "max-age=15724800; includeSubdomains",
-      "includeSubDomains": true,
-      "maxAge": 15724800,
+      "data": "max-age=63072000",
+      "includeSubDomains": false,
+      "maxAge": 63072000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://cdn.lr-ingest.io/LogRocket.min.js": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://incubateur-territoires.github.io/feedback-widget/widget.js": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
@@ -162,7 +101,7 @@
       "pass": true,
       "result": "x-frame-options-sameorigin-or-deny",
       "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "data": "DENY"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
