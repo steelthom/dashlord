@@ -16,17 +16,17 @@
       "vary": "Accept-Encoding",
       "x-content-type-options": "nosniff",
       "set-cookie": [
-        "_syrSessGuid=861d15b6-49ca-4c4c-94f4-8eb2250b9d2d; expires=Mon, 10-Nov-2025 04:43:55 GMT; path=/; secure; HttpOnly; SameSite=Lax",
-        "_syrPrefsGuid=c2850560-407f-4312-8207-24050ef17370; expires=Tue, 10-Nov-2026 04:13:55 GMT; path=/; secure; HttpOnly; SameSite=Lax",
-        "InstanceST=ENS=00040QovPXPqGjHkF0dPxXsDYDeF-A-IsEubbVpz_RDGZ44ipPVVe6TyvOP1lLg3diqUmtgsYlrZtWGqT7cnNz/I=; path=/; secure; HttpOnly; SameSite=None",
-        "InstanceCI=ENS=2pVRcq6UW0-Ef-Pr-lyFqBmlVLXsgIhPUbifCKqu; path=/; secure; HttpOnly; SameSite=None"
+        "_syrSessGuid=2aa69403-b034-489a-a51e-31efb6cb6421; expires=Sat, 29-Nov-2025 04:33:52 GMT; path=/; secure; HttpOnly; SameSite=Lax",
+        "_syrPrefsGuid=c591d3bb-fdcc-4caf-a810-c9cf7250ed69; expires=Sun, 29-Nov-2026 04:03:52 GMT; path=/; secure; HttpOnly; SameSite=Lax",
+        "InstanceST=ENS=00040XPwmEQXAqvc9ic96vzxGrJMUed5INivh36MpVJTiA2VMva+zse8qZjjwvtJ6sQxDdgaU2+4uSN4YG48kIY8=; path=/; secure; HttpOnly; SameSite=None",
+        "InstanceCI=ENS=ks8y0q7ejvsO5Bj1z9oTec4XNlNqkllhOTyO-P04; path=/; secure; HttpOnly; SameSite=None"
       ],
       "referrer-policy": "strict-origin-when-cross-origin",
-      "content-security-policy": "default-src 'self' https: blob: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: blob:; font-src 'self' data: https:; frame-src 'self' https:; frame-ancestors 'self' https:",
+      "content-security-policy": "default-src 'self'; form-action 'self'; script-src https: 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: blob:; font-src 'self' data: https:; frame-src 'self' https: blob:; frame-ancestors 'self' https:; media-src 'self' blob:; connect-src 'self' https://*.google-analytics.com https://*.matomo.cloud",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "date": "Mon, 10 Nov 2025 04:13:56 GMT",
+      "date": "Sat, 29 Nov 2025 04:03:53 GMT",
       "connection": "close",
-      "content-length": "37348"
+      "content-length": "32096"
     }
   },
   "tests": {
@@ -37,10 +37,15 @@
       "scoreModifier": -20,
       "data": {
         "default-src": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "script-src": [
           "'self'",
           "'unsafe-eval'",
           "'unsafe-inline'",
-          "blob:",
           "https:"
         ],
         "object-src": [
@@ -64,11 +69,21 @@
         ],
         "frame-src": [
           "'self'",
+          "blob:",
           "https:"
         ],
         "frame-ancestors": [
           "'self'",
           "https:"
+        ],
+        "media-src": [
+          "'self'",
+          "blob:"
+        ],
+        "connect-src": [
+          "'self'",
+          "https://*.google-analytics.com",
+          "https://*.matomo.cloud"
         ]
       },
       "http": true,
@@ -77,7 +92,7 @@
         "antiClickjacking": false,
         "defaultNone": false,
         "insecureBaseUri": true,
-        "insecureFormAction": true,
+        "insecureFormAction": false,
         "insecureSchemeActive": false,
         "insecureSchemePassive": false,
         "strictDynamic": false,
@@ -96,7 +111,7 @@
       "data": {
         "_syrSessGuid": {
           "domain": "ens.syracuse.cloud",
-          "expires": "2025-11-10T04:43:55.000Z",
+          "expires": "2025-11-29T04:33:52.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -105,7 +120,7 @@
         },
         "_syrPrefsGuid": {
           "domain": "ens.syracuse.cloud",
-          "expires": "2026-11-10T04:13:55.000Z",
+          "expires": "2026-11-29T04:03:52.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
