@@ -3,24 +3,17 @@
     "algorithmVersion": 4,
     "grade": "F",
     "error": null,
-    "score": 0,
+    "score": 10,
     "statusCode": 200,
-    "testsFailed": 6,
-    "testsPassed": 4,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 10 Nov 2025 08:41:47 GMT",
+      "date": "Sat, 29 Nov 2025 03:41:25 GMT",
       "server": "Apache",
-      "cache-control": "max-age=0, must-revalidate, no-cache, no-store, private",
-      "pragma": "no-cache",
-      "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
-      "set-cookie": [
-        "XSRF-TOKEN=eyJpdiI6Im0vZVIySnUzTGovdzQ0M0dzY0M2WXc9PSIsInZhbHVlIjoiV0hRMjJDQjk3RjlLdFNtSHJINUZ6QUhsUXFzOFJSd2dpS2g4b3QwRExpaWpiL1NreW1yWDg3OUVUUEdQMmoxTWI0ZGhDQW5nbFFDOXR3d0o0TUttT21US3RKdTNkcmsxTityN1RUVUpmMEVaOGhEZ2hMVDFKdUQzZXRSbGdnZ3MiLCJtYWMiOiJhMjIzN2U2ODNkZWNmMDExOTIxNjk4MTZjMTI2YjQxYTNjMmU0YWUyMjhhMzNmYmU1ODhhNDY2YWQwNWE4NWZmIiwidGFnIjoiIn0%3D; expires=Mon, 10 Nov 2025 10:41:47 GMT; Max-Age=7200; path=/; samesite=lax",
-        "athena_salva_session=eyJpdiI6ImtNOEZ5OUVGaHVQRHFsM2M5K0dOeFE9PSIsInZhbHVlIjoidWo5QmlKbWZCTkZBdjJkVDN0d1RuVURMdGhPTExaa2Zvb3NCWnE2azdrTk9JN0FhU0NyMUJQaUlNT0NwSXhlWmJicFdzaXNlM0daK3VPZXFZTEp4UFZKclNVVWk3WGQ4RS9teWJaRmRyYy81UXprN3M1RVpUaHQ4MmU2aWdudDgiLCJtYWMiOiI4MTI4YWU3ZjRmZGRhYmE4MDg5NjZlOTAzNzdlMzNmN2Q0N2I1NTkwY2QyNjhmYjNjMjRkOTYzNTg3YjAyYWRmIiwidGFnIjoiIn0%3D; expires=Mon, 10 Nov 2025 10:41:47 GMT; Max-Age=7200; path=/; httponly; samesite=lax"
-      ],
       "connection": "close",
       "transfer-encoding": "chunked",
-      "content-type": "text/html; charset=UTF-8"
+      "content-type": "text/html"
     }
   },
   "tests": {
@@ -37,28 +30,10 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-session-without-secure-flag",
-      "scoreModifier": -40,
-      "data": {
-        "athena_salva_session": {
-          "domain": "formation.syplo.logement.gouv.fr",
-          "expires": "2025-11-10T10:41:47.000Z",
-          "httponly": true,
-          "max-age": 7200,
-          "path": "/",
-          "port": null,
-          "samesite": "lax"
-        },
-        "XSRF-TOKEN": {
-          "domain": "formation.syplo.logement.gouv.fr",
-          "expires": "2025-11-10T10:41:47.000Z",
-          "max-age": 7200,
-          "path": "/",
-          "port": null,
-          "samesite": "lax"
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -73,11 +48,11 @@
       "pass": false,
       "result": "redirection-not-to-https",
       "scoreModifier": -20,
-      "destination": "http://formation.syplo.logement.gouv.fr/login",
+      "destination": "http://formation.syplo.logement.gouv.fr/cgi-sys/suspendedpage.cgi",
       "redirects": true,
       "route": [
         "http://formation.syplo.logement.gouv.fr/",
-        "http://formation.syplo.logement.gouv.fr/login"
+        "http://formation.syplo.logement.gouv.fr/cgi-sys/suspendedpage.cgi"
       ],
       "statusCode": 200
     },
@@ -104,7 +79,7 @@
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "result": "sri-not-implemented-but-no-scripts-loaded",
       "scoreModifier": 0,
       "data": {}
     },
