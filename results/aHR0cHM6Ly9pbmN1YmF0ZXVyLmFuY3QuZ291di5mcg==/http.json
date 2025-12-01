@@ -1,23 +1,24 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C-",
+    "grade": "B",
     "error": null,
-    "score": 45,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 10 Nov 2025 13:39:45 GMT",
-      "content-type": "text/html; charset=utf-8",
+      "date": "Mon, 01 Dec 2025 04:50:12 GMT",
+      "content-type": "text/html",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "x-request-id": "4cecc2a2-0aeb-4e04-ad2d-3bf37359458e",
-      "etag": "\"139008-Net9Hs1ndN0wFeiGhFmV5XJeNHI\"",
-      "accept-ranges": "none",
-      "vary": "Accept-Encoding",
-      "strict-transport-security": "max-age=31536000"
+      "referrer-policy": "no-referrer",
+      "cache-control": "no-cache",
+      "strict-transport-security": "max-age=63072000",
+      "x-frame-options": "DENY",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block"
     }
   },
   "tests": {
@@ -52,21 +53,22 @@
       "pass": true,
       "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://incubateur.anct.gouv.fr/",
+      "destination": "https://anct.gouv.fr/programmes-dispositifs/incubateur-des-territoires",
       "redirects": true,
       "route": [
         "http://incubateur.anct.gouv.fr/",
-        "https://incubateur.anct.gouv.fr/"
+        "https://incubateur.anct.gouv.fr/",
+        "https://anct.gouv.fr/programmes-dispositifs/incubateur-des-territoires"
       ],
       "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "no-referrer",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -74,37 +76,32 @@
       "pass": true,
       "result": "hsts-implemented-max-age-at-least-six-months",
       "scoreModifier": 0,
-      "data": "max-age=31536000",
+      "data": "max-age=63072000",
       "includeSubDomains": false,
-      "maxAge": 31536000,
+      "maxAge": 63072000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://incubateur-territoires.github.io/feedback-widget/widget.js": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "DENY"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
