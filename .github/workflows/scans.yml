@@ -49,9 +49,11 @@ jobs:
       - name: Write urls.txt for single site
         if: inputs.url != ''
         run: |
-          HOSTNAME=$(echo "${{ inputs.url }}" | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')
-          URL=https://${HOSTNAME}
-          echo $URL > /tmp/urls.txt
+          echo "${{ inputs.url }}" | tr ',' '\n' | while read line; do
+            HOSTNAME=$(echo "$line" | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')
+            URL=https://${HOSTNAME}
+            echo $URL
+          done > /tmp/urls.txt
 
       - name: Use urls.txt for all sites
         if: inputs.url == ''
