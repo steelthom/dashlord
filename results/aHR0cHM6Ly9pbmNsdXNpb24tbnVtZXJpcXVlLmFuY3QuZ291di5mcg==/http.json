@@ -1,119 +1,44 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B+",
+    "grade": "C",
     "error": null,
-    "score": 80,
+    "score": 55,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
-      "content-security-policy": "default-src 'self' https://matomo.incubateur.anct.gouv.fr https://sentry.incubateur.net; script-src 'self' https://matomo.incubateur.anct.gouv.fr https://client.crisp.chat 'unsafe-inline' 'unsafe-eval'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; img-src 'self' data:; frame-src https://www.youtube-nocookie.com/ https://metabase.inclusion-numerique.anct.gouv.fr/; object-src 'none'; connect-src 'self' https://inclusion-numerique-uploads-main.s3.fr-par.scw.cloud https://matomo.incubateur.anct.gouv.fr https://sentry.incubateur.net https://openmaptiles.geo.data.gouv.fr https://openmaptiles.github.io https://aides-territoires.beta.gouv.fr https://openmaptiles.geo.data.gouv.fr https://wxs.ign.fr https://geo.api.gouv.fr; worker-src 'self' blob:; font-src 'self' https: data:; frame-ancestors 'self' http://localhost:* *.gouv.fr; form-action 'self'; base-uri 'self'; upgrade-insecure-requests true;",
+      "date": "Wed, 03 Dec 2025 03:44:25 GMT",
       "content-type": "text/html; charset=utf-8",
-      "date": "Mon, 10 Nov 2025 15:01:15 GMT",
-      "strict-transport-security": "max-age=63072000",
-      "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding",
-      "x-content-type-options": "nosniff",
-      "x-frame-options": "DENY",
-      "x-powered-by": "Next.js",
-      "x-xss-protection": "1; mode=block",
-      "x-envoy-upstream-service-time": "91",
-      "server": "envoy",
+      "transfer-encoding": "chunked",
       "connection": "close",
-      "transfer-encoding": "chunked"
+      "x-request-id": "75c6ec1d-3655-4df6-92ef-8c40780ca486",
+      "permissions-policy": "accelerometer=(), camera=(), microphone=(), document-domain=(), gyroscope=(), magnetometer=(), payment=(), usb=(), xr-spatial-tracking=()",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "x-middleware-rewrite": "/vitrine",
+      "x-nextjs-cache": "HIT",
+      "x-nextjs-prerender": "1",
+      "x-nextjs-stale-time": "4294967294",
+      "cache-control": "s-maxage=31536000",
+      "etag": "\"7jgoofkalm16pw\"",
+      "vary": "Accept-Encoding"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
-      "scoreModifier": -20,
-      "data": {
-        "default-src": [
-          "'self'",
-          "https://matomo.incubateur.anct.gouv.fr",
-          "https://sentry.incubateur.net"
-        ],
-        "script-src": [
-          "'self'",
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "https://client.crisp.chat",
-          "https://matomo.incubateur.anct.gouv.fr"
-        ],
-        "script-src-attr": [
-          "'none'"
-        ],
-        "style-src": [
-          "'self'",
-          "'unsafe-inline'",
-          "https:"
-        ],
-        "img-src": [
-          "'self'",
-          "data:"
-        ],
-        "frame-src": [
-          "https://metabase.inclusion-numerique.anct.gouv.fr/",
-          "https://www.youtube-nocookie.com/"
-        ],
-        "object-src": [
-          "'none'"
-        ],
-        "connect-src": [
-          "'self'",
-          "https://aides-territoires.beta.gouv.fr",
-          "https://geo.api.gouv.fr",
-          "https://inclusion-numerique-uploads-main.s3.fr-par.scw.cloud",
-          "https://matomo.incubateur.anct.gouv.fr",
-          "https://openmaptiles.geo.data.gouv.fr",
-          "https://openmaptiles.github.io",
-          "https://sentry.incubateur.net",
-          "https://wxs.ign.fr"
-        ],
-        "worker-src": [
-          "'self'",
-          "blob:"
-        ],
-        "font-src": [
-          "'self'",
-          "data:",
-          "https:"
-        ],
-        "frame-ancestors": [
-          "'self'",
-          "*.gouv.fr",
-          "http://localhost:*"
-        ],
-        "form-action": [
-          "'self'"
-        ],
-        "base-uri": [
-          "'self'"
-        ],
-        "upgrade-insecure-requests": [
-          "true"
-        ]
-      },
-      "http": true,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
       "meta": false,
-      "policy": {
-        "antiClickjacking": true,
-        "defaultNone": false,
-        "insecureBaseUri": false,
-        "insecureFormAction": false,
-        "insecureSchemeActive": true,
-        "insecureSchemePassive": false,
-        "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
-        "unsafeInlineStyle": true,
-        "unsafeObjects": false
-      },
-      "numPolicies": 1
+      "policy": null,
+      "numPolicies": 0
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
@@ -132,24 +57,23 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://inclusion-numerique.anct.gouv.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://inclusion-numerique.anct.gouv.fr/",
+      "redirects": false,
       "route": [
-        "http://inclusion-numerique.anct.gouv.fr/",
-        "https://inclusion-numerique.anct.gouv.fr/"
+        "http://inclusion-numerique.anct.gouv.fr/"
       ],
       "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -157,9 +81,9 @@
       "pass": true,
       "result": "hsts-implemented-max-age-at-least-six-months",
       "scoreModifier": 0,
-      "data": "max-age=63072000",
-      "includeSubDomains": false,
-      "maxAge": 63072000,
+      "data": "max-age=31536000; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
@@ -180,9 +104,9 @@
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-implemented-via-csp",
-      "scoreModifier": 5,
-      "data": "DENY"
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
