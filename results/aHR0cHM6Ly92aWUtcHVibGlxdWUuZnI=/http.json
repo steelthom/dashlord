@@ -1,22 +1,22 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "F",
     "error": null,
-    "score": 50,
+    "score": 10,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 10 Nov 2025 19:37:26 GMT",
+      "date": "Wed, 03 Dec 2025 03:58:37 GMT",
+      "set-cookie": [
+        "bot_mitigation_cookie=36AWXJOAGJXGUMUBX5WWPFF3R5OAV6HWPBLQJUET3AX6EDUVTUAQ2LQOEEDIQBI4CSWEYNB4PSTHSOZ2BTISXPNKWLWHAO2QWVHC2T7GZ4V72ZDKIEQA====; Path=/"
+      ],
       "content-type": "text/html",
-      "transfer-encoding": "chunked",
-      "connection": "close",
-      "referrer-policy": "no-referrer",
-      "cache-control": "no-cache",
-      "strict-transport-security": "max-age=63072000",
-      "x-xss-protection": "1; mode=block"
+      "content-length": "222",
+      "x-cp-via": "C3-64c4d56e-3e659c29",
+      "connection": "close"
     }
   },
   "tests": {
@@ -33,18 +33,24 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
+      "pass": false,
+      "result": "cookies-without-secure-flag",
+      "scoreModifier": -20,
+      "data": {
+        "bot_mitigation_cookie": {
+          "domain": "vie-publique.fr",
+          "path": "/",
+          "port": null
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
       "pass": true,
-      "result": "cross-origin-resource-sharing-implemented-with-public-access",
+      "result": "cross-origin-resource-sharing-not-implemented",
       "scoreModifier": 0,
-      "data": "*"
+      "data": null
     },
     "redirection": {
       "expectation": "redirection-to-https",
@@ -62,20 +68,20 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "no-referrer",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=63072000",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 63072000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
