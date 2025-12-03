@@ -1,24 +1,31 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "B-",
     "error": null,
-    "score": 70,
+    "score": 65,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 10 Nov 2025 19:41:13 GMT",
-      "content-type": "text/html",
+      "date": "Wed, 03 Dec 2025 04:12:09 GMT",
+      "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "referrer-policy": "no-referrer",
-      "cache-control": "no-cache",
-      "strict-transport-security": "max-age=63072000",
+      "x-request-id": "08c72be7-650b-409b-b622-5a5b5e97e5ad",
       "x-frame-options": "DENY",
+      "vary": "Accept-Language, Cookie",
+      "content-language": "fr",
       "x-content-type-options": "nosniff",
-      "x-xss-protection": "1; mode=block"
+      "referrer-policy": "same-origin",
+      "cross-origin-opener-policy": "same-origin",
+      "strict-transport-security": "max-age=31536000",
+      "set-cookie": [
+        "incap_ses_382_3272868=HN6tatXimDeUdhmpcCNNBZm4L2kAAAAAvPNFnDCBnHST899JorXg/w==; path=/; Domain=.numerique.gouv.fr"
+      ],
+      "x-cdn": "Imperva",
+      "x-iinfo": "16-89870463-89870464 NNNN CT(95 97 0) RT(1764735129507 5) q(0 0 2 0) r(3 5) U12"
     }
   },
   "tests": {
@@ -35,10 +42,34 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "visid_incap_3272868": {
+          "domain": "numerique.gouv.fr",
+          "expires": "2026-12-02T22:19:02.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "nlbi_3272868": {
+          "domain": "numerique.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "incap_ses_625_3272868": {
+          "domain": "numerique.gouv.fr",
+          "path": "/",
+          "port": null
+        },
+        "incap_ses_382_3272868": {
+          "domain": "numerique.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -66,7 +97,7 @@
       "pass": true,
       "result": "referrer-policy-private",
       "scoreModifier": 5,
-      "data": "no-referrer",
+      "data": "same-origin",
       "http": true,
       "meta": false
     },
@@ -75,17 +106,17 @@
       "pass": true,
       "result": "hsts-implemented-max-age-at-least-six-months",
       "scoreModifier": 0,
-      "data": "max-age=63072000",
+      "data": "max-age=31536000",
       "includeSubDomains": false,
-      "maxAge": 63072000,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
-      "scoreModifier": 0,
+      "result": "sri-implemented-and-all-scripts-loaded-securely",
+      "scoreModifier": 5,
       "data": {}
     },
     "x-content-type-options": {
