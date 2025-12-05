@@ -1,16 +1,16 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D+",
+    "grade": "B+",
     "error": null,
-    "score": 40,
+    "score": 80,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Tue, 11 Nov 2025 02:39:33 GMT",
+      "date": "Fri, 05 Dec 2025 04:09:16 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
@@ -24,7 +24,7 @@
       "strict-transport-security": "max-age=63072000",
       "content-security-policy": "upgrade-insecure-requests",
       "x-xss-protection": "1; mode=block",
-      "x-micro-cache": "HIT"
+      "x-micro-cache": "EXPIRED"
     }
   },
   "tests": {
@@ -72,12 +72,16 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-invalid-cert",
-      "scoreModifier": -20,
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
       "destination": "https://www.debatpublic.fr/",
       "redirects": true,
-      "route": [],
+      "route": [
+        "http://debatpublic.fr/",
+        "https://debatpublic.fr/",
+        "https://www.debatpublic.fr/"
+      ],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -91,12 +95,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-invalid-cert",
-      "scoreModifier": -20,
-      "data": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=63072000",
       "includeSubDomains": false,
-      "maxAge": null,
+      "maxAge": 63072000,
       "preload": false,
       "preloaded": false
     },
