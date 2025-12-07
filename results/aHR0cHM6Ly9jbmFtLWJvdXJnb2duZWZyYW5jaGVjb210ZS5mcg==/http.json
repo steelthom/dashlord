@@ -1,24 +1,30 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "C",
     "error": null,
-    "score": 0,
+    "score": 50,
     "statusCode": 200,
-    "testsFailed": 7,
-    "testsPassed": 3,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Tue, 11 Nov 2025 02:58:53 GMT",
+      "date": "Sun, 07 Dec 2025 04:11:37 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "content-length": "26331",
+      "content-length": "19223",
       "connection": "close",
-      "cache-control": "public, s-maxage=0",
-      "set-cookie": [
-        "device_view=full; expires=Thu, 11-Dec-2025 02:58:53 GMT; Max-Age=2592000; path=/; httponly"
-      ],
-      "vary": "Accept-Encoding,User-Agent"
+      "cache-control": "max-age=3600, public",
+      "x-drupal-dynamic-cache": "MISS",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "vary": "Cookie,Accept-Encoding,User-Agent",
+      "x-generator": "Drupal 10 (https://www.drupal.org)",
+      "x-drupal-cache": "HIT",
+      "last-modified": "Sat, 06 Dec 2025 21:19:14 GMT",
+      "etag": "\"1765055954-gzip\""
     }
   },
   "tests": {
@@ -35,19 +41,10 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-without-secure-flag",
-      "scoreModifier": -20,
-      "data": {
-        "device_view": {
-          "domain": "www.cnam-bourgognefranchecomte.fr",
-          "expires": "2025-12-11T02:58:53.000Z",
-          "httponly": true,
-          "max-age": 2592000,
-          "path": "/",
-          "port": null
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -59,14 +56,15 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-not-to-https",
-      "scoreModifier": -20,
-      "destination": "http://www.cnam-bourgognefranchecomte.fr/",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://www.cnam-bourgognefranchecomte.fr/",
       "redirects": true,
       "route": [
         "http://cnam-bourgognefranchecomte.fr/",
-        "http://www.cnam-bourgognefranchecomte.fr/"
+        "https://cnam-bourgognefranchecomte.fr/",
+        "https://www.cnam-bourgognefranchecomte.fr/"
       ],
       "statusCode": 200
     },
@@ -96,7 +94,15 @@
       "result": "sri-not-implemented-but-external-scripts-loaded-securely",
       "scoreModifier": -5,
       "data": {
-        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js": {
+        "https://platform-api.sharethis.com/js/sharethis.js#property=691c2d18328dfcc328f38743&product=sop": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@1/dist/cookiesjsr-preloader.min.js": {
           "crossorigin": null,
           "integrity": null
         }
@@ -104,17 +110,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
