@@ -1,32 +1,37 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C-",
+    "grade": "C",
     "error": null,
-    "score": 45,
+    "score": 50,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
       "content-type": "text/html; charset=utf-8",
-      "content-length": "23870",
+      "content-length": "23834",
       "connection": "close",
-      "date": "Tue, 11 Nov 2025 07:13:59 GMT",
-      "x-unique-id": "B0ZAlTeeYwVXyz1ckcCXxLX3l9Wd05IT_sxXb3gzoAKkNRFyiv2mUA==",
+      "date": "Tue, 09 Dec 2025 03:56:53 GMT",
+      "set-cookie": [
+        "frz-referrer=; HTTPOnly; Secure",
+        "frz_referrer_unique_id=dyyU_GhfVazWVB18wvYpJpiq_h0a44MJQr_-9rzmmboCK4Sd5rLIDw==; Max-Age=20; HTTPOnly; Secure"
+      ],
       "access-control-allow-origin": "https://pw-matomo.igesa.fr",
-      "cache-control": "s-maxage=0, private, max-age=0",
+      "cache-control": "private, no-cache, must-revalidate",
       "content-security-policy": "frame-ancestors 'self'",
-      "expires": "Tue, 11 Nov 2025 06:06:06 GMT",
-      "x-content-type-options": "nosniff, nosniff",
-      "x-fstrz": "o,clc",
+      "etag": "W/\"1d95c-X4FCBly2InBt4NegxwVrJmmGl88\"",
+      "last-modified": "Tue, 09 Dec 2025 03:50:40 GMT",
+      "x-content-type-options": "nosniff",
+      "x-fstrz": "o,sc,c",
       "x-xss-protection": "0",
-      "x-gen-id": "zyVDKwxv1E8CLE7RvD_c-bZKxI-ZF2xUzoTmW_SCwTQIdgHciXkUSA==",
+      "x-gen-id": "NN2s7QaV9g4oWdZWbygUY-iIsxHz2HiLyqGd4XqT_oydRhcbu738XA==",
       "server": "fasterize",
+      "x-unique-id": "dyyU_GhfVazWVB18wvYpJpiq_h0a44MJQr_-9rzmmboCK4Sd5rLIDw==",
       "x-cache": "Miss from cloudfront",
-      "via": "1.1 6db0e3fcf85d00de1ac587c2611daca6.cloudfront.net (CloudFront)",
-      "x-amz-cf-pop": "SFO53-P1",
-      "x-amz-cf-id": "B0ZAlTeeYwVXyz1ckcCXxLX3l9Wd05IT_sxXb3gzoAKkNRFyiv2mUA=="
+      "via": "1.1 a19e5a78228f461a542b5c5f6d13243e.cloudfront.net (CloudFront)",
+      "x-amz-cf-pop": "PHX52-P1",
+      "x-amz-cf-id": "dyyU_GhfVazWVB18wvYpJpiq_h0a44MJQr_-9rzmmboCK4Sd5rLIDw=="
     }
   },
   "tests": {
@@ -60,9 +65,25 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-not-found",
+      "result": "cookies-secure-with-httponly-sessions",
       "scoreModifier": 0,
-      "data": null,
+      "data": {
+        "frz-referrer": {
+          "domain": "www.igesa.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        },
+        "frz_referrer_unique_id": {
+          "domain": "www.igesa.fr",
+          "httponly": true,
+          "max-age": 20,
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -124,10 +145,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-header-invalid",
-      "scoreModifier": -5,
-      "data": "nosniff, nosniff"
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
