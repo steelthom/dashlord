@@ -1,22 +1,22 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "D",
     "error": null,
-    "score": 70,
+    "score": 30,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "server": "nginx/1.24.0 (Ubuntu)",
-      "date": "Tue, 11 Nov 2025 08:11:01 GMT",
+      "server": "nginx",
+      "date": "Thu, 11 Dec 2025 04:04:38 GMT",
       "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "connection": "close",
       "samesite": "Lax",
       "set-cookie": [
-        "CGISESSID=7aa0f385fd652803d0e11b49763ce595; path=/; secure; HttpOnly; SameSite=Lax"
+        "CGISESSID=b20856536a97ce4fbc5236e613c7fd24; path=/; secure; HttpOnly; SameSite=Lax"
       ],
       "x-frame-options": "SAMEORIGIN",
       "strict-transport-security": "max-age=63072000"
@@ -60,15 +60,12 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
+      "pass": false,
+      "result": "redirection-invalid-cert",
+      "scoreModifier": -20,
       "destination": "https://koha.documentation.pm.gouv.fr/",
       "redirects": true,
-      "route": [
-        "http://koha.documentation.pm.gouv.fr/",
-        "https://koha.documentation.pm.gouv.fr/"
-      ],
+      "route": [],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -82,12 +79,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=63072000",
+      "pass": false,
+      "result": "hsts-invalid-cert",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 63072000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
