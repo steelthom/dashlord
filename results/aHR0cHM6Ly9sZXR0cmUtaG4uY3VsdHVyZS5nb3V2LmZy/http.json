@@ -1,19 +1,33 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "F",
+    "grade": "C-",
     "error": null,
-    "score": 10,
-    "statusCode": 403,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "score": 45,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 11 Nov 2025 14:38:57 GMT",
-      "server": "Apache",
-      "content-length": "202",
+      "server": "nginx",
+      "date": "Mon, 15 Dec 2025 04:33:49 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "content-length": "26682",
       "connection": "close",
-      "content-type": "text/html; charset=iso-8859-1"
+      "cache-control": "max-age=31536000, public",
+      "x-ua-compatible": "IE=edge",
+      "content-language": "fr",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "SAMEORIGIN",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "vary": "Cookie,Accept-Encoding",
+      "last-modified": "Fri, 12 Dec 2025 17:05:45 GMT",
+      "etag": "\"1765559145-gzip\"",
+      "x-backend": "front1",
+      "age": "214081",
+      "x-cache": "HIT",
+      "accept-ranges": "bytes",
+      "strict-transport-security": "max-age=63072000"
     }
   },
   "tests": {
@@ -39,19 +53,21 @@
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
       "pass": true,
-      "result": "cross-origin-resource-sharing-not-implemented",
+      "result": "cross-origin-resource-sharing-implemented-with-restricted-access",
       "scoreModifier": 0,
-      "data": null
+      "data": "https://http-observatory.security.mozilla.org"
     },
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": false,
-      "result": "redirection-missing",
-      "scoreModifier": -20,
-      "destination": "http://lettre-hn.culture.gouv.fr/",
-      "redirects": false,
+      "result": "redirection-off-host-from-http",
+      "scoreModifier": -5,
+      "destination": "https://archeologie.culture.gouv.fr/fr",
+      "redirects": true,
       "route": [
-        "http://lettre-hn.culture.gouv.fr/"
+        "http://lettre-hn.culture.gouv.fr/",
+        "https://archeologie.culture.fr/archeologie1418",
+        "https://archeologie.culture.gouv.fr/fr"
       ],
       "statusCode": 200
     },
@@ -67,7 +83,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-invalid-cert",
+      "result": "hsts-not-implemented-no-https",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
@@ -77,24 +93,33 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": true,
-      "result": "sri-not-implemented-but-no-scripts-loaded",
-      "scoreModifier": 0,
-      "data": {}
+      "pass": false,
+      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+      "scoreModifier": -5,
+      "data": {
+        "https://cdn.plyr.io/3.7.8/plyr.js": {
+          "crossorigin": null,
+          "integrity": null
+        },
+        "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js": {
+          "crossorigin": "anonymous",
+          "integrity": "sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        }
+      }
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
