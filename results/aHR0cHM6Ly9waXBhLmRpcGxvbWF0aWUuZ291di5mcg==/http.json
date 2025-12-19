@@ -5,12 +5,12 @@
     "error": null,
     "score": 0,
     "statusCode": 200,
-    "testsFailed": 6,
-    "testsPassed": 4,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Wed, 12 Nov 2025 02:41:52 GMT",
+      "date": "Fri, 19 Dec 2025 04:14:10 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "vary": "Accept-Encoding",
@@ -19,8 +19,14 @@
       "pragma": "no-cache",
       "set-cookie": [
         "sessver=0; path=/; secure; HttpOnly",
-        "AFLang=fr; expires=Thu, 12-Nov-2026 02:41:52 GMT; Max-Age=31536000; path=/; secure"
+        "AFLang=fr; expires=Sat, 19-Dec-2026 04:14:10 GMT; Max-Age=31536000; path=/; secure"
       ],
+      "x-frame-options": "DENY",
+      "x-content-type-options": "nosniff",
+      "x-xss-protection": "1; mode=block",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "strict-transport-policy": "max-age=63072000; includeSubDomains; preload",
+      "x-correlation-id": "de498b7f-26ae-444e-9b64-cfc5193308c0",
       "strict-transport-security": "max-age=63072000; includeSubdomains; preload",
       "connection": "close"
     }
@@ -45,7 +51,7 @@
       "data": {
         "AFSESSID": {
           "domain": "pipa.diplomatie.gouv.fr",
-          "expires": "2025-12-03T02:41:51.000Z",
+          "expires": "2026-01-09T04:14:09.000Z",
           "httponly": true,
           "max-age": 1814400,
           "path": "/",
@@ -61,7 +67,7 @@
         },
         "sdid": {
           "domain": "pipa.diplomatie.gouv.fr",
-          "expires": "2035-11-10T02:41:51.000Z",
+          "expires": "2035-12-17T04:14:09.000Z",
           "httponly": true,
           "max-age": 315360000,
           "path": "/",
@@ -69,7 +75,7 @@
         },
         "AFLang": {
           "domain": "pipa.diplomatie.gouv.fr",
-          "expires": "2026-11-12T02:41:52.000Z",
+          "expires": "2026-12-19T04:14:10.000Z",
           "max-age": 31536000,
           "path": "/",
           "port": null,
@@ -99,11 +105,11 @@
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
-      "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "pass": false,
+      "result": "referrer-policy-unsafe",
+      "scoreModifier": -5,
+      "data": "no-referrer-when-downgrade",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -143,17 +149,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": false,
-      "result": "x-frame-options-not-implemented",
-      "scoreModifier": -20,
-      "data": null
+      "pass": true,
+      "result": "x-frame-options-sameorigin-or-deny",
+      "scoreModifier": 0,
+      "data": "DENY"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
