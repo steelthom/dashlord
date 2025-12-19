@@ -1,16 +1,16 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "C",
     "error": null,
-    "score": 75,
+    "score": 55,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 2,
+    "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx/1.29.0",
-      "date": "Wed, 12 Nov 2025 02:46:14 GMT",
+      "date": "Fri, 19 Dec 2025 03:59:55 GMT",
       "content-type": "text/html; charset=utf-8",
       "content-length": "485",
       "connection": "close",
@@ -20,7 +20,8 @@
       "x-content-type-options": "nosniff",
       "referrer-policy": "same-origin",
       "cross-origin-opener-policy": "same-origin",
-      "strict-transport-security": "max-age=31536000"
+      "ratelimit-limit": "20",
+      "ratelimit-policy": "q=20;w=1"
     }
   },
   "tests": {
@@ -74,12 +75,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000",
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
       "includeSubDomains": false,
-      "maxAge": 31536000,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
