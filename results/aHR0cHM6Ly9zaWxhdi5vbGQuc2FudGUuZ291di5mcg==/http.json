@@ -5,15 +5,15 @@
     "error": null,
     "score": 0,
     "statusCode": 200,
-    "testsFailed": 5,
-    "testsPassed": 5,
+    "testsFailed": 6,
+    "testsPassed": 4,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Wed, 12 Nov 2025 07:34:11 GMT",
+      "date": "Thu, 25 Dec 2025 04:10:18 GMT",
       "set-cookie": [
-        "JSESSIONID=C23976670DB4B2CBC2F407FD2EB71BDB.lv-silavc1; Path=/; HttpOnly",
-        "Current_Session=!nd2AQ+WqL18TSZzQs3myfljarOeBA17YQvO0YXmDsMt0na+lZx8RSJyOfcnFUggk7w8CqpOllkbn4Q==; path=/; Httponly; Secure",
-        "TS017ab800=012337f68db125a5238cee20a9fe5a53974543ec66e89d1bb6524d987fd99061b740f3d6d1fed2700a44ecdc0172e97c0ba28b00f037d4cb68222b9ea2b65490db8e2a8286f1d0f5c428f6f8c5a0c4ed8fca9c370d; Path=/;"
+        "JSESSIONID=3A936F827243CBC3EC8223480ADD2CCE.lv-silavc1; Path=/; HttpOnly",
+        "Current_Session=!jGNxZA9nY1mzGNrlb/OWdH3plk/zcftC1dOsjAsPgOpbds7YCPy3CXIDihqyppOcdmv1mNeuQ2Zatg==; path=/; Httponly; Secure",
+        "TS017ab800=012337f68d61810500231ae26eb1c2b86d1d6dedf9707bfb16518ff2629db293c9c15bc552ebef1d2799f6b55b872f2f0a05e146c4c661ee3acd85244c91e19f4e45b7e03e6a49d590fa11cebe983974b920d0cca6; Path=/"
       ],
       "connection": "close",
       "content-type": "text/html;charset=ISO-8859-1",
@@ -68,15 +68,12 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
+      "pass": false,
+      "result": "redirection-invalid-cert",
+      "scoreModifier": -20,
       "destination": "https://silav.old.sante.gouv.fr/",
       "redirects": true,
-      "route": [
-        "http://silav.old.sante.gouv.fr/",
-        "https://silav.old.sante.gouv.fr/"
-      ],
+      "route": [],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -91,7 +88,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-invalid-cert",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
