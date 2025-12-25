@@ -16,17 +16,17 @@
       "vary": "Accept-Encoding",
       "x-content-type-options": "nosniff",
       "set-cookie": [
-        "_syrSessGuid=dfca313a-ef56-4aef-aa1c-55a628ceea2f; expires=Wed, 12-Nov-2025 07:58:34 GMT; path=/; secure; HttpOnly; SameSite=Lax",
-        "_syrPrefsGuid=d6737342-abd9-4cbe-9afd-875045c70b8b; expires=Thu, 12-Nov-2026 07:28:34 GMT; path=/; secure; HttpOnly; SameSite=Lax",
-        "InstanceST=EXPLOITATION=00040_CXoYJLpLhlAvZp0aRh7fH_E6kjCyEyg7JjdstX647DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=; path=/; secure; HttpOnly",
-        "InstanceCI=EXPLOITATION=ttF2vhfD1IBYuJf8OPIluypxO3wEhmPpQ67TvMMt; path=/; secure; HttpOnly"
+        "_syrSessGuid=bc86111f-a14d-42b5-b295-4c2271a247e8; expires=Thu, 25-Dec-2025 04:38:23 GMT; path=/; secure; HttpOnly; SameSite=Lax",
+        "_syrPrefsGuid=1d569f12-808f-4ea3-af14-5fb92a9f93ac; expires=Fri, 25-Dec-2026 04:08:23 GMT; path=/; secure; HttpOnly; SameSite=Lax",
+        "InstanceST=EXPLOITATION=00040CXweaCoUYt52I-_e9xKcuBbW9S1lwYT9acJ3PXflJ3joLlQfbM32uwlmGRE5Kw803iuV943wUQpNDUhPSHQ=; path=/; secure; HttpOnly",
+        "InstanceCI=EXPLOITATION=fgiqVc7EjBuf_zHZDM50KAsOxSP4krxq3qHDGocv; path=/; secure; HttpOnly"
       ],
       "referrer-policy": "strict-origin-when-cross-origin",
       "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
-      "content-security-policy": "default-src 'self' https: blob: 'unsafe-eval' 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: blob:; font-src 'self' data: https:; frame-src 'self' https:; frame-ancestors 'self' https:",
-      "date": "Wed, 12 Nov 2025 07:28:34 GMT",
+      "content-security-policy": "default-src 'self'; form-action 'self'; script-src https: 'self' 'unsafe-eval' 'unsafe-inline'; object-src 'none'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: blob:; font-src 'self' data: https:; frame-src 'self' https: blob:; frame-ancestors 'self' https:; media-src 'self' blob:; connect-src 'self' https://*.google-analytics.com https://*.matomo.cloud",
+      "date": "Thu, 25 Dec 2025 04:08:24 GMT",
       "connection": "close",
-      "content-length": "39890"
+      "content-length": "38124"
     }
   },
   "tests": {
@@ -37,10 +37,15 @@
       "scoreModifier": -20,
       "data": {
         "default-src": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "script-src": [
           "'self'",
           "'unsafe-eval'",
           "'unsafe-inline'",
-          "blob:",
           "https:"
         ],
         "object-src": [
@@ -64,11 +69,21 @@
         ],
         "frame-src": [
           "'self'",
+          "blob:",
           "https:"
         ],
         "frame-ancestors": [
           "'self'",
           "https:"
+        ],
+        "media-src": [
+          "'self'",
+          "blob:"
+        ],
+        "connect-src": [
+          "'self'",
+          "https://*.google-analytics.com",
+          "https://*.matomo.cloud"
         ]
       },
       "http": true,
@@ -77,7 +92,7 @@
         "antiClickjacking": false,
         "defaultNone": false,
         "insecureBaseUri": true,
-        "insecureFormAction": true,
+        "insecureFormAction": false,
         "insecureSchemeActive": false,
         "insecureSchemePassive": false,
         "strictDynamic": false,
@@ -96,7 +111,7 @@
       "data": {
         "_syrSessGuid": {
           "domain": "side.developpement-durable.gouv.fr",
-          "expires": "2025-11-12T07:58:34.000Z",
+          "expires": "2025-12-25T04:38:23.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -105,7 +120,7 @@
         },
         "_syrPrefsGuid": {
           "domain": "side.developpement-durable.gouv.fr",
-          "expires": "2026-11-12T07:28:34.000Z",
+          "expires": "2026-12-25T04:08:23.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
