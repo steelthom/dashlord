@@ -10,11 +10,11 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Wed, 12 Nov 2025 14:27:40 GMT",
+      "date": "Wed, 31 Dec 2025 04:23:34 GMT",
       "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "vary": "Accept-Encoding, Cookie",
-      "content-security-policy": "font-src 'self'; script-src 'self'; default-src 'none'; frame-ancestors 'none'; img-src 'self' data: https://storage.vulnerability-disclosure.com; block-all-mixed-content; form-action 'self'; connect-src 'self'; style-src 'self' 'unsafe-inline'; frame-src 'none'; media-src data:",
+      "content-security-policy": "frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; media-src data:; default-src 'none'; frame-src 'none'; font-src 'self'; img-src 'self' data: https://storage.vulnerability-disclosure.com; block-all-mixed-content; connect-src 'self'; form-action 'self'",
       "referrer-policy": "same-origin",
       "strict-transport-security": "includeSubDomains;max-age=31536000;preload;",
       "cache-control": "no-cache,max-age=60",
@@ -31,17 +31,27 @@
       "result": "csp-implemented-with-unsafe-inline-in-style-src-only",
       "scoreModifier": 0,
       "data": {
-        "font-src": [
-          "'self'"
+        "frame-ancestors": [
+          "'none'"
         ],
         "script-src": [
           "'self'"
         ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'"
+        ],
+        "media-src": [
+          "data:"
+        ],
         "default-src": [
           "'none'"
         ],
-        "frame-ancestors": [
+        "frame-src": [
           "'none'"
+        ],
+        "font-src": [
+          "'self'"
         ],
         "img-src": [
           "'self'",
@@ -51,21 +61,11 @@
         "block-all-mixed-content": [
           "'none'"
         ],
-        "form-action": [
-          "'self'"
-        ],
         "connect-src": [
           "'self'"
         ],
-        "style-src": [
-          "'self'",
-          "'unsafe-inline'"
-        ],
-        "frame-src": [
-          "'none'"
-        ],
-        "media-src": [
-          "data:"
+        "form-action": [
+          "'self'"
         ]
       },
       "http": true,
