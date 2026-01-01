@@ -1,35 +1,43 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "C",
     "error": null,
-    "score": 30,
+    "score": 50,
     "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 13 Nov 2025 03:54:09 GMT",
-      "server": "Apache",
-      "content-language": "fr-FR",
-      "cache-control": "private, no-store",
-      "vary": "Accept-Encoding",
-      "x-ua-compatible": "IE=edge",
-      "x-content-type-options": "nosniff",
-      "content-type": "text/html; charset=utf-8",
-      "x-varnish": "468041128 455604836",
-      "age": "52",
-      "via": "1.1 varnish (Varnish/7.1)",
-      "accept-ranges": "bytes",
-      "content-length": "18571",
-      "connection": "close"
+      "alt-svc": "h3=\":443\"; ma=2592000",
+      "cache-control": "max-age=1800, public",
+      "content-language": "fr",
+      "content-security-policy-report-only": "object-src 'none'; script-src 'self' 'report-sample' 'unsafe-eval' https://unpkg.com 'unsafe-inline' https://webomat.unistra.fr/; script-src-elem 'self' 'report-sample' 'unsafe-eval' https://unpkg.com; style-src 'self' 'report-sample'; webrtc 'block'; worker-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 31 Dec 2025 17:00:44 GMT",
+      "etag": "W/\"1767200442\"",
+      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+      "last-modified": "Wed, 31 Dec 2025 17:00:42 GMT",
+      "permissions-policy": "geolocation=(),midi=(),syncxhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()",
+      "referrer-policy": "strict-origin",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "vary": "Accept-Encoding, Cookie",
+      "x-boost-nginx-serving-static": "MISS",
+      "x-content-type-options": "nosniff, nosniff",
+      "x-drupal-cache": "HIT",
+      "x-drupal-dynamic-cache": "MISS",
+      "x-frame-options": "SAMEORIGIN, SAMEORIGIN",
+      "x-generator": "Drupal 10 (https://www.drupal.org)",
+      "x-xss-protection": "1; mode=block",
+      "connection": "close",
+      "transfer-encoding": "chunked"
     }
   },
   "tests": {
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
+      "result": "csp-not-implemented-but-reporting-enabled",
       "scoreModifier": -25,
       "data": null,
       "http": false,
@@ -57,68 +65,56 @@
       "pass": true,
       "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://www.unistra.fr/",
+      "destination": "https://www.unistra.fr/fr",
       "redirects": true,
       "route": [
         "http://unistra.fr/",
         "https://unistra.fr/",
-        "https://www.unistra.fr/"
+        "https://www.unistra.fr/",
+        "https://www.unistra.fr/fr"
       ],
       "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
-      "includeSubDomains": false,
-      "maxAge": null,
-      "preload": false,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains; preload",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
+      "preload": true,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-header-invalid",
+      "scoreModifier": -5,
+      "data": "nosniff, nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": false,
-      "result": "x-frame-options-not-implemented",
+      "result": "x-frame-options-header-invalid",
       "scoreModifier": -20,
-      "data": null
+      "data": "SAMEORIGIN, SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
