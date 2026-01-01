@@ -9,11 +9,11 @@
     "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 13 Nov 2025 04:05:02 GMT",
+      "date": "Thu, 01 Jan 2026 04:34:47 GMT",
       "server": "Apache",
       "set-cookie": [
-        "SessionStatId=56bbcd9d.64371fc4256a0; path=/; expires=Sun, 11-Nov-35 04:05:02 GMT; domain=.telepac.agriculture.gouv.fr; HttpOnly; secure",
-        "JSESSIONID=3b16f96c4898ce48~BC37857096E28DFF56F2DAAC3B097E38.jvm-tomp202; Path=/telepac; Secure; HttpOnly"
+        "SessionStatId=5b774015.6474c1ce1fbd4; path=/; expires=Sun, 30-Dec-35 04:34:47 GMT; domain=.telepac.agriculture.gouv.fr; HttpOnly; secure",
+        "JSESSIONID=3b16f96c4898ce48~908ED78691CE7B5032D2971773A02D33.jvm-tomp205; Path=/telepac; Secure; HttpOnly"
       ],
       "cache-control": "private",
       "vary": "Accept-Encoding,User-Agent",
@@ -21,7 +21,7 @@
       "content-type": "text/html;charset=ISO-8859-15",
       "strict-transport-security": "max-age=15552000",
       "x-frame-options": "SAMEORIGIN",
-      "content-length": "11733"
+      "content-length": "12142"
     }
   },
   "tests": {
@@ -44,7 +44,7 @@
       "data": {
         "cookiesession1": {
           "domain": "www.telepac.agriculture.gouv.fr",
-          "expires": "2026-11-13T04:04:58.000Z",
+          "expires": "2027-01-01T04:34:42.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -52,7 +52,7 @@
         },
         "SessionStatId": {
           "domain": "telepac.agriculture.gouv.fr",
-          "expires": "2035-11-11T04:05:02.000Z",
+          "expires": "2035-12-30T04:34:47.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -78,12 +78,16 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://www.telepac.agriculture.gouv.fr/",
+      "destination": "https://www.telepac.agriculture.gouv.fr/telepac/auth/accueil.action",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://www.telepac.agriculture.gouv.fr/",
+        "https://www.telepac.agriculture.gouv.fr/",
+        "https://www.telepac.agriculture.gouv.fr/telepac/auth/accueil.action"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
