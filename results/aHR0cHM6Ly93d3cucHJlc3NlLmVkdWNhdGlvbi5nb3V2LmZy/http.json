@@ -10,19 +10,17 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "nginx",
-      "date": "Thu, 13 Nov 2025 04:31:24 GMT",
+      "date": "Sat, 03 Jan 2026 03:55:16 GMT",
       "content-type": "text/html; charset=ISO-8859-1",
-      "content-length": "22433",
+      "content-length": "22430",
       "connection": "close",
-      "age": "10",
+      "age": "23",
       "cache-tags": "HIT",
       "x-cache": "HIT",
       "accept-ranges": "bytes",
-      "x-rate": "r3b5",
-      "strict-transport-security": "max-age=31536000",
-      "x-content-type-options": "nosniff",
-      "referrer-policy": "no-referrer-when-downgrade",
-      "x-xss-protection": "1; mode=block"
+      "x-frame-options": "âDENYâ",
+      "x-xss-protection": "1; mode=block",
+      "strict-transport-security": "max-age=31536000"
     }
   },
   "tests": {
@@ -67,11 +65,11 @@
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
-      "pass": false,
-      "result": "referrer-policy-unsafe",
-      "scoreModifier": -5,
-      "data": "no-referrer-when-downgrade",
-      "http": true,
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
@@ -94,17 +92,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": false,
-      "result": "x-frame-options-not-implemented",
+      "result": "x-frame-options-header-invalid",
       "scoreModifier": -20,
-      "data": null
+      "data": "âDENYâ"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
