@@ -10,7 +10,7 @@
     "testsQuantity": 10,
     "responseHeaders": {
       "server": "sysdsi/6.6.6",
-      "date": "Sat, 15 Nov 2025 03:30:48 GMT",
+      "date": "Mon, 05 Jan 2026 04:33:37 GMT",
       "content-type": "text/html",
       "content-length": "7931",
       "connection": "close",
@@ -18,7 +18,10 @@
       "etag": "\"5ceea978-1efb\"",
       "accept-ranges": "bytes",
       "strict-transport-security": "max-age=31536000; includeSubDomains",
-      "x-frame-options": "sameorigin"
+      "x-frame-options": "sameorigin",
+      "x-content-type-options": "nosniff",
+      "referrer-policy": "no-referrer-when-downgrade",
+      "x-xss-protection": "1; mode=block"
     }
   },
   "tests": {
@@ -63,11 +66,11 @@
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
-      "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "pass": false,
+      "result": "referrer-policy-unsafe",
+      "scoreModifier": -5,
+      "data": "no-referrer-when-downgrade",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -90,10 +93,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-not-implemented",
-      "scoreModifier": -5,
-      "data": null
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
