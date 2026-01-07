@@ -9,11 +9,11 @@
     "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sat, 15 Nov 2025 04:23:33 GMT",
+      "date": "Wed, 07 Jan 2026 04:22:44 GMT",
       "set-cookie": [
-        "JSESSIONID=6B47BBD6306D538E3E3272E2C96FC23D; Path=/referentiel_of; Secure; HttpOnly",
-        "TS010a0e24=01611f729b2ae76b017975095de7e393de3592469589c57afca55b9f56e10558c045b8c68a6c7d7fdbce20d8568115da8a1a2fa45fe7ba48d7bd8d144f20bb2388e30d57f8; Path=/",
-        "TS01b1f390=01611f729ba3d8a80107e2c48e8fc7efce9a3d984889c57afca55b9f56e10558c045b8c68a6c7d7fdbce20d8568115da8a1a2fa45fdbd10c2d9ce553130baa2511b5f82f0157810da32f3e7121bee17517b3c8b3db; path=/referentiel_of"
+        "JSESSIONID=B6B329619B2B25CAA06408F051AE12B2; Path=/referentiel_of; Secure; HttpOnly",
+        "TS010a0e24=01611f729b6a3ab5a625fe1e5d126893c503bddb80d35f7f7ea53db2ff60ab777f69ddd01b392d11a55ad99bba6f494105d4df45240e79b1e4eece03b912d4633cf113b543; Path=/",
+        "TS01b1f390=01611f729b936c3641068a72f09e2ccecaa0cdc0ded35f7f7ea53db2ff60ab777f69ddd01b392d11a55ad99bba6f494105d4df452431ddbc61fc5552e75835b91216295a547edac9753850be94270fb7ff35fc100e; path=/referentiel_of"
       ],
       "content-type": "text/html;charset=UTF-8",
       "connection": "close",
@@ -75,12 +75,17 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": true,
-      "result": "redirection-not-needed-no-http",
+      "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://pre-referentielof.emploi.gouv.fr/referentiel_of",
+      "destination": "https://pre-referentielof.emploi.gouv.fr/referentiel_of/",
       "redirects": true,
-      "route": [],
-      "statusCode": null
+      "route": [
+        "http://pre-referentielof.emploi.gouv.fr/",
+        "https://pre-referentielof.emploi.gouv.fr/",
+        "https://pre-referentielof.emploi.gouv.fr/referentiel_of",
+        "https://pre-referentielof.emploi.gouv.fr/referentiel_of/"
+      ],
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -94,7 +99,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-not-implemented-no-https",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
