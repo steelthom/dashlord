@@ -3,30 +3,14 @@
     "algorithmVersion": 4,
     "grade": "F",
     "error": null,
-    "score": 0,
-    "statusCode": 200,
+    "score": 10,
+    "statusCode": 403,
     "testsFailed": 5,
     "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 17 Nov 2025 03:59:15 GMT",
-      "cache-control": "must-revalidate, no-cache, private",
-      "pragma": "no-cache",
-      "expires": "Mon, 17 Nov 2025 01:59:15 GMT",
-      "last-modified": "Mon, 17 Nov 2025 03:59:15 GMT",
-      "served-by": "audit.ide.pref.gouv.fr",
-      "content-language": "fr-FR",
-      "vary": "X-User-Hash,Accept-Encoding",
-      "content-type": "text/html; charset=utf-8",
-      "age": "0",
-      "x-cache": "Miss",
-      "cache-tags": "MISS",
-      "accept-ranges": "bytes",
-      "set-cookie": [
-        "eZSESSID=mvvlmg6bg65hvvljkpkphnd063; path=/"
-      ],
-      "transfer-encoding": "chunked",
-      "connection": "close"
+      "cache-control": "no-cache",
+      "content-type": "text/html"
     }
   },
   "tests": {
@@ -43,37 +27,30 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-session-without-secure-flag",
-      "scoreModifier": -40,
-      "data": {
-        "eZSESSID": {
-          "domain": "audit.ide.pref.gouv.fr",
-          "path": "/",
-          "port": null
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
       "pass": true,
-      "result": "cross-origin-resource-sharing-implemented-with-restricted-access",
+      "result": "cross-origin-resource-sharing-not-implemented",
       "scoreModifier": 0,
-      "data": "null"
+      "data": null
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://audit.ide.pref.gouv.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://audit.ide.pref.gouv.fr/",
+      "redirects": false,
       "route": [
-        "http://audit.ide.pref.gouv.fr/",
-        "https://audit.ide.pref.gouv.fr/"
+        "http://audit.ide.pref.gouv.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -87,7 +64,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-invalid-cert",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
@@ -98,7 +75,7 @@
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "result": "sri-not-implemented-but-no-scripts-loaded",
       "scoreModifier": 0,
       "data": {}
     },
