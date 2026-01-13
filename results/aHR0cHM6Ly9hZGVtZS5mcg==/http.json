@@ -1,38 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "D",
     "error": null,
-    "score": 55,
+    "score": 30,
     "statusCode": 403,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 17 Nov 2025 04:38:36 GMT",
+      "date": "Tue, 13 Jan 2026 04:08:09 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
-      "cf-mitigated": "challenge",
-      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
-      "cross-origin-embedder-policy": "require-corp",
-      "cross-origin-opener-policy": "same-origin",
-      "cross-origin-resource-policy": "same-origin",
-      "origin-agent-cluster": "?1",
-      "permissions-policy": "accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
-      "referrer-policy": "same-origin",
-      "server-timing": "chlray;desc=\"99fc8a1ee9602b5e\"",
-      "x-content-type-options": "nosniff",
-      "x-frame-options": "SAMEORIGIN",
       "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
       "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "referrer-policy": "same-origin",
+      "x-frame-options": "SAMEORIGIN",
+      "vary": "accept-encoding",
       "set-cookie": [
-        "__cf_bm=ctJkgmQ7jeV87GfFf5PCv.EmR8vdJqbY75PO7Ftnhh8-1763354316-1.0.1.1-viP3FkghaigZ0bOuvcCITqFs4FsDB0Et6A.2MNIiq2R336fClPfmEj.RuShLqy9Ifvm.GN5CHVoRab3ZYptoKp51b7CZN6nILUN9HgI.SXg; path=/; expires=Mon, 17-Nov-25 05:08:36 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
+        "__cf_bm=07Igj1VcwV_Fa0Wyo3r2ci_vDh1h2lxR44215dkUd8I-1768277289.7103477-1.0.1.1-_F8F_jQJZsszktIY2QqiYC7ZP.wd44kWzY74Zb1yVYa2Y3iEeiCyzJnrSTVBiRPszo5Wx52bJz.qMJDCNeCFtvPZNt4dNow_y3y4.m9q1Ego.u56Wf6.Y2CN5P9qNm0r; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Tue, 13 Jan 2026 04:38:09 GMT"
       ],
-      "vary": "Accept-Encoding",
       "server": "cloudflare",
-      "cf-ray": "99fc8a1ee9602b5e-LAX"
+      "cf-ray": "9bd207e4a9fb7c89-LAX"
     }
   },
   "tests": {
@@ -50,20 +40,19 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-11-17T05:08:36.000Z",
+          "expires": "2026-01-13T04:38:09.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
-          "samesite": "none",
           "secure": true
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -74,15 +63,13 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://www.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://ademe.fr/",
-        "https://ademe.fr/",
-        "https://www.ademe.fr/"
+        "http://ademe.fr/"
       ],
       "statusCode": 403
     },
@@ -115,10 +102,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
@@ -130,10 +117,10 @@
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
       "pass": true,
-      "result": "corp-implemented-with-same-origin",
-      "scoreModifier": 10,
-      "data": "same-origin",
-      "http": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     }
   }
