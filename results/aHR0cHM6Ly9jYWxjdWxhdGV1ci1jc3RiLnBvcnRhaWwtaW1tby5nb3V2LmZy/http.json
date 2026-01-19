@@ -1,12 +1,12 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B+",
+    "grade": "D+",
     "error": null,
-    "score": 80,
+    "score": 40,
     "statusCode": 200,
-    "testsFailed": 1,
-    "testsPassed": 9,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
       "transfer-encoding": "chunked",
@@ -22,7 +22,7 @@
       "referrer-policy": "strict-origin-when-cross-origin",
       "content-security-policy": "style-src 'self' 'unsafe-inline' https://*.googleapis.com/ https://*.cloudflare.com/ https://*.cdnfonts.com https://*.gstatic.com/; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ http://*.googleapis.com/ https://*.googletagmanager.com/ https://*.googleapis.com/ https://*.cloudflare.com/ https://*.cdnfonts.com https://*.gstatic.com/; font-src 'self' https://*.googleapis.com/ https://*.cloudflare.com/ https://*.cdnfonts.com https://*.gstatic.com/; worker-src 'self' blob:; img-src 'self' data: https://*.openstreetmap.org;  connect-src 'self' https://*.google-analytics.com https://*.cloudflare.com https://*.openstreetmap.org https://*.dimn-cstb.fr https://*.gorenove.fr https://*.gouv.fr https://*.bdnb.io https://*.cstb.fr; frame-ancestors 'self' https://*.gouv.fr;",
       "x-content-type-options": "nosniff",
-      "date": "Wed, 19 Nov 2025 04:56:14 GMT",
+      "date": "Mon, 19 Jan 2026 04:28:21 GMT",
       "connection": "close"
     }
   },
@@ -119,15 +119,12 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
+      "pass": false,
+      "result": "redirection-invalid-cert",
+      "scoreModifier": -20,
       "destination": "https://calculateur-cstb.portail-immo.gouv.fr/",
       "redirects": true,
-      "route": [
-        "http://calculateur-cstb.portail-immo.gouv.fr/",
-        "https://calculateur-cstb.portail-immo.gouv.fr/"
-      ],
+      "route": [],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -141,13 +138,13 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubDomains; preload",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
-      "preload": true,
+      "pass": false,
+      "result": "hsts-invalid-cert",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
