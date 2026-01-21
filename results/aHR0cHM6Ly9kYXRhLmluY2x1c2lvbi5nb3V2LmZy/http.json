@@ -1,25 +1,26 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "D",
+    "grade": "B",
     "error": null,
-    "score": 35,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Fri, 21 Nov 2025 04:00:02 GMT",
+      "date": "Wed, 21 Jan 2026 04:22:09 GMT",
       "content-type": "text/html; charset=utf-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "x-request-id": "f9a22eda-220e-4397-8479-102407414ad0",
+      "x-request-id": "c0504f48-d532-45f1-b9a2-2b4cc54cbd7a",
       "x-frame-options": "DENY",
       "vary": "Accept-Language, Cookie",
       "content-language": "fr",
       "x-content-type-options": "nosniff",
       "referrer-policy": "same-origin",
-      "cross-origin-opener-policy": "same-origin"
+      "cross-origin-opener-policy": "same-origin",
+      "strict-transport-security": "max-age=31536000"
     }
   },
   "tests": {
@@ -51,13 +52,14 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-missing",
-      "scoreModifier": -20,
-      "destination": "http://data.inclusion.gouv.fr/",
-      "redirects": false,
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://data.inclusion.gouv.fr/",
+      "redirects": true,
       "route": [
-        "http://data.inclusion.gouv.fr/"
+        "http://data.inclusion.gouv.fr/",
+        "https://data.inclusion.gouv.fr/"
       ],
       "statusCode": 200
     },
@@ -72,12 +74,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-not-implemented",
-      "scoreModifier": -20,
-      "data": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
       "includeSubDomains": false,
-      "maxAge": null,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
