@@ -1,25 +1,23 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "D",
     "error": null,
-    "score": 55,
+    "score": 30,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "server": "nginx/1.22.1",
-      "date": "Fri, 21 Nov 2025 04:32:57 GMT",
-      "content-type": "text/html; charset=utf-8",
-      "transfer-encoding": "chunked",
+      "date": "Fri, 23 Jan 2026 04:21:40 GMT",
+      "server": "",
+      "expires": "Wed, 09 May 1979 05:30:00 GMT",
+      "cache-control": "no-cache, no-store, must-revalidate, proxy-revalidate, max-age=0",
+      "pragma": "no-cache",
+      "content-type": "text/html;charset=UTF-8",
       "connection": "close",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "cache-control": "no-cache, must-revalidate",
-      "content-language": "en",
-      "x-frame-options": "SAMEORIGIN",
-      "x-content-type-options": "nosniff",
-      "x-generator": "Drupal 7 (http://drupal.org)"
+      "transfer-encoding": "chunked",
+      "content-language": "fr"
     }
   },
   "tests": {
@@ -37,9 +35,17 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-not-found",
+      "result": "cookies-secure-with-httponly-sessions",
       "scoreModifier": 0,
-      "data": null,
+      "data": {
+        "JSESSIONID": {
+          "domain": "clubdeparis.org",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "secure": true
+        }
+      },
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -54,11 +60,12 @@
       "pass": true,
       "result": "redirection-to-https",
       "scoreModifier": 0,
-      "destination": "https://clubdeparis.org/",
+      "destination": "https://clubdeparis.org/sites/clubdeparis/accueil.html",
       "redirects": true,
       "route": [
         "http://clubdeparis.org/",
-        "https://clubdeparis.org/"
+        "https://clubdeparis.org/",
+        "https://clubdeparis.org/sites/clubdeparis/accueil.html"
       ],
       "statusCode": 200
     },
@@ -91,17 +98,17 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
