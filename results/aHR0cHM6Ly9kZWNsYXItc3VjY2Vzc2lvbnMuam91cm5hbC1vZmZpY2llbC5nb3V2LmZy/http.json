@@ -1,25 +1,26 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B-",
+    "grade": "B",
     "error": null,
-    "score": 65,
+    "score": 75,
     "statusCode": 200,
     "testsFailed": 2,
     "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Fri, 21 Nov 2025 04:33:00 GMT",
-      "x-frame-options": "SAMEORIGIN",
+      "date": "Sun, 25 Jan 2026 04:25:07 GMT",
+      "x-frame-options": "ALLOW-FROM https://docs.ametys.org",
+      "content-security-policy": "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; frame-src 'self' https: data: ms-word: ms-powerpoint: ms-excel: ms-visio: ms-access: ms-project: ms-publisher: ms-infopath: vnd.libreoffice.command:",
+      "referrer-policy": "strict-origin-when-cross-origin",
       "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
-      "x-xss-protection": "1; mode=block",
       "x-content-type-options": "nosniff",
       "vary": "accept-encoding",
       "content-type": "text/html;charset=UTF-8",
       "set-cookie": [
-        "JSESSIONID=0A7A28690A36839201243F0A7620D4A2; Path=/successions; HttpOnly",
-        "TS01002c25=01e71d585f052f3903d21c9c7bb194db7fce8b3c8b330ff10e220451aa53b5176db1f3d6ddc050cbe675ab7df9c22a0520c3ddaf29; Path=/",
-        "TS01f30b68=01e71d585f052f3903d21c9c7bb194db7fce8b3c8b330ff10e220451aa53b5176db1f3d6ddc050cbe675ab7df9c22a0520c3ddaf29; path=/successions"
+        "JSESSIONID=4F8C56918D0D2911E6E41C8FFBD9F20A; Path=/successions; Secure; HttpOnly;HttpOnly;Secure",
+        "TS01002c25=01e71d585fd0a36f37529c40d5dcfd72f7ad71f1cc6ff469d71953511edb71c8604946e11140b319c9b98d572cc46e5e950ea4ab3c; Path=/",
+        "TS01f30b68=01e71d585fd0a36f37529c40d5dcfd72f7ad71f1cc6ff469d71953511edb71c8604946e11140b319c9b98d572cc46e5e950ea4ab3c; path=/successions"
       ],
       "connection": "close",
       "transfer-encoding": "chunked"
@@ -29,25 +30,68 @@
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-not-implemented",
-      "scoreModifier": -25,
-      "data": null,
-      "http": false,
+      "result": "csp-implemented-with-unsafe-inline",
+      "scoreModifier": -20,
+      "data": {
+        "default-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "data:",
+          "https:"
+        ],
+        "img-src": [
+          "'self'",
+          "'unsafe-eval'",
+          "'unsafe-inline'",
+          "blob:",
+          "data:",
+          "https:"
+        ],
+        "frame-src": [
+          "'self'",
+          "data:",
+          "https:",
+          "ms-access:",
+          "ms-excel:",
+          "ms-infopath:",
+          "ms-powerpoint:",
+          "ms-project:",
+          "ms-publisher:",
+          "ms-visio:",
+          "ms-word:",
+          "vnd.libreoffice.command:"
+        ]
+      },
+      "http": true,
       "meta": false,
-      "policy": null,
-      "numPolicies": 0
+      "policy": {
+        "antiClickjacking": false,
+        "defaultNone": false,
+        "insecureBaseUri": true,
+        "insecureFormAction": true,
+        "insecureSchemeActive": false,
+        "insecureSchemePassive": false,
+        "strictDynamic": false,
+        "unsafeEval": true,
+        "unsafeInline": true,
+        "unsafeInlineStyle": true,
+        "unsafeObjects": true
+      },
+      "numPolicies": 1
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": false,
-      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
-      "scoreModifier": -10,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
         "JSESSIONID": {
           "domain": "declar-successions.journal-officiel.gouv.fr",
           "httponly": true,
           "path": "/successions",
-          "port": null
+          "port": null,
+          "secure": true
         },
         "TS01002c25": {
           "domain": "declar-successions.journal-officiel.gouv.fr",
@@ -88,10 +132,10 @@
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "strict-origin-when-cross-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
@@ -122,9 +166,9 @@
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
+      "result": "x-frame-options-allow-from-origin",
       "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "data": "ALLOW-FROM https://docs.ametys.org"
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
