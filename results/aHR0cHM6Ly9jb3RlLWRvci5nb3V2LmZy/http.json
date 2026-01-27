@@ -9,11 +9,11 @@
     "testsPassed": 4,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sun, 23 Nov 2025 04:44:27 GMT",
+      "date": "Tue, 27 Jan 2026 04:30:45 GMT",
       "cache-control": "must-revalidate, no-cache, private",
       "pragma": "no-cache",
-      "expires": "Sun, 23 Nov 2025 02:44:27 GMT",
-      "last-modified": "Sun, 23 Nov 2025 04:44:27 GMT",
+      "expires": "Tue, 27 Jan 2026 02:30:46 GMT",
+      "last-modified": "Tue, 27 Jan 2026 04:30:46 GMT",
       "served-by": "www.cote-dor.gouv.fr",
       "content-language": "fr-FR",
       "vary": "X-User-Hash,Accept-Encoding",
@@ -22,7 +22,7 @@
       "x-cache": "Miss",
       "accept-ranges": "bytes",
       "set-cookie": [
-        "eZSESSID=mhtnjsvnmfpc9a2k0hh6iue5j4; path=/"
+        "eZSESSID=2h778kl41fc5hmvri3k860bh76; path=/"
       ],
       "transfer-encoding": "chunked",
       "connection": "close"
@@ -64,15 +64,11 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": false,
-      "result": "redirection-not-to-https-on-initial-redirection",
-      "scoreModifier": -10,
+      "result": "redirection-invalid-cert",
+      "scoreModifier": -20,
       "destination": "https://www.cote-dor.gouv.fr/",
       "redirects": true,
-      "route": [
-        "http://cote-dor.gouv.fr/",
-        "http://www.cote-dor.gouv.fr/",
-        "https://www.cote-dor.gouv.fr/"
-      ],
+      "route": [],
       "statusCode": 200
     },
     "referrer-policy": {
@@ -87,7 +83,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-invalid-cert",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
