@@ -1,33 +1,25 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "C",
     "error": null,
-    "score": 70,
+    "score": 55,
     "statusCode": 200,
     "testsFailed": 2,
     "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Sun, 23 Nov 2025 04:45:05 GMT",
-      "cache-control": "max-age=3600, public",
-      "x-drupal-dynamic-cache": "MISS",
-      "content-language": "fr",
-      "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Sat, 22 Nov 2025 23:01:27 GMT",
-      "vary": "Cookie,Accept-Encoding",
-      "x-drupal-cache": "HIT",
-      "content-type": "text/html; charset=UTF-8",
+      "x-xss-protection": "1; mode=block",
+      "x-content-type-options": "nosniff",
+      "cache-control": "no-cache",
       "connection": "close",
+      "content-type": "text/html; charset=utf-8",
+      "pragma": "no-cache",
+      "content-length": "246",
       "set-cookie": [
-        "BIGipServerpool-dares-site-v2.cegedim.cloud-http=!Zx2JCFAgTaxQbaEXIkI7F7SI9ajmihLCc3c/CCkrF7wBTrFINt+CJ0JlaRHV15GYcNfNdlZzaid2fpfZi2ko6bE4XfY5; path=/; Httponly; Secure",
-        "TS011cfdd6=01352d381161be80cb693774fc487c07433899bce8540073b6d32f9c4b6a9452bf5b9e31beb8e6eb43c6b2a20b1f3ebe9bc029fa94; Path=/; Domain=.dares.travail-emploi.gouv.fr; Secure; HttpOnly",
-        "TS15b7b009027=087dc22938ab2000f51cc220879e321375dbe80c4eb84f0a4e3d49ff2d08c945a2c7260f92efc9980860359603113000d5f684a991021c5808a8a29f1289df5b4d0e3800f8fef343689e754b21bebd9cbe1e6df0360017201423ff2758db082c; Path=/"
-      ],
-      "strict-transport-security": "max-age=31536000; includeSubDomains",
-      "transfer-encoding": "chunked"
+        "TS15b7b009027=087dc22938ab2000c8d50ad1d10725bff16fa91082de65adfafa2e2e63393e295d5f35712ae12dce08f05be7321130001edb95c4a515fdeb36a9aab636b114b6d3b620fd335b882fb4d8cccd3ef8cb533419ad59cb14d36cfced4c2ac272adf2; Secure; Path=/"
+      ]
     }
   },
   "tests": {
@@ -44,28 +36,15 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-without-secure-flag-but-protected-by-hsts",
-      "scoreModifier": -5,
+      "pass": true,
+      "result": "cookies-secure-with-httponly-sessions",
+      "scoreModifier": 0,
       "data": {
-        "BIGipServerpool-dares-site-v2.cegedim.cloud-http": {
-          "domain": "dares.travail-emploi.gouv.fr",
-          "httponly": true,
-          "path": "/",
-          "port": null,
-          "secure": true
-        },
-        "TS011cfdd6": {
-          "domain": "dares.travail-emploi.gouv.fr",
-          "httponly": true,
-          "path": "/",
-          "port": null,
-          "secure": true
-        },
         "TS15b7b009027": {
           "domain": "dares.travail-emploi.gouv.fr",
           "path": "/",
-          "port": null
+          "port": null,
+          "secure": true
         }
       },
       "sameSite": false
@@ -101,19 +80,19 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=31536000; includeSubDomains",
-      "includeSubDomains": true,
-      "maxAge": 31536000,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
       "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
       "pass": true,
-      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "result": "sri-not-implemented-but-no-scripts-loaded",
       "scoreModifier": 0,
       "data": {}
     },
