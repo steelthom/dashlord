@@ -1,37 +1,34 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C+",
+    "grade": "B",
     "error": null,
-    "score": 60,
+    "score": 75,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 25 Nov 2025 03:42:38 GMT",
-      "server": "Apache/2.4.62 (Debian)",
-      "x-content-type-options": "nosniff, nosniff",
+      "date": "Fri, 30 Jan 2026 09:41:38 GMT",
+      "server": "Apache/2.4.65 (Debian)",
       "cache-control": "max-age=900, public",
       "x-drupal-dynamic-cache": "MISS",
       "x-ua-compatible": "IE=edge",
       "content-language": "fr",
       "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Mon, 24 Nov 2025 15:01:07 GMT",
-      "etag": "\"1763996467-gzip\"",
       "vary": "Cookie,Accept-Encoding",
       "access-control-allow-origin": "*",
       "referrer-policy": "strict-origin-when-cross-origin",
-      "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "x-content-type-options": "nosniff",
       "x-frame-options": "SAMEORIGIN",
       "x-xss-protection": "1; mode=block",
       "x-drupal-cache": "HIT",
-      "connection": "close",
+      "last-modified": "Fri, 30 Jan 2026 09:41:38 GMT",
+      "etag": "\"1769766098-gzip\"",
+      "content-length": "20385",
       "content-type": "text/html; charset=UTF-8",
-      "set-cookie": [
-        "cookiesession1=678A40AA4BF5FB47FC125A00E4F69E17;Expires=Wed, 25 Nov 2026 03:42:38 GMT;Path=/;HttpOnly"
-      ],
-      "content-length": "30459"
+      "connection": "close"
     }
   },
   "tests": {
@@ -48,18 +45,10 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": false,
-      "result": "cookies-session-without-secure-flag-but-protected-by-hsts",
-      "scoreModifier": -10,
-      "data": {
-        "cookiesession1": {
-          "domain": "eau-seine-normandie.fr",
-          "expires": "2026-11-25T03:42:38.000Z",
-          "httponly": true,
-          "path": "/",
-          "port": null
-        }
-      },
+      "pass": true,
+      "result": "cookies-not-found",
+      "scoreModifier": 0,
+      "data": null,
       "sameSite": false
     },
     "cross-origin-resource-sharing": {
@@ -96,10 +85,10 @@
       "pass": true,
       "result": "hsts-implemented-max-age-at-least-six-months",
       "scoreModifier": 0,
-      "data": "max-age=15552000; includeSubDomains; preload",
+      "data": "max-age=31536000; includeSubDomains",
       "includeSubDomains": true,
-      "maxAge": 15552000,
-      "preload": true,
+      "maxAge": 31536000,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
@@ -111,10 +100,10 @@
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": false,
-      "result": "x-content-type-options-header-invalid",
-      "scoreModifier": -5,
-      "data": "nosniff, nosniff"
+      "pass": true,
+      "result": "x-content-type-options-nosniff",
+      "scoreModifier": 0,
+      "data": "nosniff"
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
