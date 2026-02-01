@@ -1,36 +1,38 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "B",
+    "grade": "D",
     "error": null,
-    "score": 70,
-    "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "score": 35,
+    "statusCode": 403,
+    "testsFailed": 3,
+    "testsPassed": 7,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Tue, 25 Nov 2025 04:19:21 GMT",
+      "date": "Sun, 01 Feb 2026 05:03:11 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "cache-control": "max-age=10800, public",
-      "content-language": "fr",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "last-modified": "Tue, 18 Nov 2025 12:32:34 GMT",
-      "permissions-policy": "geolocation=(self), microphone=(), camera=(), fullscreen=*",
-      "server": "cloudflare",
-      "strict-transport-security": "max-age=16070400; includeSubDomains; preload",
-      "vary": "Cookie",
+      "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cf-mitigated": "challenge",
+      "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+      "cross-origin-embedder-policy": "require-corp",
+      "cross-origin-opener-policy": "same-origin",
+      "cross-origin-resource-policy": "same-origin",
+      "origin-agent-cluster": "?1",
+      "permissions-policy": "accelerometer=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+      "referrer-policy": "same-origin",
+      "server-timing": "chlray;desc=\"9c6ee6a0ebc1e405\"",
       "x-content-type-options": "nosniff",
-      "x-drupal-cache": "HIT",
-      "x-drupal-dynamic-cache": "MISS",
       "x-frame-options": "SAMEORIGIN",
-      "x-xss-protection": "1; mode=block",
-      "cf-cache-status": "DYNAMIC",
+      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
       "set-cookie": [
-        "__cf_bm=pi12I8.T0JCw.lZuge0FqMS8ov6X_6ZhhoRr_teh.nU-1764044361.060466-1.0.1.1-DYYuqOO_zlszVGgEuypfSIE4T5w9.U0v53lWK9ZRpVj6yOX52yo4TA.oZ7zcv9ZQbNn6rMpgMjvzkJnQBNRZehD8FYAigCCaBUAcB788i_549yGml7iaMODIzCwWXP9U; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Tue, 25 Nov 2025 04:49:21 GMT"
+        "__cf_bm=3LRssXyWN2RDNTpycGRaGefbln64fybxifTr95MD6Zk-1769922191-1.0.1.1-OrpaaogCnbWRW56FcYz38.An4qt8zLkbkmBpZfA_kLAy9S.DoP4PjrxI.iJbd1hroZEv7jeybHg55H4cqFm2_PD3SEKs.VIPNLP7PkR6fkM; path=/; expires=Sun, 01-Feb-26 05:33:11 GMT; domain=.ademe.fr; HttpOnly; Secure; SameSite=None"
       ],
-      "cf-ray": "9a3e58e89d2feb6a-ORD"
+      "vary": "Accept-Encoding",
+      "server": "cloudflare",
+      "cf-ray": "9c6ee6a0ebc1e405-DFW"
     }
   },
   "tests": {
@@ -48,19 +50,20 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-secure-with-httponly-sessions",
-      "scoreModifier": 0,
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-11-25T04:49:21.000Z",
+          "expires": "2026-02-01T05:33:11.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
+          "samesite": "none",
           "secure": true
         }
       },
-      "sameSite": false
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
@@ -71,48 +74,42 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": true,
-      "result": "redirection-to-https",
-      "scoreModifier": 0,
-      "destination": "https://economie-circulaire.ademe.fr/",
-      "redirects": true,
+      "pass": false,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://economie-circulaire.ademe.fr/",
+      "redirects": false,
       "route": [
-        "http://economie-circulaire.ademe.fr/",
-        "https://economie-circulaire.ademe.fr/"
+        "http://economie-circulaire.ademe.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "referrer-policy-private",
+      "scoreModifier": 5,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": true,
-      "result": "hsts-implemented-max-age-at-least-six-months",
-      "scoreModifier": 0,
-      "data": "max-age=16070400; includeSubDomains; preload",
-      "includeSubDomains": true,
-      "maxAge": 16070400,
-      "preload": true,
+      "pass": false,
+      "result": "hsts-not-implemented",
+      "scoreModifier": -20,
+      "data": null,
+      "includeSubDomains": false,
+      "maxAge": null,
+      "preload": false,
       "preloaded": false
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://tarteaucitron.io/load.js?domain=economie-circulaire.ademe.fr&uuid=2df1000bf385655312abede8e30421664e7d594e": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
@@ -131,10 +128,10 @@
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
       "pass": true,
-      "result": "corp-not-implemented",
-      "scoreModifier": 0,
-      "data": null,
-      "http": false,
+      "result": "corp-implemented-with-same-origin",
+      "scoreModifier": 10,
+      "data": "same-origin",
+      "http": true,
       "meta": false
     }
   }
