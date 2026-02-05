@@ -1,28 +1,20 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C-",
+    "grade": "F",
     "error": null,
-    "score": 45,
-    "statusCode": 200,
-    "testsFailed": 4,
-    "testsPassed": 6,
+    "score": 10,
+    "statusCode": 403,
+    "testsFailed": 5,
+    "testsPassed": 5,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Mon, 24 Nov 2025 15:11:37 GMT",
-      "server": "Apache",
-      "cache-control": "must-revalidate, no-cache, private",
-      "x-drupal-dynamic-cache": "MISS",
-      "x-ua-compatible": "IE=edge",
-      "content-language": "fr",
-      "x-content-type-options": "nosniff",
-      "x-frame-options": "SAMEORIGIN",
-      "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
-      "x-generator": "Drupal 9 (https://www.drupal.org)",
-      "x-drupal-cache": "HIT",
-      "connection": "close",
-      "transfer-encoding": "chunked",
-      "content-type": "text/html; charset=UTF-8"
+      "mime-version": "1.0",
+      "content-type": "text/html",
+      "content-length": "391",
+      "expires": "Thu, 05 Feb 2026 04:55:47 GMT",
+      "date": "Thu, 05 Feb 2026 04:55:47 GMT",
+      "connection": "close"
     }
   },
   "tests": {
@@ -55,15 +47,14 @@
     "redirection": {
       "expectation": "redirection-to-https",
       "pass": false,
-      "result": "redirection-off-host-from-http",
-      "scoreModifier": -5,
-      "destination": "https://www.dons.encheres-domaine.gouv.fr/",
-      "redirects": true,
+      "result": "redirection-missing",
+      "scoreModifier": -20,
+      "destination": "http://dons.encheres-domaine.gouv.fr/",
+      "redirects": false,
       "route": [
-        "http://dons.encheres-domaine.gouv.fr/",
-        "https://www.dons.encheres-domaine.gouv.fr/"
+        "http://dons.encheres-domaine.gouv.fr/"
       ],
-      "statusCode": 200
+      "statusCode": 403
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
@@ -77,7 +68,7 @@
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
       "pass": false,
-      "result": "hsts-not-implemented",
+      "result": "hsts-invalid-cert",
       "scoreModifier": -20,
       "data": null,
       "includeSubDomains": false,
@@ -87,33 +78,24 @@
     },
     "subresource-integrity": {
       "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-      "pass": false,
-      "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-      "scoreModifier": -5,
-      "data": {
-        "https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js": {
-          "crossorigin": null,
-          "integrity": null
-        },
-        "https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js": {
-          "crossorigin": null,
-          "integrity": null
-        }
-      }
+      "pass": true,
+      "result": "sri-not-implemented-but-no-scripts-loaded",
+      "scoreModifier": 0,
+      "data": {}
     },
     "x-content-type-options": {
       "expectation": "x-content-type-options-nosniff",
-      "pass": true,
-      "result": "x-content-type-options-nosniff",
-      "scoreModifier": 0,
-      "data": "nosniff"
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
