@@ -4,25 +4,24 @@
     "grade": "D",
     "error": null,
     "score": 30,
-    "statusCode": 403,
+    "statusCode": 200,
     "testsFailed": 4,
     "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 27 Nov 2025 03:41:22 GMT",
+      "date": "Sat, 07 Feb 2026 04:42:13 GMT",
       "content-type": "text/html; charset=UTF-8",
       "transfer-encoding": "chunked",
       "connection": "close",
-      "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
-      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
-      "referrer-policy": "same-origin",
-      "x-frame-options": "SAMEORIGIN",
-      "vary": "accept-encoding",
       "server": "cloudflare",
+      "x-powered-by": "PHP/8.2.30, PleskLin",
+      "vary": "User-Agent,Accept-Encoding",
+      "last-modified": "Fri, 06 Feb 2026 18:58:58 GMT",
       "set-cookie": [
-        "__cf_bm=rm4JgtPgezq9Zd8KcioZyQQHJvAtQA29Dmn0YCpKyqI-1764214882.6110404-1.0.1.1-5RoqhTDNHbha_4rcTW9_ZhQ.6KSkAJBucbcG8s67XeQUen4Ve6EdrOjjeVuSpQGOsvN8ajRc7VjlCSEUSn3drFLgjcx40wKG4yWCC5edcLbyPjKOphsCyDCnAmLkbqyQ; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Thu, 27 Nov 2025 04:11:22 GMT"
+        "__cf_bm=oOPgon787ryaF353bSL9_JK2.yWiFhOr5.aE77RKZvI-1770439332.3981104-1.0.1.1-QSTqSEiv08fglXQzUFLhqK4tcAGRqW9EwdGX2tlNsbMZjylhlRJJ2_.HDyUFGOeIQPf1eXl8cbpNIPs4qfr444BveODwlx9cPA50ZGq5GvMrD4uV4EwwC6N6c67i4F3V; HttpOnly; Secure; Path=/; Domain=ademe.fr; Expires=Sat, 07 Feb 2026 05:12:13 GMT"
       ],
-      "cf-ray": "9a4e9c084fb5f939-ORD"
+      "cf-cache-status": "DYNAMIC",
+      "cf-ray": "9ca038237f64eb31-SJC"
     }
   },
   "tests": {
@@ -45,7 +44,7 @@
       "data": {
         "__cf_bm": {
           "domain": "ademe.fr",
-          "expires": "2025-11-27T04:11:22.000Z",
+          "expires": "2026-02-07T05:12:13.000Z",
           "httponly": true,
           "path": "/",
           "port": null,
@@ -63,23 +62,24 @@
     },
     "redirection": {
       "expectation": "redirection-to-https",
-      "pass": false,
-      "result": "redirection-missing",
-      "scoreModifier": -20,
-      "destination": "http://experimentationsurbaines.ademe.fr/",
-      "redirects": false,
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://experimentationsurbaines.ademe.fr/",
+      "redirects": true,
       "route": [
-        "http://experimentationsurbaines.ademe.fr/"
+        "http://experimentationsurbaines.ademe.fr/",
+        "https://experimentationsurbaines.ademe.fr/"
       ],
-      "statusCode": 403
+      "statusCode": 200
     },
     "referrer-policy": {
       "expectation": "referrer-policy-private",
       "pass": true,
-      "result": "referrer-policy-private",
-      "scoreModifier": 5,
-      "data": "same-origin",
-      "http": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
       "meta": false
     },
     "strict-transport-security": {
@@ -109,10 +109,10 @@
     },
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
-      "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
-      "data": "SAMEORIGIN"
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
     },
     "cross-origin-resource-policy": {
       "expectation": "corp-implemented-with-same-site",
