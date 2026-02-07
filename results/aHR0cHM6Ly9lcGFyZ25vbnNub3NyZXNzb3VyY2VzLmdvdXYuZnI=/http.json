@@ -9,12 +9,11 @@
     "testsPassed": 8,
     "testsQuantity": 10,
     "responseHeaders": {
-      "server": "nginx",
-      "date": "Thu, 27 Nov 2025 03:39:14 GMT",
+      "date": "Sat, 07 Feb 2026 04:45:04 GMT",
       "content-type": "text/html; charset=UTF-8",
-      "content-length": "15293",
+      "transfer-encoding": "chunked",
       "connection": "close",
-      "last-modified": "Wed, 26 Nov 2025 21:48:11 GMT",
+      "last-modified": "Sat, 31 Jan 2026 15:01:40 GMT",
       "vary": "Accept-Encoding,User-Agent",
       "x-front": "TEMPLATEDEBIAN11",
       "access-control-allow-origin": "https://epargnonsnosressources.gouv.fr",
@@ -24,7 +23,13 @@
       "x-xss-protection": "1; mode=block",
       "referrer-policy": "strict-origin-when-cross-origin",
       "permissions-policy": "accelerometer=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()",
-      "content-security-policy": "upgrade-insecure-requests"
+      "content-security-policy": "upgrade-insecure-requests",
+      "cf-cache-status": "DYNAMIC",
+      "set-cookie": [
+        "__cf_bm=oUe2yzPhpG9rNbTFEZQzxSNY12MJPRj7vesW6bpKY70-1770439504-1.0.1.1-G54i7Ih9fMM5jlvtYVAZQJV5NJAy_fS2eLtlPfKN6iJm8W9vQVCAOtF0v_rAcuXpPX.xAh7B4NfUNeRhvTkcIUR5GKapLGRb9UP7kMRy61w; path=/; expires=Sat, 07-Feb-26 05:15:04 GMT; domain=.epargnonsnosressources.gouv.fr; HttpOnly; Secure; SameSite=None"
+      ],
+      "server": "cloudflare",
+      "cf-ray": "9ca03c5398650434-IAD"
     }
   },
   "tests": {
@@ -58,10 +63,20 @@
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
       "pass": true,
-      "result": "cookies-not-found",
-      "scoreModifier": 0,
-      "data": null,
-      "sameSite": false
+      "result": "cookies-secure-with-httponly-sessions-and-samesite",
+      "scoreModifier": 5,
+      "data": {
+        "__cf_bm": {
+          "domain": "epargnonsnosressources.gouv.fr",
+          "expires": "2026-02-07T05:15:04.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        }
+      },
+      "sameSite": true
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
