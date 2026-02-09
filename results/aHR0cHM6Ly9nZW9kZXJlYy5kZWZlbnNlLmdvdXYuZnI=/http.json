@@ -1,21 +1,25 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C",
+    "grade": "C-",
     "error": null,
-    "score": 50,
+    "score": 45,
     "statusCode": 200,
-    "testsFailed": 3,
-    "testsPassed": 7,
+    "testsFailed": 4,
+    "testsPassed": 6,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 27 Nov 2025 03:53:26 GMT",
+      "date": "Mon, 09 Feb 2026 05:03:49 GMT",
       "server": "Apache",
       "strict-transport-security": "max-age=63072000; includeSubdomains; preload",
       "upgrade": "h2",
       "connection": "Upgrade, close",
       "cache-control": "max-age=0, must-revalidate, no-cache, no-store, private",
-      "expires": "Thu, 27 Nov 2025 03:53:26 GMT",
+      "x-debug-token": "5af420",
+      "expires": "Mon, 09 Feb 2026 05:03:49 GMT",
+      "set-cookie": [
+        "sf_redirect=deleted; expires=Sun, 09 Feb 2025 05:03:48 GMT; Max-Age=0; path=/; httponly"
+      ],
       "vary": "Accept-Encoding",
       "transfer-encoding": "chunked",
       "content-type": "text/html; charset=UTF-8"
@@ -35,22 +39,30 @@
     },
     "cookies": {
       "expectation": "cookies-secure-with-httponly-sessions",
-      "pass": true,
-      "result": "cookies-secure-with-httponly-sessions-and-samesite",
-      "scoreModifier": 5,
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
       "data": {
+        "sf_redirect": {
+          "domain": "geoderec.defense.gouv.fr",
+          "expires": "2025-02-09T05:03:48.000Z",
+          "httponly": true,
+          "max-age": 0,
+          "path": "/",
+          "port": null
+        },
         "PHPSESSID": {
           "domain": "geoderec.defense.gouv.fr",
-          "expires": "2025-12-29T03:53:25.000Z",
+          "expires": "2027-02-09T05:03:49.000Z",
           "httponly": true,
-          "max-age": 2764800,
+          "max-age": 31536000,
           "path": "/",
           "port": null,
           "samesite": "none",
           "secure": true
         }
       },
-      "sameSite": true
+      "sameSite": false
     },
     "cross-origin-resource-sharing": {
       "expectation": "cross-origin-resource-sharing-not-implemented",
