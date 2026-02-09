@@ -1,27 +1,28 @@
 {
   "scan": {
     "algorithmVersion": 4,
-    "grade": "C+",
+    "grade": "B+",
     "error": null,
-    "score": 60,
+    "score": 80,
     "statusCode": 200,
-    "testsFailed": 2,
-    "testsPassed": 8,
+    "testsFailed": 1,
+    "testsPassed": 9,
     "testsQuantity": 10,
     "responseHeaders": {
-      "date": "Thu, 27 Nov 2025 03:57:12 GMT",
+      "date": "Mon, 09 Feb 2026 05:04:49 GMT",
       "content-type": "text/html",
       "cteonnt-length": "1016",
-      "last-modified": "Thu, 13 Nov 2025 18:14:02 GMT",
-      "etag": "\"69161fea-3f8\"",
+      "last-modified": "Mon, 15 Dec 2025 09:11:33 GMT",
+      "etag": "\"693fd0c5-3f8\"",
       "accept-ranges": "bytes",
-      "strict-transport-security": "max-age=31536000; includeSubDomains, max-age=31536000",
       "x-xss-protection": "1; mode=block",
       "x-content-type-options": "nosniff",
-      "content-security-policy": "default-src 'none'; connect-src *; font-src 'self' data: *; frame-src * data: blob: ; img-src 'self' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline' *; style-src 'self' 'unsafe-inline' *; media-src 'self'",
+      "content-security-policy": "default-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; connect-src 'self' http://127.0.0.1:* https://127.0.0.1:*; font-src 'self' data:; frame-src 'self' blob:; img-src 'self' data:; script-src  'self'; style-src 'self' 'unsafe-inline'; media-src 'self'; object-src 'none'",
+      "permissions-policy": "geolocation=(), microphone=(), camera=(), payment=(), usb=()",
       "x-frame-options": "SAMEORIGIN",
       "referrer-policy": "no-referrer",
       "connection": "close",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
       "cache-control": "private",
       "content-length": "510"
     }
@@ -30,56 +31,64 @@
     "content-security-policy": {
       "expectation": "csp-implemented-with-no-unsafe",
       "pass": false,
-      "result": "csp-implemented-with-unsafe-inline",
+      "result": "csp-implemented-with-insecure-scheme",
       "scoreModifier": -20,
       "data": {
         "default-src": [
           "'none'"
         ],
+        "base-uri": [
+          "'self'"
+        ],
+        "form-action": [
+          "'self'"
+        ],
+        "frame-ancestors": [
+          "'self'"
+        ],
         "connect-src": [
-          "*"
+          "'self'",
+          "http://127.0.0.1:*",
+          "https://127.0.0.1:*"
         ],
         "font-src": [
           "'self'",
-          "*",
           "data:"
         ],
         "frame-src": [
-          "*",
-          "blob:",
-          "data:"
+          "'self'",
+          "blob:"
         ],
         "img-src": [
           "'self'",
           "data:"
         ],
         "script-src": [
-          "'self'",
-          "'unsafe-eval'",
-          "'unsafe-inline'",
-          "*"
+          "'self'"
         ],
         "style-src": [
           "'self'",
-          "'unsafe-inline'",
-          "*"
+          "'unsafe-inline'"
         ],
         "media-src": [
           "'self'"
+        ],
+        "object-src": [
+          "'none'"
         ]
       },
       "http": true,
       "meta": false,
       "policy": {
-        "antiClickjacking": false,
+        "antiClickjacking": true,
         "defaultNone": true,
-        "insecureBaseUri": true,
-        "insecureFormAction": true,
-        "insecureSchemeActive": false,
+        "insecureBaseUri": false,
+        "insecureFormAction": false,
+        "insecureSchemeActive": true,
         "insecureSchemePassive": false,
         "strictDynamic": false,
-        "unsafeEval": true,
-        "unsafeInline": true,
+        "unsafeEval": false,
+        "unsafeInline": false,
         "unsafeInlineStyle": true,
         "unsafeObjects": false
       },
@@ -121,12 +130,12 @@
     },
     "strict-transport-security": {
       "expectation": "hsts-implemented-max-age-at-least-six-months",
-      "pass": false,
-      "result": "hsts-header-invalid",
-      "scoreModifier": -20,
-      "data": "max-age=31536000; includeSubDomains, max-age=31536000",
-      "includeSubDomains": false,
-      "maxAge": null,
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000; includeSubDomains",
+      "includeSubDomains": true,
+      "maxAge": 31536000,
       "preload": false,
       "preloaded": false
     },
@@ -147,8 +156,8 @@
     "x-frame-options": {
       "expectation": "x-frame-options-sameorigin-or-deny",
       "pass": true,
-      "result": "x-frame-options-sameorigin-or-deny",
-      "scoreModifier": 0,
+      "result": "x-frame-options-implemented-via-csp",
+      "scoreModifier": 5,
       "data": "SAMEORIGIN"
     },
     "cross-origin-resource-policy": {
