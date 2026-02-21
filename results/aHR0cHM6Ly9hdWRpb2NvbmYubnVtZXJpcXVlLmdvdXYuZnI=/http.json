@@ -1,0 +1,159 @@
+{
+  "scan": {
+    "algorithmVersion": 4,
+    "grade": "C-",
+    "error": null,
+    "score": 45,
+    "statusCode": 200,
+    "testsFailed": 4,
+    "testsPassed": 6,
+    "testsQuantity": 10,
+    "responseHeaders": {
+      "date": "Sat, 21 Feb 2026 04:32:49 GMT",
+      "content-type": "text/html; charset=utf-8",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "x-request-id": "2c6c6a42-cd41-404a-bf51-1c4f695110a0",
+      "x-powered-by": "Express",
+      "etag": "W/\"7bf5-NjCOvuw6khkh8C+Nzmv51SYtBVU\"",
+      "set-cookie": [
+        "connect.sid=s%3AzoYIdRD9I0iQhufJhnQn_sAWeXyDZHrN.AOSYHp4tN9ZHivd9vXTd5lM8NOe91MnJJ6bBkm024so; Path=/; Expires=Sat, 21 Feb 2026 04:37:49 GMT; HttpOnly; SameSite=Lax",
+        "sc-sticky-session=WdQ7ttwQ5kVvEfz66z3+o+f5jjx/B5UyPrLuDpI5dv1PlmfLaV5/5ESoZA0QJzMyV8MBi9Yj6aMYJAGXd3LHpQ==; Expires=Sun, 22-Feb-26 04:32:49 GMT; Max-Age=86400; Path=/; Secure; HttpOnly; SameSite=None",
+        "visid_incap_3272865=6CsezkTjQyeT35VhbbtTQ281mWkAAAAAQUIPAAAAAADbhmR+hFhGYot5W2UBTpYw; expires=Sat, 20 Feb 2027 06:16:01 GMT; HttpOnly; path=/; Domain=.numerique.gouv.fr",
+        "nlbi_3272865=YpBnO7Dul20x/EbRaGmklwAAAACaPr9MuX4pXlrs2Q0H45Z2; HttpOnly; path=/; Domain=.numerique.gouv.fr",
+        "incap_ses_189_3272865=QT5nWNrUsiL88BxEoHafAnA1mWkAAAAAE4kxkeZ3qgaktiQvSG17hA==; path=/; Domain=.numerique.gouv.fr"
+      ],
+      "strict-transport-security": "max-age=31536000",
+      "x-cdn": "Imperva",
+      "x-iinfo": "48-19701736-19701754 NNNN CT(140 137 0) RT(1771648368721 49) q(0 0 3 0) r(4 4) U12"
+    }
+  },
+  "tests": {
+    "content-security-policy": {
+      "expectation": "csp-implemented-with-no-unsafe",
+      "pass": false,
+      "result": "csp-not-implemented",
+      "scoreModifier": -25,
+      "data": null,
+      "http": false,
+      "meta": false,
+      "policy": null,
+      "numPolicies": 0
+    },
+    "cookies": {
+      "expectation": "cookies-secure-with-httponly-sessions",
+      "pass": false,
+      "result": "cookies-without-secure-flag-but-protected-by-hsts",
+      "scoreModifier": -5,
+      "data": {
+        "connect.sid": {
+          "domain": "audioconf.numerique.gouv.fr",
+          "expires": "2026-02-21T04:37:49.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null,
+          "samesite": "lax"
+        },
+        "sc-sticky-session": {
+          "domain": "audioconf.numerique.gouv.fr",
+          "expires": "2026-02-22T04:32:49.000Z",
+          "httponly": true,
+          "max-age": 86400,
+          "path": "/",
+          "port": null,
+          "samesite": "none",
+          "secure": true
+        },
+        "visid_incap_3272865": {
+          "domain": "numerique.gouv.fr",
+          "expires": "2027-02-20T06:16:01.000Z",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "nlbi_3272865": {
+          "domain": "numerique.gouv.fr",
+          "httponly": true,
+          "path": "/",
+          "port": null
+        },
+        "incap_ses_189_3272865": {
+          "domain": "numerique.gouv.fr",
+          "path": "/",
+          "port": null
+        }
+      },
+      "sameSite": false
+    },
+    "cross-origin-resource-sharing": {
+      "expectation": "cross-origin-resource-sharing-not-implemented",
+      "pass": true,
+      "result": "cross-origin-resource-sharing-not-implemented",
+      "scoreModifier": 0,
+      "data": null
+    },
+    "redirection": {
+      "expectation": "redirection-to-https",
+      "pass": true,
+      "result": "redirection-to-https",
+      "scoreModifier": 0,
+      "destination": "https://audioconf.numerique.gouv.fr/",
+      "redirects": true,
+      "route": [
+        "http://audioconf.numerique.gouv.fr/",
+        "https://audioconf.numerique.gouv.fr/"
+      ],
+      "statusCode": 200
+    },
+    "referrer-policy": {
+      "expectation": "referrer-policy-private",
+      "pass": true,
+      "result": "referrer-policy-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    },
+    "strict-transport-security": {
+      "expectation": "hsts-implemented-max-age-at-least-six-months",
+      "pass": true,
+      "result": "hsts-implemented-max-age-at-least-six-months",
+      "scoreModifier": 0,
+      "data": "max-age=31536000",
+      "includeSubDomains": false,
+      "maxAge": 31536000,
+      "preload": false,
+      "preloaded": false
+    },
+    "subresource-integrity": {
+      "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+      "pass": true,
+      "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+      "scoreModifier": 0,
+      "data": {}
+    },
+    "x-content-type-options": {
+      "expectation": "x-content-type-options-nosniff",
+      "pass": false,
+      "result": "x-content-type-options-not-implemented",
+      "scoreModifier": -5,
+      "data": null
+    },
+    "x-frame-options": {
+      "expectation": "x-frame-options-sameorigin-or-deny",
+      "pass": false,
+      "result": "x-frame-options-not-implemented",
+      "scoreModifier": -20,
+      "data": null
+    },
+    "cross-origin-resource-policy": {
+      "expectation": "corp-implemented-with-same-site",
+      "pass": true,
+      "result": "corp-not-implemented",
+      "scoreModifier": 0,
+      "data": null,
+      "http": false,
+      "meta": false
+    }
+  }
+}
